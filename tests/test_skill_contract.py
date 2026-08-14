@@ -34,21 +34,22 @@ REQUIRED_TEMPLATES = [
 
 REQUIRED_SCRIPTS = [
     'scripts/new_project.py',
+    'scripts/new_arc.py',
     'scripts/qa_project.py',
     'scripts/audit_skill.py',
 ]
 
 
 def frontmatter(text: str):
-    match = re.match(r'^---\n(.*?)\n---\n', text, re.S)
-    if not match:
+    m = re.match(r'^---\n(.*?)\n---\n', text, re.S)
+    if not m:
         return {}
-    result = {}
-    for line in match.group(1).splitlines():
+    out = {}
+    for line in m.group(1).splitlines():
         if ':' in line:
-            key, value = line.split(':', 1)
-            result[key.strip()] = value.strip()
-    return result
+            k, v = line.split(':', 1)
+            out[k.strip()] = v.strip()
+    return out
 
 
 class SkillContractTests(unittest.TestCase):
