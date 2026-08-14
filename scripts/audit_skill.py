@@ -2,7 +2,7 @@
 import re, sys
 from pathlib import Path
 
-REQUIRED=['SKILL.md','README.md','templates/arc.md','templates/claim.md','scripts/new_project.py','scripts/qa_project.py']
+REQUIRED=['SKILL.md','README.md','templates/arc.md','templates/claim.md','scripts/new_project.py','scripts/new_arc.py','scripts/qa_project.py']
 
 def fm(text):
     m=re.match(r'^---\n(.*?)\n---\n',text,re.S)

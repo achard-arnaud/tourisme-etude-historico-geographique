@@ -4,6 +4,7 @@ from pathlib import Path
 
 VALID_CONF=set('ABCDU')
 VALID_ZOOMS={f'Z{i}' for i in range(5)}
+VALID_TIERS={f'T{i}' for i in range(6)}
 
 def load_sources(root):
     p=root/'05_sources'/'source_register.json'
@@ -16,6 +17,8 @@ def main():
     root=Path(sys.argv[1] if len(sys.argv)>1 else '.')
     errors=[]; warnings=[]
     sources=load_sources(root)
+    for sid, source in sources.items():
+        if source.get('tier') not in VALID_TIERS: errors.append(f'invalid source tier: {sid}')
     claims=list(root.glob('01_arcs/*/claims/*.json'))
     seen=set()
     for p in claims:
@@ -37,6 +40,9 @@ def main():
         try: b=json.loads(p.read_text(encoding='utf-8'))
         except Exception as e: errors.append(f'invalid bridge json: {p}: {e}'); continue
         if b.get('result') not in VALID_CONF: warnings.append(f'open/invalid bridge result: {p.name}')
+        frm=b.get('from_claim'); to=b.get('to_claim')
+        if frm not in seen or to not in seen:
+            errors.append(f'orphan bridge: {b.get("id",p.stem)} ({frm} -> {to})')
     for m in errors: print('ERROR:',m)
     for m in warnings: print('WARN:',m)
     if errors: return 1
