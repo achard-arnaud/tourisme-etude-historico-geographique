@@ -5,17 +5,29 @@
 python -m unittest discover -s tests -v
 python scripts/audit_skill.py .
 ```
-Result: **10/10 tests pass**, `SKILL AUDIT OK`.
+Result before review refinement: **10/10 tests pass**, `SKILL AUDIT OK`.
 
-## GitHub CI evidence
-- dev commit `91e3f42`: push CI success;
-- PR #3 on `91e3f42`: pull-request CI success;
-- test-only fine-tuning commit `64af3cb`: CI failure by design, **13 tests / 3 expected failures**.
+## TDD / GitHub CI evidence
+- dev commit `91e3f42`: GREEN push CI;
+- PR #3 on `91e3f42`: GREEN pull-request CI;
+- test-only refinement commit `64af3cb`: RED by design, **13 tests / 3 expected failures**;
+- implementation commit `d9c330d`: GREEN PR CI run #8; test step + skill audit both passed;
+- merged `main` commit `48668d4`: GREEN push CI run #9.
 
-## Final acceptance checks
-The final implementation must show a fresh green CI after `64af3cb`. Required checks:
-- all 13 tests pass;
-- skill audit passes;
-- PR mergeable;
-- issue #2 closes on merge;
-- `dev` is synchronized to merged `main`.
+## Delivery state
+- PR #3 merged to `main`;
+- issue #2 automatically closed as completed;
+- `main` and `dev` synchronized to `48668d4953ac1db8f5f89866da4d4e3661293663` after merge;
+- compare `main...dev`: identical, ahead 0 / behind 0.
+
+## QA coverage
+The deterministic project QA rejects:
+- malformed source registers and duplicate/invalid source metadata;
+- unsourced A/B causal drivers/amplifiers;
+- unknown source references;
+- invalid confidence, source-tier and zoom values;
+- duplicate claim IDs;
+- orphan bridges;
+- resolved A/B bridges without source evidence or with unknown source IDs.
+
+The skill audit validates required files, trigger-oriented skill frontmatter and root-orchestrator size.
