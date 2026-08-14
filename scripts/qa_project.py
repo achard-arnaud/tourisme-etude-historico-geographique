@@ -8,17 +8,34 @@ VALID_TIERS={f'T{i}' for i in range(6)}
 
 def load_sources(root):
     p=root/'05_sources'/'source_register.json'
-    if not p.exists(): return {}
-    try: data=json.loads(p.read_text(encoding='utf-8'))
-    except Exception: return {}
-    return {x.get('id'):x for x in data if isinstance(x,dict) and x.get('id')}
+    if not p.exists():
+        return {}, []
+    try:
+        data=json.loads(p.read_text(encoding='utf-8'))
+    except Exception as e:
+        return {}, [f'invalid source register: {p}: {e}']
+    if not isinstance(data,list):
+        return {}, [f'invalid source register: {p}: expected JSON list']
+    sources={}; errors=[]
+    for item in data:
+        if not isinstance(item,dict) or not item.get('id'):
+            errors.append(f'invalid source entry in register: {item!r}')
+            continue
+        sid=item['id']
+        if sid in sources:
+            errors.append(f'duplicate source id: {sid}')
+            continue
+        sources[sid]=item
+    return sources, errors
 
 def main():
     root=Path(sys.argv[1] if len(sys.argv)>1 else '.')
     errors=[]; warnings=[]
-    sources=load_sources(root)
+    sources, source_errors=load_sources(root)
+    errors.extend(source_errors)
     for sid, source in sources.items():
-        if source.get('tier') not in VALID_TIERS: errors.append(f'invalid source tier: {sid}')
+        if source.get('tier') not in VALID_TIERS:
+            errors.append(f'invalid source tier: {sid}')
     claims=list(root.glob('01_arcs/*/claims/*.json'))
     seen=set()
     for p in claims:
@@ -38,11 +55,21 @@ def main():
             if sid not in sources: errors.append(f'unknown source {sid} in claim {cid}')
     for p in root.glob('06_bridges/*.json'):
         try: b=json.loads(p.read_text(encoding='utf-8'))
-        except Exception as e: errors.append(f'invalid bridge json: {p}: {e}'); continue
-        if b.get('result') not in VALID_CONF: warnings.append(f'open/invalid bridge result: {p.name}')
+        except Exception as e:
+            errors.append(f'invalid bridge json: {p}: {e}'); continue
+        bid=b.get('id',p.stem)
+        result=b.get('result')
+        if result not in VALID_CONF:
+            warnings.append(f'open/invalid bridge result: {p.name}')
         frm=b.get('from_claim'); to=b.get('to_claim')
         if frm not in seen or to not in seen:
-            errors.append(f'orphan bridge: {b.get("id",p.stem)} ({frm} -> {to})')
+            errors.append(f'orphan bridge: {bid} ({frm} -> {to})')
+        source_ids=b.get('source_ids') or []
+        if result in {'A','B'} and not source_ids:
+            errors.append(f'unsourced resolved bridge: {bid}')
+        for sid in source_ids:
+            if sid not in sources:
+                errors.append(f'unknown source {sid} in bridge {bid}')
     for m in errors: print('ERROR:',m)
     for m in warnings: print('WARN:',m)
     if errors: return 1
