@@ -77,6 +77,51 @@ class ProjectToolTests(unittest.TestCase):
             self.assertNotEqual(r.returncode, 0)
             self.assertIn('orphan bridge', (r.stdout + r.stderr).lower())
 
+    def test_qa_project_rejects_malformed_source_register(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            (root / '05_sources').mkdir(parents=True)
+            (root / '05_sources' / 'source_register.json').write_text('{bad json', encoding='utf-8')
+            r = self.run_script('scripts/qa_project.py', root)
+            self.assertNotEqual(r.returncode, 0)
+            self.assertIn('invalid source register', (r.stdout + r.stderr).lower())
+
+    def test_qa_project_rejects_unsourced_resolved_bridge(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            claims = root / '01_arcs' / 'A01_test' / 'claims'
+            claims.mkdir(parents=True)
+            for cid in ['C001','C002']:
+                (claims / f'{cid}.json').write_text(json.dumps({
+                    'id':cid,'text':'context','arc':'A01_test','hil':'HIL-07','zoom':'Z3',
+                    'confidence':'C','causal_role':'context','source_ids':[]
+                }), encoding='utf-8')
+            (root / '06_bridges').mkdir(parents=True)
+            (root / '06_bridges' / 'B001.json').write_text(json.dumps({
+                'id':'B001','from_claim':'C001','to_claim':'C002','result':'B','source_ids':[]
+            }), encoding='utf-8')
+            r = self.run_script('scripts/qa_project.py', root)
+            self.assertNotEqual(r.returncode, 0)
+            self.assertIn('unsourced resolved bridge', (r.stdout + r.stderr).lower())
+
+    def test_qa_project_rejects_unknown_bridge_source(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            claims = root / '01_arcs' / 'A01_test' / 'claims'
+            claims.mkdir(parents=True)
+            for cid in ['C001','C002']:
+                (claims / f'{cid}.json').write_text(json.dumps({
+                    'id':cid,'text':'context','arc':'A01_test','hil':'HIL-07','zoom':'Z3',
+                    'confidence':'C','causal_role':'context','source_ids':[]
+                }), encoding='utf-8')
+            (root / '06_bridges').mkdir(parents=True)
+            (root / '06_bridges' / 'B001.json').write_text(json.dumps({
+                'id':'B001','from_claim':'C001','to_claim':'C002','result':'B','source_ids':['S404']
+            }), encoding='utf-8')
+            r = self.run_script('scripts/qa_project.py', root)
+            self.assertNotEqual(r.returncode, 0)
+            self.assertIn('unknown source s404 in bridge b001', (r.stdout + r.stderr).lower())
+
 
 if __name__ == '__main__':
     unittest.main()
