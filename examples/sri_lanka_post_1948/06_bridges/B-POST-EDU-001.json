@@ -1,0 +1,9 @@
+{
+  "id": "B-POST-EDU-001",
+  "from_claim": "C-POST-EDU-001",
+  "to_claim": "C-POST-EDU-002",
+  "question": "How did a colonial educational advantage become a post-independence political grievance?",
+  "mechanism": "A region specialized in English-linked credentials and public/professional employment becomes unusually exposed when the state changes the official language and redistributes scarce university places by language/district criteria.",
+  "result": "B",
+  "source_ids": ["CAMBRIDGE-ACM-EDU", "CAMBRIDGE-STANDARDIZATION", "CAMBRIDGE-LANGUAGE-JAFFNA"]
+}

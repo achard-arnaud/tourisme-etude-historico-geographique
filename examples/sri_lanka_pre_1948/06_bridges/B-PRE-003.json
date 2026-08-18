@@ -1,0 +1,9 @@
+{
+  "id": "B-PRE-003",
+  "from_claim": "C-PRE-GEO-003",
+  "to_claim": "C-PRE-GEO-004",
+  "question": "What is the causal relationship between the Napoleonic settlement and the British conquest of Kandy in 1815?",
+  "mechanism": "British control of the coasts predated 1815, but the elimination or reduction of Dutch and French military alternatives made Kandy's external balancing options unusually weak while internal elite conflict opened the immediate path to annexation.",
+  "result": "B",
+  "source_ids": ["CAMBRIDGE-COMPANY-FORTRESS-END", "CAMBRIDGE-DESTROYING-RIVALS", "CAMBRIDGE-COMPANY-REDUCED-1811"]
+}

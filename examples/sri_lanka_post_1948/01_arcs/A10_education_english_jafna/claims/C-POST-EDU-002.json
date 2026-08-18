@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-EDU-002",
+  "claim": "Post-independence language and university-admission reforms converted Jaffna's inherited educational advantage into a distributive conflict by reducing the value of English-linked public-service capital and penalizing a district that had specialized in high examination performance and higher education.",
+  "confidence": "B",
+  "zoom": "Z2",
+  "causal_role": "amplifier",
+  "source_ids": ["CAMBRIDGE-STANDARDIZATION", "CAMBRIDGE-LANGUAGE-JAFFNA"],
+  "notes": "These policies are important amplifiers, not sufficient causes of the civil war; distinguish district redistribution from ethnic intent and from later violence."
+}
