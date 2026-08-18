@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-LANG-001",
+  "claim": "The 1956 Sinhala-only turn combined a legitimate postcolonial demand to displace English elite rule with a majoritarian decision to deny Tamil equal official status, converting linguistic decolonization into asymmetric redistribution of state access.",
+  "confidence": "A",
+  "zoom": "Z1",
+  "causal_role": "driver",
+  "source_ids": ["CAMBRIDGE-LANGUAGE-DECOLONIZATION", "CAMBRIDGE-LANGUAGE-JAFFNA"],
+  "notes": "Do not describe the policy as anti-Hindu: its operative category was language, though Sinhala-Buddhist nationalism strongly shaped its politics."
+}

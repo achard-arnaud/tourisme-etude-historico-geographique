@@ -1,0 +1,9 @@
+{
+  "id": "B-POST-LANG-DEV-001",
+  "from_claim": "C-POST-LANG-002",
+  "to_claim": "C-POST-LANG-003",
+  "question": "Did the retreat of English materially weaken Sri Lanka's development trajectory?",
+  "mechanism": "Reduced English proficiency can lower access to globally traded services, professional mobility and private-sector employability, but the observed long-run outcome is confounded by macroeconomic policy, war, institutional constraints and later skills-policy choices.",
+  "result": "C",
+  "source_ids": ["WORLD-BANK-ENGLISH-2014", "CAMBRIDGE-INWARD-ECONOMY"]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-NAM-001",
+  "claim": "Ceylon's move from Kotelawala's relatively pro-Western anti-communism toward Bandaranaike neutralism after 1956 formed part of a broader postcolonial sovereignty programme that included recovery of British base rights and diversification of relations toward China and the Soviet bloc without formal alignment.",
+  "confidence": "A",
+  "zoom": "Z2",
+  "causal_role": "driver",
+  "source_ids": ["FRUS-CEYLON-1958", "CAMBRIDGE-NAM-KOTELAWALA"],
+  "notes": "Non-alignment was active strategic autonomy, not neutrality between all actors or conversion into a Soviet ally."
+}

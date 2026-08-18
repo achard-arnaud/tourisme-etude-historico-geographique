@@ -1,0 +1,9 @@
+{
+  "id": "B-POST-NAM-ECON-001",
+  "from_claim": "C-POST-NAM-001",
+  "to_claim": "C-POST-NAM-002",
+  "question": "How did political non-alignment become an economic sovereignty project?",
+  "mechanism": "As the Third World agenda shifted from anti-colonial diplomatic autonomy toward control of resources, terms of trade and international economic institutions, Sri Lanka's foreign-policy autonomy increasingly overlapped with domestic state-led development and the NIEO programme.",
+  "result": "B",
+  "source_ids": ["CAMBRIDGE-NAM-KOTELAWALA", "CAMBRIDGE-NAM-NIEO", "CAMBRIDGE-INWARD-ECONOMY"]
+}

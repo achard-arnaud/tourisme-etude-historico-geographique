@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-LANG-002",
+  "claim": "Reducing English as the language of administration weakened an inherited interethnic link language and devalued a skill bundle especially important to English-educated Jaffna Tamils, while expanding vernacular access for Sinhala-speaking populations previously disadvantaged by colonial language hierarchies.",
+  "confidence": "B",
+  "zoom": "Z1",
+  "causal_role": "amplifier",
+  "source_ids": ["CAMBRIDGE-LANGUAGE-JAFFNA", "CAMBRIDGE-LANGUAGE-DECOLONIZATION"],
+  "notes": "The distributive effect is two-sided: democratization for many Sinhala speakers and relative exclusion for Tamil/English-educated groups."
+}

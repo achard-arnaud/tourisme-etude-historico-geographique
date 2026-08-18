@@ -64,7 +64,56 @@ Le campus de Jaffna est créé en 1974 et devient université autonome en 1979 [
 
 ---
 
+# Ancre — 1956–1976 : décoloniser la langue, l’État et la place du pays dans le monde
+
+## Le véritable angle mort : *Sinhala Only* remplace aussi l’anglais
+Lire 1956 uniquement comme « Sinhala contre Tamil » masque une moitié du mécanisme. L’anglais est encore la langue de l’administration, de l’ancienne élite et d’une partie des professions héritées de l’Empire. Le remplacer répond donc à une revendication postcoloniale compréhensible : **rendre l’État accessible dans une langue locale et défaire une hiérarchie construite sous la domination britannique** [CAMBRIDGE-LANGUAGE-DECOLONIZATION].
+
+Mais avant 1956, la décolonisation linguistique pouvait encore prendre la forme **Sinhala + Tamil contre la primauté de l’anglais**. La bascule décisive est l’abandon de cette parité au profit de *Sinhala Only*. La politique produit alors deux redistributions superposées : elle abaisse l’avantage de la petite élite anglophone et ouvre davantage l’administration aux cinghalophones ; simultanément, elle refuse aux Tamilophones une voie équivalente vers l’État et dévalorise brutalement le capital anglais accumulé notamment à Jaffna [CAMBRIDGE-LANGUAGE-JAFFNA].
+
+**Fausse piste.** Ce n’est pas une politique « contre les hindous ». Une grande partie des Tamouls de Jaffna sont hindous, mais la catégorie opératoire est linguistique et ethnopolitique ; les Tamouls chrétiens sont également affectés. La mobilisation du projet, elle, est fortement liée au nationalisme cinghalo-bouddhiste.
+
+## L’anglais : coût d’opportunité réel, explication économique insuffisante
+Le retrait de l’anglais a probablement un coût de long terme que la fresque sous-estimait. L’anglais était imparfaitement distribué et profondément colonial, mais il servait aussi de **langue-pont intercommunautaire** et de compétence immédiatement convertible dans l’économie régionale, l’enseignement supérieur et les professions internationales. Les programmes contemporains de la Banque mondiale continuent d’identifier anglais, communication, IT et soft skills comme des composantes importantes de l’employabilité [WORLD-BANK-ENGLISH-2014].
+
+Cela justifie un claim intermédiaire : la dévalorisation de l’anglais a pu amplifier la segmentation du marché du travail et réduire la vitesse d’insertion dans les services mondialisés. En revanche, écrire « la suppression de l’anglais explique le faible développement actuel » dépasserait nettement les preuves. L’économie sri-lankaise des années 1960–1970 devient simultanément plus **inward-looking**, sous l’effet des termes de l’échange, des contraintes de balance des paiements, du socialisme démocratique et d’un appareil de contrôles ; puis le pays libéralise fortement dès 1977 [CAMBRIDGE-INWARD-ECONOMY]. Guerre civile, investissement, productivité, fiscalité et gouvernance restent des causes beaucoup plus larges.
+
+La bonne formulation est donc : **l’anglais est un amplificateur de capital humain et d’ouverture, pas une variable maîtresse permettant d’expliquer seule le niveau de développement actuel.**
+
+## Petit détour — Colombo, Bandung, Belgrade : le Sri Lanka n’est pas un simple suiveur
+Le deuxième angle mort est de regarder cette décolonisation uniquement à l’intérieur de l’île. Le même moment voit les nouveaux États d’Asie chercher une place qui ne soit ni retour dans les empires européens, ni alignement automatique sur Washington ou Moscou.
+
+La chronologie doit être propre : **Colombo 1954** réunit Inde, Pakistan, Birmanie, Indonésie et Ceylan ; **Bandung 1955**, en Indonésie, rassemble vingt-neuf délégations afro-asiatiques ; **Belgrade 1961** institutionnalise le Mouvement des non-alignés [CAMBRIDGE-NAM-KOTELAWALA]. « Conférence de Jakarta » est donc un drift : l’événement canonique est Bandung.
+
+Ceylan joue d’abord un rôle moins attendu. Sir John Kotelawala est anticommuniste et cherche à faire reconnaître le communisme international comme une nouvelle forme de colonialisme, contre Nehru et avec une lecture très différente de celle de Sukarno. Le pays participe donc à la genèse du tiers-mondisme **avant** d’adopter la ligne neutraliste plus familière sous les Bandaranaike.
+
+Après l’élection de S.W.R.D. Bandaranaike en 1956, la souveraineté extérieure devient beaucoup plus visible : récupération des droits sur les bases britanniques, développement de relations avec Chine et URSS et affirmation d’une politique neutraliste [FRUS-CEYLON-1958]. Ce n’est pas un basculement dans le bloc soviétique ; c’est une stratégie d’**autonomie par diversification**.
+
+## Une même grammaire de souveraineté — mais pas une cause unique
+C’est ici qu’un bridge devient légitime. Remplacer l’anglais, récupérer Trincomalee et Katunayake, diversifier les partenaires diplomatiques, réglementer les capitaux étrangers et défendre un ordre économique plus favorable au Sud parlent tous un langage politique commun : **qui décide chez nous, avec quelles institutions héritées de l’Empire, et jusqu’où devons-nous dépendre de ses anciens centres ?**
+
+Mais il faut éviter une fausse chaîne causale du type : « non-alignement → Sinhala Only → économie fermée ». Les coalitions et mécanismes sont différents. Le lien est d’abord celui d’une **constellation idéologique postcoloniale** : souveraineté culturelle, démocratie de masse, socialisme, développement national et autonomie internationale.
+
+Sous Sirimavo Bandaranaike cette branche gagne en cohérence. En 1976, Colombo accueille le cinquième sommet du NAM et Sri Lanka défend désormais non seulement une autonomie entre blocs mais une **décolonisation de l’économie mondiale** : coopération Sud–Sud, ressources, financement et Nouvel ordre économique international [CAMBRIDGE-NAM-NIEO].
+
+### Qui mettre dans la fresque ?
+**Ancre internationale :** Nehru, Nasser, Tito, Sukarno et Sirimavo Bandaranaike, avec Kotelawala comme important précurseur/dissident ceylanais.
+
+**Petit détour :** Kadhafi appartient à une phase ultérieure après 1969 ; il incarne une radicalisation du tiers-mondisme, pas la fondation de Bandung/Belgrade. La Malaisie n’est pas non plus un membre fondateur comparable : elle n’existe comme fédération qu’à partir de 1963 et Tunku Abdul Rahman est beaucoup plus anticommuniste et pro-occidental. Si l’on pense à Mahathir, il appartient à une génération bien plus tardive.
+
+## Le paradoxe des années 1960–1970
+Le même projet politique peut donc produire à la fois des résultats émancipateurs et des coûts :
+- **émancipation** : accès des masses cinghalophones à l’État, souveraineté sur les bases, politique étrangère autonome, forte ambition sociale ;
+- **majoritarisation** : exclusion linguistique des Tamouls de l’État central et perception croissante d’un État appartenant à la majorité ;
+- **segmentation** : systèmes scolaires de plus en plus séparés par langue et baisse de la fonction commune de l’anglais ;
+- **coût économique possible** : moindre diffusion d’une compétence mondiale, combinée à une économie dirigiste qui réduit plusieurs canaux d’ouverture ;
+- **gain politique international** : Sri Lanka acquiert une visibilité disproportionnée à sa taille dans le monde afro-asiatique et non-aligné.
+
+Cette contradiction est plus féconde que le jugement « bonne » ou « mauvaise » décolonisation. Elle montre comment une politique conçue pour supprimer une hiérarchie impériale peut simultanément **démocratiser l’accès au pouvoir pour une majorité et fabriquer une nouvelle asymétrie pour une minorité**.
+
+---
+
 ### Où ces branches rejoignent la grande histoire politique
 La séquence principale reste celle de l’État indépendant : exclusions de citoyenneté, politique linguistique, transformations constitutionnelles, guerre, ordre post-2009, crise de 2022 et réalignement électoral. En 2024, le JJB/NPP obtient 159 sièges au Parlement et Anura Kumara Dissanayake accède à la présidence ; en 2026, le pays reste engagé dans le programme de stabilisation et de restructuration soutenu par le FMI. Ces événements doivent être expliqués par leurs propres sources politiques et économiques.
 
-Le patrimoine rejoint le tronc seulement quand il affecte **légitimité, propriété, distribution, relations internationales ou politique de réconciliation**. L’éducation rejoint le tronc lorsqu’elle affecte **accès aux emplois, langue de l’État, mobilité sociale, admissions universitaires et perception de la justice distributive**. Ce bornage permet de les intégrer sans transformer toute l’histoire contemporaine en histoire des monuments ou des écoles.
+Le patrimoine rejoint le tronc seulement quand il affecte **légitimité, propriété, distribution, relations internationales ou politique de réconciliation**. L’éducation rejoint le tronc lorsqu’elle affecte **accès aux emplois, langue de l’État, mobilité sociale, admissions universitaires et perception de la justice distributive**. La langue et le non-alignement rejoignent désormais le tronc lorsqu’ils expriment **la redistribution domestique de l’État et la recherche externe de souveraineté**, tout en gardant séparées les causalités économiques. Ce bornage permet de les intégrer sans transformer toute l’histoire contemporaine en histoire des monuments, des écoles ou de la diplomatie.

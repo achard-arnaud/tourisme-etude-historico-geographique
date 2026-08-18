@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-LANG-003",
+  "claim": "The long-run retreat of English plausibly contributed to skills mismatch and reduced access to globally valued labour-market capabilities, but available evidence does not support treating language policy as a dominant standalone cause of Sri Lanka's later growth underperformance.",
+  "confidence": "B",
+  "zoom": "Z1",
+  "causal_role": "amplifier",
+  "source_ids": ["WORLD-BANK-ENGLISH-2014", "CAMBRIDGE-INWARD-ECONOMY"],
+  "notes": "Keep separate from macro causes including inward-looking policy, terms of trade, civil war, investment climate and fiscal instability."
+}
