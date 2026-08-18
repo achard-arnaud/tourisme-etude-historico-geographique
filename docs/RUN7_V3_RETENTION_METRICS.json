@@ -1,0 +1,20 @@
+[
+  {
+    "project": "pre",
+    "baseline_docx_words": 19274,
+    "delta_words": 1381,
+    "v3_docx_words": 21236,
+    "retention_vs_baseline_percent": 110.2,
+    "docx": "examples/sri_lanka_pre_1948/09_output/Sri_Lanka_Fresque_historico_geographique_vol_retour_v3.docx",
+    "markdown": "examples/sri_lanka_pre_1948/09_output/report_v3_full.md"
+  },
+  {
+    "project": "post",
+    "baseline_docx_words": 5269,
+    "delta_words": 1886,
+    "v3_docx_words": 8624,
+    "retention_vs_baseline_percent": 163.7,
+    "docx": "examples/sri_lanka_post_1948/09_output/Sri_Lanka_1948_2026_etude_historico_geographique_v3.docx",
+    "markdown": "examples/sri_lanka_post_1948/09_output/report_v3_full.md"
+  }
+]

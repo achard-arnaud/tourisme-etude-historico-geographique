@@ -46,7 +46,7 @@ Une comparaison n'entre dans la causalité que si :
 Le bridge distingue désormais ce qui est transportable : **instrument → mécanisme → package institutionnel → outcome**. Plus on va vers l'outcome, moins la transportabilité peut être présumée.
 
 ## Storytelling et promotion
-`editing-historical-travel-output` construit le manuscrit chronologique ; `storytelling-historical-travel` le rend pour un lecteur donné. Le reader contract contrôle audience, langue, ton, registre, budget de longueur et densité de cross-references.
+`editing-historical-travel-output` construit le manuscrit chronologique ; `storytelling-historical-travel` peut ensuite régler la voix et la navigation. Pour le preset avancé, la longueur est sans plafond : la baseline complète est conservée, les ajouts sont traités comme des deltas et un contrôle quantitatif bloque toute compression silencieuse.
 
 Le lifecycle d'un output est explicite : `baseline` → `vnext` → `promoted/canonical` → `reader-export`. Une nouvelle recherche ne rend jamais silencieusement un ancien Word/PDF « à jour ».
 
@@ -63,7 +63,7 @@ python scripts/new_project.py --name "Nom du voyage" --output ./projects/mon-voy
 4. **Construire la colonne vertébrale** : arcs bornés par ruptures, claims sourcés, zooms Z0–Z4, HIL pertinents et bridges causaux minimaux.
 5. **Stabiliser** : registres de sources, audit historiographique, wiki et graph-light. Les skills sont routées selon le problème ; elles ne sont jamais toutes appelées par réflexe.
 6. **Tracer le workflow** : compléter le manifeste avec chaque skill appelée ou écartée, sa raison, ses entrées, ses sorties et son statut. Le contrôler avec `audit_workflow.py`.
-7. **Promouvoir le Markdown** : `editing-historical-travel-output` structure le manuscrit ; `storytelling-historical-travel` règle voix, densité, continuité et sécurité non-fictionnelle.
+7. **Promouvoir le Markdown** : `editing-historical-travel-output` structure le manuscrit ; pour un public avancé, conserver d'abord l'intégralité de la baseline et n'utiliser `storytelling-historical-travel` que comme passe non destructive de voix/navigation.
 8. **Éditer le lecteur** : générer Word/PDF seulement depuis le Markdown promu, effectuer la QA visuelle et mettre à jour `CURRENT_OUTPUT_STATUS.md`.
 9. **Publier** : tests + audits + QA des projets, PR vers `dev`, puis PR de promotion vers `main`.
 
@@ -94,7 +94,7 @@ Arborescence créée :
 - `examples/sri_lanka_pre_1948/` — longue durée ; Jaffna/Palk, VOC, paper-state, caste/codification, géopolitique européenne et bridge éducatif vers 1948.
 - `examples/sri_lanka_post_1948/` — État/langue, éducation/anglais, caste et reproduction sociale, guerre/diaspora, patrimoine, puis Run 5 de comparaison **Jaffna ↔ Tamil Nadu ↔ Indonésie** et conversion territoriale du capital humain.
 
-La passe Run 6 ajoute l’inventaire exhaustif des références de la conversation Polonnaruwa, une seconde revue de la skill storytelling fondée sur trois extractions YouTube et deux benchmarks publics, un manifeste prouvant le routing des 16 skills et les deux éditions lecteur v2.
+La passe Run 6 avait produit deux éditions lecteur v2 à partir des seuls deltas `report.md`, ce qui a comprimé le premier volume de 61 à 8 pages. Run 7 restaure les V1 longues comme baselines, matérialise les fiches de conversation, supprime le plafond avancé et produit les V3 par ajout conservatif.
 
 ## Vérifier
 ```bash

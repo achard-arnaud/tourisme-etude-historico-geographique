@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Render promoted historical-travel Markdown as polished DOCX reader editions."""
+"""Render deliberately abridged historical-travel Markdown as DOCX reader editions.
+
+The lossless advanced Sri Lanka workflow is ``render_full_reader_v3.py``. This
+legacy V2 renderer now refuses to treat a short delta as a complete manuscript
+unless an abridged derivative is explicitly requested.
+"""
 import argparse
 import json
 import re
@@ -413,10 +418,26 @@ def audit_preset(doc):
         assert round(doc.styles[name].font.size.pt, 1) == size
 
 
-def build(spec):
+def enforce_advanced_retention(project, text, allow_abridged=False):
+    baseline = project / "09_output" / "report_v1_full.md"
+    if not baseline.exists() or allow_abridged:
+        return
+    candidate_words = len(text.split())
+    baseline_words = len(baseline.read_text(encoding="utf-8").split())
+    if candidate_words < baseline_words:
+        raise RuntimeError(
+            "Refusing silent advanced-reader compression: report.md contains "
+            f"{candidate_words} words but the complete V1 baseline contains "
+            f"{baseline_words}. Use render_full_reader_v3.py, or explicitly pass "
+            "--allow-abridged for a labelled derivative."
+        )
+
+
+def build(spec, allow_abridged=False):
     project = spec["project"]
     markdown = project / "09_output" / "report.md"
     text = markdown.read_text(encoding="utf-8")
+    enforce_advanced_retention(project, text, allow_abridged=allow_abridged)
     headings = [line[3:].strip() for line in text.splitlines() if line.startswith("## ")]
     register = collect_register(project)
     source_ids = extract_source_ids(text, register)
@@ -445,10 +466,11 @@ def build(spec):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--project", choices=["pre", "post", "all"], default="all")
+    parser.add_argument("--allow-abridged", action="store_true")
     args = parser.parse_args()
     choices = EXPORTS if args.project == "all" else [EXPORTS[0 if args.project == "pre" else 1]]
     for spec in choices:
-        build(spec)
+        build(spec, allow_abridged=args.allow_abridged)
 
 
 if __name__ == "__main__":
