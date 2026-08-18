@@ -30,6 +30,7 @@ REQUIRED_TEMPLATES = [
     'templates/drift-audit.md',
     'templates/wiki-entity.md',
     'templates/output-outline.md',
+    'templates/run-manifest.json',
 ]
 
 REQUIRED_SCRIPTS = [
@@ -37,6 +38,8 @@ REQUIRED_SCRIPTS = [
     'scripts/new_arc.py',
     'scripts/qa_project.py',
     'scripts/audit_skill.py',
+    'scripts/audit_workflow.py',
+    'scripts/render_reader_exports.py',
 ]
 
 

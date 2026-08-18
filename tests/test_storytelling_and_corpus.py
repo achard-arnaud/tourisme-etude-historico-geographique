@@ -16,6 +16,17 @@ class StorytellingAndCorpusTests(unittest.TestCase):
         text = (ROOT / 'SKILL.md').read_text(encoding='utf-8')
         self.assertIn('storytelling-historical-travel', text)
 
+    def test_storytelling_second_pass_has_historical_nonfiction_gate(self):
+        text = (ROOT / 'skills' / 'storytelling-historical-travel' / 'SKILL.md').read_text(encoding='utf-8').lower()
+        for token in ['pace', 'but/therefore', 'invented dialogue', 'promise and continuity ledger', 'source-attested']:
+            self.assertIn(token, text)
+
+    def test_run6_manifest_routes_every_repo_skill(self):
+        data = __import__('json').loads((ROOT / 'docs' / 'RUN6_WORKFLOW_MANIFEST.json').read_text(encoding='utf-8'))
+        routed = {item['skill'] for item in data['dispatched_skills']} | {item['skill'] for item in data['skipped_skills']}
+        known = {p.parent.name for p in (ROOT / 'skills').glob('*/SKILL.md')}
+        self.assertEqual(routed, known)
+
     def test_source_policy_distinguishes_specialist_institutional_anchor_from_t1(self):
         text = (ROOT / 'docs' / 'source_policy.md').read_text(encoding='utf-8').lower()
         self.assertIn('specialist institutional anchor', text)
