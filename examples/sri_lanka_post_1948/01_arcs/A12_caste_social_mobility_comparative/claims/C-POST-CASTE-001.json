@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-CASTE-001",
+  "claim": "Sri Lanka did adopt explicit anti-caste legislation: the 1957 Prevention of Social Disabilities Act criminalized caste-based social disabilities and the 1971 amendment substantially strengthened penalties and enforcement powers.",
+  "confidence": "A",
+  "zoom": "Z2",
+  "causal_role": "driver",
+  "source_ids": ["SRI-LANKA-SOCIAL-DISABILITIES-1957", "SRI-LANKA-SOCIAL-DISABILITIES-1971"],
+  "notes": "Law on the books is not evidence that caste discrimination disappeared in practice."
+}
