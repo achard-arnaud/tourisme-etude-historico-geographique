@@ -21,5 +21,5 @@ Distinguish a peripheral position **inside one national market** from an apparen
 ## Shock and path dependence
 War, disease, ecological change or infrastructure collapse may shift settlement and investment long after the initial shock. Separate temporary disruption from persistent territorial scarring; identify the maintenance, coordination or security mechanism that makes persistence plausible.
 
-## Scale caution
-A province, peninsula, Indian state and sovereign country are not equivalent units. Before comparison, state the territorial level and which flows cross its boundaries.
+## Comparison-scale gate
+A province, peninsula, Indian state and sovereign country are not equivalent units. Before comparison, state the territorial level and which flows cross its boundaries. Normalize market access, fiscal/constitutional autonomy, security jurisdiction and connectivity before transporting a geographic mechanism.
