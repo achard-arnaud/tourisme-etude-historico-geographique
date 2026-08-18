@@ -1,0 +1,9 @@
+{
+  "id": "B-POST-WAR-HC-002",
+  "from_claim": "C-POST-WAR-TERRITORY-001",
+  "to_claim": "C-POST-HC-EXTERNAL-002",
+  "question": "How does war convert an educational advantage into weaker local territorial returns without eliminating the underlying skills?",
+  "mechanism": "Conflict damages the infrastructure and organisations that absorb skills locally while displacement and migration relocate people and family strategies; capabilities can survive in diaspora even as local firm, employment and institutional spillovers shrink.",
+  "result": "B",
+  "source_ids": ["ADB-NORTHERN-ROADS", "ADB-CONFLICT-REGION", "JSTOR-TAMIL-MARRIAGE-2019", "WORLD-BANK-REVIVE-2026"]
+}
