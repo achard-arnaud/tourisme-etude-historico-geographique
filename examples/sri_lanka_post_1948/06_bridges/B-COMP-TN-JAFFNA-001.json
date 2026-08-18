@@ -1,0 +1,9 @@
+{
+  "id": "B-COMP-TN-JAFFNA-001",
+  "from_claim": "C-POST-CASTE-001",
+  "to_claim": "C-COMP-TN-001",
+  "question": "Why did anti-caste politics translate into different mobility architectures in Sri Lanka and Tamil Nadu?",
+  "mechanism": "Sri Lanka primarily delegitimized caste discrimination in law while its major postcolonial access reforms were organized through language, ethnicity and district; Tamil Nadu institutionalized caste-coded reservations and social-justice politics as explicit channels into education and public employment.",
+  "result": "B",
+  "source_ids": ["SRI-LANKA-SOCIAL-DISABILITIES-1957", "CAMBRIDGE-DRAVIDIAN-MODEL", "CAMBRIDGE-DRAVIDIAN-EDUCATION", "TN-RESERVATION-OFFICIAL"]
+}
