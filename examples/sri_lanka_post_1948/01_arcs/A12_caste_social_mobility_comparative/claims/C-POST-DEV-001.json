@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-DEV-001",
+  "claim": "Jaffna's historical human-capital advantage was not simply lost: war and displacement damaged the territorial economy while migration externalized part of that capital into a large diaspora; post-war Northern labour outcomes remained weaker and current development policy still treats the region as lagging.",
+  "confidence": "B",
+  "zoom": "Z2",
+  "causal_role": "driver",
+  "source_ids": ["WORLD-BANK-NORTH-JOBS-2018", "WORLD-BANK-REVIVE-2026", "JSTOR-TAMIL-MARRIAGE-2019"],
+  "notes": "Distinguish territorial underdevelopment from the global socioeconomic position of the Tamil diaspora."
+}

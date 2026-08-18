@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-CASTE-004",
+  "claim": "LTTE rule sometimes sought to curb caste-based temple rights and alter caste-coded local authority, but entrenched temple and kudi institutions could resist successfully, so insurgent nationalism did not erase caste as a form of public authority.",
+  "confidence": "B",
+  "zoom": "Z1",
+  "causal_role": "amplifier",
+  "source_ids": ["CAMBRIDGE-LTTE-PUBLIC-AUTHORITY"],
+  "notes": "Village and temple evidence shows limits to insurgent social engineering; do not generalize into a uniform LTTE caste policy."
+}

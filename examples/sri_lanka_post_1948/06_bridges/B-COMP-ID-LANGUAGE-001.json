@@ -1,0 +1,9 @@
+{
+  "id": "B-COMP-ID-LANGUAGE-001",
+  "from_claim": "C-POST-LANG-001",
+  "to_claim": "C-COMP-ID-001",
+  "question": "What does Indonesia reveal about alternative ways to decolonize a multilingual state's official language?",
+  "mechanism": "Sri Lanka tied linguistic decolonization to the language of its demographic majority, whereas Indonesian nationalism elevated a pre-existing minority lingua franca that was less directly owned by the largest ethnic group, reducing one specific zero-sum dimension of language reform.",
+  "result": "B",
+  "source_ids": ["CAMBRIDGE-LANGUAGE-DECOLONIZATION", "CAMBRIDGE-LANGUAGE-JAFFNA", "CAMBRIDGE-INDONESIA-LANGUAGE"]
+}

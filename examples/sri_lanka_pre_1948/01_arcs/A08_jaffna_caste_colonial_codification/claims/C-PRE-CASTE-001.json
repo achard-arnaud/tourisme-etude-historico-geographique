@@ -1,0 +1,9 @@
+{
+  "id": "C-PRE-CASTE-001",
+  "claim": "In Dutch Jaffna, colonial registration and legal codification did not create caste ex nihilo, but they made hierarchy and caste-bound obligations more legible to the state and could strengthen dominant Vellalar control over subordinate groups.",
+  "confidence": "B",
+  "zoom": "Z1",
+  "causal_role": "amplifier",
+  "source_ids": ["CAMBRIDGE-CLASSIFICATION", "CAMBRIDGE-JAFFNA-SLAVERY"],
+  "notes": "Use as a colonial hardening/reworking mechanism, not as a claim that Europeans invented caste."
+}
