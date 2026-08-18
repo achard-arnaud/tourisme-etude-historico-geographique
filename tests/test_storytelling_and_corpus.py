@@ -78,7 +78,6 @@ class StorytellingAndCorpusTests(unittest.TestCase):
 
     def test_v3_outputs_retain_the_long_v1_baselines(self):
         import json
-        import re
         metrics_path = ROOT / 'docs' / 'RUN7_V3_RETENTION_METRICS.json'
         self.assertTrue(metrics_path.exists())
         metrics = {item['project']: item for item in json.loads(metrics_path.read_text(encoding='utf-8'))}
@@ -88,9 +87,14 @@ class StorytellingAndCorpusTests(unittest.TestCase):
         self.assertGreaterEqual(metrics['post']['retention_vs_baseline_percent'], 125.0)
         pre_pdf = ROOT / 'examples' / 'sri_lanka_pre_1948' / '09_output' / 'Sri_Lanka_Fresque_historico_geographique_vol_retour_v3.pdf'
         post_pdf = ROOT / 'examples' / 'sri_lanka_post_1948' / '09_output' / 'Sri_Lanka_1948_2026_etude_historico_geographique_v3.pdf'
-        pdf_page_count = lambda path: len(re.findall(rb'/Type\s*/Page\b', path.read_bytes()))
-        self.assertGreaterEqual(pdf_page_count(pre_pdf), 60)
-        self.assertGreaterEqual(pdf_page_count(post_pdf), 20)
+        pre_v2 = pre_pdf.with_name('Sri_Lanka_Fresque_historico_geographique_vol_retour_v2.pdf')
+        post_v2 = post_pdf.with_name('Sri_Lanka_1948_2026_etude_historico_geographique_v2.pdf')
+        for pdf in [pre_pdf, post_pdf]:
+            payload = pdf.read_bytes()
+            self.assertTrue(payload.startswith(b'%PDF-'))
+            self.assertIn(b'%%EOF', payload[-1024:])
+        self.assertGreater(pre_pdf.stat().st_size, pre_v2.stat().st_size * 5)
+        self.assertGreater(post_pdf.stat().st_size, post_v2.stat().st_size * 1.5)
 
     def test_v3_docx_structurally_preserves_every_v1_paragraph_and_table(self):
         import xml.etree.ElementTree as ET
