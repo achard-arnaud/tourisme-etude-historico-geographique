@@ -1,0 +1,9 @@
+{
+  "id": "C-COMP-TN-DEV-001",
+  "claim": "Tamil Nadu's relative success in converting education into broad non-farm and modern-sector opportunity is best explained as an institutional package—social-justice mobilisation, expanded education, welfare, infrastructure, diversification and access to a large Indian market—rather than by reservation policy or English alone.",
+  "confidence": "B",
+  "zoom": "Z2",
+  "causal_role": "driver",
+  "source_ids": ["CAMBRIDGE-DRAVIDIAN-MODEL", "CAMBRIDGE-DRAVIDIAN-EDUCATION", "CAMBRIDGE-DRAVIDIAN-RURAL", "CAMBRIDGE-DRAVIDIAN-CAPITAL", "WORLD-BANK-TN-BRIEF"],
+  "notes": "Comparator is a federated Indian state; market size, federal institutions and peace are major confounders relative to Jaffna."
+}
