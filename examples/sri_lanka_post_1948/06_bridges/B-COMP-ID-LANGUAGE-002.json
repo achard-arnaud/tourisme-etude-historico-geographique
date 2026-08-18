@@ -1,0 +1,9 @@
+{
+  "id": "B-COMP-ID-LANGUAGE-002",
+  "from_claim": "C-COMP-ID-001",
+  "to_claim": "C-COMP-ID-LANG-002",
+  "question": "What does Indonesia actually demonstrate for Sri Lanka's linguistic decolonization?",
+  "mechanism": "Indonesia shows that a postcolonial state could elevate a shared lingua franca not owned by the largest ethnic group while regional languages continued in social use; this widens the institutional choice set for interpreting Sinhala Only without implying identical conditions or outcomes.",
+  "result": "B",
+  "source_ids": ["CAMBRIDGE-INDONESIA-LANGUAGE", "BPS-INDONESIA-LANGUAGE-2024"]
+}

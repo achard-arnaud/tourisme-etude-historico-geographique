@@ -1,0 +1,9 @@
+{
+  "id": "C-COMP-TN-DEV-002",
+  "claim": "Tamil Nadu's social-justice and education architecture broadened access without eliminating caste inequality; modernisation can simultaneously weaken caste-bound occupations and preserve unequal caste networks or status advantages.",
+  "confidence": "B",
+  "zoom": "Z2",
+  "causal_role": "amplifier",
+  "source_ids": ["CAMBRIDGE-DRAVIDIAN-MODEL", "CAMBRIDGE-DRAVIDIAN-RURAL", "CAMBRIDGE-CASTE-ENTREPRENEURSHIP", "WORLD-BANK-TN-BRIEF"],
+  "notes": "Reject the false binary 'caste-free modern Tamil Nadu versus traditional Jaffna'."
+}

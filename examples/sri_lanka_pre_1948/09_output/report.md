@@ -1,102 +1,90 @@
-# Fresque nationale jusqu’à 1948 — affinage Jaffna/VOC et rebattage géopolitique européen
+# Fresque nationale jusqu’à 1948 — édition canonique sociale et géopolitique
 
-## Ce que la visite de Jaffna change
-Le fort oblige à corriger une faiblesse classique des récits coloniaux : on raconte volontiers l’arrivée des Européens comme une succession de drapeaux sur les mêmes murailles. Or la vraie rupture n’est pas seulement **qui possède le fort**, mais **ce que le réseau de forts permet de gouverner**.
+> **Statut** — Markdown canonique promu dans Run 5. Il reprend le delta Jaffna/VOC, les grands bridges géopolitiques européens et la couche sociale caste/dépendance/encodage administratif/éducation. Le Word/PDF reste à régénérer après merge.
 
-Au XVIIe siècle, le royaume de Kandy cherche un contrepoids maritime au Portugal. L’alliance avec la VOC fonctionne militairement : Batticaloa, Trincomalee, Galle, Negombo, Colombo puis Jaffna passent progressivement hors du contrôle portugais. Mais l’objectif kandyan — récupérer les façades maritimes — et celui de la Compagnie — sécuriser des ports, des monopoles et un territoire rentable — divergent rapidement. La VOC ne devient donc pas simplement « l’allié qui reste trop longtemps » : elle construit une **souveraineté côtière concurrente**.
+## 1. Jaffna oblige à retourner la carte
 
-### Le fort comme système d’exploitation, pas comme monument
-La carte de 1751 montrant vingt-deux forts est plus intéressante que n’importe quel bastion pris isolément. Ensemble, ces positions abaissent le coût de cinq opérations : surveiller les ports, dissuader les rivaux européens, déplacer des troupes, protéger les circuits de collecte et punir les résistances. Leur efficacité reste relative — Kandy soutient encore des révoltes et mène la guerre dans les années 1760 — mais le maillage donne à la VOC un avantage logistique durable.
+Vu depuis Colombo, Jaffna peut sembler une extrémité septentrionale. Vu depuis le détroit de Palk, la péninsule est une interface avec le Tamilakam. Cette inversion de perspective reste valable sous les royaumes tamouls, les Portugais, la VOC et les Britanniques : le nord-ouest est relié à Mannar, Rāmeśvaram et aux circuits de l’Inde du Sud autant qu’au reste de l’île.
 
-**Petit détour — pourquoi Jaffna et Mannar comptent plus qu’on ne le croit.** Vu depuis Colombo, le nord paraît périphérique. Vu depuis le détroit de Palk, il est au contraire une interface. Le panneau de Mannar relie la route côtière, les éléphants acheminés vers Jaffna, les racines de choya utilisées pour teindre des textiles indiens, les pêcheries de perles et le travail servile. Cela réactive une constante plus ancienne de notre fresque : le nord-ouest n’est pas seulement une marge de Lanka, c’est un morceau du système économique du sud de l’Inde et du golfe de Mannar.
+Le fort de Jaffna matérialise alors moins un monument isolé qu’un changement de technologie politique. Le royaume de Kandy cherche au XVIIe siècle un contrepoids maritime au Portugal ; l’alliance avec la VOC permet de faire tomber successivement plusieurs positions portugaises. Mais la coalition contient une contradiction : Kandy veut récupérer ses façades maritimes, tandis que la Compagnie veut convertir les ports conquis en réseau rentable et défendable. L’allié devient donc un **souverain côtier concurrent**.
 
-### De la cannelle au « paper state »
-La cannelle est une motivation structurante, surtout au début. Mais la formule d’exposition selon laquelle « tout » tournerait autour d’elle devient insuffisante dès qu’on suit la Compagnie dans le temps. La VOC hérite et adapte des hiérarchies locales, utilise des obligations de service, prélève des taxes, tient des tribunaux et développe des registres de terres et de personnes. Les *thombos* ne sont pas une curiosité bureaucratique : ils transforment des relations locales mouvantes en catégories administratives plus stables, donc plus faciles à taxer, juger et transmettre.
+### Le fort comme réseau d’exploitation
 
-C’est ici que la période hollandaise devient un bridge majeur vers la période britannique. Les Britanniques ne trouvent pas en 1796 une côte administrativement vierge. Ils héritent d’un espace déjà fortement documenté, fiscalisé et juridiquement différencié, avant de l’intégrer à un État insulaire beaucoup plus centralisé après 1815 et surtout les réformes de 1833.
+La carte de 1751 montrant vingt-deux forts dit davantage que chaque bastion pris séparément. Le réseau diminue le coût de surveillance des ports, protège les circuits de collecte, déplace rapidement soldats et agents, dissuade les rivaux européens et offre des bases pour intervenir contre les résistances locales. Il ne rend pas la VOC omnipotente : Kandy reste capable de soutenir des révoltes et de mener la guerre. Mais il crée une asymétrie logistique durable.
 
-### Le travail : sortir du faux choix « libre ou esclave »
-Le corpus de la Stichting et les recherches académiques sur Colombo et Jaffna rendent visible un continuum que la première fresque sous-pondérait. Il existe bien des personnes juridiquement possédées et transférables comme esclaves ; les archives VOC montrent aussi manumissions, litiges et circulations forcées à l’échelle de l’océan Indien. Mais ce système coexiste avec dette, dépendances de caste et *rajakariya*.
+**Petit détour — Mannar.** Les panneaux du terrain relient pêcheries de perles, route des éléphants, racines de choya destinées à la teinture de textiles indiens et travail servile. Cette juxtaposition n’est pas anecdotique : elle montre un nord-ouest inséré dans une économie transdétroit, là où une histoire écrite depuis Colombo tend à voir une périphérie.
 
-La causalité importante n’est donc pas « la VOC invente le travail forcé » ni « tout travail obligatoire est esclavage ». Elle est : **un pouvoir colonial combine plusieurs régimes locaux et impériaux de dépendance, puis les rend plus lisibles par le droit et l’enregistrement**.
+## 2. De la cannelle au *paper state*
 
-### Les intermédiaires tamouls : la domination européenne a besoin de traduction
-La microhistoire de Willem de Melho ouvre une autre fenêtre. Sa famille tamoulophone, liée aux Chettiars, fournit des traducteurs à la VOC et des ministres à l’Église réformée. Des Sri-Lankais formés au séminaire poursuivent même des études aux Pays-Bas. Ce n’est pas une anecdote exotique : elle empêche de représenter la colonie comme deux blocs, Européens actifs et colonisés passifs. L’empire fonctionne par des **courtiers linguistiques, religieux, marchands et administratifs**, dont les intérêts ne coïncident ni parfaitement avec ceux de la VOC ni avec ceux d’une communauté locale homogène.
+La cannelle est une motivation structurante de la VOC, mais elle ne suffit pas à expliquer l’évolution de l’État côtier. À mesure que l’administration doit fiscaliser terres, personnes, services et échanges, elle hérite de hiérarchies locales, utilise des obligations de travail, tient des tribunaux et développe des registres de personnes et de propriétés. Les *thombos* rendent des relations auparavant négociées et dispersées plus **lisibles** pour l’État [CAMBRIDGE-CLASSIFICATION ; CAMBRIDGE-LAWMAKING].
 
----
+Cette lisibilité est le bridge majeur vers la période britannique. Les Britanniques ne prennent pas en 1796 une côte administrativement vierge : ils récupèrent des forts, des agents, des catégories, des registres et des pratiques fiscales qui pourront être simplifiés, étendus ou réorganisés au XIXe siècle.
 
-# Petit détour — les guerres européennes qui changent l’équilibre autour de Ceylan
+### Petit détour structurant — quand le papier rencontre la caste
 
-## Une confusion utile à corriger : « guerre de huit ans » et guerre de Sept Ans
-Le grand basculement anglo-français ne tient pas à une seule guerre. La **guerre de Succession d’Autriche** dure huit ans en Europe (1740–1748), mais sa dimension indienne commence surtout en 1744. Elle ouvre une lutte entre compagnies anglaise et française qui se prolonge jusqu’à la guerre de Sept Ans et à la chute de Pondichéry en 1761.
+La VOC ne crée pas une société de caste à Jaffna. Les hiérarchies, les statuts de service et les dépendances précèdent la conquête européenne. En revanche, gouverner par registre oblige l’administration à décider **qui est qui**, qui doit quoi, qui possède quoi et quels intermédiaires peuvent parler au nom d’un groupe.
 
-Cambridge décrit donc une **séquence de dix-sept ans, 1744–1761**, plutôt qu’un événement isolé [CAMBRIDGE-AUSTRIAN-WAR-INDIA]. La guerre de Sept Ans (1756–1763) est néanmoins le pivot décisif : elle détruit la capacité française à rivaliser durablement avec l’East India Company comme puissance territoriale en Inde [CAMBRIDGE-SEVEN-YEARS-CARNATIC ; CAMBRIDGE-FRENCH-1754-1815].
+Les recherches sur la bureaucratie hollandaise et sur l’esclavage à Jaffna montrent ainsi que l’enregistrement et la codification peuvent consolider certaines positions dominantes — notamment celles de groupes Vellalar — vis-à-vis de populations subordonnées [CAMBRIDGE-CLASSIFICATION ; CAMBRIDGE-JAFFNA-SLAVERY]. Le mécanisme n’est donc pas « les Européens inventent la caste », mais :
 
-## Avant 1744 : un océan Indien européen encore multipolaire
-Vers 1740, aucune puissance européenne ne peut prétendre seule à l’hégémonie régionale. La VOC contrôle les côtes de Ceylan et un vaste réseau indo-indonésien. Les Français disposent de Pondichéry, Karikal, Chandernagor et surtout de l’Île de France/Maurice comme base navale. Les Britanniques sont puissants à Madras, Bombay et Calcutta mais leur compagnie reste encore en transition entre commerce et souveraineté.
+> hiérarchie locale → besoin colonial de travail et de revenu → classification documentaire → droits et obligations plus stables → capacité accrue de certains intermédiaires à transformer leur position sociale en position administrative.
 
-Le Portugal, lui, **n’est déjà plus un rival équivalent**. Il conserve Goa, Daman, Diu et d’autres positions, mais sa contraction stratégique est largement antérieure au XVIIIe siècle. Cambridge situe la crise profonde de l’Estado da Índia dès le XVIIe siècle [CAMBRIDGE-PORTUGUESE-LATE ; CAMBRIDGE-PORTUGUESE-DECLINE].
+Cette stabilisation n’est pourtant pas unilatérale. Les habitants utilisent également actes, tribunaux et registres dans les litiges de terre, dette, héritage, dot et service. Le *paper state* est à la fois technologie de coercition et espace de négociation.
 
-**Fausse piste.** « La guerre de Sept Ans chasse les Portugais de la région. » Non. Elle change surtout l’équilibre anglo-français. Le recul portugais est une autre chronologie.
+### Travail libre, dépendance, esclavage : ne pas forcer les catégories
 
-## 1744–1763 : les guerres européennes se greffent sur les guerres indiennes
-Les compagnies européennes ne se battent pas dans un vide colonial. Elles interviennent dans les successions, coalitions et conflits du Carnatic, du Deccan et du Bengale. Les victoires britanniques en Inde permettent à l’EIC d’accéder à une ressource nouvelle : **des revenus territoriaux capables de financer des armées locales de plus en plus grandes**.
+Les archives font apparaître des personnes juridiquement possédées, des manumissions et des circulations forcées à l’échelle de l’océan Indien. Mais l’esclavage coexiste avec dette, dépendances de caste et *rajakariya*. Tout travail obligatoire n’est pas esclavage ; l’abolition juridique de l’esclavage ne dissout pas toutes les relations de dépendance.
 
-La France perd sa position politique au Bengale en 1757, puis le rapport militaire se renverse dans le Carnatic ; Pondichéry tombe en 1761. Le traité de Paris de 1763 restitue aux Français plusieurs comptoirs. Ils ne « quittent » donc pas l’Inde : leur commerce continue et leurs établissements subsistent. Ce qui disparaît est la **symétrie stratégique** avec l’EIC. Sans injection massive de ressources de l’État français, la Compagnie française ne peut plus reproduire le modèle britannique [CAMBRIDGE-FRENCH-1754-1815].
+Sous les Britanniques, les mesures d’émancipation du XIXe siècle modifient le statut juridique des personnes asservies sans faire disparaître immédiatement caste, inégalités de travail ni autorité sociale [CAMBRIDGE-JAFFNA-SLAVERY]. Le XIXe siècle peut donc produire simultanément **émancipation formelle, continuité hiérarchique et explosion de l’éducation missionnaire**.
 
-## Ce que cela change pour Ceylan
-L’effet sur Ceylan est indirect mais structurel. La VOC reste souveraine sur le littoral, Kandy conserve son autonomie intérieure, mais l’environnement régional cesse progressivement d’être un jeu entre Européens de puissance comparable.
+## 3. Les intermédiaires : l’empire ne gouverne jamais seul
 
-Après 1763, la Grande-Bretagne devient la puissance européenne disposant du meilleur couple **revenus indiens + armée de compagnie + marine océanique**. La France reste un risque militaire, surtout grâce à Maurice, mais elle n’est plus en mesure d’offrir à un souverain de Lanka un contrepoids territorial aussi crédible qu’au temps de Dupleix.
+La microhistoire de Willem de Melho et d’autres courtiers tamoulophones empêche une représentation binaire « Européens actifs / colonisés passifs ». Traduction, religion, commerce, justice et fiscalité dépendent d’intermédiaires dont les intérêts ne coïncident jamais parfaitement ni avec ceux de la Compagnie ni avec ceux d’une communauté locale supposée homogène.
 
-Le Royaume de Kandy garde donc une diplomatie de balancier, mais la carte des options se rétrécit.
+Quand les missions protestantes investissent ensuite l’éducation à Jaffna, elles entrent dans un paysage déjà structuré par caste, propriété, temples, réseaux familiaux et expériences de l’administration coloniale. La question pertinente devient : **quels groupes parviennent à convertir école et anglais en mobilité, et comment cet avantage est-il reproduit ou contesté ?**
 
 ---
 
-# Deuxième bascule — 1793–1815 : Révolution française, Napoléon et prise de Ceylan
+## 4. 1744–1763 : les guerres européennes changent le système régional
 
-## Le retrait hollandais a lieu avant 1815
-Ici aussi, il faut corriger une chronologie intuitive. Les Hollandais ne quittent pas Ceylan « après la fin des guerres napoléoniennes ». Lorsque les Provinces-Unies deviennent la République batave alliée à la France, la Grande-Bretagne attaque les possessions néerlandaises afin d’empêcher qu’elles servent la stratégie française.
+La guerre de Succession d’Autriche ouvre en Inde à partir de 1744 une confrontation anglo-française qui se prolonge dans la guerre de Sept Ans. Cambridge traite donc plutôt une séquence **1744–1761/1763** [CAMBRIDGE-AUSTRIAN-WAR-INDIA ; CAMBRIDGE-SEVEN-YEARS-CARNATIC].
 
-**Cochin tombe en 1795 ; Ceylan en 1796.** Cambridge considère ces deux pertes comme la fin de la présence militaire hollandaise en Asie du Sud [CAMBRIDGE-COMPANY-FORTRESS-END]. En 1802, le traité d’Amiens laisse Ceylan à la Grande-Bretagne. La VOC, elle, a été dissoute en 1799.
+Vers 1740, l’environnement reste multipolaire : VOC à Ceylan et dans l’archipel, France à Pondichéry et Maurice, Britanniques à Madras, Bombay et Calcutta, puissances indiennes capables d’arbitrer les alliances. Le Portugal est déjà très affaibli ; sa contraction ne doit pas être attribuée à la guerre de Sept Ans [CAMBRIDGE-PORTUGUESE-LATE ; CAMBRIDGE-PORTUGUESE-DECLINE].
 
-Cette transition n’est pas seulement un changement de drapeau. Les Britanniques récupèrent des forts, des fonctionnaires, des savoirs fiscaux, des réseaux d’intermédiaires et des catégories administratives déjà façonnées par la VOC [CAMBRIDGE-ANGLODUTCH-MERIDIAN].
+Le tournant anglo-français tient autant au financement qu’aux batailles. Les gains territoriaux de l’East India Company donnent accès à des recettes indiennes capables de financer des armées locales toujours plus importantes. Après la chute de Pondichéry en 1761 et le traité de Paris, les comptoirs français subsistent mais la **parité politico-militaire** disparaît [CAMBRIDGE-FRENCH-1754-1815].
 
-## La menace française reste pourtant très concrète
-La fin de la puissance politique française en Inde après 1763 n’équivaut pas à la disparition de la puissance navale française dans l’océan Indien. Maurice/Île de France devient une base cruciale pour les escadres et corsaires. Les Britanniques bâtissent alors une architecture de sécurité régionale autour de l’Inde, du Cap, de Ceylan et des routes orientales [CAMBRIDGE-BRITISH-NAVY-1794 ; CAMBRIDGE-DESTROYING-RIVALS].
-
-Des projets franco-bataves de reconquête de Ceylan existent encore au début du XIXe siècle. Mais la dynamique se referme : Pondichéry est occupée par les Britanniques à partir de 1793 ; Maurice tombe en 1810 ; Java est occupée en 1811. Au moment où les guerres européennes se terminent, l’appareil britannique domine pratiquement toutes les grandes positions qui pourraient menacer l’Inde et Ceylan.
-
-## 1815 : la chute de Kandy dans une fenêtre géopolitique exceptionnelle
-Il serait faux de dire : **« Waterloo cause la conquête de Kandy »**.
-
-La chute de Sri Vikrama Rajasinha vient d’abord d’une crise politique kandyan : tensions avec les chefs, capacité britannique à construire une coalition locale, leçons tirées de l’échec militaire britannique de 1803, et volonté croissante de supprimer le coût d’une frontière intérieure indépendante.
-
-Mais la coïncidence mondiale est importante. En 1815 :
-- Ceylan côtier est britannique depuis près de vingt ans ;
-- la VOC n’existe plus ;
-- la France a perdu Maurice depuis 1810 ;
-- Pondichéry et les autres comptoirs français sont sous occupation britannique jusqu’en 1816 ;
-- l’EIC est devenue une immense puissance fiscale et militaire en Inde ;
-- aucune puissance européenne ne peut raisonnablement offrir à Kandy un secours militaire de même ordre.
-
-La conquête de Kandy est donc **endogènement rendue possible par la crise du royaume, mais régionalement facilitée par une asymétrie impériale sans précédent**.
-
-## Après 1815 : le retour français et hollandais n’est plus un retour à l’ancien jeu
-Les comptoirs français sont restitués à partir de 1816, mais comme établissements limités : ils restent commerciaux, culturels et administratifs, sans retrouver une capacité de conquête régionale comparable à celle du milieu du XVIIIe siècle [CAMBRIDGE-FRENCH-1754-1815].
-
-Les Pays-Bas récupèrent plusieurs possessions indonésiennes après 1814, mais pas Ceylan. Le traité anglo-hollandais de 1824 clarifie encore la géographie impériale autour du détroit de Malacca : les Britanniques consolident l’axe Inde–Ceylan–Malacca–Singapour, tandis que les Néerlandais se concentrent davantage sur l’archipel indonésien.
-
-**État avant / après** :
-- vers **1740**, plusieurs puissances européennes se chevauchent et les États asiatiques disposent de multiples partenaires ;
-- vers **1765**, la France reste présente mais la Grande-Bretagne possède le seul chemin crédible vers l’hégémonie territoriale européenne en Inde ;
-- vers **1815–1824**, Ceylan, Maurice et l’essentiel de l’Inde sont dans le système britannique, les Hollandais sont repoussés vers l’Insulinde et la France conserve surtout des comptoirs.
-
-L’océan Indien n’est pas littéralement un « lac britannique », mais le marché diplomatique des contrepoids européens a profondément changé.
+Pour Ceylan, l’effet est indirect mais structurant : Kandy et la VOC restent les acteurs locaux immédiats, mais le marché des contrepoids européens se rétrécit.
 
 ---
 
-### Bridge vers 1948
-Le legs le plus durable de la VOC n’est probablement ni un fort ni une recette de cannelle. C’est une combinaison de **nœuds côtiers, catégories juridiques, registres, fiscalité et intermédiaires** que l’État britannique peut reprendre, simplifier ou généraliser. Les guerres européennes du XVIIIe et du début du XIXe siècle ajoutent la seconde moitié de l’équation : elles éliminent progressivement les rivaux capables de contester cette reprise à l’échelle régionale.
+## 5. 1793–1815 : Révolution, Napoléon et fermeture du marché des alliances
 
-Il serait cependant téléologique de faire de ces catégories ou de cette hégémonie la « cause » directe des conflits ethniques du XXe siècle : entre les deux interviennent la conquête complète de Kandy, l’économie de plantation, les migrations de travailleurs indiens, l’éducation missionnaire, les réformes constitutionnelles et la politique électorale moderne.
+Le retrait hollandais de Ceylan précède 1815. Quand les Provinces-Unies deviennent la République batave alliée à la France, les Britanniques prennent Cochin en 1795 puis Ceylan en 1796 ; la VOC disparaît en 1799 et Amiens confirme Ceylan britannique en 1802 [CAMBRIDGE-COMPANY-FORTRESS-END].
+
+Cette transition transfère plus qu’un territoire : forts, savoirs fiscaux, catégories administratives et intermédiaires passent dans une nouvelle architecture impériale [CAMBRIDGE-ANGLODUTCH-MERIDIAN].
+
+La menace française reste crédible tant que Maurice sert de base navale et corsaire. Elle se ferme progressivement avec l’occupation de Pondichéry, la prise de Maurice en 1810 puis de Java en 1811 [CAMBRIDGE-BRITISH-NAVY-1794 ; CAMBRIDGE-DESTROYING-RIVALS].
+
+### 1815 : Kandy tombe dans une fenêtre mondiale particulière
+
+Waterloo ne « cause » pas la conquête de Kandy. Les mécanismes immédiats sont kandyan : conflit entre Sri Vikrama Rajasinha et des élites du royaume, capacité britannique à former une coalition locale, expérience tirée de l’échec militaire de 1803 et volonté de supprimer une frontière intérieure coûteuse.
+
+Mais ces mécanismes opèrent désormais dans un environnement où presque aucun contrepoids européen crédible ne subsiste :
+
+> **crise interne de Kandy × asymétrie impériale régionale sans précédent = fenêtre de conquête exceptionnellement favorable.**
+
+Après 1815–1816, les comptoirs français reviennent comme établissements limités et les Pays-Bas se recentrent sur l’Insulinde. Le traité anglo-hollandais de 1824 clarifie encore la séparation des sphères. L’océan Indien n’est pas littéralement un lac britannique, mais les souverains de Lanka ont perdu une grande partie des options de balancier des siècles précédents.
+
+---
+
+## 6. Bridge vers 1948 : ce que l’État indépendant hérite vraiment
+
+La longue durée coloniale lègue au moins quatre couches :
+
+1. **un territoire** progressivement unifié par le pouvoir britannique ;
+2. **un appareil de lisibilité** — registres, fiscalité, catégories juridiques et administration ;
+3. **des hiérarchies sociales retravaillées**, mais jamais créées de toutes pièces par le colonisateur ;
+4. **des canaux de mobilité nouveaux**, surtout l’éducation et l’anglais, dont les bénéfices sont très inégalement distribués.
+
+Cette quatrième couche raccorde directement l’histoire sociale de Jaffna à la fresque post-1948. Le problème futur ne sera pas seulement « Sinhala contre Tamil ». Il sera aussi : **que fait un État postcolonial lorsqu’une minorité régionale a converti avec une grande efficacité certaines institutions coloniales — école, anglais, concours et professions — en capital social ?**
+
+La réponse de 1956 et des années 1970 redistribuera cet accès, tandis que la caste, loin de disparaître, changera de visibilité et de fonction. Ce bridge constitue désormais l’entrée sociale canonique de la seconde fresque.

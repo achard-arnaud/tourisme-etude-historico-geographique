@@ -1,0 +1,9 @@
+{
+  "id": "B-COMP-TN-TERRITORIAL-002",
+  "from_claim": "C-POST-HC-EXTERNAL-002",
+  "to_claim": "C-COMP-TN-DEV-001",
+  "question": "Why could historically strong education produce more territorial economic spillovers in Tamil Nadu than in Jaffna?",
+  "mechanism": "Tamil Nadu combined broadened educational access with a larger absorptive market, welfare, infrastructure, non-farm diversification and relative peace, while Jaffna experienced altered state-access gateways followed by prolonged conflict, destroyed connectivity and migration that shifted part of the return to human capital outside the origin territory.",
+  "result": "B",
+  "source_ids": ["CAMBRIDGE-DRAVIDIAN-EDUCATION", "CAMBRIDGE-DRAVIDIAN-RURAL", "CAMBRIDGE-DRAVIDIAN-CAPITAL", "ADB-NORTHERN-ROADS", "ADB-CONFLICT-REGION", "JSTOR-TAMIL-MARRIAGE-2019"]
+}

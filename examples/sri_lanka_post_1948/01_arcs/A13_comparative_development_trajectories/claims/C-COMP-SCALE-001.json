@@ -1,0 +1,9 @@
+{
+  "id": "C-COMP-SCALE-001",
+  "claim": "Jaffna, Tamil Nadu and Indonesia are not equivalent territorial units: Jaffna is a subnational peninsula, Tamil Nadu a large federated state embedded in the Indian market, and Indonesia a sovereign archipelagic state; comparison is valid only for bounded mechanisms after scale and institutional-level differences are treated explicitly.",
+  "confidence": "A",
+  "zoom": "Z3",
+  "causal_role": "constraint",
+  "source_ids": ["CAMBRIDGE-DRAVIDIAN-MODEL", "CAMBRIDGE-INDONESIA-LANGUAGE", "CAMBRIDGE-STANDARDIZATION"],
+  "notes": "This is a methodological constraint on all Run 5 causal bridges."
+}

@@ -1,186 +1,175 @@
-# Sri Lanka 1948–2026 — Vnext : État, langue, caste, mobilité et trajectoires de développement
+# Sri Lanka 1948–2026 — Vnext Run 5 : État, langue, caste, mobilité et conversion du capital humain
 
-> **Statut** — édition de travail Vnext. Elle intègre les apports déjà validés sur patrimoine, Jaffna, éducation, anglais et non-alignement, puis ajoute une nouvelle ancre verticale : **comment une société reproduit ou redistribue le statut par la caste, l’école, l’État, le mariage et la migration**. Le précédent `report.md` reste la baseline stable ; cette Vnext devient le candidat à la prochaine édition de lecture/Word après QA.
+> **Statut** — candidat intégré Run 5. La recherche obligatoire est close pour cette édition : éducation/anglais, langue, caste, guerre, diaspora, Tamil Nadu et Indonésie sont désormais reliés dans une même carte causale. La promotion dans `report.md` est effectuée dans le même run sous réserve du gate CI/QA ; le Word/PDF reste un artefact distinct à régénérer ensuite.
 
-## 1. Le vrai problème laissé par 1948 : qui hérite de l’État colonial ?
+## 1. 1948 : qui hérite réellement de l'État colonial ?
 
-L’indépendance ne part pas d’une page blanche. Le nouvel État hérite d’un territoire unifié, d’une administration anglophone, d’un système scolaire très inégalement réparti et de hiérarchies sociales que les administrations coloniales ont parfois codifiées sans les avoir inventées.
+L'indépendance ne part pas d'une page blanche. Le nouvel État hérite d'un territoire unifié, d'une administration anglophone, d'un système scolaire très inégalement réparti et de hiérarchies sociales que les administrations coloniales ont parfois codifiées sans les avoir inventées.
 
-Jaffna constitue un cas particulièrement important. Au XIXe siècle, les missions protestantes, les écoles, l’imprimerie et l’enseignement de l’anglais y développent un bassin de capital humain exceptionnel. Les familles locales apprennent vite à convertir l’école en mobilité : service colonial, enseignement, droit, médecine, ingénierie, professions à Colombo et carrières dans l’Empire [CAMBRIDGE-ACM-EDU ; CAMBRIDGE-TWO-SOCIETIES].
+Jaffna est un cas décisif. Au XIXe siècle, missions protestantes, écoles, imprimerie et anglais y constituent un bassin de capital humain particulièrement dense. Des familles de la péninsule convertissent cette ressource en postes d'enseignants, médecins, avocats, ingénieurs, fonctionnaires et carrières impériales [CAMBRIDGE-ACM-EDU ; CAMBRIDGE-TWO-SOCIETIES].
 
-La première correction apportée par la nouvelle recherche est donc importante : **les Tamouls de Ceylan ne sont pas simplement une minorité historiquement sous-représentée dans l’appareil d’État**. Certaines élites tamoules anglophones, en particulier celles liées à Jaffna, réussissent très bien dans les examens et professions du système colonial [CAMBRIDGE-STATE-NATION]. Cette réussite ne signifie ni contrôle de tout l’État ni pouvoir politique équivalent à celui de la majorité. Mais elle change le point de départ analytique : les réformes postcoloniales vont en partie redistribuer un avantage de capital humain hérité de l’Empire.
-
----
-
-# 2. 1956 — une décolonisation linguistique qui devient redistribution majoritaire
-
-Lire *Sinhala Only* seulement comme « cinghalais contre tamoul » masque la moitié du mécanisme. L’anglais reste la langue de l’ancienne élite administrative et de nombreuses professions. Le remplacer répond à une revendication postcoloniale compréhensible : rendre l’État accessible à la majorité dans une langue locale et supprimer une hiérarchie impériale [CAMBRIDGE-LANGUAGE-DECOLONIZATION].
-
-Le choix décisif est ailleurs. La décolonisation aurait pu institutionnaliser **Sinhala + Tamil** contre l’ancienne prééminence de l’anglais. En faisant du cinghalais la seule langue officielle, la réforme superpose deux redistributions : elle diminue l’avantage de l’élite anglophone et démocratise l’accès pour de nombreux Cinghalophones ; simultanément, elle impose une barrière nouvelle aux Tamilophones et dévalorise particulièrement le capital linguistique accumulé à Jaffna [CAMBRIDGE-LANGUAGE-JAFFNA].
-
-C’est une configuration classique de politique distributive : **une réforme peut corriger une inégalité tout en en créant une autre**.
-
-### L’anglais : un coût d’opportunité, pas une théorie totale du développement
-
-La perte de l’anglais comme langue-pont a probablement réduit certains canaux de mobilité intercommunautaire et internationale. Aujourd’hui encore, anglais, communication, informatique et compétences professionnelles sont identifiés comme des enjeux d’employabilité [WORLD-BANK-ENGLISH-2014]. Mais il serait trop fort d’en faire la cause principale du retard économique sri-lankais. Les années 1960–1970 combinent dirigisme, contraintes de balance des paiements, termes de l’échange, politique sociale et économie inward-looking avant le tournant libéral de 1977 [CAMBRIDGE-INWARD-ECONOMY].
-
-L’anglais reste donc un **amplificateur de capital humain et d’ouverture**, pas une variable maîtresse.
+Première correction : **les Tamouls de Ceylan ne sont pas simplement une minorité historiquement sous-représentée dans l'appareil colonial**. Certaines élites tamoules anglophones réussissent fortement dans les examens et professions [CAMBRIDGE-STATE-NATION]. Cela ne signifie ni contrôle de tout l'État ni égalité de pouvoir politique. Cela signifie que les réformes postcoloniales vont redistribuer un capital institutionnel déjà très inégalement distribué.
 
 ---
 
-# 3. Ancre verticale — la caste ne disparaît pas : elle change de lieu
+## 2. 1956 : décoloniser l'anglais, puis choisir qui accède à l'État
 
-La caste doit désormais traverser la fresque moderne, mais elle ne doit pas remplacer langue, constitution ou guerre comme cause principale. Elle fonctionne mieux comme **infrastructure de reproduction sociale** : elle organise ou influence statut, temple, réseaux, mariage, propriété et parfois accès aux opportunités.
+Lire *Sinhala Only* comme une simple hostilité cinghalaise envers les Tamouls manque un mécanisme réel : l'anglais reste la langue de l'ancienne élite. Le remplacer répond aussi à une revendication démocratique postcoloniale — rendre l'État accessible à la majorité dans une langue locale [CAMBRIDGE-LANGUAGE-DECOLONIZATION].
 
-## Sri Lanka a bien légiféré contre la caste
+Mais cette décolonisation aurait pu reconnaître **Sinhala + Tamil**. Le choix du cinghalais comme seule langue officielle superpose donc deux redistributions : ouverture de l'État à de nombreux Cinghalophones et fermeture relative d'un gateway pour les Tamilophones, particulièrement coûteuse dans une région ayant massivement investi dans l'anglais [CAMBRIDGE-LANGUAGE-JAFFNA].
 
-Le parallèle avec l’Inde devient trompeur si l’on raconte « l’Inde réforme, Sri Lanka ne fait rien ». Le *Prevention of Social Disabilities Act* de 1957 criminalise les handicaps sociaux imposés en raison de la caste ; l’amendement de 1971 renforce peines, pouvoirs de police et règles de preuve [SRI-LANKA-SOCIAL-DISABILITIES-1957 ; SRI-LANKA-SOCIAL-DISABILITIES-1971].
-
-La différence fondamentale avec le Tamil Nadu ne réside donc pas dans l’existence ou l’absence d’une politique anti-caste. Elle réside dans **l’instrument de redistribution** : Sri Lanka cherche surtout à interdire la discrimination et redistribue ensuite l’accès par langue et district ; l’Inde, et particulièrement le Tamil Nadu, institutionnalise aussi des catégories de caste pour réserver une partie de l’éducation et de l’emploi public.
-
-## 1968, Maviddapuram : le moment où deux conflits se croisent
-
-La crise d’entrée au temple de Maviddapuram montre que la caste reste un clivage public puissant dans le nord plus d’une décennie après l’indépendance. Des militants surtout Pallar et Nalavar contestent l’exclusion religieuse ; des défenseurs de haut statut, notamment Vellalar et Koviyar, répliquent violemment [CAMBRIDGE-JAFFNA-TEMPLE-1968].
-
-Mais l’épisode produit ensuite un résultat plus surprenant : au moment même où le conflit de caste est intense, la détérioration de la position politique des Tamouls dans l’État cinghalais-majoritaire augmente le rendement d’une identité tamoule commune. Des acteurs auparavant opposés découvrent qu’ils ont davantage à perdre dans le conflit ethnonational qu’à gagner en maintenant la caste au centre de la politique publique.
-
-C’est notre nouveau bridge :
-
-> **conflit de caste ouvert → pression ethnonationale extérieure → nationalisme défensif → recul relatif de la caste comme clivage public, sans disparition de la hiérarchie sociale.**
-
-Cette « superposition de clivages » explique mieux la société de Jaffna que l’idée d’une modernisation ayant simplement effacé la caste.
+L'anglais doit alors être traité comme **amplificateur de portabilité** : utile pour enseignement supérieur, professions et économie internationale, mais insuffisant à lui seul pour expliquer une trajectoire de croissance [WORLD-BANK-ENGLISH-2014 ; CAMBRIDGE-INWARD-ECONOMY].
 
 ---
 
-# 4. Années 1970 — quand l’accès à l’université devient explosif
+## 3. La caste : non pas une cause totale, mais une infrastructure de reproduction sociale
 
-Le même raisonnement s’applique aux politiques de standardisation et de quotas universitaires. Leur objectif est de corriger des écarts géographiques très réels. Elles ouvrent des possibilités à des districts moins favorisés, y compris à certaines populations tamilophones hors de Jaffna. Mais elles frappent fortement une région dont l’économie sociale est précisément spécialisée dans les études supérieures et les carrières bureaucratiques [CAMBRIDGE-STANDARDIZATION].
+La nouvelle fresque conserve la caste comme axe vertical : statut, temple, propriété, réseaux, mariage, accès aux opportunités. Elle ne remplace ni la langue, ni la constitution, ni la guerre.
 
-Pour beaucoup de familles de Jaffna, la séquence devient cumulative :
+Sri Lanka a bien légiféré contre la discrimination de caste : le *Prevention of Social Disabilities Act* de 1957 puis son amendement de 1971 renforcent l'interdiction et les sanctions [SRI-LANKA-SOCIAL-DISABILITIES-1957 ; SRI-LANKA-SOCIAL-DISABILITIES-1971]. Le contraste avec l'Inde n'est donc pas « réforme contre absence de réforme », mais **choix d'instruments** : Sri Lanka délégitime juridiquement la caste alors que Tamil Nadu emploie aussi des catégories de caste pour redistribuer explicitement l'accès à l'éducation et à l'emploi public.
 
-> avantage scolaire hérité → valeur réduite de l’anglais → accès public plus difficile → règles universitaires moins favorables → sentiment de déclassement collectif.
+### 1968, Maviddapuram : quand deux clivages se superposent
 
-Aucun de ces éléments ne « cause » seul la guerre. Ensemble avec citoyenneté, constitution, violence politique, échec des compromis et polarisation régionale, ils rendent beaucoup plus crédible l’idée que l’État n’est plus un arbitre commun.
+Le conflit d'entrée au temple montre une caste encore politiquement vive dans le nord : militants notamment Pallar et Nalavar face à des défenseurs de statuts plus élevés [CAMBRIDGE-JAFFNA-TEMPLE-1968]. Pourtant, la détérioration du rapport entre Tamouls et État majoritaire augmente bientôt le rendement politique d'une identité tamoule commune.
 
----
+Le bridge est donc :
 
-# 5. Petit détour comparatif — Tamil Nadu : une autre technologie de redistribution
-
-Le Tamil Nadu est notre meilleur comparateur, mais seulement si l’on compare les mécanismes et non les slogans.
-
-Le mouvement non-brahmane, Periyar et le *Self-Respect Movement*, puis la politique dravidienne construisent une identité tamoule régionale qui se présente largement **contre des hiérarchies internes de caste**, tandis qu’à Jaffna l’identité tamoule est de plus en plus mobilisée contre une majorité ethnolinguistique extérieure. Cette différence d’ennemi politique modifie la manière dont la société organise la redistribution.
-
-Le « Dravidian Model » associe mobilisation anti-hégémonique, politiques de justice sociale, élargissement de l’éducation, welfare et accès plus large aux opportunités modernes [CAMBRIDGE-DRAVIDIAN-MODEL ; CAMBRIDGE-DRAVIDIAN-EDUCATION]. L’architecture actuelle de réservation du Tamil Nadu atteint 69 % des postes/places couverts par ces règles entre différentes catégories BC/MBC/DNC/SC/ST [TN-RESERVATION-OFFICIAL].
-
-Il serait cependant faux de conclure que la caste a disparu au Tamil Nadu. Les réseaux de caste continuent d’organiser capital, entrepreneuriat et relations sociales, tandis que des groupes historiquement très dotés en éducation — notamment certains Brahmanes tamouls — convertissent aussi cet ancien capital vers ingénierie, finance et technologies de l’information [CAMBRIDGE-TAMIL-BRAHMINS-IT ; CAMBRIDGE-CASTE-ENTREPRENEURSHIP].
-
-Le contraste n’est donc pas :
-
-> Tamil Nadu moderne et sans caste / Jaffna traditionnelle et figée.
-
-Il est plutôt :
-
-> **Tamil Nadu : caste rendue explicitement politique comme instrument de justice sociale et d’accès** ;
-> **Sri Lanka/Jaffna : caste juridiquement délégitimée, mais redistribution centrale organisée par langue, ethnie et district, tandis que la caste se replie davantage vers le social, le religieux et le familial.**
-
-### Mais aussi — Gandhi, Ambedkar, Nehru
-
-Le récit indien doit également être décentré de Gandhi et Nehru. Pour les institutions de représentation des groupes historiquement intouchables, Ambedkar est un acteur central ; le Poona Pact de 1932 avec Gandhi porte précisément sur les sièges réservés et les modalités de représentation dalit [CAMBRIDGE-POONA-PACT]. Le Tamil Nadu suit en parallèle sa propre généalogie — Justice Party, Periyar, mouvement dravidien — qui ne se réduit pas au Congrès national indien.
+> **conflit de caste public → pression ethnonationale extérieure → nationalisme défensif → recul relatif de la caste comme cleavage politique, sans disparition de ses mécanismes privés.**
 
 ---
 
-# 6. Guerre civile — le nationalisme peut discipliner la caste sans l’abolir
+## 4. Années 1970 : l'université transforme le capital scolaire en conflit distributif
 
-Le LTTE offre un test historique rare. Dans certains espaces, il tente de réduire des droits de temple ou des formes de gouvernance locale organisés selon caste/kudi. Mais les institutions religieuses disposent de leur propre légitimité et résistent ; le mouvement insurgé recule parfois [CAMBRIDGE-LTTE-PUBLIC-AUTHORITY].
+La standardisation cherche à corriger des écarts géographiques d'accès à l'université. Elle profite à des districts jusque-là défavorisés, mais frappe particulièrement Jaffna, historiquement spécialisé dans les études supérieures et les postes bureaucratiques [CAMBRIDGE-STANDARDIZATION].
 
-La conclusion est importante : même un mouvement extrêmement centralisé, armé et idéologiquement voué à l’unité nationale tamoule ne parvient pas à supprimer complètement les autorités sociales plus anciennes.
+La séquence perçue par de nombreuses familles devient cumulative :
 
-Le nationalisme transforme donc **la visibilité** de la caste. Il peut empêcher qu’elle structure ouvertement les partis ou les institutions contrôlées par l’insurrection, mais il ne la fait pas nécessairement disparaître de la parenté, du temple, de la propriété ou du mariage.
+> capital scolaire hérité → valeur moindre de l'anglais dans l'État → nouvelles barrières linguistiques → règles universitaires moins favorables → sentiment de déclassement collectif.
 
----
-
-# 7. Mariage, dot et diaspora — ne pas confondre reproduction sociale et coercition
-
-Le mariage constitue un mécanisme essentiel à étudier parce qu’il relie caste, propriété, parenté, migration et diaspora. Mais il faut supprimer une fausse équivalence : **mariage arrangé n’est pas mariage forcé**, pas plus qu’endogamie ne signifie automatiquement coercition.
-
-Les recherches sur les mariages tamouls transnationaux montrent surtout comment guerre et migration font du mariage un instrument de reconstruction familiale, de circulation internationale et de mobilité sociale [JSTOR-TAMIL-MARRIAGE-2019]. Les recherches sur la guerre montrent également des transformations de la dot, de l’héritage et de la propriété [CAMBRIDGE-THIRANAGAMA-REVIEW].
-
-Cela permet de poser une question plus intéressante que « pourquoi les mariages forcés persistent-ils ? » :
-
-> **dans une société déplacée par la guerre, quels dispositifs familiaux permettent de maintenir statut, propriété, sécurité et migration à travers plusieurs pays ?**
-
-Nous ne disposons pas encore d’une métrique contemporaine suffisamment robuste pour affirmer que Jaffna serait « plus endogame » ou « plus castéiste » que le Tamil Nadu. Cette comparaison reste dans le backlog.
+Ces éléments n'expliquent pas seuls la guerre ; ils prennent sens avec citoyenneté, constitution, violences, échec des compromis et militarisation.
 
 ---
 
-# 8. Petit détour — Indonésie : la langue nationale aurait pu être choisie autrement
+## 5. Tamil Nadu : une autre technologie de mobilité
 
-L’Indonésie éclaire une autre possibilité institutionnelle. Les Javanais constituent le groupe le plus nombreux, mais le nationalisme ne fait pas du javanais la langue de l’État. Il élève une lingua franca malayo-indonésienne, moins directement propriété du groupe majoritaire, au rang de Bahasa Indonesia [CAMBRIDGE-INDONESIA-LANGUAGE].
+Le bon comparateur n'est pas « l'Inde » en bloc mais le Tamil Nadu, et seulement sur des mécanismes bornés. Le mouvement non-brahmane, Periyar, le *Self-Respect Movement* puis les gouvernements dravidiens construisent une politique où l'identité régionale sert largement à contester des hiérarchies internes de statut. À Jaffna, l'identité tamoule se transforme davantage en défense contre une majorité ethnolinguistique extérieure.
 
-C’est un contrepoint très fort à *Sinhala Only* : **on peut décoloniser la langue officielle sans choisir nécessairement la langue ethnique de la majorité numérique**.
+Le *Dravidian Model* relie mobilisation sociale, accès à l'éducation, welfare et modernisation inclusive [CAMBRIDGE-DRAVIDIAN-MODEL ; CAMBRIDGE-DRAVIDIAN-EDUCATION]. L'architecture contemporaine des réservations atteint 69 % des places/postes couverts par la politique de l'État [TN-RESERVATION-OFFICIAL].
 
-Mais l’Indonésie n’est pas un quasi-expériment permettant de conclure « Bahasa Indonesia = unité et croissance ». Géographie archipélagique, autoritarisme, violences politiques, ressources naturelles et trajectoire économique diffèrent profondément. Le cas sert à identifier un choix institutionnel alternatif, pas à prouver un résultat.
+Mais Run 5 ajoute une correction centrale : **les quotas ne sont pas une explication économique suffisante**. Les travaux sur le Tamil Nadu insistent aussi sur la diversification hors des relations rurales liées à la caste, l'infrastructure, les politiques sociales et l'élargissement de l'accès à l'accumulation [CAMBRIDGE-DRAVIDIAN-RURAL ; CAMBRIDGE-DRAVIDIAN-CAPITAL]. Le World Bank state brief confirme une trajectoire de croissance et de sortie de l'agriculture relativement forte tout en relevant des écarts persistants entre groupes sociaux [WORLD-BANK-TN-BRIEF].
 
----
-
-# 9. Le « cycle de développement manqué » : territoire perdu, capital humain externalisé
-
-Dire que les Tamouls de Jaffna ont « raté » le cycle de mondialisation serait trop simple. Leur capital humain n’a pas disparu. Une partie importante a quitté la péninsule et s’est convertie en capital professionnel et familial dans la diaspora.
-
-Le territoire, en revanche, subit plusieurs décennies de guerre, déplacements, destructions, militarisation et insuffisance d’investissement privé. Après le conflit, les provinces du Nord et de l’Est restent en retrait sur l’emploi ; en 2026, les programmes de développement continuent de cibler ces régions comme économies en retard, y compris Jaffna [WORLD-BANK-NORTH-JOBS-2018 ; WORLD-BANK-REVIVE-2026].
-
-Le bridge avec le Tamil Nadu devient alors beaucoup plus propre :
-
-> **capital humain + paix relative + industrialisation + redistribution de l’accès + grand marché indien → conversion territoriale en croissance et services** ;
-
-contre
-
-> **capital humain + déclassement ethnolinguistique + guerre + déplacement/diaspora + reconstruction tardive → externalisation du capital et faiblesse du territoire d’origine**.
-
-Ce n’est pas une expérimentation contrôlée. Taille du marché, fédéralisme indien, politiques industrielles, infrastructures et géographie restent de puissants confounders.
+Le résultat n'est donc pas « caste abolie », mais **mobilité élargie malgré la persistance de réseaux et d'inégalités de caste** [CAMBRIDGE-CASTE-ENTREPRENEURSHIP].
 
 ---
 
-# 10. « Apartheid » ou créolisation ? Le bon diagnostic est entre les deux
+## 6. Gandhi, Ambedkar, Nehru : ne pas réduire l'Inde à un seul récit réformateur
 
-Le terme *apartheid* est inadéquat comme description juridique de Sri Lanka contemporain. Depuis les réformes constitutionnelles de 1987–1988, le tamoul est langue officielle, l’anglais langue de liaison, et Sinhala/Tamil sont reconnus dans l’administration, la législation et la justice [SRI-LANKA-PARLIAMENT-LANGUAGE].
+Le comparateur indien doit également être décentré. Ambedkar est central pour la représentation des groupes historiquement intouchables ; le Poona Pact de 1932 avec Gandhi porte précisément sur les sièges réservés et les modalités de représentation dalit [CAMBRIDGE-POONA-PACT]. Le Tamil Nadu suit parallèlement sa généalogie propre — Justice Party, Periyar, mouvement dravidien — qui ne se réduit pas au Congrès national.
 
-Cela ne signifie pas que la société est intégrée. La guerre a renforcé séparation résidentielle, réseaux scolaires parallèles, univers sociaux linguistiques distincts et mémoires incompatibles. Le problème est donc mieux décrit comme :
-
-> **un État juridiquement commun et multilingue, mais des sphères sociales, scolaires et territoriales partiellement parallèles, avec un écart important entre droit formel et expérience vécue.**
-
-La « créolisation » reste possible mais doit être étudiée par des mécanismes concrets : anglais comme langue-pont, universités, migrations internes, mariages interethniques, emploi privé, villes mixtes, culture médiatique, commerce et institutions nationales. Elle ne peut pas être déduite du seul droit constitutionnel.
+Cette distinction est essentielle : l'Inde moderne combine **plusieurs technologies de redistribution** plutôt qu'une réforme unique des castes.
 
 ---
 
-# 11. Colombo, Bandung, Belgrade — la même question de souveraineté à l’extérieur
+## 7. Guerre civile : discipliner les hiérarchies sans les abolir
 
-La fresque ne doit pas perdre le bridge déjà établi entre décolonisation domestique et autonomie internationale. La chronologie est : **Colombo 1954 → Bandung 1955 → Belgrade 1961 → sommet NAM de Colombo 1976** [CAMBRIDGE-NAM-KOTELAWALA ; CAMBRIDGE-NAM-NIEO].
+Le LTTE fournit un test rare. Dans certains espaces, le mouvement cherche à réduire des droits de temple ou des autorités organisées par caste/kudi ; ces institutions possèdent cependant leurs propres ressources de légitimité et peuvent résister [CAMBRIDGE-LTTE-PUBLIC-AUTHORITY].
 
-Ceylan n’est pas un suiveur naturel du non-alignement. Kotelawala est nettement anticommuniste ; les Bandaranaike réorientent ensuite la politique vers le neutralisme, la récupération des bases britanniques et la diversification des partenaires [FRUS-CEYLON-1958]. Sous Sirimavo, le non-alignement devient aussi revendication de décolonisation de l’ordre économique mondial.
-
-La langue, la politique sociale, les nationalisations et le non-alignement ne sont pas une chaîne causale unique. Ils appartiennent plutôt à une même **grammaire de souveraineté postcoloniale** : qui gouverne, dans quelle langue, par quelles élites et avec quelle dépendance vis-à-vis des anciens centres impériaux ?
+Un mouvement insurgé centralisé peut donc diminuer la visibilité politique de la caste sans supprimer parenté, temple, propriété, mariage ou réseaux. La guerre reconfigure les cleavages ; elle ne crée pas automatiquement une société sans hiérarchie.
 
 ---
 
-# 12. Nouvelle carte causale — du politique vers le socio-politique
+## 8. Mariage et diaspora : reproduction sociale n'est pas coercition
 
-La fresque Vnext doit désormais lire 1948–2026 sur deux axes simultanés.
+Le mariage relie caste, propriété, parenté, migration et diaspora. Mais **mariage arrangé ≠ mariage forcé ≠ endogamie de caste**. Les mariages transnationaux tamouls montrent surtout comment guerre et migration transforment le mariage en dispositif de reconstruction familiale, mobilité et circulation internationale [JSTOR-TAMIL-MARRIAGE-2019]. La guerre modifie aussi dot, héritage et propriété [CAMBRIDGE-THIRANAGAMA-REVIEW].
 
-### Axe horizontal : l’État et le conflit
+La question solide devient : comment une population dispersée reproduit-elle sécurité, statut, propriété et réseau à travers plusieurs pays ? Nous n'avons toujours pas de métrique permettant d'affirmer que Jaffna serait aujourd'hui « plus castéiste » ou « plus endogame » que le Tamil Nadu.
 
-citoyenneté → langue → constitution → compétition distributive → violences → militarisation → guerre → ordre post-2009 → crise économique → réalignement politique.
+---
 
-### Axe vertical : reproduction et mobilité sociales
+## 9. Indonésie : décolonisation linguistique sans langue de la majorité
 
-caste/statut → école/anglais → accès à l’État et aux professions → quotas/réservations → temple et politique de caste → nationalisme défensif → guerre → mariage/diaspora → reconstruction et mobilité contemporaine.
+Les Javanais sont le groupe le plus nombreux, mais le nationalisme indonésien choisit une lingua franca malayo-indonésienne plutôt que le javanais comme langue nationale [CAMBRIDGE-INDONESIA-LANGUAGE]. Les données contemporaines de BPS montrent que Bahasa Indonesia coexiste toujours avec un usage massif de langues régionales [BPS-INDONESIA-LANGUAGE-2024].
 
-Les deux axes se croisent à plusieurs moments critiques : **1956**, **1968**, **standardisation des années 1970**, **guerre civile**, puis **reconstruction post-2009**.
+Ce cas élargit le choix institutionnel disponible :
 
-C’est le gain principal de cette passe. La guerre n’apparaît plus seulement comme le résultat d’institutions politiques qui échouent ; elle devient aussi le moment où des mécanismes de mobilité et de reproduction sociale sont reconfigurés, déplacés ou externalisés.
+> **une langue commune postcoloniale peut être construite sans être la langue maternelle du groupe démographiquement dominant et sans faire disparaître les langues régionales.**
+
+Mais il ne prouve pas « Bahasa Indonesia → paix et croissance ». Autoritarisme, violences, ressources, archipel et trajectoire économique empêchent de transporter l'outcome.
+
+---
+
+## 10. Run 5 — le véritable comparateur : comment convertir un capital humain en développement territorial ?
+
+Le point décisif de cette passe est de séparer **capacité individuelle** et **capture territoriale**. Une population éduquée ne crée pas automatiquement une économie locale dynamique. Il faut une chaîne :
+
+> **éducation/compétences → gateways institutionnels → infrastructure/connectivité → organisations capables d'absorber les compétences → emplois/entreprises → fournisseurs/impôts/services → spillovers territoriaux.**
+
+### Tamil Nadu : davantage de conversion sur place
+
+Une combinaison d'accès éducatif élargi, politiques sociales, diversification rurale, infrastructures, agglomérations industrielles et appartenance au grand marché indien multiplie les lieux où convertir les compétences en emplois et capital [CAMBRIDGE-DRAVIDIAN-RURAL ; CAMBRIDGE-DRAVIDIAN-CAPITAL ; WORLD-BANK-TN-BRIEF]. Le mécanisme est un **package**, pas un bouton unique.
+
+### Jaffna : chaîne cassée, puis capital partiellement externalisé
+
+Le capital humain n'a pas simplement disparu. Mais la péninsule et le Nord connaissent plusieurs décennies de guerre, déplacements, maintenance différée et incertitude. ADB documente la nécessité, après le conflit, de restaurer routes, électricité, eau, irrigation, services administratifs et connexions aux marchés [ADB-NORTHERN-ROADS ; ADB-CONFLICT-REGION].
+
+Une partie des personnes et réseaux se recompose hors du territoire. Le concept utile est **externalisation partielle du capital humain** : compétences et revenus peuvent survivre dans la diaspora tandis que les spillovers locaux — entreprises, emplois, fournisseurs, fiscalité et institutions connectées — sont plus faibles [JSTOR-TAMIL-MARRIAGE-2019 ; WORLD-BANK-REVIVE-2026].
+
+Cela corrige le vocabulaire du « cycle manqué » : le problème n'est pas une incapacité culturelle à entrer dans la mondialisation, mais un **découplage entre capital humain et territoire d'origine**.
+
+---
+
+## 11. Ce que la guerre change dans la comparaison
+
+Comparer Jaffna au Tamil Nadu sans traiter la guerre comme confounder majeur rendrait toute conclusion sur caste, anglais ou politique sociale artificielle. Les canaux doivent être séparés : destruction, maintenance différée, déplacement, interruption scolaire/institutionnelle, accès aux terres et marchés, risque d'investissement, délocalisation des entreprises/professionnels, puis délai de reconstruction.
+
+Le Tamil Nadu montre qu'une conversion territoriale large **était institutionnellement possible dans un autre environnement** ; il ne permet pas de chiffrer ce que Jaffna serait devenue sans guerre.
+
+Confidence : **B** sur le mécanisme de conversion/externalisation ; **C** sur tout contre-factuel précis de niveau de développement.
+
+---
+
+## 12. « Apartheid » ou créolisation : mesurer des gateways communs
+
+Le terme *apartheid* reste inadéquat comme description juridique. Les réformes constitutionnelles reconnaissent le tamoul comme langue officielle et l'anglais comme langue de liaison, avec Sinhala/Tamil dans administration, législation et justice [SRI-LANKA-PARLIAMENT-LANGUAGE].
+
+Mais droit commun ne signifie pas société intégrée. La bonne question est empirique : existe-t-il des **gateways partagés** ?
+
+- administration effectivement bilingue ;
+- écoles, universités et entreprises mixtes ;
+- mobilité résidentielle/professionnelle ;
+- routes, énergie et chaînes de valeur interrégionales ;
+- accès symétrique aux institutions nationales ;
+- anglais comme langue-pont plutôt que marqueur d'élite ;
+- diaspora investissant dans des activités produisant des spillovers locaux ;
+- médias, commerce et espaces urbains communs.
+
+Le Sri Lanka peut donc évoluer vers intégration, segmentation durable ou nouvelle séparation territoriale sans que l'une de ces trajectoires soit déductible du droit seul.
+
+---
+
+## 13. Colombo, Bandung, Belgrade : souveraineté interne et externe
+
+La chronologie reste **Colombo 1954 → Bandung 1955 → Belgrade 1961 → Colombo NAM 1976** [CAMBRIDGE-NAM-KOTELAWALA ; CAMBRIDGE-NAM-NIEO]. Kotelawala est nettement anticommuniste ; les Bandaranaike développent ensuite neutralisme, récupération des bases britanniques et diversification des partenaires [FRUS-CEYLON-1958].
+
+Langue, nationalisations, politique sociale et non-alignement ne forment pas une chaîne causale unique. Ils parlent néanmoins une même grammaire postcoloniale : **qui gouverne, dans quelle langue, avec quelles élites et quelle dépendance envers les anciens centres impériaux ?**
+
+---
+
+## 14. La carte causale consolidée
+
+### Axe horizontal — État et conflit
+citoyenneté → langue → constitution → compétition distributive → violences → militarisation → guerre → reconstruction → crise économique → réalignement politique.
+
+### Axe vertical — reproduction et mobilité
+caste/statut → école/anglais → accès à l'État/professions → quotas/réservations → temple et politique sociale → nationalisme défensif → guerre → mariage/diaspora → reconstruction.
+
+### Axe Run 5 — conversion territoriale
+capabilités → gateways → connectivité → organisations absorbantes → emplois/capital → spillovers territoriaux **ou** blocage/externalisation.
+
+Ces axes se croisent en 1956, 1968, lors de la standardisation, pendant la guerre et dans la reconstruction post-2009. Le gain analytique est important : la guerre n'est plus seulement un résultat de l'échec politique ; elle devient aussi une machine à transformer les trajectoires sociales et territoriales.
 
 ### Fausse piste finale
 
-Il serait tentant de conclure que le Tamil Nadu « réussit » parce qu’il réforme la caste tandis que Jaffna « échoue » parce qu’elle reste traditionnelle. C’est précisément le type de comparaison que notre OS doit empêcher. Le Tamil Nadu conserve des hiérarchies de caste ; Sri Lanka adopte des lois anti-discrimination ; Jaffna possède un capital humain élevé ; et la divergence passe surtout par **les instruments politiques choisis, la structure de l’État, la langue, les opportunités économiques et surtout l’irruption de trois décennies de guerre**.
+Il serait tentant d'écrire : « Tamil Nadu réussit parce qu'il réforme la caste, Jaffna échoue parce qu'elle reste traditionnelle, l'Indonésie réussit parce qu'elle choisit une meilleure langue ». Run 5 ferme précisément ces raccourcis.
 
-La comparaison devient ainsi réellement utile : non pas pour classer deux sociétés tamoules, mais pour montrer comment des populations culturellement proches peuvent convertir des capitaux historiques comparables dans des institutions et des environnements politiques radicalement différents.
+La comparaison robuste dit autre chose : **des capitaux historiques proches peuvent produire des résultats radicalement différents selon les gateways institutionnels, la capacité d'absorption économique, l'échelle du marché, la sécurité, l'infrastructure et la possibilité de convertir les compétences localement plutôt que de les externaliser.**
