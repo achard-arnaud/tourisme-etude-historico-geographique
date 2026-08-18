@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-STATE-REP-001",
+  "claim": "Late-colonial and early-independence Ceylon Tamils were not simply an underrepresented state minority: English-educated Tamils performed strongly in civil-service examinations and professional employment, making later language reform partly a redistribution away from a colonial human-capital advantage.",
+  "confidence": "B",
+  "zoom": "Z2",
+  "causal_role": "driver",
+  "source_ids": ["CAMBRIDGE-STATE-NATION", "CAMBRIDGE-LANGUAGE-JAFFNA", "CAMBRIDGE-STANDARDIZATION"],
+  "notes": "Do not equate success in exams/professions with dominance of every level of the state or with equal political power."
+}
