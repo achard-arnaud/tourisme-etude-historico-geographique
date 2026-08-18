@@ -1,0 +1,9 @@
+{
+  "id": "B-POST-LANG-NAM-001",
+  "from_claim": "C-POST-LANG-001",
+  "to_claim": "C-POST-NAM-001",
+  "question": "How strongly should language decolonization and foreign-policy non-alignment be connected?",
+  "mechanism": "Both drew on a shared sovereignty grammar that sought to reduce inherited colonial dependence, but they operated through distinct domestic coalitions and institutions and should not be collapsed into one causal programme.",
+  "result": "B",
+  "source_ids": ["CAMBRIDGE-LANGUAGE-DECOLONIZATION", "CAMBRIDGE-NAM-KOTELAWALA", "FRUS-CEYLON-1958"]
+}
