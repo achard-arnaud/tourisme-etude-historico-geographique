@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-003",
+  "claim": "The 2024 electoral realignment placed Anura Kumara Dissanayake in the presidency and gave the JJB/NPP 159 of 225 parliamentary seats.",
+  "confidence": "A",
+  "zoom": "Z2",
+  "causal_role": "consequence",
+  "source_ids": ["PRESIDENT-2026", "PARLIAMENT-2024"],
+  "notes": "This establishes the institutional outcome, not its causes."
+}

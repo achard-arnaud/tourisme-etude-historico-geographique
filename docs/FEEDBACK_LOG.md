@@ -1,27 +1,34 @@
 # Feedback / review log
 
 ## Review pass 1
-Scope: second-pass hardening against the requested agentic OS and the `requesting-code-review` discipline from `obra/superpowers`.
-
-### Important findings
-1. **Deep artefact tree was descriptive, not executable.** README/root skill described ARC×HIL×ZOOM but `new_project.py` only created top-level folders.
-2. **No arc constructor.** There was no deterministic way to create a chronological arc with its HIL and geographic zoom structure.
-3. **Bridge integrity was unchecked.** QA could accept a bridge referring to nonexistent claims.
-
-### Fine-tuning actions
-- added `scripts/new_arc.py`;
-- `new_project.py` scaffolds all eight top-level HIL views;
-- each arc gets 8 HIL × 5 zoom directories plus claims/evidence and a drift artefact;
-- `qa_project.py` rejects orphan bridges and invalid source tiers;
-- README references were sanitized.
+Second-pass hardening against the requested agentic OS found that deep artefacts were descriptive rather than executable, there was no deterministic arc constructor, and bridge integrity was unchecked. Actions: `new_arc.py`, 8 HIL × 5 zoom scaffolding, bridge/source validation, README sanitation.
 
 ## Review pass 2 — PR #3
-Formal PR review after the first green CI identified two additional provenance defects:
-1. malformed `source_register.json` was silently converted to an empty register;
-2. A/B bridges could be accepted without source IDs or with unknown source IDs.
+Formal PR review found malformed source registers could be silently accepted and A/B bridges could be unsourced or cite unknown sources. Three tests were committed first; CI confirmed RED; QA was hardened and returned GREEN.
 
-### TDD response
-Three tests were committed first. GitHub Actions confirmed exactly three expected failures. The implementation then made malformed registers explicit QA errors and applied source validation to resolved bridges.
+## Review pass 3 — Jaffna/VOC field run, 18 August 2026
+The real-world run produced four design lessons.
+
+### 1. Source quality is two-dimensional
+The Stichting Nederland–Sri Lanka fort exhibition is unusually useful because of specialist authorship and collaboration with archaeology/heritage institutions. Yet it is still an institutional public synthesis. **Fix:** separate epistemic tier from anchor role. “Specialist institutional anchor” can be first-line for routing and vocabulary without pretending to be T1 scholarship.
+
+### 2. Field evidence should promote to the underlying corpus
+A photograph of a panel is T4. Once the exhibition and authorship are identified, the curated corpus becomes T2, while load-bearing claims still route to T0/T1. This avoids both under-valuing expert exhibitions and over-promoting them.
+
+### 3. Structural editing and storytelling are different jobs
+The previous output skill could order chapters and side boxes but could not reliably control audience, length, tone or cognitive load. **Fix:** retain `editing-historical-travel-output` for manuscript architecture and add `storytelling-historical-travel` as a final reader-rendering layer.
+
+### 4. A source family can bridge periods without becoming causal pollution
+The same Dutch-Sri Lankan heritage corpus improves the pre-1948 story through forts, labour and administration, and the post-1948 story through gentrification, restitution and memory. **Fix:** route modern heritage material to a bounded HIL and use the causal gate before admitting it to the main political/economic trunk.
+
+## Fine-tuning request-for-feedback checklist
+For future runs, inspect:
+- Did an institutional source become over-promoted because it looked authoritative?
+- Did a field panel’s rhetoric survive sanitization as fact?
+- Did the final report preserve causal bridges while changing reader level?
+- Does child mode remain historically honest rather than merely entertaining?
+- Did cross-references reduce repetition or create a dependency maze?
+- Did a new HIL enrich the causal model or merely add interesting material?
 
 ## Reviewer independence note
-No separate reviewer-agent runtime was available. Review pass 1 was an explicit requirements/diff review; review pass 2 was submitted as a GitHub PR review and then verified by test-only RED + CI GREEN evidence. It is not represented as independent human review.
+No separate human reviewer is implied. Reviews are explicit requirements/diff reviews recorded in GitHub and tested through RED/GREEN CI evidence.

@@ -3,55 +3,35 @@
 Method adapted from `obra/superpowers`: tests first, observe RED, implement minimum behavior, verify GREEN, then refactor.
 
 ## Cycle 1 — executable skill OS
-### RED
-Baseline contained only root `SKILL.md`, `README.md`, and the graph-light design note.
+Baseline: 8 tests / 8 failures. Implemented orchestrator/sub-skills, templates, project scaffolding, QA and CI. GREEN: 8 tests OK + skill audit.
 
-Command:
-```bash
-python -m unittest discover -s tests -v
-```
-Observed: **8 tests / 8 failures**.
+## Cycle 2 — deep ARC×HIL×ZOOM + bridge integrity
+Review found descriptive-only deep artefacts and unchecked bridge references. Tests first: 10 tests / 3 failures. GREEN after `new_arc.py`, deep scaffolding and bridge/source-tier QA.
 
-Failures were expected: no sub-skill tree, templates, project scripts, discovery-optimized root description, or deterministic QA.
+## Cycle 3 — provenance integrity
+PR review found malformed source registers could be silently accepted and resolved bridges could be unsourced/unknown. GitHub Actions run `31787289210` on test-only commit `64af3cb`: 13 tests / 3 failures. GREEN after provenance hardening.
 
-### GREEN
-Implemented the orchestrator/sub-skill split, templates, project scaffolding, QA scripts and CI.
+## Cycle 4 — Jaffna/VOC run: reader rendering + institutional corpus routing
+### RED A — architectural gaps
+The 18 August 2026 field run exposed two architectural gaps: final storytelling was conflated with structural editing, and source importance was conflated with epistemic tier. It also required worked pre/post-1948 corpora rather than abstract architecture only.
 
-Observed locally:
+Test-only commit `ce49854` added five contracts. GitHub Actions run `32107479318` proved RED:
 ```text
-Ran 8 tests
-OK
-SKILL AUDIT OK
+Ran 18 tests
+FAILED (failures=5)
 ```
+Exact missing behaviours: storytelling skill; root routing; specialist-institutional-anchor distinction; dual Sri Lanka examples; Stichting crawl inventory.
 
-## Cycle 2 — feedback hardening: deep ARC×HIL×ZOOM + bridge integrity
-### RED
-Review identified that the architecture described deep HIL/zoom artefacts but did not materialize them, and that bridge references were not checked.
+### GREEN A
+Implementation commit series added the reader-contract storytelling layer, two-axis source policy, systematic discoverable-site inventory and two Sri Lanka worked corpora. GitHub Actions run `32107998725` on `b596e9f` was GREEN; unittest and skill audit passed.
 
-Added tests first. Observed locally:
-```text
-Ran 10 tests
-FAILED (failures=3)
-```
+### RED B — request-for-feedback refinement
+Formal PR review then found three quality gaps: example corpora had no atomic claims/bridges, two Cambridge anchors used generic homepage URLs, and the post-1948 source register omitted the Presidential Secretariat while naming the current presidency.
 
-### GREEN
-Implemented deep arc scaffolding and bridge/source-tier QA. Observed locally:
-```text
-Ran 10 tests
-OK
-SKILL AUDIT OK
-```
+Test-only commit `13327bd` encoded those findings. GitHub Actions run `32108098907` returned failure as expected.
 
-## Cycle 3 — PR review: provenance integrity
-### RED
-PR review found that malformed source registers were silently accepted and resolved bridges could be unsourced or cite unknown sources. Three tests were added before implementation.
+### GREEN B
+Commit `7ef4c8c` materialized pre/post claims and bridge artefacts, replaced generic Cambridge links with exact resources, and added the current Presidential Secretariat anchor. GitHub Actions run `32108190963` completed successfully; unittest and skill audit both passed.
 
-GitHub Actions run `31787289210` on test-only commit `64af3cb` proved RED:
-```text
-Ran 13 tests
-FAILED (failures=3)
-```
-The three failures matched the intended missing behaviors exactly.
-
-### GREEN
-`qa_project.py` now treats malformed/duplicate source metadata as errors and applies provenance checks to resolved bridges. Final GREEN is established by the subsequent CI run recorded in `QA_LOG.md`.
+### Final verification extension
+CI now also runs deterministic `qa_project.py` against both worked Sri Lanka example corpora, so future skill changes cannot silently break their provenance/bridge contracts.

@@ -24,7 +24,8 @@ Build **arc-first**: rupture → claims → source anchors → bridges → drift
 7. Use `building-causal-bridges` only for necessary missing mechanisms.
 8. Run `auditing-historiography-and-drifts` before synthesis.
 9. Store stable cross-arc knowledge with `maintaining-wiki-and-graph`.
-10. Produce the chronological reading edition with `editing-historical-travel-output`.
+10. Structure the chronological reading edition with `editing-historical-travel-output`.
+11. Render the final reader-facing narrative with `storytelling-historical-travel`, using an explicit reader contract for audience, language, tone, register and length budget.
 
 ## Causal gate
 A detail enters the main trunk only if it changes resource mobilisation, legitimacy/coalition, the cost of governing/defending space, access to flows, or a regime/centre shift. Otherwise keep it as evidence, side-box, analogy, backlog or discarded lead.
@@ -33,7 +34,7 @@ A detail enters the main trunk only if it changes resource mobilisation, legitim
 Use up to eight HILs per arc: institutions/chronology; geography/environment; economy/infrastructure; society/demography; religion/culture/legitimacy; security/coercion; regional/global system; historiography/bias. Empty layers may be intentional.
 
 ## Evidence contract
-Sources are tiered by role: T0 primary/material, T1 academic, T2 institutional, T3 navigation/encyclopedia, T4 field mediation, T5 exploratory. Confidence is A established, B solid/qualified, C hypothesis, D false/indirect lead, U unresolved. Major causal claims require independent corroboration unless explicitly bounded.
+Sources are tiered by epistemic role: T0 primary/material, T1 academic, T2 institutional synthesis, T3 navigation/encyclopedia, T4 field mediation, T5 exploratory. Separately assign an anchor role: canonical anchor, specialist institutional anchor, corroborating bridge, or lead. Prestige never promotes T2 material into T1. Confidence is A established, B solid/qualified, C hypothesis, D false/indirect lead, U unresolved. Major causal claims require independent corroboration unless explicitly bounded.
 
 ## Modes
 - **Field:** capture/route and respect short acknowledgement protocols.

@@ -1,33 +1,23 @@
 # QA log
 
-## Local verification before PR fine-tuning
+## Core regression history
+- original executable-OS cycle: RED then GREEN;
+- provenance review cycle: RED 13/3 failures then GREEN;
+- Run-2 Jaffna/storytelling cycle A: RED `32107479318` (18 tests / 5 expected failures), GREEN `32107998725`;
+- Run-2 review cycle B: RED `32108098907`, GREEN `32108190963`.
+
+## Current CI gates
 ```bash
 python -m unittest discover -s tests -v
 python scripts/audit_skill.py .
+python scripts/qa_project.py examples/sri_lanka_pre_1948
+python scripts/qa_project.py examples/sri_lanka_post_1948
 ```
-Result before review refinement: **10/10 tests pass**, `SKILL AUDIT OK`.
-
-## TDD / GitHub CI evidence
-- dev commit `91e3f42`: GREEN push CI;
-- PR #3 on `91e3f42`: GREEN pull-request CI;
-- test-only refinement commit `64af3cb`: RED by design, **13 tests / 3 expected failures**;
-- implementation commit `d9c330d`: GREEN PR CI run #8; test step + skill audit both passed;
-- merged `main` commit `48668d4`: GREEN push CI run #9.
-
-## Delivery state
-- PR #3 merged to `main`;
-- issue #2 automatically closed as completed;
-- `main` and `dev` synchronized to `48668d4953ac1db8f5f89866da4d4e3661293663` after merge;
-- compare `main...dev`: identical, ahead 0 / behind 0.
 
 ## QA coverage
-The deterministic project QA rejects:
-- malformed source registers and duplicate/invalid source metadata;
-- unsourced A/B causal drivers/amplifiers;
-- unknown source references;
-- invalid confidence, source-tier and zoom values;
-- duplicate claim IDs;
-- orphan bridges;
-- resolved A/B bridges without source evidence or with unknown source IDs.
+Deterministic project QA rejects malformed/duplicate source metadata, unsourced A/B causal drivers or amplifiers, unknown source references, invalid confidence/tier/zoom values, duplicate claim IDs, orphan bridges, and resolved A/B bridges without valid provenance.
 
-The skill audit validates required files, trigger-oriented skill frontmatter and root-orchestrator size.
+The skill audit validates required files, trigger-oriented frontmatter and root-orchestrator size. Run-2 tests additionally validate reader-contract storytelling, two-axis source handling, materialized site inventory, dual Sri Lanka project artefacts, exact academic provenance and current institutional anchors.
+
+## Merge gate
+No Run-2 merge until the PR is mergeable and the final CI — including both example-project QA commands — is GREEN.
