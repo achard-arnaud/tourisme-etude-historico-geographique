@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-08-18-run6-storytelling-reader-v2",
+  "status": "reviewed",
+  "mode": "full-project-review-and-promotion",
+  "project_roots": [
+    "examples/sri_lanka_pre_1948",
+    "examples/sri_lanka_post_1948"
+  ],
+  "state_before": {
+    "research": "Run 5 complete; Polonnaruwa conversation source family not fully materialized",
+    "canonical_markdown": "both Sri Lanka reports promoted in Run 5",
+    "reader_export": "Word/PDF editions stale"
+  },
+  "dispatched_skills": [
+    {
+      "skill": "capturing-field-evidence",
+      "reason": "review existing Sri Lanka field and conversation evidence before promotion",
+      "inputs": ["examples/sri_lanka_pre_1948/00_method", "examples/sri_lanka_post_1948/00_method"],
+      "outputs": ["examples/sri_lanka_pre_1948/00_method", "examples/sri_lanka_post_1948/00_method"],
+      "status": "verified"
+    },
+    {
+      "skill": "sanitizing-historical-claims",
+      "reason": "keep source fact, inference, comparator and navigation leads separated in the source audit",
+      "inputs": ["docs/SOURCE_AUDIT_POLONNARUWA_CONVERSATION.md"],
+      "outputs": ["docs/SOURCE_AUDIT_POLONNARUWA_CONVERSATION.md"],
+      "status": "executed"
+    },
+    {
+      "skill": "structuring-chronological-arcs",
+      "reason": "verify that both promoted manuscripts remain rupture-bounded and chronological",
+      "inputs": ["examples/sri_lanka_pre_1948/01_arcs", "examples/sri_lanka_post_1948/01_arcs"],
+      "outputs": ["examples/sri_lanka_pre_1948/09_output/report.md", "examples/sri_lanka_post_1948/09_output/report.md"],
+      "status": "verified"
+    },
+    {
+      "skill": "zooming-geographic-scales",
+      "reason": "review Palk, island, Indian Ocean and comparator scale transitions",
+      "inputs": ["examples/sri_lanka_pre_1948/02_hil", "examples/sri_lanka_post_1948/02_hil"],
+      "outputs": ["examples/sri_lanka_pre_1948/09_output/report.md", "examples/sri_lanka_post_1948/09_output/report.md"],
+      "status": "verified"
+    },
+    {
+      "skill": "sourcing-historical-anchors",
+      "reason": "materialize every source named or linked in the Polonnaruwa conversation",
+      "inputs": ["docs/SOURCE_AUDIT_POLONNARUWA_CONVERSATION.md"],
+      "outputs": ["examples/sri_lanka_pre_1948/05_sources/source_register_polonnaruwa_conversation.json"],
+      "status": "executed"
+    },
+    {
+      "skill": "analyzing-institutions-and-power",
+      "reason": "verify state, language, administrative access and policy-instrument mechanisms",
+      "inputs": ["examples/sri_lanka_post_1948/01_arcs"],
+      "outputs": ["examples/sri_lanka_post_1948/09_output/report.md"],
+      "status": "verified"
+    },
+    {
+      "skill": "analyzing-geography-and-environment",
+      "reason": "verify water systems, Palk interface and territorial absorption mechanisms",
+      "inputs": ["examples/sri_lanka_pre_1948/02_hil", "examples/sri_lanka_post_1948/02_hil"],
+      "outputs": ["examples/sri_lanka_pre_1948/09_output/report.md", "examples/sri_lanka_post_1948/09_output/report.md"],
+      "status": "verified"
+    },
+    {
+      "skill": "analyzing-economy-and-infrastructure",
+      "reason": "verify trade, forts, human capital, gateways and territorial conversion",
+      "inputs": ["examples/sri_lanka_pre_1948/02_hil", "examples/sri_lanka_post_1948/02_hil"],
+      "outputs": ["examples/sri_lanka_pre_1948/09_output/report.md", "examples/sri_lanka_post_1948/09_output/report.md"],
+      "status": "verified"
+    },
+    {
+      "skill": "analyzing-society-and-demography",
+      "reason": "verify caste, education, migration, marriage and diaspora distinctions",
+      "inputs": ["examples/sri_lanka_post_1948/02_hil"],
+      "outputs": ["examples/sri_lanka_post_1948/09_output/report.md"],
+      "status": "verified"
+    },
+    {
+      "skill": "analyzing-religion-culture-legitimacy",
+      "reason": "verify temple, mission, education and public/private hierarchy mechanisms",
+      "inputs": ["examples/sri_lanka_pre_1948/02_hil", "examples/sri_lanka_post_1948/02_hil"],
+      "outputs": ["examples/sri_lanka_pre_1948/09_output/report.md", "examples/sri_lanka_post_1948/09_output/report.md"],
+      "status": "verified"
+    },
+    {
+      "skill": "analyzing-security-and-geopolitics",
+      "reason": "verify European balance, fort network, war and postwar scarring channels",
+      "inputs": ["examples/sri_lanka_pre_1948/02_hil", "examples/sri_lanka_post_1948/02_hil"],
+      "outputs": ["examples/sri_lanka_pre_1948/09_output/report.md", "examples/sri_lanka_post_1948/09_output/report.md"],
+      "status": "verified"
+    },
+    {
+      "skill": "building-causal-bridges",
+      "reason": "verify that cross-arc and comparator bridges are bounded and sourced",
+      "inputs": ["examples/sri_lanka_pre_1948/06_bridges", "examples/sri_lanka_post_1948/06_bridges"],
+      "outputs": ["examples/sri_lanka_pre_1948/06_bridges", "examples/sri_lanka_post_1948/06_bridges"],
+      "status": "verified"
+    },
+    {
+      "skill": "auditing-historiography-and-drifts",
+      "reason": "separate UNESCO institutional framing, Wikipedia navigation and academic anchors; reject teleological story patterns",
+      "inputs": ["docs/SOURCE_AUDIT_POLONNARUWA_CONVERSATION.md", "docs/RUN6_STORYTELLING_REVIEW.md"],
+      "outputs": ["docs/SOURCE_AUDIT_POLONNARUWA_CONVERSATION.md", "docs/RUN6_STORYTELLING_REVIEW.md"],
+      "status": "executed"
+    },
+    {
+      "skill": "maintaining-wiki-and-graph",
+      "reason": "validate reusable entities and interpretive-edge provenance before export",
+      "inputs": ["examples/sri_lanka_pre_1948/03_wiki", "examples/sri_lanka_post_1948/03_wiki"],
+      "outputs": ["examples/sri_lanka_pre_1948/04_graph", "examples/sri_lanka_post_1948/04_graph"],
+      "status": "verified"
+    },
+    {
+      "skill": "editing-historical-travel-output",
+      "reason": "package both canonical Markdown reports into deliberate reader editions",
+      "inputs": ["examples/sri_lanka_pre_1948/09_output/report.md", "examples/sri_lanka_post_1948/09_output/report.md"],
+      "outputs": ["examples/sri_lanka_pre_1948/09_output/Sri_Lanka_Fresque_historico_geographique_vol_retour_v2.docx", "examples/sri_lanka_post_1948/09_output/Sri_Lanka_1948_2026_etude_historico_geographique_v2.docx"],
+      "status": "executed"
+    },
+    {
+      "skill": "storytelling-historical-travel",
+      "reason": "apply the Run 6 evidence-safe storytelling review and reader contract to both editions",
+      "inputs": ["docs/RUN6_STORYTELLING_REVIEW.md", "skills/storytelling-historical-travel/SKILL.md"],
+      "outputs": ["skills/storytelling-historical-travel/references/storytelling-patterns-and-review.md", "examples/sri_lanka_pre_1948/09_output/Sri_Lanka_Fresque_historico_geographique_vol_retour_v2.pdf", "examples/sri_lanka_post_1948/09_output/Sri_Lanka_1948_2026_etude_historico_geographique_v2.pdf"],
+      "status": "executed"
+    }
+  ],
+  "skipped_skills": [],
+  "validations": [
+    "python -m unittest discover -s tests -v",
+    "python scripts/audit_skill.py .",
+    "python scripts/audit_workflow.py docs/RUN6_WORKFLOW_MANIFEST.json",
+    "python scripts/qa_project.py examples/sri_lanka_pre_1948",
+    "python scripts/qa_project.py examples/sri_lanka_post_1948",
+    "DOCX and PDF page render inspection"
+  ],
+  "state_after": {
+    "research": "Polonnaruwa conversation source inventory materialized and source-role limits audited",
+    "canonical_markdown": "both Run 5 reports retained as canonical inputs",
+    "reader_export": "two DOCX and two PDF v2 editions regenerated and visually checked"
+  },
+  "promotion_decision": "promote after fresh local QA and GitHub CI"
+}

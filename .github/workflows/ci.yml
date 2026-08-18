@@ -4,7 +4,7 @@ on:
   push:
     branches: [dev, main]
   pull_request:
-    branches: [main]
+    branches: [dev, main]
 
 jobs:
   test:
@@ -16,5 +16,6 @@ jobs:
           python-version: '3.12'
       - run: python -m unittest discover -s tests -v
       - run: python scripts/audit_skill.py .
+      - run: python scripts/audit_workflow.py docs/RUN6_WORKFLOW_MANIFEST.json
       - run: python scripts/qa_project.py examples/sri_lanka_pre_1948
       - run: python scripts/qa_project.py examples/sri_lanka_post_1948

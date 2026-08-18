@@ -1,6 +1,6 @@
 # Fresque nationale jusqu’à 1948 — édition canonique sociale et géopolitique
 
-> **Statut** — Markdown canonique promu dans Run 5. Il reprend le delta Jaffna/VOC, les grands bridges géopolitiques européens et la couche sociale caste/dépendance/encodage administratif/éducation. Le Word/PDF reste à régénérer après merge.
+> **Statut** — Markdown canonique promu dans Run 5. Il reprend le delta Jaffna/VOC, les grands bridges géopolitiques européens et la couche sociale caste/dépendance/encodage administratif/éducation. Édition lecteur v2 régénérée et vérifiée dans Run 6.
 
 ## 1. Jaffna oblige à retourner la carte
 

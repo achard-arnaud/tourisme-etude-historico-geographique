@@ -35,7 +35,8 @@ If the user asks “where did we stop?”, answer from this checkpoint rather th
 9. Store durable cross-arc knowledge with `maintaining-wiki-and-graph`.
 10. Structure the chronological manuscript with `editing-historical-travel-output`.
 11. Render for the reader with `storytelling-historical-travel`.
-12. Re-run the state checkpoint and promote outputs only after verification.
+12. Record dispatched and skipped skills with reasons and artefact paths in a run manifest.
+13. Re-run the state checkpoint and promote outputs only after verification.
 
 ## Prompt-review loop
 For multi-session projects, periodically review recent user directions as **requirements**, not as historical evidence. Extract: new questions, rejected framings, desired depth, output-state expectations, comparator requests and operating protocols. Route each change to the relevant skill, artefact or backlog. Do not silently change the canonical narrative merely because a hypothesis appeared in a prompt.
@@ -67,6 +68,7 @@ Before any completion or merge claim run fresh:
 ```bash
 python -m unittest discover -s tests -v
 python scripts/audit_skill.py .
+python scripts/audit_workflow.py docs/RUN6_WORKFLOW_MANIFEST.json
 python scripts/qa_project.py <project>
 ```
 When wiki/graph artefacts exist, QA must validate their metadata, source references and causal-edge provenance. No completion claim without fresh verification output.
