@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-003",
+  "claim": "At Jaffna Fort, post-war conservation and tourism development can simultaneously support heritage recovery and endanger earlier buried archaeological layers, making site management a governance trade-off rather than a purely restorative act.",
+  "confidence": "B",
+  "zoom": "Z0",
+  "causal_role": "amplifier",
+  "source_ids": ["CAMBRIDGE-JAFFNA-ARCH-2019", "FIELD-JAFFNA-ARCH-20260818"],
+  "notes": "Do not infer reconciliation effects from restoration alone; the archaeological risk is directly evidenced, the peacebuilding effect is a separate empirical claim."
+}
