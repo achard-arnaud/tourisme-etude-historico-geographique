@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-WAR-TERRITORY-001",
+  "claim": "Northern Sri Lanka's postwar development problem includes persistent territorial scarring from conflict and underinvestment: damaged roads, utilities, irrigation and service infrastructure reduced connectivity and the capacity to absorb private investment and livelihoods even after hostilities ended.",
+  "confidence": "B",
+  "zoom": "Z2",
+  "causal_role": "driver",
+  "source_ids": ["ADB-NORTHERN-ROADS", "ADB-CONFLICT-REGION", "WORLD-BANK-REVIVE-2026"],
+  "notes": "Project documents establish the reconstruction baseline and constraints; they do not by themselves quantify the full causal contribution of war to the long-run income gap."
+}
