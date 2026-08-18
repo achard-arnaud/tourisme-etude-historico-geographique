@@ -1,0 +1,9 @@
+{
+  "id": "C-COMP-ID-001",
+  "claim": "Indonesian nationalism selected a Malay-based lingua franca rather than the language of the numerically dominant Javanese group, creating a different route to linguistic decolonization from Sri Lanka's Sinhala-only choice.",
+  "confidence": "A",
+  "zoom": "Z3",
+  "causal_role": "driver",
+  "source_ids": ["CAMBRIDGE-INDONESIA-LANGUAGE"],
+  "notes": "Use as a language-design comparator, not as a monocausal explanation of Indonesian unity or development."
+}
