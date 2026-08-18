@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-CASTE-003",
+  "claim": "After the late-1960s caste conflicts in northern Sri Lanka, the declining position of Tamils within a Sinhala-majoritarian state increased the political payoff of cross-caste Tamil unity, helping displace caste from the centre of public politics without abolishing it socially.",
+  "confidence": "B",
+  "zoom": "Z2",
+  "causal_role": "driver",
+  "source_ids": ["CAMBRIDGE-JAFFNA-TEMPLE-1968", "CAMBRIDGE-LANGUAGE-JAFFNA"],
+  "notes": "Use the term defensive nationalism as a mechanism of cleavage overlay, not as evidence of caste disappearance."
+}
