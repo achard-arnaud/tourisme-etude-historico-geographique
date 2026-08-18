@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-INTEGRATION-002",
+  "claim": "For postwar Sri Lanka, social integration is better evaluated through shared gateways—effective bilingual administration, mixed education and workplaces, mobility, common markets and cross-regional investment—than through either the legal recognition of languages alone or the metaphor of apartheid.",
+  "confidence": "C",
+  "zoom": "Z2",
+  "causal_role": "amplifier",
+  "source_ids": ["SRI-LANKA-PARLIAMENT-LANGUAGE", "WORLD-BANK-REVIVE-2026", "ADB-NORTHERN-ROADS"],
+  "notes": "This is an operational research framework, not a measured claim that integration has already occurred."
+}
