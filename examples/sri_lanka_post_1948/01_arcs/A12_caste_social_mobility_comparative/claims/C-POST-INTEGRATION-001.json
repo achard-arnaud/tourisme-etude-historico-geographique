@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-INTEGRATION-001",
+  "claim": "Sri Lanka is not legally an apartheid state: constitutional amendments since 1987–88 recognize Tamil as an official language, English as a link language, and Sinhala/Tamil as languages of administration, legislation and courts, even though implementation and social integration remain uneven.",
+  "confidence": "A",
+  "zoom": "Z2",
+  "causal_role": "constraint",
+  "source_ids": ["SRI-LANKA-PARLIAMENT-LANGUAGE", "CAMBRIDGE-LANGUAGE-JAFFNA"],
+  "notes": "Describe present fragmentation as segmented multilingual institutions and war-shaped territorial separation rather than apartheid."
+}
