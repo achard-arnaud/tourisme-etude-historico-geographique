@@ -1,0 +1,9 @@
+{
+  "id": "B-POST-CASTE-MILITANCY-001",
+  "from_claim": "C-POST-CASTE-003",
+  "to_claim": "C-POST-CASTE-004",
+  "question": "Did Tamil nationalist consolidation and insurgent rule dissolve caste authority?",
+  "mechanism": "Nationalist institutions could suppress or contest overt caste politics in the name of Tamil unity, but temple and kudi authority retained independent sources of legitimacy and could resist insurgent social engineering.",
+  "result": "B",
+  "source_ids": ["CAMBRIDGE-LTTE-PUBLIC-AUTHORITY", "CAMBRIDGE-JAFFNA-TEMPLE-1968"]
+}
