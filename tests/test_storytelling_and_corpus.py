@@ -78,7 +78,7 @@ class StorytellingAndCorpusTests(unittest.TestCase):
 
     def test_v3_outputs_retain_the_long_v1_baselines(self):
         import json
-        from pypdf import PdfReader
+        import re
         metrics_path = ROOT / 'docs' / 'RUN7_V3_RETENTION_METRICS.json'
         self.assertTrue(metrics_path.exists())
         metrics = {item['project']: item for item in json.loads(metrics_path.read_text(encoding='utf-8'))}
@@ -88,11 +88,25 @@ class StorytellingAndCorpusTests(unittest.TestCase):
         self.assertGreaterEqual(metrics['post']['retention_vs_baseline_percent'], 125.0)
         pre_pdf = ROOT / 'examples' / 'sri_lanka_pre_1948' / '09_output' / 'Sri_Lanka_Fresque_historico_geographique_vol_retour_v3.pdf'
         post_pdf = ROOT / 'examples' / 'sri_lanka_post_1948' / '09_output' / 'Sri_Lanka_1948_2026_etude_historico_geographique_v3.pdf'
-        self.assertGreaterEqual(len(PdfReader(pre_pdf).pages), 60)
-        self.assertGreaterEqual(len(PdfReader(post_pdf).pages), 20)
+        pdf_page_count = lambda path: len(re.findall(rb'/Type\s*/Page\b', path.read_bytes()))
+        self.assertGreaterEqual(pdf_page_count(pre_pdf), 60)
+        self.assertGreaterEqual(pdf_page_count(post_pdf), 20)
 
     def test_v3_docx_structurally_preserves_every_v1_paragraph_and_table(self):
-        from docx import Document
+        import xml.etree.ElementTree as ET
+        import zipfile
+
+        ns = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
+
+        def body_inventory(path):
+            with zipfile.ZipFile(path) as package:
+                root = ET.fromstring(package.read('word/document.xml'))
+            body = root.find('w:body', ns)
+            paragraphs = []
+            for paragraph in body.findall('w:p', ns):
+                text = ''.join(node.text or '' for node in paragraph.findall('.//w:t', ns))
+                paragraphs.append(text)
+            return paragraphs, len(body.findall('.//w:tbl', ns))
 
         cases = [
             (
@@ -107,17 +121,17 @@ class StorytellingAndCorpusTests(unittest.TestCase):
             ),
         ]
         for baseline_path, v3_path, replaced_cover_indices in cases:
-            baseline = Document(baseline_path)
-            v3 = Document(v3_path)
-            expected = [p.text for i, p in enumerate(baseline.paragraphs) if i not in replaced_cover_indices and p.text]
-            candidate = iter(p.text for p in v3.paragraphs if p.text)
+            baseline_paragraphs, baseline_tables = body_inventory(baseline_path)
+            v3_paragraphs, v3_tables = body_inventory(v3_path)
+            expected = [text for i, text in enumerate(baseline_paragraphs) if i not in replaced_cover_indices and text]
+            candidate = iter(text for text in v3_paragraphs if text)
             for paragraph in expected:
                 self.assertTrue(any(current == paragraph for current in candidate), f'lost V1 paragraph: {paragraph[:80]}')
-            self.assertEqual(len(v3.tables), len(baseline.tables), 'V3 changed the V1 table inventory')
+            self.assertEqual(v3_tables, baseline_tables, 'V3 changed the V1 table inventory')
 
     def test_legacy_reader_renderer_refuses_silent_advanced_compression(self):
         import importlib.util
-        path = ROOT / 'scripts' / 'render_reader_exports.py'
+        path = ROOT / 'scripts' / 'reader_retention.py'
         spec = importlib.util.spec_from_file_location('reader_renderer', path)
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)

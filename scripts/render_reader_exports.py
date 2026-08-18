@@ -18,6 +18,8 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 
+from reader_retention import enforce_advanced_retention
+
 
 REPO = Path(__file__).resolve().parents[1]
 BLUE = RGBColor(46, 116, 181)
@@ -416,21 +418,6 @@ def audit_preset(doc):
     assert round(float(normal.paragraph_format.line_spacing), 3) == 1.333
     for name, size in (("Heading 1", 16), ("Heading 2", 13), ("Heading 3", 12)):
         assert round(doc.styles[name].font.size.pt, 1) == size
-
-
-def enforce_advanced_retention(project, text, allow_abridged=False):
-    baseline = project / "09_output" / "report_v1_full.md"
-    if not baseline.exists() or allow_abridged:
-        return
-    candidate_words = len(text.split())
-    baseline_words = len(baseline.read_text(encoding="utf-8").split())
-    if candidate_words < baseline_words:
-        raise RuntimeError(
-            "Refusing silent advanced-reader compression: report.md contains "
-            f"{candidate_words} words but the complete V1 baseline contains "
-            f"{baseline_words}. Use render_full_reader_v3.py, or explicitly pass "
-            "--allow-abridged for a labelled derivative."
-        )
 
 
 def build(spec, allow_abridged=False):
