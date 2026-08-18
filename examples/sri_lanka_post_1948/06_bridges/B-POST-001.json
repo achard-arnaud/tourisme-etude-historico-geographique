@@ -1,0 +1,9 @@
+{
+  "id": "B-POST-001",
+  "from_claim": "C-POST-001",
+  "to_claim": "C-POST-002",
+  "question": "How does heritage move from conservation into governance?",
+  "mechanism": "Once monuments and collections acquire property, tourism, identity or diplomatic value, decisions about preservation and provenance distribute material and symbolic resources.",
+  "result": "C",
+  "source_ids": ["SNSL-GALLE-2020", "SNSL-RESTITUTION-2023", "SNSL-INVENTED"]
+}

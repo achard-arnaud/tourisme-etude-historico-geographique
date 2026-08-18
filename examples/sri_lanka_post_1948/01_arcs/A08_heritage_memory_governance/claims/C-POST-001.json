@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-001",
+  "claim": "In post-independence Sri Lanka, protected colonial heritage can become an economic asset whose conservation changes land values, tourism incentives and resident continuity.",
+  "confidence": "B",
+  "zoom": "Z1",
+  "causal_role": "amplifier",
+  "source_ids": ["SNSL-GALLE-2020"],
+  "notes": "Galle is a bounded case; do not generalize automatically to every heritage city."
+}
