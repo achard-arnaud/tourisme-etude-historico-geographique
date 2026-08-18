@@ -1,0 +1,4 @@
+{"from":"palk-strait-position","relation":"ENABLES","to":"jaffna-colonial-interface","confidence":"A","source_ids":["CAMBRIDGE-JAFFNA-ARCH-2019"],"claim_ids":[],"last_reviewed":"2026-08-18"}
+{"from":"voc-registers-and-law","relation":"ENABLES","to":"administrative-legibility","confidence":"B","source_ids":["CAMBRIDGE-CLASSIFICATION","CAMBRIDGE-LAWMAKING"],"claim_ids":[],"last_reviewed":"2026-08-18"}
+{"from":"colonial-classification","relation":"AMPLIFIES","to":"selected-local-status-hierarchies","confidence":"B","source_ids":["CAMBRIDGE-CLASSIFICATION","CAMBRIDGE-JAFFNA-SLAVERY"],"claim_ids":[],"last_reviewed":"2026-08-18"}
+{"from":"voc-paper-state","relation":"ENABLES","to":"british-administrative-path-dependence","confidence":"B","source_ids":["CAMBRIDGE-CLASSIFICATION","CAMBRIDGE-LAWMAKING"],"claim_ids":[],"last_reviewed":"2026-08-18"}
