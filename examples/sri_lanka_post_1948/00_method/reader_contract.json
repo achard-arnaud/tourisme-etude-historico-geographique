@@ -1,8 +1,9 @@
 {
   "audience": "advanced",
   "language": "fr",
-  "tone": "analytical guide",
-  "register": "educated generalist",
-  "length_budget": "quick",
-  "reading_context": "long-form travel reader"
+  "tone": "analytical, source-explicit",
+  "register": "specialist / advanced",
+  "length_policy": "unconstrained",
+  "baseline_policy": "lossless V1 plus promoted deltas",
+  "reading_context": "long-form historical-geographical monograph"
 }

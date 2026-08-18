@@ -6,8 +6,8 @@ Worked modern corpus for `tourisme-etude-historico-geographique`.
 The project is maintained in three layers:
 
 1. **Research OS** — sources, atomic claims, causal bridges, drift audits, wiki/graph artefacts.
-2. **Canonical Markdown reading drafts** — `09_output/report.md` is the stable baseline; `09_output/report_vnext.md` is the current Vnext candidate.
-3. **Reader export** — Word/PDF editions are generated only after a Vnext has passed research + editorial QA. The existing Word export therefore predates the latest language/non-alignment and caste/social-mobility refinements.
+2. **Canonical manuscript** — `09_output/report_v1_full.md` preserves the baseline, `report.md` is the Run 5 delta and `report_v3_full.md` is the complete integrated text.
+3. **Reader export** — the current V3 DOCX/PDF contains 8 624 DOCX words and 29 PDF pages, with the Run 5 comparator and its source apparatus integrated.
 
 ## Current Vnext
 Run 2 added heritage, Jaffna/VOC continuities and missionary education. Run 3 promoted **1956–1976 linguistic decolonization + non-alignment** into the causal spine. The current social-reproduction pass adds a new vertical reading layer:
@@ -17,10 +17,10 @@ Run 2 added heritage, Jaffna/VOC continuities and missionary education. Run 3 pr
 The comparison with Tamil Nadu and Indonesia is mechanism-based, not ranking-based. Tamil Nadu is used mainly to compare redistribution technologies (anti-discrimination vs caste-coded reservations/social justice); Indonesia is a bounded comparator for national-language design.
 
 ## Read order
-- `09_output/report_vnext.md` — current integrated Vnext narrative.
+- `09_output/report_v3_full.md` — current complete narrative.
 - `05_sources/caste_social_mobility_comparative_note.md` — research synthesis and comparator matrix.
 - `07_drifts/caste_comparator_audit.md` — rejected shortcuts and causal overclaims.
 - `01_arcs/A12_caste_social_mobility_comparative/claims/` — atomic claims.
 - `06_bridges/` — tested causal links.
 
-`report.md` remains the stable baseline until the Vnext is deliberately promoted/exported; this avoids silently overwriting a known reading edition during iterative field research.
+The advanced reader contract is unconstrained. `report.md` is retained as an auditable delta; it must never again be rendered under the identity of the full document.
