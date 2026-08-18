@@ -1,37 +1,39 @@
 # Current output status
 
-## Research layer
-**Current:** Run 5 comparative-development research is complete, validated and merged through **PR #11** into `main` on 2026-08-18. Merge commit: `af4e33f12faa22d8b498c12bc175cf513102dfa8`. `dev` was resynchronized with that merge before this final status update.
+Checkpoint date: **2026-08-18 — Run 6**.
 
-Run 5 closes the current mandatory evidence-integration cycle: Jaffna ↔ Tamil Nadu ↔ Indonesia, territorial human-capital conversion/externalisation, war-development channels, comparator-scale controls, caste/social reproduction, and the postwar shared-gateway integration framework are now part of the maintained corpus.
+## Research layer
+**Current.** Run 5 comparative-development research remains the canonical evidence base. Run 6 adds the audited Polonnaruwa conversation-source inventory: **17 recovered source records**, including the correction that UNESCO document `163318` concerns Anuradhapura rather than Polonnaruwa.
+
+The three requested YouTube transcripts and the two external storytelling repositories were used as **method inputs**, not as historical evidence. Their extraction and adoption/rejection decisions are recorded in `docs/RUN6_STORYTELLING_REVIEW.md` and `skills/storytelling-historical-travel/references/storytelling-patterns-and-review.md`.
 
 ## Validation checkpoint
-Final GREEN CI: `skill-ci` run **32130831894**.
-- 32 unit tests: GREEN;
+Fresh local Run 6 gate:
+- **34/34 unit tests GREEN** after one deliberate RED→GREEN wording correction;
 - skill audit: GREEN;
-- pre-1948 QA: **9 claims / 20 sources / 3 wiki pages / 4 graph edges / 0 warnings**;
-- post-1948 QA: **30 claims / 48 sources / 7 wiki pages / 10 graph edges / 0 warnings**.
+- workflow-manifest audit: **16 dispatched / 0 skipped / 16 known skills**;
+- pre-1948 QA: **9 claims / 37 sources / 3 wiki pages / 4 graph edges / 0 warnings**;
+- post-1948 QA: **30 claims / 48 sources / 7 wiki pages / 10 graph edges / 0 warnings**;
+- both DOCX packages and both PDF exports verified.
 
-The run included one deliberate RED→GREEN correction cycle: CI first exposed two skill-contract wording regressions; both were fixed before merge.
+GitHub CI remains the merge gate; run identifiers are recorded in the final pull requests rather than frozen in this status file.
 
 ## Canonical Markdown layer
-**Promoted and merged:**
-- `examples/sri_lanka_pre_1948/09_output/report.md` — canonical social/geopolitical manuscript including Jaffna/VOC paper-state, caste codification and the education bridge to 1948;
-- `examples/sri_lanka_post_1948/09_output/report.md` — canonical Run 5 manuscript integrating language, caste, mobility, war/diaspora, Tamil Nadu, Indonesia and territorial conversion of human capital.
+**Current.** The two canonical reports are:
+- `examples/sri_lanka_pre_1948/09_output/report.md`;
+- `examples/sri_lanka_post_1948/09_output/report.md`.
 
-`report_vnext.md` files remain useful research/audit snapshots but are no longer the source of truth for the next reader export.
+Their Run 6 banners point to the source audit, storytelling review and reproducible reader-export script.
 
 ## Knowledge layer
-**Current and validated:**
-- `03_wiki/` is materialized in both Sri Lanka worked corpora with durable entities, confidence, provenance and review dates;
-- `04_graph/edges.jsonl` is materialized with typed, sourced relations;
-- modular `source_register*.json` files are supported and duplicate IDs are blocked by QA;
-- QA validates wiki metadata/source references and graph provenance.
+**Current and validated.** Wiki entities, graph edges, modular source registers and provenance checks remain active. The conversation inventory is isolated in `source_register_polonnaruwa_conversation.json`, so it can be audited independently without changing claim provenance silently.
 
 ## Reader-export layer
-Existing Word/PDF reading editions **still predate Run 5** and are therefore stale by design. They must not be described as current.
+**Current.** Run 6 regenerates and packages the two v2 reading editions from the canonical Markdown:
+- pre-1948: Word + PDF, 8 rendered pages;
+- 1948–2026: Word + PDF, 14 rendered pages.
+
+Each edition follows an explicit reader contract and contains a reading map, continuous page furniture, causal callouts and a linked source appendix. The canonical regeneration command is `python scripts/render_reader_exports.py`.
 
 ## Current decision point
-**Research integration and Markdown promotion are complete.** The next action is no longer research or another mandatory comparator pass: it is deliberate regeneration of the Word/PDF reader editions from the canonical Markdown, using `editing-historical-travel-output` + `storytelling-historical-travel` and the established reader contract.
-
-This separation is intentional: a research run can be complete and fully merged while the formatted reading edition remains one generation behind.
+The research, Markdown, workflow evidence and reader exports are aligned. The next substantive cycle should begin with a new field question or evidence gap, not with another formatting catch-up pass.

@@ -35,3 +35,16 @@ Commit `7ef4c8c` materialized pre/post claims and bridge artefacts, replaced gen
 
 ### Final verification extension
 CI now also runs deterministic `qa_project.py` against both worked Sri Lanka example corpora, so future skill changes cannot silently break their provenance/bridge contracts.
+
+## Cycle 5 — Run 6 storytelling review, workflow proof and v2 reader editions
+### RED — non-fiction storytelling contract
+The second-pass review converted the three requested video transcripts and two external storytelling repositories into bounded method hypotheses. A new test required an explicit historical-nonfiction safety gate, a promise/callback ledger and the PACE vignette structure. The first full run exposed one lexical gap: the skill prohibited fabrication but did not expose the contract phrase `invented dialogue`.
+
+### GREEN — explicit gate and reproducible packaging
+The skill wording was corrected without weakening the test. The cycle then added:
+- a 16-skill run manifest plus deterministic `audit_workflow.py` coverage;
+- the 17-record Polonnaruwa conversation-source inventory and audit note;
+- reusable reader contracts and `render_reader_exports.py`;
+- two visually inspected DOCX/PDF v2 editions.
+
+Final local gate: **34 tests GREEN**, skill audit GREEN, workflow audit **16/0/16**, both corpus QA runs at zero warnings, valid DOCX archives and valid unencrypted Letter-size PDFs.

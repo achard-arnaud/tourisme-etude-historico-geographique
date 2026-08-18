@@ -17,7 +17,7 @@ class ProjectToolTests(unittest.TestCase):
             target = Path(td) / 'voyage'
             r = self.run_script('scripts/new_project.py', '--name', 'Voyage Test', '--output', target)
             self.assertEqual(r.returncode, 0, r.stderr)
-            for rel in ['README.md','00_method','01_arcs','02_hil','03_wiki','04_graph','05_sources','06_bridges','07_drifts','08_questions','09_output']:
+            for rel in ['README.md','00_method','00_method/reader_contract.json','00_method/run_manifest.json','01_arcs','02_hil','03_wiki','04_graph','05_sources','06_bridges','07_drifts','08_questions','09_output']:
                 self.assertTrue((target / rel).exists(), rel)
 
     def test_qa_project_rejects_unsourced_major_claim(self):

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "run_id": "run-id",
+  "status": "draft",
+  "mode": "research",
+  "project_roots": [],
+  "state_before": {
+    "research": "",
+    "canonical_markdown": "",
+    "reader_export": ""
+  },
+  "dispatched_skills": [],
+  "skipped_skills": [],
+  "validations": [],
+  "state_after": {
+    "research": "",
+    "canonical_markdown": "",
+    "reader_export": ""
+  },
+  "promotion_decision": "pending"
+}

@@ -1,6 +1,6 @@
 # Sri Lanka 1948–2026 — édition canonique Run 5 : État, langue, caste, mobilité et conversion du capital humain
 
-> **Statut** — Markdown canonique promu dans Run 5, sous réserve du gate CI/QA de la PR. Le Word/PDF de lecture reste un artefact distinct à régénérer après merge.
+> **Statut** — Markdown canonique promu dans Run 5. Édition lecteur v2 régénérée et vérifiée dans Run 6 après revue de la skill storytelling.
 
 ## 1. 1948 : qui hérite réellement de l'État colonial ?
 

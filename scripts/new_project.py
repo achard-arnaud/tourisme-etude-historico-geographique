@@ -17,6 +17,14 @@ def main():
     for hil in HILS: (root/'02_hil'/hil).mkdir(parents=True,exist_ok=True)
     (root/'README.md').write_text(f"# {a.name}\n\nHistorico-geographic study project.\n",encoding='utf-8')
     (root/'project.json').write_text(json.dumps({'name':a.name,'method':'tourisme-etude-historico-geographique','version':1},indent=2),encoding='utf-8')
+    (root/'00_method'/'reader_contract.json').write_text(json.dumps({
+        'audience':'intermediate', 'language':'fr', 'tone':'analytical guide',
+        'register':'educated generalist', 'length_budget':'standard',
+        'reading_context':'long-form travel reader'
+    },indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+    manifest=json.loads((Path(__file__).resolve().parents[1]/'templates'/'run-manifest.json').read_text(encoding='utf-8'))
+    manifest['project_roots']=[str(root)]
+    (root/'00_method'/'run_manifest.json').write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
     (root/'05_sources'/'source_register.json').write_text('[]\n',encoding='utf-8')
     (root/'04_graph'/'nodes.jsonl').write_text('',encoding='utf-8')
     (root/'04_graph'/'edges.jsonl').write_text('',encoding='utf-8')

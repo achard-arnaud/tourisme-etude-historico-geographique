@@ -1,6 +1,6 @@
 # tourisme-etude-historico-geographique
 
-Un **OS d'enquête historico-géographique** pour transformer notes de terrain, sources et questions en arcs chronologiques causaux, artefacts réutilisables et rapports adaptés au lecteur.
+Un **OS réutilisable d’enquête et de narration historico-géographique**, de la note de terrain aux éditions Markdown, Word et PDF traçables.
 
 ## Architecture
 **Arc-first + Zettelkasten-lite + graph-light + promotion explicite.**
@@ -55,6 +55,24 @@ Le lifecycle d'un output est explicite : `baseline` → `vnext` → `promoted/ca
 python scripts/new_project.py --name "Nom du voyage" --output ./projects/mon-voyage
 ```
 
+### Créer une nouvelle fresque, de bout en bout
+
+1. **Initialiser** le projet avec `new_project.py`. Le script crée l’arborescence, le contrat lecteur et un manifeste d’exécution en brouillon.
+2. **Fixer le contrat** dans `00_method/reader_contract.json` : audience, langue, ton, registre, longueur et contexte de lecture.
+3. **Capturer sans conclure** : placer notes, panneaux, images ou témoignages dans la couche terrain, puis séparer faits, traditions, inférences, comparaisons et questions.
+4. **Construire la colonne vertébrale** : arcs bornés par ruptures, claims sourcés, zooms Z0–Z4, HIL pertinents et bridges causaux minimaux.
+5. **Stabiliser** : registres de sources, audit historiographique, wiki et graph-light. Les skills sont routées selon le problème ; elles ne sont jamais toutes appelées par réflexe.
+6. **Tracer le workflow** : compléter le manifeste avec chaque skill appelée ou écartée, sa raison, ses entrées, ses sorties et son statut. Le contrôler avec `audit_workflow.py`.
+7. **Promouvoir le Markdown** : `editing-historical-travel-output` structure le manuscrit ; `storytelling-historical-travel` règle voix, densité, continuité et sécurité non-fictionnelle.
+8. **Éditer le lecteur** : générer Word/PDF seulement depuis le Markdown promu, effectuer la QA visuelle et mettre à jour `CURRENT_OUTPUT_STATUS.md`.
+9. **Publier** : tests + audits + QA des projets, PR vers `dev`, puis PR de promotion vers `main`.
+
+Contrôle d’un manifeste finalisé :
+
+```bash
+python scripts/audit_workflow.py docs/RUN6_WORKFLOW_MANIFEST.json
+```
+
 Arborescence créée :
 ```text
 <project>/
@@ -76,10 +94,13 @@ Arborescence créée :
 - `examples/sri_lanka_pre_1948/` — longue durée ; Jaffna/Palk, VOC, paper-state, caste/codification, géopolitique européenne et bridge éducatif vers 1948.
 - `examples/sri_lanka_post_1948/` — État/langue, éducation/anglais, caste et reproduction sociale, guerre/diaspora, patrimoine, puis Run 5 de comparaison **Jaffna ↔ Tamil Nadu ↔ Indonésie** et conversion territoriale du capital humain.
 
+La passe Run 6 ajoute l’inventaire exhaustif des références de la conversation Polonnaruwa, une seconde revue de la skill storytelling fondée sur trois extractions YouTube et deux benchmarks publics, un manifeste prouvant le routing des 16 skills et les deux éditions lecteur v2.
+
 ## Vérifier
 ```bash
 python -m unittest discover -s tests -v
 python scripts/audit_skill.py .
+python scripts/audit_workflow.py docs/RUN6_WORKFLOW_MANIFEST.json
 python scripts/qa_project.py examples/sri_lanka_pre_1948
 python scripts/qa_project.py examples/sri_lanka_post_1948
 ```
@@ -100,5 +121,8 @@ Voir notamment :
 - `docs/CURRENT_OUTPUT_STATUS.md`
 - `docs/PROMPT_REVIEW_RUN5.md`
 - `docs/RUN5_COMPARATIVE_DEVELOPMENT_LOG.md`
+- `docs/SOURCE_AUDIT_POLONNARUWA_CONVERSATION.md`
+- `docs/RUN6_STORYTELLING_REVIEW.md`
+- `docs/RUN6_WORKFLOW_MANIFEST.json`
 - `docs/TDD_LOG.md`
 - `docs/FEEDBACK_LOG.md`
