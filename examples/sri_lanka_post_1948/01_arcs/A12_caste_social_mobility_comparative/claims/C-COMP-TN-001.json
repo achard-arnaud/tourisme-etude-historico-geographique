@@ -1,0 +1,9 @@
+{
+  "id": "C-COMP-TN-001",
+  "claim": "Tamil Nadu developed a distinctive political regime in which anti-caste and non-Brahmin mobilization, reservations and mass access to education became explicit instruments for widening opportunity in the modern economy.",
+  "confidence": "B",
+  "zoom": "Z3",
+  "causal_role": "driver",
+  "source_ids": ["CAMBRIDGE-DRAVIDIAN-MODEL", "CAMBRIDGE-DRAVIDIAN-EDUCATION", "TN-RESERVATION-OFFICIAL"],
+  "notes": "Comparative anchor only: the policy package cannot be isolated from Tamil Nadu's wider political economy."
+}
