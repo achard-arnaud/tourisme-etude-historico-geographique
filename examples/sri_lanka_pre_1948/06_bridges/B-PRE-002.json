@@ -1,0 +1,9 @@
+{
+  "id": "B-PRE-002",
+  "from_claim": "C-PRE-GEO-001",
+  "to_claim": "C-PRE-GEO-003",
+  "question": "How did the Anglo-French struggle of the mid-eighteenth century prepare the later British takeover of Dutch Ceylon?",
+  "mechanism": "The Seven Years War left Britain with a uniquely strong fiscal-military position in India; during the later Revolutionary wars this capacity, combined with naval superiority, allowed Britain to seize Dutch and French strategic positions across the Indian Ocean when those states became aligned against it.",
+  "result": "B",
+  "source_ids": ["CAMBRIDGE-SEVEN-YEARS-CARNATIC", "CAMBRIDGE-BRITISH-NAVY-1794", "CAMBRIDGE-COMPANY-FORTRESS-END"]
+}
