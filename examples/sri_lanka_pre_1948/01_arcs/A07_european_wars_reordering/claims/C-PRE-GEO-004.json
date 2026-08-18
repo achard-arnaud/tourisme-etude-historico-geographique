@@ -1,0 +1,9 @@
+{
+  "id": "C-PRE-GEO-004",
+  "claim": "The British annexation of Kandy in 1815 was caused primarily by Kandyan political fracture and British coalition-building, but it occurred in a regional environment where Dutch and French military alternatives had been drastically reduced, lowering the external-balancing options available to the kingdom.",
+  "confidence": "B",
+  "zoom": "Z3",
+  "causal_role": "amplifier",
+  "source_ids": ["CAMBRIDGE-DESTROYING-RIVALS", "CAMBRIDGE-COMPANY-REDUCED-1811", "CAMBRIDGE-ANGLODUTCH-MERIDIAN"],
+  "notes": "Counterfactual support is impossible to prove; retain as a regional amplifier, never as the direct cause of Kandyan collapse."
+}
