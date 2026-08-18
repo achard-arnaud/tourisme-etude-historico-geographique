@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-EDU-003",
+  "claim": "Jaffna's historical educational overperformance should not be restated as a timeless claim that it is currently the most literate district in Sri Lanka; recent official data show high but not uniquely highest literacy, while the stronger historical differential lies in institutional density, English, advanced education and professional mobility.",
+  "confidence": "A",
+  "zoom": "Z1",
+  "causal_role": "context",
+  "source_ids": ["DCS-LITERACY-2012", "CAMBRIDGE-ACM-EDU"],
+  "notes": "Use literacy carefully: it is a weak proxy for exam performance, educational quality or access to elite professions."
+}
