@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-NAM-002",
+  "claim": "By the 1970s Sri Lanka's non-alignment had acquired an explicit economic-decolonization dimension, culminating in the 1976 Colombo summit's emphasis on South-South cooperation, resource sovereignty and a New International Economic Order, while domestic inward-looking economic policy also reflected terms-of-trade pressures and socialist-development ideology.",
+  "confidence": "A",
+  "zoom": "Z2",
+  "causal_role": "amplifier",
+  "source_ids": ["CAMBRIDGE-NAM-NIEO", "CAMBRIDGE-INWARD-ECONOMY"],
+  "notes": "Do not simplify this to NAM causing import substitution; the overlap is ideological and strategic rather than a one-way causal command chain."
+}
