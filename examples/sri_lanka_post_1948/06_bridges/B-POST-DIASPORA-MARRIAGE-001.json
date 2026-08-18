@@ -1,0 +1,9 @@
+{
+  "id": "B-POST-DIASPORA-MARRIAGE-001",
+  "from_claim": "C-POST-MARRIAGE-001",
+  "to_claim": "C-POST-DEV-001",
+  "question": "How did war reshape rather than simply destroy Jaffna's social and human capital?",
+  "mechanism": "Displacement and migration moved people, qualifications and family strategies out of the peninsula; marriage and kin networks helped reproduce transnational Tamil households, so human capital was partly externalized even as the territorial economy lost population and opportunity.",
+  "result": "B",
+  "source_ids": ["JSTOR-TAMIL-MARRIAGE-2019", "CAMBRIDGE-THIRANAGAMA-REVIEW", "WORLD-BANK-NORTH-JOBS-2018"]
+}
