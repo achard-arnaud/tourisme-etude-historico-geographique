@@ -34,7 +34,7 @@ If the user asks “where did we stop?”, answer from this checkpoint rather th
 8. Run `auditing-historiography-and-drifts`, including comparator and success/failure narratives.
 9. Store durable cross-arc knowledge with `maintaining-wiki-and-graph`.
 10. Structure the chronological manuscript with `editing-historical-travel-output`.
-11. Render for the reader with `storytelling-historical-travel`.
+11. Preserve the complete promoted baseline, then render for the reader. For an advanced consolidation, `storytelling-historical-travel` is optional and may tune voice or navigation only after a quantitative retention gate; it must never set a maximum length or replace the source manuscript with a delta.
 12. Record dispatched and skipped skills with reasons and artefact paths in a run manifest.
 13. Re-run the state checkpoint and promote outputs only after verification.
 

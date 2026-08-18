@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-08-18-run7-sri-lanka-v3-full-consolidation",
+  "status": "reviewed",
+  "mode": "lossless-reader-recovery-and-conversation-capitalization",
+  "project_roots": [
+    "examples/sri_lanka_pre_1948",
+    "examples/sri_lanka_post_1948"
+  ],
+  "state_before": {
+    "research": "Run 5 evidence current but conversation fiches split between project memory and unversioned working files",
+    "canonical_markdown": "short Run 5 deltas incorrectly presented as complete canonical reports",
+    "reader_export": "V2 first volume compressed from 61 pages to 8 pages"
+  },
+  "dispatched_skills": [
+    {
+      "skill": "capturing-field-evidence",
+      "reason": "materialize every recovered conversation fiche and route field, translation, itinerary and operational material without promoting it as historical proof",
+      "inputs": ["examples/sri_lanka_pre_1948/05_sources/conversation_corpus"],
+      "outputs": ["examples/sri_lanka_pre_1948/00_method/conversation_capitalization_register.md", "examples/sri_lanka_pre_1948/05_sources/conversation_corpus"],
+      "status": "executed"
+    },
+    {
+      "skill": "sanitizing-historical-claims",
+      "reason": "separate conversation requirements, observations, hypotheses, sourced claims and unavailable photo evidence",
+      "inputs": ["examples/sri_lanka_pre_1948/05_sources/conversation_corpus"],
+      "outputs": ["examples/sri_lanka_pre_1948/00_method/conversation_capitalization_register.md"],
+      "status": "verified"
+    },
+    {
+      "skill": "sourcing-historical-anchors",
+      "reason": "materialize the exact source apparatus for every Run 5 addition already present in the source registers",
+      "inputs": ["examples/sri_lanka_pre_1948/05_sources", "examples/sri_lanka_post_1948/05_sources"],
+      "outputs": ["examples/sri_lanka_pre_1948/09_output/report_v3_full.md", "examples/sri_lanka_post_1948/09_output/report_v3_full.md"],
+      "status": "executed"
+    },
+    {
+      "skill": "auditing-historiography-and-drifts",
+      "reason": "diagnose the false equivalence between a short delta and a complete edition and preserve source limits in the restored readers",
+      "inputs": ["docs/RUN6_WORKFLOW_MANIFEST.json"],
+      "outputs": ["docs/RUN7_V3_FULL_CONSOLIDATION.md"],
+      "status": "executed"
+    },
+    {
+      "skill": "editing-historical-travel-output",
+      "reason": "rebuild both readers from the complete V1 baselines and insert the full Run 5 deltas chronologically without compression",
+      "inputs": ["examples/sri_lanka_pre_1948/09_output/archive", "examples/sri_lanka_post_1948/09_output/archive"],
+      "outputs": ["examples/sri_lanka_pre_1948/09_output/Sri_Lanka_Fresque_historico_geographique_vol_retour_v3.docx", "examples/sri_lanka_post_1948/09_output/Sri_Lanka_1948_2026_etude_historico_geographique_v3.docx"],
+      "status": "executed"
+    }
+  ],
+  "skipped_skills": [
+    {"skill": "storytelling-historical-travel", "reason": "explicitly bypassed for V3 at the user's request; the skill was corrected separately so it cannot impose a length cap on future advanced consolidations"},
+    {"skill": "structuring-chronological-arcs", "reason": "no arc redesign: the V1 chronology was preserved and only already-promoted deltas were inserted"},
+    {"skill": "zooming-geographic-scales", "reason": "the scale architecture was preserved from V1 and Run 5; no new geographic claim was introduced"},
+    {"skill": "analyzing-institutions-and-power", "reason": "no new institutional research; existing stabilized analysis was carried forward losslessly"},
+    {"skill": "analyzing-geography-and-environment", "reason": "no new environmental research; existing stabilized analysis was carried forward losslessly"},
+    {"skill": "analyzing-economy-and-infrastructure", "reason": "no new economic research; existing stabilized analysis was carried forward losslessly"},
+    {"skill": "analyzing-society-and-demography", "reason": "no new social claim; the Run 5 caste, education and diaspora delta was preserved in full"},
+    {"skill": "analyzing-religion-culture-legitimacy", "reason": "field questions were captured but not promoted without their missing photo/source evidence"},
+    {"skill": "analyzing-security-and-geopolitics", "reason": "the already-sourced European-war and conflict analyses were inserted without further research"},
+    {"skill": "building-causal-bridges", "reason": "existing bridges were preserved; no missing mechanism was asserted in this recovery run"},
+    {"skill": "maintaining-wiki-and-graph", "reason": "no cross-arc claim changed, so wiki and graph artifacts required no mutation"}
+  ],
+  "validations": [
+    "python -m unittest discover -s tests -v",
+    "python scripts/audit_skill.py .",
+    "python scripts/audit_workflow.py docs/RUN7_WORKFLOW_MANIFEST.json",
+    "python scripts/qa_project.py examples/sri_lanka_pre_1948",
+    "python scripts/qa_project.py examples/sri_lanka_post_1948",
+    "DOCX to PDF to PNG render and visual inspection"
+  ],
+  "state_after": {
+    "research": "all recovered conversation fiches versioned with explicit non-evidence and missing-piece statuses",
+    "canonical_markdown": "V1 full manuscripts plus complete Run 5 deltas integrated into report_v3_full.md",
+    "reader_export": "68-page pre-1948 V3 and 29-page post-1948 V3 rendered and visually checked"
+  },
+  "promotion_decision": "promote after fresh local QA and GitHub CI; shorter derivatives may not replace the full V3"
+}

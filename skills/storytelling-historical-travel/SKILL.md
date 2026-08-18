@@ -11,12 +11,14 @@ Resolve or infer and keep stable:
 - **language** and translation policy for names/terms;
 - **tone**: analytical, guide-like, narrative, contemplative, etc.;
 - **register**: scholarly, educated generalist, family/child;
-- **length budget** and reading context.
+- **length policy** and reading context. A budget is optional; for an advanced consolidation it is unconstrained unless the reader explicitly requests an abridgement.
 If already established, do not ask again.
 
 ## Audience presets
 ### advanced
-Preserve historiographic disputes, source families, competing causal models, comparator limits and explicit uncertainty. Assume the reader can retain dynasties, institutions and cross-arc references.
+Preserve historiographic disputes, source families, competing causal models, comparator limits, detours, callbacks and explicit uncertainty. Assume the reader can retain dynasties, institutions and cross-arc references.
+
+There is **no maximum length** for the advanced preset. Start from the last complete promoted baseline, treat later manuscripts as deltas unless they are proven complete, and do not trade coverage for pacing. Before export, compute a retention comparison against the baseline. Any unexplained loss of a section, table, source family, open question or substantial word volume is a blocking defect.
 
 ### intermediate
 Keep causal architecture but reduce proper-name density. Explain technical terms inline and surface controversies only when they change interpretation.
@@ -24,8 +26,15 @@ Keep causal architecture but reduce proper-name density. Explain technical terms
 ### child
 Use concrete places, objects and human-scale stakes. Never invent dialogue, thoughts, motives, dates or events. Mark uncertainty simply and avoid good-guys/bad-guys framing.
 
-## Length budget
-Default bands: quick 2k–5k; standard 8k–15k; long 20k–35k; monumental 40k+. Allocate words by causal weight. Compress lists and repeated biographies before mechanisms or transitions.
+## Length policy
+Length bands may be used only for intermediate, child or explicitly abridged outputs. They are never defaults for an advanced consolidation. If the user requests a shorter derivative, keep the full baseline as a separate canonical artefact and label the derivative as abridged.
+
+For advanced work, apply a content-preservation gate:
+
+1. inventory the baseline sections, tables, side material, claims, source families and unresolved questions;
+2. route every later addition to a chronological location or an explicit fiche;
+3. compare baseline, delta and candidate export quantitatively;
+4. fail promotion on silent loss, even if the shorter prose appears more fluid.
 
 ## Narrative unit
 Prefer: place/object/tension → causal question → 2–4 mechanisms → consequences for people/territory/institutions → bridge forward.
@@ -59,6 +68,6 @@ For long outputs, record the opening causal promise, the questions introduced, t
 If the reader asks for a long-project status, briefly distinguish research, canonical Markdown and formatted reader export before the narrative. Do not clutter ordinary historical prose with repository mechanics.
 
 ## Story QA
-Before delivery verify chronology, `but/therefore` causal transitions, uncertainty, comparator limits, absence of invented reconstruction, promise/callback closure, length budget, reader fit and a conclusion that returns to the causal map rather than merely recapping events.
+Before delivery verify chronology, `but/therefore` causal transitions, uncertainty, comparator limits, absence of invented reconstruction, promise/callback closure, the applicable length policy, baseline retention, reader fit and a conclusion that returns to the causal map rather than merely recapping events.
 
 See `references/storytelling-patterns-and-review.md` for the Run 6 video extraction, benchmark boundaries and the adaptation rationale.
