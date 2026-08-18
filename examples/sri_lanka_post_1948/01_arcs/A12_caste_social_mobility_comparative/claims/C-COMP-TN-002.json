@@ -1,0 +1,9 @@
+{
+  "id": "C-COMP-TN-002",
+  "claim": "Tamil Nadu's inclusive modernization did not abolish caste: historically advantaged educational and professional networks, including among Tamil Brahmins, were also convertible into new opportunities in engineering, finance and IT, while caste networks remained economically relevant.",
+  "confidence": "B",
+  "zoom": "Z3",
+  "causal_role": "constraint",
+  "source_ids": ["CAMBRIDGE-TAMIL-BRAHMINS-IT", "CAMBRIDGE-CASTE-ENTREPRENEURSHIP"],
+  "notes": "The IT evidence is partly qualitative; use to reject a caste-disappearance narrative, not to quantify sectoral shares."
+}
