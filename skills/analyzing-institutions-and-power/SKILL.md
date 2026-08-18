@@ -22,7 +22,7 @@ Do not infer representation from population share alone. Distinguish political o
 
 ## Policy instrument matrix
 For every major reform, record:
-1. problem claimed by proponents;
+1. problem claimed by proponents and **distributional intent**;
 2. instrument chosen;
 3. implementing level and bureaucracy;
 4. intended beneficiary and burdened group;
@@ -30,7 +30,7 @@ For every major reform, record:
 6. displacement/substitution effects;
 7. enforcement gap and time horizon.
 
-A policy can democratize one gateway while closing another. Keep **intent**, **legal design**, **implementation** and **distributional effect** separate.
+A policy can democratize one gateway while closing another. Keep **distributional intent**, **legal design**, **implementation** and **distributional effect** separate.
 
 ## Comparative use
 Compare equivalent institutional levels. A subnational reservation regime inside a federation is not directly equivalent to a sovereign state's language regime. Use comparison only when the access mechanism is transportable after accounting for constitutional level, market size and conflict.
