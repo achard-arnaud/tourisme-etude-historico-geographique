@@ -1,0 +1,9 @@
+{
+  "id": "C-POST-EDU-001",
+  "claim": "The nineteenth-century concentration of missionary schooling and English-language advanced education in Jaffna created a durable human-capital advantage that channelled many northern Tamils toward professional, clerical and administrative careers under colonial rule and remained politically salient after 1948.",
+  "confidence": "B",
+  "zoom": "Z1",
+  "causal_role": "driver",
+  "source_ids": ["CAMBRIDGE-ACM-EDU", "CAMBRIDGE-TWO-SOCIETIES"],
+  "notes": "Do not reduce the advantage to missionary action alone: local appropriation, Hindu/Tamil institutional competition and family strategies are part of the mechanism."
+}
