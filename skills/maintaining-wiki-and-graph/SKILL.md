@@ -34,3 +34,8 @@ After a substantial research run:
 3. flag contradictions rather than overwriting silently;
 4. run duplicate-slug and unknown-source QA;
 5. save a project checkpoint identifying wiki/graph freshness.
+
+## Output
+Wiki entity pages (`templates/wiki-entity.md` → `03_wiki/**/*.md`) and typed graph edges (`04_graph/*.jsonl`), both validated by `scripts/qa_project.py`.
+
+See also: `SKILL.md` orchestration step 9; `docs/skill_workflow_index.md`.

@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 import json
+import os
 import sys
 from pathlib import Path
 
 
 ALLOWED_EXECUTION_STATUS = {"executed", "verified"}
+DEBUG = bool(os.environ.get("SKILL_DEBUG"))
 
 
 def main():
@@ -16,7 +18,9 @@ def main():
     try:
         data = json.loads(manifest_path.read_text(encoding="utf-8"))
     except Exception as exc:
-        print(f"ERROR: invalid workflow manifest: {manifest_path}: {exc}")
+        if DEBUG:
+            raise
+        print(f"ERROR: invalid workflow manifest: {manifest_path}: {exc}", file=sys.stderr)
         return 1
 
     known = {p.parent.name for p in (repo / "skills").glob("*/SKILL.md")}
@@ -65,7 +69,7 @@ def main():
             errors.append(f"missing manifest field: {key}")
 
     for error in errors:
-        print("ERROR:", error)
+        print("ERROR:", error, file=sys.stderr)
     if errors:
         return 1
     print(f"WORKFLOW AUDIT OK: {len(dispatched)} dispatched, {len(skipped)} skipped, {len(known)} known skills")

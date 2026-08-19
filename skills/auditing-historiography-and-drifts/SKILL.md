@@ -23,3 +23,8 @@ Treat phrases such as “missed the boat”, “inevitable decline”, “tradit
 Ask who benefits from the narrative: state, insurgency, colonial administration, development institution, tourism body, diaspora organization, political movement or successful-region literature. An official programme target is not an achieved outcome; a celebrated development model is not its own counterfactual.
 
 Record each material correction next to the claim and in the drift ledger; do not hide it in an appendix.
+
+## Output
+One drift audit per arc, shaped by `templates/drift-audit.md` and stored in `07_drifts/*.md`, with each material correction cross-referenced to its claim.
+
+See also: `SKILL.md` orchestration step 8; `docs/skill_workflow_index.md`.

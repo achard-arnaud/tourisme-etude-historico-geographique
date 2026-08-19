@@ -24,3 +24,8 @@ A subnational success may depend on institutions supplied by the larger federati
 
 ## Zoom/dezoom narrative
 For travel-history synthesis, return from Z3/Z4 comparison to the Z0/Z1 object or place that motivated the question. The dezoom must explain something observable locally rather than becoming detached geopolitical commentary.
+
+## Output
+A zoom label (`Z0`–`Z4`) attached to each claim or HIL note, placing it under the matching `02_hil/<HIL-id>/Z<n>/` directory created by `scripts/new_arc.py`, plus the explicit mechanism bridging any zoom change.
+
+See also: `SKILL.md` orchestration step 4; `docs/skill_workflow_index.md`.

@@ -22,3 +22,8 @@ Store the problem definition, legal instrument, implementation and observed effe
 
 ## Metric hygiene
 For every quantitative statement retain denominator, geography, year/period, nominal/real basis where relevant and source definition. If those are missing, downgrade the statement to an unresolved lead rather than manufacturing comparability.
+
+## Output
+One typed statement per input fragment (`source_fact`, `claim`, `inference`, `tradition`, `analogy`, `comparator`, `counterfactual`, `metric`, `policy_intent`, `policy_effect`, `question`, or `discarded_lead`), each ready to become a `templates/claim.md` record once an arc/HIL/zoom and source are attached.
+
+See also: `SKILL.md` orchestration step 2; `docs/skill_workflow_index.md`.

@@ -29,3 +29,8 @@ Current office-holders, programmes, laws, budgets, rankings and economic indicat
 - political/promotional claims (lead unless independently corroborated).
 
 Wikipedia and search snippets may navigate and expose gaps but should not close contested causal claims. Field panels may be promoted to their underlying curated/academic source while the photo remains T4.
+
+## Output
+A source-note entry per anchor (`templates/source-note.md`) appended to `05_sources/source_register*.json`, carrying tier, anchor role, scope and limitations so `scripts/qa_project.py` can validate claim/bridge/wiki/graph references against it.
+
+See also: `SKILL.md` orchestration step 5; `docs/skill_workflow_index.md`.

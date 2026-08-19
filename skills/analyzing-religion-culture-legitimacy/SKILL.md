@@ -17,3 +17,8 @@ Religious reform can remove a hierarchy from official doctrine while temples, co
 Distinguish sacred legitimacy, legal authority, social prestige and coercive capacity. A relic, lineage or temple may legitimate a ruler or community without granting administrative control.
 
 Analogies to modern religious movements are heuristic only: state the shared mechanism and the limits explicitly.
+
+## Output
+HIL-05 analytic notes (institution-vs-belief mapping, legitimacy test) that become `templates/claim.md` records under `02_hil/HIL-05_religion-culture-legitimacy/Z<n>/`.
+
+See also: `SKILL.md` orchestration step 6; `docs/skill_workflow_index.md`.

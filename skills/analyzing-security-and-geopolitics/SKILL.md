@@ -26,3 +26,8 @@ Migration may weaken the origin territory while strengthening households or dias
 
 ## Comparison caution
 Peaceful comparator regions are useful only after marking conflict as a major confounder. Never attribute a development gap to language, caste or policy while leaving war untreated.
+
+## Output
+HIL-06 analytic notes (war-development channels, externalisation test) that become `templates/claim.md` records under `02_hil/HIL-06_security-coercion/Z<n>/`.
+
+See also: `SKILL.md` orchestration step 6; `docs/skill_workflow_index.md`.

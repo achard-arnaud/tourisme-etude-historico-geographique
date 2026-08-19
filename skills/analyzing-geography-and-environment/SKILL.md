@@ -23,3 +23,8 @@ War, disease, ecological change or infrastructure collapse may shift settlement 
 
 ## Comparison-scale gate
 A province, peninsula, Indian state and sovereign country are not equivalent units. Before comparison, state the territorial level and which flows cross its boundaries. Normalize market access, fiscal/constitutional autonomy, security jurisdiction and connectivity before transporting a geographic mechanism.
+
+## Output
+HIL-02 analytic notes (constraint/enabler mapping, territorial absorption) that become `templates/claim.md` records under `02_hil/HIL-02_geography-environment/Z<n>/`.
+
+See also: `SKILL.md` orchestration step 6; `docs/skill_workflow_index.md`.

@@ -34,3 +34,8 @@ A policy can democratize one gateway while closing another. Keep **distributiona
 
 ## Comparative use
 Compare equivalent institutional levels. A subnational reservation regime inside a federation is not directly equivalent to a sovereign state's language regime. Use comparison only when the access mechanism is transportable after accounting for constitutional level, market size and conflict.
+
+## Output
+HIL-01 analytic notes (access architecture, policy instrument matrix) that become `templates/claim.md` records under `02_hil/HIL-01_institutions-chronology/Z<n>/`, ready for `building-causal-bridges` and `structuring-chronological-arcs`.
+
+See also: `SKILL.md` orchestration step 6; `docs/skill_workflow_index.md`.

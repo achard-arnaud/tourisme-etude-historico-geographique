@@ -24,3 +24,8 @@ Before comparing growth or sectoral transformation, normalize period, price basi
 
 ## War and infrastructure
 Separate direct destruction from maintenance gaps, connectivity loss, investment risk, land/access constraints and postwar reconstruction. A rebuilt road is an input; it is not proof that private investment, employment or productivity recovered.
+
+## Output
+HIL-03 analytic notes (resource mobilisation, conversion-of-advantage test) that become `templates/claim.md` records under `02_hil/HIL-03_economy-infrastructure/Z<n>/`.
+
+See also: `SKILL.md` orchestration step 6; `docs/skill_workflow_index.md`.

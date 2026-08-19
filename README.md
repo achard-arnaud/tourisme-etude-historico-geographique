@@ -98,14 +98,19 @@ La passe Run 6 avait produit deux éditions lecteur v2 à partir des seuls delta
 
 ## Vérifier
 ```bash
+pip install -r requirements.txt
 python -m unittest discover -s tests -v
 python scripts/audit_skill.py .
 python scripts/audit_workflow.py docs/RUN6_WORKFLOW_MANIFEST.json
 python scripts/qa_project.py examples/sri_lanka_pre_1948
 python scripts/qa_project.py examples/sri_lanka_post_1948
+python scripts/render_full_reader_v3.py --project all
 ```
 
-`qa_project.py` bloque notamment : claims causaux majeurs A/B non sourcés, sources inconnues ou dupliquées, wiki sans métadonnées de provenance et graph edges interprétatifs non sourcés.
+`qa_project.py` bloque notamment : claims causaux majeurs A/B non sourcés, sources inconnues ou dupliquées, wiki sans métadonnées de provenance et graph edges interprétatifs non sourcés. `render_full_reader_v3.py` exerce la chaîne de publication réelle (génération DOCX + porte de rétention) ; c'est désormais aussi une étape de la CI, pas seulement une commande manuelle.
+
+## Runtime et dépendances
+Les scripts d'échafaudage et de QA (`new_project.py`, `new_arc.py`, `qa_project.py`, `audit_skill.py`, `audit_workflow.py`) sont **stdlib-only** — aucune clé, aucun réseau, aucune authentification. Seule la chaîne de publication (`render_full_reader_v3.py`, `render_reader_exports.py`) dépend de `python-docx`, déclarée dans `requirements.txt` et installée en CI avant la passe de rendu. Les scripts d'audit acceptent la variable d'environnement `SKILL_DEBUG=1` pour laisser remonter la trace complète d'une exception au lieu de l'avaler dans un message `ERROR:` ; les messages `ERROR:`/`WARN:` vont sur stderr, la ligne de statut finale sur stdout.
 
 ## Workflow Git
 `dev` porte les changements ; `main` reçoit uniquement les PR revues et vérifiées. Après merge, `dev` est resynchronisée avec le merge commit et l'état d'output est sauvegardé.
@@ -114,6 +119,8 @@ python scripts/qa_project.py examples/sri_lanka_post_1948
 La chronologie reste la colonne vertébrale humaine. Les claims ne deviennent atomiques qu'après stabilisation. Les thèmes verticaux — eau, caste, langue, éducation, commerce, migration — traversent les arcs sans remplacer la chronologie. Les annexes utiles sont réinjectées dans le récit sous forme de `Mais aussi`, `Petit détour`, `Point de méthode` ou `Fausse piste`.
 
 Voir notamment :
+- `docs/skill_workflow_index.md`
+- `docs/RUN8_SKILLS_RUNTIME_AUDIT.md`
 - `docs/architecture.md`
 - `docs/agent_routing.md`
 - `docs/zettelkasten_graphlight_decision.md`
