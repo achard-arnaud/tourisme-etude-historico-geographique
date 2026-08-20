@@ -2,6 +2,8 @@
 import json, os, sys, re
 from pathlib import Path
 
+from side_story_contract import validate_side_stories
+
 VALID_CONF=set('ABCDU')
 VALID_ZOOMS={f'Z{i}' for i in range(5)}
 VALID_TIERS={f'T{i}' for i in range(6)}
@@ -148,11 +150,14 @@ def main():
 
     wiki_count=validate_wiki(root,sources,errors,warnings)
     graph_count=validate_graph(root,sources,errors)
+    side_errors, side_warnings, side_story_count=validate_side_stories(root, check_render=True)
+    errors.extend(side_errors)
+    warnings.extend(side_warnings)
 
     for m in errors: print('ERROR:',m,file=sys.stderr)
     for m in warnings: print('WARN:',m,file=sys.stderr)
     if errors: return 1
-    print(f'QA OK: {len(claims)} claims, {len(sources)} sources, {wiki_count} wiki pages, {graph_count} graph edges, {len(warnings)} warnings')
+    print(f'QA OK: {len(claims)} claims, {len(sources)} sources, {wiki_count} wiki pages, {graph_count} graph edges, {side_story_count} side stories, {len(warnings)} warnings')
     return 0
 
 if __name__=='__main__': raise SystemExit(main())
