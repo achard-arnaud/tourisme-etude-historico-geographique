@@ -7,12 +7,16 @@ REQUIRED=[
     'README.md',
     'templates/arc.md',
     'templates/claim.md',
+    'templates/side-story.json',
     'templates/run-manifest.json',
     'scripts/new_project.py',
     'scripts/new_arc.py',
+    'scripts/new_side_story.py',
+    'scripts/side_story_contract.py',
     'scripts/qa_project.py',
     'scripts/audit_workflow.py',
     'scripts/render_reader_exports.py',
+    'docs/SOP_SIDE_STORIES.md',
 ]
 
 def fm(text):
