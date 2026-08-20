@@ -1,0 +1,8 @@
+{
+  "hil_id": "HIL-03_economy-infrastructure",
+  "status": "functional-baseline-index",
+  "claim_ids": ["C-PRE-001", "C-PRE-002"],
+  "source_ids": ["SNSL-FORTS-2022", "CAMBRIDGE-LAWMAKING", "CAMBRIDGE-CLASSIFICATION"],
+  "non_findings": ["The baseline replay does not promote a new quantitative trade or fiscal metric beyond the existing sourced interpretations."],
+  "evidence_paths": ["examples/sri_lanka_pre_1948/01_arcs", "examples/sri_lanka_pre_1948/05_sources", "examples/sri_lanka_pre_1948/06_bridges"]
+}

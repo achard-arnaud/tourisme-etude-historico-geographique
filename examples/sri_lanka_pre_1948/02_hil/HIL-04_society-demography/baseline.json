@@ -1,0 +1,8 @@
+{
+  "hil_id": "HIL-04_society-demography",
+  "status": "functional-baseline-index",
+  "claim_ids": ["C-PRE-CASTE-001", "C-PRE-CASTE-002", "C-PRE-CASTE-003"],
+  "source_ids": ["CAMBRIDGE-JAFFNA-SLAVERY", "CAMBRIDGE-CLASSIFICATION", "CAMBRIDGE-LAWMAKING"],
+  "non_findings": ["Formal emancipation is not treated as proof of immediate disappearance of social hierarchy."],
+  "evidence_paths": ["examples/sri_lanka_pre_1948/01_arcs", "examples/sri_lanka_pre_1948/05_sources", "examples/sri_lanka_pre_1948/06_bridges"]
+}

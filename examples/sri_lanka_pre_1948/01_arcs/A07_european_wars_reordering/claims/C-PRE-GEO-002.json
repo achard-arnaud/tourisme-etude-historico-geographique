@@ -1,9 +1,14 @@
 {
   "id": "C-PRE-GEO-002",
+  "type": "claim",
   "claim": "Portuguese marginalization in the Indian Ocean long predates the Seven Years War; by the eighteenth century the Estado da Índia was a reduced but persistent power rather than a rival expelled by the Anglo-French conflict.",
   "confidence": "A",
   "zoom": "Z3",
   "causal_role": "context",
-  "source_ids": ["CAMBRIDGE-PORTUGUESE-LATE", "CAMBRIDGE-PORTUGUESE-DECLINE"],
+  "arc": "A07_european_wars_reordering",
+  "source_ids": [
+    "CAMBRIDGE-PORTUGUESE-LATE",
+    "CAMBRIDGE-PORTUGUESE-DECLINE"
+  ],
   "notes": "Use this as a drift correction whenever a narrative compresses Portuguese decline into the 1756–1763 settlement."
 }

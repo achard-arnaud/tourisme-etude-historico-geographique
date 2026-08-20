@@ -1,9 +1,14 @@
 {
   "id": "C-PRE-GEO-003",
+  "type": "claim",
   "claim": "Ceylon's transfer from Dutch to British rule was a product of the French Revolutionary and Napoleonic wars before 1815: British forces seized Dutch Ceylon in 1796, Amiens left it British in 1802, and the VOC had already disappeared by 1799.",
   "confidence": "A",
   "zoom": "Z3",
   "causal_role": "driver",
-  "source_ids": ["CAMBRIDGE-COMPANY-FORTRESS-END", "CAMBRIDGE-ANGLODUTCH-MERIDIAN"],
+  "arc": "A07_european_wars_reordering",
+  "source_ids": [
+    "CAMBRIDGE-COMPANY-FORTRESS-END",
+    "CAMBRIDGE-ANGLODUTCH-MERIDIAN"
+  ],
   "notes": "Do not date the Dutch withdrawal to the post-1815 settlement; 1815 matters as the end of the wider war cycle and the year of Kandyan annexation, not as the date of Dutch loss."
 }

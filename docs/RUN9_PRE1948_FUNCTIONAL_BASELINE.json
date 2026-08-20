@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-08-20-run9-pre1948-functional-baseline",
+  "status": "reviewed",
+  "mode": "pre1948-functional-regression-baseline",
+  "project_roots": ["examples/sri_lanka_pre_1948"],
+  "state_before": {
+    "repository": "main and dev identical at 9aa51f937f99928b37b622b9e0dc760877808908",
+    "technical_qa": "40 unit tests and the prior project QA were green",
+    "functional_gap": "the worked pre-1948 corpus lacked project.json, ARC records, durable HIL/question layers, claim statement types and arc identity; source anchor vocabulary also contained legacy values outside the declared contract"
+  },
+  "dispatched_skills": [
+    {"skill":"capturing-field-evidence","reason":"Replay the versioned field/conversation capture layer and verify that raw observations remain separate from promoted historical proof.","inputs":["examples/sri_lanka_pre_1948/05_sources/conversation_corpus"],"outputs":["examples/sri_lanka_pre_1948/00_method/conversation_capitalization_register.md","examples/sri_lanka_pre_1948/00_method/field_2026-08-18_jaffna_voc.md"],"status":"verified"},
+    {"skill":"sanitizing-historical-claims","reason":"Verify that the canonical claim fixture persists statement type, arc identity, confidence, zoom, causal role and source links.","inputs":["examples/sri_lanka_pre_1948/01_arcs"],"outputs":["examples/sri_lanka_pre_1948/01_arcs"],"status":"verified"},
+    {"skill":"structuring-chronological-arcs","reason":"Materialize and verify rupture-bounded ARC records for every canonical pre-1948 regression arc.","inputs":["examples/sri_lanka_pre_1948/01_arcs"],"outputs":["examples/sri_lanka_pre_1948/01_arcs/A06_voc_coastal_state/ARC.md","examples/sri_lanka_pre_1948/01_arcs/A07_european_wars_reordering/ARC.md","examples/sri_lanka_pre_1948/01_arcs/A08_jaffna_caste_colonial_codification/ARC.md"],"status":"verified"},
+    {"skill":"zooming-geographic-scales","reason":"Replay the Z1-Z3 placements already persisted on claims and index them through durable HIL baseline records.","inputs":["examples/sri_lanka_pre_1948/01_arcs"],"outputs":["examples/sri_lanka_pre_1948/02_hil"],"status":"verified"},
+    {"skill":"sourcing-historical-anchors","reason":"Validate all source identifiers, tiers and closed anchor roles used by claims, bridges, wiki and graph.","inputs":["examples/sri_lanka_pre_1948/05_sources"],"outputs":["examples/sri_lanka_pre_1948/05_sources/source_register.json","examples/sri_lanka_pre_1948/05_sources/source_register_polonnaruwa_conversation.json"],"status":"verified"},
+    {"skill":"analyzing-institutions-and-power","reason":"Replay HIL-01_institutions-chronology against the already promoted canonical claims; persist both mapped claims and non-findings without inventing new evidence.","inputs":["examples/sri_lanka_pre_1948/01_arcs","examples/sri_lanka_pre_1948/05_sources"],"outputs":["examples/sri_lanka_pre_1948/02_hil/HIL-01_institutions-chronology/baseline.json"],"status":"verified"},
+    {"skill":"analyzing-geography-and-environment","reason":"Replay HIL-02_geography-environment against the already promoted canonical claims; persist both mapped claims and non-findings without inventing new evidence.","inputs":["examples/sri_lanka_pre_1948/01_arcs","examples/sri_lanka_pre_1948/05_sources"],"outputs":["examples/sri_lanka_pre_1948/02_hil/HIL-02_geography-environment/baseline.json"],"status":"verified"},
+    {"skill":"analyzing-economy-and-infrastructure","reason":"Replay HIL-03_economy-infrastructure against the already promoted canonical claims; persist both mapped claims and non-findings without inventing new evidence.","inputs":["examples/sri_lanka_pre_1948/01_arcs","examples/sri_lanka_pre_1948/05_sources"],"outputs":["examples/sri_lanka_pre_1948/02_hil/HIL-03_economy-infrastructure/baseline.json"],"status":"verified"},
+    {"skill":"analyzing-society-and-demography","reason":"Replay HIL-04_society-demography against the already promoted canonical claims; persist both mapped claims and non-findings without inventing new evidence.","inputs":["examples/sri_lanka_pre_1948/01_arcs","examples/sri_lanka_pre_1948/05_sources"],"outputs":["examples/sri_lanka_pre_1948/02_hil/HIL-04_society-demography/baseline.json"],"status":"verified"},
+    {"skill":"analyzing-religion-culture-legitimacy","reason":"Replay HIL-05_religion-culture-legitimacy against the already promoted canonical claims; persist both mapped claims and non-findings without inventing new evidence.","inputs":["examples/sri_lanka_pre_1948/01_arcs","examples/sri_lanka_pre_1948/05_sources"],"outputs":["examples/sri_lanka_pre_1948/02_hil/HIL-05_religion-culture-legitimacy/baseline.json"],"status":"verified"},
+    {"skill":"analyzing-security-and-geopolitics","reason":"Replay HIL-06_security-coercion against the already promoted canonical claims; persist both mapped claims and non-findings without inventing new evidence.","inputs":["examples/sri_lanka_pre_1948/01_arcs","examples/sri_lanka_pre_1948/05_sources"],"outputs":["examples/sri_lanka_pre_1948/02_hil/HIL-06_security-coercion/baseline.json"],"status":"verified"},
+    {"skill":"building-causal-bridges","reason":"Verify all three canonical causal bridges for endpoint integrity, result vocabulary and source provenance.","inputs":["examples/sri_lanka_pre_1948/01_arcs","examples/sri_lanka_pre_1948/05_sources"],"outputs":["examples/sri_lanka_pre_1948/06_bridges"],"status":"verified"},
+    {"skill":"auditing-historiography-and-drifts","reason":"Replay the drift controls for Dutch exhibition claims and European-war chronology, including non-cause and bounded-counterfactual guardrails.","inputs":["examples/sri_lanka_pre_1948/07_drifts","examples/sri_lanka_pre_1948/02_hil/HIL-08_historiography-bias/baseline.json"],"outputs":["examples/sri_lanka_pre_1948/07_drifts"],"status":"verified"},
+    {"skill":"maintaining-wiki-and-graph","reason":"Verify durable cross-arc entities and causal edges, including metadata and source provenance.","inputs":["examples/sri_lanka_pre_1948/03_wiki","examples/sri_lanka_pre_1948/04_graph"],"outputs":["examples/sri_lanka_pre_1948/03_wiki","examples/sri_lanka_pre_1948/04_graph/edges.jsonl"],"status":"verified"},
+    {"skill":"editing-historical-travel-output","reason":"Rebuild the lossless V3 reader from the long V1 baseline plus promoted delta and enforce retention.","inputs":["examples/sri_lanka_pre_1948/09_output/archive/Sri_Lanka_Fresque_historico_geographique_vol_retour_v1.docx","examples/sri_lanka_pre_1948/09_output/report.md"],"outputs":["examples/sri_lanka_pre_1948/09_output/report_v3_full.md"],"status":"verified"},
+    {"skill":"storytelling-historical-travel","reason":"Verify the advanced-reader storytelling contract non-destructively: voice/navigation may change, but the promoted baseline cannot be compressed or replaced by a delta.","inputs":["examples/sri_lanka_pre_1948/00_method/reader_contract.json","examples/sri_lanka_pre_1948/09_output/report_v3_full.md"],"outputs":["examples/sri_lanka_pre_1948/09_output/Sri_Lanka_Fresque_historico_geographique_vol_retour_v3.docx"],"status":"verified"}
+  ],
+  "skipped_skills": [],
+  "validations": [
+    {"command":"python -m unittest discover -s tests -v","expected":"46 tests pass"},
+    {"command":"python scripts/audit_skill.py .","expected":"SKILL AUDIT OK"},
+    {"command":"python scripts/audit_workflow.py docs/RUN9_PRE1948_FUNCTIONAL_BASELINE.json","expected":"16 dispatched, 0 skipped, 16 known skills"},
+    {"command":"python scripts/qa_project.py examples/sri_lanka_pre_1948","expected":"9 claims, 37 sources, 3 wiki pages, 4 graph edges, 0 warnings"},
+    {"command":"python scripts/qa_functional_pre1948.py","expected":"PRE1948 FUNCTIONAL QA OK"}
+  ],
+  "state_after": {
+    "research": "nine canonical claims typed and arc-bound; thirty-seven source records use the closed anchor-role vocabulary; three bridges, eight durable HIL replay indexes and a question backlog are available",
+    "structure": "three ARC records plus canonical project scaffold are materialized",
+    "knowledge": "three wiki pages and four graph edges remain provenance-checked",
+    "reader": "lossless V3 render is rebuilt and must retain at least 100% of the long V1 word baseline",
+    "qa": "one deterministic command replays all mechanical gates and reader retention for the pre-1948 fixture"
+  },
+  "promotion_decision": "merge to dev only after the full functional baseline is GREEN; main requires a separate explicit user GO"
+}

@@ -1,9 +1,13 @@
 {
   "id": "C-PRE-CASTE-002",
+  "type": "claim",
   "claim": "British abolition measures in nineteenth-century Jaffna changed the formal legal status of slavery and bondage without immediately dissolving caste hierarchy, labour dependence or unequal social authority.",
   "confidence": "B",
   "zoom": "Z1",
   "causal_role": "constraint",
-  "source_ids": ["CAMBRIDGE-JAFFNA-SLAVERY"],
+  "arc": "A08_jaffna_caste_colonial_codification",
+  "source_ids": [
+    "CAMBRIDGE-JAFFNA-SLAVERY"
+  ],
   "notes": "Separate formal emancipation from the slower transformation of labour relations and social status."
 }

@@ -1,9 +1,15 @@
 {
   "id": "C-PRE-GEO-001",
+  "type": "claim",
   "claim": "The decisive eighteenth-century European reordering around South Asia was not a single eight-year war: the War of the Austrian Succession opened a long Anglo-French contest in India, while the Seven Years War destroyed the French ability to compete with the East India Company as a comparable territorial power.",
   "confidence": "A",
   "zoom": "Z3",
   "causal_role": "driver",
-  "source_ids": ["CAMBRIDGE-AUSTRIAN-WAR-INDIA", "CAMBRIDGE-SEVEN-YEARS-CARNATIC", "CAMBRIDGE-FRENCH-1754-1815"],
+  "arc": "A07_european_wars_reordering",
+  "source_ids": [
+    "CAMBRIDGE-AUSTRIAN-WAR-INDIA",
+    "CAMBRIDGE-SEVEN-YEARS-CARNATIC",
+    "CAMBRIDGE-FRENCH-1754-1815"
+  ],
   "notes": "French trading posts survived/reappeared after 1763; the change is strategic asymmetry, not French disappearance."
 }

@@ -1,0 +1,8 @@
+{
+  "hil_id": "HIL-08_historiography-bias",
+  "status": "functional-baseline-index",
+  "claim_ids": ["C-PRE-GEO-002", "C-PRE-GEO-004", "C-PRE-CASTE-001"],
+  "source_ids": ["CAMBRIDGE-PORTUGUESE-DECLINE", "CAMBRIDGE-DESTROYING-RIVALS", "CAMBRIDGE-CLASSIFICATION"],
+  "non_findings": ["Counterfactual claims remain bounded; colonial categorisation is not equated with invention of identity or caste."],
+  "evidence_paths": ["examples/sri_lanka_pre_1948/01_arcs", "examples/sri_lanka_pre_1948/05_sources", "examples/sri_lanka_pre_1948/06_bridges"]
+}
