@@ -8,13 +8,15 @@ import subprocess
 import sys
 from pathlib import Path
 
+from side_story_contract import assert_rendered_side_stories, load_side_stories, validate_side_stories
+
 REPO = Path(__file__).resolve().parents[1]
 PROJECT = REPO / "examples" / "sri_lanka_pre_1948"
 STATEMENT_TYPES = {"source_fact", "claim", "inference", "tradition", "analogy", "comparator", "counterfactual", "metric", "policy_intent", "policy_effect", "question", "discarded_lead"}
 CAUSAL_ROLES = {"driver", "amplifier", "constraint", "consequence", "non-cause", "context"}
 ANCHOR_ROLES = {"canonical anchor", "specialist institutional anchor", "corroborating bridge", "lead"}
 HILS = ["HIL-01_institutions-chronology", "HIL-02_geography-environment", "HIL-03_economy-infrastructure", "HIL-04_society-demography", "HIL-05_religion-culture-legitimacy", "HIL-06_security-coercion", "HIL-07_regional-global-system", "HIL-08_historiography-bias"]
-EXPECTED = {"claims": 9, "sources": 37, "bridges": 3, "wiki": 3, "graph": 4, "hils": 8}
+EXPECTED = {"claims": 9, "sources": 37, "bridges": 3, "wiki": 3, "graph": 4, "hils": 8, "side_stories": 4}
 
 
 def run(command: list[str]) -> subprocess.CompletedProcess[str]:
@@ -36,7 +38,6 @@ def load_sources() -> list[dict]:
 
 
 def render_pre_without_mutating_shared_metrics() -> subprocess.CompletedProcess[str]:
-    """Exercise the real renderer while preserving the dual-project Run 7 metrics fixture."""
     metrics_path = REPO / "docs" / "RUN7_V3_RETENTION_METRICS.json"
     previous = metrics_path.read_bytes() if metrics_path.exists() else None
     try:
@@ -50,7 +51,7 @@ def render_pre_without_mutating_shared_metrics() -> subprocess.CompletedProcess[
 
 def main() -> int:
     errors: list[str] = []
-    for rel in ["project.json", "00_method", "01_arcs", "02_hil", "03_wiki", "04_graph", "05_sources", "06_bridges", "07_drifts", "08_questions", "09_output"]:
+    for rel in ["project.json", "00_method", "01_arcs", "02_hil", "03_wiki", "04_graph", "05_sources", "06_bridges", "07_drifts", "08_questions", "09_output", "09_output/side_stories"]:
         if not (PROJECT / rel).exists():
             errors.append(f"missing canonical scaffold path: {rel}")
 
@@ -117,6 +118,14 @@ def main() -> int:
     graph_edges = sum(sum(1 for line in path.read_text(encoding="utf-8").splitlines() if line.strip()) for path in (PROJECT / "04_graph").glob("*.jsonl"))
     if graph_edges != EXPECTED["graph"]:
         errors.append(f"graph edge count {graph_edges} != {EXPECTED['graph']}")
+
+    side_errors, side_warnings, side_story_count = validate_side_stories(PROJECT, check_render=True)
+    errors.extend(side_errors)
+    if side_warnings:
+        errors.extend(f"unexpected side-story warning: {warning}" for warning in side_warnings)
+    if side_story_count != EXPECTED["side_stories"]:
+        errors.append(f"side-story count {side_story_count} != {EXPECTED['side_stories']}")
+
     if not (PROJECT / "08_questions" / "baseline_questions.md").exists():
         errors.append("missing functional question backlog")
     for rel in ("09_output/report_v3_full.md", "09_output/Sri_Lanka_Fresque_historico_geographique_vol_retour_v3.docx"):
@@ -129,7 +138,11 @@ def main() -> int:
         return 1
 
     try:
-        for command in ([sys.executable, "scripts/audit_skill.py", "."], [sys.executable, "scripts/audit_workflow.py", "docs/RUN9_PRE1948_FUNCTIONAL_BASELINE.json"], [sys.executable, "scripts/qa_project.py", "examples/sri_lanka_pre_1948"]):
+        for command in (
+            [sys.executable, "scripts/audit_skill.py", "."],
+            [sys.executable, "scripts/audit_workflow.py", "docs/RUN10_SIDE_STORIES_MANIFEST.json"],
+            [sys.executable, "scripts/qa_project.py", "examples/sri_lanka_pre_1948"],
+        ):
             run(command)
         rendered = render_pre_without_mutating_shared_metrics()
     except RuntimeError as exc:
@@ -138,17 +151,25 @@ def main() -> int:
 
     try:
         metric = json.loads(rendered.stdout)[0]
+        reader_markdown = (PROJECT / "09_output" / "report_v3_full.md").read_text(encoding="utf-8")
+        assert_rendered_side_stories(PROJECT, reader_markdown)
     except Exception as exc:
-        print(f"ERROR: invalid renderer metrics: {exc}", file=sys.stderr)
+        print(f"ERROR: invalid renderer/side-story metrics: {exc}", file=sys.stderr)
         return 1
+
     baseline_words = int(metric.get("baseline_docx_words", 0))
     output_words = int(metric.get("v3_docx_words", 0))
     retention = float(metric.get("retention_vs_baseline_percent", 0))
-    if metric.get("project") != "pre" or output_words < baseline_words or retention < 100:
-        print(f"ERROR: retention gate failed: baseline={baseline_words}, output={output_words}, retention={retention}%", file=sys.stderr)
+    if metric.get("project") != "pre" or metric.get("side_stories") != side_story_count or output_words < baseline_words or retention < 100:
+        print(f"ERROR: retention/composition gate failed: baseline={baseline_words}, output={output_words}, retention={retention}%, side_stories={metric.get('side_stories')}", file=sys.stderr)
         return 1
 
-    print("PRE1948 FUNCTIONAL QA OK: " f"{len(claims)} claims, {len(sources)} sources, {len(bridges)} bridges, " f"{len(wiki)} wiki pages, {graph_edges} graph edges, {len(HILS)} HIL baselines, " f"retention {retention}% ({baseline_words} -> {output_words} words)")
+    print(
+        "PRE1948 FUNCTIONAL QA OK: "
+        f"{len(claims)} claims, {len(sources)} sources, {len(bridges)} bridges, "
+        f"{len(wiki)} wiki pages, {graph_edges} graph edges, {len(HILS)} HIL baselines, "
+        f"{side_story_count} side stories, retention {retention}% ({baseline_words} -> {output_words} words)"
+    )
     return 0
 
 
