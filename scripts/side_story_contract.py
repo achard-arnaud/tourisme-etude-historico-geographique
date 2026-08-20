@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Iterable
 
 SCHEMA_VERSION = "1.0"
 SIDE_STORY_CLASS = "side_story"
@@ -100,6 +99,11 @@ def _nonempty_lineage(lineage: dict) -> bool:
     return any(lineage.get(key) for key in ("claim_ids", "source_ids", "bridge_ids", "drift_paths", "origin_paths"))
 
 
+def _marker_window(text: str, marker: str, size: int = 600) -> str:
+    position = text.find(marker)
+    return "" if position < 0 else text[position:position + size]
+
+
 def validate_side_stories(project: Path, *, check_render: bool = True) -> tuple[list[str], list[str], int]:
     """Validate side-story structure, lineage and promotion/render invariants.
 
@@ -145,8 +149,8 @@ def validate_side_stories(project: Path, *, check_render: bool = True) -> tuple[
         status = item.get("status")
         if status not in STATUSES:
             errors.append(f"side story {prefix}: invalid status {status!r}")
-        if not item.get("title") or not item.get("purpose"):
-            errors.append(f"side story {prefix}: missing title/purpose")
+        if not item.get("title") or not item.get("purpose") or not item.get("reason_off_trunk") or not item.get("payoff"):
+            errors.append(f"side story {prefix}: missing title/purpose/off-trunk reason/payoff")
 
         lineage = item.get("lineage") or {}
         placement = item.get("placement") or {}
@@ -155,7 +159,7 @@ def validate_side_stories(project: Path, *, check_render: bool = True) -> tuple[
         for key in ("claim_ids", "source_ids", "bridge_ids", "hil_ids", "drift_paths", "origin_paths"):
             if not isinstance(lineage.get(key, []), list):
                 errors.append(f"side story {prefix}: lineage.{key} must be a list")
-        if not presets <= READER_PRESETS:
+        if not presets or not presets <= READER_PRESETS:
             errors.append(f"side story {prefix}: invalid reader preset")
         if not placement.get("section_anchor") or not placement.get("return_to"):
             errors.append(f"side story {prefix}: missing placement section_anchor/return_to")
@@ -174,10 +178,13 @@ def validate_side_stories(project: Path, *, check_render: bool = True) -> tuple[
                 errors.append(f"side story {prefix}: validated/promoted item has no lineage")
             if item.get("arc") not in arcs:
                 errors.append(f"side story {prefix}: unknown arc {item.get('arc')!r}")
+            unknown_related = set(item.get("related_arcs") or []) - arcs
             unknown_claims = set(lineage.get("claim_ids") or []) - claim_ids
             unknown_sources = set(lineage.get("source_ids") or []) - source_ids
             unknown_bridges = set(lineage.get("bridge_ids") or []) - bridge_ids
             unknown_hils = set(lineage.get("hil_ids") or []) - HILS
+            if unknown_related:
+                errors.append(f"side story {prefix}: unknown related arcs {sorted(unknown_related)}")
             if unknown_claims:
                 errors.append(f"side story {prefix}: unknown claims {sorted(unknown_claims)}")
             if unknown_sources:
@@ -206,15 +213,20 @@ def validate_side_stories(project: Path, *, check_render: bool = True) -> tuple[
 
         if check_render and status == "promoted":
             marker = render.get("marker")
-            if marker and marker not in canonical:
+            label = render.get("label")
+            window = _marker_window(canonical, marker) if marker else ""
+            if not window:
                 errors.append(f"side story {prefix}: promoted marker missing from canonical report")
+            elif label and label not in window:
+                errors.append(f"side story {prefix}: normalized label missing near canonical marker")
 
     return errors, warnings, len(stories)
 
 
 def assert_rendered_side_stories(project: Path, markdown: str) -> None:
-    """Fail if a promoted reader-required side story vanished during rendering."""
+    """Fail if a promoted reader-required side story vanished or was relabelled."""
     missing: list[str] = []
+    relabelled: list[str] = []
     for _, item in load_side_stories(project):
         if item.get("status") != "promoted":
             continue
@@ -222,10 +234,19 @@ def assert_rendered_side_stories(project: Path, markdown: str) -> None:
         if not render.get("required_in_reader"):
             continue
         marker = render.get("marker")
-        if marker and marker not in markdown:
+        label = render.get("label")
+        window = _marker_window(markdown, marker) if marker else ""
+        if not window:
             missing.append(str(item.get("id")))
-    if missing:
-        raise RuntimeError(f"side-story retention gate failed: missing {', '.join(sorted(missing))}")
+        elif label and label not in window:
+            relabelled.append(str(item.get("id")))
+    if missing or relabelled:
+        details = []
+        if missing:
+            details.append(f"missing {', '.join(sorted(missing))}")
+        if relabelled:
+            details.append(f"relabelled {', '.join(sorted(relabelled))}")
+        raise RuntimeError(f"side-story retention gate failed: {'; '.join(details)}")
 
 
 def validate_or_raise(project: Path, *, check_render: bool = True) -> int:
