@@ -5,41 +5,26 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 REQUIRED_SUBSKILLS = [
-    'capturing-field-evidence',
-    'sanitizing-historical-claims',
-    'sourcing-historical-anchors',
-    'structuring-chronological-arcs',
-    'zooming-geographic-scales',
-    'analyzing-institutions-and-power',
-    'analyzing-geography-and-environment',
-    'analyzing-economy-and-infrastructure',
-    'analyzing-society-and-demography',
-    'analyzing-religion-culture-legitimacy',
-    'analyzing-security-and-geopolitics',
-    'auditing-historiography-and-drifts',
-    'building-causal-bridges',
-    'maintaining-wiki-and-graph',
-    'editing-historical-travel-output',
+    'capturing-field-evidence', 'sanitizing-historical-claims', 'sourcing-historical-anchors',
+    'structuring-chronological-arcs', 'zooming-geographic-scales',
+    'analyzing-institutions-and-power', 'analyzing-geography-and-environment',
+    'analyzing-economy-and-infrastructure', 'analyzing-society-and-demography',
+    'analyzing-religion-culture-legitimacy', 'analyzing-security-and-geopolitics',
+    'auditing-historiography-and-drifts', 'building-causal-bridges',
+    'maintaining-wiki-and-graph', 'composing-side-stories',
+    'editing-historical-travel-output', 'storytelling-historical-travel',
 ]
 
 REQUIRED_TEMPLATES = [
-    'templates/arc.md',
-    'templates/claim.md',
-    'templates/source-note.md',
-    'templates/bridge.md',
-    'templates/drift-audit.md',
-    'templates/wiki-entity.md',
-    'templates/output-outline.md',
-    'templates/run-manifest.json',
+    'templates/arc.md', 'templates/claim.md', 'templates/source-note.md',
+    'templates/bridge.md', 'templates/drift-audit.md', 'templates/wiki-entity.md',
+    'templates/side-story.json', 'templates/output-outline.md', 'templates/run-manifest.json',
 ]
 
 REQUIRED_SCRIPTS = [
-    'scripts/new_project.py',
-    'scripts/new_arc.py',
-    'scripts/qa_project.py',
-    'scripts/audit_skill.py',
-    'scripts/audit_workflow.py',
-    'scripts/render_reader_exports.py',
+    'scripts/new_project.py', 'scripts/new_arc.py', 'scripts/new_side_story.py',
+    'scripts/side_story_contract.py', 'scripts/qa_project.py', 'scripts/audit_skill.py',
+    'scripts/audit_workflow.py', 'scripts/render_reader_exports.py',
 ]
 
 
@@ -83,7 +68,8 @@ class SkillContractTests(unittest.TestCase):
         text = (ROOT / 'SKILL.md').read_text(encoding='utf-8')
         self.assertNotIn('@skills/', text)
         for name in ['sourcing-historical-anchors', 'sanitizing-historical-claims',
-                     'auditing-historiography-and-drifts', 'editing-historical-travel-output']:
+                     'auditing-historiography-and-drifts', 'composing-side-stories',
+                     'editing-historical-travel-output', 'storytelling-historical-travel']:
             self.assertIn(name, text)
 
 
