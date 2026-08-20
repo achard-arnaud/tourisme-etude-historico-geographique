@@ -35,6 +35,19 @@ def load_sources() -> list[dict]:
     return sources
 
 
+def render_pre_without_mutating_shared_metrics() -> subprocess.CompletedProcess[str]:
+    """Exercise the real renderer while preserving the dual-project Run 7 metrics fixture."""
+    metrics_path = REPO / "docs" / "RUN7_V3_RETENTION_METRICS.json"
+    previous = metrics_path.read_bytes() if metrics_path.exists() else None
+    try:
+        return run([sys.executable, "scripts/render_full_reader_v3.py", "--project", "pre"])
+    finally:
+        if previous is None:
+            metrics_path.unlink(missing_ok=True)
+        else:
+            metrics_path.write_bytes(previous)
+
+
 def main() -> int:
     errors: list[str] = []
     for rel in ["project.json", "00_method", "01_arcs", "02_hil", "03_wiki", "04_graph", "05_sources", "06_bridges", "07_drifts", "08_questions", "09_output"]:
@@ -118,7 +131,7 @@ def main() -> int:
     try:
         for command in ([sys.executable, "scripts/audit_skill.py", "."], [sys.executable, "scripts/audit_workflow.py", "docs/RUN9_PRE1948_FUNCTIONAL_BASELINE.json"], [sys.executable, "scripts/qa_project.py", "examples/sri_lanka_pre_1948"]):
             run(command)
-        rendered = run([sys.executable, "scripts/render_full_reader_v3.py", "--project", "pre"])
+        rendered = render_pre_without_mutating_shared_metrics()
     except RuntimeError as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 1
