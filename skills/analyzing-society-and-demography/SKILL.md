@@ -38,6 +38,6 @@ Never equate arranged marriage with forced marriage, endogamy with coercion, or 
 Compare mechanisms rather than labels: who is excluded, which policy redistributes opportunity, which institutions implement it, which inequalities survive, and at what territorial level. Do not conclude that one society has “more caste” without a stable comparable measure.
 
 ## Output
-HIL-04 analytic notes (social-reproduction matrix, territorial vs. transnational reproduction) that become `templates/claim.md` records under `02_hil/HIL-04_society-demography/Z<n>/`.
+Produce evidence-backed HIL-04 claim candidates for the active arc/zoom. In the current runtime, `02_hil/` is a planned/scaffold layer, not a guaranteed persisted output: never report an HIL artefact as written unless the file actually exists. Preserve negative or non-findings explicitly in notes/questions until a structured HIL schema is implemented.
 
 See also: `SKILL.md` orchestration step 6; `docs/skill_workflow_index.md`.
