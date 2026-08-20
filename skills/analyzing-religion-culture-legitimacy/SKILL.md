@@ -19,6 +19,6 @@ Distinguish sacred legitimacy, legal authority, social prestige and coercive cap
 Analogies to modern religious movements are heuristic only: state the shared mechanism and the limits explicitly.
 
 ## Output
-HIL-05 analytic notes (institution-vs-belief mapping, legitimacy test) that become `templates/claim.md` records under `02_hil/HIL-05_religion-culture-legitimacy/Z<n>/`.
+Produce evidence-backed HIL-05 claim candidates for the active arc/zoom. In the current runtime, `02_hil/` is a planned/scaffold layer, not a guaranteed persisted output: never report an HIL artefact as written unless the file actually exists. Preserve negative or non-findings explicitly in notes/questions until a structured HIL schema is implemented.
 
 See also: `SKILL.md` orchestration step 6; `docs/skill_workflow_index.md`.
