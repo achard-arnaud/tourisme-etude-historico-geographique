@@ -28,7 +28,7 @@ class StorytellingAndCorpusTests(unittest.TestCase):
             self.assertIn(token, text)
 
     def test_current_manifest_routes_every_repo_skill(self):
-        data = __import__('json').loads((ROOT / 'docs' / 'RUN7_WORKFLOW_MANIFEST.json').read_text(encoding='utf-8'))
+        data = __import__('json').loads((ROOT / 'docs' / 'RUN10_SIDE_STORIES_MANIFEST.json').read_text(encoding='utf-8'))
         routed = {item['skill'] for item in data['dispatched_skills']} | {item['skill'] for item in data['skipped_skills']}
         known = {p.parent.name for p in (ROOT / 'skills').glob('*/SKILL.md')}
         self.assertEqual(routed, known)
@@ -99,9 +99,7 @@ class StorytellingAndCorpusTests(unittest.TestCase):
     def test_v3_docx_structurally_preserves_every_v1_paragraph_and_table(self):
         import xml.etree.ElementTree as ET
         import zipfile
-
         ns = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
-
         def body_inventory(path):
             with zipfile.ZipFile(path) as package:
                 root = ET.fromstring(package.read('word/document.xml'))
@@ -111,18 +109,9 @@ class StorytellingAndCorpusTests(unittest.TestCase):
                 text = ''.join(node.text or '' for node in paragraph.findall('.//w:t', ns))
                 paragraphs.append(text)
             return paragraphs, len(body.findall('.//w:tbl', ns))
-
         cases = [
-            (
-                ROOT / 'examples' / 'sri_lanka_pre_1948' / '09_output' / 'archive' / 'Sri_Lanka_Fresque_historico_geographique_vol_retour_v1.docx',
-                ROOT / 'examples' / 'sri_lanka_pre_1948' / '09_output' / 'Sri_Lanka_Fresque_historico_geographique_vol_retour_v3.docx',
-                {3, 4, 5},
-            ),
-            (
-                ROOT / 'examples' / 'sri_lanka_post_1948' / '09_output' / 'archive' / 'Sri_Lanka_1948_2026_etude_historico_geographique_v1.docx',
-                ROOT / 'examples' / 'sri_lanka_post_1948' / '09_output' / 'Sri_Lanka_1948_2026_etude_historico_geographique_v3.docx',
-                {3, 4},
-            ),
+            (ROOT / 'examples' / 'sri_lanka_pre_1948' / '09_output' / 'archive' / 'Sri_Lanka_Fresque_historico_geographique_vol_retour_v1.docx', ROOT / 'examples' / 'sri_lanka_pre_1948' / '09_output' / 'Sri_Lanka_Fresque_historico_geographique_vol_retour_v3.docx', {3, 4, 5}),
+            (ROOT / 'examples' / 'sri_lanka_post_1948' / '09_output' / 'archive' / 'Sri_Lanka_1948_2026_etude_historico_geographique_v1.docx', ROOT / 'examples' / 'sri_lanka_post_1948' / '09_output' / 'Sri_Lanka_1948_2026_etude_historico_geographique_v3.docx', {3, 4}),
         ]
         for baseline_path, v3_path, replaced_cover_indices in cases:
             baseline_paragraphs, baseline_tables = body_inventory(baseline_path)
