@@ -5,39 +5,24 @@ description: Use when population, migration, settlement, labour, education, cast
 
 # Analyzing society and demography
 
-Separate documented migration from assumed population replacement. Track elites, soldiers, merchants, religious specialists, peasants, labourers, professionals and diasporas independently. Ask whose mobility changes institutions, production or military capacity. Treat ethnic and caste labels as historically variable unless continuity is demonstrated.
+Separate documented migration from assumed population replacement. Track elites, soldiers, merchants, religious specialists, peasants, labourers, professionals and diasporas independently. Ask whose mobility changes institutions, production or military capacity. Treat ethnic/caste labels as historically variable unless continuity is demonstrated.
 
 ## Social-reproduction matrix
-When hierarchy may matter, trace six layers:
-1. **status order** — caste, class, clan/kudi, religion, gender and locality;
-2. **institutional encoding** — census, law, registers, service obligations, schools, temples, property and administrative categories;
-3. **mobility channels** — education, state employment, professions, capital, land, migration and military service;
-4. **reproduction channels** — endogamy, marriage negotiation, dowry/inheritance, neighbourhood, occupation, temple honours and kin networks;
-5. **contestation** — anti-discrimination law, reservations/affirmative action, movements, conversion, unions, insurgent regulation and litigation;
-6. **transformation** — war, displacement, diaspora, urbanization, market integration and generational change.
-
-Distinguish **public attenuation** of hierarchy from **private persistence**. Affirmative-action categories can make caste more visible administratively while reducing some inequalities.
+Trace six layers: **status order**, **institutional encoding**, **mobility channels**, **reproduction channels**, **contestation**, **transformation**. Distinguish public attenuation of hierarchy from private persistence; administrative visibility can rise while inequality falls.
 
 ## Territorial versus transnational reproduction
-For diaspora societies, trace separately:
-- skills and income retained abroad;
-- remittances and household consumption;
-- return migration and entrepreneurship;
-- marriage/kinship networks;
-- political financing and associations;
-- local firm, tax and knowledge spillovers.
-Do not treat diaspora prosperity as proof of origin-territory development, or migration as pure loss.
+For diaspora societies separate skills/income abroad, remittances, return migration/entrepreneurship, kinship, political financing and local spillovers. Diaspora prosperity is not proof of origin-territory development.
 
-## Cleavage overlay
-Test whether a larger ethnic, religious or state conflict changes which internal cleavage is politically salient. External pressure can subordinate caste/class conflict without abolishing it.
-
-## Marriage and kinship caution
-Never equate arranged marriage with forced marriage, endogamy with coercion, or one ethnography with a population rate. Treat marriage as a possible mechanism of property transfer, status reproduction, migration, alliance and diaspora reconstruction, sourcing each separately.
+## Cleavage / marriage caution
+Test whether larger conflict changes which internal cleavage is salient. Never equate arranged marriage with forced marriage, endogamy with coercion, or one ethnography with a population rate.
 
 ## Comparative use
-Compare mechanisms rather than labels: who is excluded, which policy redistributes opportunity, which institutions implement it, which inequalities survive, and at what territorial level. Do not conclude that one society has “more caste” without a stable comparable measure.
+Compare mechanisms rather than labels: exclusion, redistribution instrument, implementation, residual inequality and territorial level.
+
+## Side-story handoff
+A sourced individual/family may become `portrait`; a recurring social mechanism may become `callback`; a bounded ethnographic or diaspora example may become `detour`/`also`. Every candidate carries HIL-04 and underlying claim/source lineage. A microhistory illustrates but cannot manufacture a population-level claim. Do not promote here.
 
 ## Output
-Produce evidence-backed HIL-04 claim candidates for the active arc/zoom. In the current runtime, `02_hil/` is a planned/scaffold layer, not a guaranteed persisted output: never report an HIL artefact as written unless the file actually exists. Preserve negative or non-findings explicitly in notes/questions until a structured HIL schema is implemented.
+Produce evidence-backed HIL-04 claim candidates for the active arc/zoom and explicit side-story candidate handoffs. Never report a structured HIL artefact unless it exists.
 
-See also: `SKILL.md` orchestration step 6; `docs/skill_workflow_index.md`.
+See also: `SKILL.md` orchestration step 6; `composing-side-stories`; `docs/skill_workflow_index.md`.
