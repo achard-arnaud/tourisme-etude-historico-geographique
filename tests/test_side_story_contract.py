@@ -24,20 +24,24 @@ class SideStoryContractTests(unittest.TestCase):
         ]:
             self.assertTrue((REPO / rel).exists(), rel)
 
+    def test_new_project_scaffolds_side_story_registry(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "project"
+            result = subprocess.run(
+                [sys.executable, "scripts/new_project.py", "--name", "Test", "--output", str(root)],
+                cwd=REPO, text=True, capture_output=True,
+            )
+            self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+            self.assertTrue((root / "09_output" / "side_stories").is_dir())
+
     def test_pre1948_side_stories_have_lineage_and_return_contract(self):
         paths = sorted((PROJECT / "09_output" / "side_stories").glob("*.json"))
-        self.assertGreaterEqual(len(paths), 3)
-        claims = {
-            json.loads(path.read_text(encoding="utf-8"))["id"]
-            for path in PROJECT.glob("01_arcs/*/claims/*.json")
-        }
+        self.assertEqual(4, len(paths))
+        claims = {json.loads(p.read_text(encoding="utf-8"))["id"] for p in PROJECT.glob("01_arcs/*/claims/*.json")}
         sources = set()
-        for path in (PROJECT / "05_sources").glob("source_register*.json"):
-            sources.update(item["id"] for item in json.loads(path.read_text(encoding="utf-8")))
-        bridges = {
-            json.loads(path.read_text(encoding="utf-8"))["id"]
-            for path in (PROJECT / "06_bridges").glob("*.json")
-        }
+        for p in (PROJECT / "05_sources").glob("source_register*.json"):
+            sources.update(item["id"] for item in json.loads(p.read_text(encoding="utf-8")))
+        bridges = {json.loads(p.read_text(encoding="utf-8"))["id"] for p in (PROJECT / "06_bridges").glob("*.json")}
         arcs = {p.name for p in (PROJECT / "01_arcs").iterdir() if p.is_dir()}
         for path in paths:
             item = json.loads(path.read_text(encoding="utf-8"))
@@ -57,24 +61,29 @@ class SideStoryContractTests(unittest.TestCase):
                     self.assertTrue(item["zoom_excursion"].get(field), f"{item['id']}: {field}")
 
     def test_promoted_required_side_stories_survive_markdown_render(self):
+        result = subprocess.run(
+            [sys.executable, "scripts/render_full_reader_v3.py", "--project", "all"],
+            cwd=REPO, text=True, capture_output=True,
+        )
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
         canonical = (PROJECT / "09_output" / "report.md").read_text(encoding="utf-8")
         reader = (PROJECT / "09_output" / "report_v3_full.md").read_text(encoding="utf-8")
         for path in (PROJECT / "09_output" / "side_stories").glob("*.json"):
             item = json.loads(path.read_text(encoding="utf-8"))
             if item["status"] == "promoted" and item["render"]["required_in_reader"]:
                 marker = item["render"]["marker"]
+                label = item["render"]["label"]
                 self.assertIn(marker, canonical, item["id"])
                 self.assertIn(marker, reader, item["id"])
+                self.assertIn(label, reader[reader.index(marker):reader.index(marker)+600], item["id"])
 
     def test_generic_project_qa_validates_side_stories(self):
         result = subprocess.run(
             [sys.executable, "scripts/qa_project.py", "examples/sri_lanka_pre_1948"],
-            cwd=REPO,
-            text=True,
-            capture_output=True,
+            cwd=REPO, text=True, capture_output=True,
         )
         self.assertEqual(0, result.returncode, result.stdout + result.stderr)
-        self.assertIn("side stories", result.stdout)
+        self.assertIn("4 side stories", result.stdout)
 
     def test_cli_creates_candidate_instance(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -83,18 +92,12 @@ class SideStoryContractTests(unittest.TestCase):
             result = subprocess.run(
                 [
                     sys.executable, "scripts/new_side_story.py",
-                    "--project", str(root),
-                    "--id", "SS-TST-001",
-                    "--kind", "detour",
-                    "--arc", "A01_test",
-                    "--title", "Test detour",
-                    "--section-anchor", "## Test",
-                    "--return-to", "A01_test",
+                    "--project", str(root), "--id", "SS-TST-001", "--kind", "detour",
+                    "--arc", "A01_test", "--title", "Test detour",
+                    "--section-anchor", "## Test", "--return-to", "A01_test",
                     "--purpose", "Exercise the creation contract",
                 ],
-                cwd=REPO,
-                text=True,
-                capture_output=True,
+                cwd=REPO, text=True, capture_output=True,
             )
             self.assertEqual(0, result.returncode, result.stdout + result.stderr)
             item = json.loads((root / "09_output" / "side_stories" / "SS-TST-001.json").read_text(encoding="utf-8"))
@@ -107,6 +110,7 @@ class SideStoryContractTests(unittest.TestCase):
         known = {p.parent.name for p in (REPO / "skills").glob("*/SKILL.md")}
         dispatched = {item["skill"] for item in manifest["dispatched_skills"]}
         self.assertEqual(known, dispatched)
+        self.assertEqual([], manifest.get("skipped_skills"))
         self.assertIn("composing-side-stories", dispatched)
 
 
