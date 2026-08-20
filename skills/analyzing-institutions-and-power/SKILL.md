@@ -36,6 +36,6 @@ A policy can democratize one gateway while closing another. Keep **distributiona
 Compare equivalent institutional levels. A subnational reservation regime inside a federation is not directly equivalent to a sovereign state's language regime. Use comparison only when the access mechanism is transportable after accounting for constitutional level, market size and conflict.
 
 ## Output
-HIL-01 analytic notes (access architecture, policy instrument matrix) that become `templates/claim.md` records under `02_hil/HIL-01_institutions-chronology/Z<n>/`, ready for `building-causal-bridges` and `structuring-chronological-arcs`.
+Produce evidence-backed HIL-01 claim candidates for the active arc/zoom. In the current runtime, `02_hil/` is a planned/scaffold layer, not a guaranteed persisted output: never report an HIL artefact as written unless the file actually exists. Preserve negative or non-findings explicitly in notes/questions until a structured HIL schema is implemented.
 
 See also: `SKILL.md` orchestration step 6; `docs/skill_workflow_index.md`.
