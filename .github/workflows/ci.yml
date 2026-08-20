@@ -17,10 +17,12 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m unittest discover -s tests -v
       - run: python scripts/audit_skill.py .
-      # Run10 is the current reviewed skill/pipeline inventory. Historical Run7/Run9
-      # manifests remain immutable evidence snapshots, not current routing contracts.
-      - run: python scripts/audit_workflow.py docs/RUN10_SIDE_STORIES_MANIFEST.json
+      - run: python scripts/audit_workflow.py --latest
+      - run: python scripts/audit_context_budget.py --latest
       - run: python scripts/qa_project.py examples/sri_lanka_pre_1948
       - run: python scripts/qa_project.py examples/sri_lanka_post_1948
+      # Mandatory pre-edit gates: graph fragments must resolve before composition/editing.
+      - run: python scripts/qa_composition_pipeline.py examples/sri_lanka_pre_1948
+      - run: python scripts/qa_composition_pipeline.py examples/sri_lanka_post_1948
       - run: python scripts/qa_functional_pre1948.py
       - run: python scripts/render_full_reader_v3.py --project all
