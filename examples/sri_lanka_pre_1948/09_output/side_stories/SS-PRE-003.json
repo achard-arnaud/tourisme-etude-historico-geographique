@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "class": "side_story",
+  "id": "SS-PRE-003",
+  "kind": "detour",
+  "status": "promoted",
+  "title": "Quand le papier rencontre la caste",
+  "arc": "A06_voc_coastal_state",
+  "related_arcs": ["A08_jaffna_caste_colonial_codification"],
+  "purpose": "Show how a general state-legibility mechanism becomes socially consequential in Jaffna without turning caste into a parallel chronological spine.",
+  "reason_off_trunk": "The caste mechanism is a vertical thread crossing arcs; it enriches the paper-state explanation but does not define a new rupture at this point.",
+  "payoff": "The reader returns to colonial legibility understanding that documentation can harden pre-existing hierarchy without inventing it.",
+  "reader_presets": ["advanced", "intermediate"],
+  "lineage": {
+    "claim_ids": ["C-PRE-002", "C-PRE-CASTE-001"],
+    "source_ids": ["CAMBRIDGE-CLASSIFICATION", "CAMBRIDGE-JAFFNA-SLAVERY"],
+    "bridge_ids": [],
+    "hil_ids": ["HIL-01_institutions-chronology", "HIL-04_society-demography"],
+    "drift_paths": [],
+    "origin_paths": ["05_sources/jaffna_caste_colonial_note.md"]
+  },
+  "placement": {
+    "section_anchor": "## 2. De la cannelle au *paper state*",
+    "return_to": "C-PRE-002"
+  },
+  "zoom_excursion": null,
+  "content": {
+    "takeaway": "Colonial registration can stabilize hierarchy while remaining a negotiated technology rather than a simple invention of caste."
+  },
+  "render": {
+    "label": "Petit détour",
+    "marker": "[SIDE-STORY:SS-PRE-003]",
+    "required_in_reader": true
+  }
+}
