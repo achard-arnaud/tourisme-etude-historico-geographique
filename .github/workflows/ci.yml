@@ -17,12 +17,10 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m unittest discover -s tests -v
       - run: python scripts/audit_skill.py .
-      # Run 7 remains the promoted reader-recovery history; Run 9 below is the
-      # executable pre-1948 functional regression baseline.
-      - run: python scripts/audit_workflow.py docs/RUN7_WORKFLOW_MANIFEST.json
+      # Run10 is the current reviewed skill/pipeline inventory. Historical Run7/Run9
+      # manifests remain immutable evidence snapshots, not current routing contracts.
+      - run: python scripts/audit_workflow.py docs/RUN10_SIDE_STORIES_MANIFEST.json
       - run: python scripts/qa_project.py examples/sri_lanka_pre_1948
       - run: python scripts/qa_project.py examples/sri_lanka_post_1948
       - run: python scripts/qa_functional_pre1948.py
-      # Publish-run smoke test: exercises both reader-export pipelines after
-      # the canonical pre-1948 functional fixture has passed.
       - run: python scripts/render_full_reader_v3.py --project all
