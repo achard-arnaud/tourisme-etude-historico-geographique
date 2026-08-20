@@ -1,33 +1,24 @@
 # Architecture
 
-The root skill is an orchestrator. **Seventeen sub-skills** own judgment-heavy methods; scripts enforce mechanical invariants. Project artefacts are split by chronological arc, analytic HIL, reusable wiki entities, graph relations, source registers, bridges, drift audits, questions, **side-story composition**, and output.
+The root skill orchestrates judgment-heavy skills while scripts enforce mechanical contracts. The system remains **arc-first + Zettelkasten-lite + graph-light**, with explicit output-state and a first-class composition layer.
 
-The system is **arc-first, Zettelkasten-lite, graph-light, lineage-aware composition**: chronology remains the human reading spine; vertical themes reactivate where they change an arc; wiki/graph prevent duplication; side stories preserve useful off-trunk material without confusing it with evidence.
+## Layers
+1. **Research** — field evidence, sources, typed claims, arcs/HILs, bridges, drifts, wiki/graph.
+2. **Composition** — `side_story`, `arc_recap`, optional `map_asset`, and `reader_profile`/reader plan.
+3. **Canonical Markdown** — path resolved from `00_method/output_state.json`, never inferred from `report.md` naming.
+4. **Reader export** — DOCX/PDF generated only after preflight and retention gates.
 
-## Long-project state machine
-Four durable layers are independent:
-1. **research** — evidence, sources, claims, bridges, drifts, wiki, graph;
-2. **composition** — `09_output/side_stories/*.json` with kind, lineage, placement and return-to-trunk;
-3. **canonical Markdown** — deliberately promoted synthesis containing stable side-story markers;
-4. **reader export** — Word/PDF or other formatted edition.
+## HIL ownership
+HIL-01 institutions; HIL-02 geography; HIL-03 economy; HIL-04 society; HIL-05 religion/culture; HIL-06 security; **HIL-07 regional/global systems**; **HIL-08 historiography/bias**. HIL-07 now has a dedicated analysis skill; HIL-08 is owned by drift audit.
 
-Research state follows `captured → researched → integrated`; side stories follow `candidate → validated → promoted → retired`; output follows `baseline → vnext → promoted/canonical → reader-export`. Advancing one layer never silently advances another.
+## Composition contracts
+- `side_story`: normalized off-trunk narrative with lineage, placement, optional map eligibility and deterministic materialization.
+- `arc_recap`: end-of-arc causal schema + protagonist viewpoints + what changed + next-arc teaser bullets.
+- `map_asset`: optional online map candidate → vision validation → explicit human approval → dated fragment/caption; only approved assets are renderable.
+- `reader_profile`: deterministic content temperature, story template, side-story selection/order, recap style and map rules.
 
-## Side-story architecture
-`side_story` is not a claim class. It references existing claim/source/bridge/HIL/drift/origin artefacts and controls **reader composition**. Nomenclature v1 is closed: `detour`, `dezoom`, `also`, `method`, `false_lead`, `portrait`, `object_focus`, `comparator`, `callback`.
+## Pre-edit invariant
+`graph_link_audit.py` resolves every graph edge endpoint. `qa_composition_pipeline.py` then resolves output state, side-story coverage/anchors, arc recaps, map lifecycle and reader profile, and writes `reader_plan.json`. Editing runs only after this gate.
 
-Every validated/promoted record has one home arc, editorial purpose, off-trunk reason, payoff, placement and return point. `dezoom` additionally carries Z from/to/return, transmission mechanism and local payoff. Promoted reader-required records are guarded by stable Markdown markers and a renderer retention gate.
-
-## Comparative architecture
-Comparators remain attached to a home arc. If a comparison changes the main causal interpretation and passes scale/confounder gates it may enter the spine; otherwise it may be composed as a bounded `comparator` side story. Instrument/mechanism transport more readily than institutional package/outcome.
-
-## Knowledge layer
-`03_wiki/` stores reusable entities; `04_graph/*.jsonl` stores sourced typed relations. Side stories may reference them for navigation but do not become graph evidence merely by appearing together in prose.
-
-## Source scalability
-Several `05_sources/source_register*.json` files may coexist; IDs stay unique project-wide. Side-story lineage resolves against the same registry and never upgrades source tier/role.
-
-## Deterministic QA
-`qa_project.py` validates sources, claims, bridges, wiki, graph and side stories: schema/class/kind/status, evidence lineage, home/related arcs, HIL/zoom vocabulary, placement/return and canonical render labels/markers. The full-reader renderer independently blocks loss or relabelling of promoted `required_in_reader` side stories.
-
-Judgment remains in skills; structural integrity and lineage survival are mechanical gates.
+## QA philosophy
+No lexical-heading test substitutes for behavior. File-size limits do not proxy context safety: `audit_context_budget.py --latest` measures root orchestrator + actually dispatched skills. `audit_workflow.py --latest` resolves the highest reviewed run manifest automatically.

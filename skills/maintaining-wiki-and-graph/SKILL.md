@@ -1,25 +1,15 @@
 ---
 name: maintaining-wiki-and-graph
-description: Use when stabilized claims, people, places, institutions, commodities, policies, sources, or repeated relationships need reusable cross-arc storage without duplicating prose.
+description: Use when stabilized claims, people, places, institutions, commodities, policies, sources, or repeated relationships need reusable cross-arc storage and resolvable graph-light links.
 ---
 
 # Maintaining wiki and graph
 
-The wiki stores durable entities; arcs store temporal context; HILs store analytic views. The graph stores typed relations, not a second narrative.
+Wiki stores durable entities; arcs temporal context; HILs analytic views. Graph-light stores typed relations, not prose.
 
-## Promotion gate
-Promote an entity/relation when reused across arcs or resolving repeated ambiguity. Prefer A/B claims; C appears only with explicit hypothesis status. Do not copy raw field notes into the wiki as settled facts.
+Every edge endpoint must resolve to an explicit graph node, wiki slug, claim, bridge or supported composition fragment. Maintain `04_graph/nodes.jsonl` for concept fragments that are not first-class wiki/claim objects. Do not create ghost endpoints merely because a label appears in prose.
 
-## Wiki / graph contracts
-Wiki pages carry stable slug/name, entity type/aliases, scope, durable description, related arcs/claims, source IDs, confidence/limits and `last_reviewed`. Graph edges carry `from`, typed relation, `to`, confidence, source IDs, optional claim IDs and `last_reviewed`; interpretive edges require provenance.
+## Pre-edit invariant
+`python scripts/graph_link_audit.py <project>` is mandatory before composition/editing. **Zero unresolved endpoints** is the only passing state. Editing cannot rename or infer unresolved fragments silently.
 
-## Side-story boundary
-A `portrait`, `object_focus` or `callback` may reference wiki entities/graph relations for navigation, but side-story prose is not a new wiki fact or graph proof. Conversely, repeated side-story subjects should be promoted to wiki only when the underlying stabilized evidence meets the wiki gate. Do not create graph edges merely because two elements co-occur in a box.
-
-## Lifecycle
-After substantial research: update touched entities, add/remove edges, flag contradictions, run duplicate/source QA, and expose reusable IDs to downstream `composing-side-stories` without duplicating their evidence.
-
-## Output
-Wiki pages (`03_wiki/**/*.md`) and typed graph edges (`04_graph/*.jsonl`), both validated by `scripts/qa_project.py` and reusable as navigation context for composition.
-
-See also: `SKILL.md` orchestration step 9; `composing-side-stories`; `docs/skill_workflow_index.md`.
+Causal/interpretive edges require provenance and confidence. After substantial research, update entities/edges, resolve contradictions, run graph-link audit, then release the project to composition.

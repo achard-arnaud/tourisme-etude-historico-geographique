@@ -1,59 +1,51 @@
 ---
 name: tourisme-etude-historico-geographique
-description: Use when a travel, site-visit, country-reading, or historical research task needs a long-duration causal account that connects field evidence, chronology, geography, institutions, economy, culture, society, and regional systems.
+description: Use when a travel, site-visit, country-reading, or historical research task needs a long-duration causal account connecting field evidence, chronology, geography, institutions, economy, culture, society, and regional systems.
 ---
 
 # Tourisme étude historico-géographique
 
 ## Core principle
-Build **arc-first**: rupture → claims → source anchors → bridges → drift audit → wiki/graph → side-story composition → readable synthesis. Promote only stabilized claims. A side story is composition, never new historical proof.
+Build **arc-first**: evidence → typed claims → source anchors → HIL analysis → bridges/drifts → wiki/graph → composition artefacts → canonical manuscript → reader plan/export. Composition never creates historical proof.
 
 ## State checkpoint
-At the start/end of substantial runs distinguish:
-1. **research** — notes/sources/claims/bridges/drifts/wiki/graph;
-2. **composition** — validated `side_story` records and placement lineage;
-3. **canonical Markdown** — last promoted manuscript;
-4. **reader export** — Word/PDF;
-5. branch/commit/QA and next promotion decision.
+Track separately: research; composition (`side_story`, `arc_recap`, `map_asset`); canonical Markdown resolved by `00_method/output_state.json`; reader export; branch/commit/QA. Never infer canonical state from a filename.
 
 ## Orchestration
-See `docs/skill_workflow_index.md` for contracts and artefacts.
-1. Capture with `capturing-field-evidence`.
-2. Type raw statements with `sanitizing-historical-claims`.
-3. Create rupture-bounded periods with `structuring-chronological-arcs`.
-4. Apply `zooming-geographic-scales` from Z0 site to Z4 systemic.
-5. Anchor with `sourcing-historical-anchors`.
-6. Dispatch only relevant HIL analysis skills: institutions/power, geography/environment, economy/infrastructure, society/demography, religion/culture/legitimacy, security/geopolitics.
-7. Use `building-causal-bridges` only for missing mechanisms that change the explanation.
-8. Run `auditing-historiography-and-drifts`.
-9. Store reusable knowledge with `maintaining-wiki-and-graph`.
-10. Route useful off-trunk material through `composing-side-stories`; every validated/promoted item has lineage, placement and return-to-trunk. `dezoom` additionally needs scale mechanism and local payoff.
-11. Structure canonical Markdown with `editing-historical-travel-output`, consuming validated side stories with normalized labels/markers.
-12. Render with `storytelling-historical-travel` only non-destructively for advanced readers; it **must never set a maximum length** and required promoted side stories must survive.
-13. Record every dispatched/skipped skill with reasons and artefact paths in the run manifest.
-14. Re-run checkpoint and promote only after verification.
+1. `capturing-field-evidence` → raw observations.
+2. `sanitizing-historical-claims` → statement type.
+3. `structuring-chronological-arcs` → rupture-bounded spine.
+4. `zooming-geographic-scales` → Z0–Z4 transmission.
+5. `sourcing-historical-anchors` → source tier/role.
+6. Dispatch relevant HIL owners: `analyzing-institutions-and-power`, `analyzing-geography-and-environment`, `analyzing-economy-and-infrastructure`, `analyzing-society-and-demography`, `analyzing-religion-culture-legitimacy`, `analyzing-security-and-geopolitics`, `analyzing-regional-global-systems`; HIL-08 is owned by `auditing-historiography-and-drifts`.
+7. `building-causal-bridges` only for missing mechanisms.
+8. `auditing-historiography-and-drifts` for bias/non-cause/source corrections.
+9. `maintaining-wiki-and-graph`; **all graph fragments must resolve before an editing run**.
+10. `composing-side-stories` for useful off-trunk material; validated/promoted records require lineage and resolvable placement. `method` is self-contained and must not fabricate `return_to`; narrative kinds do.
+11. `composing-arc-recaps` creates the causal end-of-arc schema, protagonist viewpoints and `prepares_next` bullets.
+12. `curating-historical-map-assets` searches only for arcs or map-eligible side stories; vision review precedes explicit human approval.
+13. `tailoring-reader-profiles` resolves deterministic content temperature, side-story ordering, recap style and approved-map selection.
+14. `editing-historical-travel-output` consumes the graph/composition preflight and structured artefacts; deterministic side-story insertion uses `materialize_side_stories.py`.
+15. `storytelling-historical-travel` consumes the resolved reader plan. For advanced readers it **must never set a maximum length** or silently drop required content; no more than one approved map per subsection/side-story slot.
+16. Record all routing in the latest reviewed run manifest and promote only after fresh verification.
 
 ## Prompt-review loop
-Treat user directions as requirements, not historical evidence. Extract new questions, rejected framings, desired depth, side-story requests, comparator requests and output-state changes; route each to the proper contract before changing canonical prose.
+Treat user directions as requirements, never evidence. Route new questions, rejected framings, audience changes, side-story/map requests and output-state changes to their owning contracts before prose changes.
 
-## Causal / side-story gate
-A detail enters the causal trunk only if it materially changes resource mobilisation, legitimacy/coalition, governing/defence costs, access to flows/opportunities, social reproduction, or a regime/centre shift. Useful material that fails this gate may become a **candidate side story** (`detour`, `dezoom`, `also`, `method`, `false_lead`, `portrait`, `object_focus`, `comparator`, `callback`) after its evidence is sanitized/sourced. Otherwise keep it backlog or discarded lead. Never promote from raw prompts/field notes.
+## Causal / composition gate
+A detail enters the trunk only if it changes mobilisation, legitimacy/coalition, governing/defence cost, flows/opportunity, social reproduction, or regime/centre. Otherwise: candidate `side_story`, backlog or discarded lead. `arc_recap` only summarizes stabilized claims/bridges. `map_asset` illustrates a validated story but never upgrades confidence.
 
 ## Comparative gate
-A comparator enters the spine only when mechanism, period, scale/unit, confounders and source coverage are compatible and it changes the home-case interpretation. Otherwise route it as a bounded `comparator` side story or remove it.
-
-## Evidence contract
-Tier sources T0–T5 separately from anchor role. Confidence is A/B/C/D/U. Major causal claims require independent corroboration unless explicitly bounded. Side-story lineage does not upgrade evidence confidence.
-
-## Modes
-**Field** capture; **Research** source/bridge/audit; **Composition** classify/validate side stories; **Synthesis** integrate chronology; **Modern** apply freshness; **Promotion** freeze evidence, validate composition, promote Markdown, regenerate readers.
+A comparator enters the spine only when mechanism, period, scale, unit, confounders and source coverage align and it changes the home case. Otherwise use a bounded comparator side story.
 
 ## Verification
 ```bash
 pip install -r requirements.txt
 python -m unittest discover -s tests -v
 python scripts/audit_skill.py .
-python scripts/audit_workflow.py docs/RUN10_SIDE_STORIES_MANIFEST.json
+python scripts/audit_workflow.py --latest
+python scripts/audit_context_budget.py --latest
 python scripts/qa_project.py <project>
+python scripts/qa_composition_pipeline.py <project>
 ```
-When wiki/graph or side stories exist, QA validates provenance, lineage and reader-retention contracts. No completion claim without fresh verification.
+File length is not a proxy for context safety: the budget applies to orchestrator + actually dispatched skills.

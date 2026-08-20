@@ -1,52 +1,26 @@
 ---
 name: storytelling-historical-travel
-description: Use when a researched historical travel corpus must be rendered for a specific reader, reading context, language, desired depth, tone, register, or target length.
+description: Use when a validated historical manuscript must be rendered for a specific reader profile, reading context, language, depth, tone, or register without changing evidence or composition contracts.
 ---
 
 # Storytelling historical travel
 
-## Reader contract
-Resolve or infer and keep stable: **audience** (advanced/intermediate/child), language/translation policy, tone, register, length policy and reading context. For an advanced consolidation, length is unconstrained unless explicitly abridged.
+## Reader plan first
+Consume the deterministic `09_output/reader_plan.json` resolved by `tailoring-reader-profiles`; do not choose side-story eligibility ad hoc. The profile carries audience, language, content temperature, story template, side-story priority, recap style and map policy.
 
-## Audience presets
-### advanced
-Preserve historiographic disputes, source families, competing causal models, comparator limits, detours, callbacks, promoted side stories and explicit uncertainty. There is **no maximum length**. Start from the last complete promoted baseline, treat later manuscripts as deltas unless proven complete, and block silent loss.
+Profiles include **advanced / historian enthusiast**, **intermediate / educated generalist**, and **child 10+**. Content temperature is content density/variety, not model sampling temperature. Historian enthusiasts and children may both receive all side-story kinds: historians prioritize causal/method/comparator richness; children prioritize sourced people, objects and anecdotes before the larger causal explanation.
 
-### intermediate
-Keep causal architecture but reduce proper-name density. Explain technical terms inline and surface controversies when they change interpretation.
+## Length policy
+For advanced work there is **no maximum length**. Start from the complete baseline/canonical state, treat later inputs as deltas unless proven complete, and apply a **content-preservation gate** against silent loss. Intermediate/child may be shorter only under their explicit template/profile.
 
-### child
-Use concrete places, objects and human-scale stakes. Never invent dialogue, thoughts, motives, dates or events. Mark uncertainty simply.
+## Historical nonfiction gate
+PACE remains useful: Place → source-attested Action → Constraint → Evidence. Never add invented dialogue, thoughts, motives, composite characters, sensory facts or false suspense. Use `but/therefore` causal transitions and maintain a promise and continuity ledger.
 
-## Content-preservation gate
-For advanced work:
-1. inventory baseline sections, tables, side material, side-story IDs, claims, source families and unresolved questions;
-2. route every later addition to chronology or an explicit fiche;
-3. compare baseline, delta and candidate export quantitatively;
-4. fail on silent loss even if shorter prose is smoother.
+## Composition invariants
+A side story's kind, lineage, required status and reader eligibility come from artefacts/profile. Arc recaps may be simplified in wording but not causally rewritten. Only `human_approved` map assets are eligible. Select **at most one map per subsection or side-story slot**; map language is document language or English fallback. Hidden side-story/recap identifiers remain traceable in Markdown but must not appear as reader-facing labels in Word/PDF.
 
-## Narrative unit
-Prefer: place/object/tension → causal question → 2–4 mechanisms → consequences → bridge forward.
+## Child 10+
+Use `templates/storytelling/child_10_plus.md`: concrete place/object, protagonists and documented action, obstacle/choice, anecdote, simple because→therefore recap, and a factual question/teaser toward the next arc. Do not simplify by falsifying uncertainty or violence.
 
-For a short sourced vignette use **PACE**: Place → Action → Constraint → Evidence. For a long arc use causal mission → minimum context → mechanism plan → `but/therefore` progression → rupture/resolution → reflection/bridge. One main takeaway per side box.
-
-## Historical non-fiction safety gate
-“Show, do not tell” means material evidence, spatial anchoring and **source-attested** action. It never licenses invented dialogue, inner thoughts, motives, composite characters, sensory detail, chronology, danger or cliffhangers. Direct speech/reported thought require a source; uncertain reconstruction is labelled and normally demoted from the trunk.
-
-## Side-story integrity
-Storytelling consumes the already composed `side_story`; it does not create a second uncontrolled taxonomy. It may tune the prose inside a box for reader fit, but must not silently change its `kind`, normalized label, lineage, placement, return point, status or `required_in_reader` flag. `portrait` remains bounded to sourced microhistory; `dezoom` must land back at its contracted local payoff; `false_lead` must remain visibly rejected; `callback` must show transformation rather than repetition.
-
-For advanced readers every promoted required side story must survive into the Markdown reader and formatted export. The hidden marker `[SIDE-STORY:<id>]` remains machine-readable in Markdown and may be suppressed visually in DOCX/PDF.
-
-## Vertical threads / comparators
-When caste, language, education, water, trade, religion or migration crosses arcs, use callbacks showing transformation. Comparators illuminate mechanisms, not rankings: home case first, alternative mechanism, then major confounder.
-
-## Cross-reference and continuity
-Use a cross-reference only when it saves repetition or activates causality. Maintain a **promise and continuity ledger** for long outputs: opening causal promise, questions introduced, callback location, payoff or unresolved status.
-
-## Story QA
-Verify chronology, causal transitions, uncertainty, comparator limits, non-fiction safety, promise/callback closure, side-story retention/labels, applicable length policy, baseline retention, reader fit and a conclusion returning to the causal map.
-
-See `references/storytelling-patterns-and-review.md` for benchmark boundaries.
-
-See also: `SKILL.md` orchestration step 12; `composing-side-stories`; `docs/SOP_SIDE_STORIES.md`.
+## QA
+Verify chronology, source-attested action, reader plan compliance, side-story retention, recap closure, map limit/approval, and baseline retention before export.
