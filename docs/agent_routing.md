@@ -4,18 +4,26 @@
 2. Periodization problem → chronological arcs.
 3. Scale problem → geographic zoom.
 4. Factual/causal uncertainty → source anchor.
-5. Domain mechanism → corresponding analysis sub-skill.
+5. Domain mechanism → corresponding HIL analysis skill.
 6. Missing causal link → bridge.
-7. Narrative or source distortion → drift audit.
-8. Repeated entity/claim → wiki/graph.
-9. Manuscript architecture → output editor.
-10. Reader voice, density and narrative continuity → storytelling.
+7. Narrative/source distortion → drift audit.
+8. Repeated durable entity/relation → wiki/graph.
+9. Useful **off-trunk** material, dezoom, sidebar, microhistory, false lead, callback or bounded comparator → `composing-side-stories` after evidence is stable.
+10. Manuscript architecture → output editor, consuming validated/promoted side-story records.
+11. Reader voice/density/continuity → storytelling, preserving required side-story identity and lineage.
 
-Never dispatch every sub-skill automatically. Missing HIL coverage can be intentional. For every substantial run, the agent writes a manifest that records:
+## Side-story dispatch gate
 
-- state before and after at research, canonical Markdown and reader-export layers;
-- each dispatched skill, its reason, inputs, outputs and execution status;
-- each skipped skill and the reason it was unnecessary;
-- deterministic validations and promotion decision.
+Upstream skills may **nominate candidates** but cannot promote them. Composition is dispatched only when:
+- the material is useful to reader interpretation;
+- it does not independently pass the causal-trunk/arc gate at that location;
+- supporting claim/source/bridge/drift/origin lineage is known or explicitly pending;
+- a home arc and return-to-trunk can be named.
 
-`scripts/audit_workflow.py` rejects unknown or duplicated skills, missing evidence paths and an incomplete routing inventory once the manifest is marked `reviewed`. A full-project review may legitimately dispatch every skill; an ordinary research question should not.
+A raw prompt, field impression or decorative fact does not go directly to `side_story`. `dezoom` additionally requires Z from/to/return, transmission mechanism and local payoff.
+
+## Manifest discipline
+
+Do not dispatch every skill automatically. Missing HIL or side-story work can be intentional. For substantial runs, record state before/after across research, composition, canonical Markdown and reader-export layers; dispatched/skipped skills with reasons/evidence paths; validations; and promotion decision.
+
+`scripts/audit_workflow.py` rejects unknown/duplicate skills, missing evidence paths and incomplete routing once a manifest is `reviewed`. A full architecture migration such as Run10 can legitimately dispatch all 17 skills; ordinary research should not.
