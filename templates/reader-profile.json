@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "class": "reader_profile",
+  "id": "",
+  "audience": "",
+  "min_age": null,
+  "language": "fr",
+  "content_temperature": 3,
+  "story_template": "",
+  "side_story_policy": {"coverage_mode": "selective", "priority_order": [], "include_kinds": []},
+  "arc_recap_policy": {"enabled": true, "style": "causal"},
+  "map_policy": {"enabled": true, "max_per_subsection": 1, "fallback_language": "en"}
+}

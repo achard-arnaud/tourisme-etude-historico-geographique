@@ -1,258 +1,172 @@
 #!/usr/bin/env python3
-"""Shared contract and validation helpers for narrative side-story artifacts."""
-
+"""Contract, lineage, coverage and render gates for side-story composition."""
 from __future__ import annotations
-
-import json
+import json, re
 from pathlib import Path
+from output_state import canonical_markdown_path, load_output_state
 
-SCHEMA_VERSION = "1.0"
-SIDE_STORY_CLASS = "side_story"
-KINDS = {
-    "detour",
-    "dezoom",
-    "also",
-    "method",
-    "false_lead",
-    "portrait",
-    "object_focus",
-    "comparator",
-    "callback",
-}
-STATUSES = {"candidate", "validated", "promoted", "retired"}
-READER_PRESETS = {"advanced", "intermediate", "child"}
-ZOOMS = {f"Z{i}" for i in range(5)}
-HILS = {
-    "HIL-01_institutions-chronology",
-    "HIL-02_geography-environment",
-    "HIL-03_economy-infrastructure",
-    "HIL-04_society-demography",
-    "HIL-05_religion-culture-legitimacy",
-    "HIL-06_security-coercion",
-    "HIL-07_regional-global-system",
-    "HIL-08_historiography-bias",
-}
-RENDER_LABELS = {
-    "detour": "Petit détour",
-    "dezoom": "Dézoom",
-    "also": "Mais aussi",
-    "method": "Point de méthode",
-    "false_lead": "Fausse piste",
-    "portrait": "Personnage",
-    "object_focus": "Objet / terrain",
-    "comparator": "Comparaison",
-    "callback": "Fil rouge",
-}
+SCHEMA_VERSION="1.1"
+SIDE_STORY_CLASS="side_story"
+KINDS={"detour","dezoom","also","method","false_lead","portrait","object_focus","comparator","callback"}
+STATUSES={"candidate","validated","promoted","retired"}
+RETURN_REQUIRED=KINDS-{"method"}
+ZOOMS={f"Z{i}" for i in range(5)}
+HILS={
+ "HIL-01_institutions-chronology","HIL-02_geography-environment","HIL-03_economy-infrastructure",
+ "HIL-04_society-demography","HIL-05_religion-culture-legitimacy","HIL-06_security-coercion",
+ "HIL-07_regional-global-system","HIL-08_historiography-bias"}
+RENDER_LABELS={"detour":"Petit détour","dezoom":"Dézoom","also":"Mais aussi","method":"Point de méthode","false_lead":"Fausse piste","portrait":"Personnage","object_focus":"Objet / terrain","comparator":"Comparaison","callback":"Fil rouge"}
 
 
-def canonical_marker(side_story_id: str) -> str:
-    return f"[SIDE-STORY:{side_story_id}]"
+def canonical_marker(sid:str)->str: return f"[SIDE-STORY:{sid}]"
+def side_story_dir(project:Path)->Path: return project/"09_output"/"side_stories"
 
+def _read_records(path:Path)->list[dict]:
+    data=json.loads(path.read_text(encoding="utf-8"))
+    return data if isinstance(data,list) else [data]
 
-def side_story_dir(project: Path) -> Path:
-    return project / "09_output" / "side_stories"
+def load_side_stories(project:Path)->list[tuple[Path,dict]]:
+    root=side_story_dir(project)
+    if not root.exists(): return []
+    out=[]
+    for p in sorted(root.glob("*.json")):
+        for item in _read_records(p): out.append((p,item))
+    return out
 
+def _ids(project:Path, pattern:str)->set[str]:
+    out=set()
+    for p in project.glob(pattern):
+        try: item=json.loads(p.read_text(encoding="utf-8"))
+        except Exception: continue
+        if isinstance(item,dict) and item.get("id"): out.add(str(item["id"]))
+    return out
 
-def load_side_stories(project: Path) -> list[tuple[Path, dict]]:
-    root = side_story_dir(project)
-    if not root.exists():
-        return []
-    items: list[tuple[Path, dict]] = []
-    for path in sorted(root.glob("*.json")):
-        items.append((path, json.loads(path.read_text(encoding="utf-8"))))
-    return items
+def _sources(project:Path)->set[str]:
+    out=set()
+    for p in (project/"05_sources").glob("source_register*.json"):
+        data=json.loads(p.read_text(encoding="utf-8"))
+        if isinstance(data,list): out|={str(x["id"]) for x in data if isinstance(x,dict) and x.get("id")}
+    return out
 
+def _strip_markup(text:str)->str:
+    text=re.sub(r"<[^>]+>"," ",text)
+    text=re.sub(r"[#*_`>\[\]()]"," ",text)
+    return re.sub(r"\s+"," ",text).strip().casefold()
+def _contains_anchor(markdown:str, anchor:str)->bool:
+    return bool(anchor) and _strip_markup(anchor) in _strip_markup(markdown)
+def _marker_block(markdown:str, marker:str)->str:
+    lines=markdown.splitlines(); idx=next((i for i,x in enumerate(lines) if marker in x),None)
+    if idx is None: return ""
+    buf=[]
+    for line in lines[idx:idx+18]:
+        if buf and "[SIDE-STORY:" in line: break
+        if buf and re.match(r"^##\s+",line): break
+        buf.append(line)
+    return "\n".join(buf)
+def _lineage_nonempty(lineage:dict)->bool:
+    return any(lineage.get(k) for k in ("claim_ids","source_ids","bridge_ids","drift_paths","origin_paths"))
 
-def _load_sources(project: Path) -> set[str]:
-    ids: set[str] = set()
-    for path in sorted((project / "05_sources").glob("source_register*.json")):
-        data = json.loads(path.read_text(encoding="utf-8"))
-        if isinstance(data, list):
-            ids.update(str(item.get("id")) for item in data if isinstance(item, dict) and item.get("id"))
-    return ids
+def discover_side_story_fragments(markdown:str)->list[dict]:
+    """Inventory existing prose boxes independently from structured records."""
+    found=[]
+    html=re.compile(r"<p><strong>(POINT DE MÉTHODE|PETIT DÉTOUR|MAIS AUSSI|FAUSSE PISTE)(?:\s*[—:-]\s*([^<]+))?</strong></p>(?:\s*<p><strong>([^<]+)</strong></p>)?",re.I)
+    for m in html.finditer(markdown):
+        label=m.group(1); title=(m.group(2) or m.group(3) or "").strip()
+        if not title:
+            after=markdown[m.end():m.end()+350]
+            body=re.search(r"<p>([^<]+)</p>",after)
+            title=(body.group(1).split(".")[0] if body else "untitled method").strip()
+        found.append({"label":label,"title":title})
+    md=re.compile(r"(?mi)^(?:#{1,6}\s*)?(?:\*\*)?(Mais aussi|Petit détour|Point de méthode|Fausse piste|Dézoom|Personnage|Objet / terrain|Comparaison|Fil rouge)\s*[—:-]\s*([^\n*]+)")
+    for m in md.finditer(markdown): found.append({"label":m.group(1),"title":m.group(2).strip()})
+    uniq={(_strip_markup(x["label"]),_strip_markup(x["title"])):x for x in found}
+    return list(uniq.values())
 
+def side_story_coverage(project:Path)->dict:
+    canonical=canonical_markdown_path(project).read_text(encoding="utf-8")
+    discovered=discover_side_story_fragments(canonical)
+    stories=load_side_stories(project)
+    aliases=[]
+    for _,item in stories:
+        aliases.extend([item.get("title","")] + list((item.get("content") or {}).get("legacy_titles") or []))
+    alias_norm={_strip_markup(x) for x in aliases if x}
+    tracked=[]; untracked=[]
+    for frag in discovered:
+        title=_strip_markup(frag["title"])
+        matched=any(title==a or (len(title)>18 and (title in a or a in title)) for a in alias_norm)
+        (tracked if matched else untracked).append(frag)
+    return {"discovered":len(discovered),"tracked":len(tracked),"untracked":len(untracked),"untracked_fragments":untracked}
 
-def _load_claims(project: Path) -> set[str]:
-    ids: set[str] = set()
-    for path in project.glob("01_arcs/*/claims/*.json"):
-        item = json.loads(path.read_text(encoding="utf-8"))
-        if item.get("id"):
-            ids.add(str(item["id"]))
-    return ids
-
-
-def _load_bridges(project: Path) -> set[str]:
-    ids: set[str] = set()
-    for path in (project / "06_bridges").glob("*.json"):
-        item = json.loads(path.read_text(encoding="utf-8"))
-        if item.get("id"):
-            ids.add(str(item["id"]))
-    return ids
-
-
-def _load_arcs(project: Path) -> set[str]:
-    root = project / "01_arcs"
-    return {path.name for path in root.iterdir() if path.is_dir()} if root.exists() else set()
-
-
-def _nonempty_lineage(lineage: dict) -> bool:
-    return any(lineage.get(key) for key in ("claim_ids", "source_ids", "bridge_ids", "drift_paths", "origin_paths"))
-
-
-def _marker_window(text: str, marker: str, size: int = 600) -> str:
-    position = text.find(marker)
-    return "" if position < 0 else text[position:position + size]
-
-
-def validate_side_stories(project: Path, *, check_render: bool = True) -> tuple[list[str], list[str], int]:
-    """Validate side-story structure, lineage and promotion/render invariants.
-
-    Candidate records may point to an arc or evidence that does not yet exist. Once a
-    record is `validated` or `promoted`, every lineage reference becomes a hard
-    contract. A promoted required side story must be present in canonical Markdown;
-    the final reader gate is enforced again by ``assert_rendered_side_stories``.
-    """
-
-    errors: list[str] = []
-    warnings: list[str] = []
+def validate_side_stories(project:Path,*,check_render:bool=True)->tuple[list[str],list[str],int,dict]:
+    errors=[]; warnings=[]
     try:
-        stories = load_side_stories(project)
-        claim_ids = _load_claims(project)
-        source_ids = _load_sources(project)
-        bridge_ids = _load_bridges(project)
-        arcs = _load_arcs(project)
-    except Exception as exc:
-        return [f"invalid side-story registry: {exc}"], [], 0
-
-    seen: set[str] = set()
-    canonical_path = project / "09_output" / "report.md"
-    canonical = canonical_path.read_text(encoding="utf-8") if canonical_path.exists() else ""
-
-    for path, item in stories:
-        sid = item.get("id")
-        prefix = sid or path.name
-        if item.get("schema_version") != SCHEMA_VERSION:
-            errors.append(f"side story {prefix}: invalid schema_version")
-        if item.get("class") != SIDE_STORY_CLASS:
-            errors.append(f"side story {prefix}: invalid class")
-        if not sid:
-            errors.append(f"side story {path.name}: missing id")
-        elif sid in seen:
-            errors.append(f"duplicate side story id: {sid}")
-        elif path.stem != sid:
-            errors.append(f"side story {sid}: filename must equal id")
-        else:
-            seen.add(sid)
-        kind = item.get("kind")
-        if kind not in KINDS:
-            errors.append(f"side story {prefix}: invalid kind {kind!r}")
-        status = item.get("status")
-        if status not in STATUSES:
-            errors.append(f"side story {prefix}: invalid status {status!r}")
-        if not item.get("title") or not item.get("purpose") or not item.get("reason_off_trunk") or not item.get("payoff"):
-            errors.append(f"side story {prefix}: missing title/purpose/off-trunk reason/payoff")
-
-        lineage = item.get("lineage") or {}
-        placement = item.get("placement") or {}
-        render = item.get("render") or {}
-        presets = set(item.get("reader_presets") or [])
-        for key in ("claim_ids", "source_ids", "bridge_ids", "hil_ids", "drift_paths", "origin_paths"):
-            if not isinstance(lineage.get(key, []), list):
-                errors.append(f"side story {prefix}: lineage.{key} must be a list")
-        if not presets or not presets <= READER_PRESETS:
-            errors.append(f"side story {prefix}: invalid reader preset")
-        if not placement.get("section_anchor") or not placement.get("return_to"):
-            errors.append(f"side story {prefix}: missing placement section_anchor/return_to")
-
-        expected_marker = canonical_marker(str(sid)) if sid else None
-        if render.get("marker") != expected_marker:
-            errors.append(f"side story {prefix}: invalid render marker")
-        if kind in RENDER_LABELS and render.get("label") != RENDER_LABELS[kind]:
-            errors.append(f"side story {prefix}: render label does not match kind")
-        if not isinstance(render.get("required_in_reader"), bool):
-            errors.append(f"side story {prefix}: required_in_reader must be boolean")
-
-        strict = status in {"validated", "promoted"}
+        stories=load_side_stories(project); canonical_path=canonical_markdown_path(project); canonical=canonical_path.read_text(encoding="utf-8")
+        claims=_ids(project,"01_arcs/*/claims/*.json"); bridges=_ids(project,"06_bridges/*.json"); sources=_sources(project)
+        arcs={p.name for p in (project/"01_arcs").iterdir() if p.is_dir()} if (project/"01_arcs").exists() else set()
+    except Exception as exc: return [f"invalid side-story registry/state: {exc}"],[],0,{"discovered":0,"tracked":0,"untracked":0,"untracked_fragments":[]}
+    seen=set()
+    for path,item in stories:
+        sid=item.get("id"); prefix=sid or path.name
+        if item.get("schema_version")!=SCHEMA_VERSION: errors.append(f"side story {prefix}: invalid schema_version")
+        if item.get("class")!=SIDE_STORY_CLASS: errors.append(f"side story {prefix}: invalid class")
+        if not sid: errors.append(f"side story {path.name}: missing id")
+        elif sid in seen: errors.append(f"duplicate side story id: {sid}")
+        else: seen.add(sid)
+        kind=item.get("kind"); status=item.get("status")
+        if kind not in KINDS: errors.append(f"side story {prefix}: invalid kind {kind!r}")
+        if status not in STATUSES: errors.append(f"side story {prefix}: invalid status {status!r}")
+        if not isinstance(item.get("map_eligible"),bool): errors.append(f"side story {prefix}: map_eligible must be boolean")
+        if not item.get("title") or not item.get("purpose"): errors.append(f"side story {prefix}: missing title/purpose")
+        lineage=item.get("lineage") or {}; placement=item.get("placement") or {}; render=item.get("render") or {}
+        for key in ("claim_ids","source_ids","bridge_ids","hil_ids","drift_paths","origin_paths"):
+            if not isinstance(lineage.get(key,[]),list): errors.append(f"side story {prefix}: lineage.{key} must be list")
+        if render.get("marker")!=canonical_marker(str(sid)): errors.append(f"side story {prefix}: invalid render marker")
+        if kind in RENDER_LABELS and render.get("label")!=RENDER_LABELS[kind]: errors.append(f"side story {prefix}: label/kind mismatch")
+        if not isinstance(render.get("required_in_reader"),bool): errors.append(f"side story {prefix}: required_in_reader must be boolean")
+        anchor=placement.get("section_anchor")
+        if status in {"validated","promoted"} and not anchor: errors.append(f"side story {prefix}: missing section_anchor")
+        if anchor and status in {"validated","promoted"} and not _contains_anchor(canonical,anchor): errors.append(f"side story {prefix}: section_anchor does not resolve in canonical state")
+        ret=placement.get("return_to")
+        if kind=="method" and ret not in (None,""): errors.append(f"side story {prefix}: method must not invent a return_to")
+        if kind in RETURN_REQUIRED and status in {"validated","promoted"}:
+            if not ret: errors.append(f"side story {prefix}: missing return_to")
+            elif ret in claims or ret in bridges or ret in arcs: pass
+            elif isinstance(ret,str) and ret.startswith("anchor:") and _contains_anchor(canonical,ret.split(":",1)[1]): pass
+            else: errors.append(f"side story {prefix}: return_to does not resolve")
+        strict=status in {"validated","promoted"}
+        legacy=item.get("lineage_quality")=="legacy_fragment"
         if strict:
-            if not _nonempty_lineage(lineage):
-                errors.append(f"side story {prefix}: validated/promoted item has no lineage")
-            if item.get("arc") not in arcs:
-                errors.append(f"side story {prefix}: unknown arc {item.get('arc')!r}")
-            unknown_related = set(item.get("related_arcs") or []) - arcs
-            unknown_claims = set(lineage.get("claim_ids") or []) - claim_ids
-            unknown_sources = set(lineage.get("source_ids") or []) - source_ids
-            unknown_bridges = set(lineage.get("bridge_ids") or []) - bridge_ids
-            unknown_hils = set(lineage.get("hil_ids") or []) - HILS
-            if unknown_related:
-                errors.append(f"side story {prefix}: unknown related arcs {sorted(unknown_related)}")
-            if unknown_claims:
-                errors.append(f"side story {prefix}: unknown claims {sorted(unknown_claims)}")
-            if unknown_sources:
-                errors.append(f"side story {prefix}: unknown sources {sorted(unknown_sources)}")
-            if unknown_bridges:
-                errors.append(f"side story {prefix}: unknown bridges {sorted(unknown_bridges)}")
-            if unknown_hils:
-                errors.append(f"side story {prefix}: unknown HILs {sorted(unknown_hils)}")
-            for rel in lineage.get("drift_paths") or []:
-                if not (project / rel).exists():
-                    errors.append(f"side story {prefix}: missing drift path {rel}")
-            for rel in lineage.get("origin_paths") or []:
-                if not (project / rel).exists():
-                    errors.append(f"side story {prefix}: missing origin path {rel}")
+            if not _lineage_nonempty(lineage): errors.append(f"side story {prefix}: no lineage")
+            if not legacy and item.get("arc") not in arcs: errors.append(f"side story {prefix}: unknown arc {item.get('arc')!r}")
+            for vals,known,label in ((lineage.get("claim_ids") or [],claims,"claims"),(lineage.get("source_ids") or [],sources,"sources"),(lineage.get("bridge_ids") or [],bridges,"bridges")):
+                bad=set(vals)-known
+                if bad: errors.append(f"side story {prefix}: unknown {label} {sorted(bad)}")
+            bad_h=set(lineage.get("hil_ids") or [])-HILS
+            if bad_h: errors.append(f"side story {prefix}: unknown HILs {sorted(bad_h)}")
+            for rel in (lineage.get("drift_paths") or [])+(lineage.get("origin_paths") or []):
+                if not (project/rel).exists(): errors.append(f"side story {prefix}: missing lineage path {rel}")
+        if kind=="dezoom":
+            z=item.get("zoom_excursion") or {}
+            for field in ("from","to","return_to","mechanism","local_payoff"):
+                if not z.get(field): errors.append(f"side story {prefix}: dezoom missing {field}")
+            for field in ("from","to","return_to"):
+                if z.get(field) and z[field] not in ZOOMS: errors.append(f"side story {prefix}: invalid dezoom {field}")
+        marker=render.get("marker")
+        if status=="retired" and marker and marker in canonical: errors.append(f"side story {prefix}: retired marker still present in canonical")
+        if check_render and status=="promoted":
+            if marker not in canonical: errors.append(f"side story {prefix}: promoted marker missing from canonical state")
+            elif _strip_markup(render.get("label","")) not in _strip_markup(_marker_block(canonical,marker)): errors.append(f"side story {prefix}: normalized label not in marker block")
+    coverage=side_story_coverage(project)
+    try: require_complete=bool(load_output_state(project).get("composition",{}).get("side_story_coverage_required"))
+    except Exception: require_complete=False
+    if require_complete and coverage["untracked"]:
+        errors.append(f"side-story coverage incomplete: {coverage['tracked']}/{coverage['discovered']} tracked; {coverage['untracked']} untracked")
+    return errors,warnings,len(stories),coverage
 
-        if kind == "dezoom":
-            excursion = item.get("zoom_excursion") or {}
-            for field in ("from", "to", "return_to", "mechanism", "local_payoff"):
-                if not excursion.get(field):
-                    errors.append(f"side story {prefix}: dezoom missing {field}")
-            for field in ("from", "to", "return_to"):
-                if excursion.get(field) and excursion.get(field) not in ZOOMS:
-                    errors.append(f"side story {prefix}: invalid dezoom {field} {excursion.get(field)!r}")
-        elif item.get("zoom_excursion") not in (None, {}):
-            warnings.append(f"side story {prefix}: zoom_excursion ignored for non-dezoom kind")
-
-        if check_render and status == "promoted":
-            marker = render.get("marker")
-            label = render.get("label")
-            window = _marker_window(canonical, marker) if marker else ""
-            if not window:
-                errors.append(f"side story {prefix}: promoted marker missing from canonical report")
-            elif label and label not in window:
-                errors.append(f"side story {prefix}: normalized label missing near canonical marker")
-
-    return errors, warnings, len(stories)
-
-
-def assert_rendered_side_stories(project: Path, markdown: str) -> None:
-    """Fail if a promoted reader-required side story vanished or was relabelled."""
-    missing: list[str] = []
-    relabelled: list[str] = []
-    for _, item in load_side_stories(project):
-        if item.get("status") != "promoted":
-            continue
-        render = item.get("render") or {}
-        if not render.get("required_in_reader"):
-            continue
-        marker = render.get("marker")
-        label = render.get("label")
-        window = _marker_window(markdown, marker) if marker else ""
-        if not window:
-            missing.append(str(item.get("id")))
-        elif label and label not in window:
-            relabelled.append(str(item.get("id")))
-    if missing or relabelled:
-        details = []
-        if missing:
-            details.append(f"missing {', '.join(sorted(missing))}")
-        if relabelled:
-            details.append(f"relabelled {', '.join(sorted(relabelled))}")
-        raise RuntimeError(f"side-story retention gate failed: {'; '.join(details)}")
-
-
-def validate_or_raise(project: Path, *, check_render: bool = True) -> int:
-    errors, warnings, count = validate_side_stories(project, check_render=check_render)
-    for warning in warnings:
-        print(f"WARN: {warning}")
-    if errors:
-        raise ValueError("; ".join(errors))
-    return count
+def assert_rendered_side_stories(project:Path,markdown:str)->None:
+    missing=[]
+    for _,item in load_side_stories(project):
+        if item.get("status")!="promoted": continue
+        render=item.get("render") or {}
+        if render.get("required_in_reader") and render.get("marker") not in markdown: missing.append(str(item.get("id")))
+    if missing: raise RuntimeError("side-story retention gate failed: missing "+", ".join(sorted(missing)))

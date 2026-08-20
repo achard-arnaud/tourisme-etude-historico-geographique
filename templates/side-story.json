@@ -1,35 +1,20 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "class": "side_story",
-  "id": "SS-<PROJECT>-001",
-  "kind": "detour",
-  "status": "candidate",
-  "title": "Short reader-facing title",
-  "arc": "A01_example",
-  "related_arcs": [],
-  "purpose": "Why this side story improves interpretation without becoming causal trunk.",
-  "reason_off_trunk": "Why this material is lateral rather than a new arc/causal step.",
-  "payoff": "What the reader should understand before returning to the trunk.",
-  "reader_presets": ["advanced"],
-  "lineage": {
-    "claim_ids": [],
-    "source_ids": [],
-    "bridge_ids": [],
-    "hil_ids": [],
-    "drift_paths": [],
-    "origin_paths": []
-  },
-  "placement": {
-    "section_anchor": "## Canonical section heading",
-    "return_to": "claim, arc, or stable section anchor"
-  },
+  "id": "SS-...",
+  "kind": "detour|dezoom|also|method|false_lead|portrait|object_focus|comparator|callback",
+  "status": "candidate|validated|promoted|retired",
+  "lineage_quality": "full|legacy_fragment",
+  "title": "",
+  "arc": "",
+  "purpose": "",
+  "reason_off_trunk": "",
+  "payoff": "",
+  "map_eligible": false,
+  "reader_policy": {"min_age": 10},
+  "lineage": {"claim_ids": [], "source_ids": [], "bridge_ids": [], "hil_ids": [], "drift_paths": [], "origin_paths": []},
+  "placement": {"section_anchor": "", "return_to": null},
   "zoom_excursion": null,
-  "content": {
-    "takeaway": "One principal takeaway. The final prose remains in canonical Markdown."
-  },
-  "render": {
-    "label": "Petit détour",
-    "marker": "[SIDE-STORY:SS-<PROJECT>-001]",
-    "required_in_reader": false
-  }
+  "content": {"takeaway": "", "body_markdown": "", "legacy_titles": []},
+  "render": {"label": "", "marker": "[SIDE-STORY:SS-...]", "required_in_reader": false}
 }
