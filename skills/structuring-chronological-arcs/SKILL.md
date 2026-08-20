@@ -17,3 +17,8 @@ A comparator has a **home arc** in the main case. Attach it to the moment where 
 
 ## Rupture test
 Before splitting an arc ask: did incentives/capacity actually change, or did only leadership, rhetoric or evidence availability change? If the optimum remains stable, retain one arc and use a sub-section or vertical thread.
+
+## Output
+One `ARC.md` per period, scaffolded by `templates/arc.md` and `scripts/new_arc.py`, plus the vertical-thread ID for any mechanism reactivated across arcs.
+
+See also: `SKILL.md` orchestration step 3; `docs/skill_workflow_index.md`.

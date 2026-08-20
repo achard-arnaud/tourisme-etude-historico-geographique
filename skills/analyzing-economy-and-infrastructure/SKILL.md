@@ -24,3 +24,8 @@ Before comparing growth or sectoral transformation, normalize period, price basi
 
 ## War and infrastructure
 Separate direct destruction from maintenance gaps, connectivity loss, investment risk, land/access constraints and postwar reconstruction. A rebuilt road is an input; it is not proof that private investment, employment or productivity recovered.
+
+## Output
+Produce evidence-backed HIL-03 claim candidates for the active arc/zoom. In the current runtime, `02_hil/` is a planned/scaffold layer, not a guaranteed persisted output: never report an HIL artefact as written unless the file actually exists. Preserve negative or non-findings explicitly in notes/questions until a structured HIL schema is implemented.
+
+See also: `SKILL.md` orchestration step 6; `docs/skill_workflow_index.md`.

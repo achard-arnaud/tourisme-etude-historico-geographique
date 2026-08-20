@@ -1,0 +1,4 @@
+# Only the reader-export/publication pipeline needs this: scripts/render_full_reader_v3.py
+# and scripts/render_reader_exports.py build .docx editions with python-docx. Tests, audits and
+# qa_project.py are stdlib-only and do not require it.
+python-docx>=1.1,<2

@@ -71,3 +71,5 @@ If the reader asks for a long-project status, briefly distinguish research, cano
 Before delivery verify chronology, `but/therefore` causal transitions, uncertainty, comparator limits, absence of invented reconstruction, promise/callback closure, the applicable length policy, baseline retention, reader fit and a conclusion that returns to the causal map rather than merely recapping events.
 
 See `references/storytelling-patterns-and-review.md` for the Run 6 video extraction, benchmark boundaries and the adaptation rationale.
+
+See also: `SKILL.md` orchestration step 11; `docs/skill_workflow_index.md`.

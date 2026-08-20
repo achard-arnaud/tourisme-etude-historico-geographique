@@ -18,6 +18,7 @@ At the start and end of every substantial run, state internally and persist when
 If the user asks “where did we stop?”, answer from this checkpoint rather than reconstructing from prose memory.
 
 ## Orchestration
+Per-step artifact and template are indexed in `docs/skill_workflow_index.md`.
 1. Capture with `capturing-field-evidence`.
 2. Separate fact, claim, inference, tradition, analogy, comparator and counterfactual with `sanitizing-historical-claims`.
 3. Create rupture-bounded periods with `structuring-chronological-arcs`; allow vertical themes to cross arcs without replacing chronology.
@@ -66,6 +67,7 @@ Sources are tiered by epistemic role: T0 primary/material, T1 academic, T2 insti
 ## Verification
 Before any completion or merge claim run fresh:
 ```bash
+pip install -r requirements.txt
 python -m unittest discover -s tests -v
 python scripts/audit_skill.py .
 python scripts/audit_workflow.py docs/RUN6_WORKFLOW_MANIFEST.json

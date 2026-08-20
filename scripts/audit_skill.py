@@ -36,7 +36,7 @@ def main():
         if not meta.get('description','').startswith('Use when'): errors.append(f'bad trigger description: {p}')
     if (root/'SKILL.md').exists() and len((root/'SKILL.md').read_text(encoding='utf-8').split())>650:
         errors.append('root SKILL.md exceeds 650 words')
-    for e in errors: print('ERROR:',e)
+    for e in errors: print('ERROR:',e,file=sys.stderr)
     if errors:return 1
     print('SKILL AUDIT OK')
     return 0

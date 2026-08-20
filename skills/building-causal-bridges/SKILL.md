@@ -36,3 +36,8 @@ Usually only the first two travel cleanly. Never transport an outcome when the i
 
 ## Closure
 `A/B` bridges may enter the causal spine when adequately sourced. `C` stays explicitly hypothetical. `D` is retained only if the rejected analogy teaches a useful correction. `U` remains backlog and must not be narrated as fact.
+
+## Output
+One bridge record per mechanism gap, shaped by `templates/bridge.md` and stored in `06_bridges/*.json`, with `from_claim`/`to_claim`, source IDs and a closed `result`.
+
+See also: `SKILL.md` orchestration step 7; `docs/skill_workflow_index.md`.

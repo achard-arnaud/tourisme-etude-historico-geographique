@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-import json, sys, re
+import json, os, sys, re
 from pathlib import Path
 
 VALID_CONF=set('ABCDU')
 VALID_ZOOMS={f'Z{i}' for i in range(5)}
 VALID_TIERS={f'T{i}' for i in range(6)}
+DEBUG=bool(os.environ.get('SKILL_DEBUG'))
 
 
 def load_sources(root):
@@ -16,6 +17,7 @@ def load_sources(root):
         try:
             data=json.loads(p.read_text(encoding='utf-8'))
         except Exception as e:
+            if DEBUG: raise
             errors.append(f'invalid source register: {p}: {e}')
             continue
         if not isinstance(data,list):
@@ -40,6 +42,7 @@ def parse_frontmatter(path):
     try:
         block=text.split('---\n',2)[1]
     except Exception:
+        if DEBUG: raise
         return {}, 'invalid YAML frontmatter delimiters'
     data={}
     for line in block.splitlines():
@@ -86,6 +89,7 @@ def validate_graph(root, sources, errors):
             count+=1
             try: edge=json.loads(line)
             except Exception as e:
+                if DEBUG: raise
                 errors.append(f'invalid graph json {p}:{lineno}: {e}'); continue
             for field in ('from','relation','to','confidence','last_reviewed'):
                 if not edge.get(field): errors.append(f'graph missing {field}: {p}:{lineno}')
@@ -113,6 +117,7 @@ def main():
     for p in claims:
         try: c=json.loads(p.read_text(encoding='utf-8'))
         except Exception as e:
+            if DEBUG: raise
             errors.append(f'invalid claim json: {p}: {e}'); continue
         cid=c.get('id')
         if not cid: errors.append(f'missing claim id: {p}')
@@ -129,6 +134,7 @@ def main():
     for p in root.glob('06_bridges/*.json'):
         try: b=json.loads(p.read_text(encoding='utf-8'))
         except Exception as e:
+            if DEBUG: raise
             errors.append(f'invalid bridge json: {p}: {e}'); continue
         bid=b.get('id',p.stem); result=b.get('result')
         if result not in VALID_CONF: warnings.append(f'open/invalid bridge result: {p.name}')
@@ -143,8 +149,8 @@ def main():
     wiki_count=validate_wiki(root,sources,errors,warnings)
     graph_count=validate_graph(root,sources,errors)
 
-    for m in errors: print('ERROR:',m)
-    for m in warnings: print('WARN:',m)
+    for m in errors: print('ERROR:',m,file=sys.stderr)
+    for m in warnings: print('WARN:',m,file=sys.stderr)
     if errors: return 1
     print(f'QA OK: {len(claims)} claims, {len(sources)} sources, {wiki_count} wiki pages, {graph_count} graph edges, {len(warnings)} warnings')
     return 0

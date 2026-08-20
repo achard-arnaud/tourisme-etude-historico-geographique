@@ -24,3 +24,8 @@ End each arc with:
 Every manuscript must be identifiable as one of: `baseline`, `vnext`, `promoted/canonical`, `reader-export`. Do not silently overwrite the last known reading edition with unverified research. After research stabilizes, deliberately promote the Markdown before producing Word/PDF.
 
 Before handoff, remove duplicate entity biographies, orphan annexes, repeated source discussions and unclosed hypotheses. Then pass the structured manuscript to `storytelling-historical-travel`.
+
+## Output
+A chronological manuscript in `09_output/`, structured per `templates/output-outline.md` and tagged with its promotion state (`baseline`, `vnext`, `promoted/canonical`, `reader-export`).
+
+See also: `SKILL.md` orchestration step 10; `docs/skill_workflow_index.md`.

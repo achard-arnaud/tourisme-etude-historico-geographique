@@ -33,3 +33,5 @@ This checkpoint is part of project continuity, not historical evidence.
 - questions raised;
 - integration status;
 - no causal promotion without sourcing.
+
+See also: `SKILL.md` orchestration step 1; `docs/skill_workflow_index.md`.
