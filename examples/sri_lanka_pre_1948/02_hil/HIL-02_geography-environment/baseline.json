@@ -1,0 +1,8 @@
+{
+  "hil_id": "HIL-02_geography-environment",
+  "status": "functional-baseline-index",
+  "claim_ids": ["C-PRE-GEO-001", "C-PRE-GEO-002", "C-PRE-GEO-003", "C-PRE-GEO-004"],
+  "source_ids": ["CAMBRIDGE-AUSTRIAN-WAR-INDIA", "CAMBRIDGE-SEVEN-YEARS-CARNATIC", "CAMBRIDGE-ANGLODUTCH-MERIDIAN"],
+  "non_findings": ["The current canonical fixture contains no standalone environmental-determinist claim; geography remains a scale and connectivity constraint."],
+  "evidence_paths": ["examples/sri_lanka_pre_1948/01_arcs", "examples/sri_lanka_pre_1948/05_sources", "examples/sri_lanka_pre_1948/06_bridges"]
+}

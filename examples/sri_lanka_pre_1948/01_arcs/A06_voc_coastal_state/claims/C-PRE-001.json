@@ -1,9 +1,14 @@
 {
   "id": "C-PRE-001",
+  "type": "claim",
   "claim": "The VOC alliance with Kandy against Portugal evolved into a competing Dutch coastal sovereignty rather than a restoration of Kandyan control over the conquered ports.",
   "confidence": "B",
   "zoom": "Z2",
   "causal_role": "driver",
-  "source_ids": ["SNSL-FORTS-2022", "CAMBRIDGE-LAWMAKING"],
+  "arc": "A06_voc_coastal_state",
+  "source_ids": [
+    "SNSL-FORTS-2022",
+    "CAMBRIDGE-LAWMAKING"
+  ],
   "notes": "The exhibition supplies the fort/sequence map; academic work anchors the institutional and territorial interpretation."
 }

@@ -1,0 +1,8 @@
+{
+  "hil_id": "HIL-05_religion-culture-legitimacy",
+  "status": "functional-baseline-index",
+  "claim_ids": [],
+  "source_ids": [],
+  "non_findings": ["No standalone religion/culture causal claim is promoted in the nine-claim canonical regression fixture; field and conversation material remains available but unpromoted where evidence is incomplete."],
+  "evidence_paths": ["examples/sri_lanka_pre_1948/01_arcs", "examples/sri_lanka_pre_1948/05_sources", "examples/sri_lanka_pre_1948/06_bridges"]
+}

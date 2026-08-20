@@ -1,0 +1,8 @@
+{
+  "hil_id": "HIL-07_regional-global-system",
+  "status": "functional-baseline-index",
+  "claim_ids": ["C-PRE-GEO-001", "C-PRE-GEO-002", "C-PRE-GEO-003", "C-PRE-GEO-004"],
+  "source_ids": ["CAMBRIDGE-AUSTRIAN-WAR-INDIA", "CAMBRIDGE-FRENCH-1754-1815", "CAMBRIDGE-PORTUGUESE-LATE", "CAMBRIDGE-ANGLODUTCH-MERIDIAN"],
+  "non_findings": ["The baseline explicitly rejects compressing Portuguese, French, Dutch and British trajectories into one war or one transfer date."],
+  "evidence_paths": ["examples/sri_lanka_pre_1948/01_arcs", "examples/sri_lanka_pre_1948/05_sources", "examples/sri_lanka_pre_1948/06_bridges"]
+}
