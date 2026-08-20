@@ -25,6 +25,6 @@ War, disease, ecological change or infrastructure collapse may shift settlement 
 A province, peninsula, Indian state and sovereign country are not equivalent units. Before comparison, state the territorial level and which flows cross its boundaries. Normalize market access, fiscal/constitutional autonomy, security jurisdiction and connectivity before transporting a geographic mechanism.
 
 ## Output
-HIL-02 analytic notes (constraint/enabler mapping, territorial absorption) that become `templates/claim.md` records under `02_hil/HIL-02_geography-environment/Z<n>/`.
+Produce evidence-backed HIL-02 claim candidates for the active arc/zoom. In the current runtime, `02_hil/` is a planned/scaffold layer, not a guaranteed persisted output: never report an HIL artefact as written unless the file actually exists. Preserve negative or non-findings explicitly in notes/questions until a structured HIL schema is implemented.
 
 See also: `SKILL.md` orchestration step 6; `docs/skill_workflow_index.md`.
