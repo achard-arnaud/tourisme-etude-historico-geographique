@@ -23,7 +23,10 @@ Store the problem definition, legal instrument, implementation and observed effe
 ## Metric hygiene
 For every quantitative statement retain denominator, geography, year/period, nominal/real basis where relevant and source definition. If those are missing, downgrade the statement to an unresolved lead rather than manufacturing comparability.
 
-## Output
-One typed statement per input fragment (`source_fact`, `claim`, `inference`, `tradition`, `analogy`, `comparator`, `counterfactual`, `metric`, `policy_intent`, `policy_effect`, `question`, or `discarded_lead`), each ready to become a `templates/claim.md` record once an arc/HIL/zoom and source are attached.
+## Side-story handoff
+Statement type and narrative role are independent. A `comparator`, `analogy`, `discarded_lead` or other typed statement may later support a `comparator`, `false_lead`, `method` or other `side_story`, but sanitization never promotes it. Preserve its typed claim/source identity so the composition record can reference lineage instead of copying prose.
 
-See also: `SKILL.md` orchestration step 2; `docs/skill_workflow_index.md`.
+## Output
+One typed statement per input fragment, each ready to become a `templates/claim.md` record once an arc/HIL/zoom and source are attached, or to remain an explicit unresolved/discarded input for later composition.
+
+See also: `SKILL.md` orchestration step 2; `composing-side-stories`; `docs/skill_workflow_index.md`.
