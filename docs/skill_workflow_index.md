@@ -1,37 +1,36 @@
 # Skill / workflow / artifact index
 
-Navigation hub linking every sub-skill to its place in `SKILL.md`'s orchestration
-list, its primary artifact, and the template that gives that artifact a stable
-shape. This file is read-only reference material generated from the current
-skill contracts; it does not add new rules and must stay in sync with
-`SKILL.md` § Orchestration and `docs/agent_routing.md`.
+Current orchestration index. It links each judgment-heavy skill to its durable artefact/handoff and must stay synchronized with `SKILL.md`, `docs/agent_routing.md` and the current reviewed run manifest.
 
-| Step | Skill | Primary artifact | Template / schema | Consumed by |
+| Step | Skill | Primary artifact / handoff | Durable contract | Consumed by |
 |---|---|---|---|---|
-| 1 | `capturing-field-evidence` | session ledger entry (raw observation, source/artefact ID, provisional ARC/HIL/ZOOM) | — (feeds `templates/source-note.md` once corroborated) | `sourcing-historical-anchors`, `structuring-chronological-arcs` |
-| 2 | `sanitizing-historical-claims` | typed statement (`source_fact`/`claim`/`inference`/…) | `templates/claim.md` | `structuring-chronological-arcs`, all `analyzing-*` skills |
-| 3 | `structuring-chronological-arcs` | arc metadata / chronological structure | `templates/arc.md` (runtime materialization remains incomplete) | every downstream skill |
-| 4 | `zooming-geographic-scales` | zoom-labelled analysis placement (`Z0`–`Z4`) | `02_hil/` is a scaffold/planned layer, not guaranteed persisted output | `analyzing-*` skills, `building-causal-bridges` |
-| 5 | `sourcing-historical-anchors` | source register entry (tier + anchor role) | `templates/source-note.md` → `05_sources/source_register*.json` | `qa_project.py`, all claim/bridge/wiki/graph consumers |
-| 6 | `analyzing-institutions-and-power` | HIL-01 analysis → evidence-backed claim candidates | current runtime: canonical claim layer; no guaranteed standalone HIL file | `structuring-chronological-arcs`, `building-causal-bridges` |
-| 6 | `analyzing-geography-and-environment` | HIL-02 analysis → evidence-backed claim candidates | current runtime: canonical claim layer; no guaranteed standalone HIL file | same |
-| 6 | `analyzing-economy-and-infrastructure` | HIL-03 analysis → evidence-backed claim candidates | current runtime: canonical claim layer; no guaranteed standalone HIL file | same |
-| 6 | `analyzing-society-and-demography` | HIL-04 analysis → evidence-backed claim candidates | current runtime: canonical claim layer; no guaranteed standalone HIL file | same |
-| 6 | `analyzing-religion-culture-legitimacy` | HIL-05 analysis → evidence-backed claim candidates | current runtime: canonical claim layer; no guaranteed standalone HIL file | same |
-| 6 | `analyzing-security-and-geopolitics` | HIL-06 analysis → evidence-backed claim candidates | current runtime: canonical claim layer; no guaranteed standalone HIL file | same |
-| 7 | `building-causal-bridges` | bridge record, closed `A/B/C/D/U` | `templates/bridge.md` → `06_bridges/*.json` | `auditing-historiography-and-drifts`, `editing-historical-travel-output` |
-| 8 | `auditing-historiography-and-drifts` | drift audit + correction ledger | `templates/drift-audit.md` → `07_drifts/*.md` | `editing-historical-travel-output` |
-| 9 | `maintaining-wiki-and-graph` | wiki entity page + graph edge | `templates/wiki-entity.md` → `03_wiki/**/*.md`, `04_graph/*.jsonl` | every skill needing cross-arc recall |
-| 10 | `editing-historical-travel-output` | structured chronological manuscript | `templates/output-outline.md` → `09_output/*.md` | `storytelling-historical-travel` |
-| 11 | `storytelling-historical-travel` | reader-voice pass over the promoted manuscript (optional, non-destructive) | `skills/storytelling-historical-travel/references/*` | reader export (`render_full_reader_v3.py`, `render_reader_exports.py`) |
-| 12 | (orchestrator) | run manifest (dispatched/skipped skills, reasons, artefact paths) | `templates/run-manifest.json` | `scripts/audit_workflow.py` |
+| 1 | `capturing-field-evidence` | raw observation + origin/source ID + provisional ARC/HIL/ZOOM + optional side-story candidate hint | session ledger / source note | sanitize, source, arc |
+| 2 | `sanitizing-historical-claims` | typed statement | `templates/claim.md` | arcs, HILs, composition lineage |
+| 3 | `structuring-chronological-arcs` | rupture-bounded chronology + home-arc decisions | `templates/arc.md` / `ARC.md` when materialized | all downstream |
+| 4 | `zooming-geographic-scales` | Z0–Z4 placement + transmission mechanism | claim/HIL placement; dezoom candidate handoff | HILs, bridges, composition |
+| 5 | `sourcing-historical-anchors` | source register entry | `05_sources/source_register*.json` | all evidence consumers + side stories |
+| 6 | `analyzing-institutions-and-power` | HIL-01 claim candidates / side-story candidate hints | canonical claims; HIL artefact only when actually persisted | bridges, composition |
+| 6 | `analyzing-geography-and-environment` | HIL-02 claim candidates / dezoom-object hints | same | same |
+| 6 | `analyzing-economy-and-infrastructure` | HIL-03 claim candidates / lateral examples | same | same |
+| 6 | `analyzing-society-and-demography` | HIL-04 claim candidates / portrait-callback hints | same | same |
+| 6 | `analyzing-religion-culture-legitimacy` | HIL-05 claim candidates / object-portrait hints | same | same |
+| 6 | `analyzing-security-and-geopolitics` | HIL-06 claim candidates / dezoom-false-lead hints | same | same |
+| 7 | `building-causal-bridges` | bridge record A/B/C/D/U | `06_bridges/*.json` | drift, composition, editor |
+| 8 | `auditing-historiography-and-drifts` | drift/correction ledger | `07_drifts/*.md` | composition, editor |
+| 9 | `maintaining-wiki-and-graph` | reusable entities + typed relations | `03_wiki/**/*.md`, `04_graph/*.jsonl` | recall/composition |
+| 10 | `composing-side-stories` | normalized off-trunk composition record with lineage/placement/return | `templates/side-story.json` → `09_output/side_stories/*.json` | editor, storytelling, QA, renderer |
+| 11 | `editing-historical-travel-output` | chronological canonical manuscript consuming promoted/validated side stories | `templates/output-outline.md` → `09_output/*.md` | storytelling/export |
+| 12 | `storytelling-historical-travel` | optional non-destructive reader pass | canonical side-story identity retained; Markdown markers preserved | reader export |
+| 13 | orchestrator | dispatched/skipped skills + evidence paths | `templates/run-manifest.json` | `audit_workflow.py` |
+| 14 | orchestrator | final state/promotion checkpoint | project/run status | next run |
 
-## Reading this table
+## Contract boundaries
 
-- **HIL skills (step 6)** share one step because the orchestrator dispatches only the dimensions relevant to the run. Their analytical output is useful, but the current repository does **not** yet guarantee a persisted structured HIL artefact. A skill must not claim that `02_hil/` was written unless a corresponding file actually exists.
-- `02_hil/` and arc templates express a target architecture that is only partially materialized in the worked corpora. Treat template presence and scaffold intent separately from persisted evidence.
-- A skill with **no guaranteed persisted artifact** produces a routing/classification/analysis result that must be promoted into an actually stored downstream record before it can be treated as durable project state.
-- `scripts/qa_project.py` and `scripts/audit_workflow.py` are mechanical backstops, but their current coverage is narrower than the complete epistemic contracts; passing QA must not be interpreted as proof that every declared artifact contract is materialized.
+- HIL analysis is not durable merely because a skill ran; only actually persisted claim/HIL artefacts count as state.
+- `side_story` is the first durable **composition** artefact. It is not historical evidence and cannot upgrade the confidence/tier of its lineage.
+- Validated/promoted side stories require one home arc, lineage, a stable placement, `return_to`, normalized `kind → label`, and for `dezoom` a Z-path/mechanism/local payoff.
+- Candidate hints emitted by upstream skills are not side-story records until `composing-side-stories` creates/validates the JSON artefact.
+- `qa_project.py` validates evidence integrity plus side-story lineage; the reader renderer independently enforces survival of promoted `required_in_reader` side stories.
+- Mechanical GREEN does not prove historical truth; semantic review remains required.
 
-See also `docs/architecture.md` (system-level model) and
-`docs/agent_routing.md` (dispatch rules).
+See `docs/SOP_SIDE_STORIES.md`, `docs/architecture.md`, `docs/agent_routing.md`.
