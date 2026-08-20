@@ -4,7 +4,7 @@ from pathlib import Path
 
 HILS=["HIL-01_institutions-chronology","HIL-02_geography-environment","HIL-03_economy-infrastructure","HIL-04_society-demography","HIL-05_religion-culture-legitimacy","HIL-06_security-coercion","HIL-07_regional-global-system","HIL-08_historiography-bias"]
 
-DIRS=["00_method","01_arcs","02_hil","03_wiki/people","03_wiki/places","03_wiki/institutions","03_wiki/concepts","03_wiki/commodities","03_wiki/artifacts","04_graph","05_sources","06_bridges","07_drifts","08_questions","09_output"]
+DIRS=["00_method","01_arcs","02_hil","03_wiki/people","03_wiki/places","03_wiki/institutions","03_wiki/concepts","03_wiki/commodities","03_wiki/artifacts","04_graph","05_sources","06_bridges","07_drifts","08_questions","09_output","09_output/side_stories"]
 
 def main():
     p=argparse.ArgumentParser()
