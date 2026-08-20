@@ -12,7 +12,8 @@ Le fort de Jaffna matérialise alors moins un monument isolé qu’un changement
 
 La carte de 1751 montrant vingt-deux forts dit davantage que chaque bastion pris séparément. Le réseau diminue le coût de surveillance des ports, protège les circuits de collecte, déplace rapidement soldats et agents, dissuade les rivaux européens et offre des bases pour intervenir contre les résistances locales. Il ne rend pas la VOC omnipotente : Kandy reste capable de soutenir des révoltes et de mener la guerre. Mais il crée une asymétrie logistique durable.
 
-**Petit détour — Mannar.** Les panneaux du terrain relient pêcheries de perles, route des éléphants, racines de choya destinées à la teinture de textiles indiens et travail servile. Cette juxtaposition n’est pas anecdotique : elle montre un nord-ouest inséré dans une économie transdétroit, là où une histoire écrite depuis Colombo tend à voir une périphérie.
+<!-- [SIDE-STORY:SS-PRE-004] -->
+**Mais aussi — Mannar.** Les panneaux du terrain relient pêcheries de perles, route des éléphants, racines de choya destinées à la teinture de textiles indiens et travail servile. Cette juxtaposition n’est pas anecdotique : elle montre un nord-ouest inséré dans une économie transdétroit, là où une histoire écrite depuis Colombo tend à voir une périphérie.
 
 ## 2. De la cannelle au *paper state*
 
@@ -20,7 +21,8 @@ La cannelle est une motivation structurante de la VOC, mais elle ne suffit pas �
 
 Cette lisibilité est le bridge majeur vers la période britannique. Les Britanniques ne prennent pas en 1796 une côte administrativement vierge : ils récupèrent des forts, des agents, des catégories, des registres et des pratiques fiscales qui pourront être simplifiés, étendus ou réorganisés au XIXe siècle.
 
-### Petit détour structurant — quand le papier rencontre la caste
+<!-- [SIDE-STORY:SS-PRE-003] -->
+### Petit détour — quand le papier rencontre la caste
 
 La VOC ne crée pas une société de caste à Jaffna. Les hiérarchies, les statuts de service et les dépendances précèdent la conquête européenne. En revanche, gouverner par registre oblige l’administration à décider **qui est qui**, qui doit quoi, qui possède quoi et quels intermédiaires peuvent parler au nom d’un groupe.
 
@@ -50,6 +52,9 @@ La guerre de Succession d’Autriche ouvre en Inde à partir de 1744 une confron
 
 Vers 1740, l’environnement reste multipolaire : VOC à Ceylan et dans l’archipel, France à Pondichéry et Maurice, Britanniques à Madras, Bombay et Calcutta, puissances indiennes capables d’arbitrer les alliances. Le Portugal est déjà très affaibli ; sa contraction ne doit pas être attribuée à la guerre de Sept Ans [CAMBRIDGE-PORTUGUESE-LATE ; CAMBRIDGE-PORTUGUESE-DECLINE].
 
+<!-- [SIDE-STORY:SS-PRE-001] -->
+**Fausse piste — « le Portugal est chassé par la guerre de Sept Ans ».** Non : sa contraction asiatique est bien antérieure. Le XVIIIe siècle prolonge une survie/reconfiguration d’un Estado da Índia déjà réduit ; 1763 change surtout la symétrie stratégique entre la France et l’East India Company.
+
 Le tournant anglo-français tient autant au financement qu’aux batailles. Les gains territoriaux de l’East India Company donnent accès à des recettes indiennes capables de financer des armées locales toujours plus importantes. Après la chute de Pondichéry en 1761 et le traité de Paris, les comptoirs français subsistent mais la **parité politico-militaire** disparaît [CAMBRIDGE-FRENCH-1754-1815].
 
 Pour Ceylan, l’effet est indirect mais structurant : Kandy et la VOC restent les acteurs locaux immédiats, mais le marché des contrepoids européens se rétrécit.
@@ -64,7 +69,8 @@ Cette transition transfère plus qu’un territoire : forts, savoirs fiscaux, ca
 
 La menace française reste crédible tant que Maurice sert de base navale et corsaire. Elle se ferme progressivement avec l’occupation de Pondichéry, la prise de Maurice en 1810 puis de Java en 1811 [CAMBRIDGE-BRITISH-NAVY-1794 ; CAMBRIDGE-DESTROYING-RIVALS].
 
-### 1815 : Kandy tombe dans une fenêtre mondiale particulière
+<!-- [SIDE-STORY:SS-PRE-002] -->
+### Dézoom — 1815 : Kandy tombe dans une fenêtre mondiale particulière
 
 Waterloo ne « cause » pas la conquête de Kandy. Les mécanismes immédiats sont kandyan : conflit entre Sri Vikrama Rajasinha et des élites du royaume, capacité britannique à former une coalition locale, expérience tirée de l’échec militaire de 1803 et volonté de supprimer une frontière intérieure coûteuse.
 
