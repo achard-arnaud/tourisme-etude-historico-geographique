@@ -1,0 +1,8 @@
+{
+ "schema_version":"1.0","class":"arc_recap","id":"RECAP-A06","arc":"A06_voc_coastal_state","status":"validated",
+ "causal_schema":{"drivers":[{"claim_id":"C-PRE-001","summary":"VOC port/fort control becomes competing coastal sovereignty."},{"claim_id":"C-PRE-002","summary":"Territorial fiscal administration increases legibility."}],"amplifiers":[],"constraints":[],"consequences":[{"claim_id":"C-PRE-002","summary":"Registers, litigation and categories deepen administrative reach."}]},
+ "protagonists":[{"name":"Kandyan monarchy","role":"inland sovereign","objective":"Use the VOC against Portugal without losing the coast.","constraints":["maritime projection"],"perceived_options":["alliance","resistance"],"claim_ids":["C-PRE-001"]},{"name":"VOC Ceylon","role":"company-state","objective":"Turn conquered coastal nodes into defensible revenue and administration.","constraints":["cost of coercion","territorial obligations"],"perceived_options":["fort network","taxation","registration"],"claim_ids":["C-PRE-001","C-PRE-002"]}],
+ "what_changed":["The ally becomes a coastal sovereign competitor.","Military nodes become an administrative-fiscal system."],
+ "prepares_next":[{"bullet":"A stronger paper-and-fort state enters an Indian Ocean system that is becoming increasingly asymmetric in Britain's favour.","next_arc":"A07_european_wars_reordering","bridge_ids":[]}],
+ "lineage":{"claim_ids":["C-PRE-001","C-PRE-002"],"source_ids":[],"bridge_ids":["B-PRE-001"]},"render":{"marker":"[ARC-RECAP:RECAP-A06]","required_in_reader":true}
+}

@@ -1,35 +1,8 @@
 {
-  "schema_version": "1.0",
-  "class": "side_story",
-  "id": "SS-PRE-004",
-  "kind": "also",
-  "status": "promoted",
-  "title": "Mannar comme interface transdétroit",
-  "arc": "A06_voc_coastal_state",
-  "related_arcs": [],
-  "purpose": "Keep the field-derived Mannar example because it makes the fort-network economy tangible without promoting one exhibition panel into an island-wide causal claim.",
-  "reason_off_trunk": "The pearl, elephant, choya and labour cluster illustrates the north-western interface but is not necessary to the main VOC sovereignty mechanism.",
-  "payoff": "The reader returns to Jaffna Fort seeing the north-west as a connected economic corridor rather than a Colombo-defined periphery.",
-  "reader_presets": ["advanced", "intermediate"],
-  "lineage": {
-    "claim_ids": ["C-PRE-001"],
-    "source_ids": ["SNSL-FORTS-2022", "SNSL-SLAVERY-2021", "FIELD-JAFFNA-20260818"],
-    "bridge_ids": [],
-    "hil_ids": ["HIL-02_geography-environment", "HIL-03_economy-infrastructure"],
-    "drift_paths": ["07_drifts/dutch_exhibition_audit.md"],
-    "origin_paths": ["00_method/field_2026-08-18_jaffna_voc.md"]
-  },
-  "placement": {
-    "section_anchor": "## 1. Jaffna oblige à retourner la carte",
-    "return_to": "C-PRE-001"
-  },
-  "zoom_excursion": null,
-  "content": {
-    "takeaway": "Mannar shows the north-western coast as an Indian Ocean and Palk-Strait interface, not a terminal periphery."
-  },
-  "render": {
-    "label": "Mais aussi",
-    "marker": "[SIDE-STORY:SS-PRE-004]",
-    "required_in_reader": true
-  }
+  "schema_version":"1.1","class":"side_story","id":"SS-PRE-004","kind":"also","status":"validated","lineage_quality":"full",
+  "title":"Mannar comme interface transdétroit","arc":"A06_voc_coastal_state","purpose":"Make the fort-network economy tangible without promoting one field panel into an island-wide cause.","reason_off_trunk":"Illustrative north-western interface.","payoff":"Return to Jaffna seeing the north-west as a corridor rather than a terminal periphery.","map_eligible":true,"reader_policy":{"min_age":10},
+  "lineage":{"claim_ids":["C-PRE-001"],"source_ids":["SNSL-FORTS-2022","SNSL-SLAVERY-2021","FIELD-JAFFNA-20260818"],"bridge_ids":[],"hil_ids":["HIL-02_geography-environment","HIL-03_economy-infrastructure"],"drift_paths":["07_drifts/dutch_exhibition_audit.md"],"origin_paths":["00_method/field_2026-08-18_jaffna_voc.md"]},
+  "placement":{"section_anchor":"Jaffna oblige à retourner la carte","return_to":"C-PRE-001"},"zoom_excursion":null,
+  "content":{"takeaway":"Mannar shows the north-west as an Indian Ocean/Palk interface.","body_markdown":"Perles, éléphants, choya, travail et navigation relient Mannar au détroit et aux réseaux indiens ; l’exemple rend visible une interface que la perspective colombo-centrique périphérise.","legacy_titles":["Mannar"]},
+  "render":{"label":"Mais aussi","marker":"[SIDE-STORY:SS-PRE-004]","required_in_reader":true}
 }

@@ -1,41 +1,9 @@
 {
-  "schema_version": "1.0",
-  "class": "side_story",
-  "id": "SS-PRE-002",
-  "kind": "dezoom",
-  "status": "promoted",
-  "title": "1815 : la chute de Kandy dans une fenêtre mondiale particulière",
-  "arc": "A07_european_wars_reordering",
-  "related_arcs": [],
-  "purpose": "Connect the local Kandyan rupture to the regional disappearance of credible European balancing options without turning the global context into a direct cause.",
-  "reason_off_trunk": "The regional system amplifies the local political fracture; it does not replace the immediate Kandyan and British mechanisms in the causal trunk.",
-  "payoff": "The reader returns to Kandy understanding why an internal crisis became unusually exploitable in 1815.",
-  "reader_presets": ["advanced", "intermediate"],
-  "lineage": {
-    "claim_ids": ["C-PRE-GEO-003", "C-PRE-GEO-004"],
-    "source_ids": ["CAMBRIDGE-COMPANY-FORTRESS-END", "CAMBRIDGE-ANGLODUTCH-MERIDIAN", "CAMBRIDGE-DESTROYING-RIVALS", "CAMBRIDGE-COMPANY-REDUCED-1811"],
-    "bridge_ids": ["B-PRE-003"],
-    "hil_ids": ["HIL-06_security-coercion", "HIL-07_regional-global-system"],
-    "drift_paths": ["07_drifts/european_wars_chronology_audit.md"],
-    "origin_paths": ["05_sources/european_wars_indian_ocean_detour.md"]
-  },
-  "placement": {
-    "section_anchor": "## 5. 1793–1815 : Révolution, Napoléon et fermeture du marché des alliances",
-    "return_to": "C-PRE-GEO-004"
-  },
-  "zoom_excursion": {
-    "from": "Z1",
-    "to": "Z3",
-    "return_to": "Z1",
-    "mechanism": "British regional fiscal-military and naval superiority progressively removed Dutch and French balancing options available to Kandyan elites.",
-    "local_payoff": "The higher-scale shift explains why the 1815 internal Kandyan fracture faced a much narrower external-balancing environment than earlier crises."
-  },
-  "content": {
-    "takeaway": "Waterloo does not cause Kandy's fall; global asymmetry makes the local fracture more exploitable."
-  },
-  "render": {
-    "label": "Dézoom",
-    "marker": "[SIDE-STORY:SS-PRE-002]",
-    "required_in_reader": true
-  }
+  "schema_version":"1.1","class":"side_story","id":"SS-PRE-002","kind":"dezoom","status":"validated","lineage_quality":"full",
+  "title":"1815 : la chute de Kandy dans une fenêtre mondiale particulière","arc":"A07_european_wars_reordering","purpose":"Connect the Kandyan rupture to the regional disappearance of credible European balancing options without making global context the direct cause.","reason_off_trunk":"Regional system is an amplifier, not the immediate cause.","payoff":"Return to Kandy with a narrower external-balancing set in 1815.","map_eligible":true,"reader_policy":{"min_age":10},
+  "lineage":{"claim_ids":["C-PRE-GEO-003","C-PRE-GEO-004"],"source_ids":["CAMBRIDGE-COMPANY-FORTRESS-END","CAMBRIDGE-ANGLODUTCH-MERIDIAN","CAMBRIDGE-DESTROYING-RIVALS","CAMBRIDGE-COMPANY-REDUCED-1811"],"bridge_ids":["B-PRE-003"],"hil_ids":["HIL-06_security-coercion","HIL-07_regional-global-system"],"drift_paths":["07_drifts/european_wars_chronology_audit.md"],"origin_paths":["05_sources/european_wars_indian_ocean_detour.md"]},
+  "placement":{"section_anchor":"1793–1815 : Révolution, Napoléon et fermeture du marché des alliances","return_to":"C-PRE-GEO-004"},
+  "zoom_excursion":{"from":"Z1","to":"Z3","return_to":"Z1","mechanism":"British fiscal-military and naval superiority progressively removed Dutch and French balancing options.","local_payoff":"The internal Kandyan fracture faced a narrower external-balancing environment than earlier crises."},
+  "content":{"takeaway":"Waterloo does not cause Kandy's fall; global asymmetry makes the local fracture more exploitable.","body_markdown":"Les causes immédiates restent kandyanes et britanniques. Le dézoom montre seulement que la disparition des contrepoids hollandais et français rend la crise interne exceptionnellement exploitable.","legacy_titles":["1815 : Kandy tombe dans une fenêtre mondiale particulière"]},
+  "render":{"label":"Dézoom","marker":"[SIDE-STORY:SS-PRE-002]","required_in_reader":true}
 }

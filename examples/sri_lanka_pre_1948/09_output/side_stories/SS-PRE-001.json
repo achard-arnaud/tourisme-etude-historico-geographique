@@ -1,35 +1,8 @@
 {
-  "schema_version": "1.0",
-  "class": "side_story",
-  "id": "SS-PRE-001",
-  "kind": "false_lead",
-  "status": "promoted",
-  "title": "Le Portugal n'est pas chassé par la guerre de Sept Ans",
-  "arc": "A07_european_wars_reordering",
-  "related_arcs": [],
-  "purpose": "Preserve the chronology correction because the intuitive compressed narrative is plausible enough to recur.",
-  "reason_off_trunk": "The Portuguese chronology corrects a false explanation but is not itself a causal step in the Anglo-French-to-British sequence.",
-  "payoff": "The reader returns to the European-war sequence distinguishing long Portuguese contraction from the later Anglo-French strategic asymmetry.",
-  "reader_presets": ["advanced", "intermediate"],
-  "lineage": {
-    "claim_ids": ["C-PRE-GEO-002"],
-    "source_ids": ["CAMBRIDGE-PORTUGUESE-LATE", "CAMBRIDGE-PORTUGUESE-DECLINE"],
-    "bridge_ids": [],
-    "hil_ids": ["HIL-07_regional-global-system", "HIL-08_historiography-bias"],
-    "drift_paths": ["07_drifts/european_wars_chronology_audit.md"],
-    "origin_paths": ["05_sources/european_wars_indian_ocean_detour.md"]
-  },
-  "placement": {
-    "section_anchor": "## 4. 1744–1763 : les guerres européennes changent le système régional",
-    "return_to": "C-PRE-GEO-001"
-  },
-  "zoom_excursion": null,
-  "content": {
-    "takeaway": "Le déclin portugais est antérieur; 1763 recompose surtout la compétition anglo-française."
-  },
-  "render": {
-    "label": "Fausse piste",
-    "marker": "[SIDE-STORY:SS-PRE-001]",
-    "required_in_reader": true
-  }
+  "schema_version":"1.1","class":"side_story","id":"SS-PRE-001","kind":"false_lead","status":"validated","lineage_quality":"full",
+  "title":"Le Portugal n'est pas chassé par la guerre de Sept Ans","arc":"A07_european_wars_reordering","purpose":"Preserve a recurring chronology correction without making Portuguese contraction a causal step in the Anglo-French sequence.","reason_off_trunk":"Correction rather than causal-spine step.","payoff":"Separate long Portuguese contraction from the later Anglo-French asymmetry.","map_eligible":true,"reader_policy":{"min_age":10},
+  "lineage":{"claim_ids":["C-PRE-GEO-002"],"source_ids":["CAMBRIDGE-PORTUGUESE-LATE","CAMBRIDGE-PORTUGUESE-DECLINE"],"bridge_ids":[],"hil_ids":["HIL-07_regional-global-system","HIL-08_historiography-bias"],"drift_paths":["07_drifts/european_wars_chronology_audit.md"],"origin_paths":["05_sources/european_wars_indian_ocean_detour.md"]},
+  "placement":{"section_anchor":"1744–1763 : les guerres européennes changent le système régional","return_to":"C-PRE-GEO-001"},"zoom_excursion":null,
+  "content":{"takeaway":"Le déclin portugais est antérieur; 1763 recompose surtout la compétition anglo-française.","body_markdown":"Le Portugal est déjà une puissance résiduelle avant 1763. La guerre de Sept Ans recompose surtout la rivalité anglo-française ; elle ne provoque pas le déclin portugais.","legacy_titles":["le Portugal est chassé par la guerre de Sept Ans"]},
+  "render":{"label":"Fausse piste","marker":"[SIDE-STORY:SS-PRE-001]","required_in_reader":true}
 }
