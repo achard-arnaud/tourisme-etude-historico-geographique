@@ -54,6 +54,21 @@ Le premier test exécutable de cette fixture a volontairement échoué sur le ru
 
 Ce RED démontre que la CI historique pouvait être verte sans prouver le workflow fonctionnel complet.
 
+## GREEN de référence
+
+Le run GitHub Actions **#216** a fermé la boucle fonctionnelle :
+
+- **46/46 tests** verts ;
+- `SKILL AUDIT OK` ;
+- Run 7 historique toujours auditable ;
+- QA pré-1948 : **9 claims / 37 sources / 3 wiki / 4 graph edges / 0 warning** ;
+- QA post-1948 inchangée et verte : **30 claims / 48 sources / 7 wiki / 10 graph edges / 0 warning** ;
+- runner fonctionnel : **9 claims / 37 sources / 3 bridges / 3 wiki / 4 graph edges / 8 HIL** ;
+- reader pré-1948 : **19 274 → 21 236 mots**, soit **110,2 % de rétention** de la baseline longue ;
+- rendu complet pré + post vert.
+
+La CI rejoue désormais explicitement `python scripts/qa_functional_pre1948.py` à chaque PR vers `dev`/`main` et à chaque push sur ces branches.
+
 ## Tests négatifs déjà couverts
 
 La suite existante rejette notamment :
