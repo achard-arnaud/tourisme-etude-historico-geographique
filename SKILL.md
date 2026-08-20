@@ -29,7 +29,7 @@ See `docs/skill_workflow_index.md` for contracts and artefacts.
 9. Store reusable knowledge with `maintaining-wiki-and-graph`.
 10. Route useful off-trunk material through `composing-side-stories`; every validated/promoted item has lineage, placement and return-to-trunk. `dezoom` additionally needs scale mechanism and local payoff.
 11. Structure canonical Markdown with `editing-historical-travel-output`, consuming validated side stories with normalized labels/markers.
-12. Render with `storytelling-historical-travel` only non-destructively for advanced readers; required promoted side stories must survive.
+12. Render with `storytelling-historical-travel` only non-destructively for advanced readers; it **must never set a maximum length** and required promoted side stories must survive.
 13. Record every dispatched/skipped skill with reasons and artefact paths in the run manifest.
 14. Re-run checkpoint and promote only after verification.
 
