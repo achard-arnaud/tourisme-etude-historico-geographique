@@ -28,6 +28,6 @@ Migration may weaken the origin territory while strengthening households or dias
 Peaceful comparator regions are useful only after marking conflict as a major confounder. Never attribute a development gap to language, caste or policy while leaving war untreated.
 
 ## Output
-HIL-06 analytic notes (war-development channels, externalisation test) that become `templates/claim.md` records under `02_hil/HIL-06_security-coercion/Z<n>/`.
+Produce evidence-backed HIL-06 claim candidates for the active arc/zoom. In the current runtime, `02_hil/` is a planned/scaffold layer, not a guaranteed persisted output: never report an HIL artefact as written unless the file actually exists. Preserve negative or non-findings explicitly in notes/questions until a structured HIL schema is implemented.
 
 See also: `SKILL.md` orchestration step 6; `docs/skill_workflow_index.md`.
