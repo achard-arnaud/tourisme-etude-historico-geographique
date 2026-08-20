@@ -5,27 +5,21 @@ description: Use when fiscal systems, production, labour, trade, ports, transpor
 
 # Analyzing economy and infrastructure
 
-Map resource mobilisation: production → extraction/tax → treasury → administration/security → reinvestment. Distinguish physical infrastructure from the institutions required to operate it. For trade, identify commodity, route, intermediary, seasonality, taxation and coercive control.
+Map resource mobilisation: production → extraction/tax → treasury → administration/security → reinvestment. Distinguish physical infrastructure from institutions required to operate it. For trade, identify commodity, route, intermediary, seasonality, taxation and coercive control.
 
 ## Conversion-of-advantage test
-When a place appears to possess an advantage — education, port position, resources, skills, diaspora or technology — do not equate endowment with development. Trace:
-1. endowment / capability;
-2. access institution and property rights;
-3. infrastructure and connectivity;
-4. firms/jobs/markets able to absorb it;
-5. territorial spillovers (wages, suppliers, tax base, services);
-6. leakage or externalisation (migration, remittances, offshore ownership, enclave production);
-7. shock persistence and reconstruction costs.
-
-Distinguish **human capital retained in people** from **human capital captured by the territory**. Diaspora success can coexist with local underdevelopment.
+Trace endowment/capability → access institution/property rights → infrastructure/connectivity → firms/jobs/markets → territorial spillovers → leakage/externalisation → shock persistence/reconstruction. Distinguish human capital retained in people from human capital captured by territory.
 
 ## Comparative discipline
-Before comparing growth or sectoral transformation, normalize period, price basis, population denominator, territorial level and market size. Prefer trends and mechanisms over decorative rankings. Never invent quantitative crossovers from incomparable series.
+Normalize period, price basis, population denominator, territorial level and market size. Prefer trends/mechanisms over decorative rankings.
 
 ## War and infrastructure
-Separate direct destruction from maintenance gaps, connectivity loss, investment risk, land/access constraints and postwar reconstruction. A rebuilt road is an input; it is not proof that private investment, employment or productivity recovered.
+Separate direct destruction from maintenance gaps, connectivity loss, investment risk, access constraints and postwar reconstruction. A rebuilt road is an input, not proof of recovery.
+
+## Side-story handoff
+A commodity chain, port vignette, infrastructure object or bounded comparison that illustrates but does not alter the causal spine can become `detour`, `object_focus`, `also` or `comparator`. Nominate it with HIL-03 + claim/source lineage; do not turn colorful economic detail into an unsourced sidebar or promote it here.
 
 ## Output
-Produce evidence-backed HIL-03 claim candidates for the active arc/zoom. In the current runtime, `02_hil/` is a planned/scaffold layer, not a guaranteed persisted output: never report an HIL artefact as written unless the file actually exists. Preserve negative or non-findings explicitly in notes/questions until a structured HIL schema is implemented.
+Produce evidence-backed HIL-03 claim candidates for the active arc/zoom and explicit composition candidate handoffs. Never report a structured HIL artefact unless it exists.
 
-See also: `SKILL.md` orchestration step 6; `docs/skill_workflow_index.md`.
+See also: `SKILL.md` orchestration step 6; `composing-side-stories`; `docs/skill_workflow_index.md`.
