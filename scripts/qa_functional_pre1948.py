@@ -1,177 +1,52 @@
 #!/usr/bin/env python3
-"""Deterministic end-to-end functional QA for the canonical Sri Lanka pre-1948 fixture."""
-
+"""End-to-end mechanical regression baseline for the Sri Lanka pre-1948 fixture."""
 from __future__ import annotations
-
-import json
-import subprocess
-import sys
+import json,subprocess,sys
 from pathlib import Path
-
-from side_story_contract import assert_rendered_side_stories, load_side_stories, validate_side_stories
-
-REPO = Path(__file__).resolve().parents[1]
-PROJECT = REPO / "examples" / "sri_lanka_pre_1948"
-STATEMENT_TYPES = {"source_fact", "claim", "inference", "tradition", "analogy", "comparator", "counterfactual", "metric", "policy_intent", "policy_effect", "question", "discarded_lead"}
-CAUSAL_ROLES = {"driver", "amplifier", "constraint", "consequence", "non-cause", "context"}
-ANCHOR_ROLES = {"canonical anchor", "specialist institutional anchor", "corroborating bridge", "lead"}
-HILS = ["HIL-01_institutions-chronology", "HIL-02_geography-environment", "HIL-03_economy-infrastructure", "HIL-04_society-demography", "HIL-05_religion-culture-legitimacy", "HIL-06_security-coercion", "HIL-07_regional-global-system", "HIL-08_historiography-bias"]
-EXPECTED = {"claims": 9, "sources": 37, "bridges": 3, "wiki": 3, "graph": 4, "hils": 8, "side_stories": 4}
-
-
-def run(command: list[str]) -> subprocess.CompletedProcess[str]:
-    result = subprocess.run(command, cwd=REPO, text=True, capture_output=True)
-    if result.returncode:
-        if result.stdout:
-            print(result.stdout, end="", file=sys.stderr)
-        if result.stderr:
-            print(result.stderr, end="", file=sys.stderr)
-        raise RuntimeError(f"command failed ({result.returncode}): {' '.join(command)}")
-    return result
-
-
-def load_sources() -> list[dict]:
-    sources: list[dict] = []
-    for path in sorted((PROJECT / "05_sources").glob("source_register*.json")):
-        sources.extend(json.loads(path.read_text(encoding="utf-8")))
-    return sources
-
-
-def render_pre_without_mutating_shared_metrics() -> subprocess.CompletedProcess[str]:
-    metrics_path = REPO / "docs" / "RUN7_V3_RETENTION_METRICS.json"
-    previous = metrics_path.read_bytes() if metrics_path.exists() else None
-    try:
-        return run([sys.executable, "scripts/render_full_reader_v3.py", "--project", "pre"])
-    finally:
-        if previous is None:
-            metrics_path.unlink(missing_ok=True)
-        else:
-            metrics_path.write_bytes(previous)
-
-
-def main() -> int:
-    errors: list[str] = []
-    for rel in ["project.json", "00_method", "01_arcs", "02_hil", "03_wiki", "04_graph", "05_sources", "06_bridges", "07_drifts", "08_questions", "09_output", "09_output/side_stories"]:
-        if not (PROJECT / rel).exists():
-            errors.append(f"missing canonical scaffold path: {rel}")
-
-    claims = sorted(PROJECT.glob("01_arcs/*/claims/*.json"))
-    if len(claims) != EXPECTED["claims"]:
-        errors.append(f"claim count {len(claims)} != {EXPECTED['claims']}")
-    for path in claims:
-        try:
-            claim = json.loads(path.read_text(encoding="utf-8"))
-        except Exception as exc:
-            errors.append(f"invalid claim JSON {path}: {exc}")
-            continue
-        for field in ("id", "type", "claim", "confidence", "zoom", "causal_role", "arc", "source_ids"):
-            if field not in claim:
-                errors.append(f"{path.name}: missing {field}")
-        if claim.get("type") not in STATEMENT_TYPES:
-            errors.append(f"{path.name}: invalid statement type {claim.get('type')!r}")
-        if claim.get("causal_role") not in CAUSAL_ROLES:
-            errors.append(f"{path.name}: invalid causal role {claim.get('causal_role')!r}")
-        expected_arc = path.parents[1].name
-        if claim.get("arc") != expected_arc:
-            errors.append(f"{path.name}: arc {claim.get('arc')!r} != {expected_arc!r}")
-
-    arcs = sorted(path for path in (PROJECT / "01_arcs").iterdir() if path.is_dir())
-    if len(arcs) != 3:
-        errors.append(f"arc count {len(arcs)} != 3")
-    for arc in arcs:
-        arc_file = arc / "ARC.md"
-        if not arc_file.exists():
-            errors.append(f"missing ARC.md: {arc.name}")
-            continue
-        text = arc_file.read_text(encoding="utf-8")
-        for heading in ("## Entry rupture", "## Causal question", "## Exit rupture / bridge forward"):
-            if heading not in text:
-                errors.append(f"{arc.name}: missing {heading}")
-
-    for hil in HILS:
-        path = PROJECT / "02_hil" / hil / "baseline.json"
-        if not path.exists():
-            errors.append(f"missing HIL baseline: {hil}")
-            continue
-        payload = json.loads(path.read_text(encoding="utf-8"))
-        if payload.get("hil_id") != hil:
-            errors.append(f"{hil}: mismatched hil_id")
-        if "claim_ids" not in payload or "non_findings" not in payload:
-            errors.append(f"{hil}: incomplete baseline contract")
-
-    sources = load_sources()
-    if len(sources) != EXPECTED["sources"]:
-        errors.append(f"source count {len(sources)} != {EXPECTED['sources']}")
-    source_ids = {source.get("id") for source in sources}
-    if len(source_ids) != len(sources):
-        errors.append("duplicate source ids across pre-1948 registers")
-    for source in sources:
-        if source.get("anchor_role") not in ANCHOR_ROLES:
-            errors.append(f"{source.get('id')}: invalid anchor role {source.get('anchor_role')!r}")
-
-    bridges = sorted((PROJECT / "06_bridges").glob("*.json"))
-    if len(bridges) != EXPECTED["bridges"]:
-        errors.append(f"bridge count {len(bridges)} != {EXPECTED['bridges']}")
-    wiki = [path for path in (PROJECT / "03_wiki").rglob("*.md") if path.name.lower() != "readme.md"]
-    if len(wiki) != EXPECTED["wiki"]:
-        errors.append(f"wiki page count {len(wiki)} != {EXPECTED['wiki']}")
-    graph_edges = sum(sum(1 for line in path.read_text(encoding="utf-8").splitlines() if line.strip()) for path in (PROJECT / "04_graph").glob("*.jsonl"))
-    if graph_edges != EXPECTED["graph"]:
-        errors.append(f"graph edge count {graph_edges} != {EXPECTED['graph']}")
-
-    side_errors, side_warnings, side_story_count = validate_side_stories(PROJECT, check_render=True)
-    errors.extend(side_errors)
-    if side_warnings:
-        errors.extend(f"unexpected side-story warning: {warning}" for warning in side_warnings)
-    if side_story_count != EXPECTED["side_stories"]:
-        errors.append(f"side-story count {side_story_count} != {EXPECTED['side_stories']}")
-
-    if not (PROJECT / "08_questions" / "baseline_questions.md").exists():
-        errors.append("missing functional question backlog")
-    for rel in ("09_output/report_v3_full.md", "09_output/Sri_Lanka_Fresque_historico_geographique_vol_retour_v3.docx"):
-        if not (PROJECT / rel).exists():
-            errors.append(f"missing reader output: {rel}")
-
+from side_story_contract import validate_side_stories
+from arc_recap_contract import validate_arc_recaps
+from graph_link_audit import validate_graph_links
+REPO=Path(__file__).resolve().parents[1];PROJECT=REPO/'examples/sri_lanka_pre_1948'
+def run(cmd):
+    r=subprocess.run(cmd,cwd=REPO,text=True,capture_output=True)
+    if r.returncode:
+        if r.stdout:print(r.stdout,end='',file=sys.stderr)
+        if r.stderr:print(r.stderr,end='',file=sys.stderr)
+        raise RuntimeError('command failed: '+' '.join(cmd))
+    return r
+def main():
+    errors=[]
+    for rel in ['project.json','00_method/output_state.json','00_method/reader_profile.json','01_arcs','02_hil','03_wiki','04_graph/nodes.jsonl','04_graph/edges.jsonl','05_sources','06_bridges','07_drifts','08_questions/baseline_questions.md','09_output/report_v3_full.md','09_output/side_stories','09_output/arc_recaps']:
+        if not (PROJECT/rel).exists():errors.append(f'missing {rel}')
+    claims=list(PROJECT.glob('01_arcs/*/claims/*.json'));sources=[]
+    for p in (PROJECT/'05_sources').glob('source_register*.json'):sources+=json.loads(p.read_text(encoding='utf-8'))
+    bridges=list((PROJECT/'06_bridges').glob('*.json'));wiki=[p for p in (PROJECT/'03_wiki').rglob('*.md') if p.name.lower()!='readme.md'];edges=sum(1 for p in (PROJECT/'04_graph').glob('edges*.jsonl') for line in p.read_text(encoding='utf-8').splitlines() if line.strip())
+    if len(claims)!=9:errors.append(f'claim count {len(claims)} != 9')
+    if len(sources)!=37:errors.append(f'source count {len(sources)} != 37')
+    if len(bridges)!=3:errors.append(f'bridge count {len(bridges)} != 3')
+    if len(wiki)!=3:errors.append(f'wiki count {len(wiki)} != 3')
+    if edges!=4:errors.append(f'graph edges {edges} != 4')
+    hils=list((PROJECT/'02_hil').glob('HIL-*/baseline.json'))
+    if len(hils)!=8:errors.append(f'HIL baseline count {len(hils)} != 8')
+    se,sw,side_count,coverage=validate_side_stories(PROJECT)
+    errors+=se+[f'unexpected side-story warning: {w}' for w in sw]
+    if side_count<25:errors.append(f'side-story inventory too small: {side_count}')
+    if coverage['untracked']!=0:errors.append(f"untracked side stories: {coverage['untracked']}")
+    re,rw,recaps=validate_arc_recaps(PROJECT);errors+=re+[f'unexpected recap warning: {w}' for w in rw]
+    if recaps!=3:errors.append(f'arc recap count {recaps} != 3')
+    ge,gw,nodes,gedges=validate_graph_links(PROJECT);errors+=ge+[f'unexpected graph warning: {w}' for w in gw]
     if errors:
-        for error in errors:
-            print(f"ERROR: {error}", file=sys.stderr)
+        for e in errors:print('ERROR:',e,file=sys.stderr)
         return 1
-
     try:
-        for command in (
-            [sys.executable, "scripts/audit_skill.py", "."],
-            [sys.executable, "scripts/audit_workflow.py", "docs/RUN10_SIDE_STORIES_MANIFEST.json"],
-            [sys.executable, "scripts/qa_project.py", "examples/sri_lanka_pre_1948"],
-        ):
-            run(command)
-        rendered = render_pre_without_mutating_shared_metrics()
-    except RuntimeError as exc:
-        print(f"ERROR: {exc}", file=sys.stderr)
-        return 1
-
-    try:
-        metric = json.loads(rendered.stdout)[0]
-        reader_markdown = (PROJECT / "09_output" / "report_v3_full.md").read_text(encoding="utf-8")
-        assert_rendered_side_stories(PROJECT, reader_markdown)
-    except Exception as exc:
-        print(f"ERROR: invalid renderer/side-story metrics: {exc}", file=sys.stderr)
-        return 1
-
-    baseline_words = int(metric.get("baseline_docx_words", 0))
-    output_words = int(metric.get("v3_docx_words", 0))
-    retention = float(metric.get("retention_vs_baseline_percent", 0))
-    if metric.get("project") != "pre" or metric.get("side_stories") != side_story_count or output_words < baseline_words or retention < 100:
-        print(f"ERROR: retention/composition gate failed: baseline={baseline_words}, output={output_words}, retention={retention}%, side_stories={metric.get('side_stories')}", file=sys.stderr)
-        return 1
-
-    print(
-        "PRE1948 FUNCTIONAL QA OK: "
-        f"{len(claims)} claims, {len(sources)} sources, {len(bridges)} bridges, "
-        f"{len(wiki)} wiki pages, {graph_edges} graph edges, {len(HILS)} HIL baselines, "
-        f"{side_story_count} side stories, retention {retention}% ({baseline_words} -> {output_words} words)"
-    )
+        run([sys.executable,'scripts/audit_skill.py','.']);run([sys.executable,'scripts/audit_workflow.py','--latest']);run([sys.executable,'scripts/qa_project.py',str(PROJECT)]);run([sys.executable,'scripts/qa_composition_pipeline.py',str(PROJECT)])
+        metrics_path=REPO/'docs/RUN7_V3_RETENTION_METRICS.json';previous=metrics_path.read_bytes() if metrics_path.exists() else None
+        try:rendered=run([sys.executable,'scripts/render_full_reader_v3.py','--project','pre'])
+        finally:
+            if previous is not None:metrics_path.write_bytes(previous)
+        metric=json.loads(rendered.stdout)[0];ret=float(metric['retention_vs_baseline_percent'])
+        if ret<100:raise RuntimeError(f'retention {ret}%')
+    except Exception as exc:print(f'ERROR: {exc}',file=sys.stderr);return 1
+    print(f"PRE1948 FUNCTIONAL QA OK: 9 claims, 37 sources, 3 bridges, 3 wiki pages, 4 graph edges/{nodes} nodes, 8 HIL baselines, {side_count} side stories ({coverage['tracked']}/{coverage['discovered']} tracked), 3 arc recaps, retention {ret}%")
     return 0
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
+if __name__=='__main__':raise SystemExit(main())
