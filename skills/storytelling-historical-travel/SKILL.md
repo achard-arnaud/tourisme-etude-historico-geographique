@@ -6,70 +6,47 @@ description: Use when a researched historical travel corpus must be rendered for
 # Storytelling historical travel
 
 ## Reader contract
-Resolve or infer and keep stable:
-- **audience**: advanced / intermediate / child;
-- **language** and translation policy for names/terms;
-- **tone**: analytical, guide-like, narrative, contemplative, etc.;
-- **register**: scholarly, educated generalist, family/child;
-- **length policy** and reading context. A budget is optional; for an advanced consolidation it is unconstrained unless the reader explicitly requests an abridgement.
-If already established, do not ask again.
+Resolve or infer and keep stable: **audience** (advanced/intermediate/child), language/translation policy, tone, register, length policy and reading context. For an advanced consolidation, length is unconstrained unless explicitly abridged.
 
 ## Audience presets
 ### advanced
-Preserve historiographic disputes, source families, competing causal models, comparator limits, detours, callbacks and explicit uncertainty. Assume the reader can retain dynasties, institutions and cross-arc references.
-
-There is **no maximum length** for the advanced preset. Start from the last complete promoted baseline, treat later manuscripts as deltas unless they are proven complete, and do not trade coverage for pacing. Before export, compute a retention comparison against the baseline. Any unexplained loss of a section, table, source family, open question or substantial word volume is a blocking defect.
+Preserve historiographic disputes, source families, competing causal models, comparator limits, detours, callbacks, promoted side stories and explicit uncertainty. There is **no maximum length**. Start from the last complete promoted baseline, treat later manuscripts as deltas unless proven complete, and block silent loss.
 
 ### intermediate
-Keep causal architecture but reduce proper-name density. Explain technical terms inline and surface controversies only when they change interpretation.
+Keep causal architecture but reduce proper-name density. Explain technical terms inline and surface controversies when they change interpretation.
 
 ### child
-Use concrete places, objects and human-scale stakes. Never invent dialogue, thoughts, motives, dates or events. Mark uncertainty simply and avoid good-guys/bad-guys framing.
+Use concrete places, objects and human-scale stakes. Never invent dialogue, thoughts, motives, dates or events. Mark uncertainty simply.
 
-## Length policy
-Length bands may be used only for intermediate, child or explicitly abridged outputs. They are never defaults for an advanced consolidation. If the user requests a shorter derivative, keep the full baseline as a separate canonical artefact and label the derivative as abridged.
-
-For advanced work, apply a content-preservation gate:
-
-1. inventory the baseline sections, tables, side material, claims, source families and unresolved questions;
-2. route every later addition to a chronological location or an explicit fiche;
+## Content-preservation gate
+For advanced work:
+1. inventory baseline sections, tables, side material, side-story IDs, claims, source families and unresolved questions;
+2. route every later addition to chronology or an explicit fiche;
 3. compare baseline, delta and candidate export quantitatively;
-4. fail promotion on silent loss, even if the shorter prose appears more fluid.
+4. fail on silent loss even if shorter prose is smoother.
 
 ## Narrative unit
-Prefer: place/object/tension → causal question → 2–4 mechanisms → consequences for people/territory/institutions → bridge forward.
+Prefer: place/object/tension → causal question → 2–4 mechanisms → consequences → bridge forward.
 
-For a short sourced vignette, use **PACE**:
-1. **Place** — anchor the reader in an observable site, object or document;
-2. **Action** — state what people or institutions demonstrably did;
-3. **Constraint** — surface the adversity, trade-off or governing problem;
-4. **Evidence** — close on the source that licenses the scene and its limit.
-
-For a long arc, prefer: causal mission/question → minimum context → mechanism plan → progression in `but/therefore` transitions → rupture or resolution → reflection and bridge. Use one main takeaway per side box.
+For a short sourced vignette use **PACE**: Place → Action → Constraint → Evidence. For a long arc use causal mission → minimum context → mechanism plan → `but/therefore` progression → rupture/resolution → reflection/bridge. One main takeaway per side box.
 
 ## Historical non-fiction safety gate
-“Show, do not tell” means concrete material evidence, spatial anchoring and source-attested action. It never licenses invention. Do not use invented dialogue, inner thoughts, motives, composite characters, sensory detail, chronology, danger, stakes or cliffhangers. Direct speech and reported thought require a source and a citation; uncertain reconstruction must be labelled and is normally demoted from the main trunk.
+“Show, do not tell” means material evidence, spatial anchoring and **source-attested** action. It never licenses invented dialogue, inner thoughts, motives, composite characters, sensory detail, chronology, danger or cliffhangers. Direct speech/reported thought require a source; uncertain reconstruction is labelled and normally demoted from the trunk.
 
-Human-scale stakes are welcome when evidenced. Hero/villain binaries, universal hero journeys, manufactured conflict and teleological transformation are not substitutes for institutions, geography or causal mechanisms.
+## Side-story integrity
+Storytelling consumes the already composed `side_story`; it does not create a second uncontrolled taxonomy. It may tune the prose inside a box for reader fit, but must not silently change its `kind`, normalized label, lineage, placement, return point, status or `required_in_reader` flag. `portrait` remains bounded to sourced microhistory; `dezoom` must land back at its contracted local payoff; `false_lead` must remain visibly rejected; `callback` must show transformation rather than repetition.
 
-## Vertical threads
-When caste, language, education, water, trade, religion or migration crosses several arcs, use callbacks that show transformation through time. Do not flatten the chronology into theme chapters unless explicitly requested.
+For advanced readers every promoted required side story must survive into the Markdown reader and formatted export. The hidden marker `[SIDE-STORY:<id>]` remains machine-readable in Markdown and may be suppressed visually in DOCX/PDF.
 
-## Comparator storytelling
-Comparators illuminate a mechanism; they do not rank cultures. Always give the home case first, then the alternative mechanism, then the major confounder. Prefer formulations such as “this shows another institutional route was possible” over “country A succeeded because…”.
+## Vertical threads / comparators
+When caste, language, education, water, trade, religion or migration crosses arcs, use callbacks showing transformation. Comparators illuminate mechanisms, not rankings: home case first, alternative mechanism, then major confounder.
 
-## Cross-references and side material
-Use cross-references only when they save repetition or activate causality. Side boxes (`Mais aussi`, `Petit détour`, `Point de méthode`, `Fausse piste`) must deepen a mechanism, correct an intuitive error or reward the place being visited.
-
-## Promise and continuity ledger
-For long outputs, record the opening causal promise, the questions introduced, their callback location and their payoff or explicit unresolved status. A callback must show transformation, not merely repeat a fact. Prefer a calm, guide-like voice addressed to one reader; avoid a synthetic “storytelling voice”, empty suspense and retention tricks imported from short-form video.
-
-## Output-state handoff
-If the reader asks for a long-project status, briefly distinguish research, canonical Markdown and formatted reader export before the narrative. Do not clutter ordinary historical prose with repository mechanics.
+## Cross-reference and continuity
+Use a cross-reference only when it saves repetition or activates causality. Maintain a **promise and continuity ledger** for long outputs: opening causal promise, questions introduced, callback location, payoff or unresolved status.
 
 ## Story QA
-Before delivery verify chronology, `but/therefore` causal transitions, uncertainty, comparator limits, absence of invented reconstruction, promise/callback closure, the applicable length policy, baseline retention, reader fit and a conclusion that returns to the causal map rather than merely recapping events.
+Verify chronology, causal transitions, uncertainty, comparator limits, non-fiction safety, promise/callback closure, side-story retention/labels, applicable length policy, baseline retention, reader fit and a conclusion returning to the causal map.
 
-See `references/storytelling-patterns-and-review.md` for the Run 6 video extraction, benchmark boundaries and the adaptation rationale.
+See `references/storytelling-patterns-and-review.md` for benchmark boundaries.
 
-See also: `SKILL.md` orchestration step 11; `docs/skill_workflow_index.md`.
+See also: `SKILL.md` orchestration step 12; `composing-side-stories`; `docs/SOP_SIDE_STORIES.md`.
