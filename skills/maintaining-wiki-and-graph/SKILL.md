@@ -8,34 +8,18 @@ description: Use when stabilized claims, people, places, institutions, commoditi
 The wiki stores durable entities; arcs store temporal context; HILs store analytic views. The graph stores typed relations, not a second narrative.
 
 ## Promotion gate
-Promote an entity or relation when it is reused across arcs or resolves repeated ambiguity. Prefer A/B claims; a C item may appear only with explicit hypothesis status. Do not copy raw field notes into the wiki as settled facts.
+Promote an entity/relation when reused across arcs or resolving repeated ambiguity. Prefer A/B claims; C appears only with explicit hypothesis status. Do not copy raw field notes into the wiki as settled facts.
 
-## Wiki entity contract
-Each entity page should contain:
-- stable `slug` and canonical name;
-- entity type and aliases;
-- scope / why reusable;
-- concise durable description;
-- related arcs and claim IDs;
-- source IDs;
-- confidence and material limits;
-- `last_reviewed` date.
-Aliases must redirect conceptually to one canonical slug; do not fork duplicate pages for spelling variants.
+## Wiki / graph contracts
+Wiki pages carry stable slug/name, entity type/aliases, scope, durable description, related arcs/claims, source IDs, confidence/limits and `last_reviewed`. Graph edges carry `from`, typed relation, `to`, confidence, source IDs, optional claim IDs and `last_reviewed`; interpretive edges require provenance.
 
-## Graph-light contract
-Use typed relations such as `CAUSES`, `AMPLIFIES`, `ENABLES`, `CONSTRAINS`, `LOCATED_IN`, `LEGITIMIZES`, `CONTESTS`, `MIGRATES_TO`, `TRADES_WITH`, `SOURCES`, `CONTRADICTS`, `REFINES`, `REDISTRIBUTES_ACCESS_TO`, `EXTERNALIZES_TO`, `COMPARES_WITH`.
-
-Every edge records `from`, `relation`, `to`, `confidence`, `source_ids`, optional `claim_ids`, and `last_reviewed`. Causal/interpretive edges require provenance. Descriptive identity/location edges may use an empty source list only when trivially structural and QA permits it.
+## Side-story boundary
+A `portrait`, `object_focus` or `callback` may reference wiki entities/graph relations for navigation, but side-story prose is not a new wiki fact or graph proof. Conversely, repeated side-story subjects should be promoted to wiki only when the underlying stabilized evidence meets the wiki gate. Do not create graph edges merely because two elements co-occur in a box.
 
 ## Lifecycle
-After a substantial research run:
-1. update entities touched by stabilized claims;
-2. add/remove graph edges;
-3. flag contradictions rather than overwriting silently;
-4. run duplicate-slug and unknown-source QA;
-5. save a project checkpoint identifying wiki/graph freshness.
+After substantial research: update touched entities, add/remove edges, flag contradictions, run duplicate/source QA, and expose reusable IDs to downstream `composing-side-stories` without duplicating their evidence.
 
 ## Output
-Wiki entity pages (`templates/wiki-entity.md` → `03_wiki/**/*.md`) and typed graph edges (`04_graph/*.jsonl`), both validated by `scripts/qa_project.py`.
+Wiki pages (`03_wiki/**/*.md`) and typed graph edges (`04_graph/*.jsonl`), both validated by `scripts/qa_project.py` and reusable as navigation context for composition.
 
-See also: `SKILL.md` orchestration step 9; `docs/skill_workflow_index.md`.
+See also: `SKILL.md` orchestration step 9; `composing-side-stories`; `docs/skill_workflow_index.md`.
