@@ -6,7 +6,8 @@ PRE=ROOT/'examples/sri_lanka_pre_1948'
 
 class AnalyticalFocusSideStoryTests(unittest.TestCase):
     def test_analytical_focus_kind_and_template_are_versioned(self):
-        from scripts.side_story_contract import ANALYTICAL_FOCUS_KIND, SUPPORTED_SCHEMA_VERSIONS, RENDER_LABELS
+        sys.path.insert(0,str(ROOT/'scripts'))
+        from side_story_contract import ANALYTICAL_FOCUS_KIND, SUPPORTED_SCHEMA_VERSIONS, RENDER_LABELS
         self.assertEqual('analytical_focus', ANALYTICAL_FOCUS_KIND)
         self.assertIn('1.2', SUPPORTED_SCHEMA_VERSIONS)
         self.assertEqual('Focus analytique', RENDER_LABELS['analytical_focus'])
@@ -45,7 +46,7 @@ class AnalyticalFocusSideStoryTests(unittest.TestCase):
                     'callbacks':[{'target':'Polonnaruwa / Parakramabahu I','relation':'1165 reform unified the Sangha under Mahavihara discipline rather than fusing equal schools'}],
                     'open_questions':['How large were the fiscal transfers?']
                 },
-                'visual':{'format':'one_or_two_pager','orientation':'A4_landscape','layout':'historical_focus','evidence_palette':{'verified':'green','inference':'orange','unknown':'red'}},
+                'visual':{'format':'one_or_two_pager','orientation':'A4_landscape','layout':'historical_focus','composition':['hero_question','contrast_cards','mechanism_band','callback_strip'],'evidence_palette':{'verified':'green','inference':'orange','unknown':'red'}},
                 'content':{'takeaway':'Jetavana makes later reform legible.','body_markdown':'','legacy_titles':[]},
                 'render':{'label':'Focus analytique','marker':'[SIDE-STORY:SS-X]','required_in_reader':True}
             }

@@ -14,7 +14,7 @@ Profiles include advanced/historian enthusiast, intermediate/educated generalist
 For advanced work there is no maximum length. Start from complete baseline/canonical state, treat later inputs as deltas unless proven complete, and apply content-preservation gates. Intermediate/child may be shorter only under explicit profile/template rules.
 
 ## Historical nonfiction gate
-PACE remains useful: Place → source-attested Action → Constraint → Evidence. Never invent dialogue, thoughts, motives, composite characters, sensory facts or false suspense. Use but/therefore transitions and maintain continuity.
+PACE remains useful: Place → source-attested Action → Constraint → Evidence. Never add **invented dialogue**, thoughts, motives, composite characters, sensory facts or false suspense. Use but/therefore transitions and maintain continuity.
 
 ## Composition invariants
 A side story's kind, lineage, required status and reader eligibility come from artefacts/profile. `analytical_focus` preserves at minimum its **question → thesis → contrasted positions/caveats → mechanisms/evidence status → callback → payoff**. Storytelling may simplify language or reorder cards for the target reader; it may not flatten the focus into a generic anecdote, turn an inference green, or rewrite a contested binary as fact.
