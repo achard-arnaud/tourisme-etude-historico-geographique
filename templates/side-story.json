@@ -1,10 +1,10 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "class": "side_story",
   "id": "SS-...",
-  "kind": "detour|dezoom|also|method|false_lead|portrait|object_focus|comparator|callback",
+  "kind": "detour|dezoom|also|method|false_lead|portrait|object_focus|comparator|callback|analytical_focus",
   "status": "candidate|validated|promoted|retired",
-  "lineage_quality": "full|legacy_fragment",
+  "lineage_quality": "full|legacy_fragment|field_research",
   "title": "",
   "arc": "",
   "purpose": "",
@@ -15,6 +15,8 @@
   "lineage": {"claim_ids": [], "source_ids": [], "bridge_ids": [], "hil_ids": [], "drift_paths": [], "origin_paths": []},
   "placement": {"section_anchor": "", "return_to": null},
   "zoom_excursion": null,
+  "analysis": null,
+  "visual": null,
   "content": {"takeaway": "", "body_markdown": "", "legacy_titles": []},
   "render": {"label": "", "marker": "[SIDE-STORY:SS-...]", "required_in_reader": false}
 }

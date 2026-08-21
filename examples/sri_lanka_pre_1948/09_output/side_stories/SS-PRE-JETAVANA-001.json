@@ -1,0 +1,70 @@
+{
+  "schema_version":"1.2",
+  "class":"side_story",
+  "id":"SS-PRE-JETAVANA-001",
+  "kind":"analytical_focus",
+  "status":"candidate",
+  "lineage_quality":"field_research",
+  "title":"Jetavana : concurrence monastique, patronage royal et réforme du Saṅgha",
+  "arc":"LEGACY:anuradhapura",
+  "related_arcs":["LEGACY:polonnaruwa"],
+  "purpose":"Use the visible Jetavana monument to explain monastic institutional rivalry, resource patronage and the later Polonnaruwa reform without collapsing the history into a timeless Theravada-versus-Mahayana binary.",
+  "reason_off_trunk":"Semi-analytical focus spanning doctrine, institutions, fiscal resources and a long-range callback; richer than a short detour but narrower than a new chronological arc.",
+  "payoff":"Jetavana turns the 1165 Polonnaruwa reform from an abstract religious event into an institutional answer to a long history of pluralism, competition and royal arbitration.",
+  "map_eligible":true,
+  "reader_policy":{"min_age":10},
+  "lineage":{
+    "claim_ids":[],
+    "source_ids":["MAHAVAMSA-GEIGER-MAHASENA","DEEG-ABHAYAGIRI-2024","GORNALL-REFORM-2020","CAMBRIDGE-PARAKRAMABAHU-KATIKAVATA","WATERHISTORY-ANURADHAPURA-2019","WATER-GOVERNANCE-ANURADHAPURA-2018","UNESCO-ANURADHAPURA-MAHAVIHARAS-6774"],
+    "bridge_ids":[],
+    "hil_ids":["HIL-01_institutions-chronology","HIL-03_economy-infrastructure","HIL-05_religion-culture-legitimacy","HIL-07_regional-global-system","HIL-08_historiography-bias"],
+    "drift_paths":[],
+    "origin_paths":["05_sources/conversation_corpus/09_anuradhapura_longue_duree.md","05_sources/conversation_corpus/02_apogee_polonnaruwa.md","05_sources/conversation_corpus/10_jetavana_sangha_focus.md"]
+  },
+  "placement":{"section_anchor":"Mahasena, Minneriya et Jetavana","return_to":"anchor:La Dent du Bouddha"},
+  "zoom_excursion":null,
+  "analysis":{
+    "core_question":"Jetavana est-il vraiment le monument d'une victoire mahāyāna sur le Theravāda, et que nous apprend cette concurrence sur la réforme du Saṅgha à Polonnaruwa ?",
+    "thesis":"Jetavana matérialise d'abord une concurrence entre institutions monastiques, réseaux intellectuels et patronages royaux. Les catégories Theravāda/Mahāyāna éclairent une partie du paysage doctrinal, mais deviennent trompeuses si elles remplacent les fraternités historiques et leurs changements dans le temps.",
+    "contrast":[
+      {"label":"Mahāvihāra","position":"Lignée monastique qui devient le principal pôle de l'orthodoxie pāli et dont la chronique façonne fortement notre récit du conflit.","caveat":"Le Mahāvaṃsa est lui-même un témoin partisan ; son hostilité aux rivaux doit être conservée comme donnée historiographique."},
+      {"label":"Abhayagiri","position":"Grand pôle cosmopolite connecté à des réseaux textuels et monastiques transrégionaux, avec des traces mahāyāna et ésotériques.","caveat":"Abhayagiri n'est pas réductible à une école mahāyāna homogène et son histoire ne doit pas être automatiquement projetée sur Jetavana."},
+      {"label":"Jetavana / Sāgaliya","position":"Troisième grand pôle institutionnel associé au conflit de patronage sous Mahāsena et à une tradition distincte du Mahāvihāra.","caveat":"Son positionnement doctrinal change selon les périodes et les sources ; l'étiquette mahāyāna doit rester contextualisée."}
+    ],
+    "mechanisms":[
+      {"name":"Patronage + coercition","explanation":"Le pouvoir royal peut modifier l'équilibre entre fraternités par protection, sanctions, contrôle du foncier et construction monumentale.","evidence_status":"verified"},
+      {"name":"Ressources monastiques","explanation":"Terres, réservoirs, parts d'eau, revenus et exemptions placent les grands monastères à l'intérieur de la boucle hydro-fiscale et redistributive de la capitale.","evidence_status":"verified"},
+      {"name":"Concurrence de réseaux","explanation":"Textes, moines, pèlerins et pratiques circulent à l'échelle sud-asiatique et maritime, ce qui augmente les ressources intellectuelles et symboliques disponibles pour certains pôles.","evidence_status":"verified"},
+      {"name":"Fermeture institutionnelle en 1165","explanation":"La purification/unification de Parākramabāhu I réduit institutionnellement un pluralisme ancien sous une norme mahāvihāra ; le degré de continuité causale directe depuis Mahāsena reste une inférence de longue durée.","evidence_status":"inference"}
+    ],
+    "fiscal_dimension":"Le mécanisme fiscal est solide au niveau structurel : inscriptions et chroniques documentent dons de réservoirs, terres, parts d'eau et revenus aux communautés monastiques. En revanche, le montant précis des ressources déplacées par la crise de Mahāsena n'est pas établi et ne doit pas être inventé.",
+    "foreign_influence":"Parler de circulations transrégionales est plus précis que d'influence étrangère : le Sri Lanka participe à des réseaux bouddhiques indiens et maritimes où circulent moines, textes, pratiques et prestige. La question historique est leur traduction institutionnelle locale.",
+    "callbacks":[
+      {"target":"Polonnaruwa / Parākramabāhu I, 1165","relation":"Callback majeur : la réforme est une purification/unification du Saṅgha et non une fusion neutre de courants égaux ; elle devient lisible comme politique de cohérence institutionnelle après une longue histoire de pluralisme et de rivalité."},
+      {"target":"Hydro-fiscalité d'Anuradhapura","relation":"Les monastères ne sont pas hors de l'État économique : leurs patrimoines et revenus les inscrivent dans la boucle eau → surplus → prélèvement/donation → institution → légitimité."}
+    ],
+    "open_questions":[
+      "Peut-on documenter directement la redistribution de ressources sous Mahāsena par l'épigraphie, au-delà du récit partisan du Mahāvaṃsa ?",
+      "À quelles phases l'étiquette mahāyāna décrit-elle réellement Jetavana, et à quelles phases masque-t-elle une réalité fraternelle plus complexe ?",
+      "Quelle part de la réforme de 1165 répond à cette longue concurrence et quelle part aux crises politiques et monastiques des XIe–XIIe siècles ?"
+    ]
+  },
+  "visual":{
+    "format":"one_or_two_pager",
+    "orientation":"A4_landscape",
+    "layout":"historical_focus",
+    "composition":["hero_question","contrast_cards","mechanism_band","callback_strip","resource_box","map_slot"],
+    "evidence_palette":{"verified":"green","inference":"orange","unknown":"red"},
+    "body_pt_preferred":11,
+    "body_pt_min":9,
+    "card_padding_pt_preferred":11,
+    "card_padding_pt_min":9,
+    "table_max_columns":5
+  },
+  "content":{
+    "takeaway":"Jetavana rend visible un problème de gouvernement autant que de doctrine : arbitrer des institutions monastiques concurrentes, riches en ressources et connectées à des réseaux transrégionaux — ce qui éclaire la réforme unificatrice de Polonnaruwa.",
+    "body_markdown":"",
+    "legacy_titles":[]
+  },
+  "render":{"label":"Focus analytique","marker":"[SIDE-STORY:SS-PRE-JETAVANA-001]","required_in_reader":false}
+}

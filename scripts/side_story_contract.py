@@ -4,9 +4,19 @@ from __future__ import annotations
 import json,re,string
 from pathlib import Path
 from output_state import canonical_markdown_path,load_output_state
-SCHEMA_VERSION="1.1";SIDE_STORY_CLASS="side_story";KINDS={"detour","dezoom","also","method","false_lead","portrait","object_focus","comparator","callback"};STATUSES={"candidate","validated","promoted","retired"};RETURN_REQUIRED=KINDS-{"method"};ZOOMS={f"Z{i}" for i in range(5)}
+
+SCHEMA_VERSION="1.2"
+SUPPORTED_SCHEMA_VERSIONS={"1.1","1.2"}
+SIDE_STORY_CLASS="side_story"
+ANALYTICAL_FOCUS_KIND="analytical_focus"
+KINDS={"detour","dezoom","also","method","false_lead","portrait","object_focus","comparator","callback",ANALYTICAL_FOCUS_KIND}
+STATUSES={"candidate","validated","promoted","retired"}
+RETURN_REQUIRED=KINDS-{"method"}
+ZOOMS={f"Z{i}" for i in range(5)}
 HILS={"HIL-01_institutions-chronology","HIL-02_geography-environment","HIL-03_economy-infrastructure","HIL-04_society-demography","HIL-05_religion-culture-legitimacy","HIL-06_security-coercion","HIL-07_regional-global-system","HIL-08_historiography-bias"}
-RENDER_LABELS={"detour":"Petit détour","dezoom":"Dézoom","also":"Mais aussi","method":"Point de méthode","false_lead":"Fausse piste","portrait":"Personnage","object_focus":"Objet / terrain","comparator":"Comparaison","callback":"Fil rouge"}
+RENDER_LABELS={"detour":"Petit détour","dezoom":"Dézoom","also":"Mais aussi","method":"Point de méthode","false_lead":"Fausse piste","portrait":"Personnage","object_focus":"Objet / terrain","comparator":"Comparaison","callback":"Fil rouge",ANALYTICAL_FOCUS_KIND:"Focus analytique"}
+EVIDENCE_STATUSES={"verified","inference","unknown"}
+
 def canonical_marker(sid):return f"[SIDE-STORY:{sid}]"
 def side_story_dir(project):return project/"09_output"/"side_stories"
 def _read_records(path):
@@ -39,21 +49,76 @@ def _marker_block(markdown,marker):
     lines=markdown.splitlines();idx=next((i for i,x in enumerate(lines) if marker in x),None)
     if idx is None:return ""
     buf=[]
-    for line in lines[idx:idx+30]:
+    for line in lines[idx:idx+60]:
         if buf and "[SIDE-STORY:" in line:break
         if buf and re.match(r"^##\s+",line):break
         buf.append(line)
     return "\n".join(buf)
 def _lineage_nonempty(lineage):return any(lineage.get(k) for k in ("claim_ids","source_ids","bridge_ids","drift_paths","origin_paths"))
+
+def _analytical_focus_errors(prefix,item):
+    errors=[]
+    if item.get("schema_version")!="1.2":errors.append(f"side story {prefix}: analytical_focus requires schema 1.2")
+    analysis=item.get("analysis") or {};visual=item.get("visual") or {};content=item.get("content") or {}
+    for field in ("core_question","thesis"):
+        if not analysis.get(field):errors.append(f"side story {prefix}: analysis.{field} required")
+    contrast=analysis.get("contrast")
+    if not isinstance(contrast,list) or len(contrast)<2:errors.append(f"side story {prefix}: analysis.contrast requires at least two positions")
+    else:
+        for i,row in enumerate(contrast):
+            if not isinstance(row,dict) or not row.get("label") or not row.get("position") or not row.get("caveat"):
+                errors.append(f"side story {prefix}: analysis.contrast[{i}] requires label/position/caveat")
+    mechanisms=analysis.get("mechanisms")
+    if not isinstance(mechanisms,list) or not mechanisms:errors.append(f"side story {prefix}: analysis.mechanisms requires at least one mechanism")
+    else:
+        for i,row in enumerate(mechanisms):
+            if not isinstance(row,dict) or not row.get("name") or not row.get("explanation"):
+                errors.append(f"side story {prefix}: analysis.mechanisms[{i}] requires name/explanation")
+            if isinstance(row,dict) and row.get("evidence_status") not in EVIDENCE_STATUSES:
+                errors.append(f"side story {prefix}: analysis.mechanisms[{i}].evidence_status invalid")
+    callbacks=analysis.get("callbacks")
+    if not isinstance(callbacks,list) or not callbacks:errors.append(f"side story {prefix}: analysis.callbacks requires at least one callback")
+    else:
+        for i,row in enumerate(callbacks):
+            if not isinstance(row,dict) or not row.get("target") or not row.get("relation"):
+                errors.append(f"side story {prefix}: analysis.callbacks[{i}] requires target/relation")
+    if visual.get("format")!="one_or_two_pager":errors.append(f"side story {prefix}: visual.format must be one_or_two_pager")
+    if visual.get("orientation")!="A4_landscape":errors.append(f"side story {prefix}: visual.orientation must be A4_landscape")
+    if visual.get("layout")!="historical_focus":errors.append(f"side story {prefix}: visual.layout must be historical_focus")
+    if (visual.get("evidence_palette") or {})!={"verified":"green","inference":"orange","unknown":"red"}:
+        errors.append(f"side story {prefix}: visual.evidence_palette must preserve verified/inference/unknown semantics")
+    composition=set(visual.get("composition") or []);required={"hero_question","contrast_cards","mechanism_band","callback_strip"}
+    if not required.issubset(composition):errors.append(f"side story {prefix}: visual.composition missing {sorted(required-composition)}")
+    if not content.get("takeaway"):errors.append(f"side story {prefix}: content.takeaway required")
+    return errors
+
+def validate_side_story_item(item,known=None,canonical="",strict=False):
+    errors=[];sid=item.get("id");prefix=sid or "<unknown>"
+    if item.get("schema_version") not in SUPPORTED_SCHEMA_VERSIONS:errors.append(f"side story {prefix}: invalid schema_version")
+    if item.get("class")!=SIDE_STORY_CLASS:errors.append(f"side story {prefix}: invalid class")
+    kind=item.get("kind");status=item.get("status")
+    if kind not in KINDS:errors.append(f"side story {prefix}: invalid kind {kind!r}")
+    if status not in STATUSES:errors.append(f"side story {prefix}: invalid status {status!r}")
+    if not isinstance(item.get("map_eligible"),bool):errors.append(f"side story {prefix}: map_eligible must be boolean")
+    if not item.get("title") or not item.get("purpose"):errors.append(f"side story {prefix}: missing title/purpose")
+    lineage=item.get("lineage") or {};render=item.get("render") or {}
+    for key in ("claim_ids","source_ids","bridge_ids","hil_ids","drift_paths","origin_paths"):
+        if not isinstance(lineage.get(key,[]),list):errors.append(f"side story {prefix}: lineage.{key} must be list")
+    if sid and render.get("marker")!=canonical_marker(str(sid)):errors.append(f"side story {prefix}: invalid render marker")
+    if kind in RENDER_LABELS and render.get("label")!=RENDER_LABELS[kind]:errors.append(f"side story {prefix}: label/kind mismatch")
+    if not isinstance(render.get("required_in_reader"),bool):errors.append(f"side story {prefix}: required_in_reader must be boolean")
+    if kind==ANALYTICAL_FOCUS_KIND:errors+=_analytical_focus_errors(prefix,item)
+    return errors
+
 def discover_side_story_fragments(markdown):
     found=[]
-    html=re.compile(r"<p><strong>(POINT DE MÉTHODE|PETIT DÉTOUR|MAIS AUSSI|FAUSSE PISTE)(?:\s*[—:-]\s*([^<]+))?</strong></p>(?:\s*<p><strong>([^<]+)</strong></p>)?",re.I)
+    html=re.compile(r"<p><strong>(POINT DE MÉTHODE|PETIT DÉTOUR|MAIS AUSSI|FAUSSE PISTE|FOCUS ANALYTIQUE)(?:\s*[—:-]\s*([^<]+))?</strong></p>(?:\s*<p><strong>([^<]+)</strong></p>)?",re.I)
     for m in html.finditer(markdown):
         label=m.group(1);title=(m.group(2) or m.group(3) or "").strip()
         if not title:
             after=markdown[m.end():m.end()+350];body=re.search(r"<p>([^<]+)</p>",after);title=(body.group(1).split(".")[0] if body else "untitled method").strip()
         found.append({"label":label,"title":title})
-    md=re.compile(r"(?mi)^(?:#{1,6}\s*)?(?:\*\*)?(Mais aussi|Petit détour|Point de méthode|Fausse piste|Dézoom|Personnage|Objet / terrain|Comparaison|Fil rouge)\s*[—:-]\s*([^\n*]+)")
+    md=re.compile(r"(?mi)^(?:#{1,6}\s*)?(?:\*\*)?(Mais aussi|Petit détour|Point de méthode|Fausse piste|Dézoom|Personnage|Objet / terrain|Comparaison|Fil rouge|Focus analytique)\s*[—:-]\s*([^\n*]+)")
     for m in md.finditer(markdown):found.append({"label":m.group(1),"title":m.group(2).strip()})
     return list({(_strip_markup(x["label"]),_strip_markup(x["title"])):x for x in found}.values())
 def side_story_coverage(project):
@@ -73,23 +138,11 @@ def validate_side_stories(project,*,check_render=True):
     except Exception as exc:return [f"invalid side-story registry/state: {exc}"],[],0,{"discovered":0,"tracked":0,"untracked":0,"untracked_fragments":[]}
     seen=set()
     for path,item in stories:
-        sid=item.get("id");prefix=sid or path.name
-        if item.get("schema_version")!=SCHEMA_VERSION:errors.append(f"side story {prefix}: invalid schema_version")
-        if item.get("class")!=SIDE_STORY_CLASS:errors.append(f"side story {prefix}: invalid class")
+        sid=item.get("id");prefix=sid or path.name;errors+=validate_side_story_item(item,canonical=canonical)
         if not sid:errors.append(f"side story {path.name}: missing id")
         elif sid in seen:errors.append(f"duplicate side story id: {sid}")
         else:seen.add(sid)
-        kind=item.get("kind");status=item.get("status")
-        if kind not in KINDS:errors.append(f"side story {prefix}: invalid kind {kind!r}")
-        if status not in STATUSES:errors.append(f"side story {prefix}: invalid status {status!r}")
-        if not isinstance(item.get("map_eligible"),bool):errors.append(f"side story {prefix}: map_eligible must be boolean")
-        if not item.get("title") or not item.get("purpose"):errors.append(f"side story {prefix}: missing title/purpose")
-        lineage=item.get("lineage") or {};placement=item.get("placement") or {};render=item.get("render") or {}
-        for key in ("claim_ids","source_ids","bridge_ids","hil_ids","drift_paths","origin_paths"):
-            if not isinstance(lineage.get(key,[]),list):errors.append(f"side story {prefix}: lineage.{key} must be list")
-        if render.get("marker")!=canonical_marker(str(sid)):errors.append(f"side story {prefix}: invalid render marker")
-        if kind in RENDER_LABELS and render.get("label")!=RENDER_LABELS[kind]:errors.append(f"side story {prefix}: label/kind mismatch")
-        if not isinstance(render.get("required_in_reader"),bool):errors.append(f"side story {prefix}: required_in_reader must be boolean")
+        kind=item.get("kind");status=item.get("status");lineage=item.get("lineage") or {};placement=item.get("placement") or {};render=item.get("render") or {}
         anchor=placement.get("section_anchor")
         if status in {"validated","promoted"} and not anchor:errors.append(f"side story {prefix}: missing section_anchor")
         if anchor and status in {"validated","promoted"} and not _contains_anchor(canonical,anchor):errors.append(f"side story {prefix}: section_anchor does not resolve in canonical state")

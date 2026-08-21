@@ -1,6 +1,6 @@
 {
   "schema_version":"1.0","class":"reader_profile","id":"historian_enthusiast","audience":"advanced","min_age":16,"language":"fr","content_temperature":5,
   "story_template":"templates/storytelling/historian_enthusiast.md",
-  "side_story_policy":{"coverage_mode":"all","priority_order":["dezoom","method","false_lead","comparator","detour","also","portrait","object_focus","callback"],"include_kinds":["detour","dezoom","also","method","false_lead","portrait","object_focus","comparator","callback"]},
+  "side_story_policy":{"coverage_mode":"all","priority_order":["analytical_focus","dezoom","method","false_lead","comparator","detour","also","portrait","object_focus","callback"],"include_kinds":["detour","dezoom","also","method","false_lead","portrait","object_focus","comparator","callback","analytical_focus"]},
   "arc_recap_policy":{"enabled":true,"style":"full_causal_schema"},"map_policy":{"enabled":true,"max_per_subsection":1,"fallback_language":"en"}
 }

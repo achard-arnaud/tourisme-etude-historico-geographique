@@ -22,15 +22,14 @@ def main():
     for p in (PROJECT/'05_sources').glob('source_register*.json'):sources+=json.loads(p.read_text(encoding='utf-8'))
     bridges=list((PROJECT/'06_bridges').glob('*.json'));wiki=[p for p in (PROJECT/'03_wiki').rglob('*.md') if p.name.lower()!='readme.md'];edges=sum(1 for p in (PROJECT/'04_graph').glob('edges*.jsonl') for line in p.read_text(encoding='utf-8').splitlines() if line.strip())
     if len(claims)!=9:errors.append(f'claim count {len(claims)} != 9')
-    if len(sources)!=37:errors.append(f'source count {len(sources)} != 37')
+    if len(sources)!=44:errors.append(f'source count {len(sources)} != 44')
     if len(bridges)!=3:errors.append(f'bridge count {len(bridges)} != 3')
     if len(wiki)!=3:errors.append(f'wiki count {len(wiki)} != 3')
     if edges!=4:errors.append(f'graph edges {edges} != 4')
     hils=list((PROJECT/'02_hil').glob('HIL-*/baseline.json'))
     if len(hils)!=8:errors.append(f'HIL baseline count {len(hils)} != 8')
-    se,sw,side_count,coverage=validate_side_stories(PROJECT)
-    errors+=se+[f'unexpected side-story warning: {w}' for w in sw]
-    if side_count<25:errors.append(f'side-story inventory too small: {side_count}')
+    se,sw,side_count,coverage=validate_side_stories(PROJECT);errors+=se+[f'unexpected side-story warning: {w}' for w in sw]
+    if side_count<26:errors.append(f'side-story inventory too small: {side_count}')
     if coverage['untracked']!=0:errors.append(f"untracked side stories: {coverage['untracked']}")
     re,rw,recaps=validate_arc_recaps(PROJECT);errors+=re+[f'unexpected recap warning: {w}' for w in rw]
     if recaps!=3:errors.append(f'arc recap count {recaps} != 3')
@@ -40,12 +39,9 @@ def main():
         return 1
     try:
         run([sys.executable,'scripts/audit_skill.py','.']);run([sys.executable,'scripts/audit_workflow.py','--latest']);run([sys.executable,'scripts/qa_project.py',str(PROJECT)]);run([sys.executable,'scripts/qa_composition_pipeline.py',str(PROJECT)])
-        rendered=run([sys.executable,'scripts/render_composed_reader.py','--project','pre'])
-        metric=json.loads(rendered.stdout)[0];ret=float(metric['retention_vs_baseline_percent'])
-        reader=(PROJECT/'09_output/report_v3_full.md').read_text(encoding='utf-8');rendered_recaps=assert_rendered_arc_recaps(PROJECT,reader)
+        rendered=run([sys.executable,'scripts/render_composed_reader.py','--project','pre']);metric=json.loads(rendered.stdout)[0];ret=float(metric['retention_vs_baseline_percent']);reader=(PROJECT/'09_output/report_v3_full.md').read_text(encoding='utf-8');rendered_recaps=assert_rendered_arc_recaps(PROJECT,reader)
         if ret<100:raise RuntimeError(f'retention {ret}%')
         if metric.get('arc_recaps')!=recaps or rendered_recaps!=recaps:raise RuntimeError(f'arc recap render mismatch: metric={metric.get("arc_recaps")}, rendered={rendered_recaps}, expected={recaps}')
     except Exception as exc:print(f'ERROR: {exc}',file=sys.stderr);return 1
-    print(f"PRE1948 FUNCTIONAL QA OK: 9 claims, 37 sources, 3 bridges, 3 wiki pages, 4 graph edges/{nodes} nodes, 8 HIL baselines, {side_count} side stories ({coverage['tracked']}/{coverage['discovered']} tracked), {recaps}/{rendered_recaps} arc recaps rendered, retention {ret}%")
-    return 0
+    print(f"PRE1948 FUNCTIONAL QA OK: 9 claims, 44 sources, 3 bridges, 3 wiki pages, 4 graph edges/{nodes} nodes, 8 HIL baselines, {side_count} side stories ({coverage['tracked']}/{coverage['discovered']} tracked), {recaps}/{rendered_recaps} arc recaps rendered, retention {ret}%");return 0
 if __name__=='__main__':raise SystemExit(main())
