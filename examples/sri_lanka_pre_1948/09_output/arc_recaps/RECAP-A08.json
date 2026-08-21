@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "class": "arc_recap",
+  "id": "RECAP-A08",
+  "arc": "A08_jaffna_caste_colonial_codification",
+  "status": "validated",
+  "causal_schema": {
+    "drivers": [{"claim_id": "C-PRE-CASTE-003", "summary": "La bureaucratie des thombos relie terre, statut, fiscalité et service dans une gouvernance documentaire."}],
+    "amplifiers": [{"claim_id": "C-PRE-CASTE-001", "summary": "Enregistrement et codification peuvent renforcer des positions locales dominantes."}],
+    "constraints": [{"claim_id": "C-PRE-CASTE-002", "summary": "L’émancipation juridique ne dissout pas instantanément les dépendances sociales."}],
+    "consequences": [{"claim_id": "C-PRE-CASTE-001", "summary": "La lisibilité coloniale retravaille les hiérarchies plutôt qu’elle ne les invente ex nihilo."}]
+  },
+  "protagonists": [
+    {"name": "Administration coloniale", "role": "État documentaire", "objective": "Rendre gouvernables terres, personnes, services et revenus.", "constraints": ["besoin d’intermédiaires locaux"], "perceived_options": ["enregistrement", "tribunaux", "codification"], "claim_ids": ["C-PRE-CASTE-003"]},
+    {"name": "Ménages et groupes de statut de Jaffna", "role": "sujets et négociateurs", "objective": "Protéger terres, statut et obligations dans des régimes juridiques changeants.", "constraints": ["hiérarchie de caste", "dépendance du travail"], "perceived_options": ["documents", "contentieux", "intermédiation"], "claim_ids": ["C-PRE-CASTE-001", "C-PRE-CASTE-002", "C-PRE-CASTE-003"]}
+  ],
+  "what_changed": ["La hiérarchie devient plus lisible et documentable pour l’État.", "Émancipation juridique et transformation sociale divergent dans leur tempo."],
+  "prepares_next": [{"bullet": "L’État indépendant de 1948 hérite d’une machine administrative unifiée et de canaux d’accès inégaux dont la redistribution deviendra politiquement explosive.", "next_arc": null, "bridge_ids": []}],
+  "lineage": {"claim_ids": ["C-PRE-CASTE-001", "C-PRE-CASTE-002", "C-PRE-CASTE-003"], "source_ids": [], "bridge_ids": []},
+  "placement": {"before_anchor": "Bridge vers 1948 : ce que l’État indépendant hérite vraiment"},
+  "render": {"label": "Récap causal", "marker": "[ARC-RECAP:RECAP-A08]", "required_in_reader": true}
+}

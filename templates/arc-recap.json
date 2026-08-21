@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "class": "arc_recap",
+  "id": "RECAP-...",
+  "arc": "A..",
+  "status": "candidate|validated|promoted|retired",
+  "causal_schema": {"drivers": [], "amplifiers": [], "constraints": [], "consequences": []},
+  "protagonists": [{"name": "", "role": "", "objective": "", "constraints": [], "perceived_options": [], "claim_ids": []}],
+  "what_changed": [],
+  "prepares_next": [{"bullet": "", "next_arc": null, "bridge_ids": []}],
+  "lineage": {"claim_ids": [], "source_ids": [], "bridge_ids": []},
+  "placement": {"before_anchor": "heading that begins the next arc/section"},
+  "render": {"label": "Récap causal", "marker": "[ARC-RECAP:RECAP-...]", "required_in_reader": true}
+}

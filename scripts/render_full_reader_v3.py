@@ -1,16 +1,9 @@
 #!/usr/bin/env python3
-"""Build lossless Sri Lanka V3 readers from the long V1 baselines plus Run 5 deltas.
-
-This intentionally bypasses the compact V2 Markdown renderer. The V1 DOCX remains
-the layout and coverage baseline; promoted deltas are inserted in chronological
-locations, and the build fails if the resulting reader does not retain the full
-baseline plus the substantial majority of the delta.
-"""
+"""Build lossless Sri Lanka V3 readers from the long V1 baselines plus Run 5 deltas."""
 
 from __future__ import annotations
 
 import argparse
-import copy
 import json
 import re
 from pathlib import Path
@@ -18,6 +11,7 @@ from pathlib import Path
 from docx import Document
 
 from render_reader_exports import add_inline_markdown, collect_register, extract_source_ids
+from side_story_contract import assert_rendered_side_stories, validate_or_raise
 
 
 REPO = Path(__file__).resolve().parents[1]
@@ -34,15 +28,15 @@ SPECS = {
         "output": "Sri_Lanka_Fresque_historico_geographique_vol_retour_v3.docx",
         "cover_replacements": {
             3: "ÉDITION V3 INTÉGRALE DE LECTURE — VOL RETOUR",
-            4: "V1 longue conservée, fiches de conversation et ajouts Run 5 intégrés sans compression.",
-            5: "Usage personnel — Sri Lanka, 18 août 2026",
+            4: "V1 longue conservée, fiches de conversation et ajouts promus intégrés sans compression.",
+            5: "Usage personnel — Sri Lanka, 20 août 2026",
         },
         "method_anchor": "Comment lire cette fresque",
         "method_block": """## Politique éditoriale de la V3 intégrale
 
-Cette édition prend la V1 de soixante et une pages comme baseline non destructible. Les fiches de conversation, détours de terrain et ajouts stabilisés de Run 5 sont insérés dans leur séquence historique ; aucun budget de longueur ne peut justifier leur suppression. Les répétitions utiles, controverses, limites de source et bifurcations sont conservées pour un lectorat avancé.
+Cette édition prend la V1 de soixante et une pages comme baseline non destructible. Les fiches de conversation, détours de terrain, side stories tracées et ajouts stabilisés sont insérés dans leur séquence historique ; aucun budget de longueur ne peut justifier leur suppression. Les répétitions utiles, controverses, limites de source et bifurcations sont conservées pour un lectorat avancé.
 
-Le petit `report.md` de Run 5 est traité comme un delta et non comme un nouveau manuscrit complet. Les fichiers `05_sources/conversation_corpus/` constituent le registre de reprise exhaustif disponible au 18 août 2026.
+Le petit `report.md` est traité comme un delta promu et non comme un nouveau manuscrit complet. Les side stories requises portent un marqueur de lineage vérifié mais ce marqueur technique reste invisible dans le DOCX.
 """,
         "groups": [
             ("7. Jaffna, Mannar et le verrou du nord", [1]),
@@ -64,12 +58,12 @@ Le petit `report.md` de Run 5 est traité comme un delta et non comme un nouveau
         "output": "Sri_Lanka_1948_2026_etude_historico_geographique_v3.docx",
         "cover_replacements": {
             3: "V3 intégrale — arcs chronologiques, HIL, comparateurs et zooms géographiques",
-            4: "État des données : 18 août 2026 · Usage personnel · Baseline V1 conservée",
+            4: "État des données : 20 août 2026 · Usage personnel · Baseline V1 conservée",
         },
         "method_anchor": "Méthode de lecture",
         "method_block": """## Politique éditoriale de la V3 intégrale
 
-Cette édition conserve la totalité de la V1 moderne et ajoute les développements Run 5 sur langue, caste, éducation, guerre, diaspora, Tamil Nadu, Indonésie et conversion territoriale du capital humain. Pour ce lectorat avancé, aucun plafond de mots n'est appliqué ; la comparaison est développée avec ses confounders et ses limites.
+Cette édition conserve la totalité de la V1 moderne et ajoute les développements promus sur langue, caste, éducation, guerre, diaspora, Tamil Nadu, Indonésie et conversion territoriale du capital humain. Pour ce lectorat avancé, aucun plafond de mots n'est appliqué ; la comparaison est développée avec ses confounders et ses limites.
 """,
         "groups": [
             ("ARC A01 — 1948-1956", [1]),
@@ -137,7 +131,12 @@ def markdown_nodes(doc: Document, markdown: str):
     nodes = []
     for raw in markdown.splitlines():
         line = raw.strip()
-        if not line or line == "---" or line.startswith("> **Statut**"):
+        if (
+            not line
+            or line == "---"
+            or line.startswith("> **Statut**")
+            or (line.startswith("<!--") and line.endswith("-->"))
+        ):
             continue
         heading = re.match(r"^(#{2,4})\s+(.+)$", line)
         if heading:
@@ -149,8 +148,6 @@ def markdown_nodes(doc: Document, markdown: str):
             paragraph = doc.add_paragraph(style=style)
             add_inline_markdown(paragraph, line[2:])
         elif re.match(r"^\d+\.\s+", line):
-            # Keep literal numbering. Reusing Word's List Number style here can
-            # continue an unrelated list from dozens of pages earlier.
             paragraph = doc.add_paragraph()
             add_inline_markdown(paragraph, line)
         elif line.startswith(("- ", "* ")):
@@ -223,13 +220,15 @@ def source_appendix(project: Path, delta: str) -> str:
 
 def build(key: str) -> dict[str, int | str]:
     spec = SPECS[key]
-    output_dir = spec["project"] / "09_output"
+    project = spec["project"]
+    output_dir = project / "09_output"
     baseline_path = output_dir / spec["baseline"]
     delta_path = output_dir / spec["delta"]
     markdown_baseline_path = output_dir / spec["markdown_baseline"]
     output_path = output_dir / spec["output"]
     markdown_output_path = output_dir / spec["markdown_output"]
 
+    side_story_count = validate_or_raise(project, check_render=True)
     delta = delta_path.read_text(encoding="utf-8")
     sections = numbered_sections(delta)
     expected_sections = {number for _, numbers in spec["groups"] for number in numbers}
@@ -246,14 +245,14 @@ def build(key: str) -> dict[str, int | str]:
     for anchor, numbers in spec["groups"]:
         block = "\n\n".join(as_v3_complement(sections[number], spec["complement_heading_level"]) for number in numbers)
         insert_after_docx_anchor(doc, anchor, block)
-    appendix = source_appendix(spec["project"], delta)
+    appendix = source_appendix(project, delta)
     insert_before_docx_anchor(doc, spec["source_anchor"], appendix, page_break=True)
 
     doc.core_properties.title = spec["title"]
     doc.core_properties.subject = "V3 intégrale, lectorat avancé, sans plafond de longueur"
     doc.core_properties.comments = (
-        "Built losslessly from the archived V1 reader plus the complete promoted Run 5 delta; "
-        "the compact V2 renderer was deliberately bypassed."
+        "Built losslessly from the archived V1 reader plus the complete promoted delta; "
+        "side-story lineage is validated before export."
     )
 
     output_words = docx_word_count(doc)
@@ -272,6 +271,7 @@ def build(key: str) -> dict[str, int | str]:
         block = "\n\n".join(as_v3_complement(sections[number], spec["complement_heading_level"]) for number in numbers)
         markdown = insert_after_markdown_anchor(markdown, anchor, block)
     markdown = insert_before_markdown_anchor(markdown, spec["source_anchor"], appendix)
+    assert_rendered_side_stories(project, markdown)
     markdown_output_path.write_text(markdown.rstrip() + "\n", encoding="utf-8")
 
     return {
@@ -280,6 +280,7 @@ def build(key: str) -> dict[str, int | str]:
         "delta_words": delta_words,
         "v3_docx_words": output_words,
         "retention_vs_baseline_percent": round(output_words / baseline_words * 100, 1),
+        "side_stories": side_story_count,
         "docx": str(output_path.relative_to(REPO)),
         "markdown": str(markdown_output_path.relative_to(REPO)),
     }

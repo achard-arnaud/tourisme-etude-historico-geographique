@@ -1,82 +1,97 @@
 # tourisme-etude-historico-geographique
 
-Un **OS réutilisable d’enquête et de narration historico-géographique**, de la note de terrain aux éditions Markdown, Word et PDF traçables.
+Un **OS réutilisable d’enquête, de composition et de narration historico-géographique**, de la note de terrain aux éditions Markdown, Word et PDF traçables.
 
 ## Architecture
-**Arc-first + Zettelkasten-lite + graph-light + promotion explicite.**
 
-- `SKILL.md` : orchestrateur ; checkpoint d'état, routing, comparative gate et promotion.
-- `skills/` : **16 sous-skills** spécialisées par étape et dimension.
-- `templates/` : contrats d'artefacts.
-- `scripts/` : scaffolding et QA déterministe.
-- `docs/` : décisions d'architecture, sourcing, TDD, feedback, snapshots et QA.
-- `tests/` : tests de contrat de la skill, des outils et des raffinements de méthode.
-- `examples/` : corpus travaillés servant de tests grandeur nature de la méthode.
+**Arc-first + Zettelkasten-lite + graph-light + side-story lineage + promotion explicite.**
 
-Le **wiki** (`03_wiki`) porte les entités durables ; les **arcs** portent le contexte temporel ; les **HIL** portent les vues analytiques ; le **graph-light** (`04_graph`) porte uniquement les relations typées et sourcées. Depuis Run 5, wiki et graph sont **matérialisés dans les deux corpus Sri Lanka**, plus seulement décrits dans l'architecture.
+- `SKILL.md` : orchestrateur, gates et promotion.
+- `skills/` : **17 sous-skills** spécialisées, dont `composing-side-stories`.
+- `templates/` : contrats d’artefacts.
+- `scripts/` : scaffolding, QA, création de side stories et rendu.
+- `docs/` : architecture, SOP, TDD, feedback, manifests et QA.
+- `tests/` : tests unitaires, contractuels et fonctionnels.
+- `examples/` : corpus grandeur nature.
+
+Les **arcs** portent la chronologie ; les **HIL** les vues analytiques ; le **wiki** les entités durables ; le **graph-light** les relations sourcées ; `09_output/side_stories/` porte désormais la composition latérale traçable.
+
+## Side stories : classe de composition
+
+Une `side_story` n’est pas une nouvelle preuve historique. Elle référence des claims/sources/bridges/HIL/drifts/origins déjà stabilisés et porte : home arc, type normalisé, purpose, raison hors-tronc, payoff, placement, retour au tronc et politique de rendu.
+
+Nomenclature v1 :
+
+| `kind` | Label lecteur |
+|---|---|
+| `detour` | Petit détour |
+| `dezoom` | Dézoom |
+| `also` | Mais aussi |
+| `method` | Point de méthode |
+| `false_lead` | Fausse piste |
+| `portrait` | Personnage |
+| `object_focus` | Objet / terrain |
+| `comparator` | Comparaison |
+| `callback` | Fil rouge |
+
+Lifecycle : `candidate → validated → promoted → retired`.
+
+Un `dezoom` ajoute obligatoirement `from/to/return_to` (Z0–Z4), transmission mechanism et local payoff. Toute side story promue possède un marker stable `[SIDE-STORY:<id>]` dans le Markdown. Les markers restent machine-readable mais sont masqués dans le DOCX. Le renderer bloque la perte ou le relabelling d’une side story `required_in_reader`.
+
+SOP complète : `docs/SOP_SIDE_STORIES.md`.
+
+### Créer une instance
+
+```bash
+python scripts/new_side_story.py \
+  --project examples/sri_lanka_pre_1948 \
+  --id SS-PRE-005 \
+  --kind portrait \
+  --arc A06_voc_coastal_state \
+  --title "Willem de Melho" \
+  --section-anchor "## 3. Les intermédiaires" \
+  --return-to C-PRE-002 \
+  --purpose "Humaniser le mécanisme d'intermédiation" \
+  --source-ids SNSL-DEMELHO-2020
+```
+
+Le CLI crée un **candidate**, jamais un artefact déjà promu.
 
 ## Continuité des projets longs
-Trois couches sont suivies séparément :
-1. **research layer** — notes, sources, claims, bridges, drifts, wiki/graph ;
-2. **canonical Markdown layer** — dernière synthèse promue ;
-3. **reader-export layer** — Word/PDF ou autre édition mise en forme.
 
-Le fichier `docs/CURRENT_OUTPUT_STATUS.md` enregistre le point d'arrêt et empêche de confondre une fiche de lecture récemment intégrée avec une édition lecteur déjà régénérée.
+Quatre couches sont suivies séparément :
+1. **research** — notes, sources, claims, bridges, drifts, wiki/graph ;
+2. **composition** — side stories validées/promues ;
+3. **canonical Markdown** — synthèse promue ;
+4. **reader export** — Word/PDF.
 
-## HIL et zooms
-Chaque arc active seulement les dimensions utiles : institutions, géographie, économie, société, religion/culture, sécurité, système régional/global, historiographie/biais.
+## HIL, zooms et comparateurs
 
-Les zooms vont de `Z0` objet/site à `Z4` global/systémique. Un changement d'échelle doit être relié par un mécanisme explicite. Les comparaisons inter-cas normalisent désormais aussi l'**unité institutionnelle** : péninsule, province, État fédéré et État souverain ne sont pas des conteneurs interchangeables.
+Les zooms vont de `Z0` objet/site à `Z4` global. Un changement d’échelle exige un mécanisme explicite. Une excursion explicative hors tronc peut devenir un `dezoom`, mais seulement si elle revient à l’échelle locale avec un payoff documenté.
+
+Une comparaison entre dans la causalité seulement si mécanisme, période, unité, confounders et sources sont compatibles et si elle change l’interprétation du cas principal. Sinon elle peut être conservée comme side story `comparator`.
 
 ## Source policy
-Le système utilise deux axes :
-1. tiering épistémique (`T0` primaire/matériel, `T1` académique, `T2` institutionnel, `T3` navigation/encyclopédie, `T4` médiation terrain, `T5` piste exploratoire) ;
-2. rôle dans l'enquête : canonical anchor, specialist institutional anchor, corroborating bridge, lead.
 
-Les projets peuvent répartir un grand corpus entre plusieurs `source_register*.json`. `qa_project.py` charge tous les registres, interdit les IDs dupliqués et contrôle les références des claims, bridges, wiki et graph.
+Deux axes : tier épistémique T0–T5 et rôle d’ancrage. Plusieurs `source_register*.json` peuvent coexister avec IDs uniques. `qa_project.py` valide aussi les références utilisées par les side stories ; la composition ne modifie jamais le tier ou la confiance de l’évidence.
 
-## Comparative gate
-Une comparaison n'entre dans la causalité que si :
-- le mécanisme est défini de la même façon des deux côtés ;
-- période, échelle et niveau institutionnel sont bornés ;
-- guerre, marché, fédéralisme, migration et autres confounders structurants sont explicités ;
-- les deux côtés sont correctement sourcés ;
-- la comparaison modifie réellement l'interprétation du cas principal.
+## Pipeline de bout en bout
 
-Le bridge distingue désormais ce qui est transportable : **instrument → mécanisme → package institutionnel → outcome**. Plus on va vers l'outcome, moins la transportabilité peut être présumée.
+1. Initialiser avec `new_project.py` — y compris `09_output/side_stories/`.
+2. Fixer le contrat lecteur.
+3. Capturer puis sanitizer sans conclure prématurément.
+4. Construire arcs, claims, zooms, HIL et bridges.
+5. Stabiliser sources, drifts, wiki/graph.
+6. **Composer le hors-tronc utile** avec `composing-side-stories` : lineage + nomenclature + placement + return.
+7. Construire le Markdown canonique avec `editing-historical-travel-output` en consommant les records validés/promus.
+8. Appliquer éventuellement la passe `storytelling-historical-travel`, non destructive pour le preset advanced.
+9. Générer Word/PDF ; contrôler rétention baseline + side stories.
+10. Tracer chaque skill/handoff dans le manifest, puis tests/audits/QA avant promotion Git.
 
-## Storytelling et promotion
-`editing-historical-travel-output` construit le manuscrit chronologique ; `storytelling-historical-travel` peut ensuite régler la voix et la navigation. Pour le preset avancé, la longueur est sans plafond : la baseline complète est conservée, les ajouts sont traités comme des deltas et un contrôle quantitatif bloque toute compression silencieuse.
+## Arborescence
 
-Le lifecycle d'un output est explicite : `baseline` → `vnext` → `promoted/canonical` → `reader-export`. Une nouvelle recherche ne rend jamais silencieusement un ancien Word/PDF « à jour ».
-
-## Démarrer un nouveau voyage
-```bash
-python scripts/new_project.py --name "Nom du voyage" --output ./projects/mon-voyage
-```
-
-### Créer une nouvelle fresque, de bout en bout
-
-1. **Initialiser** le projet avec `new_project.py`. Le script crée l’arborescence, le contrat lecteur et un manifeste d’exécution en brouillon.
-2. **Fixer le contrat** dans `00_method/reader_contract.json` : audience, langue, ton, registre, longueur et contexte de lecture.
-3. **Capturer sans conclure** : placer notes, panneaux, images ou témoignages dans la couche terrain, puis séparer faits, traditions, inférences, comparaisons et questions.
-4. **Construire la colonne vertébrale** : arcs bornés par ruptures, claims sourcés, zooms Z0–Z4, HIL pertinents et bridges causaux minimaux.
-5. **Stabiliser** : registres de sources, audit historiographique, wiki et graph-light. Les skills sont routées selon le problème ; elles ne sont jamais toutes appelées par réflexe.
-6. **Tracer le workflow** : compléter le manifeste avec chaque skill appelée ou écartée, sa raison, ses entrées, ses sorties et son statut. Le contrôler avec `audit_workflow.py`.
-7. **Promouvoir le Markdown** : `editing-historical-travel-output` structure le manuscrit ; pour un public avancé, conserver d'abord l'intégralité de la baseline et n'utiliser `storytelling-historical-travel` que comme passe non destructive de voix/navigation.
-8. **Éditer le lecteur** : générer Word/PDF seulement depuis le Markdown promu, effectuer la QA visuelle et mettre à jour `CURRENT_OUTPUT_STATUS.md`.
-9. **Publier** : tests + audits + QA des projets, PR vers `dev`, puis PR de promotion vers `main`.
-
-Contrôle d’un manifeste finalisé :
-
-```bash
-python scripts/audit_workflow.py docs/RUN6_WORKFLOW_MANIFEST.json
-```
-
-Arborescence créée :
 ```text
 <project>/
-├── README.md
 ├── project.json
 ├── 00_method/
 ├── 01_arcs/
@@ -88,48 +103,42 @@ Arborescence créée :
 ├── 07_drifts/
 ├── 08_questions/
 └── 09_output/
+    └── side_stories/
 ```
 
-## Worked examples
-- `examples/sri_lanka_pre_1948/` — longue durée ; Jaffna/Palk, VOC, paper-state, caste/codification, géopolitique européenne et bridge éducatif vers 1948.
-- `examples/sri_lanka_post_1948/` — État/langue, éducation/anglais, caste et reproduction sociale, guerre/diaspora, patrimoine, puis Run 5 de comparaison **Jaffna ↔ Tamil Nadu ↔ Indonésie** et conversion territoriale du capital humain.
+## Worked examples / baseline QA
 
-La passe Run 6 avait produit deux éditions lecteur v2 à partir des seuls deltas `report.md`, ce qui a comprimé le premier volume de 61 à 8 pages. Run 7 restaure les V1 longues comme baselines, matérialise les fiches de conversation, supprime le plafond avancé et produit les V3 par ajout conservatif.
+- `examples/sri_lanka_pre_1948/` : baseline fonctionnelle de référence avec claims typés, ARC/HIL, sources, bridges, wiki/graph et side stories tracées.
+- `examples/sri_lanka_post_1948/` : corpus moderne et comparatif.
+
+Run9 a matérialisé le baseline E2E pré-1948. **Run10 ajoute la couche side-story** et son lineage sans remplacer Run9 comme preuve historique : les manifests précédents restent des snapshots historiques.
 
 ## Vérifier
+
 ```bash
 pip install -r requirements.txt
 python -m unittest discover -s tests -v
 python scripts/audit_skill.py .
-python scripts/audit_workflow.py docs/RUN6_WORKFLOW_MANIFEST.json
+python scripts/audit_workflow.py docs/RUN10_SIDE_STORIES_MANIFEST.json
 python scripts/qa_project.py examples/sri_lanka_pre_1948
 python scripts/qa_project.py examples/sri_lanka_post_1948
+python scripts/qa_functional_pre1948.py
 python scripts/render_full_reader_v3.py --project all
 ```
 
-`qa_project.py` bloque notamment : claims causaux majeurs A/B non sourcés, sources inconnues ou dupliquées, wiki sans métadonnées de provenance et graph edges interprétatifs non sourcés. `render_full_reader_v3.py` exerce la chaîne de publication réelle (génération DOCX + porte de rétention) ; c'est désormais aussi une étape de la CI, pas seulement une commande manuelle.
+`qa_project.py` bloque notamment sources inconnues/dupliquées, claims/bridges invalides, wiki/graph sans provenance, side stories hors schéma ou sans lineage/return, dezoom sans mécanisme et side stories promues sans marker/label canonique.
 
-## Runtime et dépendances
-Les scripts d'échafaudage et de QA (`new_project.py`, `new_arc.py`, `qa_project.py`, `audit_skill.py`, `audit_workflow.py`) sont **stdlib-only** — aucune clé, aucun réseau, aucune authentification. Seule la chaîne de publication (`render_full_reader_v3.py`, `render_reader_exports.py`) dépend de `python-docx`, déclarée dans `requirements.txt` et installée en CI avant la passe de rendu. Les scripts d'audit acceptent la variable d'environnement `SKILL_DEBUG=1` pour laisser remonter la trace complète d'une exception au lieu de l'avaler dans un message `ERROR:` ; les messages `ERROR:`/`WARN:` vont sur stderr, la ligne de statut finale sur stdout.
+## Git
 
-## Workflow Git
-`dev` porte les changements ; `main` reçoit uniquement les PR revues et vérifiées. Après merge, `dev` est resynchronisée avec le merge commit et l'état d'output est sauvegardé.
+`dev` est la branche d’intégration ; `main` la branche promue. Feature → PR `dev` après GREEN ; `dev → main` uniquement après décision de promotion. Les branches head sont supprimées automatiquement après merge.
 
-## Méthode
-La chronologie reste la colonne vertébrale humaine. Les claims ne deviennent atomiques qu'après stabilisation. Les thèmes verticaux — eau, caste, langue, éducation, commerce, migration — traversent les arcs sans remplacer la chronologie. Les annexes utiles sont réinjectées dans le récit sous forme de `Mais aussi`, `Petit détour`, `Point de méthode` ou `Fausse piste`.
+## Références
 
-Voir notamment :
+- `docs/SOP_SIDE_STORIES.md`
 - `docs/skill_workflow_index.md`
-- `docs/RUN8_SKILLS_RUNTIME_AUDIT.md`
 - `docs/architecture.md`
 - `docs/agent_routing.md`
-- `docs/zettelkasten_graphlight_decision.md`
-- `docs/source_policy.md`
-- `docs/CURRENT_OUTPUT_STATUS.md`
-- `docs/PROMPT_REVIEW_RUN5.md`
-- `docs/RUN5_COMPARATIVE_DEVELOPMENT_LOG.md`
-- `docs/SOURCE_AUDIT_POLONNARUWA_CONVERSATION.md`
-- `docs/RUN6_STORYTELLING_REVIEW.md`
-- `docs/RUN6_WORKFLOW_MANIFEST.json`
+- `docs/QA_PRE1948_FUNCTIONAL_BASELINE.md`
+- `docs/RUN10_SIDE_STORIES_MANIFEST.json`
 - `docs/TDD_LOG.md`
 - `docs/FEEDBACK_LOG.md`

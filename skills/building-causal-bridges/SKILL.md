@@ -5,39 +5,21 @@ description: Use when two well-supported historical anchors are both necessary t
 
 # Building causal bridges
 
-Create a bridge only between established anchors when the missing relation changes the explanation. Ask one question, research the smallest mechanism needed, close as `A/B/C/D/U`, then integrate or discard. Prevent bridge proliferation: curiosity without causal necessity belongs in a side box or backlog.
+Create a bridge only between established anchors when the missing relation changes the explanation. Ask one question, research the smallest mechanism needed, close as `A/B/C/D/U`, then integrate or discard. Prevent bridge proliferation: curiosity without causal necessity belongs in a side story or backlog.
 
 ## Bridge contract
-Record:
-- `from_claim` and `to_claim`;
-- precise causal question;
-- mechanism and transmission channel;
-- time lag;
-- geographic/institutional scale;
-- alternative mechanisms/confounders;
-- source IDs and result confidence.
-A bridge is not a restatement of correlation.
+Record `from_claim`, `to_claim`, causal question, mechanism/transmission channel, time lag, geographic/institutional scale, alternatives/confounders, source IDs and result confidence. A bridge is not a restatement of correlation.
 
 ## Comparative bridge gate
-A cross-case bridge requires:
-1. the same mechanism on both sides;
-2. comparable starting conditions or explicit differences;
-3. the policy/institution operating at a comparable level;
-4. war/peace, market size, federal transfers, migration and geography treated as confounders where relevant;
-5. a bounded counterfactual: what the comparator shows is **possible**, not what the home case would certainly have become.
+A cross-case bridge requires the same mechanism, bounded starting-condition differences, comparable institutional level, major confounders and a bounded counterfactual. Usually instrument/mechanism transport more cleanly than institutional package/outcome.
 
-## Transportability test
-Classify what is portable:
-- **instrument** (quota, language rule, school expansion);
-- **mechanism** (reduced access cost, broadened recruitment);
-- **institutional package** (federalism + fiscal capacity + implementation);
-- **outcome** (growth, cohesion, sectoral change).
-Usually only the first two travel cleanly. Never transport an outcome when the institutional package differs.
+## Side-story handoff
+A closed bridge may be referenced by a side story when the mechanism is useful for interpretation but not a causal-spine step at that location. `D` can support a `false_lead`; a bounded comparison can support `comparator`; a cross-scale bridge can support `dezoom`. The side-story JSON references the bridge ID and original evidence; do not copy/rename a bridge into a narrative fact. `U` stays backlog and cannot become promoted reader prose.
 
 ## Closure
-`A/B` bridges may enter the causal spine when adequately sourced. `C` stays explicitly hypothetical. `D` is retained only if the rejected analogy teaches a useful correction. `U` remains backlog and must not be narrated as fact.
+`A/B` bridges may enter the causal spine when adequately sourced. `C` stays explicitly hypothetical. `D` is retained only if the rejected analogy teaches a useful correction. `U` remains backlog.
 
 ## Output
-One bridge record per mechanism gap, shaped by `templates/bridge.md` and stored in `06_bridges/*.json`, with `from_claim`/`to_claim`, source IDs and a closed `result`.
+One bridge record per mechanism gap in `06_bridges/*.json`; optionally a routed side-story candidate hint after closure.
 
-See also: `SKILL.md` orchestration step 7; `docs/skill_workflow_index.md`.
+See also: `SKILL.md` orchestration step 7; `composing-side-stories`; `docs/skill_workflow_index.md`.

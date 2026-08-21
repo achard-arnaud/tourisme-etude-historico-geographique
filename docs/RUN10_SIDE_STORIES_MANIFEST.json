@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-08-20-run10-side-stories-industrialization",
+  "status": "reviewed",
+  "mode": "side-story-schema-pipeline-hardening",
+  "project_roots": ["examples/sri_lanka_pre_1948"],
+  "state_before": {
+    "baseline": "Run9 pre-1948 functional fixture was GREEN on dev",
+    "gap": "detours/dezooms/side boxes existed as editorial prose but lacked a normalized artifact class, lineage, lifecycle, creation API and renderer retention contract"
+  },
+  "dispatched_skills": [
+    {"skill":"capturing-field-evidence","reason":"Define field-origin handoff without permitting raw observations to become promoted side stories.","inputs":["examples/sri_lanka_pre_1948/00_method/field_2026-08-18_jaffna_voc.md"],"outputs":["skills/capturing-field-evidence/SKILL.md"],"status":"verified"},
+    {"skill":"sanitizing-historical-claims","reason":"Keep epistemic statement type independent from narrative side-story type and preserve lineage IDs.","inputs":["examples/sri_lanka_pre_1948/01_arcs"],"outputs":["skills/sanitizing-historical-claims/SKILL.md"],"status":"verified"},
+    {"skill":"structuring-chronological-arcs","reason":"Make each side story own one temporal home arc without bypassing the rupture test.","inputs":["examples/sri_lanka_pre_1948/01_arcs"],"outputs":["skills/structuring-chronological-arcs/SKILL.md"],"status":"verified"},
+    {"skill":"zooming-geographic-scales","reason":"Formalize dezoom candidate handoff with Z from/to/return plus transmission mechanism/local payoff.","inputs":["examples/sri_lanka_pre_1948/01_arcs"],"outputs":["skills/zooming-geographic-scales/SKILL.md"],"status":"verified"},
+    {"skill":"sourcing-historical-anchors","reason":"Extend source provenance validation to side-story lineage without changing source tiers/roles.","inputs":["examples/sri_lanka_pre_1948/05_sources"],"outputs":["skills/sourcing-historical-anchors/SKILL.md"],"status":"verified"},
+    {"skill":"analyzing-institutions-and-power","reason":"Route evidence-backed institutional lateral examples toward composition without auto-promotion.","inputs":["examples/sri_lanka_pre_1948/02_hil/HIL-01_institutions-chronology/baseline.json"],"outputs":["skills/analyzing-institutions-and-power/SKILL.md"],"status":"verified"},
+    {"skill":"analyzing-geography-and-environment","reason":"Route geographic dezoom/object candidates with HIL-02 lineage.","inputs":["examples/sri_lanka_pre_1948/02_hil/HIL-02_geography-environment/baseline.json"],"outputs":["skills/analyzing-geography-and-environment/SKILL.md"],"status":"verified"},
+    {"skill":"analyzing-economy-and-infrastructure","reason":"Route commodity/port/infrastructure examples without conflating illustration and causal proof.","inputs":["examples/sri_lanka_pre_1948/02_hil/HIL-03_economy-infrastructure/baseline.json"],"outputs":["skills/analyzing-economy-and-infrastructure/SKILL.md"],"status":"verified"},
+    {"skill":"analyzing-society-and-demography","reason":"Route portraits/callbacks while preserving the microhistory versus population-evidence boundary.","inputs":["examples/sri_lanka_pre_1948/02_hil/HIL-04_society-demography/baseline.json"],"outputs":["skills/analyzing-society-and-demography/SKILL.md"],"status":"verified"},
+    {"skill":"analyzing-religion-culture-legitimacy","reason":"Route sourced objects/portraits/callbacks without converting symbolism into unsupported institutional effect.","inputs":["examples/sri_lanka_pre_1948/02_hil/HIL-05_religion-culture-legitimacy/baseline.json"],"outputs":["skills/analyzing-religion-culture-legitimacy/SKILL.md"],"status":"verified"},
+    {"skill":"analyzing-security-and-geopolitics","reason":"Route geopolitical dezooms and rejected great-power shortcuts with scale/causal discipline.","inputs":["examples/sri_lanka_pre_1948/02_hil/HIL-06_security-coercion/baseline.json"],"outputs":["skills/analyzing-security-and-geopolitics/SKILL.md"],"status":"verified"},
+    {"skill":"building-causal-bridges","reason":"Allow closed bridges to feed side-story lineage while unresolved bridges remain backlog.","inputs":["examples/sri_lanka_pre_1948/06_bridges"],"outputs":["skills/building-causal-bridges/SKILL.md"],"status":"verified"},
+    {"skill":"auditing-historiography-and-drifts","reason":"Route pedagogically useful corrections as false_lead/method candidates tied to drift evidence.","inputs":["examples/sri_lanka_pre_1948/07_drifts"],"outputs":["skills/auditing-historiography-and-drifts/SKILL.md"],"status":"verified"},
+    {"skill":"maintaining-wiki-and-graph","reason":"Define reuse boundary: side stories may reference durable entities/relations but cannot become graph proof.","inputs":["examples/sri_lanka_pre_1948/03_wiki","examples/sri_lanka_pre_1948/04_graph"],"outputs":["skills/maintaining-wiki-and-graph/SKILL.md"],"status":"verified"},
+    {"skill":"composing-side-stories","reason":"Own normalized nomenclature, lineage, lifecycle, placement, return-to-trunk and promotion of side-story artifacts.","inputs":["examples/sri_lanka_pre_1948/01_arcs","examples/sri_lanka_pre_1948/05_sources","examples/sri_lanka_pre_1948/06_bridges","examples/sri_lanka_pre_1948/07_drifts"],"outputs":["skills/composing-side-stories/SKILL.md","templates/side-story.json","examples/sri_lanka_pre_1948/09_output/side_stories","docs/SOP_SIDE_STORIES.md"],"status":"verified"},
+    {"skill":"editing-historical-travel-output","reason":"Consume validated/promoted side-story artifacts with normalized labels and stable Markdown markers.","inputs":["examples/sri_lanka_pre_1948/09_output/side_stories","examples/sri_lanka_pre_1948/09_output/report.md"],"outputs":["examples/sri_lanka_pre_1948/09_output/report.md"],"status":"verified"},
+    {"skill":"storytelling-historical-travel","reason":"Preserve side-story identity/lineage and reader-required boxes during non-destructive advanced rendering.","inputs":["examples/sri_lanka_pre_1948/09_output/report.md","examples/sri_lanka_pre_1948/09_output/side_stories"],"outputs":["scripts/render_full_reader_v3.py","examples/sri_lanka_pre_1948/09_output/Sri_Lanka_Fresque_historico_geographique_vol_retour_v3.docx"],"status":"verified"}
+  ],
+  "skipped_skills": [],
+  "validations": [
+    {"command":"python -m unittest discover -s tests -v","expected":"all tests pass including side-story contract tests"},
+    {"command":"python scripts/audit_skill.py .","expected":"SKILL AUDIT OK"},
+    {"command":"python scripts/audit_workflow.py docs/RUN10_SIDE_STORIES_MANIFEST.json","expected":"17 dispatched, 0 skipped, 17 known skills"},
+    {"command":"python scripts/qa_project.py examples/sri_lanka_pre_1948","expected":"9 claims, 37 sources, 3 wiki pages, 4 graph edges, 4 side stories, 0 warnings"},
+    {"command":"python scripts/qa_project.py examples/sri_lanka_post_1948","expected":"existing modern corpus remains GREEN with 0 side stories"},
+    {"command":"python scripts/qa_functional_pre1948.py","expected":"PRE1948 FUNCTIONAL QA OK with 4 side stories"},
+    {"command":"python scripts/render_full_reader_v3.py --project all","expected":"lossless reader build plus side-story retention gate"}
+  ],
+  "state_after": {
+    "research": "unchanged evidence model; side stories do not create historical proof",
+    "composition": "versioned side_story class with nine kinds, lifecycle, lineage, placement, return and dezoom contract",
+    "canonical_markdown": "four pre-1948 side stories normalized and marked",
+    "qa": "generic project QA, dedicated unit contracts, pre-1948 functional runner and reader renderer all enforce the composition layer"
+  },
+  "promotion_decision": "merge feature to dev only after GREEN; current user request explicitly authorizes subsequent dev-to-main promotion after the same verified state"
+}

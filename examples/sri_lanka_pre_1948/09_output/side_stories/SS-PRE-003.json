@@ -1,0 +1,8 @@
+{
+  "schema_version":"1.1","class":"side_story","id":"SS-PRE-003","kind":"detour","status":"validated","lineage_quality":"full",
+  "title":"Quand le papier rencontre la caste","arc":"A06_voc_coastal_state","purpose":"Show how state legibility becomes socially consequential without creating a parallel chronological spine.","reason_off_trunk":"Vertical social thread rather than rupture.","payoff":"Registration can harden pre-existing hierarchy without inventing it.","map_eligible":false,"reader_policy":{"min_age":10},
+  "lineage":{"claim_ids":["C-PRE-002","C-PRE-CASTE-001"],"source_ids":["CAMBRIDGE-CLASSIFICATION","CAMBRIDGE-JAFFNA-SLAVERY"],"bridge_ids":[],"hil_ids":["HIL-01_institutions-chronology","HIL-04_society-demography"],"drift_paths":[],"origin_paths":["05_sources/jaffna_caste_colonial_note.md"]},
+  "placement":{"section_anchor":"De la cannelle au paper state","return_to":"C-PRE-002"},"zoom_excursion":null,
+  "content":{"takeaway":"Colonial registration can stabilize hierarchy while remaining negotiated.","body_markdown":"La VOC n’invente pas la caste ; elle rend certaines obligations, statuts et droits plus lisibles et plus stables dans ses registres, avec des effets sociaux réels mais négociés.","legacy_titles":["quand le papier rencontre la caste"]},
+  "render":{"label":"Petit détour","marker":"[SIDE-STORY:SS-PRE-003]","required_in_reader":true}
+}

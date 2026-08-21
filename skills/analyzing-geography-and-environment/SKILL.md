@@ -5,26 +5,21 @@ description: Use when relief, water, climate, ecology, resources, corridors, dis
 
 # Analyzing geography and environment
 
-Treat geography as constraint/enabler, never destiny. Identify water systems, relief, seasonal cycles, ecological zones, chokepoints, transport costs, settlement patterns and resource distributions. Test whether a geographic factor changes the cost of governing, producing, moving, connecting or defending.
+Treat geography as constraint/enabler, never destiny. Identify water systems, relief, seasonal cycles, ecological zones, chokepoints, transport costs, settlement patterns and resource distributions. Test whether a factor changes the cost of governing, producing, moving, connecting or defending.
 
 ## Territorial absorption
-When explaining why capabilities do or do not become local development, map:
-- access to ports, cities and large markets;
-- road/rail/digital/energy continuity;
-- urban density and firm clustering;
-- usable land and conflict-related access restrictions;
-- distance to education and services;
-- border permeability and cross-border networks.
-
-Distinguish a peripheral position **inside one national market** from an apparently similar region operating through a different state, security regime or island geography.
+When capabilities do/do not become local development, map access to ports/cities/markets, infrastructure continuity, urban density/clustering, usable land/security restrictions, distance to services and border permeability. Distinguish a peripheral position inside one national market from a superficially similar region in another state/security regime.
 
 ## Shock and path dependence
-War, disease, ecological change or infrastructure collapse may shift settlement and investment long after the initial shock. Separate temporary disruption from persistent territorial scarring; identify the maintenance, coordination or security mechanism that makes persistence plausible.
+Separate temporary disruption from persistent territorial scarring; identify the maintenance, coordination or security mechanism making persistence plausible.
 
 ## Comparison-scale gate
-A province, peninsula, Indian state and sovereign country are not equivalent units. Before comparison, state the territorial level and which flows cross its boundaries. Normalize market access, fiscal/constitutional autonomy, security jurisdiction and connectivity before transporting a geographic mechanism.
+A province, peninsula, Indian state and sovereign country are not equivalent units. State territorial level and cross-boundary flows before comparison.
+
+## Side-story handoff
+When the explanatory value comes from changing scale rather than adding a causal-trunk step, nominate `dezoom` with HIL-02 lineage, explicit Z `from/to/return_to`, transmission mechanism and local payoff. Site/material examples may instead become `object_focus` or `also`. Do not promote here.
 
 ## Output
-Produce evidence-backed HIL-02 claim candidates for the active arc/zoom. In the current runtime, `02_hil/` is a planned/scaffold layer, not a guaranteed persisted output: never report an HIL artefact as written unless the file actually exists. Preserve negative or non-findings explicitly in notes/questions until a structured HIL schema is implemented.
+Produce evidence-backed HIL-02 claim candidates for the active arc/zoom, plus explicit side-story candidate handoffs where appropriate. Never report a structured HIL artefact unless it actually exists.
 
-See also: `SKILL.md` orchestration step 6; `docs/skill_workflow_index.md`.
+See also: `SKILL.md` orchestration step 6; `zooming-geographic-scales`; `composing-side-stories`.

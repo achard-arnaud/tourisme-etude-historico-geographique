@@ -1,0 +1,6 @@
+{
+  "schema_version":"1.0","class":"reader_profile","id":"educated_generalist","audience":"intermediate","min_age":14,"language":"fr","content_temperature":3,
+  "story_template":"templates/storytelling/educated_generalist.md",
+  "side_story_policy":{"coverage_mode":"selective","priority_order":["dezoom","false_lead","detour","also","portrait","object_focus","method","callback","comparator"],"include_kinds":["dezoom","false_lead","detour","also","portrait","object_focus"]},
+  "arc_recap_policy":{"enabled":true,"style":"compact_causal"},"map_policy":{"enabled":true,"max_per_subsection":1,"fallback_language":"en"}
+}

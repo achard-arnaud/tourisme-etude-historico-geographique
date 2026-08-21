@@ -11,14 +11,15 @@ Separate doctrine, institution, ritual and political use. Track how texts, ordin
 For monasteries, temples, churches, mosques or missions, ask what the institution controls: land, schools, records, charity, ritual honours, marriage/status recognition, literacy, mediation or transregional ties. Do not infer social power from theology alone.
 
 ## Public/private hierarchy
-Religious reform can remove a hierarchy from official doctrine while temples, congregations, ritual precedence or marriage networks continue to reproduce status. Conversely, a religious institution can become a channel of anti-hierarchical mobilisation or education. Source the mechanism rather than treating religion as intrinsically conservative or emancipatory.
+Religious reform can remove hierarchy from official doctrine while institutions or kinship continue to reproduce status; conversely institutions can enable anti-hierarchical mobilisation. Source the mechanism.
 
 ## Legitimacy test
-Distinguish sacred legitimacy, legal authority, social prestige and coercive capacity. A relic, lineage or temple may legitimate a ruler or community without granting administrative control.
+Distinguish sacred legitimacy, legal authority, social prestige and coercive capacity. A relic, lineage or temple may legitimate without granting administrative control. Modern analogies remain heuristic.
 
-Analogies to modern religious movements are heuristic only: state the shared mechanism and the limits explicitly.
+## Side-story handoff
+A sourced relic, temple feature, text or field object may become `object_focus`; a person may become `portrait`; a recurring ritual/language/religious thread may become `callback`; an epistemic clarification may become `method`. Carry HIL-05 plus claim/source/origin lineage. The side story cannot turn symbolic resonance into an unsupported institutional effect. Do not promote here.
 
 ## Output
-Produce evidence-backed HIL-05 claim candidates for the active arc/zoom. In the current runtime, `02_hil/` is a planned/scaffold layer, not a guaranteed persisted output: never report an HIL artefact as written unless the file actually exists. Preserve negative or non-findings explicitly in notes/questions until a structured HIL schema is implemented.
+Produce evidence-backed HIL-05 claim candidates for the active arc/zoom and explicit composition candidate handoffs. Never report a structured HIL artefact unless it exists.
 
-See also: `SKILL.md` orchestration step 6; `docs/skill_workflow_index.md`.
+See also: `SKILL.md` orchestration step 6; `composing-side-stories`; `docs/skill_workflow_index.md`.

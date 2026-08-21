@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "class": "map_asset",
+  "id": "MAP-...",
+  "status": "candidate|vision_validated|human_approved|retired",
+  "story_ref": {"type": "arc|side_story", "id": ""},
+  "source": {"url": "", "publisher": "", "rights": "", "language": "en", "image_path": "", "retrieved_at": ""},
+  "historical_context": {"map_date": null, "map_date_precision": "unknown", "depicted_period": ""},
+  "vision_review": {"status": "pending", "checks": {"geography_matches": null, "historical_scope_matches": null, "labels_legible": null, "no_obvious_anachronism": null}, "notes": ""},
+  "human_review": {"status": "pending", "reviewed_at": null, "notes": ""},
+  "fragment": {"caption": "", "what_it_shows": "", "why_here": "", "limits": ""},
+  "placement": {"subsection_ref": "", "relevance_rank": 99}
+}

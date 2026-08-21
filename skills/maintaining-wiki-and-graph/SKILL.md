@@ -1,41 +1,15 @@
 ---
 name: maintaining-wiki-and-graph
-description: Use when stabilized claims, people, places, institutions, commodities, policies, sources, or repeated relationships need reusable cross-arc storage without duplicating prose.
+description: Use when stabilized claims, people, places, institutions, commodities, policies, sources, or repeated relationships need reusable cross-arc storage and resolvable graph-light links.
 ---
 
 # Maintaining wiki and graph
 
-The wiki stores durable entities; arcs store temporal context; HILs store analytic views. The graph stores typed relations, not a second narrative.
+Wiki stores durable entities; arcs temporal context; HILs analytic views. Graph-light stores typed relations, not prose.
 
-## Promotion gate
-Promote an entity or relation when it is reused across arcs or resolves repeated ambiguity. Prefer A/B claims; a C item may appear only with explicit hypothesis status. Do not copy raw field notes into the wiki as settled facts.
+Every edge endpoint must resolve to an explicit graph node, wiki slug, claim, bridge or supported composition fragment. Maintain `04_graph/nodes.jsonl` for concept fragments that are not first-class wiki/claim objects. Do not create ghost endpoints merely because a label appears in prose.
 
-## Wiki entity contract
-Each entity page should contain:
-- stable `slug` and canonical name;
-- entity type and aliases;
-- scope / why reusable;
-- concise durable description;
-- related arcs and claim IDs;
-- source IDs;
-- confidence and material limits;
-- `last_reviewed` date.
-Aliases must redirect conceptually to one canonical slug; do not fork duplicate pages for spelling variants.
+## Pre-edit invariant
+`python scripts/graph_link_audit.py <project>` is mandatory before composition/editing. **Zero unresolved endpoints** is the only passing state. Editing cannot rename or infer unresolved fragments silently.
 
-## Graph-light contract
-Use typed relations such as `CAUSES`, `AMPLIFIES`, `ENABLES`, `CONSTRAINS`, `LOCATED_IN`, `LEGITIMIZES`, `CONTESTS`, `MIGRATES_TO`, `TRADES_WITH`, `SOURCES`, `CONTRADICTS`, `REFINES`, `REDISTRIBUTES_ACCESS_TO`, `EXTERNALIZES_TO`, `COMPARES_WITH`.
-
-Every edge records `from`, `relation`, `to`, `confidence`, `source_ids`, optional `claim_ids`, and `last_reviewed`. Causal/interpretive edges require provenance. Descriptive identity/location edges may use an empty source list only when trivially structural and QA permits it.
-
-## Lifecycle
-After a substantial research run:
-1. update entities touched by stabilized claims;
-2. add/remove graph edges;
-3. flag contradictions rather than overwriting silently;
-4. run duplicate-slug and unknown-source QA;
-5. save a project checkpoint identifying wiki/graph freshness.
-
-## Output
-Wiki entity pages (`templates/wiki-entity.md` → `03_wiki/**/*.md`) and typed graph edges (`04_graph/*.jsonl`), both validated by `scripts/qa_project.py`.
-
-See also: `SKILL.md` orchestration step 9; `docs/skill_workflow_index.md`.
+Causal/interpretive edges require provenance and confidence. After substantial research, update entities/edges, resolve contradictions, run graph-link audit, then release the project to composition.

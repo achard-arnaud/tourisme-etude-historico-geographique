@@ -8,34 +8,18 @@ description: Use when an arc requires analysis of regimes, succession, administr
 Ask who can decide, tax, mobilize labour, enforce rules, appoint officials, control succession and claim legitimacy. Separate formal institutions from coalition practice. Track path dependence across conquest, restoration and regime change. Distinguish state capacity from territorial size.
 
 ## Access architecture
-When the issue is representation or mobility, map the actual gateways into power and opportunity:
-- citizenship and franchise;
-- official/working language;
-- examinations and credentials;
-- school/university admissions;
-- district or territorial quotas;
-- caste/class/ethnic reservations or affirmative action;
-- recruitment, promotion and professional licensing;
-- devolution/federalism and the level at which rules apply.
-
-Do not infer representation from population share alone. Distinguish political office, senior administration, routine public employment, professions and educational access.
+When representation/mobility matters, map citizenship/franchise, language, examinations/credentials, school/university admission, territorial quotas, caste/class/ethnic reservations, recruitment/promotion/licensing and devolution/federalism. Do not infer representation from population share alone.
 
 ## Policy instrument matrix
-For every major reform, record:
-1. problem claimed by proponents and **distributional intent**;
-2. instrument chosen;
-3. implementing level and bureaucracy;
-4. intended beneficiary and burdened group;
-5. observed access effect;
-6. displacement/substitution effects;
-7. enforcement gap and time horizon.
-
-A policy can democratize one gateway while closing another. Keep **distributional intent**, **legal design**, **implementation** and **distributional effect** separate.
+For every major reform record: problem/distributional intent; instrument; implementing level; beneficiary/burdened group; observed access effect; displacement effects; enforcement gap/time horizon. Keep intent, legal design, implementation and effect separate.
 
 ## Comparative use
-Compare equivalent institutional levels. A subnational reservation regime inside a federation is not directly equivalent to a sovereign state's language regime. Use comparison only when the access mechanism is transportable after accounting for constitutional level, market size and conflict.
+Compare equivalent institutional levels. A subnational reservation regime is not automatically comparable to a sovereign-state language regime.
+
+## Side-story handoff
+If an institutional mechanism is useful but lateral to the active causal spine, nominate an evidence-backed `detour`, `also`, `portrait` or `callback` candidate with HIL-01 plus claim IDs. Human-scale examples illustrate a mechanism; they cannot substitute for population-level evidence. Do not promote here.
 
 ## Output
-Produce evidence-backed HIL-01 claim candidates for the active arc/zoom. In the current runtime, `02_hil/` is a planned/scaffold layer, not a guaranteed persisted output: never report an HIL artefact as written unless the file actually exists. Preserve negative or non-findings explicitly in notes/questions until a structured HIL schema is implemented.
+Produce evidence-backed HIL-01 claim candidates for the active arc/zoom. Never report a structured HIL artefact as written unless it actually exists. Preserve negative/non-findings and side-story candidate handoffs explicitly until downstream composition.
 
-See also: `SKILL.md` orchestration step 6; `docs/skill_workflow_index.md`.
+See also: `SKILL.md` orchestration step 6; `composing-side-stories`; `docs/skill_workflow_index.md`.

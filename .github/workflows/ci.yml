@@ -17,12 +17,14 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m unittest discover -s tests -v
       - run: python scripts/audit_skill.py .
-      # Run 7 remains the promoted reader-recovery history; Run 9 below is the
-      # executable pre-1948 functional regression baseline.
-      - run: python scripts/audit_workflow.py docs/RUN7_WORKFLOW_MANIFEST.json
+      - run: python scripts/audit_workflow.py --latest
+      - run: python scripts/audit_context_budget.py --latest
       - run: python scripts/qa_project.py examples/sri_lanka_pre_1948
       - run: python scripts/qa_project.py examples/sri_lanka_post_1948
+      # Mandatory pre-edit gates: graph fragments and composition placements resolve before editing.
+      - run: python scripts/qa_composition_pipeline.py examples/sri_lanka_pre_1948
+      - run: python scripts/qa_composition_pipeline.py examples/sri_lanka_post_1948
+      - run: python scripts/materialize_arc_recaps.py --project examples/sri_lanka_pre_1948 --source examples/sri_lanka_pre_1948/09_output/report.md --check
       - run: python scripts/qa_functional_pre1948.py
-      # Publish-run smoke test: exercises both reader-export pipelines after
-      # the canonical pre-1948 functional fixture has passed.
-      - run: python scripts/render_full_reader_v3.py --project all
+      # Composed renderer injects structured arc recaps into the lossless V3 render path.
+      - run: python scripts/render_composed_reader.py --project all

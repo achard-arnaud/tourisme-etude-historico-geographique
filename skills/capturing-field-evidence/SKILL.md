@@ -17,21 +17,13 @@ For long visits, maintain an explicit session ledger:
 - status: `captured`, `researched`, `integrated`, `discarded`.
 Never describe `captured` material as already integrated into the canonical report.
 
+## Side-story handoff
+A field object, person, place or anecdotal cluster may be tagged as a **candidate** for `object_focus`, `portrait`, `also` or `detour`, but capture never creates a promoted `side_story`. First preserve the origin path/source ID and pass through sanitization/sourcing. The later composition record must reference this origin rather than treating the field impression as new proof.
+
 ## Field-session checkpoint
-At the end of a field batch, record where work stopped:
-1. notes captured;
-2. sources fetched/corroborated;
-3. claims/bridges promoted;
-4. wiki/graph updated or not;
-5. reading output amended or still pending.
-This checkpoint is part of project continuity, not historical evidence.
+At the end of a field batch, record notes captured, sources corroborated, claims/bridges promoted, wiki/graph freshness, side-story candidates and whether reading output was actually amended.
 
 ## Output
-- raw observation;
-- source/artefact identifier;
-- provisional ARC/HIL/ZOOM;
-- questions raised;
-- integration status;
-- no causal promotion without sourcing.
+Raw observation; source/artefact identifier; provisional ARC/HIL/ZOOM; questions; integration status; optional side-story candidate hint; no causal or narrative promotion without sourcing.
 
-See also: `SKILL.md` orchestration step 1; `docs/skill_workflow_index.md`.
+See also: `SKILL.md` orchestration step 1; `composing-side-stories`; `docs/skill_workflow_index.md`.

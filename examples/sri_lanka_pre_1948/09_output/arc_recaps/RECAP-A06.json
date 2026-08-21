@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "class": "arc_recap",
+  "id": "RECAP-A06",
+  "arc": "A06_voc_coastal_state",
+  "status": "validated",
+  "causal_schema": {
+    "drivers": [
+      {"claim_id": "C-PRE-001", "summary": "Le contrôle VOC des ports et forts devient une souveraineté côtière concurrente."},
+      {"claim_id": "C-PRE-002", "summary": "L’administration fiscale territoriale accroît la lisibilité de la société et des ressources."}
+    ],
+    "amplifiers": [],
+    "constraints": [],
+    "consequences": [{"claim_id": "C-PRE-002", "summary": "Registres, contentieux et catégories approfondissent la portée administrative."}]
+  },
+  "protagonists": [
+    {"name": "Monarchie kandyanne", "role": "souverain de l’intérieur", "objective": "Utiliser la VOC contre le Portugal sans perdre la côte.", "constraints": ["projection maritime limitée"], "perceived_options": ["alliance", "résistance"], "claim_ids": ["C-PRE-001"]},
+    {"name": "VOC à Ceylan", "role": "compagnie-État", "objective": "Transformer les nœuds côtiers conquis en revenus et administration défendables.", "constraints": ["coût de coercition", "obligations territoriales"], "perceived_options": ["réseau de forts", "fiscalité", "enregistrement"], "claim_ids": ["C-PRE-001", "C-PRE-002"]}
+  ],
+  "what_changed": ["L’allié devient un souverain côtier concurrent.", "Les nœuds militaires deviennent un système administratif et fiscal."],
+  "prepares_next": [{"bullet": "Un État côtier plus dense en forts et en papier entre dans un système de l’océan Indien qui devient progressivement plus asymétrique au profit de la Grande-Bretagne.", "next_arc": "A07_european_wars_reordering", "bridge_ids": []}],
+  "lineage": {"claim_ids": ["C-PRE-001", "C-PRE-002"], "source_ids": [], "bridge_ids": ["B-PRE-001"]},
+  "placement": {"before_anchor": "1744–1763 : les guerres européennes changent le système régional"},
+  "render": {"label": "Récap causal", "marker": "[ARC-RECAP:RECAP-A06]", "required_in_reader": true}
+}

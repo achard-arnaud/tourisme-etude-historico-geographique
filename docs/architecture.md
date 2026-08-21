@@ -1,38 +1,24 @@
 # Architecture
 
-The root skill is an orchestrator. Sixteen sub-skills own judgment-heavy methods; scripts enforce mechanical invariants. Project artefacts are split by chronological arc, analytic HIL, reusable wiki entities, graph relations, source registers, bridges, drift audits, questions and output.
+The root skill orchestrates judgment-heavy skills while scripts enforce mechanical contracts. The system remains **arc-first + Zettelkasten-lite + graph-light**, with explicit output-state and a first-class composition layer.
 
-The system is deliberately **arc-first, Zettelkasten-lite, graph-light**: chronology remains the human reading spine; vertical themes reactivate where they change an arc; the wiki prevents entity duplication; the graph stores only typed, sourced relations needed for cross-arc reasoning.
+## Layers
+1. **Research** — field evidence, sources, typed claims, arcs/HILs, bridges, drifts, wiki/graph.
+2. **Composition** — `side_story`, `arc_recap`, optional `map_asset`, and `reader_profile`/reader plan.
+3. **Canonical Markdown** — path resolved from `00_method/output_state.json`, never inferred from `report.md` naming.
+4. **Reader export** — DOCX/PDF generated only after preflight and retention gates.
 
-## Long-project state machine
-Three output layers are independent:
-1. **research** — raw/processed evidence, sources, claims, bridges, drifts, wiki, graph;
-2. **canonical Markdown** — deliberately promoted synthesis;
-3. **reader export** — Word/PDF or other formatted edition.
+## HIL ownership
+HIL-01 institutions; HIL-02 geography; HIL-03 economy; HIL-04 society; HIL-05 religion/culture; HIL-06 security; **HIL-07 regional/global systems**; **HIL-08 historiography/bias**. HIL-07 now has a dedicated analysis skill; HIL-08 is owned by drift audit.
 
-State transitions are explicit: `captured → researched → integrated/vnext → promoted/canonical → reader-export`. A field or research run may advance one layer without advancing the next.
+## Composition contracts
+- `side_story`: normalized off-trunk narrative with lineage, placement, optional map eligibility and deterministic materialization.
+- `arc_recap`: end-of-arc causal schema + protagonist viewpoints + what changed + next-arc teaser bullets.
+- `map_asset`: optional online map candidate → vision validation → explicit human approval → dated fragment/caption; only approved assets are renderable.
+- `reader_profile`: deterministic content temperature, story template, side-story selection/order, recap style and map rules.
 
-## Comparative architecture
-Comparators remain attached to a home arc. The system normalizes the institutional/geographic unit and asks what can travel from one case to another:
-- instrument;
-- mechanism;
-- institutional package;
-- outcome.
+## Pre-edit invariant
+`graph_link_audit.py` resolves every graph edge endpoint. `qa_composition_pipeline.py` then resolves output state, side-story coverage/anchors, arc recaps, map lifecycle and reader profile, and writes `reader_plan.json`. Editing runs only after this gate.
 
-The farther right the comparison moves, the stronger the confounder and evidence burden. Province, federated state, peninsula and sovereign country are never treated as equivalent containers by default.
-
-## Knowledge layer
-`03_wiki/` stores durable reusable entities with slug, type, confidence, sources, related claims, limits and review date. `04_graph/*.jsonl` stores typed edges with provenance and confidence. Raw field notes and unresolved analogies stay outside the wiki.
-
-## Source scalability
-A project may contain several `05_sources/source_register*.json` files. Source IDs remain globally unique within the project. Modular registers allow new research runs to append bounded source families without repeatedly rewriting one monolithic registry.
-
-## Deterministic QA
-`qa_project.py` validates:
-- source tiers and duplicate IDs across modular registers;
-- claim confidence/zoom/source references;
-- bridge closure, claim endpoints and provenance;
-- wiki frontmatter, unique slugs, review dates and source references;
-- graph JSONL structure, confidence and provenance for interpretive edges.
-
-Judgment remains in skills; structural integrity is enforced mechanically.
+## QA philosophy
+No lexical-heading test substitutes for behavior. File-size limits do not proxy context safety: `audit_context_budget.py --latest` measures root orchestrator + actually dispatched skills. `audit_workflow.py --latest` resolves the highest reviewed run manifest automatically.

@@ -5,29 +5,21 @@ description: Use when war, armies, mercenaries, fortifications, coercion, diplom
 
 # Analyzing security and geopolitics
 
-Distinguish invasion, occupation, tribute, alliance, intervention, raid, succession support, insurgent sovereignty and durable annexation. Map costs, objectives and actors at each scale. Treat the country as part of a regional balance-of-power system when evidence shows reciprocal intervention, refuge, migration or economic dependence.
+Distinguish invasion, occupation, tribute, alliance, intervention, raid, succession support, insurgent sovereignty and durable annexation. Map costs, objectives and actors at each scale. Treat the country as part of a regional balance-of-power system only when evidence shows transmission.
 
 ## War-development channels
-When conflict may explain later economic divergence, disaggregate:
-- deaths/injury and cohort loss;
-- displacement and refugee/diaspora formation;
-- destruction and deferred maintenance of infrastructure;
-- schooling and institutional interruption;
-- land, checkpoint or security restrictions;
-- insurance/finance/investment risk;
-- militarisation and competing taxation/governance;
-- loss or relocation of firms, professionals and networks;
-- postwar reconstruction quality and time lag.
-
-Do not treat “war” as a black box. Identify which channel persists after violence ends and which evidence shows territorial scarring rather than a temporary shock.
+Disaggregate deaths/cohort loss, displacement, infrastructure damage/maintenance, schooling interruption, land/security restrictions, investment risk, militarisation/competing taxation, firm/professional relocation and reconstruction lag. Identify which channel persists after violence ends.
 
 ## Externalisation test
-Migration may weaken the origin territory while strengthening households or diasporic networks abroad. Separate local productive capacity, remittances, political influence, return investment and skills circulation.
+Separate local productive capacity, remittances, political influence, return investment and skills circulation.
 
 ## Comparison caution
-Peaceful comparator regions are useful only after marking conflict as a major confounder. Never attribute a development gap to language, caste or policy while leaving war untreated.
+Peaceful comparators require war to be treated as a major confounder. Do not attribute development gaps to language/caste/policy while leaving conflict untreated.
+
+## Side-story handoff
+Regional or global balancing that explains a local event without constituting its direct cause is a strong `dezoom` candidate; a fort/battlefield can be `object_focus`; a rejected “great-power war caused everything” story can be `false_lead`. Carry HIL-06, claim/bridge/source lineage, scale mechanism and local payoff. Do not promote here.
 
 ## Output
-Produce evidence-backed HIL-06 claim candidates for the active arc/zoom. In the current runtime, `02_hil/` is a planned/scaffold layer, not a guaranteed persisted output: never report an HIL artefact as written unless the file actually exists. Preserve negative or non-findings explicitly in notes/questions until a structured HIL schema is implemented.
+Produce evidence-backed HIL-06 claim candidates for the active arc/zoom and explicit composition candidate handoffs. Never report a structured HIL artefact unless it exists.
 
-See also: `SKILL.md` orchestration step 6; `docs/skill_workflow_index.md`.
+See also: `SKILL.md` orchestration step 6; `zooming-geographic-scales`; `composing-side-stories`.
