@@ -9,5 +9,6 @@
   "what_changed": [],
   "prepares_next": [{"bullet": "", "next_arc": null, "bridge_ids": []}],
   "lineage": {"claim_ids": [], "source_ids": [], "bridge_ids": []},
-  "render": {"marker": "[ARC-RECAP:RECAP-...]", "required_in_reader": true}
+  "placement": {"before_anchor": "heading that begins the next arc/section"},
+  "render": {"label": "Récap causal", "marker": "[ARC-RECAP:RECAP-...]", "required_in_reader": true}
 }

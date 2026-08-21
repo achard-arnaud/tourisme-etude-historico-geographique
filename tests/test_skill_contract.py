@@ -16,7 +16,7 @@ class SkillContractTests(unittest.TestCase):
         meta=fm((ROOT/'SKILL.md').read_text(encoding='utf-8'));self.assertEqual('tourisme-etude-historico-geographique',meta.get('name'));self.assertTrue(meta.get('description','').startswith('Use when'))
         r=subprocess.run([sys.executable,'scripts/audit_context_budget.py','--latest'],cwd=ROOT,text=True,capture_output=True);self.assertEqual(0,r.returncode,r.stdout+r.stderr)
     def test_composition_templates_and_scripts_exist(self):
-        for rel in ['templates/side-story.json','templates/arc-recap.json','templates/map-asset.json','templates/reader-profile.json','scripts/side_story_contract.py','scripts/arc_recap_contract.py','scripts/map_asset_contract.py','scripts/reader_profile_contract.py','scripts/graph_link_audit.py','scripts/materialize_side_stories.py','scripts/resolve_reader_plan.py']:
+        for rel in ['templates/side-story.json','templates/arc-recap.json','templates/map-asset.json','templates/reader-profile.json','scripts/side_story_contract.py','scripts/arc_recap_contract.py','scripts/map_asset_contract.py','scripts/reader_profile_contract.py','scripts/graph_link_audit.py','scripts/materialize_side_stories.py','scripts/materialize_arc_recaps.py','scripts/resolve_reader_plan.py','scripts/render_composed_reader.py']:
             self.assertTrue((ROOT/rel).exists(),rel)
     def test_root_orchestrator_names_composition_capabilities(self):
         text=(ROOT/'SKILL.md').read_text(encoding='utf-8')

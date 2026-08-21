@@ -21,7 +21,17 @@ class CompositionPipelineTests(unittest.TestCase):
         sys.path.insert(0,str(ROOT/'scripts'))
         from arc_recap_contract import validate_arc_recaps,load_arc_recaps
         errors,_,count=validate_arc_recaps(PRE);self.assertEqual([],errors);self.assertEqual(3,count)
-        for _,item in load_arc_recaps(PRE):self.assertTrue(item['protagonists']);self.assertTrue(item['prepares_next'])
+        for _,item in load_arc_recaps(PRE):self.assertTrue(item['protagonists']);self.assertTrue(item['prepares_next']);self.assertTrue(item['placement']['before_anchor'])
+    def test_arc_recap_materializer_is_deterministic_and_idempotent(self):
+        sys.path.insert(0,str(ROOT/'scripts'))
+        from materialize_arc_recaps import materialize_arc_recaps
+        source=(PRE/'09_output/report.md').read_text(encoding='utf-8')
+        once,count=materialize_arc_recaps(PRE,source);twice,count2=materialize_arc_recaps(PRE,once)
+        self.assertEqual(3,count);self.assertEqual(3,count2);self.assertEqual(once,twice)
+        for rid in ('RECAP-A06','RECAP-A07','RECAP-A08'):self.assertEqual(1,once.count(f'[ARC-RECAP:{rid}]'))
+        self.assertLess(once.index('[ARC-RECAP:RECAP-A06]'),once.index('## 4. 1744–1763'))
+        self.assertLess(once.index('[ARC-RECAP:RECAP-A07]'),once.index('## 6. Bridge vers 1948'))
+        self.assertLess(once.index('[ARC-RECAP:RECAP-A08]'),once.index('## 6. Bridge vers 1948'))
     def test_graph_preflight_is_clean_before_editing(self):
         for project in (PRE,POST):
             r=subprocess.run([sys.executable,'scripts/graph_link_audit.py',str(project)],cwd=ROOT,text=True,capture_output=True);self.assertEqual(0,r.returncode,r.stdout+r.stderr);self.assertIn('0 unresolved',r.stdout)

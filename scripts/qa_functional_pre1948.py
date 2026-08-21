@@ -4,7 +4,7 @@ from __future__ import annotations
 import json,subprocess,sys
 from pathlib import Path
 from side_story_contract import validate_side_stories
-from arc_recap_contract import validate_arc_recaps
+from arc_recap_contract import assert_rendered_arc_recaps,validate_arc_recaps
 from graph_link_audit import validate_graph_links
 REPO=Path(__file__).resolve().parents[1];PROJECT=REPO/'examples/sri_lanka_pre_1948'
 def run(cmd):
@@ -40,13 +40,12 @@ def main():
         return 1
     try:
         run([sys.executable,'scripts/audit_skill.py','.']);run([sys.executable,'scripts/audit_workflow.py','--latest']);run([sys.executable,'scripts/qa_project.py',str(PROJECT)]);run([sys.executable,'scripts/qa_composition_pipeline.py',str(PROJECT)])
-        metrics_path=REPO/'docs/RUN7_V3_RETENTION_METRICS.json';previous=metrics_path.read_bytes() if metrics_path.exists() else None
-        try:rendered=run([sys.executable,'scripts/render_full_reader_v3.py','--project','pre'])
-        finally:
-            if previous is not None:metrics_path.write_bytes(previous)
+        rendered=run([sys.executable,'scripts/render_composed_reader.py','--project','pre'])
         metric=json.loads(rendered.stdout)[0];ret=float(metric['retention_vs_baseline_percent'])
+        reader=(PROJECT/'09_output/report_v3_full.md').read_text(encoding='utf-8');rendered_recaps=assert_rendered_arc_recaps(PROJECT,reader)
         if ret<100:raise RuntimeError(f'retention {ret}%')
+        if metric.get('arc_recaps')!=recaps or rendered_recaps!=recaps:raise RuntimeError(f'arc recap render mismatch: metric={metric.get("arc_recaps")}, rendered={rendered_recaps}, expected={recaps}')
     except Exception as exc:print(f'ERROR: {exc}',file=sys.stderr);return 1
-    print(f"PRE1948 FUNCTIONAL QA OK: 9 claims, 37 sources, 3 bridges, 3 wiki pages, 4 graph edges/{nodes} nodes, 8 HIL baselines, {side_count} side stories ({coverage['tracked']}/{coverage['discovered']} tracked), 3 arc recaps, retention {ret}%")
+    print(f"PRE1948 FUNCTIONAL QA OK: 9 claims, 37 sources, 3 bridges, 3 wiki pages, 4 graph edges/{nodes} nodes, 8 HIL baselines, {side_count} side stories ({coverage['tracked']}/{coverage['discovered']} tracked), {recaps}/{rendered_recaps} arc recaps rendered, retention {ret}%")
     return 0
 if __name__=='__main__':raise SystemExit(main())

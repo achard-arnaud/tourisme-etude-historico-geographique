@@ -1,8 +1,25 @@
 {
- "schema_version":"1.0","class":"arc_recap","id":"RECAP-A07","arc":"A07_european_wars_reordering","status":"validated",
- "causal_schema":{"drivers":[{"claim_id":"C-PRE-GEO-001","summary":"Anglo-French competition in India becomes structurally asymmetric."},{"claim_id":"C-PRE-GEO-003","summary":"Revolutionary/Napoleonic war transfers Dutch Ceylon to Britain before 1815."}],"amplifiers":[{"claim_id":"C-PRE-GEO-004","summary":"Reduced Dutch/French alternatives narrow Kandyan balancing options."}],"constraints":[],"consequences":[{"claim_id":"C-PRE-GEO-004","summary":"Internal Kandyan fracture becomes unusually exploitable."}]},
- "protagonists":[{"name":"East India Company / Britain","role":"rising regional fiscal-military power","objective":"Remove rival strategic positions and secure Ceylon.","constraints":["naval war","European rival bases"],"perceived_options":["seizure","treaty settlement"],"claim_ids":["C-PRE-GEO-001","C-PRE-GEO-003"]},{"name":"Kandyan elites","role":"inland coalition","objective":"Preserve autonomy and bargaining options.","constraints":["internal fracture","shrinking external counterweights"],"perceived_options":["internal coalition","external balancing"],"claim_ids":["C-PRE-GEO-004"]}],
- "what_changed":["Britain becomes the dominant European regional military framework around Ceylon.","1815 occurs inside a much narrower balancing environment."],
- "prepares_next":[{"bullet":"British rule inherits and expands administrative legibility while local social hierarchies continue to shape access and labour.","next_arc":"A08_jaffna_caste_colonial_codification","bridge_ids":[]}],
- "lineage":{"claim_ids":["C-PRE-GEO-001","C-PRE-GEO-003","C-PRE-GEO-004"],"source_ids":[],"bridge_ids":["B-PRE-002","B-PRE-003"]},"render":{"marker":"[ARC-RECAP:RECAP-A07]","required_in_reader":true}
+  "schema_version": "1.0",
+  "class": "arc_recap",
+  "id": "RECAP-A07",
+  "arc": "A07_european_wars_reordering",
+  "status": "validated",
+  "causal_schema": {
+    "drivers": [
+      {"claim_id": "C-PRE-GEO-001", "summary": "La compétition anglo-française en Inde devient structurellement asymétrique."},
+      {"claim_id": "C-PRE-GEO-003", "summary": "Les guerres révolutionnaires et napoléoniennes transfèrent Ceylan hollandais à la Grande-Bretagne avant 1815."}
+    ],
+    "amplifiers": [{"claim_id": "C-PRE-GEO-004", "summary": "La disparition d’alternatives hollandaises et françaises réduit les options de balancier de Kandy."}],
+    "constraints": [],
+    "consequences": [{"claim_id": "C-PRE-GEO-004", "summary": "La fracture politique interne kandyanne devient exceptionnellement exploitable."}]
+  },
+  "protagonists": [
+    {"name": "East India Company / Grande-Bretagne", "role": "puissance fiscalo-militaire régionale montante", "objective": "Éliminer les positions stratégiques rivales et sécuriser Ceylan.", "constraints": ["guerre navale", "bases européennes rivales"], "perceived_options": ["prise militaire", "règlement par traité"], "claim_ids": ["C-PRE-GEO-001", "C-PRE-GEO-003"]},
+    {"name": "Élites kandyannes", "role": "coalition de l’intérieur", "objective": "Préserver l’autonomie et les marges de négociation.", "constraints": ["fracture interne", "réduction des contrepoids extérieurs"], "perceived_options": ["coalition interne", "balancier externe"], "claim_ids": ["C-PRE-GEO-004"]}
+  ],
+  "what_changed": ["La Grande-Bretagne devient le cadre militaire européen dominant autour de Ceylan.", "1815 survient dans un environnement de balancier externe beaucoup plus étroit."],
+  "prepares_next": [{"bullet": "Le pouvoir britannique hérite puis étend la lisibilité administrative, tandis que les hiérarchies sociales locales continuent de structurer l’accès, le travail et l’intermédiation.", "next_arc": "A08_jaffna_caste_colonial_codification", "bridge_ids": []}],
+  "lineage": {"claim_ids": ["C-PRE-GEO-001", "C-PRE-GEO-003", "C-PRE-GEO-004"], "source_ids": [], "bridge_ids": ["B-PRE-002", "B-PRE-003"]},
+  "placement": {"before_anchor": "Bridge vers 1948 : ce que l’État indépendant hérite vraiment"},
+  "render": {"label": "Récap causal", "marker": "[ARC-RECAP:RECAP-A07]", "required_in_reader": true}
 }
