@@ -13,8 +13,8 @@ def _norm(text: str) -> str:
 
 
 def _remove_existing(text: str, recap_id: str) -> str:
-    pattern = re.compile(rf"\n?<!-- \[ARC-RECAP:{re.escape(recap_id)}\] -->.*?<!-- \[/ARC-RECAP:{re.escape(recap_id)}\] -->\n?", re.S)
-    return pattern.sub("\n", text)
+    pattern = re.compile(rf"\n*<!-- \[ARC-RECAP:{re.escape(recap_id)}\] -->.*?<!-- \[/ARC-RECAP:{re.escape(recap_id)}\] -->\n*", re.S)
+    return pattern.sub("\n\n", text)
 
 
 def materialize_arc_recaps(project: Path, markdown: str) -> tuple[str, int]:
@@ -34,8 +34,11 @@ def materialize_arc_recaps(project: Path, markdown: str) -> tuple[str, int]:
         index = next((i for i, line in enumerate(lines) if needle in _norm(line).lstrip("# ")), None)
         if index is None:
             raise RuntimeError(f"arc recap placement anchor not found: {anchor}")
+        while index > 0 and not lines[index - 1].strip():
+            del lines[index - 1]
+            index -= 1
         block = "\n\n".join(render_arc_recap_markdown(item) for item in sorted(recaps, key=lambda row: row.get("id", "")))
-        lines[index:index] = [block, ""]
+        lines[index:index] = ["", block, ""]
         markdown = "\n".join(lines)
     return markdown.rstrip() + "\n", len(items)
 
