@@ -1,0 +1,10 @@
+{
+  "schema_version":"1.2","class":"side_story","id":"SS-...","kind":"analytical_focus","status":"candidate","lineage_quality":"field_research",
+  "title":"","arc":"LEGACY:...","purpose":"","reason_off_trunk":"Semi-analytical focus: richer than an anecdotal box, narrower than a chronological arc.","payoff":"","map_eligible":false,"reader_policy":{"min_age":10},
+  "lineage":{"claim_ids":[],"source_ids":[],"bridge_ids":[],"hil_ids":[],"drift_paths":[],"origin_paths":[]},
+  "placement":{"section_anchor":"","return_to":null},"zoom_excursion":null,
+  "analysis":{"core_question":"","thesis":"","contrast":[{"label":"","position":"","caveat":""},{"label":"","position":"","caveat":""}],"mechanisms":[{"name":"","explanation":"","evidence_status":"inference"}],"fiscal_dimension":"","foreign_influence":"","callbacks":[{"target":"","relation":""}],"open_questions":[]},
+  "visual":{"format":"one_or_two_pager","orientation":"A4_landscape","layout":"historical_focus","composition":["hero_question","contrast_cards","mechanism_band","callback_strip"],"evidence_palette":{"verified":"green","inference":"orange","unknown":"red"},"body_pt_preferred":11,"body_pt_min":9,"card_padding_pt_preferred":11,"card_padding_pt_min":9,"table_max_columns":5},
+  "content":{"takeaway":"","body_markdown":"","legacy_titles":[]},
+  "render":{"label":"Focus analytique","marker":"[SIDE-STORY:SS-...]","required_in_reader":false}
+}

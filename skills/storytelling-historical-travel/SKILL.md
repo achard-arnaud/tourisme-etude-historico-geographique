@@ -6,21 +6,23 @@ description: Use when a validated historical manuscript must be rendered for a s
 # Storytelling historical travel
 
 ## Reader plan first
-Consume the deterministic `09_output/reader_plan.json` resolved by `tailoring-reader-profiles`; do not choose side-story eligibility ad hoc. The profile carries audience, language, content temperature, story template, side-story priority, recap style and map policy.
+Consume deterministic `09_output/reader_plan.json`; do not choose side-story eligibility ad hoc. The profile carries audience, language, content temperature, story template, side-story priority, recap style and map policy.
 
-Profiles include **advanced / historian enthusiast**, **intermediate / educated generalist**, and **child 10+**. Content temperature is content density/variety, not model sampling temperature. Historian enthusiasts and children may both receive all side-story kinds: historians prioritize causal/method/comparator richness; children prioritize sourced people, objects and anecdotes before the larger causal explanation.
+Profiles include advanced/historian enthusiast, intermediate/educated generalist and child 10+. Content temperature is density/variety, not model sampling. Historians and children may both receive every side-story kind for different reasons; the profile controls ordering.
 
 ## Length policy
-For advanced work there is **no maximum length**. Start from the complete baseline/canonical state, treat later inputs as deltas unless proven complete, and apply a **content-preservation gate** against silent loss. Intermediate/child may be shorter only under their explicit template/profile.
+For advanced work there is no maximum length. Start from complete baseline/canonical state, treat later inputs as deltas unless proven complete, and apply content-preservation gates. Intermediate/child may be shorter only under explicit profile/template rules.
 
 ## Historical nonfiction gate
-PACE remains useful: Place → source-attested Action → Constraint → Evidence. Never add invented dialogue, thoughts, motives, composite characters, sensory facts or false suspense. Use `but/therefore` causal transitions and maintain a promise and continuity ledger.
+PACE remains useful: Place → source-attested Action → Constraint → Evidence. Never add **invented dialogue**, thoughts, motives, composite characters, sensory facts or false suspense. Use but/therefore transitions and maintain continuity.
 
 ## Composition invariants
-A side story's kind, lineage, required status and reader eligibility come from artefacts/profile. Arc recaps may be simplified in wording but not causally rewritten. Only `human_approved` map assets are eligible. Select **at most one map per subsection or side-story slot**; map language is document language or English fallback. Hidden side-story/recap identifiers remain traceable in Markdown but must not appear as reader-facing labels in Word/PDF.
+A side story's kind, lineage, required status and reader eligibility come from artefacts/profile. `analytical_focus` preserves at minimum its **question → thesis → contrasted positions/caveats → mechanisms/evidence status → callback → payoff**. Storytelling may simplify language or reorder cards for the target reader; it may not flatten the focus into a generic anecdote, turn an inference green, or rewrite a contested binary as fact.
+
+Arc recaps may be simplified in wording but not causally rewritten. Only `human_approved` map assets are eligible, at most one per subsection or side-story slot. Hidden composition IDs remain traceable in Markdown but not reader-facing.
 
 ## Child 10+
-Use `templates/storytelling/child_10_plus.md`: concrete place/object, protagonists and documented action, obstacle/choice, anecdote, simple because→therefore recap, and a factual question/teaser toward the next arc. Do not simplify by falsifying uncertainty or violence.
+Use `templates/storytelling/child_10_plus.md`. An `analytical_focus` remains eligible, but decompose it around an observable object/place, protagonist/institution, documented action and a simple because→therefore mechanism before the callback. Complexity is staged, not deleted.
 
 ## QA
-Verify chronology, source-attested action, reader plan compliance, side-story retention, recap closure, map limit/approval, and baseline retention before export.
+Verify chronology, source-attested action, reader-plan compliance, side-story retention, analytical-focus evidence semantics, recap closure, map approval/limit and baseline retention before export.
