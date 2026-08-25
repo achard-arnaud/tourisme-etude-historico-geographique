@@ -1,0 +1,6 @@
+[
+  {"id":"GC-R15-01","topic":"protected_area_share","fragment_ids":["GF-346-01"],"external_counterpart":"Run13 national-parks intake states nearly 30%","resolution_target":"official protected-area inventory with explicit denominator","status":"open"},
+  {"id":"GC-R15-02","topic":"deforestation_chronology","fragment_ids":["GF-348-01"],"external_counterpart":"same guide attributes massive deforestation to colonial period generally on p.346","resolution_target":"coffee-to-tea plantation clearance chronology","status":"open"},
+  {"id":"GC-R15-03","topic":"peopling_sequence","fragment_ids":["GF-349-01","GF-350-01"],"external_counterpart":null,"resolution_target":"archaeological, epigraphic and historiographic evidence","status":"open"},
+  {"id":"GC-R15-04","topic":"economic_condition","fragment_ids":["GF-366-01","GF-369-05"],"external_counterpart":null,"resolution_target":"edition-date both statements and mark obsolete/superseded states","status":"open"}
+]
