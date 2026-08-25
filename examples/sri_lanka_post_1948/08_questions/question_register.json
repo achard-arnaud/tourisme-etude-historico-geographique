@@ -1,0 +1,33 @@
+[
+  {
+    "id": "Q-KANDY-001",
+    "question": "Is Kandy growing faster or slower than the national average in population, output per capita, and land value?",
+    "kind": "metric",
+    "arc": "A19_kandy_second_city_paradox",
+    "status": "open",
+    "discriminating_test": "Three series on consistent boundaries. Boundary choice is the principal source of error: municipal, agglomeration and district give different answers and must be reported separately.",
+    "pre_registered_expectation": "Below-average growth combined with a heritage-zone land premium indicates a stagnant rent-city: asset intact, no growth. Recorded before measurement so the result cannot be retrofitted.",
+    "falsifier": "Above-average growth on all three series.",
+    "blocks": ["A19 explanatory claims"],
+    "priority": 1
+  },
+  {
+    "id": "Q-CITY-001",
+    "question": "Do the hill towns' collapse and recovery profiles across 2019, 2020-21 and 2022 differ from Kandy's?",
+    "kind": "comparative",
+    "status": "open",
+    "discriminating_test": "Arrivals, occupancy and receipts across three shocks, four towns, one control.",
+    "falsifier": "Kandy behaves identically to the hill towns — in which case the sacred asset confers no demand stability and the place-city/rent-city typology is wrong as stated.",
+    "priority": 1
+  },
+  {
+    "id": "Q-SHOCK-001",
+    "question": "Does the difference in outcome between the 2019 and 2020-21 tourism collapses track the difference in fiscal position rather than the difference in shock magnitude?",
+    "kind": "counterfactual",
+    "arc": "A16_tourism_shock_and_fiscal_collapse",
+    "status": "open",
+    "discriminating_test": "Two tourism collapses, three years apart, under different fiscal regimes. Compare shock magnitude and duration against fiscal, reserve and debt-maturity positions.",
+    "falsifier": "Comparable fiscal positions with divergent outcomes, or comparable outcomes with divergent shock sizes.",
+    "priority": 1
+  }
+]
