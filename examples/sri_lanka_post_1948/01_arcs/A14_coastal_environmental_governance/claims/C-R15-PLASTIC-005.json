@@ -1,0 +1,3 @@
+{
+  "id":"C-R15-PLASTIC-005","type":"policy_intent","claim":"Sri Lanka adopted successive single-use plastic restrictions, including measures effective from 2021 and a further set approved for 2023.","confidence":"A","zoom":"Z2","causal_role":"mechanism","arc":"A14_coastal_environmental_governance","hil":"HIL-01_institutions-chronology","source_ids":["CABINET-PLASTIC-2020","CABINET-PLASTIC-2023"],"notes":"This establishes regulatory intent only. Enforcement and environmental effect remain open questions and are not inferred from adoption."
+}
