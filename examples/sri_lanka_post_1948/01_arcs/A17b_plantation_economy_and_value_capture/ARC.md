@@ -1,6 +1,6 @@
 # A17b — Plantation economy and value capture
 
-- evidence_status: partial
+evidence_status: partial
 - corpus: post-1948
 - span: 1948–2026
 - requested_alias: A17_plantation_economy_and_value_capture
