@@ -26,9 +26,11 @@ DEBUG = bool(os.environ.get('SKILL_DEBUG'))
 def contract_version(root):
     p = root / 'project.json'
     if not p.exists():
-        return 2
+        return 3
     try:
-        return int(json.loads(p.read_text(encoding='utf-8')).get('version', 2))
+        data = json.loads(p.read_text(encoding='utf-8'))
+        explicit = data.get('artifact_contract_version')
+        return int(explicit) if explicit is not None else 2
     except Exception:
         return 2
 
