@@ -1,6 +1,6 @@
 # A02c — Anuradhapura, Mihintale and the Mahavihara
 
-**Evidence status:** partial
+evidence_status: partial
 
 **Causal question:** What can be separated between later Theravada commemorative tradition, contemporaneous material evidence, and later monastic administration at Mihintale/Anuradhapura?
 
