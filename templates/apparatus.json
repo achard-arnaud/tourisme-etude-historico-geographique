@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.2",
+  "class": "apparatus",
+  "scope": "book",
+  "id": "APP-001",
+  "kind": "method",
+  "status": "candidate",
+  "lineage_quality": "full",
+  "title": "Book-level methodological apparatus",
+  "purpose": "State a method or historiographic rule that applies to the whole reader rather than one narrative arc.",
+  "reason_off_trunk": "Book-level framing rather than arc-local side material.",
+  "payoff": "Makes the reader contract explicit without inventing a false home arc.",
+  "map_eligible": false,
+  "reader_policy": {"min_age": 10},
+  "lineage": {"claim_ids": [], "source_ids": [], "bridge_ids": [], "hil_ids": ["HIL-08_historiography-bias"], "drift_paths": [], "origin_paths": []},
+  "placement": {"section_anchor": "", "return_to": null},
+  "content": {"takeaway": "", "body_markdown": "", "legacy_titles": []},
+  "render": {"label": "Point de méthode", "marker": "[SIDE-STORY:APP-001]", "required_in_reader": false}
+}
