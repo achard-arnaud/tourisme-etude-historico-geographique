@@ -1,6 +1,6 @@
 # A17 — Highland conservation and watershed governance
 
-**Evidence status:** partial
+evidence_status: partial
 
 **Causal question:** Does Horton Plains represent a conservation lineage distinct from the lowland hunting-reserve genealogy, with watershed protection and highland recreation as separate drivers?
 
