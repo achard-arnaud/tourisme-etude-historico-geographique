@@ -1,0 +1,75 @@
+{
+  "schema_version":1,
+  "run_id":"2026-08-25-run14-bound-legacy-side-stories",
+  "status":"reviewed",
+  "mode":"legacy-boundary-and-measured-vertical-slice",
+  "project_roots":["examples/sri_lanka_pre_1948","examples/sri_lanka_post_1948"],
+  "state_before":{
+    "coverage":"legacy declarations and evidence lineage were folded into one tracked metric",
+    "retention":"legacy boxes could be required in the reader without claim/source lineage or an explicit exemption reason",
+    "arcs":"pre-1948 legacy side stories used pseudo-arcs and book-level method boxes were forced into the arc model",
+    "industrialisation":"no measured unit cost existed for reconstructing evidence beneath legacy manuscript boxes",
+    "sequencing_note":"Run13 had already created A02_ancient_indian_ocean_exchange and A05_colonial_conservation_ordinance before this brief arrived; Run14 therefore preserves those researched arcs and uses A02b/A05b for non-conflicting legacy shells rather than renumbering or overwriting evidence."
+  },
+  "dispatched_skills":[
+    {"skill":"sanitizing-historical-claims","reason":"Create typed, bounded claims for the four-record A04 vertical slice.","inputs":["examples/sri_lanka_pre_1948/09_output/side_stories/legacy_backfill.json"],"outputs":["examples/sri_lanka_pre_1948/01_arcs/A04_chola_interlude_and_polonnaruwa/claims"],"status":"executed"},
+    {"skill":"sourcing-historical-anchors","reason":"Create dated provenance-bearing epigraphic, monographic and chronicle anchors for the A04 slice.","inputs":["examples/sri_lanka_pre_1948/05_sources"],"outputs":["examples/sri_lanka_pre_1948/05_sources/source_register_run14_legacy_slice.json"],"status":"executed"},
+    {"skill":"structuring-chronological-arcs","reason":"Replace pre-1948 pseudo-arcs with explicit shell/partial ARC contracts without fabricating evidence.","inputs":["examples/sri_lanka_pre_1948/09_output/side_stories/legacy_backfill.json"],"outputs":["examples/sri_lanka_pre_1948/01_arcs/A04_chola_interlude_and_polonnaruwa/ARC.md","examples/sri_lanka_pre_1948/01_arcs/A03_indian_ocean_and_regional_systems/ARC.md"],"status":"executed"},
+    {"skill":"analyzing-institutions-and-power","reason":"Bound Galpota royal legitimation and the institutional meaning of the Velaikkara record.","inputs":["examples/sri_lanka_pre_1948/01_arcs/A04_chola_interlude_and_polonnaruwa/claims"],"outputs":["examples/sri_lanka_pre_1948/01_arcs/A04_chola_interlude_and_polonnaruwa/claims/C-R14-A04-GALPOTA-001.json"],"status":"executed"},
+    {"skill":"analyzing-regional-global-systems","reason":"Bound the regional opportunity structure around Vijayabahu without replacing local reconquest agency.","inputs":["examples/sri_lanka_pre_1948/01_arcs/A04_chola_interlude_and_polonnaruwa/claims"],"outputs":["examples/sri_lanka_pre_1948/01_arcs/A04_chola_interlude_and_polonnaruwa/claims/C-R14-A04-VIJAYABAHU-001.json"],"status":"executed"},
+    {"skill":"auditing-historiography-and-drifts","reason":"Keep the Magha chronicle narrative as evidence while blocking monocausal laundering into the dry-zone collapse explanation.","inputs":["examples/sri_lanka_pre_1948/01_arcs/A04_chola_interlude_and_polonnaruwa/claims"],"outputs":["examples/sri_lanka_pre_1948/01_arcs/A04_chola_interlude_and_polonnaruwa/claims/C-R14-A04-MAGHA-001.json"],"status":"executed"},
+    {"skill":"composing-side-stories","reason":"Split traced from declared coverage, bound legacy retention, introduce book-level apparatus and promote only the four fully lineaged A04 boxes.","inputs":["examples/sri_lanka_pre_1948/09_output/side_stories/legacy_backfill.json"],"outputs":["examples/sri_lanka_pre_1948/09_output/side_stories/legacy_backfill.json","templates/apparatus.json","docs/SOP_SIDE_STORIES.md"],"status":"executed"},
+    {"skill":"composing-arc-recaps","reason":"Make shell and partial evidence states load-bearing so empty/partial arcs cannot be mistaken for recap-ready researched arcs.","inputs":["examples/sri_lanka_pre_1948/01_arcs"],"outputs":["scripts/arc_recap_contract.py"],"status":"executed"}
+  ],
+  "skipped_skills":[
+    {"skill":"capturing-field-evidence","reason":"No new field observation was introduced in Run14."},
+    {"skill":"zooming-geographic-scales","reason":"The four selected legacy records already had bounded local/regional placement; no new scale comparison was needed for this refactor."},
+    {"skill":"analyzing-geography-and-environment","reason":"No environmental mechanism was required to industrialise the selected A04 records."},
+    {"skill":"analyzing-economy-and-infrastructure","reason":"No metric or infrastructure claim was introduced in the A04 slice."},
+    {"skill":"analyzing-society-and-demography","reason":"The slice does not attempt population-wide social closure."},
+    {"skill":"analyzing-religion-culture-legitimacy","reason":"Religious evidence is used only where directly carried by the Velaikkara/Tooth-relic record; no broader doctrinal analysis is promoted."},
+    {"skill":"analyzing-security-and-geopolitics","reason":"Military context is bounded within existing A04 claims; no standalone security mechanism is closed."},
+    {"skill":"building-causal-bridges","reason":"Run14 measures side-story lineage cost and does not claim full causal closure for A04; no new bridge is justified."},
+    {"skill":"maintaining-wiki-and-graph","reason":"No durable entity relation is promoted from this bounded slice; graph changes would exceed the sprint purpose."},
+    {"skill":"curating-historical-map-assets","reason":"No map asset is necessary to validate the legacy boundary contract."},
+    {"skill":"tailoring-reader-profiles","reason":"Reader profiles are unchanged; only the evidence semantics beneath required boxes change."},
+    {"skill":"editing-historical-travel-output","reason":"The four promoted boxes already exist in canonical prose and use explicit existing-fragment materialisation; no manuscript rewrite is required."},
+    {"skill":"storytelling-historical-travel","reason":"Run14 changes evidence truthfulness, not narrative voice or compression."}
+  ],
+  "unit_cost":{
+    "slice":"A04_chola_interlude_and_polonnaruwa",
+    "legacy_records_promoted":4,
+    "claims_created":4,
+    "sources_added":5,
+    "research_search_batches":3,
+    "research_queries":10,
+    "agent_execution_passes":1,
+    "wall_clock_hours":null,
+    "wall_clock_note":"Not measured reliably in this execution; the brief permits turns/passes instead of hours.",
+    "second_source_family_required":["SS-PRE-L004","SS-PRE-L005","SS-PRE-L016"],
+    "single_anchor_bounded":["SS-PRE-L003"],
+    "method_return_exception":"L003/L004/L005 are method boxes; the repository contract deliberately keeps method return_to null instead of inventing a narrative return target."
+  },
+  "validations":[
+    "python -m unittest discover -s tests -v",
+    "python scripts/audit_skill.py .",
+    "python scripts/audit_workflow.py --latest",
+    "python scripts/audit_context_budget.py --latest",
+    "python scripts/audit_run13_contracts.py",
+    "python scripts/audit_run14_legacy.py",
+    "python scripts/qa_project.py examples/sri_lanka_pre_1948",
+    "python scripts/qa_project.py examples/sri_lanka_post_1948",
+    "python scripts/qa_composition_pipeline.py examples/sri_lanka_pre_1948",
+    "python scripts/qa_composition_pipeline.py examples/sri_lanka_post_1948",
+    "python scripts/qa_functional_pre1948.py",
+    "python scripts/render_composed_reader.py --project all"
+  ],
+  "state_after":{
+    "coverage":"pre-1948 dashboard is intentionally truthful: traced 8 / declared 17 / untracked 0",
+    "retention":"17 remaining untraced legacy records are explicit required-reader exemptions with stated migration reasons; four A04 boxes are evidence-backed",
+    "arcs":"pre-1948 legacy records use real arc IDs or book-level apparatus; shells are explicitly non-evidence and A04 is partial rather than falsely complete",
+    "industrialisation":"A04 provides a measured 4-record / 4-claim / 5-source unit-cost sample; remaining legacy industrialisation is deferred to future evidence runs",
+    "ancient_intakes":"No new glass/Rome/Naga/national-park research was launched in Run14; existing Run13 artefacts were preserved."
+  },
+  "promotion_decision":"Force through dev and main unless CI exposes a blocking integrity/runtime failure. Declared legacy debt, shell/partial arc warnings and bounded source limitations are intentionally non-blocking."
+}

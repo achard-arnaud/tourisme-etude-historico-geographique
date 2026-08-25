@@ -1,14 +1,24 @@
 #!/usr/bin/env python3
 """Deterministically insert promoted side-story artefacts into Markdown."""
 from __future__ import annotations
-import argparse
+import argparse,re,string
 from pathlib import Path
 from side_story_contract import ANALYTICAL_FOCUS_KIND,load_side_stories,canonical_marker
 
 STATUS_ICON={"verified":"✓","inference":"△","unknown":"?"}
 
+def _norm(value:str)->str:
+    value=re.sub(r"<[^>]+>"," ",str(value));value=re.sub(r"[#*_`>\[\](){}]"," ",value)
+    value=value.translate(str.maketrans({c:" " for c in string.punctuation+"«»“”‘’…–—≠×"}))
+    return re.sub(r"\s+"," ",value).strip().casefold()
+def _validate_takeaway(item:dict)->str:
+    takeaway=(item.get("content") or {}).get("takeaway","").strip();title=item.get("title","")
+    if not takeaway:raise RuntimeError(f"cannot materialize {item.get('id')}: takeaway required")
+    if _norm(title) and _norm(title)==_norm(takeaway):raise RuntimeError(f"cannot materialize {item.get('id')}: takeaway merely repeats title")
+    return takeaway
+
 def render_analytical_focus(item:dict)->str:
-    a=item["analysis"];title=item["title"];takeaway=(item.get("content") or {}).get("takeaway","")
+    a=item["analysis"];title=item["title"];takeaway=_validate_takeaway(item)
     lines=[f"**Focus analytique — {title}**","",f"> **Question** — {a['core_question']}","",f"**À retenir** — {a['thesis']}","","### Contraste institutionnel"]
     for row in a["contrast"]:
         lines += [f"- **{row['label']}** — {row['position']}",f"  - *Vigilance* : {row['caveat']}"]
@@ -30,12 +40,14 @@ def materialize_text(project:Path,text:str)->tuple[str,int]:
     inserted=0
     for _,item in load_side_stories(project):
         if item.get("status")!="promoted":continue
+        _validate_takeaway(item)
         marker=canonical_marker(item["id"])
         if marker in text:continue
+        if item.get("materialization_mode")=="existing_fragment":continue
+        anchor=(item.get("placement") or {}).get("section_anchor") or item.get("title")
         body=(item.get("content") or {}).get("body_markdown")
         if item.get("kind")==ANALYTICAL_FOCUS_KIND and not body:body=render_analytical_focus(item)
         if not body:continue
-        anchor=(item.get("placement") or {}).get("section_anchor")
         if not anchor or anchor not in text:raise RuntimeError(f"cannot materialize {item['id']}: section_anchor not found")
         pos=text.index(anchor)+len(anchor)
         prefix="" if item.get("kind")==ANALYTICAL_FOCUS_KIND else f"**{(item.get('render') or {}).get('label')} — {item['title']}**\n\n"

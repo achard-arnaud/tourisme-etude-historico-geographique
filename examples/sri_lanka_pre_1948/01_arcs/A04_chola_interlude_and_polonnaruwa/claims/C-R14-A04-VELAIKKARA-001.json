@@ -1,0 +1,12 @@
+{
+  "id":"C-R14-A04-VELAIKKARA-001",
+  "type":"inference",
+  "claim":"The Velaikkara charter shows a Tamil-speaking military corporation embedded in the protection of a Buddhist Tooth-relic institution after the Chola period; the record therefore resists a simple mapping of language, military affiliation and religious institution into two fixed opposing blocs.",
+  "arc":"A04_chola_interlude_and_polonnaruwa",
+  "confidence":"B",
+  "zoom":"Z1",
+  "causal_role":"context",
+  "source_ids":["SIDDHAM-VELAIKKARA-2020"],
+  "bounded_by":"Epigraphic evidence from one institutional arrangement; no island-wide coexistence claim is implied.",
+  "notes":"Run 14 vertical-slice claim for SS-PRE-L003."
+}

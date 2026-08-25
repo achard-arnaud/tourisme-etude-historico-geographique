@@ -1,0 +1,12 @@
+{
+  "id":"C-R14-A04-MAGHA-001",
+  "type":"inference",
+  "claim":"Magha's seizure of Polonnaruwa is a real rupture, but the chronicle's hostile portrayal cannot by itself make him the single cause of Rajarata's longer contraction; event evidence and causal attribution must remain separate.",
+  "arc":"A04_chola_interlude_and_polonnaruwa",
+  "confidence":"C",
+  "zoom":"Z2",
+  "causal_role":"context",
+  "source_ids":["CULAVAMSA-GEIGER-1998","CAMBRIDGE-MANATUNGA-R14"],
+  "bounded_by":"The claim preserves the invasion and chronicled trauma while explicitly refusing sole-cause attribution for the later dry-zone transition.",
+  "notes":"Run 14 vertical-slice historiographic guardrail for SS-PRE-L005."
+}

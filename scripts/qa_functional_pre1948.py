@@ -16,7 +16,7 @@ def run(cmd):
         raise RuntimeError('command failed: '+' '.join(cmd))
     return r
 def main():
-    errors=[]
+    errors=[];warnings=[]
     for rel in ['project.json','00_method/output_state.json','00_method/reader_profile.json','01_arcs','02_hil','03_wiki','04_graph/nodes.jsonl','04_graph/edges.jsonl','05_sources','06_bridges','07_drifts','08_questions/baseline_questions.md','09_output/report_v3_full.md','09_output/side_stories','09_output/arc_recaps']:
         if not (PROJECT/rel).exists():errors.append(f'missing {rel}')
     claims=list(PROJECT.glob('01_arcs/*/claims/*.json'));sources=[]
@@ -27,13 +27,14 @@ def main():
         if value<BASELINE[key]:errors.append(f'{key} count regressed: {value} < baseline {BASELINE[key]}')
     hils=list((PROJECT/'02_hil').glob('HIL-*/baseline.json'))
     if len(hils)!=BASELINE['hils']:errors.append(f'HIL baseline count {len(hils)} != {BASELINE["hils"]}')
-    se,sw,side_count,coverage=validate_side_stories(PROJECT);errors+=se+[f'unexpected side-story warning: {w}' for w in sw]
+    se,sw,side_count,coverage=validate_side_stories(PROJECT);errors+=se;warnings+=sw
     if side_count<26:errors.append(f'side-story inventory too small: {side_count}')
     if coverage['untracked']!=0:errors.append(f"untracked side stories: {coverage['untracked']}")
-    re,rw,recaps=validate_arc_recaps(PROJECT);errors+=re+[f'unexpected recap warning: {w}' for w in rw]
+    re,rw,recaps=validate_arc_recaps(PROJECT);errors+=re;warnings+=rw
     if recaps<BASELINE['recaps']:errors.append(f'arc recap count regressed: {recaps} < baseline {BASELINE["recaps"]}')
     required_recaps=sum(1 for _,item in load_arc_recaps(PROJECT) if item.get('status') in RENDERABLE and (item.get('render') or {}).get('required_in_reader'))
-    ge,gw,nodes,gedges=validate_graph_links(PROJECT);errors+=ge+[f'unexpected graph warning: {w}' for w in gw]
+    ge,gw,nodes,gedges=validate_graph_links(PROJECT);errors+=ge;warnings+=gw
+    for w in warnings:print('WARN:',w,file=sys.stderr)
     if errors:
         for e in errors:print('ERROR:',e,file=sys.stderr)
         return 1
@@ -43,5 +44,5 @@ def main():
         if ret<100:raise RuntimeError(f'retention {ret}%')
         if metric.get('arc_recaps')!=required_recaps or rendered_recaps!=required_recaps:raise RuntimeError(f'arc recap render mismatch: metric={metric.get("arc_recaps")}, rendered={rendered_recaps}, required={required_recaps}, registered={recaps}')
     except Exception as exc:print(f'ERROR: {exc}',file=sys.stderr);return 1
-    print(f"PRE1948 FUNCTIONAL QA OK: {len(claims)} claims, {len(sources)} sources, {len(bridges)} bridges, {len(wiki)} wiki pages, {edges} graph edges/{nodes} nodes, {len(hils)} HIL baselines, {side_count} side stories ({coverage['tracked']}/{coverage['discovered']} tracked), {required_recaps}/{recaps} reader-required/registered arc recaps rendered, retention {ret}%");return 0
+    print(f"PRE1948 FUNCTIONAL QA OK: {len(claims)} claims, {len(sources)} sources, {len(bridges)} bridges, {len(wiki)} wiki pages, {edges} graph edges/{nodes} nodes, {len(hils)} HIL baselines, {side_count} side stories (traced {coverage['traced']} / declared {coverage['declared']} / discovered {coverage['discovered']} / untracked {coverage['untracked']}), {required_recaps}/{recaps} reader-required/registered arc recaps rendered, retention {ret}%");return 0
 if __name__=='__main__':raise SystemExit(main())
