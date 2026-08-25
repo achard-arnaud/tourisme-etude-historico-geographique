@@ -1,0 +1,3 @@
+{
+  "id":"C-R13-GLASS-001","type":"source_fact","claim":"At Manthai, compositional analysis identifies multiple glass groups and archaeological evidence of secondary working; the 2025 study does not identify scientific or archaeological evidence for primary glass production at the port itself.","confidence":"A","zoom":"Z1","causal_role":"constraint","arc":"A02_ancient_indian_ocean_exchange","hil":"HIL-03_economy-infrastructure","source_ids":["SPRINGER-MANTHAI-GLASS-2025"],"bounded_by":"site-specific finding: absence of primary-production evidence at Manthai is not island-wide evidence of absence","notes":"Preserves primary production versus secondary working distinction."
+}

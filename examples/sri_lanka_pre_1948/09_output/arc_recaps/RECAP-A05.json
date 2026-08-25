@@ -1,0 +1,22 @@
+{
+  "schema_version":"1.0",
+  "class":"arc_recap",
+  "id":"RECAP-A05",
+  "arc":"A05_colonial_conservation_ordinance",
+  "status":"validated",
+  "causal_schema":{
+    "drivers":[{"claim_id":"C-R13-PARK-002","summary":"L'ordonnance de 1937 transforme la protection de la faune en architecture statutaire de réserves et parcs."}],
+    "amplifiers":[{"claim_id":"C-R13-PARK-001","summary":"L'organisation née en 1894 fournit un précédent institutionnel de mobilisation en faveur de la protection du gibier et des habitats."}],
+    "constraints":[{"claim_id":"C-R13-PARK-008","summary":"La filiation directe depuis Yellowstone n'est pas démontrée : la ressemblance demeure une analogie sans canal de transmission identifié."}],
+    "consequences":[{"claim_id":"C-R13-PARK-003","summary":"En 1938, le cadre juridique entre en vigueur et produit les premières désignations de parcs dans l'architecture héritée après l'indépendance."}]
+  },
+  "protagonists":[
+    {"name":"Administration coloniale de Ceylan","role":"producteur du cadre statutaire","objective":"Réglementer la protection de la faune et classer des espaces sous des catégories juridiques administrables.","constraints":["héritage des réserves de chasse","capacité d'enforcement distincte de la loi"],"perceived_options":["réserve","parc national","réglementation de la chasse"],"claim_ids":["C-R13-PARK-002","C-R13-PARK-003"]},
+    {"name":"Ceylon Game Protection Society","role":"groupe organisé de conservation","objective":"Faire progresser la protection du gibier et des habitats dans le cadre colonial.","constraints":["absence initiale de pouvoir statutaire propre"],"perceived_options":["plaidoyer","coopération avec l'administration"],"claim_ids":["C-R13-PARK-001"]}
+  ],
+  "what_changed":["La protection passe d'une mobilisation institutionnelle à un instrument juridique étatique.","La généalogie du régime moderne est rattachée à des actes vérifiables plutôt qu'à une continuité bouddhique ou une inspiration américaine présumée."],
+  "prepares_next":[{"bullet":"Après 1948, le problème devient celui de l'héritage, de la centralisation et des effets écologiques et sociaux d'un réseau de parcs qui ne contient pas toute la mobilité de la faune.","next_arc":"post:A08_heritage_memory_governance","bridge_ids":[]}],
+  "lineage":{"claim_ids":["C-R13-PARK-001","C-R13-PARK-002","C-R13-PARK-003","C-R13-PARK-008"],"source_ids":[],"bridge_ids":[]},
+  "placement":{"before_anchor":""},
+  "render":{"label":"Récap causal","marker":"[ARC-RECAP:RECAP-A05]","required_in_reader":false}
+}
