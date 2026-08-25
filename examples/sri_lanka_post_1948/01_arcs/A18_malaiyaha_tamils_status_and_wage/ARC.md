@@ -1,9 +1,10 @@
 # A18 — Malaiyaha Tamils: status and wage
 
-- evidence_status: partial
+evidence_status: partial
 - corpus: post-1948
 - span: 1948–2026
 - threads: labour, land, water, caste/ethnicity, trade
+- no_tea_thread: true
 
 ## Causal question
 How did a plantation workforce become a politically weakened/stateless population and later a workforce whose reproduction costs are shared between employer and state?
