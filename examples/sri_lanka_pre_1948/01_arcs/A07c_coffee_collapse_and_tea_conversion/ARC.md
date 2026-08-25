@@ -1,6 +1,6 @@
 # A07c — Coffee collapse and tea conversion
 
-- evidence_status: partial
+evidence_status: partial
 - corpus: pre-1948
 - requested_alias: A07b_coffee_collapse_and_tea_conversion
 - collision_note: `A07b_kandyan_kingdom_and_defensive_interior` already exists from Run17; Run18 uses A07c non-destructively.
