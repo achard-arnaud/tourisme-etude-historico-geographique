@@ -1,0 +1,3 @@
+{
+  "id":"C-R15-TSU-006","type":"policy_effect","claim":"P-TOMS implementation stalled after JVP opposition, coalition withdrawal, and a Supreme Court intervention that stayed or rejected key provisions in 2005.","confidence":"A","zoom":"Z2","causal_role":"outcome","arc":"A15_tsunami_2004_and_reconstruction","hil":"HIL-01_institutions-chronology","source_ids":["REFWORLD-PTOMS-2006","HRW-TSUNAMI-2006"],"bounded_by":"This establishes institutional blockage; it does not make P-TOMS failure a sufficient cause of the 2006 return to war.","notes":"Core institutional failure record for the causal bridge."
+}
