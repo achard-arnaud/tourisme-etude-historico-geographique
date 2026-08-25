@@ -1,0 +1,21 @@
+{
+  "capture_contract":"run16-field-v1",
+  "rules":{"mihintale_stele":"T0 for 2024 commemoration only; ancient narrative remains tradition unless independently anchored","abhayagiri_afp":"one AFP dispatch only; syndicated copies are not corroboration"},
+  "fragments":[
+    {"id":"GF-MIH-01","assertion_summary":"BE 236 Third Council under Moggaliputta Tissa, Ashokan sponsorship, Tipitaka fixed, missions dispatched","type":"tradition","zoom":"Z3","candidate_arc":"A02c_anuradhapura_and_the_mahavihara","promotes_to":[]},
+    {"id":"GF-MIH-02","assertion_summary":"Mahinda mission presented as seven persons, not a lone monk","type":"tradition","zoom":"Z0","candidate_arc":"A02c_anuradhapura_and_the_mahavihara","promotes_to":["C-R16-MIH-TRAD-001"]},
+    {"id":"GF-MIH-03","assertion_summary":"Arrival at Ambasthala on Poson poya; mango/intelligence episode and preaching sequence","type":"tradition","zoom":"Z0","candidate_arc":"A02c_anuradhapura_and_the_mahavihara","promotes_to":[]},
+    {"id":"GF-MIH-04","assertion_summary":"Mahavihara boundary, mahasima and ordination of local clansmen","type":"tradition","zoom":"Z1","candidate_arc":"A02c_anuradhapura_and_the_mahavihara","promotes_to":[]},
+    {"id":"GF-MIH-05","assertion_summary":"Thuparama, Sanghamitta, Sri Maha Bodhi and bhikkhuni-order foundation sequence","type":"tradition","zoom":"Z1","candidate_arc":"A02c_anuradhapura_and_the_mahavihara","promotes_to":[]},
+    {"id":"GF-MIH-06","assertion_summary":"Mahinda death/relic-stupa chronology in BE 284","type":"tradition","zoom":"Z0","candidate_arc":"A02c_anuradhapura_and_the_mahavihara","promotes_to":[]},
+    {"id":"GF-MIH-07","assertion_summary":"2024 restoration under named monastic leadership and Department of Archaeology supervision; enemy-destruction framing split out","type":"source_fact","zoom":"Z1","candidate_arc":"A02c_anuradhapura_and_the_mahavihara","promotes_to":["C-R16-MIH-COMMEM-001"]},
+    {"id":"GF-MIH-08","assertion_summary":"Stele names Sri Lanka Navy and other armed-forces labour as restoration contributors","type":"source_fact","zoom":"Z1","candidate_arc":"A02c_anuradhapura_and_the_mahavihara","promotes_to":["C-R16-MIH-MIL-001"]},
+    {"id":"GF-MIH-09","assertion_summary":"Completion on Poson poya 21 June 2024; crowd claim attributed to commissioning party","type":"source_fact","zoom":"Z1","candidate_arc":"A02c_anuradhapura_and_the_mahavihara","promotes_to":["C-R16-MIH-COMMEM-001"]},
+    {"id":"GF-ABH-01","assertion_summary":"Seventeen gilded bronze Buddha statues found on an Abhayagiri rampart and announced 19 August 2026","type":"source_fact","zoom":"Z0","candidate_arc":"A02c_anuradhapura_and_the_mahavihara","promotes_to":["C-R16-ABH-FIND-001"]},
+    {"id":"GF-ABH-02","assertion_summary":"Project lead called find the most significant in protected zone in over thirty years","type":"claim","zoom":"Z0","candidate_arc":"A02c_anuradhapura_and_the_mahavihara","promotes_to":[]},
+    {"id":"GF-ABH-03","assertion_summary":"Stylistic comparison suggests seventh-eighth century / 1200-1300 years","type":"inference","zoom":"Z0","candidate_arc":"A02c_anuradhapura_and_the_mahavihara","promotes_to":["C-R16-ABH-DATE-001"]},
+    {"id":"GF-ABH-04","assertion_summary":"Artefacts sent for analysis; public display hoped within about a month","type":"policy_intent","zoom":"Z1","candidate_arc":"A02c_anuradhapura_and_the_mahavihara","promotes_to":[]},
+    {"id":"GF-ABH-05","assertion_summary":"Anuradhapura World Heritage status since 1982 creates preservation framework","type":"source_fact","zoom":"Z1","candidate_arc":"A02c_anuradhapura_and_the_mahavihara","promotes_to":["C-R16-ABH-UNESCO-001"]},
+    {"id":"GF-ABH-06","assertion_summary":"Abhayagiri associated with Theravada, Mahayana and Vajrayana currents and trans-Asian scholarship","type":"claim","zoom":"Z3","candidate_arc":"A02c_anuradhapura_and_the_mahavihara","promotes_to":[]}
+  ]
+}
