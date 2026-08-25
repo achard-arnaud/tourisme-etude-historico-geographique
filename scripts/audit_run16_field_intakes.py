@@ -18,7 +18,8 @@ def main():
     afp=[s for s in pre_sources if (s.get('id') or '').startswith('AFP-ABHAYAGIRI')]
     if len(afp)!=1: errors.append(f'Abhayagiri AFP source-family count={len(afp)}; expected exactly 1')
     field=next((s for s in pre_sources if s.get('id')=='FIELD-MIHINTALE-STELE-2024'),None)
-    if not field or field.get('tier')!='T0' or '2024' not in (field.get('scope') or '') or 'not' not in (field.get('limitations') or '').lower():
+    limitations=(field or {}).get('limitations','').lower();scope=(field or {}).get('scope','')
+    if not field or field.get('tier')!='T0' or '2024' not in scope or 'antiquity' not in limitations or ('only' not in limitations and 'not primary' not in limitations):
         errors.append('Mihintale field source must be T0 for 2024 and explicitly bounded for antiquity')
     trad=load(PRE/'01_arcs/A02c_anuradhapura_and_mahavihara/claims/C-R16-MIH-TRAD-002.json')
     if trad.get('confidence') not in {'C','D','U'} or trad.get('type')!='tradition':
@@ -45,7 +46,7 @@ def main():
     if qcount<=claim_count: errors.append(f'Run16 expected more questions than claims; questions={qcount} claims={claim_count}')
     if qcount<3: errors.append('Run16 requires at least three open questions')
     for arc in [PRE/'01_arcs/A02c_anuradhapura_and_mahavihara/ARC.md',POST/'01_arcs/A17_highland_conservation/ARC.md']:
-        if '**Evidence status:** partial' not in arc.read_text(encoding='utf-8'): errors.append(f'{arc}: must remain partial')
+        if not re.search(r'(?mi)^\s*evidence_status\s*:\s*partial\s*$',arc.read_text(encoding='utf-8')): errors.append(f'{arc}: must remain partial')
     checkpoint=load(POST/'01_arcs/A09_electoral_realignment_2024_2026/claims/C-R16-MIL-CHECKPOINT-004.json')
     if checkpoint.get('confidence')!='C' or 'no corroborating' not in (checkpoint.get('bounded_by') or '').lower():
         errors.append('checkpoint report must remain C with explicit non-corroboration bound')
