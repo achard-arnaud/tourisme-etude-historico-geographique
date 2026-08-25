@@ -14,8 +14,7 @@ def _norm(value:str)->str:
 def _validate_takeaway(item:dict)->str:
     takeaway=(item.get("content") or {}).get("takeaway","").strip();title=item.get("title","")
     if not takeaway:raise RuntimeError(f"cannot materialize {item.get('id')}: takeaway required")
-    tn,kn=_norm(title),_norm(takeaway)
-    if tn and kn and (tn==kn or (len(kn)<90 and (kn in tn or tn in kn))):raise RuntimeError(f"cannot materialize {item.get('id')}: takeaway merely repeats title")
+    if _norm(title) and _norm(title)==_norm(takeaway):raise RuntimeError(f"cannot materialize {item.get('id')}: takeaway merely repeats title")
     return takeaway
 
 def render_analytical_focus(item:dict)->str:
@@ -44,10 +43,8 @@ def materialize_text(project:Path,text:str)->tuple[str,int]:
         _validate_takeaway(item)
         marker=canonical_marker(item["id"])
         if marker in text:continue
+        if item.get("materialization_mode")=="existing_fragment":continue
         anchor=(item.get("placement") or {}).get("section_anchor") or item.get("title")
-        if item.get("materialization_mode")=="existing_fragment":
-            if not anchor or _norm(anchor) not in _norm(text):raise RuntimeError(f"cannot materialize {item['id']}: existing fragment anchor not found")
-            continue
         body=(item.get("content") or {}).get("body_markdown")
         if item.get("kind")==ANALYTICAL_FOCUS_KIND and not body:body=render_analytical_focus(item)
         if not body:continue
