@@ -1,0 +1,3 @@
+{
+  "id":"C-R15-PLASTIC-002","type":"claim","claim":"UNEP described the 2021 X-Press Pearl plastic spill as the largest on record and the incident as Sri Lanka's worst maritime disaster.","confidence":"A","zoom":"Z3","causal_role":"driver","arc":"A14_coastal_environmental_governance","hil":"HIL-02_geography-environment","source_ids":["UNEP-XPRESS-2021"],"bounded_by":"The superlative is UNEP's 2021 assessment of this incident and does not quantify Sri Lanka's long-run plastic burden relative to domestic waste.","notes":"Separates acute maritime accident from chronic municipal waste."
+}

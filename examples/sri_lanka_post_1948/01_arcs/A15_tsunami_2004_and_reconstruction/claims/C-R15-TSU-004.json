@@ -1,0 +1,3 @@
+{
+  "id":"C-R15-TSU-004","type":"policy_effect","claim":"The coastal setback policy drove large-scale relocation and was repeatedly revised during 2005, with the original 100/200 m regime largely abandoned by year end.","confidence":"B","zoom":"Z1","causal_role":"outcome","arc":"A15_tsunami_2004_and_reconstruction","hil":"HIL-04_society-demography","source_ids":["WB-BUFFER-ZONE-2007"],"bounded_by":"This establishes relocation and policy reversal, not the stronger claim that the rule was designed to transfer coastal land to tourism investors.","notes":"Keeps the contested tourism-development interpretation out of the claim until directly anchored."
+}

@@ -1,0 +1,3 @@
+{
+  "id":"C-R15-TOUR-008","type":"source_fact","claim":"Sri Lanka temporarily suspended selected external debt-service payments in mid-April 2022 after usable official reserves were depleted to unprecedentedly low levels.","confidence":"A","zoom":"Z2","causal_role":"outcome","arc":"A16_tourism_shock_and_fiscal_collapse","hil":"HIL-01_institutions-chronology","source_ids":["CBSL-AR-2022"],"bounded_by":"This establishes the institutional outcome and reserve context, not a single-cause attribution for the crisis.","notes":"Default/suspension endpoint for Run15 causal bridges."
+}

@@ -1,0 +1,3 @@
+{
+  "id":"C-R15-TOUR-004","type":"policy_effect","claim":"The 2019 tax reforms sharply weakened revenue collection, including a VAT cut from 15% to 8% and elimination of the Nation Building Tax.","confidence":"A","zoom":"Z2","causal_role":"driver","arc":"A16_tourism_shock_and_fiscal_collapse","hil":"HIL-01_institutions-chronology","source_ids":["IMF-SL-SELECTED-2022","WB-SLDU-2023"],"bounded_by":"This establishes a fiscal weakening channel; it does not quantify its standalone contribution to the 2022 default.","notes":"Separates policy-induced revenue loss from the tourism shock."
+}
