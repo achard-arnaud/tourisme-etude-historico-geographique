@@ -1,0 +1,18 @@
+{
+  "id": "Q-PRE-TEA-004",
+  "question": "single interrogative sentence, one object",
+  "kind": "causal",
+  "arc": "A07b_coffee_collapse_and_tea_conversion",
+  "hil": ["economy", "society"],
+  "zoom": "Z1",
+  "status": "open",
+  "opened": "YYYY-MM-DD",
+  "review_by": "YYYY-MM-DD",
+  "discriminating_test": "what observation separates the candidate answers",
+  "expected_evidence": ["source families that could carry it"],
+  "falsifier": "the observation that would make the answer NO",
+  "blocks": ["C-...", "B-...", "A..."],
+  "priority": 1,
+  "resolution": null,
+  "resolution_source_ids": []
+}
