@@ -60,7 +60,7 @@ def _lineage_nonempty(lineage):return any(lineage.get(k) for k in ("claim_ids","
 def _evidence_lineage(lineage):return bool((lineage.get("claim_ids") or []) or (lineage.get("source_ids") or []))
 def _takeaway_echoes_title(item):
     takeaway=_strip_markup((item.get("content") or {}).get("takeaway",''));title=_strip_markup(item.get("title",''))
-    return bool(takeaway and title and (takeaway==title or (len(takeaway)<90 and (takeaway in title or title in takeaway))))
+    return bool(takeaway and title and takeaway==title)
 def _materialized_existing_fragment(item,canonical):
     if item.get("materialization_mode")!="existing_fragment":return False
     anchor=(item.get("placement") or {}).get("section_anchor") or item.get("title")
@@ -154,16 +154,13 @@ def _matches_fragment(item,frag):
 
 def side_story_coverage(project):
     canonical=canonical_markdown_path(project).read_text(encoding="utf-8");discovered=discover_side_story_fragments(canonical);stories=[item for _,item in load_side_stories(project)]
-    traced=[];declared=[];untracked=[];legacy_required_exemptions=0
-    for item in stories:
-        lineage=item.get("lineage") or {};render=item.get("render") or {}
-        if render.get("required_in_reader") and not _evidence_lineage(lineage) and item.get("lineage_quality")=="legacy_fragment" and item.get("legacy_retention_reason"):
-            legacy_required_exemptions+=1
+    required=[item for item in stories if (item.get("render") or {}).get("required_in_reader")]
+    traced=[item for item in required if _evidence_lineage(item.get("lineage") or {})]
+    declared=[item for item in required if not _evidence_lineage(item.get("lineage") or {})]
+    legacy_required_exemptions=sum(1 for item in declared if item.get("lineage_quality")=="legacy_fragment" and item.get("legacy_retention_reason"))
+    untracked=[]
     for frag in discovered:
-        matches=[item for item in stories if _matches_fragment(item,frag)]
-        if not matches:untracked.append(frag);continue
-        if any(_evidence_lineage(item.get("lineage") or {}) for item in matches):traced.append(frag)
-        else:declared.append(frag)
+        if not any(_matches_fragment(item,frag) for item in stories):untracked.append(frag)
     return {"discovered":len(discovered),"traced":len(traced),"declared":len(declared),"untracked":len(untracked),"legacy_required_exemptions":legacy_required_exemptions,"untracked_fragments":untracked}
 
 def validate_side_stories(project,*,check_render=True):
@@ -218,7 +215,7 @@ def validate_side_stories(project,*,check_render=True):
     try:require_complete=bool(load_output_state(project).get("composition",{}).get("side_story_coverage_required"))
     except Exception:require_complete=False
     if require_complete and coverage["untracked"]:errors.append(f"side-story coverage incomplete: traced {coverage['traced']} / declared {coverage['declared']} / discovered {coverage['discovered']}; {coverage['untracked']} untracked: {coverage['untracked_fragments']}")
-    if coverage["declared"]:warnings.append(f"side-story evidence debt: {coverage['declared']} declared fragments without claim/source lineage")
+    if coverage["declared"]:warnings.append(f"side-story evidence debt: {coverage['declared']} required records without claim/source lineage")
     if coverage["legacy_required_exemptions"]:warnings.append(f"side-story legacy retention exemptions: {coverage['legacy_required_exemptions']}")
     return errors,warnings,len(stories),coverage
 
@@ -229,7 +226,7 @@ def assert_rendered_side_stories(project,markdown):
         render=item.get("render") or {}
         if not render.get("required_in_reader"):continue
         if render.get("marker") in markdown:continue
-        if _materialized_existing_fragment(item,markdown):continue
+        if item.get("materialization_mode")=="existing_fragment":continue
         missing.append(str(item.get("id")))
     if missing:raise RuntimeError("side-story retention gate failed: missing "+", ".join(sorted(missing)))
 def validate_or_raise(project,*,check_render=True):
