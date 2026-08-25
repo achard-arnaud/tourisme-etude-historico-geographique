@@ -1,0 +1,21 @@
+{
+  "capture_contract":"run16-field-v1",
+  "routing_rule":"militarisation fragments pass historiography/drift audit before HIL use; Horton blog fragments remain practical capture only",
+  "fragments":[
+    {"id":"GF-MIL-01","assertion_summary":"Government committed to military disengagement from commercial activity","type":"policy_intent","zoom":"Z2","candidate_arc":"A08_heritage_memory_governance","promotes_to":["C-R16-MIL-INTENT-001"]},
+    {"id":"GF-MIL-02","assertion_summary":"Documented commercial military activity persisted after the commitment","type":"policy_effect","zoom":"Z1","candidate_arc":"A08_heritage_memory_governance","promotes_to":["C-R16-MIL-EFFECT-001"]},
+    {"id":"GF-MIL-03","assertion_summary":"Post-war military ran hotels, restaurants, farms and retail in civilian economy","type":"source_fact","zoom":"Z1","candidate_arc":"A08_heritage_memory_governance","promotes_to":["C-R16-MIL-COMMERCIAL-001"]},
+    {"id":"GF-MIL-04","assertion_summary":"Report of checkpoints removed after 2024 change and reinstalled at four Jaffna-area locations in early 2025","type":"source_fact","zoom":"Z1","candidate_arc":"A09_electoral_realignment_2024_2026","promotes_to":["C-R16-MIL-CHECKPOINT-001"]},
+    {"id":"GF-MIL-05","assertion_summary":"2026 Valikamam North access/land-release restrictions alleged around military-held land and religious sites","type":"policy_effect","zoom":"Z1","candidate_arc":"A09_electoral_realignment_2024_2026","promotes_to":[]},
+    {"id":"GF-MIL-06","assertion_summary":"Kilinochchi temple-land release allegedly conditioned on recovery of army construction expenditure","type":"policy_effect","zoom":"Z1","candidate_arc":"A08_heritage_memory_governance","promotes_to":[]},
+    {"id":"GF-MIL-07","assertion_summary":"Partial land returns in 2025-2026 prevent a flat no-release narrative","type":"source_fact","zoom":"Z1","candidate_arc":"A09_electoral_realignment_2024_2026","promotes_to":["C-R16-MIL-RELEASE-001"]},
+    {"id":"GF-MIL-08","assertion_summary":"Sinhala-nationalist position frames northern troop reduction as sovereignty loss toward India","type":"claim","zoom":"Z3","candidate_arc":"A09_electoral_realignment_2024_2026","promotes_to":[]},
+    {"id":"GF-HOR-01","assertion_summary":"9.5 km loop, roughly 3-4 h; clockwise toward World's End; mist risk after morning","type":"source_fact","zoom":"Z0","candidate_arc":"A17_highland_conservation","promotes_to":[]},
+    {"id":"GF-HOR-02","assertion_summary":"World's End drop circulates as both about 880 m and about 1200 m","type":"metric","zoom":"Z0","candidate_arc":"A17_highland_conservation","promotes_to":[]},
+    {"id":"GF-HOR-03","assertion_summary":"Plateau above 2000 m with montane grassland/cloud forest and high endemism","type":"claim","zoom":"Z1","candidate_arc":"A17_highland_conservation","promotes_to":["C-R16-HOR-ECO-001"]},
+    {"id":"GF-HOR-04","assertion_summary":"Horton Plains is part of Central Highlands World Heritage property","type":"source_fact","zoom":"Z1","candidate_arc":"A17_highland_conservation","promotes_to":["C-R16-HOR-UNESCO-001"]},
+    {"id":"GF-HOR-05","assertion_summary":"Horton Plains forms headwaters of major river systems","type":"claim","zoom":"Z2","candidate_arc":"A17_highland_conservation","promotes_to":["C-R16-HOR-WATERSHED-001"]},
+    {"id":"GF-HOR-06","assertion_summary":"Claimed exception allowing hiking without ranger; cliff-edge regulatory detail","type":"policy_effect","zoom":"Z0","candidate_arc":"A17_highland_conservation","promotes_to":[]},
+    {"id":"GF-HOR-07","assertion_summary":"Baker's Falls toponym points toward British recreation/hunting genealogy","type":"source_fact","zoom":"Z0","candidate_arc":"A17_highland_conservation","promotes_to":[]}
+  ]
+}
