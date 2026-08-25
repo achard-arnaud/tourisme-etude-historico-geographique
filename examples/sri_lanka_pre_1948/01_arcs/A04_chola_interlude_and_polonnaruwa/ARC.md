@@ -1,6 +1,6 @@
 # A04 — Chola interlude and Polonnaruwa
 
-evidence_status: researched
+evidence_status: partial
 
 ## Entry rupture
 
@@ -17,3 +17,7 @@ This run industrialises only four pre-existing boxes: the Velaikkara inscription
 ## Exit rupture / bridge forward
 
 Magha's seizure in 1215 and the subsequent fragmentation form the exit boundary; the causes of dry-zone contraction and mobile-capital politics remain for later research.
+
+## Partial guardrail
+
+The four Run 14 records may be promoted because their own lineage is complete. The arc itself remains `partial` and must not be interpreted as fully researched or recap-ready.
