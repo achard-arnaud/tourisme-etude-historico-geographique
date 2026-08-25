@@ -16,6 +16,13 @@ class ArtifactContractHardeningTests(unittest.TestCase):
             text=True,
         )
 
+    def strict_root(self, root):
+        (root / 'project.json').write_text(json.dumps({
+            'name': 'contract fixture',
+            'method': 'tourisme-etude-historico-geographique',
+            'version': 3,
+        }), encoding='utf-8')
+
     def write_claim(self, root, claim, arc='A01_test'):
         claims = root / '01_arcs' / arc / 'claims'
         claims.mkdir(parents=True, exist_ok=True)
@@ -60,7 +67,7 @@ class ArtifactContractHardeningTests(unittest.TestCase):
 
     def test_claim_requires_closed_statement_type(self):
         with tempfile.TemporaryDirectory() as td:
-            root = Path(td)
+            root = Path(td); self.strict_root(root)
             self.write_claim(root, self.base_claim(type='made_up_type'))
             r = self.run_qa(root)
             self.assertNotEqual(r.returncode, 0)
@@ -68,7 +75,7 @@ class ArtifactContractHardeningTests(unittest.TestCase):
 
     def test_claim_requires_arc_field_matching_path(self):
         with tempfile.TemporaryDirectory() as td:
-            root = Path(td)
+            root = Path(td); self.strict_root(root)
             self.write_claim(root, self.base_claim(arc='A99_other'))
             r = self.run_qa(root)
             self.assertNotEqual(r.returncode, 0)
@@ -76,15 +83,15 @@ class ArtifactContractHardeningTests(unittest.TestCase):
 
     def test_causal_role_is_closed_vocabulary(self):
         with tempfile.TemporaryDirectory() as td:
-            root = Path(td)
-            self.write_claim(root, self.base_claim(causal_role='constraint'))
+            root = Path(td); self.strict_root(root)
+            self.write_claim(root, self.base_claim(causal_role='constriant'))
             r = self.run_qa(root)
             self.assertNotEqual(r.returncode, 0)
             self.assertIn('invalid causal_role', (r.stdout + r.stderr).lower())
 
     def test_metric_requires_structured_metric_hygiene(self):
         with tempfile.TemporaryDirectory() as td:
-            root = Path(td)
+            root = Path(td); self.strict_root(root)
             self.write_claim(root, self.base_claim(type='metric', claim='GDP rose by 12%.'))
             r = self.run_qa(root)
             self.assertNotEqual(r.returncode, 0)
@@ -92,7 +99,7 @@ class ArtifactContractHardeningTests(unittest.TestCase):
 
     def test_major_causal_claim_requires_independent_corroboration(self):
         with tempfile.TemporaryDirectory() as td:
-            root = Path(td)
+            root = Path(td); self.strict_root(root)
             self.write_sources(root, [self.base_source()])
             self.write_claim(root, self.base_claim(causal_role='driver', source_ids=['S001']))
             r = self.run_qa(root)
@@ -101,7 +108,7 @@ class ArtifactContractHardeningTests(unittest.TestCase):
 
     def test_bounded_by_allows_explicit_single_source_exception(self):
         with tempfile.TemporaryDirectory() as td:
-            root = Path(td)
+            root = Path(td); self.strict_root(root)
             self.write_sources(root, [self.base_source()])
             self.write_claim(root, self.base_claim(
                 causal_role='driver',
@@ -113,7 +120,7 @@ class ArtifactContractHardeningTests(unittest.TestCase):
 
     def test_source_requires_closed_anchor_role_and_provenance(self):
         with tempfile.TemporaryDirectory() as td:
-            root = Path(td)
+            root = Path(td); self.strict_root(root)
             self.write_sources(root, [self.base_source(anchor_role='corroborating current anchor', provenance='snippet')])
             r = self.run_qa(root)
             self.assertNotEqual(r.returncode, 0)
@@ -123,7 +130,7 @@ class ArtifactContractHardeningTests(unittest.TestCase):
 
     def test_bridge_requires_transportability_contract(self):
         with tempfile.TemporaryDirectory() as td:
-            root = Path(td)
+            root = Path(td); self.strict_root(root)
             for cid in ('C001', 'C002'):
                 self.write_claim(root, self.base_claim(id=cid, confidence='C'))
             bridges = root / '06_bridges'
