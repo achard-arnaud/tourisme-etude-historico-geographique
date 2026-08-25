@@ -1,9 +1,10 @@
 # A09b — Plantation labour system
 
-- evidence_status: partial
+evidence_status: partial
 - corpus: pre-1948
 - span: 1830–1948
 - threads: labour, land, water, caste/ethnicity, trade
+- no_tea_thread: true
 
 ## Causal question
 How was a resident plantation workforce constructed, and what made the labour system survive the crop that first assembled it?
