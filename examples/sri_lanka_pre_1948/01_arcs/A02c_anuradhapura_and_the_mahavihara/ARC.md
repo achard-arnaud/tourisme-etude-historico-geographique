@@ -1,6 +1,7 @@
 # A02c — Anuradhapura, Mihintale and the Mahavihara
 
-- evidence_status: partial
+evidence_status: partial
+
 - corpus: pre-1948
 - zoom_path: Z0 Ambasthala/Mihindu Seya → Z1 Mihintale/Anuradhapura monastic institutions → Z3 Mauryan/Theravada tradition → return Z0
 - related_arcs: A02_ancient_indian_ocean_exchange, A04_chola_interlude_and_polonnaruwa
