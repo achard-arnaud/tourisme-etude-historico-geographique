@@ -1,0 +1,3 @@
+{
+  "id":"C-R15-TOUR-006","type":"policy_effect","claim":"The May–November 2021 chemical-fertilizer import ban hurt tea and rubber production and exports, adding an agricultural foreign-exchange shock to the tourism collapse.","confidence":"A","zoom":"Z2","causal_role":"amplifier","arc":"A16_tourism_shock_and_fiscal_collapse","hil":"HIL-03_economy-infrastructure","source_ids":["IMF-SL-ARTICLEIV-2022","WB-COMMODITY-TEA-2022"],"bounded_by":"The agricultural effect was also shaped by input affordability and broader crisis conditions; the ban is not treated as the sole cause of the tea-output decline.","notes":"Distinct policy-induced export channel."
+}
