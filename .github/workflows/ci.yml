@@ -25,6 +25,8 @@ jobs:
       - run: python scripts/audit_run16_intakes.py
       - run: python scripts/audit_run17_kandy.py
       - run: python scripts/audit_run18_tea.py
+      - run: python scripts/question_contract.py examples/sri_lanka_pre_1948
+      - run: python scripts/question_contract.py examples/sri_lanka_post_1948
       - run: python scripts/qa_project.py examples/sri_lanka_pre_1948
       - run: python scripts/qa_project.py examples/sri_lanka_post_1948
       - run: python scripts/qa_composition_pipeline.py examples/sri_lanka_pre_1948
