@@ -1,0 +1,19 @@
+{
+  "id":"B-R17-KDY-SACRED-CITY-COMPARATOR-001",
+  "from_claim":"C-R17-KDY-SACRED-001",
+  "to_claim":"C-R17-KDY-COMP-PILGRIM-001",
+  "question":"Can Kandy's place-bound sacred asset be compared with other pilgrimage cities as an urban mechanism without treating sacredness as a complete competitiveness model?",
+  "mechanism":"A place-bound sacred core can generate recurrent pilgrim/floating-population flows and induce conservation, service and built-environment pressures that are not reducible to port access or resident population.",
+  "result":"U",
+  "source_ids":["UNESCO-KANDY-1988","JUM-PILGRIM-CITIES-2019"],
+  "comparative":true,
+  "home_claim":"C-R17-KDY-SACRED-001",
+  "comparator_claim":"C-R17-KDY-COMP-PILGRIM-001",
+  "transmission_channel":"pilgrimage and heritage institutions create recurring place-bound visitor flows and urban-management demand",
+  "time_lag":"contemporary comparative mechanism; historical persistence differs by city",
+  "scale":"Z1 Kandy to Z4 comparative sacred cities",
+  "confounders":["proximity to Colombo","transport connectivity","national administrative investment","resident versus floating population definitions","religious centrality and pilgrimage scale","heritage regulation intensity","income and tourism-market differences"],
+  "transportability":"mechanism",
+  "integration_action":"comparator",
+  "bounded_by":"The comparison supports a class of sacred-city urban mechanisms, not a prediction that sacredness makes Kandy economically successful. Colombo spillover and state placement of institutions remain unresolved alternative explanations."
+}
