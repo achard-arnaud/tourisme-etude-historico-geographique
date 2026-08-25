@@ -1,0 +1,12 @@
+{
+  "id":"C-R14-A04-GALPOTA-001",
+  "type":"inference",
+  "claim":"The Galpota is simultaneously an inscriptional source and an instrument of royal legitimation: it records Nissanka Malla's claimed deeds and political theory, so its administrative information must be separated from the sovereign's self-presentation.",
+  "arc":"A04_chola_interlude_and_polonnaruwa",
+  "confidence":"B",
+  "zoom":"Z1",
+  "causal_role":"mechanism",
+  "source_ids":["SIDDHAM-GALPOTA-2019","JSTOR-ARC-KINGSHIP-2026"],
+  "bounded_by":"The claim concerns the evidentiary character and legitimation function of this inscription, not the truth of every royal assertion it contains.",
+  "notes":"Run 14 vertical-slice claim for SS-PRE-L004."
+}

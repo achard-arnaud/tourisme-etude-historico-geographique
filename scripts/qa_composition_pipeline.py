@@ -34,6 +34,6 @@ def main():
     for x in warnings:print('WARN:',x,file=sys.stderr)
     for x in errors:print('ERROR:',x,file=sys.stderr)
     if errors:return 1
-    print(f"COMPOSITION PREFLIGHT OK: canonical={canonical.name}, graph={nodes} nodes/{edges} edges/0 unresolved, side-stories={coverage['tracked']}/{coverage['discovered']} tracked, recaps={required_recaps}/{recaps} reader-required/registered, maps={maps}, profile={plan['profile_id']}")
+    print(f"COMPOSITION PREFLIGHT OK: canonical={canonical.name}, graph={nodes} nodes/{edges} edges/0 unresolved, side-stories=traced {coverage['traced']} / declared {coverage['declared']} / discovered {coverage['discovered']} / untracked {coverage['untracked']}, recaps={required_recaps}/{recaps} reader-required/registered, maps={maps}, profile={plan['profile_id']}")
     return 0
 if __name__=='__main__':raise SystemExit(main())

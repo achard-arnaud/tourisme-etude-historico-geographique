@@ -1,0 +1,72 @@
+[
+  {
+    "id":"SIDDHAM-VELAIKKARA-2020",
+    "title":"Poḷonnaruva Slab Inscription of the Vēḷäikkāṟas (IN03103)",
+    "url":"https://siddham.network/inscription/in03103/",
+    "tier":"T1",
+    "anchor_role":"canonical anchor",
+    "date":"2020-02-04",
+    "author_or_institution":"Siddham — The Asian Inscription Database / ERC Beyond Boundaries",
+    "author_institution":"Siddham — The Asian Inscription Database / ERC Beyond Boundaries",
+    "scope":"Tamil Velaikkara inscription at Polonnaruwa; protection of the Tooth-relic temple, post-Chola military corporation and Vijayabahu context",
+    "claims_supported":["C-R14-A04-VELAIKKARA-001","C-R14-A04-VIJAYABAHU-001"],
+    "limitations":"Epigraphic record and scholarly metadata for one inscription; does not by itself generalise island-wide ethnic or religious relations.",
+    "provenance":"direct"
+  },
+  {
+    "id":"SIDDHAM-GALPOTA-2019",
+    "title":"Poḷonnaruva Galpota Slab Inscription (IN03081)",
+    "url":"https://siddham.network/inscription/in03081/",
+    "tier":"T1",
+    "anchor_role":"canonical anchor",
+    "date":"2019-12-17",
+    "author_or_institution":"Siddham — The Asian Inscription Database / ERC Beyond Boundaries",
+    "author_institution":"Siddham — The Asian Inscription Database / ERC Beyond Boundaries",
+    "scope":"Galpota inscription of Nissanka Malla, its contents, political theory and legitimation strategy",
+    "claims_supported":["C-R14-A04-GALPOTA-001"],
+    "limitations":"Royal inscription is self-representational evidence; administrative or social effects require independent corroboration.",
+    "provenance":"direct"
+  },
+  {
+    "id":"JSTOR-ARC-KINGSHIP-2026",
+    "title":"Religion, Gender, and Politics in Medieval Sri Lanka: The Reconstruction of Buddhist Kingship, ca. 1070–1215",
+    "url":"https://www.jstor.org/content/oa_book_monograph/jj.41572920",
+    "tier":"T1",
+    "anchor_role":"corroborating bridge",
+    "date":"2026",
+    "author_or_institution":"Arc Humanities Press / JSTOR Open Access",
+    "author_institution":"Arc Humanities Press / JSTOR Open Access",
+    "scope":"Vijayabahu I, Polonnaruwa kingship, Nissanka Malla and political reconstruction from 1070 to 1215",
+    "claims_supported":["C-R14-A04-GALPOTA-001","C-R14-A04-VIJAYABAHU-001"],
+    "limitations":"Monograph centred on kingship and political culture; regional military opportunity must be bounded with additional Indian Ocean evidence.",
+    "provenance":"direct"
+  },
+  {
+    "id":"CAMBRIDGE-MANATUNGA-R14",
+    "title":"Sri Lanka and Southeast Asia during the Period of the Polonnaruva Kingdom",
+    "url":"https://www.cambridge.org/core/books/abs/nagapattinam-to-suvarnadwipa/sri-lanka-and-southeast-asia-during-the-period-of-the-polonnaruva-kingdom/38EFF72F024EAE6BA6D7F23C3DAC0180",
+    "tier":"T1",
+    "anchor_role":"corroborating bridge",
+    "date":"2009",
+    "author_or_institution":"Anura Manatunga / ISEAS–Yusof Ishak Institute; Cambridge Core distribution",
+    "author_institution":"Anura Manatunga / ISEAS–Yusof Ishak Institute; Cambridge Core distribution",
+    "scope":"Polonnaruwa as Chola administrative centre, Vijayabahu reconstruction, regional connections and Magha chronology",
+    "claims_supported":["C-R14-A04-VIJAYABAHU-001","C-R14-A04-MAGHA-001"],
+    "limitations":"Transregional chapter rather than a dedicated causal study of Chola decline or Magha's long-run effects.",
+    "provenance":"direct"
+  },
+  {
+    "id":"CULAVAMSA-GEIGER-1998",
+    "title":"Cūḷavaṃsa, Part I — English translation by Wilhelm Geiger",
+    "url":"https://noolaham.org/wiki/index.php?title=Culavamsa_-_Part_I&uselang=en",
+    "tier":"T1",
+    "anchor_role":"canonical anchor",
+    "date":"1998",
+    "author_or_institution":"Wilhelm Geiger translation / Asian Educational Services; Noolaham digital copy",
+    "author_institution":"Wilhelm Geiger translation / Asian Educational Services; Noolaham digital copy",
+    "scope":"Primary chronicle tradition for medieval Sri Lanka, including the Magha narrative and Polonnaruwa succession",
+    "claims_supported":["C-R14-A04-MAGHA-001"],
+    "limitations":"Chronicle is a partisan Buddhist court-monastic narrative and cannot alone establish causation or population-wide effects.",
+    "provenance":"direct"
+  }
+]

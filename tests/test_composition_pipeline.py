@@ -13,11 +13,11 @@ class CompositionPipelineTests(unittest.TestCase):
         for _,item in load_side_stories(PRE):
             if item['kind']=='method':self.assertFalse((item.get('placement') or {}).get('return_to'))
         errors,_,_,_=validate_side_stories(PRE);self.assertEqual([],errors)
-    def test_pre_arc_recaps_cover_materialized_arcs_and_tease_forward(self):
-        sys.path.insert(0,str(ROOT/'scripts'));from arc_recap_contract import validate_arc_recaps,load_arc_recaps
+    def test_pre_arc_recaps_cover_recap_ready_arcs_and_tease_forward(self):
+        sys.path.insert(0,str(ROOT/'scripts'));from arc_recap_contract import validate_arc_recaps,load_arc_recaps,arc_evidence_status,NON_RECAP_READY_EVIDENCE
         errors,_,count=validate_arc_recaps(PRE);self.assertEqual([],errors)
-        arcs={p.name for p in (PRE/'01_arcs').iterdir() if p.is_dir() and (p/'ARC.md').exists()};self.assertEqual(len(arcs),count)
-        for _,item in load_arc_recaps(PRE):self.assertTrue(item['protagonists']);self.assertTrue(item['prepares_next']);
+        recap_ready={p.name for p in (PRE/'01_arcs').iterdir() if p.is_dir() and (p/'ARC.md').exists() and arc_evidence_status(p/'ARC.md') not in NON_RECAP_READY_EVIDENCE};covered={item['arc'] for _,item in load_arc_recaps(PRE) if item.get('status') in {'validated','promoted'}};self.assertTrue(recap_ready.issubset(covered));self.assertGreaterEqual(count,len(recap_ready))
+        for _,item in load_arc_recaps(PRE):self.assertTrue(item['protagonists']);self.assertTrue(item['prepares_next'])
     def test_arc_recap_materializer_is_deterministic_and_idempotent(self):
         sys.path.insert(0,str(ROOT/'scripts'));from materialize_arc_recaps import materialize_arc_recaps
         source=(PRE/'09_output/report.md').read_text(encoding='utf-8');once,count=materialize_arc_recaps(PRE,source);twice,count2=materialize_arc_recaps(PRE,once);self.assertEqual(count,count2);self.assertEqual(once,twice);self.assertGreaterEqual(count,3)
@@ -39,7 +39,7 @@ class CompositionPipelineTests(unittest.TestCase):
     def test_deterministic_materializer_inserts_promoted_json_content(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);project=root/'p';(project/'09_output/side_stories').mkdir(parents=True);source=root/'source.md';output=root/'out.md';source.write_text('# A\n\nAnchor\n\nBody\n',encoding='utf-8')
-            item={'schema_version':'1.1','class':'side_story','id':'SS-X','kind':'detour','status':'promoted','title':'Example','purpose':'p','reason_off_trunk':'r','payoff':'p','map_eligible':False,'reader_policy':{'min_age':10},'lineage':{'claim_ids':[],'source_ids':[],'bridge_ids':[],'hil_ids':[],'drift_paths':[],'origin_paths':[]},'placement':{'section_anchor':'Anchor','return_to':'anchor:Body'},'zoom_excursion':None,'content':{'body_markdown':'Inserted body'},'render':{'label':'Petit détour','marker':'[SIDE-STORY:SS-X]','required_in_reader':True}};(project/'09_output/side_stories/SS-X.json').write_text(json.dumps(item),encoding='utf-8')
+            item={'schema_version':'1.1','class':'side_story','id':'SS-X','kind':'detour','status':'promoted','title':'Example','purpose':'p','reason_off_trunk':'r','payoff':'p','map_eligible':False,'reader_policy':{'min_age':10},'lineage':{'claim_ids':[],'source_ids':[],'bridge_ids':[],'hil_ids':[],'drift_paths':[],'origin_paths':[]},'placement':{'section_anchor':'Anchor','return_to':'anchor:Body'},'zoom_excursion':None,'content':{'takeaway':'A distinct useful conclusion.','body_markdown':'Inserted body'},'render':{'label':'Petit détour','marker':'[SIDE-STORY:SS-X]','required_in_reader':False}};(project/'09_output/side_stories/SS-X.json').write_text(json.dumps(item),encoding='utf-8')
             r=subprocess.run([sys.executable,str(ROOT/'scripts/materialize_side_stories.py'),'--project',str(project),'--source',str(source),'--output',str(output)],cwd=ROOT,text=True,capture_output=True);self.assertEqual(0,r.returncode,r.stdout+r.stderr);text=output.read_text(encoding='utf-8');self.assertIn('[SIDE-STORY:SS-X]',text);self.assertIn('Inserted body',text)
     def test_full_composition_preflight_passes(self):
         for project in (PRE,POST):

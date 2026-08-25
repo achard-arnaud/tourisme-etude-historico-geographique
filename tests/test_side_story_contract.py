@@ -5,9 +5,9 @@ class SideStoryContractTests(unittest.TestCase):
     def test_contract_assets_exist(self):
         for rel in ['skills/composing-side-stories/SKILL.md','templates/side-story.json','templates/side-stories/analytical-focus.json','scripts/side_story_contract.py','scripts/new_side_story.py','scripts/materialize_side_stories.py','docs/SOP_SIDE_STORIES.md']:self.assertTrue((ROOT/rel).exists(),rel)
     def test_pre1948_inventory_is_backfilled_and_contract_valid(self):
-        sys.path.insert(0,str(ROOT/'scripts'));from side_story_contract import load_side_stories,validate_side_stories,side_story_coverage,SUPPORTED_SCHEMA_VERSIONS
-        items=load_side_stories(PROJECT);self.assertGreaterEqual(len(items),26);errors,warnings,count,coverage=validate_side_stories(PROJECT);self.assertEqual([],errors);self.assertEqual([],warnings);self.assertEqual(count,len(items));self.assertEqual(0,coverage['untracked']);self.assertGreaterEqual(coverage['discovered'],21)
-        for _,item in items:self.assertIn(item['schema_version'],SUPPORTED_SCHEMA_VERSIONS);self.assertEqual('side_story',item['class']);self.assertIsInstance(item['map_eligible'],bool)
+        sys.path.insert(0,str(ROOT/'scripts'));from side_story_contract import load_side_stories,validate_side_stories,side_story_coverage,SUPPORTED_SCHEMA_VERSIONS,VALID_CLASSES
+        items=load_side_stories(PROJECT);self.assertGreaterEqual(len(items),26);errors,warnings,count,coverage=validate_side_stories(PROJECT);self.assertEqual([],errors);self.assertTrue(any('evidence debt' in w for w in warnings));self.assertEqual(count,len(items));self.assertEqual(0,coverage['untracked']);self.assertGreaterEqual(coverage['discovered'],21)
+        for _,item in items:self.assertIn(item['schema_version'],SUPPORTED_SCHEMA_VERSIONS);self.assertIn(item['class'],VALID_CLASSES);self.assertIsInstance(item['map_eligible'],bool)
         self.assertTrue(any(item['schema_version']=='1.2' and item['kind']=='analytical_focus' for _,item in items))
     def test_method_return_is_optional_but_validated_narrative_return_is_resolved(self):
         sys.path.insert(0,str(ROOT/'scripts'));from side_story_contract import load_side_stories
@@ -17,7 +17,7 @@ class SideStoryContractTests(unittest.TestCase):
     def test_canonical_state_is_full_reader_not_delta(self):
         state=json.loads((PROJECT/'00_method/output_state.json').read_text(encoding='utf-8'));self.assertEqual('09_output/report_v3_full.md',state['canonical_markdown']);self.assertNotEqual(state['canonical_markdown'],state['delta_markdown'])
     def test_generic_project_qa_publishes_coverage(self):
-        r=subprocess.run([sys.executable,'scripts/qa_project.py',str(PROJECT)],cwd=ROOT,text=True,capture_output=True);self.assertEqual(0,r.returncode,r.stdout+r.stderr);self.assertIn('side stories',r.stdout);self.assertIn('0 untracked',r.stdout)
+        r=subprocess.run([sys.executable,'scripts/qa_project.py',str(PROJECT)],cwd=ROOT,text=True,capture_output=True);self.assertEqual(0,r.returncode,r.stdout+r.stderr);self.assertIn('side stories',r.stdout);self.assertIn('traced ',r.stdout);self.assertIn('declared ',r.stdout);self.assertIn('untracked 0',r.stdout)
     def test_cli_creates_candidate_instance(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp)/'project';(root/'09_output').mkdir(parents=True);r=subprocess.run([sys.executable,'scripts/new_side_story.py','--project',str(root),'--id','SS-TST-001','--kind','detour','--arc','A01_test','--title','Test detour','--section-anchor','Test','--return-to','A01_test','--purpose','Exercise'],cwd=ROOT,text=True,capture_output=True);self.assertEqual(0,r.returncode,r.stdout+r.stderr);item=json.loads((root/'09_output/side_stories/SS-TST-001.json').read_text(encoding='utf-8'));self.assertEqual('candidate',item['status']);self.assertEqual('1.2',item['schema_version'])

@@ -205,7 +205,7 @@ def main():
         if strict: validate_v3_bridge(b, errors)
 
     wiki_count=validate_wiki(root,sources,errors); graph_count=validate_graph_edges(root,sources,errors)
-    side_count=recap_count=map_count=profile_count=0; coverage={'tracked':0,'discovered':0,'untracked':0}
+    side_count=recap_count=map_count=profile_count=0; coverage={'traced':0,'declared':0,'discovered':0,'untracked':0,'legacy_required_exemptions':0}
     if (root/'00_method/output_state.json').exists():
         e,w,side_count,coverage=validate_side_stories(root,check_render=True); errors+=e; warnings+=w
         e,w,recap_count=validate_arc_recaps(root); errors+=e; warnings+=w
@@ -216,7 +216,7 @@ def main():
     for m in errors: print('ERROR:',m,file=sys.stderr)
     for m in warnings: print('WARN:',m,file=sys.stderr)
     if errors: return 1
-    print(f"QA OK: contract v{contract_version(root)}, {len(claims)} claims, {len(sources)} sources, {wiki_count} wiki pages, {graph_count} graph edges, {node_count} graph nodes, {side_count} side stories ({coverage['tracked']}/{coverage['discovered']} tracked, {coverage['untracked']} untracked), {recap_count} arc recaps, {map_count} map assets, {profile_count} reader profile, {len(warnings)} warnings")
+    print(f"QA OK: contract v{contract_version(root)}, {len(claims)} claims, {len(sources)} sources, {wiki_count} wiki pages, {graph_count} graph edges, {node_count} graph nodes, {side_count} side stories (traced {coverage['traced']}, declared {coverage['declared']}, discovered {coverage['discovered']}, untracked {coverage['untracked']}, legacy-required-exemptions {coverage['legacy_required_exemptions']}), {recap_count} arc recaps, {map_count} map assets, {profile_count} reader profile, {len(warnings)} warnings")
     return 0
 
 if __name__=='__main__': raise SystemExit(main())
