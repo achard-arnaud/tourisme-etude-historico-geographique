@@ -1,0 +1,12 @@
+{
+  "id":"C-R14-A04-VIJAYABAHU-001",
+  "type":"inference",
+  "claim":"Vijayabahu's reconquest was an internal military-political achievement made possible within a changing Chola and regional environment; regional vulnerability is an amplifier of opportunity, not a substitute for the local reconquest mechanism.",
+  "arc":"A04_chola_interlude_and_polonnaruwa",
+  "confidence":"B",
+  "zoom":"Z2",
+  "causal_role":"amplifier",
+  "source_ids":["JSTOR-ARC-KINGSHIP-2026","CAMBRIDGE-MANATUNGA-R14","SIDDHAM-VELAIKKARA-2020"],
+  "bounded_by":"Regional context is treated as opportunity structure only; the sources do not license a monocausal claim that Chola weakness alone produced reconquest.",
+  "notes":"Run 14 vertical-slice claim for SS-PRE-L016."
+}
