@@ -22,6 +22,7 @@ jobs:
       - run: python scripts/audit_run13_contracts.py
       - run: python scripts/audit_run14_legacy.py
       - run: python scripts/audit_run15_intakes.py
+      - run: python scripts/audit_run16_field_intakes.py
       - run: python scripts/qa_project.py examples/sri_lanka_pre_1948
       - run: python scripts/qa_project.py examples/sri_lanka_post_1948
       # Mandatory pre-edit gates: graph fragments and composition placements resolve before editing.
