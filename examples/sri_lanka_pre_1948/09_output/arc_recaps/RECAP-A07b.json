@@ -1,0 +1,33 @@
+{
+  "schema_version":"1.0",
+  "class":"arc_recap",
+  "id":"RECAP-A07b",
+  "arc":"A07b_kandyan_kingdom_and_defensive_interior",
+  "status":"validated",
+  "causal_schema":{
+    "drivers":[
+      {"claim_id":"C-R17-KDY-TERRAIN-001","summary":"Le relief montagneux et le contrôle du savoir topographique ont limité la projection militaire britannique."}
+    ],
+    "amplifiers":[
+      {"claim_id":"C-R17-KDY-RELIC-001","summary":"La relique de la Dent concentre une ressource de légitimité politique et religieuse attachée à Kandy."}
+    ],
+    "constraints":[
+      {"claim_id":"C-R17-KDY-1815-001","summary":"Le relief n'empêche pas la défection politique : en 1815, le royaume prend fin par convention plutôt que par conquête d'assaut."}
+    ],
+    "consequences":[
+      {"claim_id":"C-R17-KDY-ROAD-001","summary":"La route Colombo–Kandy inverse la logique défensive en ouvrant un corridor de contrôle et d'accès à l'intérieur."},
+      {"claim_id":"C-R17-KDY-RAIL-001","summary":"Le rail prolonge cette inversion en intégrant les hautes terres à la chaîne d'exportation du café puis du thé."},
+      {"claim_id":"C-R17-KDY-LAND-001","summary":"L'expansion des plantations s'accompagne d'une appropriation foncière distincte du mécanisme d'importation de main-d'œuvre."},
+      {"claim_id":"C-R17-KDY-LABOUR-001","summary":"La formation de la main-d'œuvre des plantations relève d'un régime séparé d'immigration sud-indienne."}
+    ]
+  },
+  "protagonists":[
+    {"name":"État kandyan et élites du royaume","role":"détenteurs d'un ordre politique intérieur","objective":"Préserver souveraineté et légitimité dans un environnement de pression européenne côtière.","constraints":["relief difficile","rivalités aristocratiques","pression britannique"],"perceived_options":["défense territoriale","négociation et alliances"],"claim_ids":["C-R17-KDY-TERRAIN-001","C-R17-KDY-1815-001","C-R17-KDY-RELIC-001"]},
+    {"name":"Administration coloniale britannique","role":"puissance de conquête puis d'intégration","objective":"Sécuriser l'intérieur et l'insérer dans les circuits administratifs et de plantation.","constraints":["terrain","résistance 1817–18","coût des infrastructures"],"perceived_options":["route","rail","réformes administratives","appropriation foncière"],"claim_ids":["C-R17-KDY-ROAD-001","C-R17-KDY-RAIL-001","C-R17-KDY-ADMIN-001","C-R17-KDY-LAND-001"]}
+  ],
+  "what_changed":["Le même relief passe d'un avantage défensif à un obstacle que l'État colonial cherche à neutraliser par l'infrastructure.","Le basculement de 1815 est séparé de la rébellion de 1817–18.","L'appropriation foncière kandyanne et l'importation de main-d'œuvre des plantations restent deux mécanismes distincts."],
+  "prepares_next":[{"bullet":"La géographie qui protégeait le royaume devient, à l'époque contemporaine, une contrainte urbaine ; la question suivante est de savoir ce qui maintient malgré tout la centralité fonctionnelle de Kandy.","next_arc":"A19_kandy_second_city_paradox","bridge_ids":[]}],
+  "lineage":{"claim_ids":["C-R17-KDY-TERRAIN-001","C-R17-KDY-1815-001","C-R17-KDY-RELIC-001","C-R17-KDY-ROAD-001","C-R17-KDY-RAIL-001","C-R17-KDY-ADMIN-001","C-R17-KDY-LAND-001","C-R17-KDY-LABOUR-001"],"source_ids":[],"bridge_ids":[]},
+  "placement":{"before_anchor":""},
+  "render":{"label":"Récap causal","marker":"[ARC-RECAP:RECAP-A07b]","required_in_reader":false}
+}
