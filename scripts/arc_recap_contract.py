@@ -10,6 +10,7 @@ SCHEMA_VERSION = "1.0"
 CLASS = "arc_recap"
 STATUSES = {"candidate", "validated", "promoted", "retired"}
 RENDERABLE = {"validated", "promoted"}
+NON_RECAP_READY_EVIDENCE = {"shell", "partial"}
 
 
 def load_arc_recaps(project: Path):
@@ -56,7 +57,6 @@ def arc_evidence_status(arc_md: Path) -> str:
 
 
 def render_arc_recap_markdown(item: dict) -> str:
-    """Render one recap from structured data only; no new historical prose is invented."""
     rid = item["id"]
     arc = item.get("arc", "")
     marker = (item.get("render") or {}).get("marker", f"[ARC-RECAP:{rid}]")
@@ -109,8 +109,9 @@ def validate_arc_recaps(project: Path, check_render: bool = False) -> tuple[list
     recaps = load_arc_recaps(project)
     arc_paths = {p.name:p/"ARC.md" for p in (project / "01_arcs").iterdir() if p.is_dir() and (p / "ARC.md").exists()} if (project / "01_arcs").exists() else {}
     arcs = set(arc_paths)
-    recap_required_arcs = {arc for arc,path in arc_paths.items() if arc_evidence_status(path) != "shell"}
-    shell_arcs = sorted(set(arcs)-recap_required_arcs)
+    evidence_status = {arc:arc_evidence_status(path) for arc,path in arc_paths.items()}
+    recap_required_arcs = {arc for arc,status in evidence_status.items() if status not in NON_RECAP_READY_EVIDENCE}
+    bounded_arcs = sorted(arc for arc,status in evidence_status.items() if status in NON_RECAP_READY_EVIDENCE)
     claims = _load(project, "01_arcs/*/claims/*.json")
     bridges = _load(project, "06_bridges/*.json")
     by_arc = {}
@@ -136,8 +137,8 @@ def validate_arc_recaps(project: Path, check_render: bool = False) -> tuple[list
             errors.append(f"arc recap {rid}: invalid status")
         if status in RENDERABLE and arc not in arcs:
             errors.append(f"arc recap {rid}: unknown materialized arc {arc!r}")
-        if status in RENDERABLE and arc in shell_arcs:
-            errors.append(f"arc recap {rid}: shell arc {arc!r} cannot have validated/promoted recap")
+        if status in RENDERABLE and evidence_status.get(arc) in NON_RECAP_READY_EVIDENCE:
+            errors.append(f"arc recap {rid}: {evidence_status.get(arc)} arc {arc!r} cannot have validated/promoted recap")
         by_arc.setdefault(arc, []).append(item)
 
         causal = item.get("causal_schema") or {}
@@ -191,8 +192,8 @@ def validate_arc_recaps(project: Path, check_render: bool = False) -> tuple[list
         missing = sorted(arc for arc in recap_required_arcs if not any(item.get("status") in RENDERABLE for item in by_arc.get(arc, [])))
         if missing:
             errors.append("missing validated arc recaps: " + ", ".join(missing))
-    if shell_arcs:
-        warnings.append("arc evidence debt: shell arcs excluded from recap gate: " + ", ".join(shell_arcs))
+    if bounded_arcs:
+        warnings.append("arc evidence debt: non-recap-ready arcs excluded from recap gate: " + ", ".join(f"{arc}({evidence_status[arc]})" for arc in bounded_arcs))
     if check_render and canonical_text is not None:
         try:
             assert_rendered_arc_recaps(project, canonical_text)
