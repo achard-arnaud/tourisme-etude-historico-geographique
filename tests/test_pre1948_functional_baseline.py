@@ -8,9 +8,10 @@ class Pre1948FunctionalBaselineTests(unittest.TestCase):
         paths=list(PROJECT.glob('01_arcs/*/claims/*.json'));self.assertGreaterEqual(len(paths),9)
         for p in paths:
             c=json.loads(p.read_text(encoding='utf-8'));self.assertIn('type',c);self.assertEqual(p.parents[1].name,c['arc'])
-    def test_eight_hil_baselines_and_arc_recaps_cover_materialized_arcs(self):
+    def test_eight_hil_baselines_and_arc_recaps_cover_recap_ready_arcs(self):
         self.assertEqual(8,len(list((PROJECT/'02_hil').glob('HIL-*/baseline.json'))))
-        arcs={p.name for p in (PROJECT/'01_arcs').iterdir() if p.is_dir() and (p/'ARC.md').exists()};recaps=list((PROJECT/'09_output/arc_recaps').glob('*.json'));self.assertEqual(len(arcs),len(recaps))
+        sys.path.insert(0,str(REPO/'scripts'));from arc_recap_contract import arc_evidence_status,NON_RECAP_READY_EVIDENCE,load_arc_recaps
+        ready={p.name for p in (PROJECT/'01_arcs').iterdir() if p.is_dir() and (p/'ARC.md').exists() and arc_evidence_status(p/'ARC.md') not in NON_RECAP_READY_EVIDENCE};covered={item['arc'] for _,item in load_arc_recaps(PROJECT) if item.get('status') in {'validated','promoted'}};self.assertTrue(ready.issubset(covered))
     def test_questions_side_story_coverage_and_latest_workflow_are_persisted(self):
         self.assertTrue((PROJECT/'08_questions/baseline_questions.md').exists());manifest=json.loads((REPO/'docs/RUN11_COMPOSITION_PIPELINE_MANIFEST.json').read_text(encoding='utf-8'));known={p.parent.name for p in (REPO/'skills').glob('*/SKILL.md')};self.assertEqual(known,{x['skill'] for x in manifest['dispatched_skills']})
         sys.path.insert(0,str(REPO/'scripts'));from side_story_contract import side_story_coverage;self.assertEqual(0,side_story_coverage(PROJECT)['untracked'])
