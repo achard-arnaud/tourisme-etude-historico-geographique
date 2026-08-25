@@ -1,0 +1,20 @@
+{
+  "capture_contract":"run18-ishikawa-coffee-to-tea-v1",
+  "effect":"abandonment of coffee after the 1870s-1890s collapse and conversion to successor crops rather than systematic coffee replanting",
+  "threads":["labour","land","water","caste-ethnicity","trade"],
+  "forbidden_thread":"tea",
+  "branches":[
+    {"branch":"material-biological","fragments":["Hemileia vastatrix imposed a persistent biological constraint on Arabica in humid highland conditions.","Nineteenth-century estates lacked a resistant Arabica replacement able to restore the same production model immediately.","Biological failure explains why coffee became risky, but does not by itself explain the choice among tea, cinchona, rubber, or exit."]},
+    {"branch":"method-agronomy","fragments":["Monoculture and narrow varietal structure increased exposure to a crop-specific disease shock.","Replanting into a known pathogen reservoir implied a multi-year revenue gap after a solvency shock.","Cinchona must be treated as a real intermediate crop and not erased by a smooth coffee-to-tea narrative."]},
+    {"branch":"machine-capital","fragments":["Tea required factory capital and continuous working capital, unlike the simpler processing chain of coffee.","Ownership and financing form changed during the crisis as estates moved toward larger agency-house and company structures.","Once tea factories were built, sunk processing capital increased crop-specific lock-in."]},
+    {"branch":"manpower","fragments":["A South-Indian plantation workforce had already been recruited under coffee through kangany and debt-mediated labour arrangements.","Tea's year-round plucking potentially conserved a resident labour system better than a strongly seasonal harvest crop.","The labour-conservation hypothesis is distinct from the capital-form hypothesis and requires estate-level timing evidence."]},
+    {"branch":"milieu-geography","fragments":["Coffee-era roads and railway infrastructure became sunk connectivity inherited by successor crops.","Elevation and climatic zoning created differentiated quality opportunities for tea.","The same wet highland geography that amplified rust also constrained mechanisation and shaped later estate labour markets."]},
+    {"branch":"market-measurement","fragments":["Imperial demand, brokerage, auction and shipping institutions could be repurposed toward tea.","The conversion question must be tested by lag structure: rust arrival, ownership transfer and resident labour density are rival timing predictors.","District averages are insufficient if estate-level ownership and crop-acreage series can be recovered from colonial reports and directories."]}
+  ],
+  "hypotheses":[
+    {"id":"H-R18-CONV-1","name":"biological determinism","prediction":"conversion timing tracks the rust front estate by estate","status":"U"},
+    {"id":"H-R18-CONV-2","name":"capital-form determinism","prediction":"conversion timing tracks ownership transfer and agency-house or company consolidation, lagging rust","status":"U","priority":"highest"},
+    {"id":"H-R18-CONV-3","name":"labour-system conservation","prediction":"estates with the largest resident labour forces convert fastest, conditional on rust timing and ownership","status":"U"}
+  ],
+  "discriminating_test":"estimate the lag between rust incidence, ownership transfer, crop acreage change and resident labour density using estate or district-year colonial series; do not infer dominance before the lag structure is observed"
+}
