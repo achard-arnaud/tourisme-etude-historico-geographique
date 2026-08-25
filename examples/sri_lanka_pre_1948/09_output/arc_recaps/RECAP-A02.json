@@ -1,0 +1,28 @@
+{
+  "schema_version":"1.0",
+  "class":"arc_recap",
+  "id":"RECAP-A02",
+  "arc":"A02_ancient_indian_ocean_exchange",
+  "status":"validated",
+  "causal_schema":{
+    "drivers":[],
+    "amplifiers":[],
+    "constraints":[
+      {"claim_id":"C-R13-ROME-002","summary":"Les indices méditerranéens ne doivent pas être compressés en un seul épisode continu de commerce romain."},
+      {"claim_id":"C-R13-NAGA-002","summary":"Les catégories antiques ne peuvent pas être rabattues directement sur les identités nationales modernes."}
+    ],
+    "consequences":[
+      {"claim_id":"C-R13-GLASS-002","summary":"Manthai apparaît d'abord comme un nœud de transformation et de redistribution dans des réseaux de verre pluriels."},
+      {"claim_id":"C-R13-ROME-005","summary":"La lecture d'une route bilatérale continue Rome–Ceylan est conservée comme piste réfutée plutôt que comme résultat implicite."}
+    ]
+  },
+  "protagonists":[
+    {"name":"Acteurs portuaires et artisanaux de Manthai","role":"intermédiaires d'un port de l'océan Indien","objective":"Transformer et redistribuer des matériaux circulant entre plusieurs zones de production et de consommation.","constraints":["origine du verre variable","preuves de production primaire localement limitées"],"perceived_options":["travail secondaire","redistribution portuaire"],"claim_ids":["C-R13-GLASS-001","C-R13-GLASS-002"]},
+    {"name":"Réseaux marchands interrégionaux","role":"chaînes de médiation","objective":"Faire circuler objets, matériaux et monnaies entre plusieurs bassins sans qu'un trajet bilatéral unique soit nécessaire.","constraints":["saisonnalité","intermédiation","chronologies discontinues"],"perceived_options":["cabotage","redistribution par ports intermédiaires"],"claim_ids":["C-R13-ROME-003"]}
+  ],
+  "what_changed":["La présence d'un objet étranger est séparée de la preuve d'un voyage direct.","La fabrication primaire du verre est séparée du travail secondaire et de la redistribution.","Les catégories identitaires antiques restent ouvertes plutôt que réifiées."],
+  "prepares_next":[{"bullet":"La même discipline de transmission et de preuve sera appliquée aux institutions coloniales : ressemblance entre dispositifs ne vaut pas filiation.","next_arc":"A05_colonial_conservation_ordinance","bridge_ids":[]}],
+  "lineage":{"claim_ids":["C-R13-GLASS-001","C-R13-GLASS-002","C-R13-ROME-002","C-R13-ROME-003","C-R13-ROME-005","C-R13-NAGA-002"],"source_ids":[],"bridge_ids":["B-R13-ROME-DIRECT-001"]},
+  "placement":{"before_anchor":""},
+  "render":{"label":"Récap causal","marker":"[ARC-RECAP:RECAP-A02]","required_in_reader":false}
+}
