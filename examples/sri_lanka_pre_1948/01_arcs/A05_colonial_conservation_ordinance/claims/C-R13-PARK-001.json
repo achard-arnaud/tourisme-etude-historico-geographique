@@ -1,0 +1,3 @@
+{
+  "id":"C-R13-PARK-001","type":"source_fact","claim":"The Ceylon Game Protection Society was founded in 1894 and became an organized pressure group for game and habitat protection; this is a documented colonial institutional precursor to later statutory conservation.","confidence":"A","zoom":"Z2","causal_role":"context","arc":"A05_colonial_conservation_ordinance","hil":"HIL-01_institutions-chronology","source_ids":["WNPS-HISTORY-2024"],"bounded_by":"institutional self-history; used for founding chronology rather than claims of policy effectiveness","notes":"Separates organized advocacy from later statutory authority."
+}
