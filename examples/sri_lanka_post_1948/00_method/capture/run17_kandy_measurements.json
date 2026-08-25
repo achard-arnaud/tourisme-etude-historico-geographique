@@ -1,0 +1,17 @@
+{
+  "capture_contract":"run17-kandy-measure-first-v1",
+  "hypothesis":"Kandy is Sri Lanka's economically successful second city despite weak classical geographic endowments",
+  "hypothesis_status":"U",
+  "metrics":[
+    {"id":"M-R17-KDY-POP-MC","type":"metric","value":94482,"denominator":"resident population within Kandy Municipal Council boundary","geography":"Kandy MC","period":"Census 2024","source_definition":"DCS Table 2.4 population of Municipal Councils and Urban Councils by sex","source_id":"DCS-KANDY-MC-2024","status":"resolved"},
+    {"id":"M-R17-KDY-POP-AGG","type":"metric","value":null,"denominator":"functional urban agglomeration population","geography":"Greater Kandy / functional urban area","period":"latest available","source_definition":"must use an explicit agglomeration boundary; municipal population is not a substitute","source_id":null,"status":"U"},
+    {"id":"M-R17-KDY-POP-DIST","type":"metric","value":null,"denominator":"resident district population","geography":"Kandy District","period":"Census 2024","source_definition":"DCS district population; retained separately from city and agglomeration","source_id":"DCS-CPH-2024","status":"U"},
+    {"id":"M-R17-KDY-GROWTH","type":"metric","value":null,"denominator":"population growth rate using like-for-like geographic units","geography":"Kandy vs Colombo vs Gampaha","period":"2012-2024","source_definition":"requires same unit definition and census base in both periods","source_id":"DCS-CPH-2024","status":"U"},
+    {"id":"M-R17-KDY-PGDP","type":"metric","value":10.7,"unit":"percent","denominator":"Sri Lanka nominal GDP at current market prices","geography":"Central Province","period":"2024","source_definition":"CBSL top-down provincial GDP estimate, base year 2015","source_id":"CBSL-PGDP-2024","status":"resolved"},
+    {"id":"M-R17-KDY-LAND","type":"metric","value":null,"denominator":"transaction/assessed price per perch with location band specified","geography":"Kandy centre / heritage core","period":"latest comparable year","source_definition":"UDA/valuation or transaction series required; asking prices are not acceptable","source_id":null,"status":"U"},
+    {"id":"M-R17-KDY-MIGRATION","type":"metric","value":null,"denominator":"net migrants by age cohort","geography":"Kandy city/district, boundary explicit","period":"latest census interval","source_definition":"DCS migration tables; graduate retention cannot be inferred from university enrollment","source_id":"DCS-CPH-2024","status":"U"},
+    {"id":"M-R17-KDY-EMPLOY","type":"metric","value":null,"denominator":"formal employed persons by sector","geography":"Kandy city/district, boundary explicit","period":"latest available","source_definition":"labour-force/establishment statistics; province is not a city substitute","source_id":null,"status":"U"},
+    {"id":"M-R17-KDY-TOURISM","type":"metric","value":null,"denominator":"visitors/guest nights with domestic/international scope explicit","geography":"Kandy","period":"latest full year","source_definition":"tourist arrivals and average length of stay must be sourced from accommodation/SLTDA series; itinerary presence is not a metric","source_id":null,"status":"U"}
+  ],
+  "decision":"The phrase 'second city' is prohibited as an economic or population ranking unless its denominator is stated. Current evidence breaks the naive ranking but does not yet prove economic stagnation or success."
+}
