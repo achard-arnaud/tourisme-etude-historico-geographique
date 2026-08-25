@@ -26,7 +26,7 @@ DEBUG = bool(os.environ.get('SKILL_DEBUG'))
 def contract_version(root):
     p = root / 'project.json'
     if not p.exists():
-        return 3
+        return 2
     try:
         data = json.loads(p.read_text(encoding='utf-8'))
         explicit = data.get('artifact_contract_version')

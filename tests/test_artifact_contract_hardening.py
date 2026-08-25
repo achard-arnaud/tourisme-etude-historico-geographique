@@ -21,6 +21,7 @@ class ArtifactContractHardeningTests(unittest.TestCase):
             'name': 'contract fixture',
             'method': 'tourisme-etude-historico-geographique',
             'version': 3,
+            'artifact_contract_version': 3,
         }), encoding='utf-8')
 
     def write_claim(self, root, claim, arc='A01_test'):
