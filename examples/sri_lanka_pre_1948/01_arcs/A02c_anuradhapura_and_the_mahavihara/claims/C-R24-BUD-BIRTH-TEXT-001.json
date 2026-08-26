@@ -1,0 +1,13 @@
+{
+  "id": "C-R24-BUD-BIRTH-TEXT-001",
+  "type": "tradition",
+  "claim": "MN 123 contains a canonical miraculous birth narrative for the bodhisatta, including the newborn standing and taking seven steps; a modern relief can therefore represent a canonical textual tradition without becoming evidence that those miraculous details occurred historically.",
+  "confidence": "A",
+  "zoom": "Z3",
+  "causal_role": "context",
+  "arc": "A02c_anuradhapura_and_the_mahavihara",
+  "hil": "HIL-05_religion-culture-legitimacy",
+  "source_ids": ["SUTTACENTRAL-MN123-SUJATO"],
+  "bounded_by": "Confidence A applies to the presence of the motif in the canonical text, not to historical verification of the miracle or to the relief's modern provenance.",
+  "notes": "Supports the evidence label of ILL-KANDY-03 while preserving tradition-versus-history semantics."
+}

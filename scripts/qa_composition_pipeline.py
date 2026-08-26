@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Hard pre-edit composition gate: graph links → state → side stories → recaps → profile/maps → reader plan."""
+"""Hard pre-edit composition gate: graph links → state → side stories → recaps → profile/maps/illustrations → reader plan."""
 from __future__ import annotations
 import json,sys
 from pathlib import Path
@@ -9,8 +9,11 @@ from side_story_contract import validate_side_stories
 from arc_recap_contract import validate_arc_recaps,load_arc_recaps,RENDERABLE
 from materialize_arc_recaps import materialize_arc_recaps
 from map_asset_contract import validate_map_assets
+from illustration_contract import validate_illustrations
+from illustration_contract import load_illustrations
 from reader_profile_contract import validate_reader_profile
 from resolve_reader_plan import build_plan
+from build_story_scaffold import write_scaffold
 
 def main():
     project=Path(sys.argv[1]);errors=[];warnings=[]
@@ -26,14 +29,20 @@ def main():
             if materializable!=required_recaps:errors.append(f'arc recap materialization mismatch: {materializable}/{required_recaps} required ({recaps} registered)')
         except Exception as exc:errors.append(f'arc recap materialization: {exc}')
     me,mw,maps=validate_map_assets(project);errors+=me;warnings+=mw
+    ie,iw,illustrations=validate_illustrations(project);errors+=ie;warnings+=iw
     pe,pw,profiles=validate_reader_profile(project);errors+=pe;warnings+=pw
-    plan=None
+    plan=None;scaffold=None
     if not errors:
-        try:plan=build_plan(project);(project/'09_output'/'reader_plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        try:
+            scaffold=write_scaffold(project);plan=build_plan(project)
+            known_illustrations={x.get('id') for _,x in load_illustrations(project)}
+            routed_illustrations=set(plan['selected_illustration_ids'])|set(plan['illustration_review_queue_ids'])|set(plan['retired_illustration_ids'])
+            if known_illustrations!=routed_illustrations:errors.append(f"illustration plan coverage mismatch: routed {len(routed_illustrations)}/{len(known_illustrations)}")
+            (project/'09_output'/'reader_plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
         except Exception as exc:errors.append(f'reader plan: {exc}')
     for x in warnings:print('WARN:',x,file=sys.stderr)
     for x in errors:print('ERROR:',x,file=sys.stderr)
     if errors:return 1
-    print(f"COMPOSITION PREFLIGHT OK: canonical={canonical.name}, graph={nodes} nodes/{edges} edges/0 unresolved, side-stories=traced {coverage['traced']} / declared {coverage['declared']} / discovered {coverage['discovered']} / untracked {coverage['untracked']}, recaps={required_recaps}/{recaps} reader-required/registered, maps={maps}, profile={plan['profile_id']}")
+    print(f"COMPOSITION PREFLIGHT OK: canonical={canonical.name}, graph={nodes} nodes/{edges} edges/0 unresolved, scaffold={len(scaffold['arcs'])} arcs/{len(scaffold['diagnostics']['graph_components'])} components, side-stories=traced {coverage['traced']} / declared {coverage['declared']} / discovered {coverage['discovered']} / untracked {coverage['untracked']}, recaps={required_recaps}/{recaps} reader-required/registered, maps={maps}, illustrations={illustrations}, profile={plan['profile_id']}")
     return 0
 if __name__=='__main__':raise SystemExit(main())

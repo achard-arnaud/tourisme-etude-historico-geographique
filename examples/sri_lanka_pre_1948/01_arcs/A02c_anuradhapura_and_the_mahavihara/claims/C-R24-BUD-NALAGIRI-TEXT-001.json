@@ -1,0 +1,13 @@
+{
+  "id": "C-R24-BUD-NALAGIRI-TEXT-001",
+  "type": "tradition",
+  "claim": "The Nālāgiri episode is attested in Pali Buddhist narrative transmission: Devadatta's release of a fierce elephant and its subduing by the Buddha form a recognized teaching story, but an elephant scene without a readable local caption remains an iconographic identification rather than proof of one historical event.",
+  "confidence": "B",
+  "zoom": "Z3",
+  "causal_role": "context",
+  "arc": "A02c_anuradhapura_and_the_mahavihara",
+  "hil": "HIL-05_religion-culture-legitimacy",
+  "source_ids": ["SUTTACENTRAL-JA533-NALAGIRI"],
+  "bounded_by": "The textual tradition is clear; the exact match to ILL-KANDY-08 remains medium-confidence because the temple caption was not captured.",
+  "notes": "Run24 closes the textual-tradition target but not the local-caption target."
+}

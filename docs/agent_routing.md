@@ -12,8 +12,10 @@
 9. Useful off-trunk material → side story.
 10. Stabilized arc close → arc recap.
 11. Map-eligible story needing spatial illustration → map curation; vision then human approval.
-12. Audience/temperature/template choice → reader profile and deterministic reader plan.
-13. Manuscript structure → editor **only after composition preflight**.
-14. Reader voice → storytelling under the reader plan.
+12. Field photo or image requested as reader-facing support → `illustration`: preserve provenance, link to input IDs, classify depiction semantics, vision review, then human approval before rendering.
+13. Audience/temperature/template choice → reader profile and deterministic reader plan.
+14. Manuscript structure → editor **only after composition preflight**.
+15. Global narrative topology → build the compact story scaffold before prose; hydrate one arc and adjacent bridges at a time.
+16. Reader voice → storytelling under the scaffold and reader plan, followed by the dedicated illustration pass, coverage reconciliation, then final reread.
 
 Every substantial run records dispatched/skipped skills and evidence paths. Use `audit_workflow.py --latest`; do not pin CI manually to a historical manifest.

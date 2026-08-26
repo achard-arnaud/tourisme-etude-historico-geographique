@@ -1,0 +1,622 @@
+[
+  {
+    "schema_version": "1.0",
+    "class": "illustration",
+    "id": "ILL-KANDY-01",
+    "status": "vision_validated",
+    "source": {
+      "kind": "field_photo",
+      "asset_ref": "1000033394.jpg",
+      "sha256": "ad86acd2828e82cd0ae930de7c44ebbf8d22e74cd2ddf87cd07becf854f73d65",
+      "captured_at": "2026-08-26",
+      "location": "Sri Maha Bodhi Viharaya (Bahirawakanda), Kandy, Sri Lanka",
+      "creator": "user",
+      "rights": "user_supplied",
+      "binary_status": "external_only",
+      "sha256_status": "verified_at_intake"
+    },
+    "input_refs": [
+      {
+        "type": "field_fragment",
+        "id": "GF-KANDY-ILL-01",
+        "path": "00_method/capture/run24_kandy_buddha_illustration_fragments.json"
+      }
+    ],
+    "depiction": {
+      "subject": "Prince Siddhattha in palace chamber",
+      "event_or_theme": "disillusionment before renunciation",
+      "evidence_status": "interpretive",
+      "period": "Buddha biography tradition",
+      "notes": "Later temple representation",
+      "textual_layer": "later_biography"
+    },
+    "vision_review": {
+      "status": "reviewed",
+      "confidence": "medium",
+      "caption_transcription": "",
+      "visual_notes": "Prince seated awake; sleeping court women around him.",
+      "uncertainty": "Exact temple caption not securely read."
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewed_at": null,
+      "notes": "User asked that photos be linked as illustrations."
+    },
+    "fragment": {
+      "caption": "Le prince Siddhattha éveillé au milieu des femmes de cour endormies : une scène traditionnelle de désillusion précédant le renoncement.",
+      "what_it_shows": "A visual turning point from palace luxury toward renunciation.",
+      "why_here": "Useful to explain that Buddhist biography is built from moralized narrative scenes, not only dated historical episodes.",
+      "limits": "Identification is iconographic; the exact temple caption remains uncertain."
+    },
+    "placement": {
+      "subsection_ref": "buddha-life-renunciation",
+      "relevance_rank": 2,
+      "arc_ref": "A02c_anuradhapura_and_the_mahavihara",
+      "target_status": "proposed_missing",
+      "section_anchor": ""
+    },
+    "render": {
+      "required_in_reader": false,
+      "caption_only_allowed": true,
+      "marker": "[ILLUSTRATION:ILL-KANDY-01]"
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "class": "illustration",
+    "id": "ILL-KANDY-02",
+    "status": "vision_validated",
+    "source": {
+      "kind": "field_photo",
+      "asset_ref": "1000033395.jpg",
+      "sha256": "b1d277e3438351476e4d2bca1e727bda8dbe35ad712712ba484aadd8f3bd4e32",
+      "captured_at": "2026-08-26",
+      "location": "Sri Maha Bodhi Viharaya (Bahirawakanda), Kandy, Sri Lanka",
+      "creator": "user",
+      "rights": "user_supplied",
+      "binary_status": "external_only",
+      "sha256_status": "verified_at_intake"
+    },
+    "input_refs": [
+      {
+        "type": "field_fragment",
+        "id": "GF-KANDY-ILL-02",
+        "path": "00_method/capture/run24_kandy_buddha_illustration_fragments.json"
+      }
+    ],
+    "depiction": {
+      "subject": "Prince Siddhattha encountering age/asceticism",
+      "event_or_theme": "four sights",
+      "evidence_status": "interpretive",
+      "period": "Buddha biography tradition",
+      "notes": "Compressed iconography",
+      "textual_layer": "later_biography"
+    },
+    "vision_review": {
+      "status": "reviewed",
+      "confidence": "medium",
+      "caption_transcription": "",
+      "visual_notes": "Prince in chariot/horse scene; aged/ascetic figure foreground.",
+      "uncertainty": "May compress more than one of the four sights."
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewed_at": null,
+      "notes": ""
+    },
+    "fragment": {
+      "caption": "L’une des « quatre rencontres » qui font basculer Siddhattha du monde protégé du palais vers la question de la vieillesse, de la maladie, de la mort et de la quête ascétique.",
+      "what_it_shows": "Biographical catechesis through emblematic encounters.",
+      "why_here": "Explains why the prince begins to question palace life.",
+      "limits": "The relief may combine several encounters; do not over-specify a single figure without the caption."
+    },
+    "placement": {
+      "subsection_ref": "buddha-life-four-sights",
+      "relevance_rank": 1,
+      "arc_ref": "A02c_anuradhapura_and_the_mahavihara",
+      "target_status": "proposed_missing",
+      "section_anchor": ""
+    },
+    "render": {
+      "required_in_reader": false,
+      "caption_only_allowed": true,
+      "marker": "[ILLUSTRATION:ILL-KANDY-02]"
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "class": "illustration",
+    "id": "ILL-KANDY-03",
+    "status": "vision_validated",
+    "source": {
+      "kind": "field_photo",
+      "asset_ref": "1000033396.jpg",
+      "sha256": "2046ffe8693115b668911e6fc5e54f8cb7d3019bfc06222e1efebdd82b28309a",
+      "captured_at": "2026-08-26",
+      "location": "Sri Maha Bodhi Viharaya (Bahirawakanda), Kandy, Sri Lanka",
+      "creator": "user",
+      "rights": "user_supplied",
+      "binary_status": "external_only",
+      "sha256_status": "verified_at_intake"
+    },
+    "input_refs": [
+      {
+        "type": "field_fragment",
+        "id": "GF-KANDY-ILL-03",
+        "path": "00_method/capture/run24_kandy_buddha_illustration_fragments.json"
+      }
+    ],
+    "depiction": {
+      "subject": "Birth of Prince Siddhattha",
+      "event_or_theme": "Lumbini birth narrative",
+      "evidence_status": "canonical_text",
+      "period": "Buddha biography tradition",
+      "notes": "Temple relief",
+      "textual_layer": "early_discourse"
+    },
+    "vision_review": {
+      "status": "reviewed",
+      "confidence": "high",
+      "caption_transcription": "සිද්ධාර්ථ කුමාරෝත්පත්තිය",
+      "visual_notes": "Newborn standing, attendants/deities around him.",
+      "uncertainty": "Historical details belong to religious biography tradition."
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewed_at": null,
+      "notes": ""
+    },
+    "fragment": {
+      "caption": "Naissance du prince Siddhattha : le nouveau-né debout au centre d’une scène qui transforme la naissance en événement cosmique.",
+      "what_it_shows": "The sacred biography begins before the Buddha becomes Buddha.",
+      "why_here": "Clarifies the distinction between Siddhattha the prince and Buddha as title after awakening.",
+      "limits": "Religious biography and later iconography, not eyewitness reconstruction."
+    },
+    "placement": {
+      "subsection_ref": "buddha-life-birth",
+      "relevance_rank": 1,
+      "arc_ref": "A02c_anuradhapura_and_the_mahavihara",
+      "target_status": "proposed_missing",
+      "section_anchor": ""
+    },
+    "render": {
+      "required_in_reader": false,
+      "caption_only_allowed": true,
+      "marker": "[ILLUSTRATION:ILL-KANDY-03]"
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "class": "illustration",
+    "id": "ILL-KANDY-04",
+    "status": "vision_validated",
+    "source": {
+      "kind": "field_photo",
+      "asset_ref": "1000033397.jpg",
+      "sha256": "862c0190213d96a28c04ce2c976e0e87004aa4a6484d68db56ef81388187df6f",
+      "captured_at": "2026-08-26",
+      "location": "Sri Maha Bodhi Viharaya (Bahirawakanda), Kandy, Sri Lanka",
+      "creator": "user",
+      "rights": "user_supplied",
+      "binary_status": "external_only",
+      "sha256_status": "verified_at_intake"
+    },
+    "input_refs": [
+      {
+        "type": "field_fragment",
+        "id": "GF-KANDY-ILL-04",
+        "path": "00_method/capture/run24_kandy_buddha_illustration_fragments.json"
+      }
+    ],
+    "depiction": {
+      "subject": "Great Renunciation",
+      "event_or_theme": "departure from palace on Kanthaka",
+      "evidence_status": "canonical_text",
+      "period": "Buddha biography tradition",
+      "notes": "Traditional narrative",
+      "textual_layer": "later_biography"
+    },
+    "vision_review": {
+      "status": "reviewed",
+      "confidence": "high",
+      "caption_transcription": "",
+      "visual_notes": "Mounted prince fleeing/descending with companion behind.",
+      "uncertainty": "Specific companion is traditional identification."
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewed_at": null,
+      "notes": ""
+    },
+    "fragment": {
+      "caption": "Le « Grand Départ » : Siddhattha quitte la vie princière sur Kanthaka. Le récit met en scène le renoncement comme rupture volontaire avec le statut, la famille et le confort.",
+      "what_it_shows": "The decisive move from prince to seeker.",
+      "why_here": "Connects the four sights to the ascetic quest.",
+      "limits": "Traditional biographical staging; not a securely documented itinerary."
+    },
+    "placement": {
+      "subsection_ref": "buddha-life-renunciation",
+      "relevance_rank": 1,
+      "arc_ref": "A02c_anuradhapura_and_the_mahavihara",
+      "target_status": "proposed_missing",
+      "section_anchor": ""
+    },
+    "render": {
+      "required_in_reader": false,
+      "caption_only_allowed": true,
+      "marker": "[ILLUSTRATION:ILL-KANDY-04]"
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "class": "illustration",
+    "id": "ILL-KANDY-05",
+    "status": "vision_validated",
+    "source": {
+      "kind": "field_photo",
+      "asset_ref": "1000033398.jpg",
+      "sha256": "4346b656e473f409d9b51300d8496b071a9ede15a08655b638b6551960d0554c",
+      "captured_at": "2026-08-26",
+      "location": "Sri Maha Bodhi Viharaya (Bahirawakanda), Kandy, Sri Lanka",
+      "creator": "user",
+      "rights": "user_supplied",
+      "binary_status": "external_only",
+      "sha256_status": "verified_at_intake"
+    },
+    "input_refs": [
+      {
+        "type": "field_fragment",
+        "id": "GF-KANDY-ILL-05",
+        "path": "00_method/capture/run24_kandy_buddha_illustration_fragments.json"
+      }
+    ],
+    "depiction": {
+      "subject": "Buddha meditating beneath a tree",
+      "event_or_theme": "awakening/Bodhi symbolism",
+      "evidence_status": "interpretive",
+      "period": "Buddha biography tradition",
+      "notes": "Iconography strongly evokes the enlightenment scene",
+      "textual_layer": "early_discourse"
+    },
+    "vision_review": {
+      "status": "reviewed",
+      "confidence": "medium",
+      "caption_transcription": "",
+      "visual_notes": "Seated Buddha in meditation, halo, tree and flowers.",
+      "uncertainty": "Could be a generic meditation image rather than the exact awakening moment."
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewed_at": null,
+      "notes": ""
+    },
+    "fragment": {
+      "caption": "Le Bouddha en méditation sous l’arbre : l’image condense l’Éveil et le rôle du Bodhi comme marqueur spatial de cet événement.",
+      "what_it_shows": "Meditative stillness after the narrative movement of renunciation.",
+      "why_here": "Useful bridge to Bodhi-tree symbolism and the middle way.",
+      "limits": "Exact episode depends on the missing/uncertain caption."
+    },
+    "placement": {
+      "subsection_ref": "buddha-life-awakening",
+      "relevance_rank": 1,
+      "arc_ref": "A02c_anuradhapura_and_the_mahavihara",
+      "target_status": "proposed_missing",
+      "section_anchor": ""
+    },
+    "render": {
+      "required_in_reader": false,
+      "caption_only_allowed": true,
+      "marker": "[ILLUSTRATION:ILL-KANDY-05]"
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "class": "illustration",
+    "id": "ILL-KANDY-06",
+    "status": "vision_validated",
+    "source": {
+      "kind": "field_photo",
+      "asset_ref": "1000033399.jpg",
+      "sha256": "ef9da8ecb976b972eee58727105879e9cef8af67a71a00a1948ed120d6fd04ea",
+      "captured_at": "2026-08-26",
+      "location": "Sri Maha Bodhi Viharaya (Bahirawakanda), Kandy, Sri Lanka",
+      "creator": "user",
+      "rights": "user_supplied",
+      "binary_status": "external_only",
+      "sha256_status": "verified_at_intake"
+    },
+    "input_refs": [
+      {
+        "type": "field_fragment",
+        "id": "GF-KANDY-ILL-06",
+        "path": "00_method/capture/run24_kandy_buddha_illustration_fragments.json"
+      }
+    ],
+    "depiction": {
+      "subject": "Forest ascetic scene",
+      "event_or_theme": "unresolved biographical episode",
+      "evidence_status": "interpretive",
+      "period": "Buddha biography tradition",
+      "notes": "Needs full caption",
+      "textual_layer": "unresolved"
+    },
+    "vision_review": {
+      "status": "reviewed",
+      "confidence": "low",
+      "caption_transcription": "",
+      "visual_notes": "Ascetic/elder with younger figures in forest, partly hidden by stairs.",
+      "uncertainty": "Do not identify episode until caption or sequence is confirmed."
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewed_at": null,
+      "notes": ""
+    },
+    "fragment": {
+      "caption": "Scène ascétique de la biographie du Bouddha, laissée volontairement non identifiée faute de légende lisible.",
+      "what_it_shows": "A reminder that visual identification must remain uncertainty-aware.",
+      "why_here": "Can support a methods/field-reading note rather than narrative proof.",
+      "limits": "Episode unresolved."
+    },
+    "placement": {
+      "subsection_ref": "buddha-life-ascetic-search",
+      "relevance_rank": 5,
+      "arc_ref": "A02c_anuradhapura_and_the_mahavihara",
+      "target_status": "proposed_missing",
+      "section_anchor": ""
+    },
+    "render": {
+      "required_in_reader": false,
+      "caption_only_allowed": true,
+      "marker": "[ILLUSTRATION:ILL-KANDY-06]"
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "class": "illustration",
+    "id": "ILL-KANDY-07",
+    "status": "vision_validated",
+    "source": {
+      "kind": "field_photo",
+      "asset_ref": "1000033400.jpg",
+      "sha256": "3f592f88619940fa308466c9626d2e9d99650757dd195bf082c9aa8e3f62c7f6",
+      "captured_at": "2026-08-26",
+      "location": "Sri Maha Bodhi Viharaya (Bahirawakanda), Kandy, Sri Lanka",
+      "creator": "user",
+      "rights": "user_supplied",
+      "binary_status": "external_only",
+      "sha256_status": "verified_at_intake"
+    },
+    "input_refs": [
+      {
+        "type": "field_fragment",
+        "id": "GF-KANDY-ILL-07",
+        "path": "00_method/capture/run24_kandy_buddha_illustration_fragments.json"
+      }
+    ],
+    "depiction": {
+      "subject": "Buddhist narrative scene with robed figure, woman and kneeling elder",
+      "event_or_theme": "unresolved",
+      "evidence_status": "interpretive",
+      "period": "Buddha biography tradition",
+      "notes": "Needs caption/sequence",
+      "textual_layer": "unresolved"
+    },
+    "vision_review": {
+      "status": "reviewed",
+      "confidence": "low",
+      "caption_transcription": "",
+      "visual_notes": "Three principal figures in forest/settlement setting.",
+      "uncertainty": "Exact episode unresolved."
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewed_at": null,
+      "notes": ""
+    },
+    "fragment": {
+      "caption": "Scène narrative non identifiée avec certitude : elle reste enregistrée comme illustration sans promotion interprétative.",
+      "what_it_shows": "A photographed relief awaiting caption-level identification.",
+      "why_here": "Preserves field evidence for later re-reading.",
+      "limits": "No exact episode asserted."
+    },
+    "placement": {
+      "subsection_ref": "buddha-life-unresolved",
+      "relevance_rank": 9,
+      "arc_ref": "A02c_anuradhapura_and_the_mahavihara",
+      "target_status": "proposed_missing",
+      "section_anchor": ""
+    },
+    "render": {
+      "required_in_reader": false,
+      "caption_only_allowed": true,
+      "marker": "[ILLUSTRATION:ILL-KANDY-07]"
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "class": "illustration",
+    "id": "ILL-KANDY-08",
+    "status": "vision_validated",
+    "source": {
+      "kind": "field_photo",
+      "asset_ref": "1000033401.jpg",
+      "sha256": "037a597f531cc24ba1f2082fb936261645fe4e1fb55a0209547a0027c1aa47e8",
+      "captured_at": "2026-08-26",
+      "location": "Sri Maha Bodhi Viharaya (Bahirawakanda), Kandy, Sri Lanka",
+      "creator": "user",
+      "rights": "user_supplied",
+      "binary_status": "external_only",
+      "sha256_status": "verified_at_intake"
+    },
+    "input_refs": [
+      {
+        "type": "field_fragment",
+        "id": "GF-KANDY-ILL-08",
+        "path": "00_method/capture/run24_kandy_buddha_illustration_fragments.json"
+      }
+    ],
+    "depiction": {
+      "subject": "Nalagiri elephant episode",
+      "event_or_theme": "taming violence through mettā",
+      "evidence_status": "interpretive",
+      "period": "Buddhist narrative tradition",
+      "notes": "Traditional identification",
+      "textual_layer": "canonical_vinaya"
+    },
+    "vision_review": {
+      "status": "reviewed",
+      "confidence": "medium",
+      "caption_transcription": "",
+      "visual_notes": "Large elephant confronting/felling figures.",
+      "uncertainty": "Temple caption not visible in photo."
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewed_at": null,
+      "notes": ""
+    },
+    "fragment": {
+      "caption": "L’épisode traditionnel de l’éléphant Nālāgiri : la puissance menaçante est neutralisée non par la force mais par la maîtrise et la bienveillance du Bouddha.",
+      "what_it_shows": "A miracle/ethical teaching scene after awakening.",
+      "why_here": "Shows that the cycle is not limited to birth–awakening; it continues through exemplary teaching episodes.",
+      "limits": "Iconographic identification should be confirmed against the local caption."
+    },
+    "placement": {
+      "subsection_ref": "buddha-life-teaching-miracles",
+      "relevance_rank": 3,
+      "arc_ref": "A02c_anuradhapura_and_the_mahavihara",
+      "target_status": "proposed_missing",
+      "section_anchor": ""
+    },
+    "render": {
+      "required_in_reader": false,
+      "caption_only_allowed": true,
+      "marker": "[ILLUSTRATION:ILL-KANDY-08]"
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "class": "illustration",
+    "id": "ILL-KANDY-09",
+    "status": "vision_validated",
+    "source": {
+      "kind": "field_photo",
+      "asset_ref": "1000033405.jpg",
+      "sha256": "040ac7df5b4542d2da0b6fccce4cb07000ff8c59be4a82a1e637921a0e4ca3b3",
+      "captured_at": "2026-08-26",
+      "location": "Sri Maha Bodhi Viharaya (Bahirawakanda), Kandy, Sri Lanka",
+      "creator": "user",
+      "rights": "user_supplied",
+      "binary_status": "external_only",
+      "sha256_status": "verified_at_intake"
+    },
+    "input_refs": [
+      {
+        "type": "field_fragment",
+        "id": "GF-KANDY-ILL-09",
+        "path": "00_method/capture/run24_kandy_buddha_illustration_fragments.json"
+      }
+    ],
+    "depiction": {
+      "subject": "First visit of Buddha to Lanka at Mahiyangana",
+      "event_or_theme": "subduing the yakkhas",
+      "evidence_status": "chronicle_tradition",
+      "period": "Sri Lankan sacred-history tradition",
+      "notes": "Caption explicitly frames a Lanka visit",
+      "textual_layer": "chronicle"
+    },
+    "vision_review": {
+      "status": "reviewed",
+      "confidence": "high",
+      "caption_transcription": "බුදුන්වහන්සේගේ ප්‍රථම ලංකා ගමනය හා යක්ෂයින් දමනය. මහියංගනයේදී",
+      "visual_notes": "Meditating Buddha surrounded by terrified yakkha/demonic figures and flames.",
+      "uncertainty": "Chronicle tradition is not independent evidence that the historical Buddha visited Sri Lanka."
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewed_at": null,
+      "notes": ""
+    },
+    "fragment": {
+      "caption": "Mahiyangana : la tradition sri-lankaise représente la première venue du Bouddha dans l’île et la soumission des yakkhas.",
+      "what_it_shows": "Sacred geography being attached directly to the Buddha's lifetime.",
+      "why_here": "Critical transition from pan-Buddhist biography to the specifically Sri Lankan chronicle story.",
+      "limits": "State explicitly that this is Mahāvaṃsa/temple tradition, not established historical itinerary."
+    },
+    "placement": {
+      "subsection_ref": "sri-lanka-sacred-geography-buddha-visits",
+      "relevance_rank": 1,
+      "arc_ref": "A02c_anuradhapura_and_the_mahavihara",
+      "target_status": "proposed_missing",
+      "section_anchor": ""
+    },
+    "render": {
+      "required_in_reader": false,
+      "caption_only_allowed": true,
+      "marker": "[ILLUSTRATION:ILL-KANDY-09]"
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "class": "illustration",
+    "id": "ILL-KANDY-10",
+    "status": "vision_validated",
+    "source": {
+      "kind": "field_photo",
+      "asset_ref": "1000033403.jpg",
+      "sha256": "5663d81a1be9918ecc2d9eed79ca3cd0871dd72298ee07d45ec284c8823925b2",
+      "captured_at": "2026-08-26",
+      "location": "Sri Maha Bodhi Viharaya (Bahirawakanda), Kandy, Sri Lanka",
+      "creator": "user",
+      "rights": "user_supplied",
+      "binary_status": "external_only",
+      "sha256_status": "verified_at_intake"
+    },
+    "input_refs": [
+      {
+        "type": "field_fragment",
+        "id": "GF-KANDY-ILL-10",
+        "path": "00_method/capture/run24_kandy_buddha_illustration_fragments.json"
+      }
+    ],
+    "depiction": {
+      "subject": "Second visit of Buddha to Lanka at Nagadipa",
+      "event_or_theme": "pacification of Culodara and Mahodara",
+      "evidence_status": "chronicle_tradition",
+      "period": "Sri Lankan sacred-history tradition",
+      "notes": "Caption explicitly identifies second Lanka visit",
+      "textual_layer": "chronicle"
+    },
+    "vision_review": {
+      "status": "reviewed",
+      "confidence": "high",
+      "caption_transcription": "බුදුන්වහන්සේගේ දෙවන ලංකාගමනය. චූලෝදර, මහෝදර දමනය.",
+      "visual_notes": "Buddha enthroned/teaching amid naga rulers and attendants.",
+      "uncertainty": "Chronicle tradition is not independent evidence for a historical visit."
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewed_at": null,
+      "notes": ""
+    },
+    "fragment": {
+      "caption": "Nāgadīpa : la tradition sri-lankaise représente la deuxième venue du Bouddha, venu empêcher le conflit des nāga Cūlodara et Mahodara.",
+      "what_it_shows": "The Buddha as pacifier and founder of a sacred island geography.",
+      "why_here": "Pairs with Mahiyangana to show how the Sri Lankan cycle extends the Buddha biography onto the island.",
+      "limits": "Chronicle/temple tradition; distinguish sacred memory from independently established history."
+    },
+    "placement": {
+      "subsection_ref": "sri-lanka-sacred-geography-buddha-visits",
+      "relevance_rank": 2,
+      "arc_ref": "A02c_anuradhapura_and_the_mahavihara",
+      "target_status": "proposed_missing",
+      "section_anchor": ""
+    },
+    "render": {
+      "required_in_reader": false,
+      "caption_only_allowed": true,
+      "marker": "[ILLUSTRATION:ILL-KANDY-10]"
+    }
+  }
+]

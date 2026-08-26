@@ -261,6 +261,18 @@
         "examples/sri_lanka_pre_1948/09_output/Sri_Lanka_Fresque_historico_geographique_vol_retour_v3.docx"
       ],
       "status": "verified"
+    },
+    {
+      "skill": "curating-historical-illustrations",
+      "reason": "Register and validate reader-facing illustrations without promoting images into evidence.",
+      "inputs": [
+        "templates/illustration.json"
+      ],
+      "outputs": [
+        "skills/curating-historical-illustrations/SKILL.md",
+        "scripts/illustration_contract.py"
+      ],
+      "status": "verified"
     }
   ],
   "skipped_skills": [],

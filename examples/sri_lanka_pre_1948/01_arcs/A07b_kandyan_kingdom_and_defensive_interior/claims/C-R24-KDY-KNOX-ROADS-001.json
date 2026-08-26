@@ -1,0 +1,13 @@
+{
+  "id": "C-R24-KDY-KNOX-ROADS-001",
+  "type": "source_fact",
+  "claim": "Robert Knox's 1681 account describes the Kandyan highland kingdom as strongly fortified by nature and its routes as numerous but so narrow that travellers went one abreast.",
+  "confidence": "B",
+  "zoom": "Z2",
+  "causal_role": "constraint",
+  "arc": "A07b_kandyan_kingdom_and_defensive_interior",
+  "hil": "HIL-06_security-coercion",
+  "source_ids": ["KNOX-CEYLON-1681-ROADS"],
+  "bounded_by": "This is contemporary observation of terrain and route form, not an explicit state order to suppress road or bridge development.",
+  "notes": "Partially answers Q-KANDY-002 while preserving the formal-doctrine question as open."
+}

@@ -6,6 +6,7 @@ from pathlib import Path
 from side_story_contract import load_side_stories
 from arc_recap_contract import load_arc_recaps
 from map_asset_contract import load_map_assets
+from illustration_contract import load_illustrations
 from reader_profile_contract import load_reader_profile
 
 def build_plan(project:Path)->dict:
@@ -24,7 +25,14 @@ def build_plan(project:Path)->dict:
     for m in sorted(approved,key=lambda x:((x.get("placement") or {}).get("relevance_rank",99),x.get("id",""))):
         slot=(m.get("placement") or {}).get("subsection_ref")
         if slot and slot not in used: selected_maps.append(m);used.add(slot)
-    return {"profile_id":profile["id"],"content_temperature":profile["content_temperature"],"story_template":profile["story_template"],"eligible_side_story_ids":[s["id"] for s in stories],"arc_recap_ids":[r["id"] for r in recaps] if profile.get("arc_recap_policy",{}).get("enabled",True) else [],"selected_map_ids":[m["id"] for m in selected_maps],"map_rule":"max one human-approved map per subsection/side-story slot"}
+    illustrations=[x for _,x in load_illustrations(project)]
+    review_queue=sorted((x for x in illustrations if x.get("status") in {"candidate","vision_validated"}),key=lambda x:((x.get("placement") or {}).get("relevance_rank",99),x.get("id","")))
+    selected_illustrations=[];used_illustration_slots=set()
+    for item in sorted((x for x in illustrations if x.get("status")=="reader_eligible"),key=lambda x:((x.get("placement") or {}).get("relevance_rank",99),x.get("id",""))):
+        placement=item.get("placement") or {};slot=placement.get("section_anchor") or placement.get("subsection_ref")
+        if placement.get("target_status")=="resolved" and slot and slot not in used_illustration_slots:
+            selected_illustrations.append(item);used_illustration_slots.add(slot)
+    return {"profile_id":profile["id"],"content_temperature":profile["content_temperature"],"story_template":profile["story_template"],"story_scaffold":"09_output/story_scaffold.json","eligible_side_story_ids":[s["id"] for s in stories],"arc_recap_ids":[r["id"] for r in recaps] if profile.get("arc_recap_policy",{}).get("enabled",True) else [],"selected_map_ids":[m["id"] for m in selected_maps],"map_rule":"max one human-approved map per subsection/side-story slot","selected_illustration_ids":[x["id"] for x in selected_illustrations],"illustration_review_queue_ids":[x["id"] for x in review_queue],"retired_illustration_ids":sorted(x["id"] for x in illustrations if x.get("status")=="retired"),"illustration_rule":"embed only reader_eligible assets with a resolved target; keep candidate, vision_validated or proposed_missing assets in the review queue"}
 def main():
     p=argparse.ArgumentParser();p.add_argument("--project",required=True);p.add_argument("--output");a=p.parse_args();project=Path(a.project);plan=build_plan(project);text=json.dumps(plan,ensure_ascii=False,indent=2)+"\n"
     if a.output:Path(a.output).write_text(text,encoding="utf-8")

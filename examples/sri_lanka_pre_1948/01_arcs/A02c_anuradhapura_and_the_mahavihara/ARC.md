@@ -14,3 +14,7 @@ The 2024 stele is T0 for the 2024 act of commemoration only. No claim about the 
 
 ## Run16 state
 Partial. The chronological duality and institutional evidence are materialized; early Brahmi cave inscriptions and excavation reports remain open research targets.
+
+## Run24 — reliefs de Bahirawakanda et couches textuelles
+
+The modern Kandy relief cycle is kept as a historiographic object, not inserted into the ancient chronology as evidence. MN 26 and MN 123 distinguish early/canonical textual motifs from later biographical staging; the Nālāgiri image remains a medium-confidence iconographic match; the Mahiyangana and Nāgadīpa captions map directly to *Mahāvaṃsa* chapter I and therefore carry `chronicle_tradition`, not historical-itinerary status. Ten images remain in the illustration review queue because their binaries are external, human approval is pending and the current canonical manuscript contains no resolvable Buddha-life subsection.
