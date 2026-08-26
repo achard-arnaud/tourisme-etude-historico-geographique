@@ -33,6 +33,8 @@ jobs:
       - run: python scripts/qa_project.py examples/sri_lanka_post_1948
       - run: python scripts/qa_composition_pipeline.py examples/sri_lanka_pre_1948
       - run: python scripts/qa_composition_pipeline.py examples/sri_lanka_post_1948
+      - run: python scripts/build_heat_map.py --project examples/sri_lanka_pre_1948 --run 25
+      - run: python scripts/reciprocal_coverage_check.py --project examples/sri_lanka_pre_1948 --run 25
       - run: python scripts/materialize_arc_recaps.py --project examples/sri_lanka_pre_1948 --source examples/sri_lanka_pre_1948/09_output/report.md --check
       - run: python scripts/qa_functional_pre1948.py
       - run: python scripts/render_composed_reader.py --project all
@@ -43,6 +45,9 @@ jobs:
           if-no-files-found: error
           retention-days: 30
           path: |
+            docs/RUN25_JOURNAL.md
+            docs/HEAT_MAP_RUN25.md
+            examples/sri_lanka_pre_1948/08_questions/coverage_gaps_run25.json
             examples/sri_lanka_pre_1948/09_output/*.docx
             examples/sri_lanka_pre_1948/09_output/*full*.md
             examples/sri_lanka_pre_1948/09_output/reader_plan.json
