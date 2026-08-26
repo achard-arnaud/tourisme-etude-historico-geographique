@@ -38,7 +38,7 @@ def validate_graph_links(project:Path):
     for p in (project/"03_wiki").rglob("*.md"):
         slug=_frontmatter_slug(p)
         if slug:known.add(slug)
-    known|=set(_json_items(project,"09_output/side_stories/*.json"))|set(_json_items(project,"09_output/arc_recaps/*.json"))
+    known|=set(_json_items(project,"09_output/side_stories/*.json"))|set(_json_items(project,"09_output/arc_recaps/*.json"))|set(_json_items(project,"09_output/illustrations/*.json"))
     for p in graph.glob("edges*.jsonl"):
         for n,line in enumerate(p.read_text(encoding="utf-8").splitlines(),1):
             if not line.strip():continue

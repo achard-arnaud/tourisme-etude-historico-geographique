@@ -1,0 +1,13 @@
+{
+  "id": "C-R24-BUD-RENUNCIATION-TEXT-001",
+  "type": "source_fact",
+  "claim": "MN 26 presents the future Buddha's going-forth against his parents' wishes, his search under teachers and his path to awakening; it anchors the renunciation sequence in an early Buddhist discourse but does not supply the complete later visual staging of a nocturnal departure on Kanthaka with Channa.",
+  "confidence": "A",
+  "zoom": "Z3",
+  "causal_role": "context",
+  "arc": "A02c_anuradhapura_and_the_mahavihara",
+  "hil": "HIL-05_religion-culture-legitimacy",
+  "source_ids": ["SUTTACENTRAL-MN26-SUJATO"],
+  "bounded_by": "Textual attestation and layer distinction only; neither the discourse nor the relief independently verifies a reconstructable historical itinerary.",
+  "notes": "Run24 answer to PR53's pending early-source question. Illustration ILL-KANDY-04 mixes a broadly canonical event with later biographical iconography."
+}

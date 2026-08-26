@@ -1,0 +1,67 @@
+[
+  {
+    "id": "SUTTACENTRAL-MN26-SUJATO",
+    "title": "MN 26 — The Noble Search (Pāsarāsi/Ariyapariyesanā Sutta)",
+    "url": "https://suttacentral.net/mn26/en/sujato",
+    "tier": "T1",
+    "anchor_role": "canonical anchor",
+    "date": "early Buddhist discourse; translation accessed 2026-08-26",
+    "author_or_institution": "Bhikkhu Sujato / SuttaCentral",
+    "scope": "First-person going-forth, teachers, ascetic search and awakening sequence",
+    "claims_supported": ["C-R24-BUD-RENUNCIATION-TEXT-001"],
+    "limitations": "Canonical textual attestation is not eyewitness verification. The passage does not contain every later palace, horse or companion detail used in visual biography.",
+    "provenance": "direct"
+  },
+  {
+    "id": "SUTTACENTRAL-MN123-SUJATO",
+    "title": "MN 123 — Incredible and Amazing (Acchariyaabbhūta Sutta)",
+    "url": "https://suttacentral.net/mn123/en/sujato",
+    "tier": "T1",
+    "anchor_role": "canonical anchor",
+    "date": "Pali canonical discourse; translation accessed 2026-08-26",
+    "author_or_institution": "Bhikkhu Sujato / SuttaCentral",
+    "scope": "Canonical miraculous birth narrative of the bodhisatta",
+    "claims_supported": ["C-R24-BUD-BIRTH-TEXT-001"],
+    "limitations": "The source establishes textual tradition, not the historicity of miraculous details or the date of the modern relief.",
+    "provenance": "direct"
+  },
+  {
+    "id": "SUTTACENTRAL-JA533-NALAGIRI",
+    "title": "Ja 533 — Cūḷahaṃsa Jātaka, Nālāgiri frame narrative",
+    "url": "https://suttacentral.net/ja533/en/francis",
+    "tier": "T1",
+    "anchor_role": "corroborating bridge",
+    "date": "Pali Jātaka transmission; translation accessed 2026-08-26",
+    "author_or_institution": "H. T. Francis translation / SuttaCentral",
+    "scope": "Pali narrative attestation of the Nālāgiri elephant episode",
+    "claims_supported": ["C-R24-BUD-NALAGIRI-TEXT-001"],
+    "limitations": "A translated narrative witness supports identification of the story, not the historicity of every episode or a unique match to a relief whose local caption is unreadable.",
+    "provenance": "direct"
+  },
+  {
+    "id": "MAHAVAMSA-GEIGER-1912-CH1",
+    "title": "The Mahāvaṃsa or Great Chronicle of Ceylon — Chapter I",
+    "url": "https://archive.org/download/mahavamsagreatch00geigrich/mahavamsagreatch00geigrich_bw.pdf",
+    "tier": "T1",
+    "anchor_role": "canonical anchor",
+    "date": "chronicle composed c. fifth–sixth century CE; Geiger translation 1912",
+    "author_or_institution": "Wilhelm Geiger translation / Pali Text Society tradition",
+    "scope": "Chronicle narrative of the Buddha's visits to Mahiyangana and Nāgadīpa and the yakkha/nāga episodes",
+    "claims_supported": ["C-R24-BUD-LANKA-VISITS-001"],
+    "limitations": "Primary for what the chronicle says, not independent corroboration that the historical Buddha travelled to Sri Lanka.",
+    "provenance": "direct"
+  },
+  {
+    "id": "KNOX-CEYLON-1681-ROADS",
+    "title": "An Historical Relation of the Island Ceylon — natural strength and narrow ways",
+    "url": "https://www.gutenberg.org/files/14346/14346-h/14346-h.htm",
+    "tier": "T1",
+    "anchor_role": "canonical anchor",
+    "date": "1681",
+    "author_or_institution": "Robert Knox / public-domain Project Gutenberg edition",
+    "scope": "Contemporary outsider description of the highland kingdom's natural strength and narrow routes",
+    "claims_supported": ["C-R24-KDY-KNOX-ROADS-001"],
+    "limitations": "Knox observes topography and route width. He does not explicitly document a formal Kandyan state policy of deliberate non-road-building.",
+    "provenance": "direct"
+  }
+]

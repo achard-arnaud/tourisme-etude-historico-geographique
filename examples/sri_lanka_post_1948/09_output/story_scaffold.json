@@ -1,0 +1,402 @@
+{
+  "schema_version": "1.0",
+  "class": "story_scaffold",
+  "project": "sri_lanka_post_1948",
+  "strategy": "global topology -> arc-local retrieval packs -> cross-arc stitch -> illustration pass -> coverage reconciliation",
+  "token_policy": {
+    "global_pass": "IDs, counts and topology only",
+    "draft_pass": "hydrate only one arc plus adjacent bridges",
+    "final_pass": "hydrate unresolved coverage items, not the full corpus"
+  },
+  "coverage": {
+    "claims": 98,
+    "bridges": 24,
+    "graph_edges": 11,
+    "side_stories": 23,
+    "arc_recaps": 0,
+    "maps": 0,
+    "illustrations": 0,
+    "open_questions": 6
+  },
+  "diagnostics": {
+    "graph_components": [
+      [
+        "C-R17-KDY-FUNC-001",
+        "C-R21-KDY-PERAHERA-001"
+      ],
+      [
+        "bahasa-indonesia",
+        "shared-national-language-gateway"
+      ],
+      [
+        "broader-modern-opportunity",
+        "tamil-nadu-social-justice-package"
+      ],
+      [
+        "civil-war",
+        "northern-territorial-scarring"
+      ],
+      [
+        "civil-war-and-displacement",
+        "sri-lankan-tamil-diaspora"
+      ],
+      [
+        "external-ethnonational-pressure",
+        "public-caste-cleavage"
+      ],
+      [
+        "indonesia-language-design",
+        "sri-lanka-language-access-regime"
+      ],
+      [
+        "jaffna",
+        "tamil-nadu"
+      ],
+      [
+        "jaffna-colonial-education",
+        "jaffna-professional-mobility"
+      ],
+      [
+        "maviddapuram-1968",
+        "public-caste-conflict"
+      ],
+      [
+        "sinhala-only",
+        "state-employment-and-administration"
+      ]
+    ],
+    "graph_orphan_claim_ids": [
+      "C-COMP-ID-001",
+      "C-COMP-ID-LANG-002",
+      "C-COMP-SCALE-001",
+      "C-COMP-TN-001",
+      "C-COMP-TN-002",
+      "C-COMP-TN-DEV-001",
+      "C-COMP-TN-DEV-002",
+      "C-POST-001",
+      "C-POST-002",
+      "C-POST-003",
+      "C-POST-CASTE-001",
+      "C-POST-CASTE-002",
+      "C-POST-CASTE-003",
+      "C-POST-CASTE-004",
+      "C-POST-DEV-001",
+      "C-POST-EDU-001",
+      "C-POST-EDU-002",
+      "C-POST-EDU-003",
+      "C-POST-HC-EXTERNAL-002",
+      "C-POST-HER-003",
+      "C-POST-INTEGRATION-001",
+      "C-POST-INTEGRATION-002",
+      "C-POST-LANG-001",
+      "C-POST-LANG-002",
+      "C-POST-LANG-003",
+      "C-POST-MARRIAGE-001",
+      "C-POST-NAM-001",
+      "C-POST-NAM-002",
+      "C-POST-STATE-REP-001",
+      "C-POST-WAR-TERRITORY-001",
+      "C-R13-PARK-004",
+      "C-R13-PARK-005",
+      "C-R13-PARK-006",
+      "C-R13-PARK-007",
+      "C-R15-PLASTIC-001",
+      "C-R15-PLASTIC-002",
+      "C-R15-PLASTIC-003",
+      "C-R15-PLASTIC-004",
+      "C-R15-PLASTIC-005",
+      "C-R15-PLASTIC-006",
+      "C-R15-TOUR-001",
+      "C-R15-TOUR-002",
+      "C-R15-TOUR-003",
+      "C-R15-TOUR-004",
+      "C-R15-TOUR-005",
+      "C-R15-TOUR-006",
+      "C-R15-TOUR-007",
+      "C-R15-TOUR-008",
+      "C-R15-TSU-001",
+      "C-R15-TSU-002",
+      "C-R15-TSU-003",
+      "C-R15-TSU-004",
+      "C-R15-TSU-005",
+      "C-R15-TSU-006",
+      "C-R15-TSU-007",
+      "C-R16-HOR-ECO-001",
+      "C-R16-HOR-UNESCO-001",
+      "C-R16-HOR-WATERSHED-001",
+      "C-R16-MIL-CHECKPOINT-001",
+      "C-R16-MIL-COMMERCIAL-001",
+      "C-R16-MIL-EFFECT-001",
+      "C-R16-MIL-HEARTLAND-COMP-001",
+      "C-R16-MIL-INTENT-001",
+      "C-R16-MIL-RELEASE-001",
+      "C-R17-KDY-COMP-PILGRIM-001",
+      "C-R17-KDY-CONSTRAINT-001",
+      "C-R17-KDY-ECON-FALSE-001",
+      "C-R17-KDY-MET-001",
+      "C-R17-KDY-MET-002",
+      "C-R17-KDY-MET-003",
+      "C-R17-KDY-MET-004",
+      "C-R17-KDY-MET-005",
+      "C-R17-KDY-MET-006",
+      "C-R17-KDY-MET-007",
+      "C-R17-KDY-MET-008",
+      "C-R17-KDY-SACRED-001",
+      "C-R18-2021-EFFECT-001",
+      "C-R18-2021-INTENT-001",
+      "C-R18-2021-UPMARKET-FALSE-001",
+      "C-R18-CITIZENSHIP-001",
+      "C-R18-ESTATE-CATEGORY-001",
+      "C-R18-EXPORT-EARNINGS-2024",
+      "C-R18-GI-PENDING-001",
+      "C-R18-LINEROOMS-2024",
+      "C-R18-LION-MARK-001",
+      "C-R18-LIPTON-OWNERSHIP-2022",
+      "C-R18-M1-001",
+      "C-R18-M2-001",
+      "C-R18-M3-001",
+      "C-R18-REPLANT-2022",
+      "C-R18-SMALLHOLDER-SHARE-001",
+      "C-R18-UNION-EXISTS-001",
+      "C-R18-WAGE-2026-EFFECT",
+      "C-R18-WAGE-2026-FACT",
+      "C-R18-WAGE-2026-INFERENCE",
+      "C-R20-PLASTIC-ENFORCEMENT-001"
+    ],
+    "illustration_missing_target_ids": []
+  },
+  "arcs": [
+    {
+      "arc": "A14_coastal_environmental_governance",
+      "evidence_status": "researched",
+      "spine_claim_ids": [
+        "C-R15-PLASTIC-002",
+        "C-R15-PLASTIC-003",
+        "C-R15-PLASTIC-005",
+        "C-R20-PLASTIC-ENFORCEMENT-001",
+        "C-R15-PLASTIC-004",
+        "C-R15-PLASTIC-001",
+        "C-R15-PLASTIC-006"
+      ],
+      "claim_count": 7,
+      "causal_roles": {
+        "context": 2,
+        "driver": 2,
+        "mechanism": 2,
+        "outcome": 1
+      },
+      "bridge_ids": [
+        "B-R15-PLASTIC-SINGLE-CAUSE-001"
+      ],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [],
+      "arc_recap_ids": [],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    },
+    {
+      "arc": "A15_tsunami_2004_and_reconstruction",
+      "evidence_status": "researched",
+      "spine_claim_ids": [
+        "C-R15-TSU-003",
+        "C-R15-TSU-005",
+        "C-R15-TSU-002",
+        "C-R15-TSU-006",
+        "C-R15-TSU-004",
+        "C-R15-TSU-001"
+      ],
+      "claim_count": 7,
+      "causal_roles": {
+        "constraint": 1,
+        "context": 1,
+        "mechanism": 2,
+        "none": 1,
+        "outcome": 2
+      },
+      "bridge_ids": [
+        "B-R15-TSU-BUFFER-001",
+        "B-R15-TSU-PEACE-001"
+      ],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [],
+      "arc_recap_ids": [],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    },
+    {
+      "arc": "A16_tourism_shock_and_fiscal_collapse",
+      "evidence_status": "researched",
+      "spine_claim_ids": [
+        "C-R15-TOUR-002",
+        "C-R15-TOUR-003",
+        "C-R15-TOUR-004",
+        "C-R15-TOUR-005",
+        "C-R15-TOUR-006",
+        "C-R15-TOUR-007",
+        "C-R15-TOUR-008",
+        "C-R15-TOUR-001"
+      ],
+      "claim_count": 8,
+      "causal_roles": {
+        "amplifier": 2,
+        "constraint": 1,
+        "context": 1,
+        "driver": 3,
+        "outcome": 1
+      },
+      "bridge_ids": [
+        "B-R15-TOUR-COVID-DEFAULT-001"
+      ],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [],
+      "arc_recap_ids": [],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": [
+        "Q-SHOCK-001"
+      ]
+    },
+    {
+      "arc": "A17_highland_conservation",
+      "evidence_status": "partial",
+      "spine_claim_ids": [
+        "C-R16-HOR-ECO-001",
+        "C-R16-HOR-WATERSHED-001",
+        "C-R16-HOR-UNESCO-001"
+      ],
+      "claim_count": 3,
+      "causal_roles": {
+        "context": 1,
+        "driver": 1,
+        "mechanism": 1
+      },
+      "bridge_ids": [],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [],
+      "arc_recap_ids": [],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    },
+    {
+      "arc": "A17b_plantation_economy_and_value_capture",
+      "evidence_status": "partial",
+      "spine_claim_ids": [
+        "C-R18-M1-001",
+        "C-R18-M2-001",
+        "C-R18-2021-EFFECT-001",
+        "C-R18-EXPORT-EARNINGS-2024",
+        "C-R18-GI-PENDING-001",
+        "C-R18-LIPTON-OWNERSHIP-2022",
+        "C-R18-2021-INTENT-001",
+        "C-R18-LION-MARK-001",
+        "C-R18-REPLANT-2022",
+        "C-R18-SMALLHOLDER-SHARE-001"
+      ],
+      "claim_count": 12,
+      "causal_roles": {
+        "context": 7,
+        "mechanism": 2,
+        "none": 2,
+        "outcome": 1
+      },
+      "bridge_ids": [
+        "B-R18-2021-UPMARKET-001",
+        "B-R18-GI-VALUE-CAPTURE-001"
+      ],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [
+        "SS-R18-2021-FALSE-001",
+        "SS-R18-BRAND-GI-METHOD-001",
+        "SS-R18-DARJEELING-COMPARATOR-001",
+        "SS-R18-GRADING-METHOD-001",
+        "SS-R18-LIPTON-PORTRAIT-001",
+        "SS-R18-TEA-METHOD-CHINA-001",
+        "SS-R18-VALUE-COMPARATOR-001"
+      ],
+      "arc_recap_ids": [],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": [
+        "Q-VALUE-M1",
+        "Q-VALUE-M2",
+        "Q-VALUE-M3"
+      ]
+    },
+    {
+      "arc": "A18_malaiyaha_tamils_status_and_wage",
+      "evidence_status": "partial",
+      "spine_claim_ids": [
+        "C-R18-WAGE-2026-INFERENCE",
+        "C-R18-WAGE-2026-EFFECT",
+        "C-R18-LINEROOMS-2024",
+        "C-R18-WAGE-2026-FACT",
+        "C-R18-CITIZENSHIP-001",
+        "C-R18-ESTATE-CATEGORY-001"
+      ],
+      "claim_count": 7,
+      "causal_roles": {
+        "constraint": 1,
+        "context": 4,
+        "mechanism": 1,
+        "none": 1
+      },
+      "bridge_ids": [
+        "B-R18-WAGE-SUBSIDY-PRODUCTIVITY-001"
+      ],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [
+        "SS-R18-LINEROOMS-DETOUR-001",
+        "SS-R18-WAGE-CALLBACK-001"
+      ],
+      "arc_recap_ids": [],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    },
+    {
+      "arc": "A19_kandy_second_city_paradox",
+      "evidence_status": "partial",
+      "spine_claim_ids": [
+        "C-R17-KDY-SACRED-001",
+        "C-R17-KDY-FUNC-001",
+        "C-R17-KDY-CONSTRAINT-001",
+        "C-R17-KDY-MET-005",
+        "C-R17-KDY-MET-001",
+        "C-R17-KDY-MET-003",
+        "C-R17-KDY-MET-004",
+        "C-R17-KDY-MET-006",
+        "C-R21-KDY-PERAHERA-001",
+        "C-R17-KDY-COMP-PILGRIM-001",
+        "C-R17-KDY-MET-002",
+        "C-R17-KDY-MET-007",
+        "C-R17-KDY-MET-008"
+      ],
+      "claim_count": 14,
+      "causal_roles": {
+        "constraint": 2,
+        "context": 10,
+        "mechanism": 2
+      },
+      "bridge_ids": [
+        "B-R17-KDY-SACRED-CITY-COMPARATOR-001",
+        "B-R21-KDY-PERAHERA-FUNCTIONAL-FLOW-001"
+      ],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [
+        "SS-R17-KDY-COMPARATOR-SACRED-001",
+        "SS-R17-KDY-FALSE-ECON-001",
+        "SS-R17-KDY-FALSE-LEAD-SUCCESS-001",
+        "SS-R17-KDY-METHOD-SECOND-CITY-001"
+      ],
+      "arc_recap_ids": [],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": [
+        "Q-KANDY-001"
+      ]
+    }
+  ]
+}

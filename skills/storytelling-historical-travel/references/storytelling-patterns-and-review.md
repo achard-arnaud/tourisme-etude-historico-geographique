@@ -32,3 +32,27 @@ Reference: [Zzzeen2552/storytelling-mastery-skill](https://github.com/Zzzeen2552
 - **Continuity:** promise → questions → callbacks → payoff or unresolved label.
 - **Voice:** educated, analytical guide speaking to one reader.
 - **Safety:** no invented dialogue, thought, motive, sensory detail, stakes or chronology.
+
+## Run24 architecture review — volume and completeness
+
+Purely iterative arc-by-arc drafting is no longer sufficient at current corpus volume. It has four predictable blind spots: a claim can be valid but absent from Graph Light; a bridge can be discovered after its source arc was drafted; candidate composition records can remain outside the active prompt; and an image can name a subsection that does not exist in the canonical manuscript.
+
+The required strategy is:
+
+1. **Global topology pass, low-token** — build `story_scaffold.json` from every claim, bridge, Graph Light edge, side story, recap, question, map and illustration. Consume IDs, counts, roles and status only; do not hydrate full prose.
+2. **Human visual check** — inspect `story_scaffold.mmd` for clusters, false links, bridge bottlenecks and unexpected isolation. The Mermaid file is a review surface, not an LLM retrieval payload.
+3. **Arc-local drafting** — hydrate one arc's spine claims, adjacent bridges, required/candidate composition records and bounded questions. Draft the causal movement, not a bag of facts.
+4. **Cross-arc stitch** — resolve promises, callbacks, chronology and bridge hand-offs after local drafts exist.
+5. **Illustration pass** — embed only approved/resolved assets; preserve all other assets in the review queue.
+6. **Coverage reconciliation** — every scaffold item must be rendered, explicitly deferred, bounded, retired or left as an open question. Silence is not a state.
+
+Graph Light is a selective relationship layer, not the inventory of truth. The scaffold therefore starts from the complete claim registry and reports graph-orphan claims instead of dropping them. This is essential: a sparse graph may be correct, while a story scaffold built only from graph-connected nodes would be incomplete.
+
+### Token economics
+
+- Global pass: IDs and topology only.
+- Draft pass: one arc plus immediate bridge neighbourhood.
+- Stitch pass: bridge/callback summaries, not all underlying sources.
+- Final pass: hydrate only unresolved coverage debt.
+
+This replaces repeated whole-corpus rereads with deterministic retrieval packs. The gain grows with corpus size while preserving an auditable global view.

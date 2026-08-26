@@ -98,5 +98,58 @@
     ],
     "recovery_action": null,
     "notes": "Originally proposed as Run20; admitted after Run21 through Run22. Video content remains quarantined because no timestamped transcript was recovered."
+  },
+  {
+    "id": "I-R18-KANDY-DEFENCE",
+    "source_name": "INTAKE_kandy_invasion_defence_field_observation.md",
+    "intake_kind": "field_observation",
+    "first_run": "RUN18",
+    "manifest": null,
+    "preservation_status": "archived",
+    "repo_path": "docs/intakes/INTAKE_kandy_invasion_defence_field_observation.md",
+    "outputs": [
+      "examples/sri_lanka_pre_1948/01_arcs/A07b_kandyan_kingdom_and_defensive_interior/ARC.md",
+      "examples/sri_lanka_pre_1948/01_arcs/A07b_kandyan_kingdom_and_defensive_interior/claims/C-R18-KDY-DEF-001.json",
+      "examples/sri_lanka_pre_1948/01_arcs/A07b_kandyan_kingdom_and_defensive_interior/claims/C-R18-KDY-DEF-002.json",
+      "examples/sri_lanka_pre_1948/01_arcs/A07b_kandyan_kingdom_and_defensive_interior/claims/C-R18-KDY-DEF-003.json",
+      "examples/sri_lanka_pre_1948/09_output/side_stories/SS-R18-KANDY-DEFENCE-001.json"
+    ],
+    "recovery_action": null,
+    "notes": "Field observation archived after the initial research pass but before promotion to dev/main. Intake remains a research trigger, not evidence."
+  },
+  {
+    "id": "I-R23-EHELEPOLA-WAX",
+    "source_name": "INTAKE_ehelepola_wax_museum_kandy_personages.md",
+    "intake_kind": "museum_navigation_intake",
+    "first_run": "RUN23",
+    "manifest": "docs/RUN23_EHELEPOLA_WAX_MANIFEST.json",
+    "preservation_status": "archived",
+    "repo_path": "docs/intakes/INTAKE_ehelepola_wax_museum_kandy_personages.md",
+    "outputs": [
+      "examples/sri_lanka_pre_1948/05_sources/source_register_run23_ehelepola_wax.json",
+      "examples/sri_lanka_pre_1948/01_arcs/A07b_kandyan_kingdom_and_defensive_interior/claims/C-R23-KDY-DOYLY-KNOWLEDGE-001.json",
+      "examples/sri_lanka_pre_1948/06_bridges/B-R23-KDY-DOYLY-1815-001.json",
+      "examples/sri_lanka_pre_1948/09_output/side_stories/SS-R23-KDY-SIAM-DEZOOM-001.json"
+    ],
+    "recovery_action": null,
+    "notes": "The supplied sitemap is preserved as a bounded intake. The JavaScript museum site is treated as T3 navigation/current curatorial memory; historical promotion requires independent academic or archival anchors."
+  },
+  {
+    "id": "I-R24-KANDY-ILLUSTRATIONS",
+    "source_name": "INTAKE_kandy_buddha_life_illustrations.md",
+    "intake_kind": "field_illustration_intake",
+    "first_run": "RUN24",
+    "manifest": "docs/RUN24_ILLUSTRATION_STORY_SCAFFOLD_MANIFEST.json",
+    "preservation_status": "archived",
+    "repo_path": "docs/intakes/INTAKE_kandy_buddha_life_illustrations.md",
+    "outputs": [
+      "examples/sri_lanka_pre_1948/00_method/capture/run24_kandy_buddha_illustration_fragments.json",
+      "examples/sri_lanka_pre_1948/09_output/illustrations/ILL-KANDY-BUDDHA-LIFE-2026-08.json",
+      "examples/sri_lanka_pre_1948/05_sources/source_register_run24_illustration_questions.json",
+      "examples/sri_lanka_pre_1948/09_output/story_scaffold.json",
+      "examples/sri_lanka_pre_1948/09_output/story_scaffold.mmd"
+    ],
+    "recovery_action": null,
+    "notes": "Ten field photos are preserved as external-binary illustration metadata. Four textual questions are qualified; all assets remain non-renderable pending human review and real manuscript targets."
   }
 ]

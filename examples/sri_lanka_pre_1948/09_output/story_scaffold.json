@@ -1,0 +1,594 @@
+{
+  "schema_version": "1.0",
+  "class": "story_scaffold",
+  "project": "sri_lanka_pre_1948",
+  "strategy": "global topology -> arc-local retrieval packs -> cross-arc stitch -> illustration pass -> coverage reconciliation",
+  "token_policy": {
+    "global_pass": "IDs, counts and topology only",
+    "draft_pass": "hydrate only one arc plus adjacent bridges",
+    "final_pass": "hydrate unresolved coverage items, not the full corpus"
+  },
+  "coverage": {
+    "claims": 72,
+    "bridges": 10,
+    "graph_edges": 16,
+    "side_stories": 47,
+    "arc_recaps": 6,
+    "maps": 0,
+    "illustrations": 10,
+    "open_questions": 10
+  },
+  "diagnostics": {
+    "graph_components": [
+      [
+        "C-R17-KDY-1815-001",
+        "C-R21-KDY-PERAHERA-TRADITION-001",
+        "C-R23-KDY-DOYLY-KNOWLEDGE-001"
+      ],
+      [
+        "C-R18-KDY-DEF-001",
+        "C-R18-KDY-DEF-002",
+        "C-R24-KDY-KNOX-ROADS-001"
+      ],
+      [
+        "C-R23-KDY-COSMOPOLITAN-001",
+        "C-R23-KDY-DONA-CATHERINA-001",
+        "C-R23-KDY-SIAM-ORDINATION-001"
+      ],
+      [
+        "C-R24-BUD-LANKA-VISITS-001",
+        "ILL-KANDY-09",
+        "ILL-KANDY-10"
+      ],
+      [
+        "C-R14-A04-VELAIKKARA-001",
+        "C-R17-KDY-RELIC-001"
+      ],
+      [
+        "C-R24-BUD-BIRTH-TEXT-001",
+        "ILL-KANDY-03"
+      ],
+      [
+        "C-R24-BUD-NALAGIRI-TEXT-001",
+        "ILL-KANDY-08"
+      ],
+      [
+        "C-R24-BUD-RENUNCIATION-TEXT-001",
+        "ILL-KANDY-04"
+      ],
+      [
+        "administrative-legibility",
+        "voc-registers-and-law"
+      ],
+      [
+        "british-administrative-path-dependence",
+        "voc-paper-state"
+      ],
+      [
+        "colonial-classification",
+        "selected-local-status-hierarchies"
+      ],
+      [
+        "jaffna-colonial-interface",
+        "palk-strait-position"
+      ]
+    ],
+    "graph_orphan_claim_ids": [
+      "C-PRE-001",
+      "C-PRE-002",
+      "C-PRE-CASTE-001",
+      "C-PRE-CASTE-002",
+      "C-PRE-CASTE-003",
+      "C-PRE-GEO-001",
+      "C-PRE-GEO-002",
+      "C-PRE-GEO-003",
+      "C-PRE-GEO-004",
+      "C-R13-GLASS-001",
+      "C-R13-GLASS-002",
+      "C-R13-GLASS-003",
+      "C-R13-GLASS-004",
+      "C-R13-NAGA-001",
+      "C-R13-NAGA-002",
+      "C-R13-NAGA-003",
+      "C-R13-NAGA-004",
+      "C-R13-PARK-001",
+      "C-R13-PARK-002",
+      "C-R13-PARK-003",
+      "C-R13-PARK-008",
+      "C-R13-ROME-001",
+      "C-R13-ROME-002",
+      "C-R13-ROME-003",
+      "C-R13-ROME-004",
+      "C-R13-ROME-005",
+      "C-R14-A04-GALPOTA-001",
+      "C-R14-A04-MAGHA-001",
+      "C-R14-A04-VIJAYABAHU-001",
+      "C-R16-ABH-DATE-001",
+      "C-R16-ABH-FIND-001",
+      "C-R16-ABH-UNESCO-001",
+      "C-R16-MIH-ADMIN-001",
+      "C-R16-MIH-COMMEM-001",
+      "C-R16-MIH-MIL-001",
+      "C-R16-MIH-TRAD-001",
+      "C-R17-KDY-ADMIN-001",
+      "C-R17-KDY-LABOUR-001",
+      "C-R17-KDY-LAND-001",
+      "C-R17-KDY-PASSES-001",
+      "C-R17-KDY-PLANTATION-001",
+      "C-R17-KDY-RAIL-001",
+      "C-R17-KDY-REBELLION-001",
+      "C-R17-KDY-ROAD-001",
+      "C-R17-KDY-TERRAIN-001",
+      "C-R18-CINCHONA-001",
+      "C-R18-COFFEE-CAPITAL-001",
+      "C-R18-COFFEE-H1-001",
+      "C-R18-COFFEE-H2-001",
+      "C-R18-COFFEE-H3-001",
+      "C-R18-COFFEE-RUST-001",
+      "C-R18-INFRA-INHERIT-001",
+      "C-R18-KDY-DEF-003",
+      "C-R18-LABOUR-LAW-001",
+      "C-R18-LABOUR-POP-1936",
+      "C-R18-LABOUR-RECRUIT-001",
+      "C-R23-KDY-MUSEUM-MEMORY-001"
+    ],
+    "illustration_missing_target_ids": [
+      "ILL-KANDY-01",
+      "ILL-KANDY-02",
+      "ILL-KANDY-03",
+      "ILL-KANDY-04",
+      "ILL-KANDY-05",
+      "ILL-KANDY-06",
+      "ILL-KANDY-07",
+      "ILL-KANDY-08",
+      "ILL-KANDY-09",
+      "ILL-KANDY-10"
+    ]
+  },
+  "arcs": [
+    {
+      "arc": "A01_settlement_and_early_polity",
+      "evidence_status": "shell",
+      "spine_claim_ids": [],
+      "claim_count": 0,
+      "causal_roles": {},
+      "bridge_ids": [],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [
+        "SS-PRE-L002"
+      ],
+      "arc_recap_ids": [],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    },
+    {
+      "arc": "A02_ancient_indian_ocean_exchange",
+      "evidence_status": "researched",
+      "spine_claim_ids": [
+        "C-R13-GLASS-001",
+        "C-R13-ROME-002",
+        "C-R13-NAGA-001",
+        "C-R13-NAGA-002",
+        "C-R13-ROME-003",
+        "C-R13-GLASS-002",
+        "C-R13-GLASS-003",
+        "C-R13-ROME-001",
+        "C-R13-ROME-004"
+      ],
+      "claim_count": 13,
+      "causal_roles": {
+        "constraint": 5,
+        "context": 4,
+        "none": 4
+      },
+      "bridge_ids": [
+        "B-R13-ROME-DIRECT-001"
+      ],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [
+        "SS-R13-GLASS-DEZOOM-001",
+        "SS-R13-GLASS-OBJECT-001",
+        "SS-R13-NAGA-METHOD-001",
+        "SS-R13-ROME-FALSE-LEAD-001"
+      ],
+      "arc_recap_ids": [
+        "RECAP-A02"
+      ],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    },
+    {
+      "arc": "A02b_anuradhapura_hydraulic_order",
+      "evidence_status": "shell",
+      "spine_claim_ids": [],
+      "claim_count": 0,
+      "causal_roles": {},
+      "bridge_ids": [],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [
+        "SS-PRE-JETAVANA-001",
+        "SS-PRE-L015"
+      ],
+      "arc_recap_ids": [],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    },
+    {
+      "arc": "A02c_anuradhapura_and_the_mahavihara",
+      "evidence_status": "partial",
+      "spine_claim_ids": [
+        "C-R16-MIH-ADMIN-001",
+        "C-R16-MIH-MIL-001",
+        "C-R16-ABH-UNESCO-001",
+        "C-R16-MIH-COMMEM-001",
+        "C-R24-BUD-BIRTH-TEXT-001",
+        "C-R24-BUD-LANKA-VISITS-001",
+        "C-R24-BUD-RENUNCIATION-TEXT-001",
+        "C-R16-ABH-FIND-001",
+        "C-R24-BUD-NALAGIRI-TEXT-001",
+        "C-R16-ABH-DATE-001",
+        "C-R16-MIH-TRAD-001"
+      ],
+      "claim_count": 11,
+      "causal_roles": {
+        "constraint": 1,
+        "context": 8,
+        "mechanism": 2
+      },
+      "bridge_ids": [],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [
+        "SS-R16-MIH-METHOD-CHRONOLOGY-001",
+        "SS-R16-MIH-OBJECT-MANGO-001",
+        "SS-R16-MIH-PORTRAIT-MAHINDA-001"
+      ],
+      "arc_recap_ids": [],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [
+        "ILL-KANDY-01",
+        "ILL-KANDY-02",
+        "ILL-KANDY-03",
+        "ILL-KANDY-04",
+        "ILL-KANDY-05",
+        "ILL-KANDY-06",
+        "ILL-KANDY-07",
+        "ILL-KANDY-08",
+        "ILL-KANDY-09",
+        "ILL-KANDY-10"
+      ],
+      "open_question_ids": []
+    },
+    {
+      "arc": "A03_indian_ocean_and_regional_systems",
+      "evidence_status": "shell",
+      "spine_claim_ids": [],
+      "claim_count": 0,
+      "causal_roles": {},
+      "bridge_ids": [],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [
+        "SS-PRE-L010",
+        "SS-PRE-L011",
+        "SS-PRE-L012",
+        "SS-PRE-L013",
+        "SS-PRE-L017",
+        "SS-PRE-L021"
+      ],
+      "arc_recap_ids": [],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    },
+    {
+      "arc": "A04_chola_interlude_and_polonnaruwa",
+      "evidence_status": "partial",
+      "spine_claim_ids": [
+        "C-R14-A04-GALPOTA-001",
+        "C-R14-A04-VIJAYABAHU-001",
+        "C-R14-A04-VELAIKKARA-001",
+        "C-R14-A04-MAGHA-001"
+      ],
+      "claim_count": 4,
+      "causal_roles": {
+        "amplifier": 1,
+        "context": 2,
+        "mechanism": 1
+      },
+      "bridge_ids": [
+        "B-R21-TOOTH-RELIC-INSTITUTIONAL-CONTINUITY-001"
+      ],
+      "side_story_ids": [
+        "SS-PRE-L003",
+        "SS-PRE-L004",
+        "SS-PRE-L005",
+        "SS-PRE-L016"
+      ],
+      "candidate_side_story_ids": [],
+      "arc_recap_ids": [],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    },
+    {
+      "arc": "A05_colonial_conservation_ordinance",
+      "evidence_status": "researched",
+      "spine_claim_ids": [
+        "C-R13-PARK-002",
+        "C-R13-PARK-003",
+        "C-R13-PARK-001",
+        "C-R13-PARK-008"
+      ],
+      "claim_count": 4,
+      "causal_roles": {
+        "context": 1,
+        "driver": 1,
+        "none": 1,
+        "outcome": 1
+      },
+      "bridge_ids": [],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [],
+      "arc_recap_ids": [
+        "RECAP-A05"
+      ],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    },
+    {
+      "arc": "A05b_dry_zone_collapse_and_mobile_capitals",
+      "evidence_status": "shell",
+      "spine_claim_ids": [],
+      "claim_count": 0,
+      "causal_roles": {},
+      "bridge_ids": [],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [
+        "SS-PRE-L006",
+        "SS-PRE-L014",
+        "SS-PRE-L018"
+      ],
+      "arc_recap_ids": [],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    },
+    {
+      "arc": "A06_voc_coastal_state",
+      "evidence_status": "researched",
+      "spine_claim_ids": [
+        "C-PRE-001",
+        "C-PRE-002"
+      ],
+      "claim_count": 2,
+      "causal_roles": {
+        "driver": 2
+      },
+      "bridge_ids": [
+        "B-PRE-001"
+      ],
+      "side_story_ids": [
+        "SS-PRE-003",
+        "SS-PRE-004"
+      ],
+      "candidate_side_story_ids": [],
+      "arc_recap_ids": [
+        "RECAP-A06"
+      ],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    },
+    {
+      "arc": "A06b_portuguese_maritime_violence",
+      "evidence_status": "shell",
+      "spine_claim_ids": [],
+      "claim_count": 0,
+      "causal_roles": {},
+      "bridge_ids": [],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [
+        "SS-PRE-L019"
+      ],
+      "arc_recap_ids": [],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    },
+    {
+      "arc": "A07_european_wars_reordering",
+      "evidence_status": "researched",
+      "spine_claim_ids": [
+        "C-PRE-GEO-001",
+        "C-PRE-GEO-003",
+        "C-PRE-GEO-004",
+        "C-PRE-GEO-002"
+      ],
+      "claim_count": 4,
+      "causal_roles": {
+        "amplifier": 1,
+        "context": 1,
+        "driver": 2
+      },
+      "bridge_ids": [
+        "B-PRE-002",
+        "B-PRE-003"
+      ],
+      "side_story_ids": [
+        "SS-PRE-001",
+        "SS-PRE-002"
+      ],
+      "candidate_side_story_ids": [],
+      "arc_recap_ids": [
+        "RECAP-A07"
+      ],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    },
+    {
+      "arc": "A07b_kandyan_kingdom_and_defensive_interior",
+      "evidence_status": "partial",
+      "spine_claim_ids": [
+        "C-R17-KDY-RAIL-001",
+        "C-R18-KDY-DEF-002",
+        "C-R23-KDY-SIAM-ORDINATION-001",
+        "C-R17-KDY-ADMIN-001",
+        "C-R17-KDY-LABOUR-001",
+        "C-R17-KDY-LAND-001",
+        "C-R17-KDY-PLANTATION-001",
+        "C-R17-KDY-RELIC-001",
+        "C-R17-KDY-ROAD-001",
+        "C-R17-KDY-TERRAIN-001",
+        "C-R18-KDY-DEF-001",
+        "C-R23-KDY-DOYLY-KNOWLEDGE-001",
+        "C-R17-KDY-PASSES-001",
+        "C-R24-KDY-KNOX-ROADS-001",
+        "C-R17-KDY-1815-001",
+        "C-R18-KDY-DEF-003",
+        "C-R17-KDY-REBELLION-001",
+        "C-R23-KDY-COSMOPOLITAN-001",
+        "C-R23-KDY-DONA-CATHERINA-001",
+        "C-R21-KDY-PERAHERA-TRADITION-001",
+        "C-R23-KDY-MUSEUM-MEMORY-001"
+      ],
+      "claim_count": 21,
+      "causal_roles": {
+        "constraint": 1,
+        "context": 4,
+        "mechanism": 13,
+        "none": 1,
+        "outcome": 2
+      },
+      "bridge_ids": [
+        "B-R21-1815-RITUAL-CUSTODY-001",
+        "B-R21-TOOTH-RELIC-INSTITUTIONAL-CONTINUITY-001",
+        "B-R23-KDY-DOYLY-1815-001"
+      ],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [
+        "SS-R17-KDY-ALSO-DISPOSSESSIONS-001",
+        "SS-R17-KDY-DEZOOM-PASS-001",
+        "SS-R17-KDY-FALSE-CONQUEST-001",
+        "SS-R17-KDY-FALSE-LEAD-CONQUEST-001",
+        "SS-R18-KANDY-DEFENCE-001",
+        "SS-R23-KDY-DONA-CATHERINA-PORTRAIT-001",
+        "SS-R23-KDY-DOYLY-PORTRAIT-001",
+        "SS-R23-KDY-SIAM-DEZOOM-001"
+      ],
+      "arc_recap_ids": [
+        "RECAP-A07b"
+      ],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    },
+    {
+      "arc": "A07c_coffee_collapse_and_tea_conversion",
+      "evidence_status": "partial",
+      "spine_claim_ids": [
+        "C-R18-COFFEE-H2-001",
+        "C-R18-COFFEE-H3-001",
+        "C-R18-INFRA-INHERIT-001",
+        "C-R18-COFFEE-CAPITAL-001",
+        "C-R18-COFFEE-RUST-001",
+        "C-R18-CINCHONA-001"
+      ],
+      "claim_count": 7,
+      "causal_roles": {
+        "amplifier": 1,
+        "context": 3,
+        "mechanism": 2,
+        "none": 1
+      },
+      "bridge_ids": [
+        "B-R18-CINCHONA-SMOOTH-001",
+        "B-R18-INFRA-CONVERSION-001",
+        "B-R18-RUST-ONLY-001"
+      ],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [
+        "SS-R18-CINCHONA-FALSE-001",
+        "SS-R18-COFFEE-RUST-FALSE-001",
+        "SS-R18-EROSION-ALSO-001",
+        "SS-R18-IMPERIAL-TEA-DEZOOM-001",
+        "SS-R18-MOUNTAINS-OBJECT-001",
+        "SS-R18-TEA-PLANT-OBJECT-001"
+      ],
+      "arc_recap_ids": [],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": [
+        "Q-TEA-001",
+        "Q-TEA-H1",
+        "Q-TEA-H2",
+        "Q-TEA-H3"
+      ]
+    },
+    {
+      "arc": "A08_jaffna_caste_colonial_codification",
+      "evidence_status": "researched",
+      "spine_claim_ids": [
+        "C-PRE-CASTE-003",
+        "C-PRE-CASTE-001",
+        "C-PRE-CASTE-002"
+      ],
+      "claim_count": 3,
+      "causal_roles": {
+        "amplifier": 1,
+        "constraint": 1,
+        "driver": 1
+      },
+      "bridge_ids": [],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [],
+      "arc_recap_ids": [
+        "RECAP-A08"
+      ],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    },
+    {
+      "arc": "A09_british_unification_1833",
+      "evidence_status": "shell",
+      "spine_claim_ids": [],
+      "claim_count": 0,
+      "causal_roles": {},
+      "bridge_ids": [],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [
+        "SS-PRE-L007",
+        "SS-PRE-L008",
+        "SS-PRE-L020"
+      ],
+      "arc_recap_ids": [],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    },
+    {
+      "arc": "A09b_plantation_labour_system",
+      "evidence_status": "partial",
+      "spine_claim_ids": [
+        "C-R18-LABOUR-LAW-001",
+        "C-R18-LABOUR-POP-1936",
+        "C-R18-LABOUR-RECRUIT-001"
+      ],
+      "claim_count": 3,
+      "causal_roles": {
+        "context": 3
+      },
+      "bridge_ids": [],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [],
+      "arc_recap_ids": [],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    }
+  ]
+}

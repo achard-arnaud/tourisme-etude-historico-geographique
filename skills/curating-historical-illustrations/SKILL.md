@@ -11,7 +11,7 @@ description: Use when field photos or other images should become reader-facing i
 Each record uses `templates/illustration.json` and lives in `09_output/illustrations/`.
 
 ## Field-photo rule
-For user-supplied photos preserve filename, SHA-256, capture context/location, visible caption where legible, and uncertainty. Keep the binary status explicit. If the repository does not contain the binary, use `external_only`; storytelling may still use the metadata/caption but must not pretend the image is embedded.
+For user-supplied photos preserve filename, SHA-256, capture context/location, visible caption where legible, and uncertainty. Record whether the digest was verified against a repository binary, verified at intake while the binary was available, or merely supplied. Keep the binary status explicit. If the repository does not contain the binary, use `external_only`; storytelling may still use the metadata/caption but must not pretend the image is embedded.
 
 ## Depiction semantics
 Always distinguish:
@@ -20,10 +20,12 @@ Always distinguish:
 - `chronicle_tradition`: Sri Lankan chronicle or temple tradition, including legendary visits of the Buddha to Lanka;
 - `interpretive`: iconographic identification inferred from the scene.
 
+Also record the textual layer independently: early discourse, canonical Vinaya, later biography, Sri Lankan chronicle, local temple tradition, or unresolved. A broad event can occur in an early source while the horse, companion, miracle or visual staging belongs to a later layer; never collapse those two statements.
+
 Write captions with **depicts / represents / temple tradition presents**, not **proves**, unless the image itself is the historical object under study.
 
 ## Placement
-Attach every illustration to at least one existing input path or ID. Prefer one illustration where it materially improves comprehension of a scene, object, geography or doctrinal distinction. Avoid decorative repetition.
+Attach every illustration to at least one existing input path or ID and to a resolvable arc. A proposed subsection is not a placement: use `target_status=proposed_missing` until a canonical heading exists, and keep the item in the scaffold review queue. Prefer one illustration where it materially improves comprehension of a scene, object, geography or doctrinal distinction. Avoid decorative repetition.
 
 ## Review sequence
 1. preserve field photo and provenance;

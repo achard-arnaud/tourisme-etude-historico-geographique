@@ -10,7 +10,7 @@ The user hypothesis is substantially correct: much of the circuit is a **visual 
 
 These photographs are registered as composition artefacts with `class: illustration`, not as historical claims. Raw observations live in:
 
-`examples/sri_lanka_pre_1948/00_method/capture/run23_kandy_buddha_illustration_fragments.json`
+`examples/sri_lanka_pre_1948/00_method/capture/run24_kandy_buddha_illustration_fragments.json`
 
 Reader-facing illustration metadata lives in:
 
@@ -44,11 +44,12 @@ The storytelling skill now runs a dedicated illustration pass **after reader-spe
 5. flag unresolved scenes rather than invent an identification;
 6. perform the final prose reread only after illustration placement.
 
-## Research / sourcing targets
+## Questions pending — réponses de qualification (Run24)
 
-For later source hardening:
+Research completed for the first qualification pass:
 
-- early Buddhist sources for birth, renunciation and awakening, with the usual distinction between early textual strata and later elaborated biography;
-- the Nalagiri episode in Buddhist narrative tradition;
-- *Mahāvaṃsa* chapter 1 for the three traditional visits to Lanka, with a historiographic warning that these are part of Sri Lankan sacred history and not independently corroborated as a historical itinerary;
-- modern temple provenance for the Bahirawakanda relief cycle itself.
+- MN 26 anchors the going-forth and search for awakening, but not the full horse/Channa palace staging; MN 123 anchors a canonical miraculous birth narrative. The illustration contract therefore stores textual layer separately from iconographic confidence.
+- The Nālāgiri episode is present in Pali Buddhist narrative/Vinaya-related transmission; its presence in a textual tradition does not establish each depicted detail as biography.
+- *Mahāvaṃsa* chapter 1 explicitly narrates the Mahiyangana and Nāgadīpa visits. This closes identification of the two captioned reliefs as chronicle tradition, not the historicity of the itinerary.
+- Robert Knox independently describes the highland kingdom as naturally strong and its ways as very narrow. This strengthens the observed-condition half of the Kandy defence question but still does not prove a formal policy of deliberate non-road-building.
+- Modern institutional provenance for the Bahirawakanda relief cycle remains open; the photographs remain `vision_validated`, not `reader_eligible`.

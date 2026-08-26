@@ -5,5 +5,5 @@
   "canonical_markdown": "09_output/report_v3_full.md",
   "reader_markdown": "09_output/report_v3_full.md",
   "reader_docx": "09_output/Sri_Lanka_1948_2026_etude_historico_geographique_v3.docx",
-  "composition": {"side_story_coverage_required": true, "require_arc_recaps": false, "graph_preflight_required": true}
+  "composition": {"side_story_coverage_required": true, "require_arc_recaps": false, "graph_preflight_required": true, "require_story_scaffold": true, "illustration_coverage_required": true}
 }

@@ -28,7 +28,7 @@ Track separately: research; composition (`side_story`, `arc_recap`, `map_asset`,
 12b. `curating-historical-illustrations` registers field photos or other images as `illustration` composition assets, links them to existing inputs, preserves depiction semantics and never upgrades claim confidence.
 13. `tailoring-reader-profiles` resolves deterministic content temperature, side-story ordering, recap style and approved-map selection.
 14. `editing-historical-travel-output` consumes the graph/composition preflight and structured artefacts; deterministic side-story insertion uses `materialize_side_stories.py`.
-15. `storytelling-historical-travel` consumes the resolved reader plan. For advanced readers it **must never set a maximum length** or silently drop required content; no more than one approved map per subsection/side-story slot. After reader rendering, it performs a dedicated illustration pass and only then the final reread.
+15. `storytelling-historical-travel` first consumes the compact global `story_scaffold.json`, then the resolved reader plan and arc-local retrieval packs. For advanced readers it **must never set a maximum length** or silently drop required content; no more than one approved map per subsection/side-story slot. After reader rendering, it performs a dedicated illustration pass, reconciles every scaffold queue, and only then performs the final reread.
 16. Record all routing in the latest reviewed run manifest and promote only after fresh verification.
 
 ## Prompt-review loop

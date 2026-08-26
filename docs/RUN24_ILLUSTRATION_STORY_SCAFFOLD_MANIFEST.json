@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-08-26-run24-illustration-story-scaffold",
+  "status": "reviewed",
+  "mode": "pending-question-qualification-illustration-hardening-and-narrative-topology",
+  "project_roots": [
+    "examples/sri_lanka_pre_1948",
+    "examples/sri_lanka_post_1948"
+  ],
+  "state_before": {
+    "illustrations": "Ten vision-reviewed metadata records had no registry lineage, reader-plan selection or resolvable manuscript target.",
+    "questions": "PR53 research targets and Kandy road-doctrine question were not qualified into claims.",
+    "storytelling": "Arc-local iterative drafting had no compact global topology or coverage reconciliation.",
+    "graph": "Illustrations were not resolvable endpoints and recent Kandy claims remained sparsely linked."
+  },
+  "dispatched_skills": [
+    {
+      "skill": "analyzing-economy-and-infrastructure",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/analyzing-economy-and-infrastructure/SKILL.md"
+      ],
+      "outputs": [
+        "skills/analyzing-economy-and-infrastructure/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "analyzing-geography-and-environment",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/analyzing-geography-and-environment/SKILL.md"
+      ],
+      "outputs": [
+        "skills/analyzing-geography-and-environment/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "analyzing-institutions-and-power",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/analyzing-institutions-and-power/SKILL.md"
+      ],
+      "outputs": [
+        "skills/analyzing-institutions-and-power/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "analyzing-regional-global-systems",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/analyzing-regional-global-systems/SKILL.md"
+      ],
+      "outputs": [
+        "skills/analyzing-regional-global-systems/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "analyzing-religion-culture-legitimacy",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/analyzing-religion-culture-legitimacy/SKILL.md"
+      ],
+      "outputs": [
+        "skills/analyzing-religion-culture-legitimacy/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "analyzing-security-and-geopolitics",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/analyzing-security-and-geopolitics/SKILL.md"
+      ],
+      "outputs": [
+        "skills/analyzing-security-and-geopolitics/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "analyzing-society-and-demography",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/analyzing-society-and-demography/SKILL.md"
+      ],
+      "outputs": [
+        "skills/analyzing-society-and-demography/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "auditing-historiography-and-drifts",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/auditing-historiography-and-drifts/SKILL.md"
+      ],
+      "outputs": [
+        "skills/auditing-historiography-and-drifts/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "building-causal-bridges",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/building-causal-bridges/SKILL.md"
+      ],
+      "outputs": [
+        "skills/building-causal-bridges/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "capturing-field-evidence",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/capturing-field-evidence/SKILL.md"
+      ],
+      "outputs": [
+        "skills/capturing-field-evidence/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "composing-arc-recaps",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/composing-arc-recaps/SKILL.md"
+      ],
+      "outputs": [
+        "skills/composing-arc-recaps/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "composing-side-stories",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/composing-side-stories/SKILL.md"
+      ],
+      "outputs": [
+        "skills/composing-side-stories/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "curating-historical-illustrations",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/curating-historical-illustrations/SKILL.md"
+      ],
+      "outputs": [
+        "skills/curating-historical-illustrations/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "curating-historical-map-assets",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/curating-historical-map-assets/SKILL.md"
+      ],
+      "outputs": [
+        "skills/curating-historical-map-assets/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "editing-historical-travel-output",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/editing-historical-travel-output/SKILL.md"
+      ],
+      "outputs": [
+        "skills/editing-historical-travel-output/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "extracting-youtube-evidence",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/extracting-youtube-evidence/SKILL.md"
+      ],
+      "outputs": [
+        "skills/extracting-youtube-evidence/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "maintaining-wiki-and-graph",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/maintaining-wiki-and-graph/SKILL.md"
+      ],
+      "outputs": [
+        "skills/maintaining-wiki-and-graph/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "sanitizing-historical-claims",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/sanitizing-historical-claims/SKILL.md"
+      ],
+      "outputs": [
+        "skills/sanitizing-historical-claims/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "sourcing-historical-anchors",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/sourcing-historical-anchors/SKILL.md"
+      ],
+      "outputs": [
+        "skills/sourcing-historical-anchors/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "storytelling-historical-travel",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/storytelling-historical-travel/SKILL.md"
+      ],
+      "outputs": [
+        "skills/storytelling-historical-travel/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "structuring-chronological-arcs",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/structuring-chronological-arcs/SKILL.md"
+      ],
+      "outputs": [
+        "skills/structuring-chronological-arcs/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "tailoring-reader-profiles",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/tailoring-reader-profiles/SKILL.md"
+      ],
+      "outputs": [
+        "skills/tailoring-reader-profiles/SKILL.md"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "zooming-geographic-scales",
+      "reason": "Run24 global contract regression and narrative-topology verification.",
+      "inputs": [
+        "skills/zooming-geographic-scales/SKILL.md"
+      ],
+      "outputs": [
+        "skills/zooming-geographic-scales/SKILL.md"
+      ],
+      "status": "verified"
+    }
+  ],
+  "skipped_skills": [],
+  "validations": [
+    "python -m unittest discover -s tests -v",
+    "python scripts/audit_skill.py .",
+    "python scripts/audit_workflow.py --latest",
+    "python scripts/audit_context_budget.py --latest",
+    "python scripts/audit_intake_lineage.py",
+    "python scripts/graph_link_audit.py examples/sri_lanka_pre_1948",
+    "python scripts/graph_link_audit.py examples/sri_lanka_post_1948",
+    "python scripts/qa_project.py examples/sri_lanka_pre_1948",
+    "python scripts/qa_project.py examples/sri_lanka_post_1948",
+    "python scripts/qa_composition_pipeline.py examples/sri_lanka_pre_1948",
+    "python scripts/qa_composition_pipeline.py examples/sri_lanka_post_1948",
+    "python scripts/qa_functional_pre1948.py"
+  ],
+  "state_after": {
+    "illustrations": "Ten records use resolvable input/arc lineage, separated textual layers and an explicit non-renderable review queue.",
+    "questions": "Five bounded claims answer textual-tradition targets and partially resolve Q-KANDY-002; stale question statuses are reconciled.",
+    "storytelling": "A deterministic story scaffold precedes reader planning and supports arc-local hydration plus final queue reconciliation.",
+    "graph": "Illustrations resolve as controlled composition fragments and nine pertinent edges connect Run23/Run24 additions."
+  },
+  "promotion_decision": "Merge PR53 only after complete GREEN; then synchronize the validated dev tree to main."
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.2",
+  "class": "side_story",
+  "id": "SS-R18-KANDY-DEFENCE-001",
+  "kind": "detour",
+  "status": "candidate",
+  "lineage_quality": "full",
+  "title": "Kandy sans bastions : une capitale défendue par le paysage",
+  "arc": "A07b_kandyan_kingdom_and_defensive_interior",
+  "purpose": "Resolve the field paradox that a repeatedly invaded capital shows little evidence of a Vauban-like continuous urban fortress system.",
+  "reason_off_trunk": "The mechanism is spatial and military: it explains how invasions worked without interrupting the main political chronology.",
+  "payoff": "Re-read Kandy's surrounding hills, passes and approach corridors as parts of the defensive system rather than searching only for bastions in the city centre.",
+  "map_eligible": true,
+  "reader_policy": {
+    "min_age": 12
+  },
+  "lineage": {
+    "claim_ids": [
+      "C-R18-KDY-DEF-001",
+      "C-R18-KDY-DEF-002",
+      "C-R18-KDY-DEF-003"
+    ],
+    "source_ids": [
+      "ARCH-SL-KANDYAN-DEFENCE-2022",
+      "DE-SILVA-KANDYAN-MILITARY-2004",
+      "SIVASUNDARAM-KANDYAN-GEOGRAPHY-2007",
+      "JOHNSTON-CANDY-1804",
+      "SLNA-KANDYAN-CONVENTION-1815",
+      "STRONG-TOOTH-1815-2021"
+    ],
+    "bridge_ids": [],
+    "hil_ids": [
+      "HIL-06_security-coercion",
+      "HIL-01_institutions-chronology"
+    ],
+    "drift_paths": [],
+    "origin_paths": [
+      "docs/intakes/INTAKE_kandy_invasion_defence_field_observation.md"
+    ]
+  },
+  "placement": {
+    "section_anchor": "",
+    "return_to": "C-R17-KDY-1815-001"
+  },
+  "zoom_excursion": {
+    "from": "Z0",
+    "to": "Z2",
+    "return_to": "Z0",
+    "mechanism": "Defence in depth displaced the decisive contest from the urban perimeter to approaches, passes, logistics, communications and political cohesion.",
+    "local_payoff": "A European army could enter Kandy and still lose the campaign because capture of the capital was not equivalent to durable control of the highland kingdom."
+  },
+  "content": {
+    "takeaway": "Kandy's missing bastions are not evidence of missing defence: the kingdom's strongest fortress was the route to Kandy and the difficulty of remaining there.",
+    "body_markdown": "Depuis les points de vue de Kandy, le paradoxe saute aux yeux : peu de bastions monumentaux, alors que Portugais, Hollandais puis Britanniques ont tenté d'imposer leur contrôle. Les sources conduisent à déplacer le regard. La défense kandienne était distribuée dans le territoire : postes de guet sur les hauteurs, contrôle des entrées, positions d'artillerie et surtout passes étroites. Une armée européenne pouvait donc atteindre la capitale sans avoir gagné la guerre. Une fois engagée dans les hautes terres, ses lignes de ravitaillement et de communication devenaient vulnérables ; pluies, maladie et harcèlement rendaient l'occupation coûteuse. Les Kandyens pouvaient céder l'espace urbain, gagner du temps, puis frapper une force affaiblie ou en retraite. Le cas britannique de 1803 montre très clairement cette logique. La fin de 1815 constitue d'ailleurs le contrepoint décisif : le royaume ne tombe pas après la prise d'un grand rempart, mais après l'isolement politique du roi et l'accord conclu avec les chefs kandyens. Le paysage fonctionnait comme une fortification en profondeur ; quand la coalition politique qui l'exploitait s'est rompue, cet avantage n'a plus suffi.",
+    "field_question": "Pourquoi ne voit-on presque pas de bastions défensifs autour du centre de Kandy malgré les invasions répétées ?"
+  },
+  "render": {
+    "label": "Petit détour",
+    "marker": "[SIDE-STORY:SS-R18-KANDY-DEFENCE-001]",
+    "required_in_reader": false
+  }
+}

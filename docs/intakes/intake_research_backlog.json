@@ -254,5 +254,46 @@
       "memory layer"
     ],
     "next_action": "Recover timestamped video evidence, then separate documented violence, actor-specific alleged violations, legal categories and memory advocacy; preserve NGO submissions in UN repositories as NGO evidence rather than UN findings."
+  },
+  {
+    "id": "IRB-R18-KANDY-DEFENCE-DOCTRINE",
+    "intake_id": "I-R18-KANDY-DEFENCE",
+    "topic": "Kandyan defence-in-depth versus deliberate infrastructure-denial doctrine",
+    "priority": 1,
+    "status": "partially_resolved",
+    "research_state": "terrain_and_pass_defence_anchored_formal_doctrine_unresolved",
+    "blocks": [
+      "formal deliberate non-development claim"
+    ],
+    "next_action": "Search Kandyan-era or early colonial documentary anchors explicitly linking road, bridge, forest or pass maintenance policy to defence. Until then retain documented terrain/pass defence but do not promote deliberate infrastructure underdevelopment as a formal state doctrine."
+  },
+  {
+    "id": "IRB-R23-EHELEPOLA-WAX",
+    "intake_id": "I-R23-EHELEPOLA-WAX",
+    "topic": "Qualify Ehelepola Wax Museum character narratives for the Kandy arc",
+    "priority": 2,
+    "status": "resolved",
+    "research_state": "museum_roster_triaged_selected_mechanisms_independently_anchored",
+    "blocks": [
+      "Kandy character-story qualification",
+      "1815 political-conquest bridge",
+      "transregional Buddhist dezoom"
+    ],
+    "next_action": "Revisit only if stable individual museum pages become directly retrievable or a future Kandy manuscript section needs promotion of one of the three candidate side stories.",
+    "resolution": "Selected four high-value threads; created five typed claims, one bounded D'Oyly-to-1815 bridge, three candidate side stories and one Graph Light projection. All remaining roster entries were deferred or rejected as redundant."
+  },
+  {
+    "id": "IRB-R24-KANDY-ILLUSTRATIONS",
+    "intake_id": "I-R24-KANDY-ILLUSTRATIONS",
+    "topic": "Bahirawakanda Buddha-life relief provenance and reader placement",
+    "priority": 2,
+    "status": "partially_resolved",
+    "research_state": "textual_layers_anchored_local_provenance_and_placement_open",
+    "blocks": [
+      "modern temple provenance",
+      "human image approval",
+      "canonical section anchor"
+    ],
+    "next_action": "Recover an institutional temple caption/provenance source, obtain explicit human approval and repository-accessible binaries, then create or select a canonical narrative anchor before changing any asset to reader_eligible."
   }
 ]

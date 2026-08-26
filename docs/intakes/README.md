@@ -56,3 +56,11 @@ The audit cross-checks manifest references, archived files, registry entries, de
 ## Run22 admission of the video-leads intake
 
 The former Run20 video-leads PR was admitted after Run21. Four typed degraded ledgers preserve the failed acquisition outcome; the proposition register is intentionally empty because no timestamped transcript was available. Research themes remain in the backlog, while claims and graph links remain blocked until evidence-bounded propositions and independent historical sourcing exist.
+
+## Run23 — Ehelepola Wax Museum
+
+`INTAKE_ehelepola_wax_museum_kandy_personages.md` preserves the supplied sitemap, caps the museum at T3/`lead`, records rejected characters and routes only independently corroborated Kandy mechanisms into claims, bridges and candidate side stories.
+
+## Run24 — Bahirawakanda illustrations
+
+`INTAKE_kandy_buddha_life_illustrations.md` preserves ten external-binary field photos as typed illustration records. Run24 separates iconographic confidence from textual layer, answers four source questions, and keeps every asset in a non-renderable review queue until human approval, binary availability and a canonical placement target converge.
