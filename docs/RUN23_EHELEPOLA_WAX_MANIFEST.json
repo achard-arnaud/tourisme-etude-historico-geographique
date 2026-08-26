@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-08-26-run23-ehelepola-wax",
+  "status": "reviewed",
+  "mode": "museum-character-crawl-qualification-and-kandy-graph-handoff",
+  "project_roots": [
+    "examples/sri_lanka_pre_1948",
+    "examples/sri_lanka_post_1948"
+  ],
+  "state_before": {
+    "museum": "Character roster existed only in a supplied sitemap and JavaScript site, without source-tier ceiling or intake lineage.",
+    "kandy": "Relevant people were not connected to the existing legitimacy, transregional ordination and 1815 political-conquest mechanisms.",
+    "graph": "No D'Oyly knowledge-to-1815 bridge was projected."
+  },
+  "dispatched_skills": [
+    {
+      "skill": "sanitizing-historical-claims",
+      "reason": "Separate museum memory, event facts and causal inferences before promotion.",
+      "inputs": [
+        "docs/intakes/INTAKE_ehelepola_wax_museum_kandy_personages.md"
+      ],
+      "outputs": [
+        "examples/sri_lanka_pre_1948/01_arcs/A07b_kandyan_kingdom_and_defensive_interior/claims/C-R23-KDY-MUSEUM-MEMORY-001.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "sourcing-historical-anchors",
+      "reason": "Register the museum as T3 lead and add T1/T2 corroboration for selected mechanisms.",
+      "inputs": [
+        "docs/intakes/INTAKE_ehelepola_wax_museum_kandy_personages.md"
+      ],
+      "outputs": [
+        "examples/sri_lanka_pre_1948/05_sources/source_register_run23_ehelepola_wax.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "structuring-chronological-arcs",
+      "reason": "Integrate qualified findings into the existing Kandy arc without creating a duplicate arc.",
+      "inputs": [
+        "examples/sri_lanka_pre_1948/01_arcs/A07b_kandyan_kingdom_and_defensive_interior/ARC.md"
+      ],
+      "outputs": [
+        "examples/sri_lanka_pre_1948/01_arcs/A07b_kandyan_kingdom_and_defensive_interior/ARC.md"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "analyzing-institutions-and-power",
+      "reason": "Model dynastic recomposition and knowledge-enabled elite fracture.",
+      "inputs": [
+        "examples/sri_lanka_pre_1948/01_arcs/A07b_kandyan_kingdom_and_defensive_interior/claims/C-R23-KDY-DONA-CATHERINA-001.json"
+      ],
+      "outputs": [
+        "examples/sri_lanka_pre_1948/01_arcs/A07b_kandyan_kingdom_and_defensive_interior/claims/C-R23-KDY-DOYLY-KNOWLEDGE-001.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "analyzing-religion-culture-legitimacy",
+      "reason": "Separate relic/ordination institutions from generic belief and qualify the 1753 restoration.",
+      "inputs": [
+        "examples/sri_lanka_pre_1948/05_sources/source_register_run23_ehelepola_wax.json"
+      ],
+      "outputs": [
+        "examples/sri_lanka_pre_1948/01_arcs/A07b_kandyan_kingdom_and_defensive_interior/claims/C-R23-KDY-SIAM-ORDINATION-001.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "analyzing-regional-global-systems",
+      "reason": "Make the Kandy–Ayutthaya transmission explicit without projecting isolation or seamless cosmopolitanism.",
+      "inputs": [
+        "examples/sri_lanka_pre_1948/01_arcs/A07b_kandyan_kingdom_and_defensive_interior/claims/C-R23-KDY-SIAM-ORDINATION-001.json"
+      ],
+      "outputs": [
+        "examples/sri_lanka_pre_1948/01_arcs/A07b_kandyan_kingdom_and_defensive_interior/claims/C-R23-KDY-COSMOPOLITAN-001.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "building-causal-bridges",
+      "reason": "Close the smallest missing mechanism between military resilience and the 1815 political transfer.",
+      "inputs": [
+        "examples/sri_lanka_pre_1948/01_arcs/A07b_kandyan_kingdom_and_defensive_interior/claims/C-R23-KDY-DOYLY-KNOWLEDGE-001.json"
+      ],
+      "outputs": [
+        "examples/sri_lanka_pre_1948/06_bridges/B-R23-KDY-DOYLY-1815-001.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "auditing-historiography-and-drifts",
+      "reason": "Keep heroic martyr labels, nationalist betrayal and foreign/native binaries from becoming facts.",
+      "inputs": [
+        "docs/intakes/INTAKE_ehelepola_wax_museum_kandy_personages.md"
+      ],
+      "outputs": [
+        "examples/sri_lanka_pre_1948/01_arcs/A07b_kandyan_kingdom_and_defensive_interior/claims/C-R23-KDY-MUSEUM-MEMORY-001.json"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "maintaining-wiki-and-graph",
+      "reason": "Project the new resolved D'Oyly bridge with claim/source/bridge tags.",
+      "inputs": [
+        "examples/sri_lanka_pre_1948/06_bridges/B-R23-KDY-DOYLY-1815-001.json"
+      ],
+      "outputs": [
+        "examples/sri_lanka_pre_1948/04_graph/edges.jsonl"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "composing-side-stories",
+      "reason": "Create only three bounded candidate narratives and defer the rest of the roster.",
+      "inputs": [
+        "docs/intakes/INTAKE_ehelepola_wax_museum_kandy_personages.md"
+      ],
+      "outputs": [
+        "examples/sri_lanka_pre_1948/09_output/side_stories/SS-R23-KDY-DONA-CATHERINA-PORTRAIT-001.json",
+        "examples/sri_lanka_pre_1948/09_output/side_stories/SS-R23-KDY-SIAM-DEZOOM-001.json",
+        "examples/sri_lanka_pre_1948/09_output/side_stories/SS-R23-KDY-DOYLY-PORTRAIT-001.json"
+      ],
+      "status": "executed"
+    }
+  ],
+  "skipped_skills": [
+    {
+      "skill": "analyzing-economy-and-infrastructure",
+      "reason": "Run23 does not modify this stage; existing artefacts remain subject to repository-wide QA."
+    },
+    {
+      "skill": "analyzing-geography-and-environment",
+      "reason": "Run23 does not modify this stage; existing artefacts remain subject to repository-wide QA."
+    },
+    {
+      "skill": "analyzing-security-and-geopolitics",
+      "reason": "Run23 does not modify this stage; existing artefacts remain subject to repository-wide QA."
+    },
+    {
+      "skill": "analyzing-society-and-demography",
+      "reason": "Run23 does not modify this stage; existing artefacts remain subject to repository-wide QA."
+    },
+    {
+      "skill": "capturing-field-evidence",
+      "reason": "Run23 does not modify this stage; existing artefacts remain subject to repository-wide QA."
+    },
+    {
+      "skill": "composing-arc-recaps",
+      "reason": "Run23 does not modify this stage; existing artefacts remain subject to repository-wide QA."
+    },
+    {
+      "skill": "curating-historical-map-assets",
+      "reason": "Run23 does not modify this stage; existing artefacts remain subject to repository-wide QA."
+    },
+    {
+      "skill": "editing-historical-travel-output",
+      "reason": "Run23 does not modify this stage; existing artefacts remain subject to repository-wide QA."
+    },
+    {
+      "skill": "extracting-youtube-evidence",
+      "reason": "Run23 does not modify this stage; existing artefacts remain subject to repository-wide QA."
+    },
+    {
+      "skill": "storytelling-historical-travel",
+      "reason": "Run23 does not modify this stage; existing artefacts remain subject to repository-wide QA."
+    },
+    {
+      "skill": "tailoring-reader-profiles",
+      "reason": "Run23 does not modify this stage; existing artefacts remain subject to repository-wide QA."
+    },
+    {
+      "skill": "zooming-geographic-scales",
+      "reason": "Run23 does not modify this stage; existing artefacts remain subject to repository-wide QA."
+    }
+  ],
+  "validations": [
+    "python -m unittest discover -s tests -v",
+    "python scripts/audit_skill.py .",
+    "python scripts/audit_workflow.py --latest",
+    "python scripts/audit_context_budget.py --latest",
+    "python scripts/audit_intake_lineage.py",
+    "python scripts/graph_link_audit.py examples/sri_lanka_pre_1948",
+    "python scripts/graph_link_audit.py examples/sri_lanka_post_1948",
+    "python scripts/qa_project.py examples/sri_lanka_pre_1948",
+    "python scripts/qa_project.py examples/sri_lanka_post_1948",
+    "python scripts/qa_composition_pipeline.py examples/sri_lanka_pre_1948",
+    "python scripts/qa_composition_pipeline.py examples/sri_lanka_post_1948",
+    "python scripts/qa_functional_pre1948.py",
+    "python scripts/render_composed_reader.py --project all"
+  ],
+  "state_after": {
+    "museum": "Archived and registered as T3/lead; only a present-day curatorial-memory claim relies on it.",
+    "qualification": "Five typed claims, one bounded bridge and three candidate side stories; remaining roster entries explicitly deferred.",
+    "graph": "One tagged D'Oyly knowledge-to-1815 edge added with resolvable claim/source/bridge lineage."
+  },
+  "promotion_decision": "Merge to dev only after complete GREEN, then promote the identical validated tree to main through a temporary release branch."
+}
