@@ -35,3 +35,18 @@ jobs:
       - run: python scripts/materialize_arc_recaps.py --project examples/sri_lanka_pre_1948 --source examples/sri_lanka_pre_1948/09_output/report.md --check
       - run: python scripts/qa_functional_pre1948.py
       - run: python scripts/render_composed_reader.py --project all
+      - name: Publish complete reader outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: sri-lanka-complete-reader-${{ github.sha }}
+          if-no-files-found: error
+          retention-days: 30
+          path: |
+            examples/sri_lanka_pre_1948/09_output/*.docx
+            examples/sri_lanka_pre_1948/09_output/*full*.md
+            examples/sri_lanka_pre_1948/09_output/reader_plan.json
+            examples/sri_lanka_pre_1948/09_output/story_scaffold.json
+            examples/sri_lanka_post_1948/09_output/*.docx
+            examples/sri_lanka_post_1948/09_output/*full*.md
+            examples/sri_lanka_post_1948/09_output/reader_plan.json
+            examples/sri_lanka_post_1948/09_output/story_scaffold.json
