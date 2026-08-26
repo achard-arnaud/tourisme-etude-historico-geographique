@@ -1,0 +1,16 @@
+{
+  "id": "B-R21-1815-RITUAL-CUSTODY-001",
+  "from_claim": "C-R17-KDY-1815-001",
+  "to_claim": "C-R21-KDY-PERAHERA-TRADITION-001",
+  "question": "How could the transfer of political sovereignty in 1815 coexist with continued Tooth-relic ritual and custodianship?",
+  "mechanism": "British rule could separate territorial sovereignty from Buddhist ritual custodianship: Article 5 protection of Buddhism and the Temple's institutional memory of continued Perahera under the Diyawadana Nilame point to continuity through administrative reconfiguration rather than simple abolition of the royal ritual field.",
+  "result": "C",
+  "source_ids": ["SLNA-KANDYAN-CONVENTION-1815", "DALADA-PERAHERA-HISTORY-OFFICIAL"],
+  "transmission_channel": "colonial legal protection plus reallocation of custodial authority from kingship to a named lay custodian",
+  "time_lag": "immediate post-1815 institutional transition",
+  "scale": "Z1 Temple institution to Z2 colonial sovereignty settlement",
+  "confounders": ["difference between legal protection and actual practice", "later reconstruction of continuity", "changes in ritual authority after 1815", "colonial intervention in Buddhist institutions"],
+  "transportability": "mechanism",
+  "integration_action": "bridge",
+  "bounded_by": "The Convention supports protection of Buddhism, while the Temple supplies the continuity/custodianship tradition. This does not yet establish the exact administrative sequence, dates or degree of British control over each post-1815 Perahera; those require archival follow-up."
+}
