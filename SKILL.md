@@ -12,6 +12,7 @@ Build **arc-first**: evidence → typed claims → source anchors → HIL analys
 Track separately: research; composition (`side_story`, `arc_recap`, `map_asset`); canonical Markdown resolved by `00_method/output_state.json`; reader export; branch/commit/QA. Never infer canonical state from a filename.
 
 ## Orchestration
+0. `extracting-youtube-evidence` → timestamped video ledgers and lead-only propositions; no direct factual promotion.
 1. `capturing-field-evidence` → raw observations.
 2. `sanitizing-historical-claims` → statement type.
 3. `structuring-chronological-arcs` → rupture-bounded spine.

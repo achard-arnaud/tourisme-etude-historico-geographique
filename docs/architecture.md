@@ -3,7 +3,7 @@
 The root skill orchestrates judgment-heavy skills while scripts enforce mechanical contracts. The system remains **arc-first + Zettelkasten-lite + graph-light**, with explicit output-state and a first-class composition layer.
 
 ## Layers
-1. **Research** — field evidence, sources, typed claims, arcs/HILs, bridges, drifts, wiki/graph.
+1. **Research** — timestamped video ledgers and lead-only propositions, field evidence, sources, typed claims, arcs/HILs, bridges, drifts, wiki/graph.
 2. **Composition** — `side_story`, `arc_recap`, optional `map_asset`, and `reader_profile`/reader plan.
 3. **Canonical Markdown** — path resolved from `00_method/output_state.json`, never inferred from `report.md` naming.
 4. **Reader export** — DOCX/PDF generated only after preflight and retention gates.

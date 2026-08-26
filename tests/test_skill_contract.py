@@ -20,5 +20,5 @@ class SkillContractTests(unittest.TestCase):
             self.assertTrue((ROOT/rel).exists(),rel)
     def test_root_orchestrator_names_composition_capabilities(self):
         text=(ROOT/'SKILL.md').read_text(encoding='utf-8')
-        for name in ['composing-side-stories','composing-arc-recaps','curating-historical-map-assets','tailoring-reader-profiles','analyzing-regional-global-systems']:self.assertIn(name,text)
+        for name in ['extracting-youtube-evidence','composing-side-stories','composing-arc-recaps','curating-historical-map-assets','tailoring-reader-profiles','analyzing-regional-global-systems']:self.assertIn(name,text)
 if __name__=='__main__':unittest.main()

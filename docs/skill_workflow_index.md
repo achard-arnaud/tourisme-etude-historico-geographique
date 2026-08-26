@@ -2,6 +2,7 @@
 
 | Stage | Skill/capability | Durable artefact | Mechanical gate / consumer |
 |---|---|---|---|
+| Video evidence | `extracting-youtube-evidence` | `video-evidence/v1` ledgers + lead-only proposition register | video claim contract / sanitizer |
 | Evidence | `capturing-field-evidence` | field/session record | sanitizer/source layer |
 | Claims | `sanitizing-historical-claims` | typed claim | project QA |
 | Chronology | `structuring-chronological-arcs` | `ARC.md` | recap/editor |
