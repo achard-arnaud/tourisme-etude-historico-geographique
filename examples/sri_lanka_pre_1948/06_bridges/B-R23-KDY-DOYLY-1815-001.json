@@ -1,0 +1,17 @@
+{
+  "id": "B-R23-KDY-DOYLY-1815-001",
+  "from_claim": "C-R23-KDY-DOYLY-KNOWLEDGE-001",
+  "to_claim": "C-R17-KDY-1815-001",
+  "question": "How did British power bypass a highland defence system that had repeatedly made occupation of Kandy unsustainable?",
+  "mechanism": "D'Oyly converted language, customary knowledge and elite contacts into intelligence and coalition-fracturing capacity, helping isolate the king so that British military pressure could culminate in capture and negotiated transfer rather than a decisive assault on urban fortifications.",
+  "result": "B",
+  "source_ids": ["SLNA-DOYLY-STRATEGIST-1815", "UCL-CROSSROADS-FALL-2017"],
+  "transmission_channel": "linguistic-cultural knowledge to intelligence networks, elite discord, royal isolation and convention",
+  "time_lag": "British intelligence cultivation before the February–March 1815 takeover",
+  "scale": "Z1 court and elite networks to Z2 kingdom and colonial sovereignty",
+  "confounders": ["royal coercion and elite grievances", "British military pressure", "factional ambitions among chiefs", "retrospective nationalist betrayal narratives"],
+  "transportability": "mechanism",
+  "integration_action": "bridge",
+  "bounded_by": "The bridge identifies a documented contributing mechanism. It does not claim that D'Oyly alone caused the fall or that all chiefs shared one motive."
+}
+
