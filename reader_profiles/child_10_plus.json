@@ -2,5 +2,6 @@
   "schema_version":"1.0","class":"reader_profile","id":"child_10_plus","audience":"child_10_plus","min_age":10,"language":"fr","content_temperature":5,
   "story_template":"templates/storytelling/child_10_plus.md",
   "side_story_policy":{"coverage_mode":"all","priority_order":["portrait","object_focus","detour","also","false_lead","dezoom","callback","analytical_focus","method","comparator"],"include_kinds":["detour","dezoom","also","method","false_lead","portrait","object_focus","comparator","callback","analytical_focus"]},
-  "arc_recap_policy":{"enabled":true,"style":"simple_cause_then_next"},"map_policy":{"enabled":true,"max_per_subsection":1,"fallback_language":"en"}
+  "arc_recap_policy":{"enabled":true,"style":"simple_cause_then_next"},"map_policy":{"enabled":true,"max_per_subsection":1,"fallback_language":"en"},
+  "illustration_density_policy":{"max_per_n_pages":2,"words_per_page":500}
 }
