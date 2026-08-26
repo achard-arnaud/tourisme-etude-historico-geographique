@@ -19,6 +19,7 @@ jobs:
       - run: python scripts/audit_skill.py .
       - run: python scripts/audit_workflow.py --latest
       - run: python scripts/audit_context_budget.py --latest
+      - run: python scripts/audit_intake_lineage.py
       - run: python scripts/audit_run13_contracts.py
       - run: python scripts/audit_run14_legacy.py
       - run: python scripts/audit_run15_intakes.py
