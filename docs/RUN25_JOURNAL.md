@@ -16,3 +16,21 @@
 - artefacts touchés : `scripts/paragraph_review_gate.py`, `tests/test_run25_paragraph_review_gate.py`
 - déclencheur : besoin d'un contrat de relecture forme + fond avec tests positifs et négatifs
 - cohérence croisée : en attente de CI — règles déterministes séparées des revues sémantiques ciblées (ton / legacy sans canonical_points)
+
+## Heat map graphe ↔ sommaire — 2026-08-26T20:05+00:00
+- artefacts touchés : `docs/HEAT_MAP_RUN25.md`
+- déclencheur : story_scaffold disponible
+- cohérence croisée : OK — 80 sections classées ; diagnostic non bloquant ; sous-sections sans `claim_ids` conservées `unmapped`
+
+## Contrôle réciproque scaffold — 2026-08-26T20:05+00:00
+- artefacts touchés : `examples/sri_lanka_pre_1948/08_questions/coverage_gaps_run25.json`
+- déclencheur : scaffold + manuscrit canonique
+- cohérence croisée : OK — explicit=0, legacy_unknown=72, over_mentioned=0
+- fragments référencés : 10
+- fragments legacy non référencés : 66
+- warnings densité : 0
+
+## QA finale PR #61 — 2026-08-26T20:05+00:00
+- artefacts touchés : tests Run25 + pipeline complet + reader outputs
+- déclencheur : validation de la branche `feat/run25-storytelling-process-voice`
+- cohérence croisée : OK — GitHub Actions `skill-ci` run #455 success ; tests positifs/négatifs, audits historiques, heat map, reciprocal coverage, rendu complet et upload artefact tous verts
