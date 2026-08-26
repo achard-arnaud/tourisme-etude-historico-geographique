@@ -1,0 +1,13 @@
+{
+  "id": "C-R21-KDY-PERAHERA-001",
+  "type": "source_fact",
+  "claim": "Sri Dalada Maligawa's official 2026 calendar documents an eleven-day Kandy Esala Perahera cycle from 18 to 28 August, with five Kumbal processions, five Randoli processions, the Diya Kapeema water-cutting ceremony and the Dahawal day procession, embedded in the Temple's broader daily, weekly and annual ritual calendar around the Sacred Tooth Relic.",
+  "confidence": "A",
+  "zoom": "Z1",
+  "causal_role": "context",
+  "arc": "A19_kandy_second_city_paradox",
+  "hil": "HIL-05_religion-culture-legitimacy",
+  "source_ids": ["DALADA-PERAHERA-OFFICIAL-2026"],
+  "bounded_by": "The official schedule establishes recurrence and ritual concentration in Kandy, not attendance, visitor origin, expenditure, congestion magnitude or net economic impact.",
+  "notes": "Run21 Kandy-specific current anchor. It closes the missing empirical link between generic pilgrimage-city comparison and the existence of a recurring city-centred ritual cycle."
+}
