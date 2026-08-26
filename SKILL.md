@@ -9,7 +9,7 @@ description: Use when a travel, site-visit, country-reading, or historical resea
 Build **arc-first**: evidence → typed claims → source anchors → HIL analysis → bridges/drifts → wiki/graph → composition artefacts → canonical manuscript → reader plan/export. Composition never creates historical proof.
 
 ## State checkpoint
-Track separately: research; composition (`side_story`, `arc_recap`, `map_asset`); canonical Markdown resolved by `00_method/output_state.json`; reader export; branch/commit/QA. Never infer canonical state from a filename.
+Track separately: research; composition (`side_story`, `arc_recap`, `map_asset`, `illustration`); canonical Markdown resolved by `00_method/output_state.json`; reader export; branch/commit/QA. Never infer canonical state from a filename.
 
 ## Orchestration
 0. `extracting-youtube-evidence` → timestamped video ledgers and lead-only propositions; no direct factual promotion.
@@ -25,16 +25,17 @@ Track separately: research; composition (`side_story`, `arc_recap`, `map_asset`)
 10. `composing-side-stories` for useful off-trunk material; validated/promoted records require lineage and resolvable placement. `method` is self-contained and must not fabricate `return_to`; narrative kinds do.
 11. `composing-arc-recaps` creates the causal end-of-arc schema, protagonist viewpoints and `prepares_next` bullets.
 12. `curating-historical-map-assets` searches only for arcs or map-eligible side stories; vision review precedes explicit human approval.
+12b. `curating-historical-illustrations` registers field photos or other images as `illustration` composition assets, links them to existing inputs, preserves depiction semantics and never upgrades claim confidence.
 13. `tailoring-reader-profiles` resolves deterministic content temperature, side-story ordering, recap style and approved-map selection.
 14. `editing-historical-travel-output` consumes the graph/composition preflight and structured artefacts; deterministic side-story insertion uses `materialize_side_stories.py`.
-15. `storytelling-historical-travel` consumes the resolved reader plan. For advanced readers it **must never set a maximum length** or silently drop required content; no more than one approved map per subsection/side-story slot.
+15. `storytelling-historical-travel` consumes the resolved reader plan. For advanced readers it **must never set a maximum length** or silently drop required content; no more than one approved map per subsection/side-story slot. After reader rendering, it performs a dedicated illustration pass and only then the final reread.
 16. Record all routing in the latest reviewed run manifest and promote only after fresh verification.
 
 ## Prompt-review loop
-Treat user directions as requirements, never evidence. Route new questions, rejected framings, audience changes, side-story/map requests and output-state changes to their owning contracts before prose changes.
+Treat user directions as requirements, never evidence. Route new questions, rejected framings, audience changes, side-story/map/illustration requests and output-state changes to their owning contracts before prose changes.
 
 ## Causal / composition gate
-A detail enters the trunk only if it changes mobilisation, legitimacy/coalition, governing/defence cost, flows/opportunity, social reproduction, or regime/centre. Otherwise: candidate `side_story`, backlog or discarded lead. `arc_recap` only summarizes stabilized claims/bridges. `map_asset` illustrates a validated story but never upgrades confidence.
+A detail enters the trunk only if it changes mobilisation, legitimacy/coalition, governing/defence cost, flows/opportunity, social reproduction, or regime/centre. Otherwise: candidate `side_story`, backlog or discarded lead. `arc_recap` only summarizes stabilized claims/bridges. `map_asset` and `illustration` may clarify a validated story but never upgrade confidence.
 
 ## Comparative gate
 A comparator enters the spine only when mechanism, period, scale, unit, confounders and source coverage align and it changes the home case. Otherwise use a bounded comparator side story.
