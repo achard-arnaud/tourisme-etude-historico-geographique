@@ -92,6 +92,17 @@ class Run25ProcessContractTests(unittest.TestCase):
             self.assertEqual([],data["unused_claims"])
             self.assertEqual(["C1"],data["coverage_unknown_legacy"])
 
+    def test_downstream_illustration_reference_counts_fragment_as_used(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            project=Path(tmp);(project/"01_arcs/A1/claims").mkdir(parents=True);(project/"09_output/side_stories").mkdir(parents=True);(project/"09_output/illustrations").mkdir(parents=True);(project/"00_method/capture").mkdir(parents=True)
+            (project/"01_arcs/A1/claims/C1.json").write_text(json.dumps({"id":"C1","claim":"x"}),encoding="utf-8")
+            (project/"00_method/capture/fragments.json").write_text(json.dumps([{"id":"GF-1","class":"field_fragment","text":"used"},{"id":"GF-2","class":"field_fragment","text":"legacy unknown"}]),encoding="utf-8")
+            (project/"09_output/illustrations/I1.json").write_text(json.dumps({"id":"I1","input_refs":[{"type":"field_fragment","id":"GF-1"}]}),encoding="utf-8")
+            data=reciprocal_coverage_check(project,{"arcs":[{"spine_claim_ids":["C1"]}]},"Legacy paragraph.")
+            self.assertEqual(["GF-1"],data["referenced_fragments"])
+            self.assertEqual([],data["unused_fragments"])
+            self.assertEqual(["GF-2"],data["coverage_unknown_legacy_fragments"])
+
     def test_complete_instrumentation_can_report_unused_claim(self):
         with tempfile.TemporaryDirectory() as tmp:
             project=Path(tmp);(project/"01_arcs/A1/claims").mkdir(parents=True);(project/"09_output/side_stories").mkdir(parents=True)
