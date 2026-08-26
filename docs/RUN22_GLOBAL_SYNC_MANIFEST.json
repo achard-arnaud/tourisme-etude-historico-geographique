@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-08-26-run22-global-sync",
+  "status": "reviewed",
+  "mode": "video-intake-admission-plus-graph-link-functional-test",
+  "project_roots": [
+    "examples/sri_lanka_pre_1948",
+    "examples/sri_lanka_post_1948"
+  ],
+  "state_before": {
+    "video_intake": "Run20 research intake remained on an open divergent PR without typed acquisition ledgers or lineage registration",
+    "graph": "three validated Run21 bridges existed outside 04_graph and tagged references were not mechanically resolved",
+    "branches": "dev contained PR51 while main and legacy branches were not globally reconciled"
+  },
+  "dispatched_skills": [
+    {
+      "skill": "extracting-youtube-evidence",
+      "reason": "Materialize four typed degraded YouTube ledgers and preserve the zero-proposition quarantine.",
+      "inputs": [
+        "docs/intakes/INTAKE_video_research_leads_caste_tamil_conflict.md"
+      ],
+      "outputs": [
+        "docs/intakes/video_evidence/run20/VE-YT-gNFQPFp-NWg.json",
+        "docs/intakes/video_evidence/run20/VE-YT-fpa7SlVbFb0.json",
+        "docs/intakes/video_evidence/run20/VE-YT-Nk5a_pKBecE.json",
+        "docs/intakes/video_evidence/run20/VE-YT-B4iRO5V88M8.json",
+        "docs/intakes/video_evidence/run20/video_proposition_register.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "sourcing-historical-anchors",
+      "reason": "Register all four unresolved or index-only videos as T5 lead sources with zero supported claims.",
+      "inputs": [
+        "docs/intakes/video_evidence/run20/video_proposition_register.json"
+      ],
+      "outputs": [
+        "examples/sri_lanka_post_1948/05_sources/source_register_run22_video_leads.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "auditing-historiography-and-drifts",
+      "reason": "Preserve India/Sri Lanka terminology gates and legal-provenance separation for genocide, war-crime and memory frames.",
+      "inputs": [
+        "docs/intakes/INTAKE_video_research_leads_caste_tamil_conflict.md"
+      ],
+      "outputs": [
+        "docs/intakes/INTAKE_video_research_leads_caste_tamil_conflict.md",
+        "docs/intakes/intake_research_backlog.json"
+      ],
+      "status": "verified"
+    },
+    {
+      "skill": "maintaining-wiki-and-graph",
+      "reason": "Project three previously validated Run21 bridges into graph-light and harden tagged claim/source/bridge resolution.",
+      "inputs": [
+        "examples/sri_lanka_pre_1948/06_bridges",
+        "examples/sri_lanka_post_1948/06_bridges"
+      ],
+      "outputs": [
+        "examples/sri_lanka_pre_1948/04_graph/edges.jsonl",
+        "examples/sri_lanka_post_1948/04_graph/edges.jsonl",
+        "scripts/graph_link_audit.py"
+      ],
+      "status": "executed"
+    }
+  ],
+  "skipped_skills": [
+    {
+      "skill": "analyzing-economy-and-infrastructure",
+      "reason": "Run22 synchronization did not modify this stage; existing artefacts remain subject to the full repository QA."
+    },
+    {
+      "skill": "analyzing-geography-and-environment",
+      "reason": "Run22 synchronization did not modify this stage; existing artefacts remain subject to the full repository QA."
+    },
+    {
+      "skill": "analyzing-institutions-and-power",
+      "reason": "Run22 synchronization did not modify this stage; existing artefacts remain subject to the full repository QA."
+    },
+    {
+      "skill": "analyzing-regional-global-systems",
+      "reason": "Run22 synchronization did not modify this stage; existing artefacts remain subject to the full repository QA."
+    },
+    {
+      "skill": "analyzing-religion-culture-legitimacy",
+      "reason": "Run22 synchronization did not modify this stage; existing artefacts remain subject to the full repository QA."
+    },
+    {
+      "skill": "analyzing-security-and-geopolitics",
+      "reason": "Run22 synchronization did not modify this stage; existing artefacts remain subject to the full repository QA."
+    },
+    {
+      "skill": "analyzing-society-and-demography",
+      "reason": "Run22 synchronization did not modify this stage; existing artefacts remain subject to the full repository QA."
+    },
+    {
+      "skill": "building-causal-bridges",
+      "reason": "Run22 synchronization did not modify this stage; existing artefacts remain subject to the full repository QA."
+    },
+    {
+      "skill": "capturing-field-evidence",
+      "reason": "Run22 synchronization did not modify this stage; existing artefacts remain subject to the full repository QA."
+    },
+    {
+      "skill": "composing-arc-recaps",
+      "reason": "Run22 synchronization did not modify this stage; existing artefacts remain subject to the full repository QA."
+    },
+    {
+      "skill": "composing-side-stories",
+      "reason": "Run22 synchronization did not modify this stage; existing artefacts remain subject to the full repository QA."
+    },
+    {
+      "skill": "curating-historical-map-assets",
+      "reason": "Run22 synchronization did not modify this stage; existing artefacts remain subject to the full repository QA."
+    },
+    {
+      "skill": "editing-historical-travel-output",
+      "reason": "Run22 synchronization did not modify this stage; existing artefacts remain subject to the full repository QA."
+    },
+    {
+      "skill": "sanitizing-historical-claims",
+      "reason": "Run22 synchronization did not modify this stage; existing artefacts remain subject to the full repository QA."
+    },
+    {
+      "skill": "storytelling-historical-travel",
+      "reason": "Run22 synchronization did not modify this stage; existing artefacts remain subject to the full repository QA."
+    },
+    {
+      "skill": "structuring-chronological-arcs",
+      "reason": "Run22 synchronization did not modify this stage; existing artefacts remain subject to the full repository QA."
+    },
+    {
+      "skill": "tailoring-reader-profiles",
+      "reason": "Run22 synchronization did not modify this stage; existing artefacts remain subject to the full repository QA."
+    },
+    {
+      "skill": "zooming-geographic-scales",
+      "reason": "Run22 synchronization did not modify this stage; existing artefacts remain subject to the full repository QA."
+    }
+  ],
+  "validations": [
+    "python -m unittest discover -s tests -v",
+    "python scripts/audit_skill.py .",
+    "python scripts/audit_workflow.py --latest",
+    "python scripts/audit_context_budget.py --latest",
+    "python scripts/audit_intake_lineage.py",
+    "python scripts/video_claim_contract.py --evidence docs/intakes/video_evidence/run20/VE-YT-gNFQPFp-NWg.json docs/intakes/video_evidence/run20/VE-YT-fpa7SlVbFb0.json docs/intakes/video_evidence/run20/VE-YT-Nk5a_pKBecE.json docs/intakes/video_evidence/run20/VE-YT-B4iRO5V88M8.json --register docs/intakes/video_evidence/run20/video_proposition_register.json",
+    "python scripts/graph_link_audit.py examples/sri_lanka_pre_1948",
+    "python scripts/graph_link_audit.py examples/sri_lanka_post_1948",
+    "python scripts/qa_project.py examples/sri_lanka_pre_1948",
+    "python scripts/qa_project.py examples/sri_lanka_post_1948",
+    "python scripts/qa_composition_pipeline.py examples/sri_lanka_pre_1948",
+    "python scripts/qa_composition_pipeline.py examples/sri_lanka_post_1948",
+    "python scripts/qa_functional_pre1948.py",
+    "python scripts/render_composed_reader.py --project all"
+  ],
+  "state_after": {
+    "video_intake": "archived, registered, backlogged and represented by four degraded ledgers plus an empty proposition register",
+    "graph": "three Run21 bridge projections added; endpoint and claim/source/bridge tags resolve mechanically; Run20 creates zero graph links",
+    "branches": "PR43 rebased logically onto current dev; obsolete branch state separately classified"
+  },
+  "promotion_decision": "Merge PR43 to dev after complete GREEN, then promote synchronized dev to main after release CI."
+}

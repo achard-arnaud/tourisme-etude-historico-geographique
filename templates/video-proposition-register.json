@@ -1,0 +1,27 @@
+{
+  "schema_version": "video-proposition-register/v1",
+  "id": "VPR-<RUN>-<SLUG>",
+  "created_at": "YYYY-MM-DD",
+  "propositions": [
+    {
+      "id": "VP-<RUN>-001",
+      "statement": "Atomic proposition expressed in the video.",
+      "claim_class": "reported_claim | interpretation | tradition | question | metric_lead | causal_lead | discarded_lead",
+      "status": "lead_only",
+      "video_evidence_id": "VE-YT-<VIDEO_ID>",
+      "speaker_or_channel": "",
+      "timestamp_start_s": 0.0,
+      "timestamp_end_s": 10.0,
+      "transcript_excerpt": "Short evidence-bounded excerpt.",
+      "original_language": "",
+      "translation_status": "original | machine_translated | human_translated | not_applicable",
+      "target_arc": null,
+      "target_hil": [],
+      "target_zoom": null,
+      "research_queries": ["What primary or academic evidence would confirm or refute this proposition?"],
+      "candidate_source_ids": [],
+      "contradictions": [],
+      "promoted_claim_ids": []
+    }
+  ]
+}

@@ -7,7 +7,7 @@ Un **OS réutilisable d’enquête, de composition et de narration historico-gé
 **Arc-first + Zettelkasten-lite + graph-light + side-story lineage + promotion explicite.**
 
 - `SKILL.md` : orchestrateur, gates et promotion.
-- `skills/` : **17 sous-skills** spécialisées, dont `composing-side-stories`.
+- `skills/` : **22 sous-skills** spécialisées, dont `composing-side-stories`.
 - `templates/` : contrats d’artefacts.
 - `scripts/` : scaffolding, QA, création de side stories et rendu.
 - `docs/` : architecture, SOP, TDD, feedback, manifests et QA.
@@ -75,11 +75,20 @@ Une comparaison entre dans la causalité seulement si mécanisme, période, unit
 
 Deux axes : tier épistémique T0–T5 et rôle d’ancrage. Plusieurs `source_register*.json` peuvent coexister avec IDs uniques. `qa_project.py` valide aussi les références utilisées par les side stories ; la composition ne modifie jamais le tier ou la confiance de l’évidence.
 
+## Preuves vidéo YouTube
+
+`extracting-youtube-evidence` récupère d'abord les sous-titres manuels ou automatiques, avec transcription audio explicitement autorisée en dernier recours. Chaque proposition conserve ses timestamps et reste `lead_only` jusqu'à corroboration T0–T2 ; la vidéo est enregistrée comme T5/`lead` et ne peut pas, seule, établir un fait, une métrique ou une causalité historique.
+
+```bash
+python scripts/youtube_transcript.py <URL...> --output <project>/00_method/video_evidence
+python scripts/video_claim_contract.py --evidence <ledger.json...> --register <propositions.json>
+```
+
 ## Pipeline de bout en bout
 
 1. Initialiser avec `new_project.py` — y compris `09_output/side_stories/`.
 2. Fixer le contrat lecteur.
-3. Capturer puis sanitizer sans conclure prématurément.
+3. Pour une vidéo, acquérir le transcript horodaté et ses propositions `lead_only`; capturer puis sanitizer sans conclure prématurément.
 4. Construire arcs, claims, zooms, HIL et bridges.
 5. Stabiliser sources, drifts, wiki/graph.
 6. **Composer le hors-tronc utile** avec `composing-side-stories` : lineage + nomenclature + placement + return.

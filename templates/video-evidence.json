@@ -1,0 +1,26 @@
+{
+  "schema_version": "video-evidence/v1",
+  "id": "VE-YT-<VIDEO_ID>",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=<VIDEO_ID>",
+  "video_id": "<VIDEO_ID>",
+  "acquired_at": "YYYY-MM-DDTHH:MM:SS+00:00",
+  "status": "success | no_transcript | invalid_url | missing_dependency | unresolved",
+  "acquisition_method": "manual_captions | automatic_captions | audio_groq | audio_openai | null",
+  "language_request": "fr.*,en.*",
+  "metadata": {
+    "title": null,
+    "channel": null,
+    "channel_id": null,
+    "upload_date": null,
+    "duration": null,
+    "webpage_url": null
+  },
+  "segments": [
+    {"start_s": 0.0, "end_s": 4.2, "text": "Timestamped transcript fragment."}
+  ],
+  "transcript_text": "Timestamped transcript fragment.",
+  "transcript_sha256": "<SHA256>",
+  "limitations": [],
+  "errors": []
+}
