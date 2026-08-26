@@ -7,7 +7,7 @@ Un **OS réutilisable d’enquête, de composition et de narration historico-gé
 **Arc-first + Zettelkasten-lite + graph-light + side-story lineage + promotion explicite.**
 
 - `SKILL.md` : orchestrateur, gates et promotion.
-- `skills/` : **18 sous-skills** spécialisées, dont `composing-side-stories`.
+- `skills/` : **22 sous-skills** spécialisées, dont `composing-side-stories`.
 - `templates/` : contrats d’artefacts.
 - `scripts/` : scaffolding, QA, création de side stories et rendu.
 - `docs/` : architecture, SOP, TDD, feedback, manifests et QA.

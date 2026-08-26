@@ -1,0 +1,28 @@
+{
+  "schema_version": "video-evidence/v1",
+  "id": "VE-YT-Nk5a_pKBecE",
+  "platform": "youtube",
+  "url": "https://youtu.be/Nk5a_pKBecE",
+  "video_id": "Nk5a_pKBecE",
+  "acquired_at": "2026-08-26T00:00:00+00:00",
+  "status": "no_transcript",
+  "acquisition_method": null,
+  "language_request": "fr.*,en.*",
+  "segments": [],
+  "transcript_text": "",
+  "transcript_sha256": null,
+  "metadata": {
+    "title": null,
+    "channel": null,
+    "channel_id": null,
+    "upload_date": null,
+    "duration": null,
+    "webpage_url": "https://youtu.be/Nk5a_pKBecE"
+  },
+  "limitations": [
+    "transcript and metadata unresolved; topic must not be inferred"
+  ],
+  "errors": [
+    "legacy acquisition pass did not recover captions"
+  ]
+}

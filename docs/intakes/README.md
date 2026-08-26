@@ -52,3 +52,7 @@ python scripts/audit_intake_lineage.py
 ```
 
 The audit cross-checks manifest references, archived files, registry entries, declared downstream outputs, research-workstream coverage, priorities and pending-external review dates.
+
+## Run22 admission of the video-leads intake
+
+The former Run20 video-leads PR was admitted after Run21. Four typed degraded ledgers preserve the failed acquisition outcome; the proposition register is intentionally empty because no timestamped transcript was available. Research themes remain in the backlog, while claims and graph links remain blocked until evidence-bounded propositions and independent historical sourcing exist.

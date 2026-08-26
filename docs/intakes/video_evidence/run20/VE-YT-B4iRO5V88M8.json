@@ -1,0 +1,28 @@
+{
+  "schema_version": "video-evidence/v1",
+  "id": "VE-YT-B4iRO5V88M8",
+  "platform": "youtube",
+  "url": "https://youtu.be/B4iRO5V88M8",
+  "video_id": "B4iRO5V88M8",
+  "acquired_at": "2026-08-26T00:00:00+00:00",
+  "status": "no_transcript",
+  "acquisition_method": null,
+  "language_request": "fr.*,en.*",
+  "segments": [],
+  "transcript_text": "",
+  "transcript_sha256": null,
+  "metadata": {
+    "title": "Le Génocide des Tamouls dont personne ne parle",
+    "channel": null,
+    "channel_id": null,
+    "upload_date": null,
+    "duration": null,
+    "webpage_url": "https://youtu.be/B4iRO5V88M8"
+  },
+  "limitations": [
+    "title/topic independently indexed; the genocide label is a memory/advocacy lead, not a legal finding"
+  ],
+  "errors": [
+    "legacy acquisition pass did not recover captions"
+  ]
+}

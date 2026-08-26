@@ -1,0 +1,54 @@
+[
+  {
+    "id": "YT-R20-GNFQ",
+    "tier": "T5",
+    "anchor_role": "lead",
+    "title": "Unresolved YouTube video gNFQPFp-NWg",
+    "date": "retrieved 2026-08-26; upload date unresolved",
+    "author_or_institution": "YouTube channel unresolved",
+    "scope": "URL-level discovery only; transcript and metadata unresolved",
+    "claims_supported": [],
+    "limitations": "No content claim may be inferred from this unresolved URL.",
+    "provenance": "direct",
+    "url": "https://youtu.be/gNFQPFp-NWg"
+  },
+  {
+    "id": "YT-R20-FPA7",
+    "tier": "T5",
+    "anchor_role": "lead",
+    "title": "YouTube lead independently indexed around caste/Dalit educational material",
+    "date": "retrieved 2026-08-26; upload date unresolved",
+    "author_or_institution": "YouTube channel unresolved",
+    "scope": "Theme discovery for an India comparator only",
+    "claims_supported": [],
+    "limitations": "No timestamped transcript; independently indexed topic does not establish the video's exact assertions or historical truth.",
+    "provenance": "direct",
+    "url": "https://youtu.be/fpa7SlVbFb0"
+  },
+  {
+    "id": "YT-R20-NK5A",
+    "tier": "T5",
+    "anchor_role": "lead",
+    "title": "Unresolved YouTube video Nk5a_pKBecE",
+    "date": "retrieved 2026-08-26; upload date unresolved",
+    "author_or_institution": "YouTube channel unresolved",
+    "scope": "URL-level discovery only; transcript and metadata unresolved",
+    "claims_supported": [],
+    "limitations": "No content claim may be inferred from this unresolved URL.",
+    "provenance": "direct",
+    "url": "https://youtu.be/Nk5a_pKBecE"
+  },
+  {
+    "id": "YT-R20-B4IR",
+    "tier": "T5",
+    "anchor_role": "lead",
+    "title": "Le Génocide des Tamouls dont personne ne parle",
+    "date": "retrieved 2026-08-26; upload date unresolved",
+    "author_or_institution": "YouTube channel unresolved",
+    "scope": "Controversy and memory-frame discovery only",
+    "claims_supported": [],
+    "limitations": "No timestamped transcript. The indexed title is not proof of genocide or a UN/judicial finding.",
+    "provenance": "direct",
+    "url": "https://youtu.be/B4iRO5V88M8"
+  }
+]

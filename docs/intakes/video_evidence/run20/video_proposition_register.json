@@ -1,0 +1,7 @@
+{
+  "schema_version": "video-proposition-register/v1",
+  "id": "VPR-R22-RUN20-VIDEO-LEADS",
+  "created_at": "2026-08-26",
+  "propositions": [],
+  "notes": "Intentionally empty: no timestamped transcript was recovered, so indexed themes cannot be converted into evidence-bounded propositions."
+}
