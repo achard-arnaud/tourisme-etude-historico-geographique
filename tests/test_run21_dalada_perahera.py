@@ -18,7 +18,7 @@ class Run21DaladaPeraheraTests(unittest.TestCase):
         self.assertEqual(pre['tier'], 'T2')
         self.assertEqual(post['tier'], 'T0')
         self.assertIn('not an independent', pre['limitations'])
-        self.assertIn('2026 schedule', post['scope'])
+        self.assertIn('2026 Kandy Esala Perahera calendar', post['scope'])
 
     def test_historical_temple_narrative_remains_typed_as_tradition(self):
         claim = self.load(PRE / '01_arcs' / 'A07b_kandyan_kingdom_and_defensive_interior' / 'claims' / 'C-R21-KDY-PERAHERA-TRADITION-001.json')
