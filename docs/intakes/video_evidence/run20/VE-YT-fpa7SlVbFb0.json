@@ -1,0 +1,28 @@
+{
+  "schema_version": "video-evidence/v1",
+  "id": "VE-YT-fpa7SlVbFb0",
+  "platform": "youtube",
+  "url": "https://youtu.be/fpa7SlVbFb0",
+  "video_id": "fpa7SlVbFb0",
+  "acquired_at": "2026-08-26T00:00:00+00:00",
+  "status": "no_transcript",
+  "acquisition_method": null,
+  "language_request": "fr.*,en.*",
+  "segments": [],
+  "transcript_text": "",
+  "transcript_sha256": null,
+  "metadata": {
+    "title": null,
+    "channel": null,
+    "channel_id": null,
+    "upload_date": null,
+    "duration": null,
+    "webpage_url": "https://youtu.be/fpa7SlVbFb0"
+  },
+  "limitations": [
+    "topic was independently indexed as caste/Dalit educational material; this is not timestamped video evidence"
+  ],
+  "errors": [
+    "legacy acquisition pass did not recover captions"
+  ]
+}

@@ -79,5 +79,24 @@
     ],
     "recovery_action": null,
     "notes": "The dense tea/plantation intake is now preserved verbatim and also has structured Run18/Run19 descendants."
+  },
+  {
+    "id": "I-R22-VIDEO-LEADS",
+    "source_name": "INTAKE_video_research_leads_caste_tamil_conflict.md",
+    "intake_kind": "analytical_intake",
+    "first_run": "RUN22",
+    "manifest": "docs/RUN22_GLOBAL_SYNC_MANIFEST.json",
+    "preservation_status": "archived",
+    "repo_path": "docs/intakes/INTAKE_video_research_leads_caste_tamil_conflict.md",
+    "outputs": [
+      "docs/intakes/video_evidence/run20/VE-YT-gNFQPFp-NWg.json",
+      "docs/intakes/video_evidence/run20/VE-YT-fpa7SlVbFb0.json",
+      "docs/intakes/video_evidence/run20/VE-YT-Nk5a_pKBecE.json",
+      "docs/intakes/video_evidence/run20/VE-YT-B4iRO5V88M8.json",
+      "docs/intakes/video_evidence/run20/video_proposition_register.json",
+      "examples/sri_lanka_post_1948/05_sources/source_register_run22_video_leads.json"
+    ],
+    "recovery_action": null,
+    "notes": "Originally proposed as Run20; admitted after Run21 through Run22. Video content remains quarantined because no timestamped transcript was recovered."
   }
 ]
