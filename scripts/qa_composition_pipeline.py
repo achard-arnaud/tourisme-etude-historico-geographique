@@ -9,9 +9,8 @@ from side_story_contract import validate_side_stories
 from arc_recap_contract import validate_arc_recaps,load_arc_recaps,RENDERABLE
 from materialize_arc_recaps import materialize_arc_recaps
 from map_asset_contract import validate_map_assets
-from illustration_contract import validate_illustrations
-from illustration_contract import load_illustrations
-from reader_profile_contract import validate_reader_profile
+from illustration_contract import validate_illustrations,load_illustrations,assert_rendered_illustrations,check_illustration_density
+from reader_profile_contract import validate_reader_profile,load_reader_profile
 from resolve_reader_plan import build_plan
 from build_story_scaffold import write_scaffold
 
@@ -38,6 +37,11 @@ def main():
             known_illustrations={x.get('id') for _,x in load_illustrations(project)}
             routed_illustrations=set(plan['selected_illustration_ids'])|set(plan['illustration_review_queue_ids'])|set(plan['retired_illustration_ids'])
             if known_illustrations!=routed_illustrations:errors.append(f"illustration plan coverage mismatch: routed {len(routed_illustrations)}/{len(known_illustrations)}")
+            if canonical is not None:
+                markdown=canonical.read_text(encoding='utf-8')
+                assert_rendered_illustrations(markdown,plan['selected_illustration_ids'])
+                density=load_reader_profile(project)['illustration_density_policy']
+                errors+=check_illustration_density(markdown,plan['selected_illustration_ids'],density['max_per_n_pages'],density['words_per_page'])
             (project/'09_output'/'reader_plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
         except Exception as exc:errors.append(f'reader plan: {exc}')
     for x in warnings:print('WARN:',x,file=sys.stderr)
