@@ -1,1 +1,181 @@
-{"schema_version":1,"run_id":"2026-08-25-run18-tea-plantation-economy","status":"reviewed","mode":"ishikawa-before-claims-plus-rival-hypothesis-testing","project_roots":["examples/sri_lanka_pre_1948","examples/sri_lanka_post_1948"],"state_before":{"plantation":"dense intake mixing biological capital labour value-chain and identity explanations","method":"two Ishikawa passes and rival hypotheses required before explanatory synthesis"},"dispatched_skills":[{"skill":"auditing-historiography-and-drifts","reason":"Refute rust-only smooth conversion and forced-upmarket framings.","outputs":["examples/sri_lanka_post_1948/01_arcs/A17b_plantation_economy_and_value_capture/claims/C-R18-2021-UPMARKET-FALSE-001.json"],"status":"executed"},{"skill":"capturing-field-evidence","reason":"Persist both Ishikawa passes before claims.","outputs":["examples/sri_lanka_pre_1948/00_method/capture/run18_ishikawa_coffee_to_tea.json","examples/sri_lanka_post_1948/00_method/capture/run18_ishikawa_value_capture.json"],"status":"executed"},{"skill":"sourcing-historical-anchors","reason":"Domestic-majority multilingual source base.","outputs":["examples/sri_lanka_pre_1948/05_sources/source_register_run18_tea.json","examples/sri_lanka_post_1948/05_sources/source_register_run18_tea.json"],"status":"executed"},{"skill":"structuring-chronological-arcs","reason":"Four non-colliding partial arcs.","outputs":["examples/sri_lanka_pre_1948/01_arcs/A07c_coffee_collapse_and_tea_conversion/ARC.md","examples/sri_lanka_post_1948/01_arcs/A17b_plantation_economy_and_value_capture/ARC.md"],"status":"executed"},{"skill":"zooming-geographic-scales","reason":"Estate to island to global value-chain scales.","outputs":["examples/sri_lanka_post_1948/08_questions/run18_value_capture_hypotheses.md"],"status":"executed"},{"skill":"sanitizing-historical-claims","reason":"Separate facts metrics intent effects inference questions and discarded leads.","outputs":["examples/sri_lanka_post_1948/01_arcs/A18_malaiyaha_tamils_status_and_wage/claims/C-R18-WAGE-2026-FACT.json"],"status":"executed"},{"skill":"analyzing-institutions-and-power","reason":"Labour law citizenship GI wage and lease institutions.","outputs":["examples/sri_lanka_post_1948/01_arcs/A18_malaiyaha_tamils_status_and_wage/claims/C-R18-CITIZENSHIP-001.json"],"status":"executed"},{"skill":"analyzing-geography-and-environment","reason":"Relief infrastructure and environmental constraints.","outputs":["examples/sri_lanka_pre_1948/09_output/side_stories/SS-R18-MOUNTAINS-OBJECT-001.json"],"status":"executed"},{"skill":"analyzing-economy-and-infrastructure","reason":"H2 and M1/M2/M3 capital and value-chain tests.","outputs":["examples/sri_lanka_post_1948/01_arcs/A17b_plantation_economy_and_value_capture/claims/C-R18-M3-001.json"],"status":"executed"},{"skill":"analyzing-society-and-demography","reason":"Recruitment estate category line rooms citizenship and wages.","outputs":["examples/sri_lanka_post_1948/01_arcs/A18_malaiyaha_tamils_status_and_wage/claims/C-R18-LINEROOMS-2024.json"],"status":"executed"},{"skill":"analyzing-regional-global-systems","reason":"Imperial demand global brand ownership and downstream value capture.","outputs":["examples/sri_lanka_post_1948/01_arcs/A17b_plantation_economy_and_value_capture/claims/C-R18-LIPTON-OWNERSHIP-2022.json"],"status":"executed"},{"skill":"building-causal-bridges","reason":"D/U bridges for rust cinchona GI and wage subsidy.","outputs":["examples/sri_lanka_pre_1948/06_bridges/B-R18-RUST-ONLY-001.json","examples/sri_lanka_post_1948/06_bridges/B-R18-WAGE-SUBSIDY-PRODUCTIVITY-001.json"],"status":"executed"},{"skill":"composing-side-stories","reason":"15 bounded candidates including object_focus and portrait.","outputs":["examples/sri_lanka_post_1948/09_output/side_stories/SS-R18-LIPTON-PORTRAIT-001.json","examples/sri_lanka_pre_1948/09_output/side_stories/SS-R18-TEA-PLANT-OBJECT-001.json"],"status":"executed"}],"skipped_skills":[{"skill":"analyzing-religion-culture-legitimacy","reason":"No load-bearing religion mechanism."},{"skill":"analyzing-security-and-geopolitics","reason":"No new security claim."},{"skill":"curating-historical-map-assets","reason":"Factory-catchment monopsony remains future map target."},{"skill":"tailoring-reader-profiles","reason":"Profiles unchanged."},{"skill":"composing-arc-recaps","reason":"Run18 arcs remain partial."},{"skill":"storytelling-historical-travel","reason":"No canonical narrative while discriminating tests remain open."},{"skill":"editing-historical-travel-output","reason":"Canonical reader unchanged."},{"skill":"maintaining-wiki-and-graph","reason":"Partial arcs are not stable graph promotion."}],"validations":["python -m unittest discover -s tests -v","python scripts/audit_workflow.py --latest","python scripts/audit_run18_tea.py","python scripts/qa_project.py examples/sri_lanka_pre_1948","python scripts/qa_project.py examples/sri_lanka_post_1948","python scripts/qa_composition_pipeline.py examples/sri_lanka_pre_1948","python scripts/qa_composition_pipeline.py examples/sri_lanka_post_1948","python scripts/qa_functional_pre1948.py","python scripts/render_composed_reader.py --project all"],"state_after":{"conversion":"rust-only sufficiency D; H2/H3 remain open lag tests","value_capture":"M1/M2/M3 remain rivals; 2026 GI application corrects Lion-only premise","wage":"2026 quantitative fact/effect/inference split and productivity bridge U","composition":"15 candidate Run18 stories; no reader promotion"},"promotion_decision":"Promote after integrity/runtime CI; D/U outcomes are successful outputs."}
+{
+  "schema_version": 1,
+  "run_id": "2026-08-25-run18-tea-plantation-economy",
+  "status": "reviewed",
+  "mode": "ishikawa-before-claims-plus-rival-hypothesis-testing",
+  "project_roots": [
+    "examples/sri_lanka_pre_1948",
+    "examples/sri_lanka_post_1948"
+  ],
+  "state_before": {
+    "plantation": "dense intake mixing biological capital labour value-chain and identity explanations",
+    "method": "two Ishikawa passes and rival hypotheses required before explanatory synthesis"
+  },
+  "dispatched_skills": [
+    {
+      "skill": "auditing-historiography-and-drifts",
+      "reason": "Refute rust-only smooth conversion and forced-upmarket framings.",
+      "outputs": [
+        "examples/sri_lanka_post_1948/01_arcs/A17b_plantation_economy_and_value_capture/claims/C-R18-2021-UPMARKET-FALSE-001.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "capturing-field-evidence",
+      "reason": "Persist both Ishikawa passes before claims.",
+      "outputs": [
+        "examples/sri_lanka_pre_1948/00_method/capture/run18_ishikawa_coffee_to_tea.json",
+        "examples/sri_lanka_post_1948/00_method/capture/run18_ishikawa_value_capture.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "sourcing-historical-anchors",
+      "reason": "Domestic-majority multilingual source base.",
+      "outputs": [
+        "examples/sri_lanka_pre_1948/05_sources/source_register_run18_tea.json",
+        "examples/sri_lanka_post_1948/05_sources/source_register_run18_tea.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "structuring-chronological-arcs",
+      "reason": "Four non-colliding partial arcs.",
+      "outputs": [
+        "examples/sri_lanka_pre_1948/01_arcs/A07c_coffee_collapse_and_tea_conversion/ARC.md",
+        "examples/sri_lanka_post_1948/01_arcs/A17b_plantation_economy_and_value_capture/ARC.md"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "zooming-geographic-scales",
+      "reason": "Estate to island to global value-chain scales.",
+      "outputs": [
+        "examples/sri_lanka_post_1948/08_questions/run18_value_capture_hypotheses.md"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "sanitizing-historical-claims",
+      "reason": "Separate facts metrics intent effects inference questions and discarded leads.",
+      "outputs": [
+        "examples/sri_lanka_post_1948/01_arcs/A18_malaiyaha_tamils_status_and_wage/claims/C-R18-WAGE-2026-FACT.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "analyzing-institutions-and-power",
+      "reason": "Labour law citizenship GI wage and lease institutions.",
+      "outputs": [
+        "examples/sri_lanka_post_1948/01_arcs/A18_malaiyaha_tamils_status_and_wage/claims/C-R18-CITIZENSHIP-001.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "analyzing-geography-and-environment",
+      "reason": "Relief infrastructure and environmental constraints.",
+      "outputs": [
+        "examples/sri_lanka_pre_1948/09_output/side_stories/SS-R18-MOUNTAINS-OBJECT-001.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "analyzing-economy-and-infrastructure",
+      "reason": "H2 and M1/M2/M3 capital and value-chain tests.",
+      "outputs": [
+        "examples/sri_lanka_post_1948/01_arcs/A17b_plantation_economy_and_value_capture/claims/C-R18-M3-001.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "analyzing-society-and-demography",
+      "reason": "Recruitment estate category line rooms citizenship and wages.",
+      "outputs": [
+        "examples/sri_lanka_post_1948/01_arcs/A18_malaiyaha_tamils_status_and_wage/claims/C-R18-LINEROOMS-2024.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "analyzing-regional-global-systems",
+      "reason": "Imperial demand global brand ownership and downstream value capture.",
+      "outputs": [
+        "examples/sri_lanka_post_1948/01_arcs/A17b_plantation_economy_and_value_capture/claims/C-R18-LIPTON-OWNERSHIP-2022.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "building-causal-bridges",
+      "reason": "D/U bridges for rust cinchona GI and wage subsidy.",
+      "outputs": [
+        "examples/sri_lanka_pre_1948/06_bridges/B-R18-RUST-ONLY-001.json",
+        "examples/sri_lanka_post_1948/06_bridges/B-R18-WAGE-SUBSIDY-PRODUCTIVITY-001.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "skill": "composing-side-stories",
+      "reason": "15 bounded candidates including object_focus and portrait.",
+      "outputs": [
+        "examples/sri_lanka_post_1948/09_output/side_stories/SS-R18-LIPTON-PORTRAIT-001.json",
+        "examples/sri_lanka_pre_1948/09_output/side_stories/SS-R18-TEA-PLANT-OBJECT-001.json"
+      ],
+      "status": "executed"
+    }
+  ],
+  "skipped_skills": [
+    {
+      "skill": "analyzing-religion-culture-legitimacy",
+      "reason": "No load-bearing religion mechanism."
+    },
+    {
+      "skill": "analyzing-security-and-geopolitics",
+      "reason": "No new security claim."
+    },
+    {
+      "skill": "curating-historical-map-assets",
+      "reason": "Factory-catchment monopsony remains future map target."
+    },
+    {
+      "skill": "tailoring-reader-profiles",
+      "reason": "Profiles unchanged."
+    },
+    {
+      "skill": "composing-arc-recaps",
+      "reason": "Run18 arcs remain partial."
+    },
+    {
+      "skill": "storytelling-historical-travel",
+      "reason": "No canonical narrative while discriminating tests remain open."
+    },
+    {
+      "skill": "editing-historical-travel-output",
+      "reason": "Canonical reader unchanged."
+    },
+    {
+      "skill": "maintaining-wiki-and-graph",
+      "reason": "Partial arcs are not stable graph promotion."
+    },
+    {
+      "skill": "extracting-youtube-evidence",
+      "reason": "Run18 intake was supplied as text; no YouTube URL or transcript acquisition was required."
+    }
+  ],
+  "validations": [
+    "python -m unittest discover -s tests -v",
+    "python scripts/audit_workflow.py --latest",
+    "python scripts/audit_run18_tea.py",
+    "python scripts/qa_project.py examples/sri_lanka_pre_1948",
+    "python scripts/qa_project.py examples/sri_lanka_post_1948",
+    "python scripts/qa_composition_pipeline.py examples/sri_lanka_pre_1948",
+    "python scripts/qa_composition_pipeline.py examples/sri_lanka_post_1948",
+    "python scripts/qa_functional_pre1948.py",
+    "python scripts/render_composed_reader.py --project all"
+  ],
+  "state_after": {
+    "conversion": "rust-only sufficiency D; H2/H3 remain open lag tests",
+    "value_capture": "M1/M2/M3 remain rivals; 2026 GI application corrects Lion-only premise",
+    "wage": "2026 quantitative fact/effect/inference split and productivity bridge U",
+    "composition": "15 candidate Run18 stories; no reader promotion"
+  },
+  "promotion_decision": "Promote after integrity/runtime CI; D/U outcomes are successful outputs."
+}
