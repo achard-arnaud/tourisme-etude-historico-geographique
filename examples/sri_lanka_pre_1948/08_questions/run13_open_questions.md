@@ -13,6 +13,9 @@
 - How do Pali chronicle, Tamil literary and modern nationalist uses of Nāga terminology relate chronologically?
 
 ## Conservation
-- Locate the exact 1938 gazette proclamations for Yala and Wilpattu boundaries/designations.
+- Locate the exact 1938 gazette proclamations for Yala and Wilpattu boundaries/designations. **Run20 partial resolution:** a Wilpattu management plan and a later parliamentary gazette table both identify Gazette 8356 dated 25 February 1938 for Wilpattu designations. A Ministry publication independently confirms Yala's conversion to national-park status on 25 February 1938 under the Fauna and Flora Protection Ordinance. The original 1938 Gazette facsimile and exact Yala proclamation number remain open, so this question is not fully closed.
 - Is there any named administrative/documentary transmission channel from Yellowstone to Ceylon? Until found, keep the comparison as analogy rather than influence.
 - Which Ceylonese protected areas involved documented displacement or access restriction, rather than importing the generic fortress-conservation model?
+
+## Run20 preservation rule
+Later research narrows earlier questions in place but does not erase the original gate or upgrade a later institutional summary into the missing 1938 primary document.
