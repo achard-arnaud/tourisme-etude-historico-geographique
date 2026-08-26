@@ -1,0 +1,16 @@
+{
+  "id": "B-R21-KDY-PERAHERA-FUNCTIONAL-FLOW-001",
+  "from_claim": "C-R21-KDY-PERAHERA-001",
+  "to_claim": "C-R17-KDY-FUNC-001",
+  "question": "Does the recurring Kandy Esala Perahera cycle provide a concrete mechanism for part of Kandy's non-resident functional population?",
+  "mechanism": "A recurring, place-bound multi-day ritual cycle creates predictable episodes of pilgrim, visitor, service and mobility demand that can contribute to a city's functional importance beyond its resident municipal population.",
+  "result": "C",
+  "source_ids": ["DALADA-PERAHERA-OFFICIAL-2026", "UDA-KANDY-CITY-PROFILE"],
+  "transmission_channel": "scheduled sacred processions generate recurrent temporary inflows and associated transport/service demand",
+  "time_lag": "annual recurring cycle; current 2026 schedule compared with planning-era daily-flow estimates",
+  "scale": "Z1 Kandy municipal/sacred core",
+  "confounders": ["UDA reference year is unclear", "tourists and pilgrims are aggregated", "daily average flows differ from festival peaks", "commuting and education flows are separate mechanisms", "no event-specific attendance denominator"],
+  "transportability": "mechanism",
+  "integration_action": "bridge",
+  "bounded_by": "The bridge establishes a plausible Kandy-specific recurring-flow mechanism, not the share of total transient population attributable to Perahera, its economic value, or whether festival peaks explain ordinary-day functional importance."
+}
