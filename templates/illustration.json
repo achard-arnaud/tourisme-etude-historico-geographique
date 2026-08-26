@@ -32,6 +32,11 @@
     "visual_notes": "",
     "uncertainty": ""
   },
+  "tag_review": {
+    "status": "pending|approved|rejected",
+    "trigger": "auto_low_confidence|manual",
+    "notes": ""
+  },
   "human_review": {"status": "pending|approved|rejected", "reviewed_at": null, "notes": ""},
   "fragment": {"caption": "", "what_it_shows": "", "why_here": "", "limits": ""},
   "placement": {
