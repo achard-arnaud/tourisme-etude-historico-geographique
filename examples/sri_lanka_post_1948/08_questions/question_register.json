@@ -29,5 +29,38 @@
     "discriminating_test": "Two tourism collapses, three years apart, under different fiscal regimes. Compare shock magnitude and duration against fiscal, reserve and debt-maturity positions.",
     "falsifier": "Comparable fiscal positions with divergent outcomes, or comparable outcomes with divergent shock sizes.",
     "priority": 1
+  },
+  {
+    "id": "Q-VALUE-M1",
+    "question": "Is the low share of final tea retail value retained in Sri Lanka primarily explained by downstream blending, branding and retail structure?",
+    "kind": "causal",
+    "arc": "A17b_plantation_economy_and_value_capture",
+    "status": "open",
+    "discriminating_test": "Trace value shares and ownership across auction, export/packing, blending, brand and retail, and compare bulk versus packaged/value-added exports from origin.",
+    "expected_evidence": ["Tea Board export statistics", "company annual reports", "auction and trade data", "consumer-market value-chain studies"],
+    "falsifier": "Origin captures comparable value in packaged/value-added channels, or variation in retained value is better explained by production cost and capital allocation than by downstream structure.",
+    "priority": 1
+  },
+  {
+    "id": "Q-VALUE-M2",
+    "question": "Is weak tea value retention primarily explained by productive underperformance such as yield, ageing bushes, replanting and cost disadvantage?",
+    "kind": "causal",
+    "arc": "A17b_plantation_economy_and_value_capture",
+    "status": "open",
+    "discriminating_test": "Compare yield, bush age, replanting rate and cost per kilo with competitor origins and with value retained at origin over time.",
+    "expected_evidence": ["Tea Research Institute data", "Tea Board statistics", "company reports", "competitor-origin production data"],
+    "falsifier": "Value-retention weakness persists where productivity and cost are competitive, or downstream/customer-relationship structure explains the variation more closely.",
+    "priority": 1
+  },
+  {
+    "id": "Q-VALUE-M3",
+    "question": "Do plantation companies systematically redeploy capital away from agronomy toward higher-return non-agricultural or downstream segments?",
+    "kind": "causal",
+    "arc": "A17b_plantation_economy_and_value_capture",
+    "status": "open",
+    "discriminating_test": "Compare a decade of company capex between replanting/mechanisation and hospitality, property, branding or diversification, against reported segment returns and leasehold horizon.",
+    "expected_evidence": ["regional plantation company annual reports", "segment reporting", "replanting and mechanisation disclosures"],
+    "falsifier": "Agronomic capex is not systematically disadvantaged, capital allocation does not track segment returns, or leasehold horizon does not predict replanting behaviour.",
+    "priority": 1
   }
 ]

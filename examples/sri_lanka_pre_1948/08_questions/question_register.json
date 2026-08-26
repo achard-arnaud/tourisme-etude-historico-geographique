@@ -3,7 +3,7 @@
     "id": "Q-TEA-001",
     "question": "Did smallholder coffee growers abandon coffee on the same schedule as the estates?",
     "kind": "causal",
-    "arc": "A07b_coffee_collapse_and_tea_conversion",
+    "arc": "A07c_coffee_collapse_and_tea_conversion",
     "hil": ["economy", "society"],
     "zoom": "Z1",
     "status": "open",
@@ -21,6 +21,39 @@
     "discriminating_test": "Acreage series by holding size.",
     "falsifier": "Share negligible — in which case Q-TEA-001 closes as abandoned, not answered.",
     "is_gate_for": ["Q-TEA-001"],
+    "priority": 1
+  },
+  {
+    "id": "Q-TEA-H1",
+    "question": "Does coffee-to-tea conversion timing track the coffee-rust front more closely than ownership transfer or resident labour density?",
+    "kind": "causal",
+    "arc": "A07c_coffee_collapse_and_tea_conversion",
+    "status": "open",
+    "discriminating_test": "Build estate- or district-year lags between rust incidence, coffee acreage collapse and tea acreage expansion, then compare them with ownership-transfer and resident-labour series.",
+    "expected_evidence": ["colonial administration reports", "district crop returns", "planter and estate records"],
+    "falsifier": "Conversion systematically lags rust while aligning more closely with ownership transfer or labour density, or coffee persists under comparable rust exposure.",
+    "priority": 1
+  },
+  {
+    "id": "Q-TEA-H2",
+    "question": "Does coffee-to-tea conversion timing track ownership transfer and agency-house consolidation more closely than the rust front?",
+    "kind": "causal",
+    "arc": "A07c_coffee_collapse_and_tea_conversion",
+    "status": "open",
+    "discriminating_test": "Compare conversion dates with planter bankruptcy, ownership transfer, agency-house consolidation and first factory-capital investment, controlling for local rust timing.",
+    "expected_evidence": ["estate ownership records", "agency-house records", "company histories", "colonial crop returns"],
+    "falsifier": "Tea conversion generally precedes ownership change, or ownership change has no observable relationship with conversion once rust timing is considered.",
+    "priority": 1
+  },
+  {
+    "id": "Q-TEA-H3",
+    "question": "Do estates with larger resident labour forces convert from coffee to tea faster, independently of rust timing and ownership form?",
+    "kind": "causal",
+    "arc": "A07c_coffee_collapse_and_tea_conversion",
+    "status": "open",
+    "discriminating_test": "Compare conversion timing against resident estate population or labour density while controlling for rust arrival and ownership transition.",
+    "expected_evidence": ["estate population returns", "labour recruitment records", "district crop returns"],
+    "falsifier": "Resident labour density has no relationship with conversion speed after rust and ownership timing are taken into account.",
     "priority": 1
   },
   {
