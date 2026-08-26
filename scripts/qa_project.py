@@ -119,15 +119,17 @@ def validate_graph_edges(root, sources, errors):
 
 
 def validate_v3_sources(sources, errors):
-    required = ('date','author_or_institution','scope','claims_supported','limitations','provenance')
+    required_nonempty = ('date','author_or_institution','scope','limitations','provenance')
     for sid, source in sources.items():
         if source.get('anchor_role') not in VALID_ANCHOR_ROLES:
             errors.append(f'invalid anchor_role: {sid}')
         if source.get('provenance') not in VALID_PROVENANCE:
             errors.append(f'invalid provenance: {sid}')
-        for field in required:
-            if source.get(field) in (None, '', []):
+        for field in required_nonempty:
+            if source.get(field) in (None, ''):
                 errors.append(f'source missing {field}: {sid}')
+        if 'claims_supported' not in source or not isinstance(source.get('claims_supported'), list):
+            errors.append(f'source missing/invalid claims_supported: {sid}')
 
 
 def validate_v3_claim(c, p, sources, errors):
