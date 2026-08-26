@@ -6,9 +6,7 @@
   "zoom": "Z1",
   "causal_role": "amplifier",
   "arc": "A08_jaffna_caste_colonial_codification",
-  "source_ids": [
-    "CAMBRIDGE-CLASSIFICATION",
-    "CAMBRIDGE-JAFFNA-SLAVERY"
-  ],
+  "source_ids": ["CAMBRIDGE-CLASSIFICATION", "CAMBRIDGE-JAFFNA-SLAVERY"],
+  "bounded_by": "Both supporting works are distinct scholarly works on Dutch/Jaffna institutions but share the Cambridge publishing domain. Preserve the colonial-hardening mechanism as bounded until an independent source family corroborates it; this is not a claim that Europeans invented caste.",
   "notes": "Use as a colonial hardening/reworking mechanism, not as a claim that Europeans invented caste."
 }
