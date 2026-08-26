@@ -1,0 +1,16 @@
+{
+  "id": "B-R21-TOOTH-RELIC-INSTITUTIONAL-CONTINUITY-001",
+  "from_claim": "C-R14-A04-VELAIKKARA-001",
+  "to_claim": "C-R17-KDY-RELIC-001",
+  "question": "Can the Tooth-relic institution visible in Polonnaruwa be connected to Kandyan relic-based legitimacy without assuming an unchanged political mechanism across the intervening centuries?",
+  "mechanism": "A durable, portable relic institution could survive changes of capital and dynasty, allowing later rulers to attach custodianship of the Tooth Relic to political legitimacy even though the actors, ritual forms and constitutional setting changed.",
+  "result": "C",
+  "source_ids": ["SIDDHAM-VELAIKKARA-2020", "STRONG-TOOTH-1815-2021", "DALADA-PERAHERA-HISTORY-OFFICIAL"],
+  "transmission_channel": "institutional custody, relocation and ritual re-embedding of the Tooth Relic across royal capitals",
+  "time_lag": "multi-century; Polonnaruwa evidence to early-modern Kandy",
+  "scale": "Z1 institutional site to Z2 island-level kingship system",
+  "confounders": ["gaps in surviving evidence", "changes in capital and dynasty", "retrospective temple tradition", "possible changes in ritual form", "difference between relic protection and sovereign legitimacy"],
+  "transportability": "mechanism",
+  "integration_action": "bridge",
+  "bounded_by": "The bridge supports institutional persistence/portability as a plausible mechanism only. It does not establish uninterrupted annual Perahera continuity, identical sovereignty rules in every kingdom, or a direct causal line from the Velaikkara charter to Kandyan politics."
+}

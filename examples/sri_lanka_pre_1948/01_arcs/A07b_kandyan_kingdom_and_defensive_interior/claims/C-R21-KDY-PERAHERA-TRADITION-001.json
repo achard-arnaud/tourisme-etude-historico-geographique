@@ -1,0 +1,13 @@
+{
+  "id": "C-R21-KDY-PERAHERA-TRADITION-001",
+  "type": "tradition",
+  "claim": "Sri Dalada Maligawa's current institutional tradition presents the Dalada Perahera as a royal ritual carried through successive capitals, links guardianship of the Tooth Relic to legitimate sovereignty, narrates its transfer to Kandy under Wimaladharmasuriya I, and describes continuation of the ritual after the British takeover of 1815 under the Diyawadana Nilame custodianship.",
+  "confidence": "C",
+  "zoom": "Z2",
+  "causal_role": "context",
+  "arc": "A07b_kandyan_kingdom_and_defensive_interior",
+  "hil": "HIL-05_religion-culture-legitimacy",
+  "source_ids": ["DALADA-PERAHERA-HISTORY-OFFICIAL"],
+  "bounded_by": "This records the Temple's present institutional historical tradition. It is not independent evidence for the stated 310 CE arrival date, uninterrupted annual performance across every capital, miraculous rain/harvest effects, or a sufficient-condition theory of sovereignty.",
+  "notes": "Run21 deliberately persists this as tradition rather than laundering first-party heritage narration into source_fact. Use it to map institutional memory and to target archival/epigraphic corroboration."
+}
