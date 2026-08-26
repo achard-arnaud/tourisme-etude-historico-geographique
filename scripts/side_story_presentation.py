@@ -53,9 +53,9 @@ LEGEND_HEADING = "Légende des encadrés"
 
 
 def _norm(value: str) -> str:
-    value = unicodedata.normalize("NFKD", value or "")
+    value = re.sub(r"^[①②③④⑤⑥⑦⑧⑨⑩]\s*", "", value or "")
+    value = unicodedata.normalize("NFKD", value)
     value = "".join(ch for ch in value if not unicodedata.combining(ch))
-    value = re.sub(r"^[①②③④⑤⑥⑦⑧⑨⑩]\s*", "", value)
     return re.sub(r"\s+", " ", value.casefold()).strip()
 
 
