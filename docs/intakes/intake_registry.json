@@ -133,5 +133,23 @@
     ],
     "recovery_action": null,
     "notes": "The supplied sitemap is preserved as a bounded intake. The JavaScript museum site is treated as T3 navigation/current curatorial memory; historical promotion requires independent academic or archival anchors."
+  },
+  {
+    "id": "I-R24-KANDY-ILLUSTRATIONS",
+    "source_name": "INTAKE_kandy_buddha_life_illustrations.md",
+    "intake_kind": "field_illustration_intake",
+    "first_run": "RUN24",
+    "manifest": "docs/RUN24_ILLUSTRATION_STORY_SCAFFOLD_MANIFEST.json",
+    "preservation_status": "archived",
+    "repo_path": "docs/intakes/INTAKE_kandy_buddha_life_illustrations.md",
+    "outputs": [
+      "examples/sri_lanka_pre_1948/00_method/capture/run24_kandy_buddha_illustration_fragments.json",
+      "examples/sri_lanka_pre_1948/09_output/illustrations/ILL-KANDY-BUDDHA-LIFE-2026-08.json",
+      "examples/sri_lanka_pre_1948/05_sources/source_register_run24_illustration_questions.json",
+      "examples/sri_lanka_pre_1948/09_output/story_scaffold.json",
+      "examples/sri_lanka_pre_1948/09_output/story_scaffold.mmd"
+    ],
+    "recovery_action": null,
+    "notes": "Ten field photos are preserved as external-binary illustration metadata. Four textual questions are qualified; all assets remain non-renderable pending human review and real manuscript targets."
   }
 ]

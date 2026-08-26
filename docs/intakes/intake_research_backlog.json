@@ -281,5 +281,19 @@
     ],
     "next_action": "Revisit only if stable individual museum pages become directly retrievable or a future Kandy manuscript section needs promotion of one of the three candidate side stories.",
     "resolution": "Selected four high-value threads; created five typed claims, one bounded D'Oyly-to-1815 bridge, three candidate side stories and one Graph Light projection. All remaining roster entries were deferred or rejected as redundant."
+  },
+  {
+    "id": "IRB-R24-KANDY-ILLUSTRATIONS",
+    "intake_id": "I-R24-KANDY-ILLUSTRATIONS",
+    "topic": "Bahirawakanda Buddha-life relief provenance and reader placement",
+    "priority": 2,
+    "status": "partially_resolved",
+    "research_state": "textual_layers_anchored_local_provenance_and_placement_open",
+    "blocks": [
+      "modern temple provenance",
+      "human image approval",
+      "canonical section anchor"
+    ],
+    "next_action": "Recover an institutional temple caption/provenance source, obtain explicit human approval and repository-accessible binaries, then create or select a canonical narrative anchor before changing any asset to reader_eligible."
   }
 ]

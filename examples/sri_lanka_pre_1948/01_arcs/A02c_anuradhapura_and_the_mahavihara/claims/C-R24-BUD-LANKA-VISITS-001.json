@@ -1,0 +1,13 @@
+{
+  "id": "C-R24-BUD-LANKA-VISITS-001",
+  "type": "tradition",
+  "claim": "Mahāvaṃsa chapter I narrates a first visit of the Buddha to Mahiyangana involving yakkhas and a second visit to Nāgadīpa involving the nāga rulers Cūlodara and Mahodara; these are explicit Sri Lankan chronicle traditions, not independently established episodes of the historical Buddha's itinerary.",
+  "confidence": "A",
+  "zoom": "Z1",
+  "causal_role": "context",
+  "arc": "A02c_anuradhapura_and_the_mahavihara",
+  "hil": "HIL-08_historiography-bias",
+  "source_ids": ["MAHAVAMSA-GEIGER-1912-CH1"],
+  "bounded_by": "Confidence A applies to what the chronicle narrates. It must never be restated as confidence A that the visits occurred.",
+  "notes": "Directly qualifies ILL-KANDY-09 and ILL-KANDY-10."
+}

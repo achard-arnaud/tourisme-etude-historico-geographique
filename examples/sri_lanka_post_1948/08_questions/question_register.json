@@ -4,12 +4,23 @@
     "question": "Is Kandy growing faster or slower than the national average in population, output per capita, and land value?",
     "kind": "metric",
     "arc": "A19_kandy_second_city_paradox",
-    "status": "open",
+    "status": "bounded",
     "discriminating_test": "Three series on consistent boundaries. Boundary choice is the principal source of error: municipal, agglomeration and district give different answers and must be reported separately.",
     "pre_registered_expectation": "Below-average growth combined with a heritage-zone land premium indicates a stagnant rent-city: asset intact, no growth. Recorded before measurement so the result cannot be retrofitted.",
     "falsifier": "Above-average growth on all three series.",
-    "blocks": ["A19 explanatory claims"],
-    "priority": 1
+    "blocks": [
+      "A19 explanatory claims"
+    ],
+    "priority": 1,
+    "resolution": {
+      "answer": "Kandy MC declined 4.4% from 2012 to 2024 and Central Province held 10.7% of national nominal GDP in 2024, but no stable city-output or comparable land-value series exists.",
+      "claim_ids": [
+        "C-R17-KDY-MET-003",
+        "C-R17-KDY-MET-004",
+        "C-R17-KDY-MET-005"
+      ],
+      "remaining_gate": "Stable functional-urban denominator, city output per capita and repeatable transaction/valuation series."
+    }
   },
   {
     "id": "Q-CITY-001",
@@ -37,7 +48,12 @@
     "arc": "A17b_plantation_economy_and_value_capture",
     "status": "open",
     "discriminating_test": "Trace value shares and ownership across auction, export/packing, blending, brand and retail, and compare bulk versus packaged/value-added exports from origin.",
-    "expected_evidence": ["Tea Board export statistics", "company annual reports", "auction and trade data", "consumer-market value-chain studies"],
+    "expected_evidence": [
+      "Tea Board export statistics",
+      "company annual reports",
+      "auction and trade data",
+      "consumer-market value-chain studies"
+    ],
     "falsifier": "Origin captures comparable value in packaged/value-added channels, or variation in retained value is better explained by production cost and capital allocation than by downstream structure.",
     "priority": 1
   },
@@ -48,7 +64,12 @@
     "arc": "A17b_plantation_economy_and_value_capture",
     "status": "open",
     "discriminating_test": "Compare yield, bush age, replanting rate and cost per kilo with competitor origins and with value retained at origin over time.",
-    "expected_evidence": ["Tea Research Institute data", "Tea Board statistics", "company reports", "competitor-origin production data"],
+    "expected_evidence": [
+      "Tea Research Institute data",
+      "Tea Board statistics",
+      "company reports",
+      "competitor-origin production data"
+    ],
     "falsifier": "Value-retention weakness persists where productivity and cost are competitive, or downstream/customer-relationship structure explains the variation more closely.",
     "priority": 1
   },
@@ -59,7 +80,11 @@
     "arc": "A17b_plantation_economy_and_value_capture",
     "status": "open",
     "discriminating_test": "Compare a decade of company capex between replanting/mechanisation and hospitality, property, branding or diversification, against reported segment returns and leasehold horizon.",
-    "expected_evidence": ["regional plantation company annual reports", "segment reporting", "replanting and mechanisation disclosures"],
+    "expected_evidence": [
+      "regional plantation company annual reports",
+      "segment reporting",
+      "replanting and mechanisation disclosures"
+    ],
     "falsifier": "Agronomic capex is not systematically disadvantaged, capital allocation does not track segment returns, or leasehold horizon does not predict replanting behaviour.",
     "priority": 1
   }
