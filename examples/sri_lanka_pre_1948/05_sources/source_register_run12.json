@@ -1,86 +1,9 @@
 [
-  {
-    "id":"MAHAVAMSA-GEIGER-MAHASENA",
-    "title":"The Mahavamsa: or the Great Chronicle of Ceylon — Chapter 37, King Mahasena",
-    "url":"https://diglib.natlib.lk/handle/123456789/59648",
-    "tier":"T0",
-    "anchor_role":"canonical anchor",
-    "date":"1950 edition of Geiger translation; chronicle is premodern",
-    "author_institution":"Mahavamsa; Wilhelm Geiger translation; National Library of Sri Lanka digital copy",
-    "scope":"Mahasena, Sanghamitta, sanctions against Mahavihara, abandonment/destruction narrative, Jetavana foundation",
-    "limitations":"Mahavamsa is produced within the Mahavihara lineage and is openly hostile to its rivals; indispensable primary testimony but not a neutral description of factional motives",
-    "provenance":"direct digital-library anchor; chapter cross-checked against the Geiger text"
-  },
-  {
-    "id":"DEEG-ABHAYAGIRI-2024",
-    "title":"The ‘Fearless Mountain’ That (Almost) Disappeared: Looking for the History of the Abhayagiri-vihara in Sri Lanka",
-    "url":"https://aav.iksio.pan.pl/en/numer/2024-37/5-66/",
-    "tier":"T1",
-    "anchor_role":"canonical anchor",
-    "date":"2024",
-    "author_institution":"Max Deeg, Acta Asiatica Varsoviensia 37",
-    "scope":"Abhayagiri–Mahavihara rivalry, Chinese sources, transregional and tantric/Mahayana traces",
-    "limitations":"centres on Abhayagiri; it helps correct Mahavihara-source bias but should not be used to make Jetavana identical to Abhayagiri or to a timeless modern Mahayana bloc",
-    "provenance":"direct journal article, DOI 10.60018/AcAsVa.lrct5018"
-  },
-  {
-    "id":"GORNALL-REFORM-2020",
-    "title":"Rewriting Buddhism: Pali Literature and Monastic Reform in Sri Lanka, 1157–1270",
-    "url":"https://uclpress.co.uk/book/rewriting-buddhism/",
-    "tier":"T1",
-    "anchor_role":"canonical anchor",
-    "date":"2020-03-17",
-    "author_institution":"Alastair Gornall, UCL Press",
-    "scope":"Parakramabahu I, reform era, purification and unification of the Sangha in 1165, intellectual consequences",
-    "limitations":"medieval reform focus; use as callback/closure to Anuradhapura pluralism, not as direct evidence for fourth-century Jetavana",
-    "provenance":"direct open-access monograph, DOI 10.14324/111.9781787355156"
-  },
-  {
-    "id":"CAMBRIDGE-PARAKRAMABAHU-KATIKAVATA",
-    "title":"Flanked by Images of Our Buddha — Buddhism and Law, Chapter 7",
-    "url":"https://www.cambridge.org/core/books/abs/buddhism-and-law/flanked-by-images-of-our-buddha/B6633812C1A229C044441C4DF898DE72",
-    "tier":"T1",
-    "anchor_role":"corroborating bridge",
-    "date":"2014",
-    "author_institution":"Cambridge University Press, Buddhism and Law",
-    "scope":"Parakramabahu I's Gal Vihara monastic regulation and its durable legal-institutional significance",
-    "limitations":"legal-regulatory lens; does not by itself reconstruct all doctrinal currents or fourth-century monastic economics",
-    "provenance":"direct Cambridge chapter landing page, DOI 10.1017/CBO9781139044134.011"
-  },
-  {
-    "id":"WATERHISTORY-ANURADHAPURA-2019",
-    "title":"Evolution of the dry zone water harvesting and management systems in Sri Lanka during the Anuradhapura Kingdom; a study based on ancient chronicles and lithic inscriptions",
-    "url":"https://link.springer.com/article/10.1007/s12685-019-00230-7",
-    "tier":"T1",
-    "anchor_role":"canonical anchor",
-    "date":"2019",
-    "author_institution":"Water History, Springer Nature",
-    "scope":"irrigation works, water revenues, taxes, grants of tanks/fields/water shares to monasteries and monks",
-    "limitations":"supports the institutional resource circuit and hydro-fiscal setting; it does not quantify a specific fiscal transfer caused by Mahasena's conflict",
-    "provenance":"direct peer-reviewed article, DOI 10.1007/s12685-019-00230-7"
-  },
-  {
-    "id":"WATER-GOVERNANCE-ANURADHAPURA-2018",
-    "title":"Ancient Water Management and Governance in the Dry Zone of Sri Lanka Until Abandonment, and the Influence of Colonial Politics during Reclamation",
-    "url":"https://www.mdpi.com/2073-4441/10/12/1746",
-    "tier":"T1",
-    "anchor_role":"corroborating bridge",
-    "date":"2018",
-    "author_institution":"Water 10(12), MDPI",
-    "scope":"ownership/governance of irrigation in Anuradhapura, monastic grants and religious-purpose resource transfers",
-    "limitations":"water-governance focus and uneven epigraphic survival, especially for the fourth–seventh centuries",
-    "provenance":"direct peer-reviewed article"
-  },
-  {
-    "id":"UNESCO-ANURADHAPURA-MAHAVIHARAS-6774",
-    "title":"Buddhist Meditation Monasteries of Ancient Sri Lanka — comparison with Sacred City of Anuradhapura",
-    "url":"https://whc.unesco.org/en/tentativelists/6774/",
-    "tier":"T2",
-    "anchor_role":"specialist institutional anchor",
-    "date":"2024",
-    "author_institution":"UNESCO World Heritage Centre / Sri Lanka tentative-list submission",
-    "scope":"Mahavihara, Abhayagiri and Jetavana as major Anuradhapura monastic complexes and centres of education/social activity",
-    "limitations":"heritage synthesis, not a doctrinal or fiscal monograph; use for spatial/institutional framing rather than contested causal closure",
-    "provenance":"direct UNESCO World Heritage Centre record"
-  }
+  {"id":"MAHAVAMSA-GEIGER-MAHASENA","title":"The Mahavamsa: or the Great Chronicle of Ceylon — Chapter 37, King Mahasena","url":"https://diglib.natlib.lk/handle/123456789/59648","tier":"T0","anchor_role":"canonical anchor","date":"1950 edition of Geiger translation; chronicle is premodern","author_or_institution":"Mahavamsa; Wilhelm Geiger translation; National Library of Sri Lanka digital copy","scope":"Mahasena, Sanghamitta, sanctions against Mahavihara, abandonment/destruction narrative, Jetavana foundation","claims_supported":[],"limitations":"Mahavamsa is produced within the Mahavihara lineage and is openly hostile to its rivals; indispensable primary testimony but not a neutral description of factional motives","provenance":"direct"},
+  {"id":"DEEG-ABHAYAGIRI-2024","title":"The ‘Fearless Mountain’ That (Almost) Disappeared: Looking for the History of the Abhayagiri-vihara in Sri Lanka","url":"https://aav.iksio.pan.pl/en/numer/2024-37/5-66/","tier":"T1","anchor_role":"canonical anchor","date":"2024","author_or_institution":"Max Deeg, Acta Asiatica Varsoviensia 37","scope":"Abhayagiri–Mahavihara rivalry, Chinese sources, transregional and tantric/Mahayana traces","claims_supported":[],"limitations":"Centres on Abhayagiri; it helps correct Mahavihara-source bias but should not be used to make Jetavana identical to Abhayagiri or to a timeless modern Mahayana bloc","provenance":"direct"},
+  {"id":"GORNALL-REFORM-2020","title":"Rewriting Buddhism: Pali Literature and Monastic Reform in Sri Lanka, 1157–1270","url":"https://uclpress.co.uk/book/rewriting-buddhism/","tier":"T1","anchor_role":"canonical anchor","date":"2020-03-17","author_or_institution":"Alastair Gornall, UCL Press","scope":"Parakramabahu I, reform era, purification and unification of the Sangha in 1165, intellectual consequences","claims_supported":[],"limitations":"Medieval reform focus; use as callback/closure to Anuradhapura pluralism, not as direct evidence for fourth-century Jetavana","provenance":"direct"},
+  {"id":"CAMBRIDGE-PARAKRAMABAHU-KATIKAVATA","title":"Flanked by Images of Our Buddha — Buddhism and Law, Chapter 7","url":"https://www.cambridge.org/core/books/abs/buddhism-and-law/flanked-by-images-of-our-buddha/B6633812C1A229C044441C4DF898DE72","tier":"T1","anchor_role":"corroborating bridge","date":"2014","author_or_institution":"Cambridge University Press, Buddhism and Law","scope":"Parakramabahu I's Gal Vihara monastic regulation and its durable legal-institutional significance","claims_supported":[],"limitations":"Legal-regulatory lens; does not by itself reconstruct all doctrinal currents or fourth-century monastic economics","provenance":"direct"},
+  {"id":"WATERHISTORY-ANURADHAPURA-2019","title":"Evolution of the dry zone water harvesting and management systems in Sri Lanka during the Anuradhapura Kingdom; a study based on ancient chronicles and lithic inscriptions","url":"https://link.springer.com/article/10.1007/s12685-019-00230-7","tier":"T1","anchor_role":"canonical anchor","date":"2019","author_or_institution":"Water History, Springer Nature","scope":"Irrigation works, water revenues, taxes, grants of tanks/fields/water shares to monasteries and monks","claims_supported":[],"limitations":"Supports the institutional resource circuit and hydro-fiscal setting; it does not quantify a specific fiscal transfer caused by Mahasena's conflict","provenance":"direct"},
+  {"id":"WATER-GOVERNANCE-ANURADHAPURA-2018","title":"Ancient Water Management and Governance in the Dry Zone of Sri Lanka Until Abandonment, and the Influence of Colonial Politics during Reclamation","url":"https://www.mdpi.com/2073-4441/10/12/1746","tier":"T1","anchor_role":"corroborating bridge","date":"2018","author_or_institution":"Water 10(12), MDPI","scope":"Ownership/governance of irrigation in Anuradhapura, monastic grants and religious-purpose resource transfers","claims_supported":[],"limitations":"Water-governance focus and uneven epigraphic survival, especially for the fourth–seventh centuries","provenance":"direct"},
+  {"id":"UNESCO-ANURADHAPURA-MAHAVIHARAS-6774","title":"Buddhist Meditation Monasteries of Ancient Sri Lanka — comparison with Sacred City of Anuradhapura","url":"https://whc.unesco.org/en/tentativelists/6774/","tier":"T2","anchor_role":"specialist institutional anchor","date":"2024","author_or_institution":"UNESCO World Heritage Centre / Sri Lanka tentative-list submission","scope":"Mahavihara, Abhayagiri and Jetavana as major Anuradhapura monastic complexes and centres of education/social activity","claims_supported":[],"limitations":"Heritage synthesis, not a doctrinal or fiscal monograph; use for spatial/institutional framing rather than contested causal closure","provenance":"direct"}
 ]

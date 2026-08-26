@@ -6,9 +6,7 @@
   "zoom": "Z1",
   "causal_role": "driver",
   "arc": "A08_jaffna_caste_colonial_codification",
-  "source_ids": [
-    "CAMBRIDGE-CLASSIFICATION",
-    "CAMBRIDGE-LAWMAKING"
-  ],
+  "source_ids": ["CAMBRIDGE-CLASSIFICATION", "CAMBRIDGE-LAWMAKING"],
+  "bounded_by": "The two supporting works are distinct scholarly studies but share the Cambridge publishing domain. The mechanism is retained as bounded same-publisher corroboration until an independent archival or scholarly source family is added.",
   "notes": "Paper legibility is both coercive and negotiable; avoid a one-way domination model."
 }

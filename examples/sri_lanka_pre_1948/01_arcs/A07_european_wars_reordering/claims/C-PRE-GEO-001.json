@@ -6,10 +6,7 @@
   "zoom": "Z3",
   "causal_role": "driver",
   "arc": "A07_european_wars_reordering",
-  "source_ids": [
-    "CAMBRIDGE-AUSTRIAN-WAR-INDIA",
-    "CAMBRIDGE-SEVEN-YEARS-CARNATIC",
-    "CAMBRIDGE-FRENCH-1754-1815"
-  ],
+  "source_ids": ["CAMBRIDGE-AUSTRIAN-WAR-INDIA", "CAMBRIDGE-SEVEN-YEARS-CARNATIC", "CAMBRIDGE-FRENCH-1754-1815"],
+  "bounded_by": "Three distinct scholarly works support the sequence but all are currently registered through the Cambridge publishing domain. Retain the strategic-asymmetry conclusion as bounded same-publisher corroboration until an independent source family is added; French commercial presence is not treated as disappearing after 1763.",
   "notes": "French trading posts survived/reappeared after 1763; the change is strategic asymmetry, not French disappearance."
 }

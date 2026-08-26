@@ -5,5 +5,11 @@
   "question": "What is the causal relationship between the Napoleonic settlement and the British conquest of Kandy in 1815?",
   "mechanism": "British control of the coasts predated 1815, but the elimination or reduction of Dutch and French military alternatives made Kandy's external balancing options unusually weak while internal elite conflict opened the immediate path to annexation.",
   "result": "B",
-  "source_ids": ["CAMBRIDGE-COMPANY-FORTRESS-END", "CAMBRIDGE-DESTROYING-RIVALS", "CAMBRIDGE-COMPANY-REDUCED-1811"]
+  "source_ids": ["CAMBRIDGE-COMPANY-FORTRESS-END", "CAMBRIDGE-DESTROYING-RIVALS", "CAMBRIDGE-COMPANY-REDUCED-1811"],
+  "transmission_channel": "Removal of rival European military footholds reduced external balancing options while British coastal control constrained Kandyan diplomacy and logistics.",
+  "time_lag": "Approximately 1796–1815, with the decisive political opening occurring in 1815 rather than immediately after coastal takeover.",
+  "scale": "Z3 Indian Ocean strategic settlement → Z2 Kandyan sovereignty → Z1 elite political alignment.",
+  "confounders": ["Internal Kandyan elite conflict", "Sri Vikrama Rajasinha's relations with chiefs", "British diplomacy", "terrain and prior failed invasions"],
+  "transportability": "Mechanism-only. External strategic isolation can constrain a polity, but annexation outcome depends on internal political openings and should not be inferred from maritime dominance alone.",
+  "integration_action": "Use to connect A07 regional strategic closure to A07b's 1815 political transfer; explicitly keep external isolation as a conditioning factor, not a sufficient cause."
 }

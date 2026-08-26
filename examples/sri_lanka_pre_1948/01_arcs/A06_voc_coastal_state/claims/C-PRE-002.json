@@ -6,9 +6,7 @@
   "zoom": "Z2",
   "causal_role": "driver",
   "arc": "A06_voc_coastal_state",
-  "source_ids": [
-    "CAMBRIDGE-CLASSIFICATION",
-    "CAMBRIDGE-LAWMAKING"
-  ],
+  "source_ids": ["CAMBRIDGE-CLASSIFICATION", "CAMBRIDGE-LAWMAKING"],
+  "bounded_by": "The two supporting works are distinct scholarly works but share the Cambridge publishing domain. Treat this as bounded same-publisher corroboration until an independent archival or scholarly source family is added; do not generalize uniformly across all provinces or periods.",
   "notes": "Do not recast this as a uniform top-down invention of fixed ethnic identities; categorisation was negotiated and institution-specific."
 }
