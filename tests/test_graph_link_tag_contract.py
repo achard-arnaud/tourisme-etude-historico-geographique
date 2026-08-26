@@ -25,7 +25,8 @@ class GraphLinkTagContractTests(unittest.TestCase):
                 for line in p.read_text(encoding="utf-8").splitlines():
                     if not line.strip():continue
                     edge=json.loads(line)
-                    for bid in edge.get("bridge_ids",[]):\n                        if bid.startswith("B-R21-"): tagged.setdefault(bid,[]).append(edge)
+                    for bid in edge.get("bridge_ids",[]):
+                        if bid.startswith("B-R21-"): tagged.setdefault(bid,[]).append(edge)
             self.assertEqual(set(bridges),set(tagged))
             for bid,bridge in bridges.items():
                 self.assertEqual(1,len(tagged[bid]))
