@@ -1,0 +1,14 @@
+{
+  "id": "I-<RUN>-<SLUG>",
+  "source_name": "INTAKE_<slug>.md",
+  "intake_kind": "analytical_intake | field_intake_bundle | snapshot_intake | research_bundle | other",
+  "first_run": "RUNXX",
+  "manifest": "docs/RUNXX_MANIFEST.json",
+  "preservation_status": "archived | missing_source | unidentified_legacy",
+  "repo_path": "docs/intakes/INTAKE_<slug>.md",
+  "outputs": [
+    "examples/..."
+  ],
+  "recovery_action": null,
+  "notes": "Archive source verbatim before transformation. User-supplied material is requirements/input, not historical evidence."
+}
