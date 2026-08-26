@@ -7,12 +7,13 @@ from materialize_arc_recaps import materialize_arc_recaps
 from materialize_side_stories import materialize_text as materialize_side_stories
 from illustration_contract import assert_rendered_illustrations
 from resolve_reader_plan import build_plan
+from frontstage_reader_contract import finalize_reader
 import render_full_reader_v3 as base
 
 def build(key:str)->dict:
     spec=base.SPECS[key];project=spec["project"];delta_path=project/"09_output"/spec["delta"];original=delta_path.read_bytes();recap_count=0;story_inserted=0
     try:
-        composed,story_inserted=materialize_side_stories(project,original.decode("utf-8"));composed,recap_count=materialize_arc_recaps(project,composed);delta_path.write_text(composed,encoding="utf-8");metric=base.build(key)
+        composed,story_inserted=materialize_side_stories(project,original.decode("utf-8"));composed,recap_count=materialize_arc_recaps(project,composed);delta_path.write_text(composed,encoding="utf-8");metric=base.build(key);metric.update(finalize_reader(project,spec))
     finally:delta_path.write_bytes(original)
     reader=(project/"09_output"/spec["markdown_output"]).read_text(encoding="utf-8");required=assert_rendered_arc_recaps(project,reader);plan=build_plan(project);illustration_count=assert_rendered_illustrations(reader,plan["selected_illustration_ids"])
     if required!=recap_count:raise RuntimeError(f"arc recap render count mismatch for {key}: materialized={recap_count}, required={required}")
