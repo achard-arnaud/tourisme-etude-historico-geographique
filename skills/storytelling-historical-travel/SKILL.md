@@ -97,7 +97,14 @@ Run the final prose reread after illustration placement. Check chronology, trans
 ## Voix narrative
 Le lecteur reste dans une continuité historico-géographique vivante. Aucune trace de l'appareil de production — versions, runs, HIL, ancres, statuts ou procédé de construction — n'apparaît dans le texte lu. La preuve et l'incertitude vivent dans la phrase, jamais dans un habillage méthodologique adjacent.
 
+### Ancrage de voix — Sarah
+La voix n'est pas définie par des adjectifs génériques. Elle est ancrée dans `references/narrative_voice_sarah.md`, construit à partir du patch Run 25 et de retours éditoriaux antérieurs disponibles. Les marqueurs stabilisés sont : ouverture par une prise concrète quand la matière le permet ; précision de portée avant fluidité ; rigueur comprimée dans une clause naturelle ; matière visible avant conclusion ; progression observation → analyse → implication ; nuance explicite fait/tradition/inférence ; ton calme, pédagogique et incarné ; fermeture par retour du fil plutôt que formule générique.
+
+Les conventions propres au format LinkedIn — signature, listes de scannabilité et sous-titres systématiques — ne sont pas transférées mécaniquement au livre. Si de nouvelles sources de voix sont réellement accessibles, les documenter dans la référence avant d'en faire une règle ; ne jamais inventer un marqueur au nom d'une personnalisation attendue.
+
 ### Do
+- Ne jamais sacrifier la précision de portée d'un fait pour fluidifier la phrase : ne pas généraliser ou restreindre silencieusement qui, où ou quand un claim concerne.
+- Quand la matière s'y prête, ouvrir par un lieu, un objet, une anomalie de terrain ou une question concrète qui pourra devenir callback.
 - Raconter le fait avant sa perspective ou sa conséquence : **lieu → action attestée → mécanisme → ce qui en découle**.
 - Nommer l'incertitude en clause naturelle : « la tradition du temple veut que… », « les textes les plus anciens ne disent que… ».
 - Reprendre tous les points du résumé canonique interne du claim source quand il existe ; aucun point établi ne disparaît à la réécriture.
@@ -108,18 +115,38 @@ Le lecteur reste dans une continuité historico-géographique vivante. Aucune tr
 - Préférer un callback narratif à une nouvelle citation évidentielle quand un fait est déjà noué ailleurs dans l'arc.
 
 ### Don't
-- Aucun intitulé méthodologique dans le corps du texte, notamment : « TL;DR », « Statut canonique », « Ce qu'on ne doit pas en déduire », « Pourquoi l'insérer directement dans notre arc ? ».
+- Aucun intitulé méthodologique de production dans le corps du texte, notamment : « TL;DR », « Statut canonique », « Ce qu'on ne doit pas en déduire », « Pourquoi l'insérer directement dans notre arc ? », « Politique éditoriale de la V3 », « Complément V3 ».
 - Aucun tableau d'ancres numérotées ou libellé HIL dans le récit.
-- Aucune phrase commentant la version, le run ou le processus d'écriture.
+- Aucune phrase commentant la version, le run, la baseline, le delta, le lineage ou le processus d'écriture.
 - Aucun tableau de synthèse lorsqu'une phrase narrative porte la même information.
 - Aucune liste à puces méthodologique séparée de la prose : les enjeux deviennent des phrases du récit.
 
 ## Fausses pistes — format socratique léger
 Reranker obligatoirement : **1 à 2 fausses pistes maximum par sous-section**, choisies pour leur lien direct avec le fil et leur intérêt didactique. Écarter les hors-sujets même séduisants.
 
-Le contenu prend la forme d'une question naïve ou semi-rhétorique suivie de sa réponse dans le même bloc. Le renderer visuel peut matérialiser ce bloc en pastel jaune pâle ; le Markdown canonique doit conserver une structure stable et identifiable sans dépendre d'une couleur pour porter le sens.
+Le contenu prend la forme d'une question naïve ou semi-rhétorique suivie de sa réponse dans le même bloc. Le renderer visuel matérialise ce bloc en pastel jaune pâle ; le Markdown canonique conserve une structure stable et identifiable sans dépendre d'une couleur pour porter le sens.
 
 La même limite de 1–2 par sous-section s'applique aux placeholders d'illustration proposés.
+
+## Palette des side stories — couleur + repère accessible
+La palette est un code de navigation, **jamais un code de confiance historique**. Chaque type possède une couleur pastel et un repère redondant ; le repère est conservé en impression noir et blanc et renvoie à la légende de fin du reader.
+
+| kind | Libellé lecteur | Repère | Fill |
+|---|---|---:|---|
+| `false_lead` | Fausse piste | ① | `FFF6D8` |
+| `detour` | Petit détour | ② | `E3EEF7` |
+| `dezoom` | Dézoom | ③ | `E7EBF0` |
+| `also` | Mais aussi | ④ | `E7F3E8` |
+| `method` | Point de méthode | ⑤ | `F0EDE7` |
+| `portrait` | Personnage | ⑥ | `F7E7E1` |
+| `object_focus` | Objet / terrain | ⑦ | `F5EFDD` |
+| `comparator` | Comparaison | ⑧ | `EEE7F5` |
+| `callback` | Fil rouge | ⑨ | `FBE6E3` |
+| `analytical_focus` | Focus analytique | ⑩ | `DCE6EE` |
+
+**Distinction obligatoire — `method`.** « Point de méthode » est un aparté historique légitime lu par le lecteur : comment dater une inscription, attribuer une tradition, lire un registre, comparer deux séries. Il ne faut jamais le confondre avec le commentaire de production banni ci-dessus. Le gate ne rejette donc pas le libellé « Point de méthode » en soi ; il rejette les formulations qui parlent du run, de la version, du statut ou de la fabrication du manuscrit.
+
+La palette interne `verified/inference/unknown` d'un `analytical_focus` garde sa fonction épistémique propre. Le fond bleu-gris de l'encadré « Focus analytique » ne remplace ni ne modifie ce code de preuve.
 
 ## Schémas et frises
 Un schéma Mermaid n'illustre qu'un mécanisme complexe qui résiste réellement à la prose : usage rare. Il est rendu en image avant insertion ; si sa largeur dépasse 120% de la largeur utile, il doit être régénéré verticalement.
@@ -132,4 +159,4 @@ Use `templates/storytelling/child_10_plus.md`. An `analytical_focus` remains eli
 # QA contract
 The paragraph gate reference is `references/paragraph_review_checklist.md`. Tests must include both conforming and non-conforming fixtures. A positive-only gate test is insufficient.
 
-Before export verify: scaffold coverage, chronology, source-attested action, reader-plan compliance, side-story retention, analytical-focus evidence semantics, recap closure, map approval/limit, illustration lineage/status/epistemic captioning, callback preference, frontstage/backstage separation, final post-illustration continuity and baseline retention.
+Before export verify: scaffold coverage, chronology, source-attested action, reader-plan compliance, side-story retention, analytical-focus evidence semantics, recap closure, map approval/limit, illustration lineage/status/epistemic captioning, callback preference, frontstage/backstage separation, side-story symbol/palette legend, final post-illustration continuity and baseline retention.
