@@ -1,0 +1,83 @@
+[
+  {
+    "id": "I-R13-LEGACY-RESEARCH",
+    "source_name": null,
+    "intake_kind": "research_bundle",
+    "first_run": "RUN13",
+    "manifest": "docs/RUN13_MANIFEST.json",
+    "preservation_status": "unidentified_legacy",
+    "repo_path": null,
+    "outputs": [
+      "examples/sri_lanka_pre_1948/01_arcs/A02_ancient_indian_ocean_exchange",
+      "examples/sri_lanka_pre_1948/01_arcs/A05_colonial_conservation_ordinance",
+      "examples/sri_lanka_pre_1948/07_drifts/run13_naga_reception_audit.md"
+    ],
+    "recovery_action": "Recover the original Run13 attachment(s) if available. Do not reconstruct them from downstream claims or manifest prose.",
+    "notes": "RUN13 states that research intakes and an attached national-park brief were used, but the manifest does not preserve a canonical input filename."
+  },
+  {
+    "id": "I-R15-GUIDE",
+    "source_name": "SNAPSHOT_INTAKE_guide_and_run15.md",
+    "intake_kind": "snapshot_intake",
+    "first_run": "RUN15",
+    "manifest": "docs/RUN15_MANIFEST.json",
+    "preservation_status": "missing_source",
+    "repo_path": null,
+    "outputs": [
+      "examples/sri_lanka_pre_1948/00_method/capture/guide_fragments.json",
+      "examples/sri_lanka_pre_1948/00_method/capture/guide_contradictions.json",
+      "examples/sri_lanka_pre_1948/07_drifts/run15_guide_historiography_drift.md"
+    ],
+    "recovery_action": "Recover the original supplied snapshot intake and archive it verbatim under docs/intakes before any reprocessing.",
+    "notes": "Downstream capture exists, but the original intake is not preserved in the repository."
+  },
+  {
+    "id": "I-R16-FIELD",
+    "source_name": "FIELD_INTAKES_mihintale_abhayagiri_militarisation_horton.md",
+    "intake_kind": "field_intake_bundle",
+    "first_run": "RUN16",
+    "manifest": "docs/RUN16_MANIFEST.json",
+    "preservation_status": "missing_source",
+    "repo_path": null,
+    "outputs": [
+      "examples/sri_lanka_pre_1948/00_method/capture/run16_field_fragments.json",
+      "examples/sri_lanka_post_1948/00_method/capture/run16_field_fragments.json",
+      "examples/sri_lanka_post_1948/07_drifts/run16_militarisation_source_positioning.md"
+    ],
+    "recovery_action": "Recover the original field-intake bundle and archive it verbatim; do not reverse-generate it from capture fragments.",
+    "notes": "Four field capture blocks were materialized, but the source bundle itself is absent."
+  },
+  {
+    "id": "I-R17-KANDY",
+    "source_name": "INTAKE_kandy.md",
+    "intake_kind": "analytical_intake",
+    "first_run": "RUN17",
+    "manifest": "docs/RUN17_MANIFEST.json",
+    "preservation_status": "missing_source",
+    "repo_path": null,
+    "outputs": [
+      "examples/sri_lanka_post_1948/00_method/capture/run17_kandy_measurements.json",
+      "examples/sri_lanka_post_1948/08_questions/run17_kandy_measure_before_explain.md",
+      "examples/sri_lanka_post_1948/01_arcs/A19_kandy_second_city_paradox/ARC.md"
+    ],
+    "recovery_action": "Recover the original Kandy intake and archive it verbatim under docs/intakes before any future reinterpretation.",
+    "notes": "The measure-before-explain outputs are preserved; the originating intake is not."
+  },
+  {
+    "id": "I-R18-R19-TEA",
+    "source_name": "INTAKE_tea_plantation_economy.md",
+    "intake_kind": "analytical_intake",
+    "first_run": "RUN18",
+    "manifest": "docs/RUN18_MANIFEST.json",
+    "preservation_status": "archived",
+    "repo_path": "docs/intakes/INTAKE_tea_plantation_economy.md",
+    "outputs": [
+      "examples/sri_lanka_pre_1948/00_method/capture/run18_ishikawa_coffee_to_tea.json",
+      "examples/sri_lanka_post_1948/00_method/capture/run18_ishikawa_value_capture.json",
+      "examples/sri_lanka_pre_1948/08_questions/question_register.json",
+      "examples/sri_lanka_post_1948/08_questions/question_register.json"
+    ],
+    "recovery_action": null,
+    "notes": "The dense tea/plantation intake is now preserved verbatim and also has structured Run18/Run19 descendants."
+  }
+]
