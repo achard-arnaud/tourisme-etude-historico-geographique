@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Hard pre-edit composition gate: graph links → state → side stories → recaps → profile/maps → reader plan."""
+"""Hard pre-edit composition gate: graph links → state → side stories → recaps → profile/maps/illustrations → reader plan."""
 from __future__ import annotations
 import json,sys
 from pathlib import Path
@@ -9,6 +9,7 @@ from side_story_contract import validate_side_stories
 from arc_recap_contract import validate_arc_recaps,load_arc_recaps,RENDERABLE
 from materialize_arc_recaps import materialize_arc_recaps
 from map_asset_contract import validate_map_assets
+from illustration_contract import validate_illustrations
 from reader_profile_contract import validate_reader_profile
 from resolve_reader_plan import build_plan
 
@@ -26,6 +27,7 @@ def main():
             if materializable!=required_recaps:errors.append(f'arc recap materialization mismatch: {materializable}/{required_recaps} required ({recaps} registered)')
         except Exception as exc:errors.append(f'arc recap materialization: {exc}')
     me,mw,maps=validate_map_assets(project);errors+=me;warnings+=mw
+    ie,iw,illustrations=validate_illustrations(project);errors+=ie;warnings+=iw
     pe,pw,profiles=validate_reader_profile(project);errors+=pe;warnings+=pw
     plan=None
     if not errors:
@@ -34,6 +36,6 @@ def main():
     for x in warnings:print('WARN:',x,file=sys.stderr)
     for x in errors:print('ERROR:',x,file=sys.stderr)
     if errors:return 1
-    print(f"COMPOSITION PREFLIGHT OK: canonical={canonical.name}, graph={nodes} nodes/{edges} edges/0 unresolved, side-stories=traced {coverage['traced']} / declared {coverage['declared']} / discovered {coverage['discovered']} / untracked {coverage['untracked']}, recaps={required_recaps}/{recaps} reader-required/registered, maps={maps}, profile={plan['profile_id']}")
+    print(f"COMPOSITION PREFLIGHT OK: canonical={canonical.name}, graph={nodes} nodes/{edges} edges/0 unresolved, side-stories=traced {coverage['traced']} / declared {coverage['declared']} / discovered {coverage['discovered']} / untracked {coverage['untracked']}, recaps={required_recaps}/{recaps} reader-required/registered, maps={maps}, illustrations={illustrations}, profile={plan['profile_id']}")
     return 0
 if __name__=='__main__':raise SystemExit(main())
