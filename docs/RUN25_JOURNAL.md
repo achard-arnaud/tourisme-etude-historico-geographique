@@ -34,3 +34,19 @@
 - artefacts touchés : tests Run25 + pipeline complet + reader outputs
 - déclencheur : validation de la branche `feat/run25-storytelling-process-voice`
 - cohérence croisée : OK — GitHub Actions `skill-ci` run #455 success ; tests positifs/négatifs, audits historiques, heat map, reciprocal coverage, rendu complet et upload artefact tous verts
+
+## Étape 4 — 2026-08-27 — Voix Sarah, palette side stories et nettoyage frontstage
+- artefacts touchés : `skills/storytelling-historical-travel/SKILL.md`, `skills/storytelling-historical-travel/references/narrative_voice_sarah.md`, `scripts/side_story_presentation.py`, `scripts/frontstage_reader_contract.py`, `scripts/render_composed_reader.py`, `scripts/paragraph_review_gate.py`
+- déclencheur : patch complémentaire Run 25 — ancrage de voix, palette pastel 10 kinds, repères ①–⑩ et légende de fin
+- cohérence croisée : le renderer ne doit plus exposer `V1/V3`, baseline, delta ou politique éditoriale ; `Point de méthode` reste un side story historique légitime
+
+## QA intermédiaire PR #62 — 2026-08-27
+- artefacts touchés : `scripts/side_story_presentation.py`, `tests/test_storytelling_and_corpus.py`
+- déclencheur : GitHub Actions `skill-ci` run #462
+- cohérence croisée : échec ciblé identifié — normalisation NFKD du repère ① et ancien invariant `tables(V3) == tables(V1)` incompatible avec l'unique table de légende ; aucun défaut évidentiel ou de composition
+- correction : retirer le repère avant normalisation Unicode ; conserver toutes les tables baseline et autoriser au maximum une table supplémentaire, obligatoirement identifiée comme `Légende des encadrés`
+
+## QA finale patch PR #62 — 2026-08-27
+- artefacts touchés : 166 tests + audits + QA fonctionnelle + readers pre/post + artefact Actions
+- déclencheur : GitHub Actions `skill-ci` run #464
+- cohérence croisée : OK — tests unitaires, contrats historiques, heat map, reciprocal coverage, QA fonctionnelle, rendu complet avec nettoyage frontstage, palette/légende et publication d'artefact tous verts
