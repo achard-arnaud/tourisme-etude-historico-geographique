@@ -2,5 +2,6 @@
   "name": "Sri Lanka pre-1948",
   "method": "tourisme-etude-historico-geographique",
   "version": 3,
+  "artifact_contract_version": 3,
   "functional_baseline": "docs/RUN9_PRE1948_FUNCTIONAL_BASELINE.json"
 }
