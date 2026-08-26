@@ -1,5 +1,6 @@
 # Agent routing
 
+0. YouTube URL → timestamped evidence ledger + lead-only proposition register; then sanitize and source proposition by proposition.
 1. Field observation → capture + sanitize.
 2. Periodization → arcs.
 3. Scale → zoom; regional/global system → HIL-07 owner.

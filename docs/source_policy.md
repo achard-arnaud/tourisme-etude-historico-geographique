@@ -7,7 +7,7 @@ Tier sources by **epistemic role**, not brand prestige:
 - T2 — institutional synthesis: archaeology departments, UNESCO/ICOMOS, museums, foundations, curated exhibitions, public research programmes;
 - T3 — navigation/encyclopedia: orientation, chronology discovery and terminology;
 - T4 — field mediation: panel, guide, oral explanation, tourism interpretation;
-- T5 — exploratory lead: weak, derivative or unverified discovery source.
+- T5 — exploratory lead: weak, derivative or unverified discovery source. A YouTube transcript is T5/`lead` for historical propositions unless the claim is specifically about the recorded discourse itself.
 
 Separately assign an **anchor role**:
 - canonical anchor — foundational evidence or research for a claim family;
@@ -22,5 +22,7 @@ A causal anchor should normally combine independent source roles. A curated exhi
 
 ## Field-to-source promotion
 When a field panel points to an identifiable curated corpus, keep the photo/panel as T4 evidence and register the underlying exhibition as T2. If the exhibition cites archives or scholarship, follow those references when the claim is load-bearing.
+
+A video-only proposition cannot be the sole support for a historical fact, metric, policy effect or causal relation. Preserve timestamped wording, speaker/channel and transcript method, then corroborate proposition by proposition.
 
 Sanitization precedes tiering: propaganda, chronicles and colonial records remain valuable evidence about worldview even when their factual claims require corroboration.
