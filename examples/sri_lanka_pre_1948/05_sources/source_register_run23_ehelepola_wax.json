@@ -1,0 +1,68 @@
+[
+  {
+    "id": "EHELEPOLA-WAX-MUSEUM-2025",
+    "title": "Ehelepola Walauwa Wax Museum — character roster and curatorial presentation",
+    "url": "https://waxmuseum.ehelepolawalawwa.lk/",
+    "tier": "T3",
+    "anchor_role": "lead",
+    "date": "museum opened 2025; site and supplied sitemap accessed 2026-08-26",
+    "author_or_institution": "Ehelepola Walauwa Wax Museum / Sri Dalada Maligawa",
+    "scope": "Present-day museum roster and curatorial framing of Kandyan kings, nobles, religious figures, colonial intermediaries and the Ehelepola family",
+    "claims_supported": ["C-R23-KDY-MUSEUM-MEMORY-001"],
+    "limitations": "Ranked at the same navigation level as Wikipedia by user instruction. The JavaScript site did not expose stable individual texts to direct retrieval; it is evidence for current museum framing and a lead for research, not independent proof of historical events or motives.",
+    "provenance": "index_cache"
+  },
+  {
+    "id": "UCL-CROSSROADS-KANDY-2017",
+    "title": "Between the Portuguese and the Nayakas: the many faces of the Kandyan Kingdom, 1591–1765",
+    "url": "https://www.jstor.org/stable/j.ctt1qnw8bs.13",
+    "tier": "T1",
+    "anchor_role": "canonical anchor",
+    "date": "2017",
+    "author_or_institution": "Gananath Obeyesekere / UCL Press",
+    "scope": "Cosmopolitan court culture, Portuguese and Nayaka connections, conversion, exile, dynastic adaptation and Kandyan kingship from 1591 to 1765",
+    "claims_supported": ["C-R23-KDY-DONA-CATHERINA-001", "C-R23-KDY-COSMOPOLITAN-001"],
+    "limitations": "Synthetic scholarly chapter; individual biographical episodes remain dependent on uneven Portuguese, Dutch and chronicle traditions and should not be romanticized.",
+    "provenance": "direct"
+  },
+  {
+    "id": "JSTOR-DEWARAJA-SIAM-GIFT-2003",
+    "title": "Thailand's Sublime Gift to Sri Lanka",
+    "url": "https://www.jstor.org/stable/23731471",
+    "tier": "T1",
+    "anchor_role": "canonical anchor",
+    "date": "2003",
+    "author_or_institution": "Lorna Dewaraja / Journal of the Royal Asiatic Society of Sri Lanka",
+    "scope": "1753 Ayutthaya mission, Upali Thera, Kirti Sri Rajasinghe, higher ordination and establishment of the Siam Nikaya",
+    "claims_supported": ["C-R23-KDY-SIAM-ORDINATION-001", "C-R23-KDY-COSMOPOLITAN-001"],
+    "limitations": "Strong for the institutional mission and religious network; it does not by itself establish the social reach, later caste restrictions or uniformity of the revived order.",
+    "provenance": "direct"
+  },
+  {
+    "id": "SLNA-DOYLY-STRATEGIST-1815",
+    "title": "Sir John D'Oyly, the Strategist",
+    "url": "https://www.archives.gov.lk/online-exhibits/path-to-freedom/d-oyly",
+    "tier": "T2",
+    "anchor_role": "specialist institutional anchor",
+    "date": "1815 archival record; National Archives exhibit accessed 2026-08-26",
+    "author_or_institution": "Department of National Archives, Sri Lanka",
+    "scope": "D'Oyly's Sinhala studies, cultural contacts, intelligence role, efforts to create discord among Kandyan nobles and drafting of the 1815 Convention; includes archival reference LK-NA/21/35/1",
+    "claims_supported": ["C-R23-KDY-DOYLY-KNOWLEDGE-001"],
+    "limitations": "Institutional synthesis built around a cited colonial letter. It demonstrates British strategy and official appraisal, not that every noble acted from the same motive or that intelligence alone caused the takeover.",
+    "provenance": "direct"
+  },
+  {
+    "id": "UCL-CROSSROADS-FALL-2017",
+    "title": "Cosmopolitanism and indigeneity in four violent years: the fall of the kingdom of Kandy and the Great Rebellion revisited",
+    "url": "https://www.jstor.org/stable/j.ctt1qnw8bs.15",
+    "tier": "T1",
+    "anchor_role": "canonical anchor",
+    "date": "2017",
+    "author_or_institution": "Sujit Sivasundaram / UCL Press",
+    "scope": "Political and social reconfiguration surrounding the 1815 fall and 1817–18 rebellion, including the instability of simple indigenous/foreign binaries",
+    "claims_supported": ["C-R23-KDY-DOYLY-KNOWLEDGE-001"],
+    "limitations": "Macro-historical interpretation; use with the National Archives record for D'Oyly's specific operational role.",
+    "provenance": "direct"
+  }
+]
+

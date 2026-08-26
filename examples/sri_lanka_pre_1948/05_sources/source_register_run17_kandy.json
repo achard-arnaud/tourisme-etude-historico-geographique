@@ -1,13 +1,189 @@
 [
-  {"id":"SLNA-KANDYAN-CONVENTION-1815","title":"Kandyan Convention — Path to Freedom exhibit","url":"https://www.archives.gov.lk/online-exhibits/path-to-freedom/1-1815-convention","tier":"T1","anchor_role":"canonical anchor","date":"1815 document; current National Archives exhibit","author_or_institution":"Department of National Archives, Sri Lanka","author_institution":"Department of National Archives, Sri Lanka","scope":"1815 Convention, political manoeuvring, transfer of sovereignty under Article 4 and protection of Buddhism under Article 5","claims_supported":["C-R17-KDY-1815-001","C-R17-KDY-RELIC-001","C-R18-KDY-DEF-003"],"limitations":"Institutional exhibit summarizes the convention; detailed signatory-by-signatory motives require the document and specialist scholarship.","provenance":"direct"},
-  {"id":"SLNA-REBELLION-1818","title":"Freedom Struggle, 1818","url":"https://www.archives.gov.lk/English/online_exhibits/path_to_freedom/freedom_struggle","tier":"T1","anchor_role":"canonical anchor","date":"1817–1818 records; current National Archives exhibit","author_or_institution":"Department of National Archives, Sri Lanka","author_institution":"Department of National Archives, Sri Lanka","scope":"1817–18 rebellion, suppression and Tooth Relic as a legitimacy object in British correspondence","claims_supported":["C-R17-KDY-REBELLION-001","C-R17-KDY-RELIC-001"],"limitations":"British correspondence reflects colonial interpretation of legitimacy; suppression and relic politics must be separated.","provenance":"direct"},
-  {"id":"SLR-RAILWAY-HISTORY","title":"History of Railways in Sri Lanka","url":"https://www.railway.gov.lk/web/index.php?Itemid=181&id=137&lang=en&option=com_content&view=article","tier":"T2","anchor_role":"specialist institutional anchor","date":"current institutional history, accessed 2026-08-25","author_or_institution":"Sri Lanka Railways","author_institution":"Sri Lanka Railways","scope":"Rail introduced in 1864 to transport hill-country coffee to Colombo; later tea and plantation inputs/outputs","claims_supported":["C-R17-KDY-RAIL-001","C-R17-KDY-PLANTATION-001"],"limitations":"Institutional retrospective rather than contemporaneous colonial file; adequate for stated railway purpose, not for all causal motives.","provenance":"direct"},
-  {"id":"WENZLHUEMER-ROAD-2007","title":"Indian Labour Immigration and British Labour Policy in Nineteenth-Century Ceylon","url":"https://archiv.ub.uni-heidelberg.de/volltextserver/19680/1/Wenzlhuemer_Indian_Labour_Immigration_and_British_Labour_2007.pdf","tier":"T1","anchor_role":"canonical anchor","date":"2007","author_or_institution":"Roland Wenzlhuemer / Modern Asian Studies","author_institution":"Cambridge University Press / Modern Asian Studies","scope":"Colombo–Kandy road as post-1818 control infrastructure that also opened plantation land and secured investment; Indian labour immigration policy context","claims_supported":["C-R17-KDY-ROAD-001","C-R17-KDY-PLANTATION-001","C-R17-KDY-LABOUR-001"],"limitations":"Modern scholarly synthesis; the strongest wording on purpose should still be traced to colonial correspondence where possible.","provenance":"direct"},
-  {"id":"MEYER-HIGHLAND-APPROPRIATION-1992","title":"From Landgrabbing to Landhunger: High Land Appropriation in the Plantation Areas of Sri Lanka during the British Period","url":"https://www.cambridge.org/core/journals/modern-asian-studies/article/abs/from-landgrabbing-to-landhunger-high-land-appropriation-in-the-plantation-areas-of-sri-lanka-during-the-british-period1/FBB5FE33D987FB249A949BC3D4EB27C6","tier":"T1","anchor_role":"canonical anchor","date":"1992 article; Cambridge online 2008","author_or_institution":"Eric Meyer / Modern Asian Studies","author_institution":"Cambridge University Press / Modern Asian Studies","scope":"Highland land appropriation and alienation to outsider planters in the plantation zone","claims_supported":["C-R17-KDY-LAND-001"],"limitations":"Explains land appropriation/alienation; does not collapse this into the separate labour-import mechanism.","provenance":"direct"},
-  {"id":"STRONG-TOOTH-1815-2021","title":"The British Takeover of 1815 and the Kandyan Convention","url":"https://academic.oup.com/chicago-scholarship-online/book/42314/chapter-abstract/356508531","tier":"T1","anchor_role":"canonical anchor","date":"2021-10-25","author_or_institution":"John S. Strong / University of Chicago Press via Oxford Academic","author_institution":"University of Chicago Press","scope":"1815 takeover, elite disaffection, D'Oyly/Brownrigg political strategy and Tooth Relic as palladium of legitimacy","claims_supported":["C-R17-KDY-1815-001","C-R17-KDY-RELIC-001","C-R18-KDY-DEF-003"],"limitations":"Specialist modern interpretation; does not by itself prove a single-cause fall of the kingdom.","provenance":"direct"},
-  {"id":"SLNA-REFORMS-1833","title":"The First Reforms, 1833","url":"https://www.archives.gov.lk/English/online-exhibits/path-to-freedom/reforms","tier":"T1","anchor_role":"canonical anchor","date":"1833 records; current National Archives exhibit","author_or_institution":"Department of National Archives, Sri Lanka","author_institution":"Department of National Archives, Sri Lanka","scope":"Colebrooke-Cameron reforms, island-wide administrative/judicial restructuring and abolition recommendation for rajakariya","claims_supported":["C-R17-KDY-ADMIN-001"],"limitations":"Does not directly quantify Kandyan plantation land alienation or estate-labour dispossession.","provenance":"direct"},
-  {"id":"SIVASUNDARAM-KANDYAN-GEOGRAPHY-2007","title":"Tales of the Land: British Geography and Kandyan Resistance in Sri Lanka, c. 1803–1850","url":"https://eprints.lse.ac.uk/21723/1/Tales_of_the_land-British_geography_and_Kandyan_resistance_in_Sri_Lanka__c_1803-1850.pdf","tier":"T1","anchor_role":"canonical anchor","date":"2007","author_or_institution":"Sujit Sivasundaram / Modern Asian Studies","author_institution":"Cambridge University Press / Modern Asian Studies","scope":"Mountains, passes, topographic knowledge and Kandyan tactics: harassment on the march, severing supplies and communications, occupying heights commanding passes, exploiting disease and difficult retreat","claims_supported":["C-R17-KDY-TERRAIN-001","C-R18-KDY-DEF-001","C-R18-KDY-DEF-002"],"limitations":"Strong for the British period and geography/tactics; cannot alone establish that the same operational pattern was identical in every Portuguese and Dutch campaign.","provenance":"direct"},
-  {"id":"JOHNSTON-CANDY-1804","title":"Narrative of the Operations of a Detachment in an Expedition to Candy, in the Island of Ceylon, in the Year 1804","url":"https://www.gutenberg.org/files/44408/44408-h/44408-h.htm","tier":"T1","anchor_role":"primary operational testimony","date":"1804 campaign account; 1854 edition digitized","author_or_institution":"Arthur Johnston","author_institution":"contemporary British military officer; Project Gutenberg transcription","scope":"British supply difficulties, Kandyan harassment, rains, sickness, communications and the difficulty of sustaining forces in the interior","claims_supported":["C-R18-KDY-DEF-002"],"limitations":"Participant colonial testimony with obvious perspective bias; use for operational observations, not neutral attribution of motives.","provenance":"direct"},
-  {"id":"ARCH-SL-KANDYAN-DEFENCE-2022","title":"Journal of the Department of Archaeology, Sri Lanka — Kandyan military organisation and artillery deployments","url":"https://archaeology.gov.lk/media/attachments/2022/09/07/ac27updated.pdf","tier":"T1","anchor_role":"specialist institutional anchor","date":"2022","author_or_institution":"Department of Archaeology, Sri Lanka","author_institution":"Department of Archaeology, Sri Lanka","scope":"Security posts on trees, rocks and high places at kingdom entrances; artillery at Gatambe, Atugoda Hinna and Balana; use of entry corridors and terrain rather than a continuous city-wall system","claims_supported":["C-R18-KDY-DEF-001"],"limitations":"Modern synthesis drawing in part on D'Oyly; architectural absence in today's Kandy cannot be inferred solely from this article.","provenance":"direct"},
-  {"id":"DE-SILVA-KANDYAN-MILITARY-2004","title":"Military organisation in pre-modern Sri Lanka: the army of the Kandyan kings","url":"https://www.tandfonline.com/doi/full/10.1080/1479027042000236616","tier":"T1","anchor_role":"specialist scholarly anchor","date":"2004","author_or_institution":"South Asia: Journal of South Asian Studies","author_institution":"Taylor & Francis / scholarly journal","scope":"Kandyan military organisation, provincial defence, logistics and the relationship between central highlands, peripheral provinces and strategic access routes","claims_supported":["C-R18-KDY-DEF-001","C-R18-KDY-DEF-002"],"limitations":"Secondary synthesis; exact campaign-level claims should be paired with contemporary testimony where available.","provenance":"direct"}
+  {
+    "id": "SLNA-KANDYAN-CONVENTION-1815",
+    "title": "Kandyan Convention — Path to Freedom exhibit",
+    "url": "https://www.archives.gov.lk/online-exhibits/path-to-freedom/1-1815-convention",
+    "tier": "T1",
+    "anchor_role": "canonical anchor",
+    "date": "1815 document; current National Archives exhibit",
+    "author_or_institution": "Department of National Archives, Sri Lanka",
+    "author_institution": "Department of National Archives, Sri Lanka",
+    "scope": "1815 Convention, political manoeuvring, transfer of sovereignty under Article 4 and protection of Buddhism under Article 5",
+    "claims_supported": [
+      "C-R17-KDY-1815-001",
+      "C-R17-KDY-RELIC-001",
+      "C-R18-KDY-DEF-003"
+    ],
+    "limitations": "Institutional exhibit summarizes the convention; detailed signatory-by-signatory motives require the document and specialist scholarship.",
+    "provenance": "direct"
+  },
+  {
+    "id": "SLNA-REBELLION-1818",
+    "title": "Freedom Struggle, 1818",
+    "url": "https://www.archives.gov.lk/English/online_exhibits/path_to_freedom/freedom_struggle",
+    "tier": "T1",
+    "anchor_role": "canonical anchor",
+    "date": "1817–1818 records; current National Archives exhibit",
+    "author_or_institution": "Department of National Archives, Sri Lanka",
+    "author_institution": "Department of National Archives, Sri Lanka",
+    "scope": "1817–18 rebellion, suppression and Tooth Relic as a legitimacy object in British correspondence",
+    "claims_supported": [
+      "C-R17-KDY-REBELLION-001",
+      "C-R17-KDY-RELIC-001"
+    ],
+    "limitations": "British correspondence reflects colonial interpretation of legitimacy; suppression and relic politics must be separated.",
+    "provenance": "direct"
+  },
+  {
+    "id": "SLR-RAILWAY-HISTORY",
+    "title": "History of Railways in Sri Lanka",
+    "url": "https://www.railway.gov.lk/web/index.php?Itemid=181&id=137&lang=en&option=com_content&view=article",
+    "tier": "T2",
+    "anchor_role": "specialist institutional anchor",
+    "date": "current institutional history, accessed 2026-08-25",
+    "author_or_institution": "Sri Lanka Railways",
+    "author_institution": "Sri Lanka Railways",
+    "scope": "Rail introduced in 1864 to transport hill-country coffee to Colombo; later tea and plantation inputs/outputs",
+    "claims_supported": [
+      "C-R17-KDY-RAIL-001",
+      "C-R17-KDY-PLANTATION-001"
+    ],
+    "limitations": "Institutional retrospective rather than contemporaneous colonial file; adequate for stated railway purpose, not for all causal motives.",
+    "provenance": "direct"
+  },
+  {
+    "id": "WENZLHUEMER-ROAD-2007",
+    "title": "Indian Labour Immigration and British Labour Policy in Nineteenth-Century Ceylon",
+    "url": "https://archiv.ub.uni-heidelberg.de/volltextserver/19680/1/Wenzlhuemer_Indian_Labour_Immigration_and_British_Labour_2007.pdf",
+    "tier": "T1",
+    "anchor_role": "canonical anchor",
+    "date": "2007",
+    "author_or_institution": "Roland Wenzlhuemer / Modern Asian Studies",
+    "author_institution": "Cambridge University Press / Modern Asian Studies",
+    "scope": "Colombo–Kandy road as post-1818 control infrastructure that also opened plantation land and secured investment; Indian labour immigration policy context",
+    "claims_supported": [
+      "C-R17-KDY-ROAD-001",
+      "C-R17-KDY-PLANTATION-001",
+      "C-R17-KDY-LABOUR-001"
+    ],
+    "limitations": "Modern scholarly synthesis; the strongest wording on purpose should still be traced to colonial correspondence where possible.",
+    "provenance": "direct"
+  },
+  {
+    "id": "MEYER-HIGHLAND-APPROPRIATION-1992",
+    "title": "From Landgrabbing to Landhunger: High Land Appropriation in the Plantation Areas of Sri Lanka during the British Period",
+    "url": "https://www.cambridge.org/core/journals/modern-asian-studies/article/abs/from-landgrabbing-to-landhunger-high-land-appropriation-in-the-plantation-areas-of-sri-lanka-during-the-british-period1/FBB5FE33D987FB249A949BC3D4EB27C6",
+    "tier": "T1",
+    "anchor_role": "canonical anchor",
+    "date": "1992 article; Cambridge online 2008",
+    "author_or_institution": "Eric Meyer / Modern Asian Studies",
+    "author_institution": "Cambridge University Press / Modern Asian Studies",
+    "scope": "Highland land appropriation and alienation to outsider planters in the plantation zone",
+    "claims_supported": [
+      "C-R17-KDY-LAND-001"
+    ],
+    "limitations": "Explains land appropriation/alienation; does not collapse this into the separate labour-import mechanism.",
+    "provenance": "direct"
+  },
+  {
+    "id": "STRONG-TOOTH-1815-2021",
+    "title": "The British Takeover of 1815 and the Kandyan Convention",
+    "url": "https://academic.oup.com/chicago-scholarship-online/book/42314/chapter-abstract/356508531",
+    "tier": "T1",
+    "anchor_role": "canonical anchor",
+    "date": "2021-10-25",
+    "author_or_institution": "John S. Strong / University of Chicago Press via Oxford Academic",
+    "author_institution": "University of Chicago Press",
+    "scope": "1815 takeover, elite disaffection, D'Oyly/Brownrigg political strategy and Tooth Relic as palladium of legitimacy",
+    "claims_supported": [
+      "C-R17-KDY-1815-001",
+      "C-R17-KDY-RELIC-001",
+      "C-R18-KDY-DEF-003"
+    ],
+    "limitations": "Specialist modern interpretation; does not by itself prove a single-cause fall of the kingdom.",
+    "provenance": "direct"
+  },
+  {
+    "id": "SLNA-REFORMS-1833",
+    "title": "The First Reforms, 1833",
+    "url": "https://www.archives.gov.lk/English/online-exhibits/path-to-freedom/reforms",
+    "tier": "T1",
+    "anchor_role": "canonical anchor",
+    "date": "1833 records; current National Archives exhibit",
+    "author_or_institution": "Department of National Archives, Sri Lanka",
+    "author_institution": "Department of National Archives, Sri Lanka",
+    "scope": "Colebrooke-Cameron reforms, island-wide administrative/judicial restructuring and abolition recommendation for rajakariya",
+    "claims_supported": [
+      "C-R17-KDY-ADMIN-001"
+    ],
+    "limitations": "Does not directly quantify Kandyan plantation land alienation or estate-labour dispossession.",
+    "provenance": "direct"
+  },
+  {
+    "id": "SIVASUNDARAM-KANDYAN-GEOGRAPHY-2007",
+    "title": "Tales of the Land: British Geography and Kandyan Resistance in Sri Lanka, c. 1803–1850",
+    "url": "https://eprints.lse.ac.uk/21723/1/Tales_of_the_land-British_geography_and_Kandyan_resistance_in_Sri_Lanka__c_1803-1850.pdf",
+    "tier": "T1",
+    "anchor_role": "canonical anchor",
+    "date": "2007",
+    "author_or_institution": "Sujit Sivasundaram / Modern Asian Studies",
+    "author_institution": "Cambridge University Press / Modern Asian Studies",
+    "scope": "Mountains, passes, topographic knowledge and Kandyan tactics: harassment on the march, severing supplies and communications, occupying heights commanding passes, exploiting disease and difficult retreat",
+    "claims_supported": [
+      "C-R17-KDY-TERRAIN-001",
+      "C-R18-KDY-DEF-001",
+      "C-R18-KDY-DEF-002"
+    ],
+    "limitations": "Strong for the British period and geography/tactics; cannot alone establish that the same operational pattern was identical in every Portuguese and Dutch campaign.",
+    "provenance": "direct"
+  },
+  {
+    "id": "JOHNSTON-CANDY-1804",
+    "title": "Narrative of the Operations of a Detachment in an Expedition to Candy, in the Island of Ceylon, in the Year 1804",
+    "url": "https://www.gutenberg.org/files/44408/44408-h/44408-h.htm",
+    "tier": "T1",
+    "anchor_role": "corroborating bridge",
+    "date": "1804 campaign account; 1854 edition digitized",
+    "author_or_institution": "Arthur Johnston",
+    "author_institution": "contemporary British military officer; Project Gutenberg transcription",
+    "scope": "British supply difficulties, Kandyan harassment, rains, sickness, communications and the difficulty of sustaining forces in the interior",
+    "claims_supported": [
+      "C-R18-KDY-DEF-002"
+    ],
+    "limitations": "Participant colonial testimony with obvious perspective bias; use for operational observations, not neutral attribution of motives.",
+    "provenance": "direct"
+  },
+  {
+    "id": "ARCH-SL-KANDYAN-DEFENCE-2022",
+    "title": "Journal of the Department of Archaeology, Sri Lanka — Kandyan military organisation and artillery deployments",
+    "url": "https://archaeology.gov.lk/media/attachments/2022/09/07/ac27updated.pdf",
+    "tier": "T1",
+    "anchor_role": "specialist institutional anchor",
+    "date": "2022",
+    "author_or_institution": "Department of Archaeology, Sri Lanka",
+    "author_institution": "Department of Archaeology, Sri Lanka",
+    "scope": "Security posts on trees, rocks and high places at kingdom entrances; artillery at Gatambe, Atugoda Hinna and Balana; use of entry corridors and terrain rather than a continuous city-wall system",
+    "claims_supported": [
+      "C-R18-KDY-DEF-001"
+    ],
+    "limitations": "Modern synthesis drawing in part on D'Oyly; architectural absence in today's Kandy cannot be inferred solely from this article.",
+    "provenance": "direct"
+  },
+  {
+    "id": "DE-SILVA-KANDYAN-MILITARY-2004",
+    "title": "Military organisation in pre-modern Sri Lanka: the army of the Kandyan kings",
+    "url": "https://www.tandfonline.com/doi/full/10.1080/1479027042000236616",
+    "tier": "T1",
+    "anchor_role": "canonical anchor",
+    "date": "2004",
+    "author_or_institution": "South Asia: Journal of South Asian Studies",
+    "author_institution": "Taylor & Francis / scholarly journal",
+    "scope": "Kandyan military organisation, provincial defence, logistics and the relationship between central highlands, peripheral provinces and strategic access routes",
+    "claims_supported": [
+      "C-R18-KDY-DEF-001",
+      "C-R18-KDY-DEF-002"
+    ],
+    "limitations": "Secondary synthesis; exact campaign-level claims should be paired with contemporary testimony where available.",
+    "provenance": "direct"
+  }
 ]
