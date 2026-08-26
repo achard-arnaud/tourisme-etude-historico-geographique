@@ -63,6 +63,7 @@ def build_heat_map(project: Path, scaffold: dict) -> dict:
     claim_degrees = [degrees.get(str(cid), 0) for cid in all_claim_ids]
     global_mean = mean(claim_degrees) if claim_degrees else 0.0
     global_std = pstdev(claim_degrees) if len(claim_degrees) > 1 else 0.0
+    hot_threshold = global_mean + global_std
 
     sections = []
     for section in flatten_subsections(scaffold):
@@ -72,10 +73,12 @@ def build_heat_map(project: Path, scaffold: dict) -> dict:
             status = "unmapped"
         else:
             avg = mean(degrees.get(cid, 0) for cid in claim_ids)
-            if avg <= 1:
-                status = "cold"
-            elif avg > global_mean + global_std:
+            # The definitions can overlap when mean+std < 1. Hot wins because it
+            # denotes relative concentration; cold applies only after that test.
+            if avg > hot_threshold:
                 status = "hot"
+            elif avg <= 1:
+                status = "cold"
             else:
                 status = "normal"
         sections.append({**section, "avg_degree": avg, "status": status})
@@ -84,6 +87,7 @@ def build_heat_map(project: Path, scaffold: dict) -> dict:
         "project": project.name,
         "global_mean_degree": round(global_mean, 3),
         "global_std_degree": round(global_std, 3),
+        "hot_threshold": round(hot_threshold, 3),
         "sections": sections,
     }
 
@@ -95,8 +99,9 @@ def render_markdown(data: dict, run: int) -> str:
         f"Projet : `{data['project']}`",
         "",
         "Diagnostic L0 uniquement. `hot/cold` indique la connectivité du graphe, pas l'importance historique intrinsèque.",
+        "Les sous-sections sans `claim_ids` restent `unmapped` : le script refuse d'inventer un mapping à partir des seuls titres.",
         "",
-        f"Degré moyen global : **{data['global_mean_degree']}** — écart-type : **{data['global_std_degree']}**",
+        f"Degré moyen global : **{data['global_mean_degree']}** — écart-type : **{data['global_std_degree']}** — seuil hot : **{data['hot_threshold']}**",
         "",
         "| Section | Niveau | Claims mappés | Degré moyen | Statut |",
         "|---|---:|---:|---:|---|",
@@ -107,9 +112,9 @@ def render_markdown(data: dict, run: int) -> str:
     lines.extend([
         "",
         "## Lecture",
-        "- **hot** : degré moyen > moyenne globale + 1 écart-type ; zone à forte connectivité, à surveiller contre la surcharge.",
-        "- **cold** : degré moyen <= 1 ; zone orpheline ou quasi-orpheline, à inspecter pour couverture/bridge éventuel.",
-        "- **unmapped** : sous-section présente au sommaire sans mapping explicite de claim ; dette de structuration, pas preuve d'absence de matière.",
+        "- **hot** : degré moyen > moyenne globale + 1 écart-type ; priorité sur `cold` si les seuils se chevauchent.",
+        "- **cold** : hors zone hot, degré moyen <= 1 ; zone orpheline ou quasi-orpheline à inspecter.",
+        "- **unmapped** : section présente au scaffold sans mapping explicite de claim ; dette de structuration, pas preuve d'absence de matière.",
         "",
     ])
     return "\n".join(lines)
