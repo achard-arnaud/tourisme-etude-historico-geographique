@@ -39,7 +39,7 @@ class Run20IntakeResearchTests(unittest.TestCase):
         self.assertEqual('policy_effect', claim['type'])
         self.assertIn('7,236 raids', claim['claim'])
         self.assertIn('does not establish', claim['bounded_by'])
-        self.assertIn('environmental', claim['bounded_by'])
+        self.assertIn('ecological improvement', claim['bounded_by'])
 
     def test_targeted_research_sources_keep_primary_mirror_bounded(self):
         post_sources = json.loads((POST / '05_sources' / 'source_register_run20_intake_research.json').read_text(encoding='utf-8'))
