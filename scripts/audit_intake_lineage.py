@@ -7,9 +7,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "docs" / "intakes" / "intake_registry.json"
+BACKLOG = ROOT / "docs" / "intakes" / "intake_research_backlog.json"
 INTAKE_DIR = ROOT / "docs" / "intakes"
 MANIFEST_GLOB = "RUN*_MANIFEST.json"
 VALID_STATUSES = {"archived", "missing_source", "unidentified_legacy"}
+VALID_RESEARCH_STATUSES = {"open", "partially_resolved", "blocked", "pending_external", "resolved", "abandoned"}
 EXTERNAL_INTAKE_RE = re.compile(r"(?:[A-Z0-9_]*INTAKES?_[A-Za-z0-9_\-]+|INTAKE_[A-Za-z0-9_\-]+)\.md")
 
 
@@ -25,6 +27,70 @@ def discover_manifest_intakes() -> dict[str, set[str]]:
         if names:
             found[manifest.name] = names
     return found
+
+
+def validate_backlog(intake_ids: set[str], errors: list[str]) -> tuple[int, int]:
+    if not BACKLOG.exists():
+        errors.append(f"missing research backlog: {BACKLOG}")
+        return 0, 0
+    try:
+        rows = load_json(BACKLOG)
+    except Exception as exc:
+        errors.append(f"invalid research backlog JSON: {exc}")
+        return 0, 0
+    if not isinstance(rows, list):
+        errors.append("intake research backlog must be a JSON array")
+        return 0, 0
+
+    ids: set[str] = set()
+    covered: set[str] = set()
+    p1 = 0
+    for idx, row in enumerate(rows):
+        prefix = f"backlog[{idx}]"
+        if not isinstance(row, dict):
+            errors.append(f"{prefix}: must be object")
+            continue
+        for key in ("id", "intake_id", "topic", "priority", "status", "research_state", "blocks", "next_action"):
+            if key not in row:
+                errors.append(f"{prefix}: missing {key}")
+        rid = row.get("id")
+        if not isinstance(rid, str) or not rid:
+            errors.append(f"{prefix}: invalid id")
+        elif rid in ids:
+            errors.append(f"duplicate research backlog id: {rid}")
+        else:
+            ids.add(rid)
+
+        intake_id = row.get("intake_id")
+        if intake_id not in intake_ids:
+            errors.append(f"{rid}: unknown intake_id {intake_id!r}")
+        else:
+            covered.add(intake_id)
+
+        priority = row.get("priority")
+        if not isinstance(priority, int) or isinstance(priority, bool) or priority < 1 or priority > 3:
+            errors.append(f"{rid}: priority must be integer 1..3")
+        elif priority == 1:
+            p1 += 1
+
+        status = row.get("status")
+        if status not in VALID_RESEARCH_STATUSES:
+            errors.append(f"{rid}: invalid research status {status!r}")
+        if status == "pending_external" and not row.get("review_by"):
+            errors.append(f"{rid}: pending_external requires review_by")
+
+        blocks = row.get("blocks")
+        if not isinstance(blocks, list) or not blocks or any(not isinstance(v, str) or not v.strip() for v in blocks):
+            errors.append(f"{rid}: blocks must be a non-empty string list")
+        if not isinstance(row.get("next_action"), str) or not row.get("next_action", "").strip():
+            errors.append(f"{rid}: next_action must be non-empty")
+        if status in {"resolved", "abandoned"} and not row.get("resolution"):
+            errors.append(f"{rid}: terminal research status requires resolution")
+
+    missing = intake_ids - covered
+    for iid in sorted(missing):
+        errors.append(f"{iid}: registered intake has no research backlog workstream")
+    return len(rows), p1
 
 
 def main() -> int:
@@ -133,6 +199,8 @@ def main() -> int:
     for filename in sorted(registered_archived - archived_files):
         errors.append(f"registry says archived but file is absent: {filename}")
 
+    backlog_count, p1_count = validate_backlog(ids, errors)
+
     for warning in warnings:
         print("WARN:", warning)
     if errors:
@@ -143,7 +211,8 @@ def main() -> int:
     print(
         "INTAKE LINEAGE AUDIT OK — "
         f"registered {len(entries)} / archived {len(registered_archived)} / "
-        f"manifest-referenced {sum(len(v) for v in manifest_intakes.values())} / provenance debt {len(warnings)}"
+        f"manifest-referenced {sum(len(v) for v in manifest_intakes.values())} / provenance debt {len(warnings)} / "
+        f"research workstreams {backlog_count} / P1 {p1_count}"
     )
     return 0
 
