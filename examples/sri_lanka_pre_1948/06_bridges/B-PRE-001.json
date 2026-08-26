@@ -5,5 +5,11 @@
   "question": "How did possession of coastal nodes become more than military occupation?",
   "mechanism": "Ports and forts lowered coercion/logistics costs; declining profitability and territorial obligations increased incentives for taxation, land revenue, registration and legal control.",
   "result": "B",
-  "source_ids": ["SNSL-FORTS-2022", "CAMBRIDGE-CLASSIFICATION", "CAMBRIDGE-LAWMAKING"]
+  "source_ids": ["SNSL-FORTS-2022", "CAMBRIDGE-CLASSIFICATION", "CAMBRIDGE-LAWMAKING"],
+  "transmission_channel": "Fortified coastal nodes and VOC administrative institutions linked military control to fiscal registration, land administration and legal categorisation.",
+  "time_lag": "Multi-decade transition from coastal conquest/consolidation to deeper eighteenth-century fiscal-administrative legibility.",
+  "scale": "Z1 coastal nodes → Z2 colonial territorial administration.",
+  "confounders": ["Pre-existing local land/service institutions", "regional variation in VOC administrative penetration", "profitability and war-finance pressures"],
+  "transportability": "Mechanism-only. Fort possession can enable administrative penetration, but the degree and social effects depend on local institutions and cannot be transported as a universal colonial sequence.",
+  "integration_action": "Use in A06 to connect fort/logistics control to registration and fiscal legibility; retain local variation and avoid claiming that forts alone caused bureaucratic transformation."
 }
