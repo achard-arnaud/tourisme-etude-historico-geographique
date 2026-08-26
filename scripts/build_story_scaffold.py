@@ -27,6 +27,21 @@ def _arc_status(path:Path)->str:
     match=re.search(r"(?mi)^\s*-?\s*evidence_status\s*:\s*([a-z0-9_-]+)",text)
     return match.group(1) if match else "researched"
 
+def _arc_outline(path:Path)->tuple[str,list[dict]]:
+    """Pure-code structural scan: headings only, never claim prose."""
+    title=path.parent.name;children=[]
+    for line in path.read_text(encoding="utf-8").splitlines():
+        match=re.match(r"^(#{1,3})\s+(.+?)\s*$",line)
+        if not match:continue
+        level=len(match.group(1));label=match.group(2).strip()
+        if level==1:title=label
+        elif level in {2,3}:children.append({"level":level,"title":label})
+    return title,children
+
+def build_toc_from_scaffold(scaffold:dict)->list[dict]:
+    """L0: construct TOC data solely from scaffold structure."""
+    return [{"arc":a["arc"],"title":a.get("title",a["arc"]),"children":a.get("subsections",[])} for a in scaffold.get("arcs",[])]
+
 def _components(edges:list[dict])->list[list[str]]:
     graph=defaultdict(set)
     for edge in edges:
@@ -64,13 +79,13 @@ def build_scaffold(project:Path)->dict:
             if arc:bridge_by_arc[arc].append(bridge["id"])
     arcs=[]
     for arc_md in sorted((project/"01_arcs").glob("*/ARC.md")):
-        arc=arc_md.parent.name;arc_claims=by_arc_claims[arc]
+        arc=arc_md.parent.name;arc_claims=by_arc_claims[arc];title,subsections=_arc_outline(arc_md)
         spine=sorted((c for c in arc_claims if c.get("type") not in {"question","discarded_lead"}),key=lambda c:(ROLE_ORDER.get(c.get("causal_role"),9),CONFIDENCE_ORDER.get(c.get("confidence"),9),c["id"]))
-        arcs.append({"arc":arc,"evidence_status":_arc_status(arc_md),"spine_claim_ids":[c["id"] for c in spine],"claim_count":len(arc_claims),"causal_roles":dict(sorted(Counter(c.get("causal_role","none") for c in arc_claims).items())),"bridge_ids":sorted(set(bridge_by_arc[arc])),"side_story_ids":[s["id"] for s in by_arc_stories[arc] if s.get("status") in {"validated","promoted"}],"candidate_side_story_ids":[s["id"] for s in by_arc_stories[arc] if s.get("status")=="candidate"],"arc_recap_ids":[r["id"] for r in by_arc_recaps[arc] if r.get("status") in {"validated","promoted"}],"illustration_ids":[x["id"] for x in by_arc_illustrations[arc] if x.get("status")=="reader_eligible"],"illustration_review_queue_ids":[x["id"] for x in by_arc_illustrations[arc] if x.get("status") in {"candidate","vision_validated"}],"open_question_ids":[q["id"] for q in by_arc_questions[arc] if q.get("status") in {"open","bounded","pending_external"}]})
+        arcs.append({"arc":arc,"title":title,"subsections":subsections,"evidence_status":_arc_status(arc_md),"spine_claim_ids":[c["id"] for c in spine],"claim_count":len(arc_claims),"causal_roles":dict(sorted(Counter(c.get("causal_role","none") for c in arc_claims).items())),"bridge_ids":sorted(set(bridge_by_arc[arc])),"side_story_ids":[s["id"] for s in by_arc_stories[arc] if s.get("status") in {"validated","promoted"}],"candidate_side_story_ids":[s["id"] for s in by_arc_stories[arc] if s.get("status")=="candidate"],"arc_recap_ids":[r["id"] for r in by_arc_recaps[arc] if r.get("status") in {"validated","promoted"}],"illustration_ids":[x["id"] for x in by_arc_illustrations[arc] if x.get("status")=="reader_eligible"],"illustration_review_queue_ids":[x["id"] for x in by_arc_illustrations[arc] if x.get("status") in {"candidate","vision_validated"}],"open_question_ids":[q["id"] for q in by_arc_questions[arc] if q.get("status") in {"open","bounded","pending_external"}]})
     all_linked=set()
     for edge in edges:all_linked|={str(edge.get("from")),str(edge.get("to"))}
     unresolved_illustrations=[x["id"] for x in illustrations if (x.get("placement") or {}).get("target_status")!="resolved"]
-    return {"schema_version":SCHEMA_VERSION,"class":"story_scaffold","project":project.name,"strategy":"global topology -> arc-local retrieval packs -> cross-arc stitch -> illustration pass -> coverage reconciliation","token_policy":{"global_pass":"IDs, counts and topology only","draft_pass":"hydrate only one arc plus adjacent bridges","final_pass":"hydrate unresolved coverage items, not the full corpus"},"coverage":{"claims":len(claims),"bridges":len(bridges),"graph_edges":len(edges),"side_stories":len(stories),"arc_recaps":len(recaps),"maps":len(maps),"illustrations":len(illustrations),"open_questions":sum(1 for q in questions if q.get("status") in {"open","bounded","pending_external"})},"diagnostics":{"graph_components":_components(edges),"graph_orphan_claim_ids":sorted(c["id"] for c in claims if c["id"] not in all_linked),"illustration_missing_target_ids":sorted(unresolved_illustrations)},"arcs":arcs}
+    return {"schema_version":SCHEMA_VERSION,"class":"story_scaffold","project":project.name,"strategy":"global topology -> arc-local retrieval packs -> cross-arc stitch -> illustration pass -> coverage reconciliation","token_policy":{"global_pass":"IDs, counts, headings and topology only","draft_pass":"hydrate only one arc plus adjacent bridges","final_pass":"hydrate unresolved coverage items, not the full corpus"},"coverage":{"claims":len(claims),"bridges":len(bridges),"graph_edges":len(edges),"side_stories":len(stories),"arc_recaps":len(recaps),"maps":len(maps),"illustrations":len(illustrations),"open_questions":sum(1 for q in questions if q.get("status") in {"open","bounded","pending_external"})},"diagnostics":{"graph_components":_components(edges),"graph_orphan_claim_ids":sorted(c["id"] for c in claims if c["id"] not in all_linked),"illustration_missing_target_ids":sorted(unresolved_illustrations)},"arcs":arcs}
 
 def render_mermaid(data:dict,project:Path)->str:
     edges=[]

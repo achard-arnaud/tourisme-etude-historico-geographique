@@ -12,6 +12,8 @@ from docx import Document
 
 from render_reader_exports import add_inline_markdown, collect_register, extract_source_ids
 from side_story_contract import assert_rendered_side_stories, validate_or_raise
+from build_story_scaffold import build_scaffold
+from toc_contract import inject_word_toc
 
 
 REPO = Path(__file__).resolve().parents[1]
@@ -240,6 +242,9 @@ def build(key: str) -> dict[str, int | str]:
     baseline_words = docx_word_count(doc)
     for index, replacement in spec["cover_replacements"].items():
         replace_preserving_first_run(doc.paragraphs[index], replacement)
+    scaffold_path=output_dir/"story_scaffold.json"
+    scaffold=json.loads(scaffold_path.read_text(encoding="utf-8")) if scaffold_path.exists() else build_scaffold(project)
+    toc_arcs=inject_word_toc(doc,scaffold,max(spec["cover_replacements"]))
 
     insert_after_docx_anchor(doc, spec["method_anchor"], spec["method_block"])
     for anchor, numbers in spec["groups"]:
@@ -252,7 +257,7 @@ def build(key: str) -> dict[str, int | str]:
     doc.core_properties.subject = "V3 intégrale, lectorat avancé, sans plafond de longueur"
     doc.core_properties.comments = (
         "Built losslessly from the archived V1 reader plus the complete promoted delta; "
-        "side-story lineage is validated before export."
+        "side-story lineage is validated before export; TOC hierarchy is scaffold-backed."
     )
 
     output_words = docx_word_count(doc)
@@ -281,6 +286,7 @@ def build(key: str) -> dict[str, int | str]:
         "v3_docx_words": output_words,
         "retention_vs_baseline_percent": round(output_words / baseline_words * 100, 1),
         "side_stories": side_story_count,
+        "toc_arcs":toc_arcs,
         "docx": str(output_path.relative_to(REPO)),
         "markdown": str(markdown_output_path.relative_to(REPO)),
     }

@@ -18,6 +18,9 @@ def validate_reader_profile(project:Path)->tuple[list[str],list[str],int]:
     policy=p.get("side_story_policy") or {};priority=policy.get("priority_order") or []
     if set(priority)!=KINDS or len(priority)!=len(KINDS):errors.append("reader profile priority_order must enumerate every side-story kind exactly once")
     if policy.get("coverage_mode") not in {"all","selective"}:errors.append("reader profile coverage_mode must be all/selective")
+    density=p.get("illustration_density_policy") or {}
+    if not isinstance(density.get("max_per_n_pages"),int) or density.get("max_per_n_pages",0)<1:errors.append("reader profile illustration_density_policy.max_per_n_pages must be positive integer")
+    if not isinstance(density.get("words_per_page"),int) or density.get("words_per_page",0)<1:errors.append("reader profile illustration_density_policy.words_per_page must be positive integer")
     tpl=p.get("story_template")
     if not tpl or not (Path(__file__).resolve().parents[1]/tpl).exists():errors.append("reader profile story_template missing")
     if p.get("audience")=="child_10_plus" and p.get("min_age")!=10:errors.append("child_10_plus profile must set min_age=10")

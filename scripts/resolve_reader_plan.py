@@ -9,6 +9,14 @@ from map_asset_contract import load_map_assets
 from illustration_contract import load_illustrations
 from reader_profile_contract import load_reader_profile
 
+EVIDENCE_WEIGHT={"canonical_text":3,"chronicle_tradition":2,"interpretive":1,"observed_caption":1}
+CONFIDENCE_WEIGHT={"high":3,"medium":2,"low":0}
+
+def computed_rank(item:dict)->tuple:
+    """L0 deterministic ranking; no prose hydration or LLM call."""
+    depiction=item.get("depiction") or {};vision=item.get("vision_review") or {};placement=item.get("placement") or {}
+    return (-EVIDENCE_WEIGHT.get(depiction.get("evidence_status"),0),-CONFIDENCE_WEIGHT.get(vision.get("confidence"),0),placement.get("relevance_rank",99),item.get("id",""))
+
 def build_plan(project:Path)->dict:
     profile=load_reader_profile(project); policy=profile["side_story_policy"]; priority={k:i for i,k in enumerate(policy["priority_order"])}
     age=profile.get("min_age"); stories=[]
@@ -26,13 +34,13 @@ def build_plan(project:Path)->dict:
         slot=(m.get("placement") or {}).get("subsection_ref")
         if slot and slot not in used: selected_maps.append(m);used.add(slot)
     illustrations=[x for _,x in load_illustrations(project)]
-    review_queue=sorted((x for x in illustrations if x.get("status") in {"candidate","vision_validated"}),key=lambda x:((x.get("placement") or {}).get("relevance_rank",99),x.get("id","")))
+    review_queue=sorted((x for x in illustrations if x.get("status") in {"candidate","vision_validated"}),key=computed_rank)
     selected_illustrations=[];used_illustration_slots=set()
-    for item in sorted((x for x in illustrations if x.get("status")=="reader_eligible"),key=lambda x:((x.get("placement") or {}).get("relevance_rank",99),x.get("id",""))):
+    for item in sorted((x for x in illustrations if x.get("status")=="reader_eligible"),key=computed_rank):
         placement=item.get("placement") or {};slot=placement.get("section_anchor") or placement.get("subsection_ref")
         if placement.get("target_status")=="resolved" and slot and slot not in used_illustration_slots:
             selected_illustrations.append(item);used_illustration_slots.add(slot)
-    return {"profile_id":profile["id"],"content_temperature":profile["content_temperature"],"story_template":profile["story_template"],"story_scaffold":"09_output/story_scaffold.json","eligible_side_story_ids":[s["id"] for s in stories],"arc_recap_ids":[r["id"] for r in recaps] if profile.get("arc_recap_policy",{}).get("enabled",True) else [],"selected_map_ids":[m["id"] for m in selected_maps],"map_rule":"max one human-approved map per subsection/side-story slot","selected_illustration_ids":[x["id"] for x in selected_illustrations],"illustration_review_queue_ids":[x["id"] for x in review_queue],"retired_illustration_ids":sorted(x["id"] for x in illustrations if x.get("status")=="retired"),"illustration_rule":"embed only reader_eligible assets with a resolved target; keep candidate, vision_validated or proposed_missing assets in the review queue"}
+    return {"profile_id":profile["id"],"content_temperature":profile["content_temperature"],"story_template":profile["story_template"],"story_scaffold":"09_output/story_scaffold.json","eligible_side_story_ids":[s["id"] for s in stories],"arc_recap_ids":[r["id"] for r in recaps] if profile.get("arc_recap_policy",{}).get("enabled",True) else [],"selected_map_ids":[m["id"] for m in selected_maps],"map_rule":"max one human-approved map per subsection/side-story slot","selected_illustration_ids":[x["id"] for x in selected_illustrations],"illustration_review_queue_ids":[x["id"] for x in review_queue],"retired_illustration_ids":sorted(x["id"] for x in illustrations if x.get("status")=="retired"),"illustration_rule":"rank by evidence then vision confidence; relevance_rank is a human tie-breaker; embed only reader_eligible assets with a resolved target"}
 def main():
     p=argparse.ArgumentParser();p.add_argument("--project",required=True);p.add_argument("--output");a=p.parse_args();project=Path(a.project);plan=build_plan(project);text=json.dumps(plan,ensure_ascii=False,indent=2)+"\n"
     if a.output:Path(a.output).write_text(text,encoding="utf-8")
