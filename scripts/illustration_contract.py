@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Validate reader-facing illustrations linked to evidence inputs."""
 from __future__ import annotations
-import json,re
+import json,os,re
 from pathlib import Path
 import sys
 
@@ -13,6 +13,10 @@ EVIDENCE_STATUSES = {"observed_caption", "canonical_text", "chronicle_tradition"
 TEXTUAL_LAYERS = {"early_discourse", "canonical_vinaya", "later_biography", "chronicle", "local_temple", "unresolved"}
 BINARY_STATUSES = {"external_only", "repository"}
 SHA_STATUSES = {"verified_at_intake", "repository_verified", "supplied_unverified"}
+TAG_REVIEW_STATUSES = {"pending", "approved", "rejected"}
+TAG_REVIEW_TRIGGERS = {"auto_low_confidence", "manual"}
+FORBIDDEN_CAPTION_PATTERNS = [r"\bprouve\b", r"\bconfirme historiquement\b", r"\battest[ée] formellement\b", r"\bdémontre que\b"]
+STRICT_CONFIDENCE_GATE = os.environ.get("ILLUSTRATION_CONFIDENCE_GATE", "0") == "1"
 
 
 def illustration_marker(iid: str) -> str:
@@ -54,6 +58,48 @@ def _ref_resolves(project: Path, ref: dict) -> bool:
         "side_story": "09_output/side_stories/*.json",
     }
     return bool(rid and any(rid in _json_ids(p) for p in project.glob(patterns.get(ref.get("type"), "__none__"))))
+
+
+def lint_caption_language(item: dict) -> list[str]:
+    """L1 regex linter over short illustration fragments only; never hydrates the manuscript."""
+    iid = item.get("id", "<unknown>")
+    fragment = item.get("fragment") or {}
+    errors = []
+    for field in ("caption", "what_it_shows", "why_here"):
+        text = str(fragment.get(field) or "")
+        for pattern in FORBIDDEN_CAPTION_PATTERNS:
+            if re.search(pattern, text, re.IGNORECASE):
+                errors.append(f"illustration {iid}: fragment.{field} uses overclaiming language matching {pattern}")
+    return errors
+
+
+def check_illustration_density(markdown: str, selected_ids: list[str], max_per_n_pages: int = 2, words_per_page: int = 500) -> list[str]:
+    """L0 deterministic density gate using word windows and already-selected marker IDs."""
+    if max_per_n_pages < 1 or words_per_page < 1:
+        return ["illustration density policy must use positive max_per_n_pages and words_per_page"]
+    selected = set(selected_ids)
+    if not selected:
+        return []
+    tokens = re.findall(r"\[ILLUSTRATION:[^\]]+\]|\S+", markdown)
+    window_words = max_per_n_pages * words_per_page
+    errors = []
+    word_index = 0
+    buckets: dict[int, list[str]] = {}
+    for token in tokens:
+        marker = re.fullmatch(r"\[ILLUSTRATION:([^\]]+)\]", token)
+        if marker:
+            iid = marker.group(1)
+            if iid in selected:
+                bucket = word_index // window_words
+                buckets.setdefault(bucket, []).append(iid)
+        else:
+            word_index += 1
+    for bucket, ids in sorted(buckets.items()):
+        if len(ids) > 1:
+            start = bucket * window_words + 1
+            end = (bucket + 1) * window_words
+            errors.append(f"illustration density exceeded in words {start}-{end}: {', '.join(ids)}")
+    return errors
 
 
 def validate_illustrations(project: Path) -> tuple[list[str], list[str], int]:
@@ -110,6 +156,20 @@ def validate_illustrations(project: Path) -> tuple[list[str], list[str], int]:
             for key in ("caption", "what_it_shows", "why_here", "limits"):
                 if not frag.get(key):
                     errors.append(f"illustration {iid}: fragment.{key} required")
+        if review.get("confidence") == "low":
+            if depiction.get("evidence_status") != "interpretive":
+                errors.append(f"illustration {iid}: low-confidence vision_review requires depiction.evidence_status=interpretive")
+            tag_review = item.get("tag_review") or {}
+            if tag_review:
+                if tag_review.get("status") not in TAG_REVIEW_STATUSES or tag_review.get("trigger") not in TAG_REVIEW_TRIGGERS:
+                    errors.append(f"illustration {iid}: invalid tag_review metadata")
+                if status in {"vision_validated", "reader_eligible"} and tag_review.get("status") != "approved":
+                    errors.append(f"illustration {iid}: low-confidence tagging requires explicit tag_review approval")
+            elif status in {"vision_validated", "reader_eligible"}:
+                message=f"illustration {iid}: legacy low-confidence asset lacks tag_review; run migrate_confidence_gate.py before strict activation"
+                if STRICT_CONFIDENCE_GATE: errors.append(message)
+                else: warnings.append(message)
+        errors.extend(lint_caption_language(item))
         if status == "reader_eligible":
             human = item.get("human_review") or {}
             if human.get("status") != "approved":
