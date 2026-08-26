@@ -30,6 +30,11 @@ METHOD_LEAKAGE=(
     (r"\bHIL[- _]?\d*\b","hil_reader_leak"),
     (r"\brun\s*\d+\b","run_reader_leak"),
     (r"\bversion\s+[vV]?\d+\b","version_reader_leak"),
+    (r"\bpolitique éditoriale de la\s+[vV]\d+\b","production_policy_reader_leak"),
+    (r"\bcomplément\s+[vV]\d+\b","production_version_reader_leak"),
+    (r"\breport\.md\b","production_artifact_reader_leak"),
+    (r"\bbaseline\b","production_artifact_reader_leak"),
+    (r"\blineage\b","production_artifact_reader_leak"),
 )
 FOREIGN_TERMS={
     "clearing house":("chambre de compensation","centre de compensation","plateforme de compensation"),
