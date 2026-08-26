@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "class": "illustration",
+  "id": "ILL-...",
+  "status": "candidate|vision_validated|reader_eligible|retired",
+  "source": {
+    "kind": "field_photo|repository_image|external_image",
+    "asset_ref": "",
+    "sha256": "",
+    "captured_at": "",
+    "location": "",
+    "creator": "user",
+    "rights": "user_supplied",
+    "binary_status": "external_only|repository"
+  },
+  "input_refs": [
+    {"type": "intake|field_fragment|claim|bridge|side_story|arc", "id": "", "path": ""}
+  ],
+  "depiction": {
+    "subject": "",
+    "event_or_theme": "",
+    "evidence_status": "observed_caption|canonical_text|chronicle_tradition|interpretive",
+    "period": "",
+    "notes": ""
+  },
+  "vision_review": {
+    "status": "pending|reviewed",
+    "confidence": "low|medium|high",
+    "caption_transcription": "",
+    "visual_notes": "",
+    "uncertainty": ""
+  },
+  "human_review": {"status": "pending|approved|rejected", "reviewed_at": null, "notes": ""},
+  "fragment": {"caption": "", "what_it_shows": "", "why_here": "", "limits": ""},
+  "placement": {"subsection_ref": "", "relevance_rank": 99}
+}
