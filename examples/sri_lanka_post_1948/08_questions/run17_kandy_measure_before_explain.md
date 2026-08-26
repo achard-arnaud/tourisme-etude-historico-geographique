@@ -4,9 +4,9 @@ Hypotheses are registered before explanatory claims so refutation remains record
 
 1. Does “second city” survive any explicit denominator: municipal population, functional urban area, commuter catchment, provincial role, or symbolic status?
 2. Is Kandy economically successful relative to Colombo/Gampaha, or merely institutionally important despite weak economic geography?
-3. What is the authoritative functional/agglomeration population for Kandy, distinct from Kandy MC?
-4. Why did Kandy MC population fall from 98,828 (2012) to 94,482 (2024) while Gampaha MC rose slightly?
-5. What does the 2024 lifetime net migration balance of Kandy District (-124,874) imply about graduate/working-age retention? Age-cohort evidence is still required.
+3. What is the authoritative functional/agglomeration population for Kandy, distinct from Kandy MC? **Still open:** UDA planning profiles use wider and floating-population concepts, but no single statistical functional-urban denominator has been established.
+4. Why did Kandy MC population fall from 98,828 (2012) to 94,482 (2024) while Gampaha MC rose slightly? **Run20 metric check passed:** both Kandy MC values are confirmed by DCS census tables; causal explanation remains open.
+5. What does the 2024 lifetime net migration balance of Kandy District imply about graduate/working-age retention? Age-cohort evidence is still required. **Run20 correction:** the final DCS report gives 172,489 lifetime in-migrants, 287,823 out-migrants and net -115,334. The previously persisted -124,874 figure is retired.
 6. What is formal employment by sector inside the Kandy functional urban area, with a stable geography and denominator?
 7. How many tourists actually stay in Kandy, what is average length of stay, and what share are day visitors/pilgrims?
 8. What are current centre-city land prices per perch under a reproducible transaction/valuation basis rather than planning-plan ranges?
@@ -22,3 +22,6 @@ Hypotheses are registered before explanatory claims so refutation remains record
 18. Is proximity to Colombo the dominant confounder behind visitor flow and service-sector vitality?
 19. Are public institutions (Peradeniya, teaching hospital, provincial administration) causes of urban viability or merely consequences of prior political centrality?
 20. If the evidence shows stagnation rather than economic success, materialize the “Kandy prospers economically” hypothesis as a false lead rather than rescuing it rhetorically.
+
+## Run20 preservation rule
+Official statistical revisions overwrite persisted metric values only when the same denominator is demonstrably superseded. They do not close the causal questions that motivated the measurement.
