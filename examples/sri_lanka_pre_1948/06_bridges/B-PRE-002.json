@@ -5,5 +5,11 @@
   "question": "How did the Anglo-French struggle of the mid-eighteenth century prepare the later British takeover of Dutch Ceylon?",
   "mechanism": "The Seven Years War left Britain with a uniquely strong fiscal-military position in India; during the later Revolutionary wars this capacity, combined with naval superiority, allowed Britain to seize Dutch and French strategic positions across the Indian Ocean when those states became aligned against it.",
   "result": "B",
-  "source_ids": ["CAMBRIDGE-SEVEN-YEARS-CARNATIC", "CAMBRIDGE-BRITISH-NAVY-1794", "CAMBRIDGE-COMPANY-FORTRESS-END"]
+  "source_ids": ["CAMBRIDGE-SEVEN-YEARS-CARNATIC", "CAMBRIDGE-BRITISH-NAVY-1794", "CAMBRIDGE-COMPANY-FORTRESS-END"],
+  "transmission_channel": "Fiscal-military capacity accumulated in British India plus naval superiority projected into Indian Ocean operations against Dutch/French positions.",
+  "time_lag": "Roughly three decades from the 1761/1763 strategic asymmetry to the 1795–1796 seizure of Dutch positions including Ceylon.",
+  "scale": "Z3 South Asian/Indian Ocean system → Z2 Ceylon coastal sovereignty.",
+  "confounders": ["Dutch alliance realignment and Kew Letters", "local military conditions", "company-state coordination", "French and Dutch residual commercial presence"],
+  "transportability": "Mechanism-only. Regional fiscal-military superiority can condition later seizure opportunities, but it does not make the 1795–1796 takeover mechanically inevitable.",
+  "integration_action": "Use as the bridge from A07 regional reordering to British seizure of Dutch Ceylon; keep the later Revolutionary-war trigger distinct from the earlier Seven Years War capacity shift."
 }
