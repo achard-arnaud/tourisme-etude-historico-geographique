@@ -17,10 +17,13 @@ import re
 from pathlib import Path
 from typing import Any
 
+from side_story_contract import APPARATUS_CLASS, SIDE_STORY_CLASS, load_side_stories
+
 TARGET_MARKER = re.compile(r"\[(claim|bridge|arc):([^\]]+)\]", re.I)
 ID_LIKE = re.compile(r"^[A-Z][A-Z0-9]*-[A-Z0-9-]+$", re.I)
 VALID_VERDICTS = {"supported", "challenged", "redirected"}
 QUALIFIED_ROLES = {"primary", "official_archive", "peer_reviewed", "academic_monograph", "specialist_institution"}
+FINAL_STORY_STATUSES = {"validated", "promoted"}
 
 
 @dataclass(frozen=True)
@@ -72,9 +75,10 @@ def _independent_source_families(record: dict[str, Any]) -> set[str]:
 def validate_research_resolution(record: dict[str, Any]) -> list[str]:
     """Validate evidence sufficiency, not historical truth itself.
 
-    Minimum closure: two independent qualified source families, or one primary/official
-    source plus one independent qualified scholarly source. The agent still has to judge
-    whether the evidence actually supports or challenges the proposition.
+    Minimum closure is two independent qualified source families. The semantic research
+    pass must still decide whether the proposition is supported, challenged or should be
+    redirected; the deterministic layer only verifies that this decision has enough
+    independent evidence and a concrete follow-up action.
     """
     errors: list[str] = []
     verdict = record.get("verdict")
@@ -85,6 +89,8 @@ def validate_research_resolution(record: dict[str, Any]) -> list[str]:
     families = _independent_source_families({"sources": qualified})
     if len(qualified) < 2 or len(families) < 2:
         errors.append("research closure requires at least two independent qualified source families")
+    if not str(record.get("target_id") or "").strip():
+        errors.append("target_id required")
     if not str(record.get("proposition") or "").strip():
         errors.append("proposition required")
     if verdict == "supported":
@@ -119,3 +125,71 @@ def materialize_supported_marker(markdown: str, record: dict[str, Any]) -> str:
 def load_research_records(path: Path) -> list[dict[str, Any]]:
     data = json.loads(path.read_text(encoding="utf-8"))
     return data if isinstance(data, list) else data.get("resolutions", [])
+
+
+def load_project_research_records(project: Path) -> list[dict[str, Any]]:
+    records: list[dict[str, Any]] = []
+    root = project / "08_questions"
+    if not root.exists():
+        return records
+    seen: set[str] = set()
+    for path in sorted(root.glob("return_target_research*.json")):
+        for record in load_research_records(path):
+            target_id = str(record.get("target_id") or "")
+            if target_id and target_id in seen:
+                raise ValueError(f"duplicate return-target research record: {target_id}")
+            if target_id:
+                seen.add(target_id)
+            records.append(record)
+    return records
+
+
+def apply_project_research_resolutions(project: Path, markdown: str) -> tuple[str, dict[str, Any]]:
+    """Materialise only supported research resolutions as hidden canonical markers.
+
+    Challenged/redirected records are evidence that the original return must change; they
+    never create the original marker. Therefore an unchanged required side story will
+    still fail `validate_required_return_targets` below.
+    """
+    applied: list[str] = []
+    challenged: list[str] = []
+    errors: list[str] = []
+    for record in load_project_research_records(project):
+        target_id = str(record.get("target_id") or "<unknown>")
+        validation = validate_research_resolution(record)
+        if validation:
+            errors.extend(f"{target_id}: {message}" for message in validation)
+            continue
+        verdict = record.get("verdict")
+        if verdict == "supported":
+            try:
+                before = markdown
+                markdown = materialize_supported_marker(markdown, record)
+                if markdown != before:
+                    applied.append(target_id)
+            except ValueError as exc:
+                errors.append(str(exc))
+        else:
+            challenged.append(target_id)
+    return markdown, {"applied": sorted(applied), "challenged_or_redirected": sorted(challenged), "errors": errors}
+
+
+def validate_required_return_targets(project: Path, canonical_markdown: str) -> tuple[list[str], list[dict[str, str]]]:
+    """Block final render if a required, final side story still has an unresolved return."""
+    errors: list[str] = []
+    report: list[dict[str, str]] = []
+    for _, item in load_side_stories(project):
+        if item.get("class") not in {SIDE_STORY_CLASS, APPARATUS_CLASS}:
+            continue
+        if item.get("status") not in FINAL_STORY_STATUSES:
+            continue
+        if not (item.get("render") or {}).get("required_in_reader"):
+            continue
+        return_to = (item.get("placement") or {}).get("return_to")
+        if not return_to:
+            continue
+        result = resolve_return_to(str(return_to), canonical_markdown)
+        report.append({"side_story_id": str(item.get("id")), "return_to": str(return_to), "status": result.status})
+        if result.status not in {"resolved_marker", "resolved_anchor"}:
+            errors.append(f"{item.get('id')}: required return_to {return_to!r} remains {result.status}")
+    return errors, report
