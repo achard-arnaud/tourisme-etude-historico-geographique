@@ -26,8 +26,10 @@ KNOWN_BACKSTAGE_FRAGMENTS=(
 CLAIM_MARKER=re.compile(r"\s*\[claim:[^\]]+\]",re.I)
 BRIDGE_MARKER=re.compile(r"\s*\[bridge:[^\]]+\]",re.I)
 RUN_TOKEN=re.compile(r"\bRun\s+\d+\b",re.I)
+RUN_WITH_SEPARATOR=re.compile(r"\bRun\s+\d+\s*[—–:-]\s*",re.I)
 TECH_ARC_TOKEN=re.compile(r"\bA\d{2}[A-Za-z0-9-]*_[A-Za-z0-9_-]+\b")
 MACHINE_HIL_TOKEN=re.compile(r"\bHIL-\d{2}_[A-Za-z0-9_-]+\b")
+RECAP_WITH_TECH_ARC=re.compile(r"(Récap\s+causal)\s*[—–:-]\s*"+TECH_ARC_TOKEN.pattern,re.I)
 
 def _plain_markdown_line(line:str)->str:
     line=re.sub(r"^#{1,6}\s+","",line.strip());line=re.sub(r"[*_`]","",line)
@@ -44,19 +46,30 @@ def _replace_paragraph_text_preserving_first_run(p,text:str)->None:
         p.runs[0].text=text
         for run in p.runs[1:]:run.text=""
     else:p.add_run(text)
+def _clean_production_tokens(text:str)->str:
+    """Remove production identifiers while keeping human reader labels intact."""
+    text=BRIDGE_MARKER.sub("",CLAIM_MARKER.sub("",text))
+    text=RECAP_WITH_TECH_ARC.sub(r"\1",text)
+    text=RUN_WITH_SEPARATOR.sub("",text)
+    text=RUN_TOKEN.sub("Cette passe",text)
+    text=MACHINE_HIL_TOKEN.sub(lambda m:m.group(0).split("_",1)[0],text)
+    text=TECH_ARC_TOKEN.sub("",text)
+    text=re.sub(r"[ \t]{2,}"," ",text)
+    text=re.sub(r"\s+[—–:-]\s*$","",text)
+    return text
 def clean_visible_docx_text(doc:Document)->int:
     changed=0
     for p in doc.paragraphs:
         text=p.text
         replacement=VISIBLE_REPLACEMENTS.get(text.strip())
-        new=BRIDGE_MARKER.sub("",CLAIM_MARKER.sub("",replacement if replacement is not None else text))
+        new=_clean_production_tokens(replacement if replacement is not None else text)
         if "Complément V3 —" in new:new=new.replace("Complément V3 —","Approfondissement —")
         if new!=text:_replace_paragraph_text_preserving_first_run(p,new);changed+=1
     for table in doc.tables:
         for row in table.rows:
             for cell in row.cells:
                 for p in cell.paragraphs:
-                    text=p.text;new=BRIDGE_MARKER.sub("",CLAIM_MARKER.sub("",text))
+                    text=p.text;new=_clean_production_tokens(text)
                     if new!=text:_replace_paragraph_text_preserving_first_run(p,new);changed+=1
     return changed
 def strip_method_block_from_markdown(markdown:str,method_block:str)->str:
@@ -64,7 +77,7 @@ def strip_method_block_from_markdown(markdown:str,method_block:str)->str:
     if block:markdown=markdown.replace(block,"")
     markdown=markdown.replace("Complément V3 —","Approfondissement —")
     for old,new in VISIBLE_REPLACEMENTS.items():markdown=markdown.replace(old,new)
-    markdown=BRIDGE_MARKER.sub("",CLAIM_MARKER.sub("",markdown))
+    markdown=_clean_production_tokens(markdown)
     markdown=re.sub(r"\n{3,}","\n\n",markdown)
     return markdown.strip()+"\n"
 def visible_docx_text(doc:Document)->str:
