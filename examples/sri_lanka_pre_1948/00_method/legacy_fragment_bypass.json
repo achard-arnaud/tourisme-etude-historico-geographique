@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "enabled": true,
+  "mode": "virtual_claim",
+  "statement_type": "legacy_fragment",
+  "capture_paths": [
+    "00_method/capture/guide_fragments.json"
+  ],
+  "policy": {
+    "unsourced_only": true,
+    "unclaimed_only": true,
+    "reader_facing_type_hidden": true,
+    "new_inputs_must_use_normal_pipeline": true
+  },
+  "rationale": "Finite migration boundary for fragments captured before systematic claim/source contracts."
+}
