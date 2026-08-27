@@ -112,16 +112,19 @@ def finalize_reader(project: Path, spec: dict) -> dict:
     docx_path = output_dir / spec["output"]
     markdown_path = output_dir / spec["markdown_output"]
 
+    # Read canonical Markdown before frontstage cleanup: its explicit claim/bridge/arc
+    # markers are needed to resolve ID-based `return_to` targets deterministically.
+    canonical_markdown = markdown_path.read_text(encoding="utf-8")
+
     doc = Document(docx_path)
     removed = strip_method_block_from_docx(doc, spec.get("method_block", ""))
     replacements = clean_visible_docx_text(doc)
-    palette = apply_side_story_palette(doc, project)
+    palette = apply_side_story_palette(doc, project, canonical_markdown=canonical_markdown)
     legend_rows = add_side_story_legend(doc)
     assert_no_known_backstage_leak(visible_docx_text(doc))
     doc.save(docx_path)
 
-    markdown = markdown_path.read_text(encoding="utf-8")
-    markdown = strip_method_block_from_markdown(markdown, spec.get("method_block", ""))
+    markdown = strip_method_block_from_markdown(canonical_markdown, spec.get("method_block", ""))
     if f"## {LEGEND_HEADING}" not in markdown:
         markdown = markdown.rstrip() + "\n\n" + markdown_legend() + "\n"
     assert_no_known_backstage_leak(markdown)
@@ -133,6 +136,7 @@ def finalize_reader(project: Path, spec: dict) -> dict:
         "side_story_headers_styled": palette["headers_styled"],
         "side_story_body_paragraphs_styled": palette["body_paragraphs_styled"],
         "side_story_blocks_resolved": palette["resolved_blocks"],
+        "side_story_return_markers": palette["return_markers"],
         "side_story_kinds_seen": palette["kinds_seen"],
         "side_story_legend_rows": legend_rows,
     }
