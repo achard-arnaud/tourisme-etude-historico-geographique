@@ -151,5 +151,23 @@
     ],
     "recovery_action": null,
     "notes": "Ten field photos are preserved as external-binary illustration metadata. Four textual questions are qualified; all assets remain non-renderable pending human review and real manuscript targets."
+  },
+  {
+    "id": "I-R30-ANGAMPORA",
+    "source_name": "INTAKE_angampora_traditional_martial_art.md",
+    "intake_kind": "analytical_intake",
+    "first_run": "RUN30",
+    "manifest": null,
+    "preservation_status": "archived",
+    "repo_path": "docs/intakes/INTAKE_angampora_traditional_martial_art.md",
+    "outputs": [
+      "examples/sri_lanka_pre_1948/05_sources/source_register_run30_angampora.json",
+      "examples/sri_lanka_pre_1948/01_arcs/A07b_kandyan_kingdom_and_defensive_interior/claims/C-R30-ANGAMPORA-SYSTEM-001.json",
+      "examples/sri_lanka_pre_1948/01_arcs/A07b_kandyan_kingdom_and_defensive_interior/claims/C-R30-ANGAMPORA-HERITAGE-001.json",
+      "examples/sri_lanka_pre_1948/08_questions/question_register_run30_angampora.json",
+      "examples/sri_lanka_pre_1948/09_output/side_stories/SS-R30-ANGAMPORA-FALSE-LEAD-001.json"
+    ],
+    "recovery_action": null,
+    "notes": "Angampora is routed as a bounded martial-culture and colonial-memory side story. The intake is a research trigger; the alleged 1817 Gazette and spectacular sanction details remain unpromoted pending primary evidence."
   }
 ]
