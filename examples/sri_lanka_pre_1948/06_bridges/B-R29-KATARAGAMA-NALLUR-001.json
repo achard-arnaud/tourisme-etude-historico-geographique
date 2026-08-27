@@ -1,0 +1,16 @@
+{
+  "id":"B-R29-KATARAGAMA-NALLUR-001",
+  "from_claim":"C-R29-KDY-KATARAGAMA-DEVALAYA-001",
+  "to_claim":"C-R29-NALLUR-MURUGAN-001",
+  "question":"Can Kandy's Kataragama ritual presence and Nallur's Murugan/Kandaswamy devotion be connected as two Sri Lankan localizations of a shared Skanda-Murukan/Kataragama divine complex without claiming identical ritual practice?",
+  "mechanism":"A shared deity complex is translated through different Sinhala-Buddhist and Tamil-Saiva institutional settings: Kataragama/Skanda-Murukan can be embedded in Kandy's devalaya ritual ecology while Murugan/Kandaswamy is the presiding identity at Nallur.",
+  "result":"B",
+  "source_ids":["DALADA-FOUR-DEVALAYA-KAP-2026","NALLUR-OFFICIAL-MURUGAN-2026","NALLUR-OFFICIAL-TEMPLE-HISTORY-2026","PATHMANATHAN-SKANDA-KATARAGAMA-1999"],
+  "transmission_channel":"shared Skanda-Murukan/Kataragama deity complex carried through temple, devalaya and pilgrimage traditions",
+  "time_lag":"comparison of current institutional identities with historically layered traditions; no single continuous line asserted",
+  "scale":"Z1 Kandy ritual institution to Z3 island-regional religious network",
+  "confounders":["different Sinhala-Buddhist and Tamil-Saiva ritual frameworks","local names and iconographic forms","institutional self-description","historical changes in cult composition"],
+  "transportability":"mechanism",
+  "integration_action":"dezoom",
+  "bounded_by":"The bridge supports a shared deity-complex dezoom only. It does not make Kandy Kataragama Devalaya and Nallur Kandaswamy ritually identical, does not prove a direct institutional transmission between them, and does not transport either temple's foundation chronology to the other."
+}
