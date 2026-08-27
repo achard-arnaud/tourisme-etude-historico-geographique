@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "run_id": "RUN32",
+  "mode": "iterative_unified",
+  "date": "2026-08-27",
+  "branch": "feat/run32-iterative-unification",
+  "upstream_state": "inherits the Run31 audit/manifests already on the feature branch; Run32 supersedes the from-scratch reader as the preferred composition mode",
+  "decision": {
+    "default_writing_mode": "iterative",
+    "shared_pipeline_target": ">=80%",
+    "reader_scaffold_role": "authoritative editorial order and inline side-story placement",
+    "story_scaffold_role": "evidence/graph topology only",
+    "claim_role": "backstage evidence/control skeleton; never reader prose",
+    "fragment_role": "primary narrative material, including candidate-arc fragments not yet claim-linked",
+    "intake_role": "rich research/narrative context; not evidence by itself",
+    "frontstage": "simple source references and uncertainty only; claim/bridge/run/machine IDs excluded"
+  },
+  "authoritative_scaffolds": {
+    "pre_1948": {
+      "source": {
+        "kind": "authoritative_docx",
+        "filename": "Sri_Lanka_Fresque_historico_geographique_vol_retour_v3-5.docx",
+        "sha256": "cbe5ac064e84774e87ce52325ca6b0cd3db4a7f9a493c9e6aff2880d5f080881"
+      },
+      "counts": {"headings": 356, "inline_side_stories": 21}
+    },
+    "post_1948": {
+      "source": {
+        "kind": "authoritative_docx",
+        "filename": "Sri_Lanka_1948_2026_etude_historico_geographique_v3-3.docx",
+        "sha256": "dd04db278696b22577e975f82c55afdd8cb1b4246b5f2c49fd38dd9c8e16d3c6"
+      },
+      "counts": {"headings": 118, "inline_side_stories": 7}
+    }
+  },
+  "outputs": {
+    "pre_1948": {
+      "filename": "Sri_Lanka_pre_1948_RUN32_iterative.docx",
+      "repository_promotion": "hash_and_QA_record_only_binary_delivered_outside_git",
+      "pages": 73,
+      "words": 23884,
+      "tables": 81,
+      "paragraphs": 1447,
+      "sha256": "d264d472d7403b3baa8058caaa2980fb6e6ed5e8a1f60c8f37b3fd0d30667223",
+      "frontstage_checks": {"claim_markers": 0, "bridge_markers": 0, "run_tokens": 0, "technical_arc_ids": 0, "machine_hil_ids": 0}
+    },
+    "post_1948": {
+      "filename": "Sri_Lanka_1948_2026_RUN32_iterative.docx",
+      "repository_promotion": "hash_and_QA_record_only_binary_delivered_outside_git",
+      "pages": 33,
+      "words": 10192,
+      "tables": 15,
+      "paragraphs": 432,
+      "sha256": "c46e657d1142465a2bcf488d4e15131e463533d4cce7bb9ccfb168459c79f20b",
+      "frontstage_checks": {"claim_markers": 0, "bridge_markers": 0, "run_tokens": 0, "technical_arc_ids": 0, "machine_hil_ids": 0}
+    }
+  },
+  "qa": {
+    "render_engine": "/home/oai/skills/docx/render_docx.py",
+    "visual_pages_inspected": 106,
+    "pre_pages": 73,
+    "post_pages": 33,
+    "post_cleanup_image_diff_changed_pages": {"pre_1948": [56, 60], "post_1948": [9, 15, 23]},
+    "changed_pages_reinspected": true,
+    "layout_result": "PASS — no clipping, overlap or broken side-story/table layout detected",
+    "local_contract_tests": "4/4 passed (unlinked candidate-arc fragment retention; shared evidence payload across modes; side-story boundary insertion; legacy bypass integration)",
+    "python_compile": "PASS"
+  },
+  "key_reader_integrations": [
+    "pre-1948: Buddha/mudra material placed in the Anuradhapura religious sequence",
+    "pre-1948: Kandy defensive-landscape detour placed beside Danture/Portuguese campaigns",
+    "pre-1948: Ayutthaya/Siam Nikaya dezoom placed in the eighteenth-century Kandyan religious sequence",
+    "pre-1948: D'Oyly portrait placed in the 1815 conquest mechanism",
+    "pre-1948: Angampora false-lead placed after the 1817–1818 integration-war sequence",
+    "pre-1948: coffee-to-tea mechanisms placed in the British highlands/plantation sequence",
+    "post-1948: tea value-chain, 2021 shock, Malaiyaha labour and Kandy functional-centrality material placed in A08 before the final synthesis"
+  ],
+  "new_or_reworked_contracts": [
+    "scripts/build_drafting_packets.py",
+    "scripts/build_from_scratch_packets.py",
+    "scripts/import_reader_scaffold.py",
+    "scripts/materialize_side_stories.py",
+    "scripts/frontstage_reader_contract.py",
+    "skills/storytelling-historical-travel/SKILL.md",
+    "tests/test_run32_unified_drafting.py",
+    "examples/sri_lanka_pre_1948/09_output/reader_scaffold.json",
+    "examples/sri_lanka_post_1948/09_output/reader_scaffold.json"
+  ]
+}
