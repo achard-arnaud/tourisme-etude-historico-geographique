@@ -1,0 +1,121 @@
+#!/usr/bin/env python3
+"""Two-stage return-target resolution for side stories.
+
+Stage 1 is deterministic: explicit marker or literal anchor.
+Stage 2 is research-backed: if an ID has no marker, the agent must create a
+research resolution from independent web sources. A supported proposition must
+then be bound to an explicit paragraph anchor and materialised as a hidden marker;
+a challenged proposition must be redirected or the side story retired.
+
+The renderer never searches the web and never guesses semantically.
+"""
+from __future__ import annotations
+
+from dataclasses import dataclass
+import json
+import re
+from pathlib import Path
+from typing import Any
+
+TARGET_MARKER = re.compile(r"\[(claim|bridge|arc):([^\]]+)\]", re.I)
+ID_LIKE = re.compile(r"^[A-Z][A-Z0-9]*-[A-Z0-9-]+$", re.I)
+VALID_VERDICTS = {"supported", "challenged", "redirected"}
+QUALIFIED_ROLES = {"primary", "official_archive", "peer_reviewed", "academic_monograph", "specialist_institution"}
+
+
+@dataclass(frozen=True)
+class ReturnResolution:
+    status: str
+    return_to: str
+    target_id: str | None = None
+    paragraph_anchor: str | None = None
+    reason: str | None = None
+
+
+def marker_for(target_id: str) -> str:
+    if target_id.startswith("C-"):
+        return f"[claim:{target_id}]"
+    if target_id.startswith("B-"):
+        return f"[bridge:{target_id}]"
+    return f"[arc:{target_id}]"
+
+
+def resolve_return_to(return_to: str | None, canonical_markdown: str) -> ReturnResolution:
+    if not return_to:
+        return ReturnResolution("none", "")
+    if return_to.startswith("anchor:"):
+        anchor = return_to.split(":", 1)[1].strip()
+        if anchor and anchor.casefold() in canonical_markdown.casefold():
+            return ReturnResolution("resolved_anchor", return_to, paragraph_anchor=anchor)
+        return ReturnResolution("needs_research", return_to, reason="literal anchor absent from canonical manuscript")
+    if not ID_LIKE.match(return_to):
+        if return_to.casefold() in canonical_markdown.casefold():
+            return ReturnResolution("resolved_anchor", return_to, paragraph_anchor=return_to)
+        return ReturnResolution("needs_research", return_to, reason="unresolved non-ID return target")
+    marker = marker_for(return_to)
+    if marker in canonical_markdown:
+        return ReturnResolution("resolved_marker", return_to, target_id=return_to)
+    return ReturnResolution("needs_research", return_to, target_id=return_to, reason=f"missing canonical marker {marker}")
+
+
+def _independent_source_families(record: dict[str, Any]) -> set[str]:
+    families = set()
+    for source in record.get("sources") or []:
+        if not isinstance(source, dict):
+            continue
+        family = source.get("independence_family") or source.get("domain") or source.get("publisher")
+        if family:
+            families.add(str(family).casefold())
+    return families
+
+
+def validate_research_resolution(record: dict[str, Any]) -> list[str]:
+    """Validate evidence sufficiency, not historical truth itself.
+
+    Minimum closure: two independent qualified source families, or one primary/official
+    source plus one independent qualified scholarly source. The agent still has to judge
+    whether the evidence actually supports or challenges the proposition.
+    """
+    errors: list[str] = []
+    verdict = record.get("verdict")
+    if verdict not in VALID_VERDICTS:
+        errors.append("verdict must be supported|challenged|redirected")
+    sources = [s for s in (record.get("sources") or []) if isinstance(s, dict)]
+    qualified = [s for s in sources if s.get("role") in QUALIFIED_ROLES]
+    families = _independent_source_families({"sources": qualified})
+    if len(qualified) < 2 or len(families) < 2:
+        errors.append("research closure requires at least two independent qualified source families")
+    if not str(record.get("proposition") or "").strip():
+        errors.append("proposition required")
+    if verdict == "supported":
+        if not str(record.get("paragraph_anchor") or "").strip():
+            errors.append("supported resolution requires paragraph_anchor for marker materialisation")
+    if verdict in {"challenged", "redirected"}:
+        if not (record.get("replacement_return_to") or record.get("action") == "retire_side_story"):
+            errors.append("challenged/redirected resolution requires replacement_return_to or retire_side_story")
+    return errors
+
+
+def materialize_supported_marker(markdown: str, record: dict[str, Any]) -> str:
+    errors = validate_research_resolution(record)
+    if errors:
+        raise ValueError("invalid research resolution: " + "; ".join(errors))
+    if record.get("verdict") != "supported":
+        raise ValueError("marker materialisation is only valid for supported research resolution")
+    target_id = str(record["target_id"])
+    marker = marker_for(target_id)
+    if marker in markdown:
+        return markdown
+    anchor = str(record["paragraph_anchor"]).strip()
+    blocks = re.split(r"(\n\s*\n)", markdown)
+    for i in range(0, len(blocks), 2):
+        block = blocks[i]
+        if anchor.casefold() in block.casefold():
+            blocks[i] = block.rstrip() + f" {marker}"
+            return "".join(blocks)
+    raise ValueError(f"paragraph_anchor not found for {target_id}: {anchor}")
+
+
+def load_research_records(path: Path) -> list[dict[str, Any]]:
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return data if isinstance(data, list) else data.get("resolutions", [])
