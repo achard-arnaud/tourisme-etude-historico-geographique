@@ -1,0 +1,13 @@
+{
+  "id":"C-R29-A05C-RAJASINHA-SRIPADA-001",
+  "type":"inference",
+  "claim":"The historiographic tradition around Rajasinha I of Sitawaka associates him with conversion to Saivism and the removal of Buddhist monks from Sri Pada in favour of Saiva ascetics; modern scholarship also notes that the Culavamsa's hostile portrayal omits acts attributed to him in defence or patronage of Buddhism, so the episode should not be generalized into an island-wide extinction of Buddhist institutions.",
+  "confidence":"B",
+  "zoom":"Z1",
+  "causal_role":"context",
+  "arc":"A05c_gampola_kotte_sitawaka_transition",
+  "hil":"HIL-05_religion-culture-legitimacy",
+  "source_ids":["UCOLOMBO-UPCOUNTRY-HINDU-RELIGIOSITY-2026"],
+  "bounded_by":"Single academic synthesis built partly on chronicle tradition. Supports a bounded Sri Pada institutional displacement claim and the historiographic caveat; it does not establish island-wide persecution, assassination of monks, or complete collapse of Pali/Sanskrit learning.",
+  "notes":"Promotes only the defensible core of GF-SAS-18; the stronger museum-panel wording remains unpromoted."
+}
