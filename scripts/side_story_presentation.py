@@ -4,6 +4,10 @@
 Colour is redundant with a stable symbol + label. Multi-paragraph side stories receive
 explicit top/left/bottom boundaries so the reader can see where the excursion ends.
 New fenced/from-scratch renderers may use the same palette inside a single container.
+
+Run27 contract: a `return_to` that is an artefact ID is resolved only from an explicit
+canonical Markdown marker such as `[claim:C-...]`. We never guess the target from
+semantic similarity or silently treat an ID as visible prose.
 """
 from __future__ import annotations
 
@@ -41,6 +45,8 @@ SIDE_STORY_PRESENTATION = {
 INK = RGBColor(32,55,72)
 MUTED = RGBColor(92,99,108)
 LEGEND_HEADING = "Légende des encadrés"
+CANONICAL_TARGET_MARKER = re.compile(r"\[(?:claim|bridge|arc):([^\]]+)\]", re.I)
+ID_LIKE = re.compile(r"^[A-Z][A-Z0-9]*-[A-Z0-9-]+$", re.I)
 
 
 def _norm(value:str)->str:
@@ -48,6 +54,37 @@ def _norm(value:str)->str:
     value=unicodedata.normalize("NFKD",value)
     value="".join(ch for ch in value if not unicodedata.combining(ch))
     return re.sub(r"\s+"," ",value.casefold()).strip()
+
+
+def _visible_markdown_text(value:str)->str:
+    value=CANONICAL_TARGET_MARKER.sub("", value or "")
+    value=re.sub(r"<!--.*?-->"," ",value,flags=re.S)
+    value=re.sub(r"^#{1,6}\s+","",value.strip())
+    value=re.sub(r"[*_`]","",value)
+    value=re.sub(r"\[([^\]]+)\]\([^\)]+\)",r"\1",value)
+    return re.sub(r"\s+"," ",value).strip()
+
+
+def build_return_marker_map(canonical_markdown:str|None)->dict[str,str]:
+    """Map artefact IDs to the reader-visible paragraph carrying their marker.
+
+    The map is deterministic and marker-driven. Multiple markers may legitimately point
+    to the same paragraph. Empty/marker-only blocks are ignored.
+    """
+    if not canonical_markdown:
+        return {}
+    mapping:dict[str,str]={}
+    blocks=re.split(r"\n\s*\n",canonical_markdown)
+    for block in blocks:
+        ids=CANONICAL_TARGET_MARKER.findall(block)
+        if not ids:
+            continue
+        visible=_visible_markdown_text(block)
+        if not visible:
+            continue
+        for target_id in ids:
+            mapping.setdefault(target_id,visible)
+    return mapping
 
 
 def style_name(kind:str)->str:return f"Side Story — {kind}"
@@ -75,6 +112,7 @@ def _decorate_ppr(p_pr,kind:str,position:str="single")->None:
     shd=OxmlElement("w:shd");shd.set(qn("w:fill"),presentation["fill"]);p_pr.append(shd)
     borders=OxmlElement("w:pBdr")
     borders.append(_edge("left",presentation["border"],size="18",space="8"))
+    borders.append(_edge("right",presentation["border"],size="6",space="2"))
     if position in {"single","start"}:borders.append(_edge("top",presentation["border"],size="6",space="2"))
     if position in {"single","end"}:borders.append(_edge("bottom",presentation["border"],size="6",space="2"))
     p_pr.append(borders)
@@ -100,12 +138,29 @@ def _decorate_paragraph(paragraph,kind:str,*,header:bool,position:str="single")-
             else:run=paragraph.add_run(f"{symbol} ");run.bold=True
 
 
-def _find_return_index(paragraphs,start:int,return_to:str|None)->int|None:
+def _anchor_probe(text:str)->str:
+    words=_norm(text).split()
+    return " ".join(words[:18])
+
+
+def _find_return_index(paragraphs,start:int,return_to:str|None,marker_map:dict[str,str]|None=None)->int|None:
     if not return_to:return None
-    target=return_to.split(":",1)[1] if return_to.startswith("anchor:") else return_to;normalized_target=_norm(target)
-    if not normalized_target or re.match(r"^[A-Z]+-[A-Z0-9-]+$",target):return None
-    for index in range(start+1,min(len(paragraphs),start+60)):
-        if normalized_target in _norm(paragraphs[index].text):return index
+    marker_map=marker_map or {}
+    target=return_to.split(":",1)[1] if return_to.startswith("anchor:") else return_to
+    # Explicit artefact IDs are never compared literally to reader prose. They must
+    # resolve through a canonical marker carried by the Markdown source.
+    if ID_LIKE.match(target):
+        visible=marker_map.get(target)
+        if not visible:
+            return None
+        normalized_target=_anchor_probe(visible)
+    else:
+        normalized_target=_norm(target)
+    if not normalized_target:return None
+    for index in range(start+1,min(len(paragraphs),start+80)):
+        paragraph_text=_norm(paragraphs[index].text)
+        if normalized_target in paragraph_text or paragraph_text in normalized_target:
+            return index
     return None
 
 
@@ -118,14 +173,14 @@ def _story_header_index(paragraphs,item:dict,used:set[int])->int|None:
     return None
 
 
-def apply_side_story_palette(doc:Document,project:Path|None=None)->dict:
-    """Apply full pastel blocks when a deterministic return anchor exists.
+def apply_side_story_palette(doc:Document,project:Path|None=None,canonical_markdown:str|None=None)->dict:
+    """Apply full pastel blocks when a deterministic return target exists.
 
-    Unresolved/single-paragraph side stories still receive a visibly closed box on the
-    header itself. Resolved multi-paragraph stories get top on the header, continuous
-    left/fill, and bottom on their final paragraph.
+    ID-based targets resolve only through `[claim:ID]` / `[bridge:ID]` / `[arc:ID]`
+    markers in canonical Markdown. Unresolved/single-paragraph stories still receive a
+    visibly closed header box rather than a guessed range.
     """
-    ensure_side_story_styles(doc);paragraphs=doc.paragraphs;header_kinds={}
+    ensure_side_story_styles(doc);paragraphs=doc.paragraphs;header_kinds={};marker_map=build_return_marker_map(canonical_markdown)
     for index,paragraph in enumerate(paragraphs):
         kind=detect_kind(paragraph.text)
         if kind:header_kinds[index]=kind
@@ -139,7 +194,7 @@ def apply_side_story_palette(doc:Document,project:Path|None=None)->dict:
             if kind not in SIDE_STORY_PRESENTATION:continue
             start=_story_header_index(paragraphs,item,used_headers)
             if start is None:continue
-            used_headers.add(start);end=_find_return_index(paragraphs,start,(item.get("placement") or {}).get("return_to"))
+            used_headers.add(start);end=_find_return_index(paragraphs,start,(item.get("placement") or {}).get("return_to"),marker_map)
             if end is not None and end>start+1:resolved_ranges[start]=(end,kind)
 
     body_count=0;resolved_blocks=0
@@ -156,7 +211,7 @@ def apply_side_story_palette(doc:Document,project:Path|None=None)->dict:
         for idx in range(start+1,stop):
             _decorate_paragraph(paragraphs[idx],kind,header=False,position="end" if idx==last else "middle");body_count+=1
 
-    return {"headers_styled":len(header_kinds),"body_paragraphs_styled":body_count,"resolved_blocks":resolved_blocks,"kinds_seen":sorted(set(header_kinds.values()))}
+    return {"headers_styled":len(header_kinds),"body_paragraphs_styled":body_count,"resolved_blocks":resolved_blocks,"kinds_seen":sorted(set(header_kinds.values())),"return_markers":len(marker_map)}
 
 
 def _shade_cell(cell,fill:str)->None:
