@@ -9,7 +9,7 @@ Produce the two final **from-scratch** reader manuscripts from the Run27 packet 
 1. `examples/sri_lanka_pre_1948` — consume `09_output/from_scratch/run27_packets/` arc by arc.
 2. `examples/sri_lanka_post_1948` — consume `09_output/from_scratch/run27_packets/` arc by arc.
 
-The authoritative dynamic counts are in `docs/RUN27_FINAL_RUN_REQUEST.json` (currently 84 eligible pre-1948 claims and 98 post-1948 claims).
+The authoritative dynamic counts are currently 84 eligible pre-1948 claims and 98 post-1948 claims; the final preparation step regenerates these counts from the branch state.
 
 ## Writing loop — mandatory per narrative unit
 
@@ -26,11 +26,12 @@ The authoritative dynamic counts are in `docs/RUN27_FINAL_RUN_REQUEST.json` (cur
 
 For every required side-story `return_to`:
 
-- resolve an ID through `[claim:ID]`, `[bridge:ID]` or `[arc:ID]` in the canonical paragraph;
+- resolve an ID first through `[claim:ID]`, `[bridge:ID]` or `[arc:ID]` in the canonical paragraph;
 - if the marker is absent, mark `needs_research` and research the **historical proposition**, not the ID;
-- closure requires at least two independent qualified source families;
+- research must actively test the proposition: support it, qualify it, challenge it or redirect it;
+- closure requires **sufficient evidence**, not a mechanical source count: for an interpretive/general proposition the default is at least two independent qualified source families; a narrow proposition may also close from one directly probative authoritative source only when the research record explicitly marks `directly_closes_proposition=true` and `scope_fit=direct`;
 - if supported, bind the reviewed research record to an appropriate canonical paragraph and materialise the hidden marker;
-- if challenged, reroute/rewrite/retire the side story. Never manufacture the requested marker against the evidence.
+- if challenged or materially qualified, rewrite/reroute/retire the side story rather than manufacturing the requested marker against the evidence.
 
 Persist decisions under `08_questions/return_target_research*.json`. The renderer itself never browses.
 
