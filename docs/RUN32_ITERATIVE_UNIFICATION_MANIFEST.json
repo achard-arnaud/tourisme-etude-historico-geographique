@@ -4,6 +4,9 @@
   "mode": "iterative_unified",
   "date": "2026-08-27",
   "branch": "feat/run32-iterative-unification",
+  "state_before": "Run31 had demonstrated from-scratch reconstruction but produced a reader that was too compact, claim-led and weakly aligned with the approved chronological scaffold; rich fragments and intakes were underused and side stories were frequently too short or displaced.",
+  "state_after": "Run32 makes iterative composition the default, uses the approved reader scaffold as authoritative editorial topology, shares the drafting engine with from-scratch mode, restores rich fragment/intake material as narrative context, keeps claims backstage, and enforces in-flow side-story placement plus frontstage cleanup.",
+  "promotion_decision": "promote Run32 iterative-unified composition contracts and authoritative reader scaffolds; retain DOCX readers as externally delivered/hash-audited outputs rather than repository binaries",
   "upstream_state": "inherits the Run31 audit/manifests already on the feature branch; Run32 supersedes the from-scratch reader as the preferred composition mode",
   "decision": {
     "default_writing_mode": "iterative",
