@@ -1,0 +1,13 @@
+{
+  "id":"C-R29-KDY-KATARAGAMA-DEVALAYA-001",
+  "type":"source_fact",
+  "claim":"In the current Kandy Esala Perahera ritual structure, Kataragama Devalaya is one of the four principal devalayas, alongside Natha, Vishnu and Pattini, that begin internal processions after the Kap-planting ritual.",
+  "confidence":"A",
+  "zoom":"Z1",
+  "causal_role":"context",
+  "arc":"A07b_kandyan_kingdom_and_defensive_interior",
+  "hil":"HIL-05_religion-culture-legitimacy",
+  "source_ids":["DALADA-FOUR-DEVALAYA-KAP-2026"],
+  "bounded_by":"Current institutional ritual organization only; this does not establish unchanged composition of the Perahera across earlier centuries or a single doctrinal interpretation of Kataragama.",
+  "notes":"Created to give the Kataragama–Nallur bridge a first-party Kandy endpoint rather than inferring from generic Perahera tradition."
+}
