@@ -5,9 +5,10 @@ from __future__ import annotations
 import hashlib
 import json
 import re
-from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
+
+from sarah_voice_contract import review_skeleton, validate_style_review
 
 CLAIM_MARKER=re.compile(r"\[claim:([^\]]+)\]",re.I)
 SIDE_BEGIN=re.compile(r"^<!--\s*\[SIDE-STORY:([^\]]+)\]\s+BEGIN\s+kind=([a-z_]+)\s*-->$")
@@ -36,7 +37,6 @@ def manuscript_paragraphs(markdown:str)->list[dict]:
         if not buffer:return
         raw=" ".join(x.strip() for x in buffer if x.strip()).strip();buffer=[]
         if not raw:return
-        # Lists are deliberately treated one item at a time for review granularity.
         out.append({"id":paragraph_id(raw),"text":raw,"claim_ids":sorted(set(CLAIM_MARKER.findall(raw)))})
     for raw in markdown.splitlines():
         s=raw.strip()
@@ -69,7 +69,8 @@ def relevant_hils(claim_ids:Iterable[str],claims:dict[str,dict])->set[str]:
     return out
 
 
-def initialize_ledger(markdown:str)->list[dict]:
+def initialize_ledger(markdown:str,*,generation_pass_id:str|None=None,generation_context_id:str|None=None)->list[dict]:
+    """Create an all-false ledger; Sarah records are hash-bound but non-passing."""
     records=[]
     for paragraph in manuscript_paragraphs(markdown):
         records.append({
@@ -78,7 +79,11 @@ def initialize_ledger(markdown:str)->list[dict]:
             "selected_hil_ids":[],
             "initial_state":{"checklist_reviewed":False,"sarah_style_reviewed":False,"hil_scope_reviewed":False},
             "review_state":{"checklist_reviewed":False,"sarah_style_reviewed":False,"hil_scope_reviewed":False},
-            "sarah_style_review":{"passed":False,"evaluator":None,"markers":[],"notes":""},
+            "sarah_style_review":review_skeleton(
+                paragraph["text"],
+                generation_pass_id=generation_pass_id,
+                generation_context_id=generation_context_id,
+            ),
             "review_notes":"",
         })
     return records
@@ -109,11 +114,11 @@ def validate_review_ledger(project:Path,markdown:str,records:list[dict])->list[s
         if unknown:errors.append(f"{pid}: unknown claim ids {sorted(unknown)}")
         relevant=relevant_hils(actual_claims,claims);selected={str(x) for x in record.get("selected_hil_ids") or []};extraneous=selected-relevant
         if extraneous:errors.append(f"{pid}: irrelevant HIL selection {sorted(extraneous)}")
-        style=record.get("sarah_style_review") or {}
-        if style.get("passed") is not True:errors.append(f"{pid}: Sarah style review not passed")
-        markers={str(x) for x in style.get("markers") or []}
-        if "scope_precision" not in markers:errors.append(f"{pid}: Sarah style review missing scope_precision")
-        if len(markers)<2:errors.append(f"{pid}: Sarah style review requires one additional relevant marker")
+
+        style_errors,_=validate_style_review(paragraph["text"],record.get("sarah_style_review") or {})
+        errors.extend(f"{pid}: {message}" for message in style_errors)
+        if state.get("sarah_style_reviewed") is True and style_errors:
+            errors.append(f"{pid}: review_state.sarah_style_reviewed cannot be true while Sarah review contract fails")
     return errors
 
 
