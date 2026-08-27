@@ -7,6 +7,12 @@ from side_story_contract import ANALYTICAL_FOCUS_KIND,load_side_stories,canonica
 
 STATUS_ICON={"verified":"✓","inference":"△","unknown":"?"}
 
+def side_story_begin_marker(item:dict)->str:
+    return f"<!-- {canonical_marker(item['id'])} BEGIN kind={item.get('kind','')} -->"
+
+def side_story_end_marker(item:dict)->str:
+    return f"<!-- {canonical_marker(item['id'])} END -->"
+
 def _norm(value:str)->str:
     value=re.sub(r"<[^>]+>"," ",str(value));value=re.sub(r"[#*_`>\[\](){}]"," ",value)
     value=value.translate(str.maketrans({c:" " for c in string.punctuation+"«»“”‘’…–—≠×"}))
@@ -51,7 +57,9 @@ def materialize_text(project:Path,text:str)->tuple[str,int]:
         if not anchor or anchor not in text:raise RuntimeError(f"cannot materialize {item['id']}: section_anchor not found")
         pos=text.index(anchor)+len(anchor)
         prefix="" if item.get("kind")==ANALYTICAL_FOCUS_KIND else f"**{(item.get('render') or {}).get('label')} — {item['title']}**\n\n"
-        block=f"\n\n<!-- {marker} -->\n{prefix}{body.strip()}\n"
+        block=(f"\n\n{side_story_begin_marker(item)}\n"
+               f"{prefix}{body.strip()}\n"
+               f"{side_story_end_marker(item)}\n")
         text=text[:pos]+block+text[pos:];inserted+=1
     return text,inserted
 

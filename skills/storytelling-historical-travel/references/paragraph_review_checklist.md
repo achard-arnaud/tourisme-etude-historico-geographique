@@ -1,65 +1,176 @@
 # Paragraph review checklist — storytelling historical travel
 
-This checklist is a backstage QA artefact. It must never be rendered into the reader.
+Backstage QA only. Never render this file or its state flags into reader prose.
 
-## Fond
+## State machine
 
-1. **Couverture canonique** — tous les `canonical_points` structurés du claim source sont repris. Pour les claims legacy sans `canonical_points`, le gate signale l'absence de cette structure mais ne fabrique pas une couverture sémantique à partir d'un simple comptage de mots.
-2. **Texture de l'input** — le paragraphe contient au moins un élément concret de l'input : lieu, date, personne, institution, objet ou geste. Ce point peut nécessiter une revue ciblée si les métadonnées structurées ne suffisent pas.
-3. **Ordre narratif** — fait/action avant mécanisme, mécanisme avant perspective/conséquence. Une conséquence ne doit pas servir d'ouverture puis reléguer l'action dans une subordonnée rétrospective.
-4. **Citation et callback** — plus de deux citations directes `[claim:<id>]` est un signal de revue. Si un callback actif existe pour ce claim, une troisième citation directe est non conforme.
-5. **Densité** — l'écart fort entre volume source et volume rendu est un avertissement, jamais un rejet automatique.
+Every paragraph review is a **new state instance**. It always starts exactly as:
 
-## Forme
+```json
+{
+  "checklist_reviewed": false,
+  "sarah_style_reviewed": false,
+  "hil_scope_reviewed": false
+}
+```
 
-6. **Aucune fuite méthodologique** — pas de `TL;DR`, `Statut canonique`, HIL, run/version, commentaire de construction, table d'ancres ou consigne de rédaction.
-7. **Sigles explicités** — tout sigle ou acronyme reader-facing est développé au premier usage. Les identifiants cachés de traçabilité ne comptent pas comme prose lecteur.
-8. **Termes techniques étrangers glosés** — un terme comme *clearing house* doit être francisé ou expliqué au premier usage.
-9. **Ton de l'arc** — cohérent avec le paragraphe précédent et suivant ; revue L2 ciblée si nécessaire, jamais chargement du manuscrit complet.
-10. **Fausses pistes** — 1–2 maximum par sous-section, sous forme question naïve/semi-rhétorique + réponse dans le même bloc identifié. La couleur pastel relève du renderer ; le sens ne doit pas dépendre de la couleur.
+No previous paragraph may donate a `true` value to the next one.
 
-## Décision
+Transitions are independent:
 
-- Une violation de fond ou de forme => **réécriture complète du paragraphe**.
-- Un avertissement de densité/legacy/tone => revue ciblée ; ne pas transformer automatiquement l'avertissement en échec.
-- Les tests doivent comporter des fixtures positives et négatives.
+1. deterministic form/fund checklist passes → `checklist_reviewed=true`;
+2. an **independent** Sarah-style pass validates the exact paragraph against the frozen `sarah_voice_markers.md` contract → `sarah_style_reviewed=true`;
+3. paragraph-local HIL scope is explicitly declared and contains no irrelevant dimension → `hil_scope_reviewed=true`.
 
-## Cas non conformes
+The paragraph is eligible for final manuscript only when all three values are `true` and no violation remains. A failed transition triggers **full paragraph rewrite**, then a fresh review state.
 
-### Fuite méthodologique
+## Fund — deterministic checklist
+
+1. **Canonical coverage** — all structured `canonical_points` of the source claim are retained. Legacy claims without structured points require targeted semantic review; the deterministic gate does not invent points.
+2. **Input texture** — retain concrete material when available: place, date, actor, institution, object, gesture or documented practice.
+3. **Narrative order** — attested fact/action → mechanism → perspective/consequence. Do not open on a conclusion and hide the evidence in a retrospective subordinate clause.
+4. **Citation/callback** — more than two direct `[claim:<id>]` citations is a review signal. If an active callback exists, a third direct citation is non-compliant.
+5. **Density** — strong source/rendered-volume divergence is warning-only, not an automatic rejection.
+
+## Form — deterministic checklist
+
+6. **No production leakage** — no `TL;DR`, canonical-status heading, HIL label, run/version, baseline/delta/lineage, writing instruction or production table in reader prose.
+7. **Acronyms explained** — reader-facing acronyms are expanded at first use. Hidden traceability IDs are not prose.
+8. **Foreign technical terms glossed** — francise or explain terms such as *clearing house* at first use.
+9. **False leads** — maximum 1–2 per subsection and always a naïve/semi-rhetorical question with its answer inside the same side-story block.
+
+## Sarah-style transition — independent, hash-bound, frozen
+
+The voice source of truth is `references/sarah_voice_markers.md`. Runtime never searches for Sarah's voice and never silently extends its marker list.
+
+The style flag does **not** become true because the paragraph “sounds good”, nor because a generation pass returns `passed=true`. The review must be a distinct pass and must be tied to the exact prose and exact voice contract:
+
+```json
+{
+  "passed": true,
+  "reviewer_role": "independent_style_gate",
+  "evaluator": "bounded_llm",
+  "generation_pass_id": "draft-A07b-P03-v2",
+  "review_pass_id": "style-A07b-P03-v2",
+  "generation_context_id": "ctx-draft-A07b-P03",
+  "review_context_id": "ctx-style-A07b-P03",
+  "paragraph_sha256": "<hash du paragraphe visible exact>",
+  "voice_contract_id": "sarah-voice-run25-v1",
+  "voice_contract_sha256": "<hash du fichier sarah_voice_markers.md>",
+  "marker_results": {
+    "scope_precision": {
+      "status": "pass",
+      "rationale": "La portée reste limitée au cas et à la période documentés."
+    },
+    "rigor_compressed_in_sentence": {
+      "status": "pass",
+      "rationale": "La réserve sur la tradition est intégrée dans la phrase."
+    },
+    "lived_opening_callback": {
+      "status": "not_applicable",
+      "rationale": "Ce paragraphe n'ouvre ni section ni séquence et ne porte pas la prise de terrain initiale."
+    }
+  }
+}
+```
+
+### Ce que le gate vérifie mécaniquement
+
+- `generation_pass_id != review_pass_id` ;
+- `generation_context_id != review_context_id` ;
+- le hash du paragraphe correspond au texte effectivement revu ;
+- le hash et l'ID du contrat correspondent à la version figée courante ;
+- `scope_precision` est explicitement `pass` ;
+- aucun marker inconnu ;
+- aucun marker applicable à `fail` ;
+- chaque `pass` / `not_applicable` est justifié ;
+- au moins un marker signature applicable passe, ou, si aucun marker signature n'est applicable à cette unité, au moins un marker de soutien passe.
+
+Le jugement sémantique de style reste volontairement LLM/humain : le script ne prétend pas qu'une regex sait reconnaître Sarah. En revanche, le script rend la revue **auditable, non réutilisable après réécriture et non auto-certifiable dans la même passe**.
+
+La source primaire prévue par la Partie 0 — mémoire exportée de l'autre assistant de Sarah — n'est pas encore importée. Tant que ce n'est pas le cas, le gate applique uniquement le contrat figé issu de la spec Run 25 et produit un warning de provenance ; il ne complète rien par invention.
+
+## HIL transition — relevance only, never quota
+
+HIL dimensions are **not a checklist of eight angles to force into every paragraph**.
+
+For each paragraph:
+
+1. determine the claims actually used from `[claim:<id>]` markers;
+2. build the candidate HIL set from those claims' `hil` / `hil_ids` and explicitly linked composition records;
+3. select only dimensions that materially help explain this paragraph;
+4. reject any selected HIL that has no support in a claim used by the paragraph;
+5. allow relevant HIL dimensions to remain unselected when they add no explanatory value here.
+
+Therefore:
+
+- `selected_hil_ids ⊆ relevant_hil_ids` is a hard gate;
+- `selected_hil_ids == relevant_hil_ids` is **not** required;
+- HIL names/IDs remain backstage and never appear in reader prose.
+
+## Decision
+
+- any fund/form/style/HIL violation → rewrite the **whole paragraph**;
+- warning only → targeted review, no automatic failure;
+- every rewrite resets all three review flags to `false`;
+- a changed paragraph hash invalidates the previous Sarah review automatically;
+- a changed Sarah voice contract invalidates previous Sarah reviews automatically;
+- tests require both accepting and rejecting fixtures.
+
+## Negative fixtures
+
+### Production leakage
 
 > TL;DR : ce claim établit un statut canonique fort pour la relique.
 
-Rejet : le lecteur voit l'appareil de production.
+Reject.
 
-### Terme étranger non glosé
+### Unglossed foreign term
 
 > Le clearing house régional organisait les échanges du port.
 
-Rejet : `clearing house` n'est ni francisé ni expliqué.
+Reject.
 
-### Couverture canonique incomplète
+### Incomplete canonical coverage
 
-Claim à trois points : visite du site ; construction du temple ; nouvelle relation politique avec le monastère.
+A three-point claim is rendered only as:
 
 > Le roi fit construire un temple.
 
-Rejet : deux points structurés disparaissent.
+Reject.
 
-### Ordre inversé
+### Reversed narrative order
 
 > Cela eut pour conséquence un renforcement du pouvoir royal, après que le roi eut visité le site.
 
-Rejet : la conséquence précède l'action attestée.
+Reject.
 
-### Troisième citation malgré callback
+### Irrelevant HIL
 
-Le claim est déjà cité deux fois et un callback actif existe ; le paragraphe contient une nouvelle occurrence `[claim:C-X]`.
+A paragraph sourced only by a religious-legitimacy claim selects `HIL-03_economy-infrastructure` without another supporting claim.
 
-Rejet : reprendre le callback plutôt que réouvrir la preuve.
+Reject with `hil_dimension_not_relevant_to_paragraph`.
 
-## Cas conforme
+### Style review omitted
 
-> Le roi se rendit au sommet de la colline sacrée en 1765 ; la tradition du temple veut qu'il y ait rencontré les responsables du sanctuaire. Ce geste, d'abord local, renforça ensuite la relation politique entre la cour et l'institution religieuse.
+The paragraph passes deterministic checks but has no structured `sarah_style_review` record.
 
-Acceptation : fait concret avant conséquence, incertitude intégrée à la phrase, pas de méta-récit.
+Reject: `sarah_style_reviewed` remains `false`.
+
+### Style review copied after rewrite
+
+The prose changes but `paragraph_sha256` is still the hash of the previous version.
+
+Reject: stale Sarah review.
+
+### Style self-certification
+
+`generation_pass_id == review_pass_id` or `generation_context_id == review_context_id`.
+
+Reject: the style review was not independent.
+
+## Positive fixture
+
+> Le roi se rendit au sommet de la colline sacrée en 1765 ; la tradition du temple situe là une rencontre avec les responsables du sanctuaire. Ce geste renforça ensuite la relation politique entre la cour et l'institution religieuse.
+
+Eligible only after deterministic checklist, **independent hash-bound Sarah review**, and relevant-only HIL scope have each passed.
