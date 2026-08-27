@@ -21,7 +21,7 @@ Required structured inputs:
 - reader profile / reader plan;
 - eligible side-story, recap, illustration and map artefacts.
 
-Reader modes: **advanced**, **intermediate**, **child 10+**. For advanced work there is no maximum length; use content preservation and exhaustive dispositions instead of compression by budget.
+Reader modes: **advanced**, **intermediate**, **child 10+**. For advanced work there is no maximum length; use a **content-preservation gate** and exhaustive dispositions instead of compression by budget.
 
 ## State machine
 
