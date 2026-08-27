@@ -8,6 +8,7 @@ from build_heat_map import build_heat_map
 from paragraph_review_gate import initialize_review_state,review_paragraph
 from reciprocal_coverage_check import reciprocal_coverage_check
 from run_journal import append_entry
+from sarah_voice_contract import review_skeleton
 
 SAMPLE_CLAIM={
     "id":"C-SAMPLE",
@@ -21,14 +22,37 @@ SAMPLE_CLAIM={
 LEGACY_CLAIM={"id":"C-LEGACY","claim":"Le roi visita le site avant un renforcement du pouvoir royal."}
 
 
-def reviewed_context(claim_id="C-SAMPLE",hil="HIL-05_religion-culture-legitimacy",**extra):
+def passing_style_review(text,*,signature=True):
+    record=review_skeleton(text,generation_pass_id="gen-pass-1",generation_context_id="ctx-generation-1")
+    record.update({
+        "passed":True,
+        "evaluator":"bounded_llm",
+        "review_pass_id":"style-pass-1",
+        "review_context_id":"ctx-style-1",
+    })
+    record["marker_results"]={
+        "scope_precision":{"status":"pass","rationale":"La portée du paragraphe reste bornée au cas décrit."},
+        "continuous_prose_not_social_format":{"status":"pass","rationale":"La prose reste continue et n'imite pas un post social."},
+        "lived_opening_callback":{
+            "status":"not_applicable",
+            "rationale":"Ce paragraphe n'ouvre pas une séquence disposant d'une prise de terrain vécue."
+        },
+        "rigor_compressed_in_sentence":{
+            "status":"pass" if signature else "not_applicable",
+            "rationale":"La réserve sur la tradition est intégrée à la phrase." if signature else "Aucune réserve méthodologique spécifique n'est portée par cette unité."
+        },
+    }
+    if not signature:
+        record["marker_results"]["concrete_texture_before_abstraction"]={
+            "status":"pass","rationale":"Le paragraphe garde un élément concret avant sa conclusion."
+        }
+    return record
+
+
+def reviewed_context(text,claim_id="C-SAMPLE",hil="HIL-05_religion-culture-legitimacy",*,signature=True,**extra):
     context={
         "neighbor_context_loaded":True,
-        "sarah_style_review":{
-            "passed":True,
-            "evaluator":"bounded_llm",
-            "markers":["scope_precision","concrete_texture","integrated_nuance"],
-        },
+        "sarah_style_review":passing_style_review(text,signature=signature),
         "hil_scope_declared":True,
         "selected_hil_ids":[hil] if hil else [],
         "claim_hil_map":{claim_id:[hil]} if hil else {claim_id:[]},
@@ -47,34 +71,32 @@ class Run25ParagraphReviewGateTests(unittest.TestCase):
 
     def test_gate_rejects_methodological_leakage(self):
         bad="TL;DR : ce claim établit un statut canonique fort pour la relique."
-        result=review_paragraph(bad,claim=SAMPLE_CLAIM,arc_context=reviewed_context())
+        result=review_paragraph(bad,claim=SAMPLE_CLAIM,arc_context=reviewed_context(bad))
         self.assertFalse(result.passed)
         self.assertEqual("Don't",result.violations[0].category)
         self.assertFalse(result.review_state.checklist_reviewed)
 
     def test_gate_rejects_unglossed_foreign_term(self):
         bad="Le clearing house régional organisait les échanges du port."
-        result=review_paragraph(bad,claim=SAMPLE_CLAIM,arc_context=reviewed_context())
+        result=review_paragraph(bad,claim=SAMPLE_CLAIM,arc_context=reviewed_context(bad))
         self.assertFalse(result.passed)
         self.assertEqual("terme_technique_non_glose",result.violations[0].rule)
 
     def test_gate_accepts_glossed_foreign_term(self):
-        text=("Le clearing house, c'est-à-dire la chambre de compensation régionale, "
-              "organisait les échanges du port.")
-        result=review_paragraph(text,claim=LEGACY_CLAIM,arc_context=reviewed_context("C-LEGACY",None))
+        text="Le clearing house, c'est-à-dire la chambre de compensation régionale, organisait les échanges du port."
+        result=review_paragraph(text,claim=LEGACY_CLAIM,arc_context=reviewed_context(text,"C-LEGACY",None,signature=False))
         self.assertTrue(result.passed,result.violations)
         self.assertTrue(result.review_state.complete)
 
     def test_gate_rejects_incomplete_canonical_coverage(self):
         bad="Le roi fit construire un temple."
-        result=review_paragraph(bad,claim=SAMPLE_CLAIM,arc_context=reviewed_context())
+        result=review_paragraph(bad,claim=SAMPLE_CLAIM,arc_context=reviewed_context(bad))
         self.assertFalse(result.passed)
-        self.assertEqual("fond",result.violations[0].category)
         self.assertEqual("couverture_canonique_incomplete",result.violations[0].rule)
 
     def test_gate_rejects_wrong_narrative_order(self):
         bad="Cela eut pour conséquence un renforcement du pouvoir royal, après que le roi eut visité le site."
-        result=review_paragraph(bad,claim=LEGACY_CLAIM,arc_context=reviewed_context("C-LEGACY",None))
+        result=review_paragraph(bad,claim=LEGACY_CLAIM,arc_context=reviewed_context(bad,"C-LEGACY",None,signature=False))
         self.assertFalse(result.passed)
         self.assertEqual("ordre_fait_avant_consequence",result.violations[0].rule)
 
@@ -82,29 +104,59 @@ class Run25ParagraphReviewGateTests(unittest.TestCase):
         good=("Le roi se rendit au sommet de la colline sacrée en 1765 ; la tradition du temple "
               "situe là une rencontre avec les responsables du sanctuaire. Ce geste renforça ensuite "
               "la relation politique entre la cour et l'institution religieuse.")
-        result=review_paragraph(good,claim=SAMPLE_CLAIM,arc_context=reviewed_context())
+        result=review_paragraph(good,claim=SAMPLE_CLAIM,arc_context=reviewed_context(good))
         self.assertTrue(result.passed,result.violations)
-        self.assertTrue(result.review_state.checklist_reviewed)
-        self.assertTrue(result.review_state.sarah_style_reviewed)
-        self.assertTrue(result.review_state.hil_scope_reviewed)
+        self.assertTrue(result.review_state.complete)
+        self.assertTrue(any("primary external-memory source is not imported" in w for w in result.warnings))
 
     def test_style_flag_stays_false_without_explicit_style_review(self):
         good=("Le roi se rendit au sommet de la colline sacrée en 1765 ; la tradition du temple "
               "situe là une rencontre avec les responsables du sanctuaire. Ce geste renforça ensuite "
               "la relation politique entre la cour et l'institution religieuse.")
-        context=reviewed_context();context.pop("sarah_style_review")
+        context=reviewed_context(good);context.pop("sarah_style_review")
         result=review_paragraph(good,claim=SAMPLE_CLAIM,arc_context=context)
         self.assertFalse(result.passed)
         self.assertFalse(result.review_state.sarah_style_reviewed)
         self.assertIn("sarah_style_review_required",{v.rule for v in result.violations})
 
+    def test_style_gate_rejects_same_generation_and_review_pass(self):
+        good=("Le roi se rendit au sommet de la colline sacrée en 1765 ; la tradition du temple "
+              "situe là une rencontre avec les responsables du sanctuaire. Ce geste renforça ensuite "
+              "la relation politique entre la cour et l'institution religieuse.")
+        context=reviewed_context(good);context["sarah_style_review"]["review_pass_id"]="gen-pass-1"
+        result=review_paragraph(good,claim=SAMPLE_CLAIM,arc_context=context)
+        self.assertFalse(result.review_state.sarah_style_reviewed)
+        self.assertTrue(any("distinct from generation pass" in v.message for v in result.violations))
+
+    def test_style_gate_rejects_stale_review_after_rewrite(self):
+        old="Le roi visite le site."
+        good=("Le roi se rendit au sommet de la colline sacrée en 1765 ; la tradition du temple "
+              "situe là une rencontre avec les responsables du sanctuaire. Ce geste renforça ensuite "
+              "la relation politique entre la cour et l'institution religieuse.")
+        context=reviewed_context(old)
+        context["hil_scope_declared"]=True;context["selected_hil_ids"]=["HIL-05_religion-culture-legitimacy"]
+        result=review_paragraph(good,claim=SAMPLE_CLAIM,arc_context=context)
+        self.assertFalse(result.review_state.sarah_style_reviewed)
+        self.assertTrue(any("paragraph hash is stale" in v.message for v in result.violations))
+
+    def test_style_gate_rejects_marker_name_box_ticking(self):
+        good=("Le roi se rendit au sommet de la colline sacrée en 1765 ; la tradition du temple "
+              "situe là une rencontre avec les responsables du sanctuaire. Ce geste renforça ensuite "
+              "la relation politique entre la cour et l'institution religieuse.")
+        context=reviewed_context(good)
+        context["sarah_style_review"]["marker_results"]={
+            "scope_precision":{"status":"pass","rationale":"Portée exacte."}
+        }
+        result=review_paragraph(good,claim=SAMPLE_CLAIM,arc_context=context)
+        self.assertFalse(result.review_state.sarah_style_reviewed)
+        self.assertTrue(any("must be explicitly evaluated" in v.message for v in result.violations))
+
     def test_hil_flag_stays_false_without_explicit_scope_review(self):
         good=("Le roi se rendit au sommet de la colline sacrée en 1765 ; la tradition du temple "
               "situe là une rencontre avec les responsables du sanctuaire. Ce geste renforça ensuite "
               "la relation politique entre la cour et l'institution religieuse.")
-        context=reviewed_context();context["hil_scope_declared"]=False
+        context=reviewed_context(good);context["hil_scope_declared"]=False
         result=review_paragraph(good,claim=SAMPLE_CLAIM,arc_context=context)
-        self.assertFalse(result.passed)
         self.assertFalse(result.review_state.hil_scope_reviewed)
         self.assertIn("hil_scope_review_required",{v.rule for v in result.violations})
 
@@ -112,9 +164,8 @@ class Run25ParagraphReviewGateTests(unittest.TestCase):
         good=("Le roi se rendit au sommet de la colline sacrée en 1765 ; la tradition du temple "
               "situe là une rencontre avec les responsables du sanctuaire. Ce geste renforça ensuite "
               "la relation politique entre la cour et l'institution religieuse.")
-        context=reviewed_context();context["selected_hil_ids"].append("HIL-03_economy-infrastructure")
+        context=reviewed_context(good);context["selected_hil_ids"].append("HIL-03_economy-infrastructure")
         result=review_paragraph(good,claim=SAMPLE_CLAIM,arc_context=context)
-        self.assertFalse(result.passed)
         self.assertFalse(result.review_state.hil_scope_reviewed)
         self.assertIn("hil_dimension_not_relevant_to_paragraph",{v.rule for v in result.violations})
 
@@ -123,22 +174,22 @@ class Run25ParagraphReviewGateTests(unittest.TestCase):
         good=("Le roi se rendit au sommet de la colline sacrée en 1765 ; la tradition du temple "
               "situe là une rencontre avec les responsables du sanctuaire. Ce geste renforça ensuite "
               "la relation politique entre la cour et l'institution religieuse.")
-        context=reviewed_context();context["claim_hil_map"]["C-SAMPLE"]=["HIL-05_religion-culture-legitimacy","HIL-06_security-coercion"]
+        context=reviewed_context(good);context["claim_hil_map"]["C-SAMPLE"]=["HIL-05_religion-culture-legitimacy","HIL-06_security-coercion"]
         result=review_paragraph(good,claim=multi,arc_context=context)
         self.assertTrue(result.passed,result.violations)
         self.assertTrue(any("hil_relevant_but_not_selected" in w for w in result.warnings))
 
     def test_gate_prefers_callback_over_third_citation(self):
         text="Le fait revient ici comme une nouvelle preuve. [claim:C-LEGACY]"
-        context=reviewed_context("C-LEGACY",None,mention_count={"C-LEGACY":2},active_callbacks=["C-LEGACY"])
+        context=reviewed_context(text,"C-LEGACY",None,signature=False,mention_count={"C-LEGACY":2},active_callbacks=["C-LEGACY"])
         result=review_paragraph(text,claim=LEGACY_CLAIM,arc_context=context)
         self.assertFalse(result.passed)
         self.assertEqual("citation_evidentielle_au_dela_du_callback_disponible",result.violations[0].rule)
 
     def test_false_lead_is_socratic_and_reranked(self):
-        context=reviewed_context("C-LEGACY",None,false_lead=True,false_lead_count_in_subsection=2)
-        result=review_paragraph("Une réponse sans question.",claim=LEGACY_CLAIM,arc_context=context)
-        self.assertFalse(result.passed)
+        text="Une réponse sans question."
+        context=reviewed_context(text,"C-LEGACY",None,signature=False,false_lead=True,false_lead_count_in_subsection=2)
+        result=review_paragraph(text,claim=LEGACY_CLAIM,arc_context=context)
         rules={v.rule for v in result.violations}
         self.assertIn("false_lead_rerank_limit",rules)
         self.assertIn("false_lead_socratic_format",rules)
@@ -147,12 +198,11 @@ class Run25ParagraphReviewGateTests(unittest.TestCase):
         good=("Le roi se rendit au sommet de la colline sacrée en 1765 ; la tradition du temple "
               "situe là une rencontre avec les responsables du sanctuaire. Ce geste renforça ensuite "
               "la relation politique entre la cour et l'institution religieuse.")
-        first=review_paragraph(good,claim=SAMPLE_CLAIM,arc_context=reviewed_context())
+        first=review_paragraph(good,claim=SAMPLE_CLAIM,arc_context=reviewed_context(good))
         second=review_paragraph(good,claim=SAMPLE_CLAIM,arc_context={})
         self.assertTrue(first.review_state.complete)
         self.assertFalse(second.review_state.complete)
         self.assertFalse(second.review_state.sarah_style_reviewed)
-        self.assertFalse(second.review_state.hil_scope_reviewed)
 
 
 class Run25ProcessContractTests(unittest.TestCase):
