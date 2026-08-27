@@ -45,8 +45,8 @@ jobs:
           if-no-files-found: error
           retention-days: 30
           path: |
-            examples/sri_lanka_pre_1948/09_output/drafting_packets/**
-            examples/sri_lanka_post_1948/09_output/drafting_packets/**
+            examples/sri_lanka_pre_1948/09_output/drafting/iterative/packets/**
+            examples/sri_lanka_post_1948/09_output/drafting/iterative/packets/**
       - run: python scripts/qa_functional_pre1948.py
       - run: python scripts/render_composed_reader.py --project all
       - name: Publish complete reader outputs
