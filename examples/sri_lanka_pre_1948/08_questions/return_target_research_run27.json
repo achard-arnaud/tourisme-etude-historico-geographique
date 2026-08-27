@@ -1,0 +1,62 @@
+[
+  {
+    "target_id":"C-R14-A04-VIJAYABAHU-001",
+    "proposition":"Vijayabahu's reconquest was a local military-political achievement aided by a changing Chola environment; Chola vulnerability is an opportunity amplifier, not a substitute for the local reconquest mechanism.",
+    "verdict":"supported",
+    "confidence":"B",
+    "paragraph_anchor":"Les rivalités sud-indiennes créent un environnement utile à Vijayabāhu",
+    "reasoning":"Recent specialist work describes Vijayabahu's long war from Rohana against Chola overlords, while the published Epigraphia Indica discussion explicitly notes Chola civil war as a reason sufficient forces could not be sent. Together they support a local reconquest plus regional-opportunity reading and argue against monocausal Chola collapse.",
+    "sources":[
+      {"url":"https://www.jstor.org/content/oa_chapter_monograph/jj.41572920.9","title":"Establishing Kingship: The Rise of Vijayabāhu I (1070–1110)","role":"academic_monograph","independence_family":"ARC Humanities Press / JSTOR"},
+      {"url":"https://jainqq.org/pagetext/Epigraphia_Indica_Vol_18/032572/422","title":"Epigraphia Indica Vol. 18 — Polonnaruva inscription of Vijayabahu I","role":"specialist_institution","independence_family":"Archaeological Survey of India / Epigraphia Indica"}
+    ]
+  },
+  {
+    "target_id":"C-PRE-GEO-001",
+    "proposition":"The eighteenth-century Anglo-French contest in India extended from the War of the Austrian Succession into the Seven Years War; the latter decisively weakened French territorial competition without ending French presence.",
+    "verdict":"supported",
+    "confidence":"A",
+    "paragraph_anchor":"La guerre de Succession d’Autriche ouvre en Inde à partir de 1744 une confrontation anglo-française",
+    "reasoning":"Independent Oxford and Boydell/JSTOR scholarship both treat the contest as a longer sequence beginning in the 1740s and ending with decisive British superiority by 1761–63, while explicitly preserving a later French presence.",
+    "sources":[
+      {"url":"https://academic.oup.com/book/2601/chapter-abstract/142972034","title":"War and its Transformations: India 1754–1765","role":"academic_monograph","independence_family":"Oxford University Press"},
+      {"url":"https://www.jstor.org/stable/10.7722/j.ctt31njtz","title":"The Emergence of British Power in India, 1600–1784","role":"academic_monograph","independence_family":"Boydell & Brewer / JSTOR"}
+    ]
+  },
+  {
+    "target_id":"C-PRE-GEO-004",
+    "proposition":"Kandy's 1815 fall was driven primarily by Kandyan political fracture and British coalition-building, while the removal of French and Dutch military alternatives in the Indian Ocean reduced Kandy's external balancing options.",
+    "verdict":"supported",
+    "confidence":"B",
+    "paragraph_anchor":"Waterloo ne « cause » pas la conquête de Kandy",
+    "reasoning":"Sri Lanka's National Archives attributes the Convention to political manoeuvring between Kandyan chiefs and the British. Independent scholarship on Lord Minto documents the British capture of Mauritius and Java as deliberate removal of French/Franco-Dutch bases. The regional claim therefore remains an amplifier, not a direct cause.",
+    "sources":[
+      {"url":"https://www.archives.gov.lk/online-exhibits/path-to-freedom/1-1815-convention","title":"1815 Convention","role":"official_archive","independence_family":"Sri Lanka National Archives"},
+      {"url":"https://www.jstor.org/stable/10.7722/j.ctt1c3gxb5","title":"Defending British India against Napoleon: The Foreign Policy of Governor-General Lord Minto, 1807–13","role":"academic_monograph","independence_family":"Boydell & Brewer / JSTOR"}
+    ]
+  },
+  {
+    "target_id":"C-PRE-002",
+    "proposition":"VOC territorial and fiscal administration increased documentary legibility of land, people and service obligations through thombos, litigation and social categorisation, without uniformly inventing local categories from scratch.",
+    "verdict":"supported",
+    "confidence":"B",
+    "paragraph_anchor":"Les thombos rendent des relations auparavant négociées et dispersées plus **lisibles** pour l’État",
+    "reasoning":"The Sri Lanka National Archives maintains head and land thombo collections and points researchers to specialist work on their administrative use. Independent academic work shows registration of people, services, caste-linked duties and land was detailed and negotiated rather than a simple one-way invention of categories.",
+    "sources":[
+      {"url":"https://www.archives.gov.lk/search-the-index-of-dutch-thombo","title":"Search the index of Dutch thombos","role":"official_archive","independence_family":"Sri Lanka National Archives"},
+      {"url":"https://www.cambridge.org/core/journals/itinerario/article/classifications-at-work-social-categories-and-dutch-bureaucracy-in-colonial-sri-lanka/D9826706895727C691F368B8EC71DA43","title":"Classifications at Work: Social Categories and Dutch Bureaucracy in Colonial Sri Lanka","role":"peer_reviewed","independence_family":"Itinerario / Cambridge University Press"}
+    ]
+  },
+  {
+    "target_id":"C-PRE-001",
+    "proposition":"The VOC-Kandy alliance against Portugal evolved into competing Dutch coastal sovereignty rather than restoration of Kandyan control over the conquered ports.",
+    "verdict":"supported",
+    "confidence":"B",
+    "paragraph_anchor":"L’allié devient donc un **souverain côtier concurrent**",
+    "reasoning":"Specialist histories independently describe the 1638 alliance, the 1656 rupture over Colombo, subsequent Dutch sovereignty in maritime provinces and fortification of ports to protect the Company's territorial and commercial position. The exact treaty interpretation remained contested, but the later coastal-sovereignty outcome is well supported.",
+    "sources":[
+      {"url":"https://brill.com/view/journals/bki/118/4/article-p454_3.pdf","title":"Baron van Imhoff and Dutch policy in Ceylon 1736–1740","role":"peer_reviewed","independence_family":"KITLV / Brill"},
+      {"url":"https://www.cambridge.org/core/books/company-fortress/van-goens-system-building-the-fortifications-16501675/4F0352769914636486472956D0FD7984","title":"The Van Goens System: Building the Fortifications, 1650–1675","role":"academic_monograph","independence_family":"Amsterdam University Press / Cambridge Core"}
+    ]
+  }
+]
