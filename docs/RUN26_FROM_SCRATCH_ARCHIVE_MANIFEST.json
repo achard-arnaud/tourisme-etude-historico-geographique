@@ -1,0 +1,18 @@
+{
+  "schema_version":"1.0",
+  "run":"26",
+  "mode":"from_scratch",
+  "archive_bundle":"run26_archive_compact.zip",
+  "archive_bundle_size_bytes":160040,
+  "archive_bundle_sha256":"f60dcb690e55b8cb94cd7d6736ef1ac9fa73636d8c675fb3f21224dc5bf9517f",
+  "files":[
+    {"name":"Sri_Lanka_pre_1948_run26_from_scratch.docx","size_bytes":54485,"sha256":"064d474af8dc6f1481121e5df7e0a19db23b30c500519852bd070b9848d64994"},
+    {"name":"Sri_Lanka_pre_1948_run26_from_scratch.md","size_bytes":41562,"sha256":"1750c66edb28ff09af45c1b3c1a3825007cee7b653b95ab174e2e26fd1d1c542"},
+    {"name":"review_ledger_pre.json","size_bytes":211514,"sha256":"bfab70d5ff380ead7a19f0057df1bd9eb484a5022d00259a5a240ad5a901b063"},
+    {"name":"Sri_Lanka_post_1948_run26_from_scratch.docx","size_bytes":54202,"sha256":"c61d2c4771db906926bb53bcdf365a3d3d0a3614e13dd6517ed0128534f10bec"},
+    {"name":"Sri_Lanka_post_1948_run26_from_scratch.md","size_bytes":41196,"sha256":"bf7e35fd5898371e5746e071a238756b3027c387b0c877f8006eaeb29b3500e2"},
+    {"name":"review_ledger_post.json","size_bytes":189475,"sha256":"6b3ed77276559be675b8d54783ad76b2cb4732797ced4468a472a1768363717b"}
+  ],
+  "binary_retention":"Manifest salvaged from feat/run27-convergence. Exact binary bundle is not asserted present in GitHub; hashes are the durable identity record.",
+  "rule":"Do not reconstruct Run26 from current structured inputs and call it the archive. Only artefacts matching these hashes belong to the archived Run26 output."
+}
