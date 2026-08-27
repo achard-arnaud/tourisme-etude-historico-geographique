@@ -1,7 +1,11 @@
 {
   "schema_version": "1.0",
   "run": "31",
+  "run_id": "RUN31",
   "mode": "from_scratch_final",
+  "state_before": "main@7dc9d8c4f20d3e08ae395eabf0c4ba826bd73e59 with the structured corpus and regenerated Run26-style drafting packets; no Run31 reader artifact was canonical in the repository",
+  "state_after": "Run31 from-scratch reader outputs generated and QA-reviewed outside the repository; hashes and coverage recorded in this manifest; reader binaries/prose were not promoted as canonical repository outputs",
+  "promotion_decision": "record_outputs_only_not_canonical_reader",
   "generated_from": {
     "branch_base": "main",
     "base_commit": "7dc9d8c4f20d3e08ae395eabf0c4ba826bd73e59",
