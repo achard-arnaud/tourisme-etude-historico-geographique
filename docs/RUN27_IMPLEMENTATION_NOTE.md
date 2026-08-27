@@ -1,0 +1,1 @@
+Run 27 implementation started from the merged Run 26 baseline. Subsequent code and corpus changes are developed on `feat/run27-convergence` and merged only after CI.
