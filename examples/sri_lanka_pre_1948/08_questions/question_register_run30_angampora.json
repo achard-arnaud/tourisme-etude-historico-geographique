@@ -1,0 +1,14 @@
+[
+  {
+    "id":"Q-R30-ANGAMPORA-BAN-001",
+    "question":"Existe-t-il un fac-similé, une référence archivistique contemporaine ou une Gazette de 1817 démontrant l'interdiction britannique de l'Angampora et ses sanctions exactes ?",
+    "status":"open",
+    "priority":"high",
+    "why_it_matters":"Le récit de l'interdiction est central dans la mémoire contemporaine de l'Angampora mais il est souvent répété avec des détails spectaculaires sans citation primaire accessible.",
+    "gate":"primary_source_or_two_independent_qualified_sources",
+    "falsifier":"Une recherche exhaustive des gazettes/archives de 1817-1818 qui ne trouve aucun texte Angampora, combinée à une explication documentée montrant que le récit apparaît seulement dans des sources tardives, contraindrait à traiter l'interdiction comme mémoire postcoloniale plutôt que comme décret établi.",
+    "current_evidence":"Les décisions officielles du Cabinet de 2019 et 2022 reprennent l'existence d'une interdiction coloniale ; elles ne citent pas ni ne reproduisent le texte de 1817. Le corpus Run30 ne promeut donc ni la Gazette de 1817 ni la sanction des tirs aux genoux comme faits historiques.",
+    "related_claim_ids":["C-R30-ANGAMPORA-HERITAGE-001"],
+    "related_source_ids":["CABINET-ANGAM-2019","CABINET-ANGAM-2022"]
+  }
+]
