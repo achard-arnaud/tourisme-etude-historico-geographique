@@ -77,10 +77,10 @@ def review_skeleton(text: str, *, generation_pass_id: str | None = None, generat
 def validate_style_review(text: str, record: dict[str, Any] | None, *, contract_path: Path = DEFAULT_CONTRACT_PATH) -> tuple[list[str], list[str]]:
     """Validate auditability and bounded semantic verdict structure.
 
-    This cannot mechanically decide whether prose 'sounds like Sarah'. It prevents
-    self-certification, stale reviews and marker-name box ticking, and requires an
-    independent reviewer to leave paragraph-specific verdicts against the frozen
-    contract.
+    The semantic question — whether the paragraph actually matches Sarah's voice —
+    remains an independent reviewer judgment. This function makes that judgment
+    auditable: no same-pass self-certification, no stale review after rewrite, no
+    stale voice contract and no marker-name box ticking.
     """
     errors: list[str] = []
     warnings: list[str] = []
@@ -109,13 +109,11 @@ def validate_style_review(text: str, record: dict[str, Any] | None, *, contract_
     elif generation_context_id == review_context_id:
         errors.append("Sarah review context must be independent from generation context")
 
-    expected_paragraph_hash = paragraph_sha256(text)
-    if record.get("paragraph_sha256") != expected_paragraph_hash:
+    if record.get("paragraph_sha256") != paragraph_sha256(text):
         errors.append("Sarah review paragraph hash is stale or does not match reviewed prose")
     if record.get("voice_contract_id") != contract.get("contract_id"):
         errors.append("Sarah review references the wrong voice contract id")
-    expected_contract_hash = contract_sha256(contract_path)
-    if record.get("voice_contract_sha256") != expected_contract_hash:
+    if record.get("voice_contract_sha256") != contract_sha256(contract_path):
         errors.append("Sarah review voice contract hash is stale")
 
     results = record.get("marker_results") or {}
@@ -126,14 +124,20 @@ def validate_style_review(text: str, record: dict[str, Any] | None, *, contract_
     if unknown:
         errors.append(f"Sarah review contains unknown marker ids: {sorted(unknown)}")
 
+    mandatory = {str(x) for x in contract.get("mandatory_markers") or []}
+    signature_ids = {mid for mid, marker in markers.items() if marker.get("kind") == "signature"}
+    always_ids = {mid for mid, marker in markers.items() if marker.get("applicability") == "always"}
+    required_evaluation = mandatory | signature_ids | always_ids
+    for marker_id in sorted(required_evaluation):
+        if marker_id not in results:
+            errors.append(f"Sarah marker must be explicitly evaluated: {marker_id}")
+
     applicable_signature_passes = 0
     supporting_passes = 0
     signature_applicable = False
     for marker_id, marker in markers.items():
         result = results.get(marker_id)
         if result is None:
-            if marker_id in set(contract.get("mandatory_markers") or []):
-                errors.append(f"Sarah mandatory marker missing: {marker_id}")
             continue
         if not isinstance(result, dict):
             errors.append(f"Sarah marker result must be an object: {marker_id}")
@@ -156,8 +160,8 @@ def validate_style_review(text: str, record: dict[str, Any] | None, *, contract_
         if marker.get("kind") == "supporting" and status == "pass":
             supporting_passes += 1
 
-    for marker_id in contract.get("mandatory_markers") or []:
-        result = results.get(str(marker_id)) or {}
+    for marker_id in mandatory:
+        result = results.get(marker_id) or {}
         if result.get("status") != "pass":
             errors.append(f"Sarah mandatory marker must pass: {marker_id}")
 
