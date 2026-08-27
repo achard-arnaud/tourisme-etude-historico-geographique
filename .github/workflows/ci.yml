@@ -36,17 +36,17 @@ jobs:
       - run: python scripts/build_heat_map.py --project examples/sri_lanka_pre_1948 --run 25
       - run: python scripts/reciprocal_coverage_check.py --project examples/sri_lanka_pre_1948 --run 25
       - run: python scripts/materialize_arc_recaps.py --project examples/sri_lanka_pre_1948 --source examples/sri_lanka_pre_1948/09_output/report.md --check
-      - run: python scripts/build_from_scratch_packets.py --project examples/sri_lanka_pre_1948
-      - run: python scripts/build_from_scratch_packets.py --project examples/sri_lanka_post_1948
-      - name: Publish Run26 drafting packets
+      - run: python scripts/build_drafting_packets.py --project examples/sri_lanka_pre_1948
+      - run: python scripts/build_drafting_packets.py --project examples/sri_lanka_post_1948
+      - name: Publish shared drafting packets
         uses: actions/upload-artifact@v4
         with:
-          name: run26-from-scratch-packets-${{ github.sha }}
+          name: drafting-packets-${{ github.sha }}
           if-no-files-found: error
           retention-days: 30
           path: |
-            examples/sri_lanka_pre_1948/09_output/from_scratch/packets/**
-            examples/sri_lanka_post_1948/09_output/from_scratch/packets/**
+            examples/sri_lanka_pre_1948/09_output/drafting_packets/**
+            examples/sri_lanka_post_1948/09_output/drafting_packets/**
       - run: python scripts/qa_functional_pre1948.py
       - run: python scripts/render_composed_reader.py --project all
       - name: Publish complete reader outputs
