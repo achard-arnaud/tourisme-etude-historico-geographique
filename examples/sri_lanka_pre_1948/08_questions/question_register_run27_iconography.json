@@ -1,0 +1,13 @@
+[
+  {
+    "id":"Q-R27-KUSA-PANELS-001",
+    "question":"Can the photographed panels numbered 7, 9 and 3 be identified securely, including the proposed Kusa Jātaka identification?",
+    "kind":"epistemic",
+    "arc":"A02c_anuradhapura_and_the_mahavihara",
+    "status":"pending_external",
+    "discriminating_test":"Recover the original photograph and exact site context, then compare visible iconography with the site's inscription/cartel, a transcription or translation where relevant, and specialist iconographic references.",
+    "expected_evidence":["original field photographs","exact monument or museum location","cartel or inscription transcription","specialist Buddhist iconography reference"],
+    "falsifier":"The primary image/context cannot be recovered, or the visible scene lacks diagnostic features sufficient to distinguish Kusa Jātaka from alternative narratives.",
+    "priority":1
+  }
+]
