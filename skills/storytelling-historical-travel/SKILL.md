@@ -88,11 +88,24 @@ Executable contracts:
 - `scripts/sarah_voice_contract.py`;
 - `scripts/paragraph_repair_loop.py`.
 
-### S4 — compose side stories and recaps
+### S4 — compose side stories, callbacks and return targets
 
 Side-story eligibility, kind and evidence lineage come from artefacts, never from stylistic improvisation. `materialize_side_stories.py` emits explicit BEGIN/END fences for new materializations. Renderers must use those fences to create one visually closed block; do not infer the end from colour or indentation alone.
 
-For iterative legacy DOCX rendering, a `return_to` claim/bridge/arc ID resolves only through its canonical hidden marker (`[claim:<id>]`, `[bridge:<id>]`, `[arc:<id>]`). Never compare the raw ID to visible prose or guess the target semantically.
+#### Return-target resolution — deterministic first, research second
+
+A `return_to` claim/bridge/arc ID is **not rejected merely because its ID is invisible in reader prose**. Resolution follows this mandatory sequence:
+
+1. Look for its explicit canonical hidden marker: `[claim:<id>]`, `[bridge:<id>]` or `[arc:<id>]`.
+2. If the marker exists, resolve to the reader paragraph carrying that marker. This is deterministic and requires no LLM or web search.
+3. If no marker exists, set the target to `needs_research`. Never compare the raw ID to visible prose, never guess by lexical or semantic similarity, and never silently close the side-story box at its header as though the return had succeeded.
+4. The semantic agent then searches the web for the **proposition carried by the target**, not for the identifier. It must try to justify **or challenge** that proposition.
+5. Research closure requires at least two qualified, independent source families (primary/official archive, peer-reviewed research, academic monograph or specialist institution). Syndicated copies or two pages from the same evidence family count once.
+6. If the proposition is sufficiently supported, bind the research record to an already appropriate canonical paragraph and materialise the hidden marker there. The renderer can then resolve normally.
+7. If the evidence challenges the proposition, do **not** manufacture the requested marker. Change `return_to` to the supported target, rewrite/reroute the side story, or retire it. The challenged result is itself recorded.
+8. A required validated/promoted side story with a final `needs_research` target blocks final export.
+
+Executable contract: `scripts/return_target_resolution.py`. Persist research decisions under `08_questions/return_target_research*.json`; the renderer remains network-free and only consumes those reviewed records.
 
 `analytical_focus` keeps question → thesis → contrasted positions/caveats → mechanisms/evidence status → callback → payoff. A `method` side story explains historical method to the reader; it is not production-method commentary.
 
@@ -150,6 +163,7 @@ A from-scratch reader cannot become the new canon while a material residual gap 
 - `python scripts/build_from_scratch_packets.py --project <project>` — contamination-safe drafting packets.
 - `python scripts/paragraph_review_gate.py --paragraph <p> --claim-json <c> --arc-context-json <ctx>` — three-gate paragraph review.
 - `scripts/paragraph_repair_loop.py` — deterministic retry/disposition semantics around semantic writer/reviewer callbacks.
+- `scripts/return_target_resolution.py` — marker-first resolution and persisted research fallback; no web access in renderer.
 - `python scripts/materialize_side_stories.py ...` — fenced side-story materialization.
 - `python scripts/reciprocal_coverage_check.py ...` — claim/fragment/callback diagnostics.
 - `python scripts/run27_coverage_contract.py --project ... --manuscript ... --run-report ... --output ...` — exhaustive dispositions + claim-depth manifest.
@@ -170,6 +184,8 @@ Do not export as final if any of these is true:
 - Sarah review is stale, self-certified in the generation pass, bound to another paragraph, or bound to another voice-contract hash;
 - selected HIL contains a dimension unsupported by a claim used in that paragraph;
 - a required side story/recap/illustration is missing;
+- a required side-story return remains `needs_research` after the research-resolution phase;
+- a challenged return proposition was materialised as though supported;
 - a side-story block has no deterministic visual boundary;
 - production metadata leaks into reader prose;
 - from-scratch packet manifest shows any previous-reader prose read;
