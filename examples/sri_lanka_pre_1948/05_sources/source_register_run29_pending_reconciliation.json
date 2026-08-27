@@ -1,0 +1,67 @@
+[
+  {
+    "id":"DALADA-FOUR-DEVALAYA-KAP-2026",
+    "title":"'Kap' Planting Completed at Kandy's Four Main Devalayas",
+    "url":"https://sridaladamaligawa.lk/kap-planting-2026/",
+    "tier":"T1",
+    "anchor_role":"specialist institutional anchor",
+    "date":"2026-08-13",
+    "author_or_institution":"Sri Dalada Maligawa",
+    "scope":"Current Kandy Esala Perahera ritual structure; identifies Natha, Vishnu, Kataragama and Pattini as the four main devalayas and the start of their internal processions.",
+    "claims_supported":["C-R29-KDY-KATARAGAMA-DEVALAYA-001"],
+    "limitations":"First-party institutional source for current ritual organization; not by itself proof of unchanged historical continuity or deity equivalence across all traditions.",
+    "provenance":"direct"
+  },
+  {
+    "id":"NALLUR-OFFICIAL-MURUGAN-2026",
+    "title":"Nallur Sri Kandaswamy Devasthanam — official temple site",
+    "url":"https://nallurkandaswamydevasthanam.org/en/",
+    "tier":"T1",
+    "anchor_role":"specialist institutional anchor",
+    "date":"2026",
+    "author_or_institution":"Nallur Sri Kandaswamy Devasthanam",
+    "scope":"Current institutional identity of Nallur Kandaswamy Kovil as a Tamil Saiva shrine dedicated to Lord Murugan.",
+    "claims_supported":["C-R29-NALLUR-MURUGAN-001"],
+    "limitations":"First-party temple source for current identity and worship; historical foundation dates require separate source criticism.",
+    "provenance":"direct"
+  },
+  {
+    "id":"NALLUR-OFFICIAL-TEMPLE-HISTORY-2026",
+    "title":"About Sri Nallur Kandaswamy Devasthanam",
+    "url":"https://nallurkandaswamydevasthanam.org/en/temple/",
+    "tier":"T1",
+    "anchor_role":"specialist institutional anchor",
+    "date":"2026",
+    "author_or_institution":"Nallur Sri Kandaswamy Devasthanam",
+    "scope":"Current temple account identifying the sanctum's Vel with Nallur Kandaswamy/Murugan and documenting the present temple's institutional tradition.",
+    "claims_supported":["C-R29-NALLUR-MURUGAN-001"],
+    "limitations":"Institutional heritage account; use as current identity/provenance, not as independent closure of medieval foundation chronology.",
+    "provenance":"direct"
+  },
+  {
+    "id":"PATHMANATHAN-SKANDA-KATARAGAMA-1999",
+    "title":"Guardian Deity of Lanka: Skanda-Murukan and Kataragama",
+    "url":"https://www.kataragama.org/research/pathmanathan.htm",
+    "tier":"T1",
+    "anchor_role":"corroborating bridge",
+    "date":"1999",
+    "author_or_institution":"S. Pathmanathan; Journal of the Institute of Asian Studies (reproduced online)",
+    "scope":"Historical-religious analysis of the identification and interaction of Skanda-Murukan/Kataragama traditions in Sri Lanka.",
+    "claims_supported":[],
+    "limitations":"Online reproduction of a published scholarly paper; supports identity/interaction mechanism, not equivalence of every local ritual form or uninterrupted antiquity.",
+    "provenance":"direct"
+  },
+  {
+    "id":"UCOLOMBO-UPCOUNTRY-HINDU-RELIGIOSITY-2026",
+    "title":"Competitive sharing: Sri Lankan Hindus and Up-country Tamil religiosity",
+    "url":"https://archive.cmb.ac.lk/bitstreams/dc7b511d-3cd6-4426-a5c4-ec80963ee121/download",
+    "tier":"T1",
+    "anchor_role":"canonical anchor",
+    "date":"2026",
+    "author_or_institution":"University of Colombo repository",
+    "scope":"Academic discussion of Sri Pada, Hindu-Saiva/Buddhist interaction and the historiographical portrayal of Rajasinha I of Sitawaka.",
+    "claims_supported":["C-R29-A05C-RAJASINHA-SRIPADA-001"],
+    "limitations":"Synthesizes chronicle and modern scholarship; useful for bounding the Rajasinha episode but not for asserting island-wide persecution or complete destruction of Buddhist learning.",
+    "provenance":"direct"
+  }
+]
