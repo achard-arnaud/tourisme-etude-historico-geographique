@@ -56,12 +56,16 @@ def apply_legacy_overlay(project: Path, output: Path, manifest: dict) -> dict:
     for claim in claims:
         claimed_fragment_ids |= fragment_refs(claim)
 
-    virtuals = virtual_legacy_statements(project, fragments, claimed_fragment_ids, claim_ids)
+    arc_summaries = {str(row.get("arc")): row for row in manifest.get("arc_summaries") or []}
+    valid_arcs = set(arc_summaries)
+    virtuals = [
+        item for item in virtual_legacy_statements(project, fragments, claimed_fragment_ids, claim_ids)
+        if str(item.get("arc") or "") in valid_arcs
+    ]
     by_arc: dict[str, list[dict]] = defaultdict(list)
     for item in virtuals:
         by_arc[str(item["arc"])].append(item)
 
-    arc_summaries = {str(row.get("arc")): row for row in manifest.get("arc_summaries") or []}
     for packet_name in manifest.get("packet_paths") or []:
         path = output / packet_name
         packet = json.loads(path.read_text(encoding="utf-8"))
