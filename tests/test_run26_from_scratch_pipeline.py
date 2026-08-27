@@ -11,7 +11,21 @@ from build_from_scratch_packets import ReadLedger,build_packets
 from from_scratch_review_contract import initialize_ledger,validate_review_ledger
 from materialize_side_stories import materialize_text,side_story_begin_marker,side_story_end_marker
 from render_from_scratch_reader import add_side_story_block
+from sarah_voice_contract import review_skeleton
 from side_story_presentation import SIDE_STORY_PRESENTATION
+
+
+def passing_style_review(text):
+    record=review_skeleton(text,generation_pass_id="gen-pass-1",generation_context_id="ctx-gen-1")
+    record.update({"passed":True,"evaluator":"bounded_llm","review_pass_id":"style-pass-1","review_context_id":"ctx-style-1"})
+    record["marker_results"]={
+        "scope_precision":{"status":"pass","rationale":"La portée reste bornée au cas décrit."},
+        "continuous_prose_not_social_format":{"status":"pass","rationale":"La prose n'imite pas un format social."},
+        "lived_opening_callback":{"status":"not_applicable","rationale":"Cette unité n'est pas une ouverture disposant de matière vécue."},
+        "rigor_compressed_in_sentence":{"status":"not_applicable","rationale":"Cette unité ne porte pas de réserve méthodologique particulière."},
+        "concrete_texture_before_abstraction":{"status":"pass","rationale":"Le fait concret précède la conclusion."},
+    }
+    return record
 
 
 class Run26PacketTests(unittest.TestCase):
@@ -40,16 +54,18 @@ class Run26PacketTests(unittest.TestCase):
 
 
 class Run26ReviewLedgerTests(unittest.TestCase):
-    def test_ledger_initializes_all_review_flags_false(self):
-        records=initialize_ledger("# T\n\nUn paragraphe. [claim:C1]\n")
+    def test_ledger_initializes_all_review_flags_false_and_binds_voice_contract(self):
+        records=initialize_ledger("# T\n\nUn paragraphe. [claim:C1]\n",generation_pass_id="gen-pass-1",generation_context_id="ctx-gen-1")
         self.assertEqual(1,len(records));self.assertEqual({"checklist_reviewed":False,"sarah_style_reviewed":False,"hil_scope_reviewed":False},records[0]["initial_state"]);self.assertEqual(records[0]["initial_state"],records[0]["review_state"])
+        style=records[0]["sarah_style_review"];self.assertFalse(style["passed"]);self.assertTrue(style["paragraph_sha256"]);self.assertEqual("sarah-voice-run25-v1",style["voice_contract_id"])
 
     def test_final_ledger_rejects_irrelevant_hil(self):
         with tempfile.TemporaryDirectory() as tmp:
             project=Path(tmp);(project/"01_arcs/A1/claims").mkdir(parents=True)
             (project/"01_arcs/A1/claims/C1.json").write_text(json.dumps({"id":"C1","claim":"x","hil":"HIL-06_security-coercion"}),encoding="utf-8")
             markdown="# T\n\nUn paragraphe. [claim:C1]\n";record=initialize_ledger(markdown)[0]
-            record["review_state"]={"checklist_reviewed":True,"sarah_style_reviewed":True,"hil_scope_reviewed":True};record["selected_hil_ids"]=["HIL-03_economy-infrastructure"];record["sarah_style_review"]={"passed":True,"evaluator":"bounded_llm","markers":["scope_precision","concrete_texture"],"notes":""}
+            paragraph="Un paragraphe. [claim:C1]"
+            record["review_state"]={"checklist_reviewed":True,"sarah_style_reviewed":True,"hil_scope_reviewed":True};record["selected_hil_ids"]=["HIL-03_economy-infrastructure"];record["sarah_style_review"]=passing_style_review(paragraph)
             errors=validate_review_ledger(project,markdown,[record]);self.assertTrue(any("irrelevant HIL" in e for e in errors))
 
     def test_complete_review_ledger_accepts_relevant_subset(self):
@@ -57,8 +73,17 @@ class Run26ReviewLedgerTests(unittest.TestCase):
             project=Path(tmp);(project/"01_arcs/A1/claims").mkdir(parents=True)
             (project/"01_arcs/A1/claims/C1.json").write_text(json.dumps({"id":"C1","claim":"x","hil_ids":["HIL-06_security-coercion","HIL-02_geography-environment"]}),encoding="utf-8")
             markdown="# T\n\nUn paragraphe. [claim:C1]\n";record=initialize_ledger(markdown)[0]
-            record["review_state"]={"checklist_reviewed":True,"sarah_style_reviewed":True,"hil_scope_reviewed":True};record["selected_hil_ids"]=["HIL-06_security-coercion"];record["sarah_style_review"]={"passed":True,"evaluator":"bounded_llm","markers":["scope_precision","concrete_texture"],"notes":""}
+            paragraph="Un paragraphe. [claim:C1]"
+            record["review_state"]={"checklist_reviewed":True,"sarah_style_reviewed":True,"hil_scope_reviewed":True};record["selected_hil_ids"]=["HIL-06_security-coercion"];record["sarah_style_review"]=passing_style_review(paragraph)
             self.assertEqual([],validate_review_ledger(project,markdown,[record]))
+
+    def test_ledger_rejects_stale_sarah_review_after_text_change(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            project=Path(tmp);(project/"01_arcs/A1/claims").mkdir(parents=True)
+            (project/"01_arcs/A1/claims/C1.json").write_text(json.dumps({"id":"C1","claim":"x"}),encoding="utf-8")
+            markdown="# T\n\nTexte réécrit. [claim:C1]\n";record=initialize_ledger(markdown)[0]
+            record["review_state"]={"checklist_reviewed":True,"sarah_style_reviewed":True,"hil_scope_reviewed":True};record["sarah_style_review"]=passing_style_review("Ancien texte. [claim:C1]")
+            errors=validate_review_ledger(project,markdown,[record]);self.assertTrue(any("paragraph hash is stale" in e for e in errors))
 
 
 class Run26SideStoryBoundaryTests(unittest.TestCase):
