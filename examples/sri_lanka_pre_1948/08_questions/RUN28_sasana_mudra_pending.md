@@ -1,28 +1,41 @@
-# Run28 — Sasana museum + mudra series: pending decisions
+# Run28 — Sasana museum + mudra series: reconciled pending decisions
 
-status: open
-promotion_gate: blocked
+status: partially_resolved
+promotion_gate: selective
+last_reviewed: 2026-08-27
 
-## Field identification
+## Closed / promoted
 
-1. **Exact museum / complex** — likely Kandy and possibly the same pedagogical complex as the Sasana panels, but the intake must not identify Asgiriya or another institution without direct confirmation.
-2. **Mudra image 4 (`1000033606.jpg`)** — Bhūmisparśa is only a visual hypothesis. Require an unobstructed plaque or equivalent direct evidence before naming the mudra.
-3. **Abhaya repetition (`1000033601`, `1000033600`, `1000033604`)** — determine whether these are three distinct statues or repeated views before treating them as three museum objects.
+1. **Mudra vocabulary** — promoted in bounded form as a wider South Asian/Buddhist iconographic vocabulary (`C-R28-A02C-MUDRA-VOCAB-001`). Exact photo-object identity remains a separate illustration gate.
+2. **Polonnaruwa reform / grammar link** — promoted through `C-R28-A04-SANGHA-REFORM-001`, `C-R28-A04-GRAMMAR-REFORM-001` and bridge `B-R28-POLONNARUWA-REFORM-GRAMMAR-001`.
+3. **Gadaladeniya 1344** — epigraphically bounded in `C-R28-A05C-GADALADENIYA-1344-001`.
+4. **Kotte literary flourishing** — promoted in bounded form as `C-R28-A05C-KOTTE-LITERARY-001`; this explicitly blocks a continuous-decline reading.
+5. **`wewai dāgäbai`** — promoted only as current/modern heritage discourse (`C-R28-A02B-WEWA-DAGABA-DISCOURSE-001`), not as evidence that the phrase itself is ancient.
+6. **1753 Syamopasampada** — Run28 fragment reuses the stronger existing `C-R23-KDY-SIAM-ORDINATION-001`; no duplicate claim.
+7. **Arc gap** — structurally resolved by `A05c_gampola_kotte_sitawaka_transition`.
+8. **Kataragama–Nallur bridge** — closed in Run29 with first-party endpoints plus scholarly bridge evidence: `C-R29-KDY-KATARAGAMA-DEVALAYA-001`, `C-R29-NALLUR-MURUGAN-001`, `B-R29-KATARAGAMA-NALLUR-001`.
+9. **Rajasinha I / Sitawaka** — promoted only in a bounded historiographic form (`C-R29-A05C-RAJASINHA-SRIPADA-001`): Saiva conversion / displacement at Sri Pada is supportable, while island-wide persecution remains unclosed.
 
-## Historical routing decisions
+## Still open — field/provenance gates
 
-4. **`wewai dāgäbai` / tank-and-dagoba panel** — retain as a field fragment and likely callback to the remembered “dagoba” item, but do not assert that it is the exact earlier memory without human confirmation. Research must also date/contextualize the expression before using it as evidence for ancient social organization.
-5. **Pali/Sanskrit literary decline** — route the photographed claim to **Sitawaka / post-Kotte**, not to Kotte itself. Kotte's companion panel explicitly presents a literary high point under Parakramabahu VI. The absolute phrase “completely lost” must be independently qualified before promotion.
-6. **Arc gap** — resolved structurally by shell `A05c_gampola_kotte_sitawaka_transition`. Kurunegala/Yapahuwa material remains primarily in `A05b_dry_zone_collapse_and_mobile_capitals`; Gampola/Kotte/Sitawaka material routes to A05c. The shell itself is not evidence.
+1. **Exact museum / complex** — do not identify Asgiriya or another institution without direct confirmation.
+2. **Mudra image 4 (`1000033606.jpg`)** — Bhūmisparśa remains a visual hypothesis pending unobstructed plaque/direct evidence.
+3. **Three Abhaya photographs** — distinct statues versus repeated views remains unresolved.
+4. **Mudra binaries / illustrations** — capture-only until repository-verifiable hashes, contract-complete metadata and human review exist.
+5. **1312 Senkadagala / Asgiriya lineage** — repeated museum panels are not independent corroboration; the '142nd descendant' genealogy remains tradition pending external closure.
 
-## Research before promotion
+## Still open — research gates
 
-7. **Mudra detour** — source a standard iconographic reference sufficient to support Namaskara, Dhyana, Abhaya, Vitarka, Dharmachakra and, only if image 4 is confirmed, Bhūmisparśa. Narrative guardrail: mudras are a wider South Asian/Buddhist iconographic vocabulary, not a Sinhala invention.
-8. **Meditation / avatar detour** — separately source the role of meditation in Buddhist and Shaiva traditions and the puranic tradition in which Buddha appears among Vishnu's avatars. Keep traditions and doctrinal variation explicit; no claim promotion from these museum panels.
-9. **“Red god” bridge** — test the proposed Kataragama/Skanda/Murugan bridge between Kandy Perahera's Kataragama Devalaya and Nallur Kandaswamy. Require primary/institutional sources for both ritual contexts before promotion.
-10. **Two Sasana ruptures** — research independently: (a) long Anuradhapura weakening versus specific Chola conquest milestones; (b) post-Kalinga-Magha monastic dispersal and the Asgiriya/Vipassana lineage claim. Museum panels are leads, not independent corroboration.
-11. **Internal corroboration warning** — two panels in the same pedagogical institution repeating a 1312 Senkadagala foundation date are not two independent historical sources. Treat them as two internal narrative lenses until external evidence is added.
+1. **Sitawaka literary decline** — the absolute museum wording that Pali/Sanskrit composition was 'completely lost' remains unpromoted. Research may support decline/reorientation, but not the current absolute statement.
+2. **Kotte transregional ordinations** — the panel compresses Siam/Cambodia/Burma connections; chronology requires separate independent closure.
+3. **Post-Kalinga-Magha monastic dispersal** — general political rupture is established elsewhere, but the specific Vipassana/Asgiriya lineage route via Yapahuwa remains a lineage tradition until independently sourced.
+4. **Meditation / Buddha-as-avatar comparator** — remains a separate comparative research candidate. It must distinguish Buddhist meditation, Shaiva yogic traditions and variable Puranic lists rather than imply doctrinal equivalence.
+5. **Anuradhapura long weakening versus Chola conquest milestones** — retain as a multi-causal chronology question; do not reduce the long transition to a single 'South Indian invasions' cause.
+
+## Graph consequence
+
+The graph now supports: Polonnaruwa reform -> grammatical production -> later mobile/recomposed centres (Gadaladeniya -> Kotte), then a bounded Sitawaka religious reconfiguration. No causal edge is asserted from Kotte literary flourishing to Sitawaka literary decline. The Kataragama–Nallur connection is a dezoom/ritual-identity bridge, not a direct institutional transmission claim.
 
 ## Promotion rule
 
-All Run28 fragments retain `promotes_to:""`. Illustrations retain `human_review.status:"pending"`. No reader-eligible claim, bridge or detour should be generated from Run28 until the relevant pending item is resolved and the sourcing gate passes.
+Promotion is fragment-specific. Resolved fragments may point to bounded claims/bridges; unresolved object identity, provenance, genealogy and absolute-decline statements remain blocked. No unresolved field photograph becomes `reader_eligible` without its dedicated illustration/human-review gate.
