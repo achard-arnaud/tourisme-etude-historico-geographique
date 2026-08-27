@@ -1,0 +1,58 @@
+[
+  {
+    "id":"MOYS-ANGAMPORA-CURRENT",
+    "title":"Angampora",
+    "url":"https://www.moys.gov.lk/our-sports-inner/157/Angampora",
+    "tier":"T2",
+    "anchor_role":"specialist institutional anchor",
+    "date":"current page, accessed 2026-08-27",
+    "author_or_institution":"Ministry of Youth & Sports, Sri Lanka",
+    "author_institution":"Ministry of Youth & Sports, Sri Lanka",
+    "scope":"Current institutional description of Angampora; angam hand-to-hand combat, illangam weapons, meditation and associated traditions",
+    "claims_supported":["C-R30-ANGAMPORA-SYSTEM-001"],
+    "limitations":"Useful for the current recognized practice and terminology, not for proving multi-millennial origin legends or exact colonial measures.",
+    "provenance":"direct"
+  },
+  {
+    "id":"CABINET-ANGAM-2019",
+    "title":"Preservation and Promotion of 'Angam Shilpa' — Cabinet decision 2019-03-06",
+    "url":"https://www.cabinetoffice.gov.lk/cab/index.php?Itemid=49&dID=9575&id=16&lang=en&option=com_content&view=article",
+    "tier":"T1",
+    "anchor_role":"canonical anchor",
+    "date":"2019-03-06",
+    "author_or_institution":"Cabinet Office, Government of Sri Lanka",
+    "author_institution":"Cabinet Office, Government of Sri Lanka",
+    "scope":"Cabinet approval to preserve/promote Angam Shilpa, annul what the decision describes as an 1817 British colonial Gazette ban, and recognize the art as national heritage",
+    "claims_supported":["C-R30-ANGAMPORA-HERITAGE-001"],
+    "limitations":"Primary evidence for a 2019 government decision and its stated historical framing; it is not itself the alleged 1817 Gazette and therefore does not independently prove the original ban text or penalties.",
+    "provenance":"direct"
+  },
+  {
+    "id":"CABINET-ANGAM-2022",
+    "title":"Conservation and Promotion of Angam Martial Art — Cabinet decision 2022-06-13",
+    "url":"https://www.cabinetoffice.gov.lk/cab/index.php?Itemid=49&dID=11611&id=16&lang=en&option=com_content&view=article",
+    "tier":"T1",
+    "anchor_role":"canonical anchor",
+    "date":"2022-06-13",
+    "author_or_institution":"Cabinet Office, Government of Sri Lanka",
+    "author_institution":"Cabinet Office, Government of Sri Lanka",
+    "scope":"Cabinet records that the 2019 approval to lift the claimed colonial ban had not yet produced the relevant Gazette and again approves publication in order to conserve/protect Angampora",
+    "claims_supported":["C-R30-ANGAMPORA-HERITAGE-001"],
+    "limitations":"Strong evidence for current state policy and public-memory framing; still not a facsimile or archival citation of the alleged 1817 ban.",
+    "provenance":"direct"
+  },
+  {
+    "id":"DOYLY-KANDYAN-CONSTITUTION-1833",
+    "title":"A Sketch of the Constitution of the Kandyan Kingdom",
+    "url":"https://www.cambridge.org/core/journals/transactions-of-the-royal-asiatic-society-of-great-britain-and-ireland/article/abs/xa-sketch-of-the-constitution-of-the-kandyan-kingdom/04D82050CC8FDD1D42649128CA6C59B7",
+    "tier":"T1",
+    "anchor_role":"canonical anchor",
+    "date":"1833; based on D'Oyly's account of the late Kandyan government",
+    "author_or_institution":"John D'Oyly / Royal Asiatic Society",
+    "author_institution":"Royal Asiatic Society",
+    "scope":"Contemporary-near account of Kandyan court and administrative institutions; contextual anchor for the organized martial culture of the late kingdom",
+    "claims_supported":[],
+    "limitations":"Retained as contextual anchor only in this run. No Angampora-specific proposition is promoted from it without a directly located passage.",
+    "provenance":"direct"
+  }
+]
