@@ -2,10 +2,13 @@
 """Two-stage return-target resolution for side stories.
 
 Stage 1 is deterministic: explicit marker or literal anchor.
-Stage 2 is research-backed: if an ID has no marker, the agent must create a
-research resolution from independent web sources. A supported proposition must
-then be bound to an explicit paragraph anchor and materialised as a hidden marker;
-a challenged proposition must be redirected or the side story retired.
+Stage 2 is research-backed: if an ID has no marker, the agent researches the
+historical proposition behind that return. Research may support, challenge or
+redirect the proposition. Closure requires sufficient evidence: normally an
+independent qualified consensus, or a directly probative authoritative source
+for a narrow proposition. A supported proposition is then bound to an explicit
+paragraph anchor and materialised as a hidden marker; a challenged proposition
+must be redirected or the side story retired.
 
 The renderer never searches the web and never guesses semantically.
 """
@@ -23,6 +26,7 @@ TARGET_MARKER = re.compile(r"\[(claim|bridge|arc):([^\]]+)\]", re.I)
 ID_LIKE = re.compile(r"^[A-Z][A-Z0-9]*-[A-Z0-9-]+$", re.I)
 VALID_VERDICTS = {"supported", "challenged", "redirected"}
 QUALIFIED_ROLES = {"primary", "official_archive", "peer_reviewed", "academic_monograph", "specialist_institution"}
+DIRECT_AUTHORITY_ROLES = {"primary", "official_archive", "specialist_institution"}
 FINAL_STORY_STATUSES = {"validated", "promoted"}
 
 
@@ -81,6 +85,22 @@ def _independent_source_families(record: dict[str, Any]) -> set[str]:
     return families
 
 
+def _authoritative_direct_proof(sources: list[dict[str, Any]]) -> bool:
+    """Allow one source only when it directly proves a narrow proposition.
+
+    This is deliberately stricter than simply labelling a source 'official': the
+    research record must explicitly state that the source directly closes the
+    proposition and that its scope is a direct fit. Interpretive/general claims
+    therefore still need independent-source consensus.
+    """
+    return any(
+        source.get("role") in DIRECT_AUTHORITY_ROLES
+        and source.get("directly_closes_proposition") is True
+        and source.get("scope_fit") == "direct"
+        for source in sources
+    )
+
+
 def validate_research_resolution(record: dict[str, Any]) -> list[str]:
     """Validate evidence sufficiency, not historical truth itself."""
     errors: list[str] = []
@@ -90,8 +110,13 @@ def validate_research_resolution(record: dict[str, Any]) -> list[str]:
     sources = [s for s in (record.get("sources") or []) if isinstance(s, dict)]
     qualified = [s for s in sources if s.get("role") in QUALIFIED_ROLES]
     families = _independent_source_families({"sources": qualified})
-    if len(qualified) < 2 or len(families) < 2:
-        errors.append("research closure requires at least two independent qualified source families")
+    consensus_sufficient = len(qualified) >= 2 and len(families) >= 2
+    direct_proof_sufficient = _authoritative_direct_proof(qualified)
+    if not (consensus_sufficient or direct_proof_sufficient):
+        errors.append(
+            "research closure requires sufficient evidence: either two independent qualified source families "
+            "or one authoritative source explicitly marked as directly closing a narrow proposition with direct scope fit"
+        )
     if not str(record.get("target_id") or "").strip():
         errors.append("target_id required")
     if not str(record.get("proposition") or "").strip():
