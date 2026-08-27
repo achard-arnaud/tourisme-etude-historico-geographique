@@ -1,0 +1,16 @@
+{
+  "id":"B-R28-POLONNARUWA-REFORM-GRAMMAR-001",
+  "from_claim":"C-R28-A04-SANGHA-REFORM-001",
+  "to_claim":"C-R28-A04-GRAMMAR-REFORM-001",
+  "question":"Can the monastic reform documented epigraphically under Parakramabahu I be connected to the unusually productive grammatical and Pali intellectual programme of the same reform era?",
+  "mechanism":"Institutional unification and discipline created a reformed scholarly community in which textual standardisation and new grammatical tools could help reproduce a shared learned tradition; Gornall's intellectual history treats grammar as part of that reform process rather than an unrelated courtly by-product.",
+  "result":"B",
+  "source_ids":["SIDDHAM-GAL-VIHARA-2020","GORNALL-REWRITING-BUDDHISM-2020"],
+  "transmission_channel":"monastic regulation, scholarly training, textual standardisation and teacher-pupil lineages",
+  "time_lag":"contemporaneous to multi-decade within the 1157-1270 reform era",
+  "scale":"Z1 institutional reform to Z2 intellectual network",
+  "confounders":["survival bias in manuscripts","later attribution of texts","political instability rather than stability as an alternative stimulus","royal reform rhetoric versus lived monastic practice"],
+  "transportability":"mechanism",
+  "integration_action":"bridge",
+  "bounded_by":"Supports a reform-to-textual-production mechanism, not a deterministic claim that royal regulation directly caused each grammar or that all Pali scholarship depended on one institutional centre."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version":"1.2",
+  "class":"side_story",
+  "id":"SS-R28-MOBILE-CENTRES-ANALYTICAL-001",
+  "kind":"analytical_focus",
+  "status":"candidate",
+  "arc":"A05c_gampola_kotte_sitawaka_transition",
+  "zoom":"Z2",
+  "map_eligible":true,
+  "title":"Après Polonnaruwa : déclin ou déplacement des centres ?",
+  "purpose":"Prevent the mobile-capitals sequence from being narrated as one uninterrupted intellectual collapse by contrasting institutional rupture with relocation and renewed patronage.",
+  "lineage":{"claim_ids":["C-R28-A04-GRAMMAR-REFORM-001","C-R28-A05C-GADALADENIYA-1344-001","C-R28-A05C-KOTTE-LITERARY-001"],"source_ids":["GORNALL-REWRITING-BUDDHISM-2020","SIDDHAM-GADALADENIYA-2020","KELANIYA-KOTTE-SANDESHA-2024","KOTTE-MC-HISTORY"],"bridge_ids":["B-R28-POLONNARUWA-REFORM-GRAMMAR-001"],"hil_ids":["HIL-01_institutions-chronology","HIL-05_religion-culture-legitimacy"],"drift_paths":[],"origin_paths":["00_method/capture/run28_sasana_museum_fragments.json"]},
+  "analysis":{
+    "core_question":"Does the post-Polonnaruwa movement of capitals amount to a continuous collapse of Buddhist learning, or does the evidence show recurrent relocation and reconstruction of scholarly institutions?",
+    "thesis":"The evidence better supports discontinuous recomposition: political centres move and institutions are disrupted, yet monastic patronage and literary production reappear in new centres; Kotte is therefore a high point before the distinct Sitawaka/Portuguese-era rupture rather than part of one long decline.",
+    "contrast":[
+      {"label":"Continuous decline","position":"Loss of Rajarata and repeated invasions progressively erode the old institutional landscape.","caveat":"This captures real rupture but cannot explain the 1344 Gadaladeniya foundation or Kotte's documented literary density."},
+      {"label":"Mobile recomposition","position":"Monastic and literary capacity relocates with courts, temples, pirivenas and transregional networks.","caveat":"Recomposition does not imply unchanged capacity, uninterrupted lineages or equal strength in every intermediate kingdom."}
+    ],
+    "mechanisms":[
+      {"name":"institutional portability","explanation":"Patronage and monastic authority can be rebuilt around new shrines and capitals after territorial rupture.","evidence_status":"verified"},
+      {"name":"scholarly network reproduction","explanation":"Grammar, pirivena education and literary lineages reproduce learned culture through teachers, texts and new centres rather than one fixed capital.","evidence_status":"verified"},
+      {"name":"Sitawaka rupture","explanation":"The museum attributes later literary disruption and loss of Pali/Sanskrit composition to Portuguese-era violence and Sitawaka conditions, but the strongest wording still lacks adequate independent closure.","evidence_status":"unknown"}
+    ],
+    "callbacks":[
+      {"target":"C-R28-A05C-KOTTE-LITERARY-001","relation":"Use Kotte as the falsifier of a simple centuries-long intellectual decline."},
+      {"target":"GF-LIT-08","relation":"Return to Sitawaka as a separate research question rather than projecting its decline backwards into Kotte."}
+    ]
+  },
+  "visual":{"format":"one_or_two_pager","orientation":"A4_landscape","layout":"historical_focus","evidence_palette":{"verified":"green","inference":"orange","unknown":"red"},"composition":["hero_question","contrast_cards","mechanism_band","callback_strip"]},
+  "content":{"takeaway":"The useful narrative is not a straight fall from Polonnaruwa to Kandy: institutions repeatedly lose their old centre, then reassemble elsewhere; the timing and severity of each rupture must be tested separately."},
+  "placement":{"section_anchor":"","return_to":"C-R28-A05C-KOTTE-LITERARY-001"},
+  "render":{"required_in_reader":false,"label":"Focus analytique","marker":"[SIDE-STORY:SS-R28-MOBILE-CENTRES-ANALYTICAL-001]"}
+}

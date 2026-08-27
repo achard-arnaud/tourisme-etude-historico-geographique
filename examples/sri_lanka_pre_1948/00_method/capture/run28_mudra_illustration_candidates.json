@@ -1,0 +1,10 @@
+{
+  "status": "capture_only",
+  "reason": "The eight external photo binaries are not available through the connector, so repository-valid sha256 values cannot be established. These descriptors must not enter 09_output/illustrations until hashes and human review are available.",
+  "asset_refs": ["1000033599.jpg","1000033602.jpg","1000033601.jpg","1000033606.jpg","1000033600.jpg","1000033605.jpg","1000033603.jpg","1000033604.jpg"],
+  "fragment_ids": ["GF-MUDRA-01","GF-MUDRA-02","GF-MUDRA-03","GF-MUDRA-04","GF-MUDRA-05","GF-MUDRA-06","GF-MUDRA-07","GF-MUDRA-08"],
+  "human_review": "pending",
+  "location": "Kandy, Sri Lanka — exact museum pending",
+  "binary_status": "external_only",
+  "promotion_gate": "binary hash + contract-complete vision metadata + human review"
+}
