@@ -7,6 +7,18 @@ description: Use when validated historical evidence must become a reader-facing 
 
 This file is an **orchestrator**, not a prose prompt. Detailed rules live in versioned references and executable scripts. If prose here conflicts with a script/schema/test, the executable contract wins until the inconsistency is resolved.
 
+## Part 0 — Sarah voice constitution is outside runtime
+
+Sarah's voice is a **design-time artefact**, not a runtime search task. The only runtime source of truth is:
+
+`references/sarah_voice_markers.md`
+
+Generation and paragraph review must never recollect, infer, expand or “improve” Sarah's voice from conversation context, memories, LinkedIn conventions or adjacent skills. A voice revision requires an explicit Part 0 exercise, a new contract version and a new hash.
+
+The intended primary source for a future Part 0 revision is an exported memory from the other assistant Sarah uses for writing, imported as data. That primary source is currently marked `not_imported` in the frozen contract. Runtime must not pretend it has been read. The current contract is therefore explicitly frozen from the user-provided Run 25 specification and nothing else.
+
+The stop criterion is discriminative, not quantitative: retain only markers that help distinguish Sarah-like prose from generic well-written prose. Do not pad the contract with vague style adjectives.
+
 ## Inputs
 
 Required structured inputs:
@@ -45,7 +57,7 @@ Historical nonfiction invariants:
 - direct evidentiary insertion keeps hidden `[claim:<id>]` lineage;
 - prefer an active callback over reopening the same evidence repeatedly.
 
-Frontstage voice is defined in `references/narrative_voice_sarah.md`. Production language — runs, versions, HIL IDs, baseline/delta, lineage or drafting instructions — never appears in reader prose.
+Frontstage voice comes only from `references/sarah_voice_markers.md`. The distinctive priorities are: exact scope before ease, lived opening + callback when field material exists, and methodological rigor compressed into the sentence instead of moved into meta-commentary. Production language — runs, versions, HIL IDs, baseline/delta, lineage or drafting instructions — never appears in reader prose.
 
 ### S3 — review paragraph
 
@@ -57,9 +69,14 @@ Every review starts with:
 {"checklist_reviewed":false,"sarah_style_reviewed":false,"hil_scope_reviewed":false}
 ```
 
-A flag becomes `true` only after its own gate passes. All three must be true before the paragraph can enter the final manuscript. Any violation means full-paragraph rewrite and a fresh all-false state.
+A flag becomes `true` only after its own gate passes. All three must be true before the paragraph can enter the final manuscript. Any rewrite means a fresh all-false state.
 
-Executable/details: `references/paragraph_review_checklist.md`.
+The Sarah gate is **independent from generation**. It must record distinct generation/review pass IDs and context IDs, bind the review to the exact paragraph hash, bind it to the exact frozen voice-contract hash, and leave paragraph-specific verdicts per applicable marker. `passed=true` plus a list of marker names is not a valid review.
+
+Executable contracts:
+- `references/paragraph_review_checklist.md`;
+- `references/sarah_voice_markers.md`;
+- `scripts/sarah_voice_contract.py`.
 
 ### S4 — compose side stories and recaps
 
@@ -100,13 +117,15 @@ For iterative advanced readers, baseline retention remains a hard content-preser
 ## References
 
 - `references/paragraph_review_checklist.md` — exact review transitions and fixtures.
-- `references/narrative_voice_sarah.md` — voice markers and non-transferable social-format habits.
+- `references/sarah_voice_markers.md` — frozen Sarah voice contract; no runtime recollection.
+- `references/narrative_voice_sarah.md` — deprecated compatibility pointer only.
 - `templates/storytelling/child_10_plus.md` — child decomposition; complexity is staged, not deleted.
 
 ## Stop conditions
 
 Do not export as final if any of these is true:
 - a paragraph review state is incomplete;
+- Sarah review is stale, self-certified in the generation pass, bound to another paragraph, or bound to another voice-contract hash;
 - selected HIL contains a dimension unsupported by a claim used in that paragraph;
 - a required side story/recap/illustration is missing;
 - a side-story block has no deterministic visual boundary;
