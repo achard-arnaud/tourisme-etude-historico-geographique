@@ -391,8 +391,9 @@ def build_packets(project: Path, output: Path, mode: str="iterative", journal: P
         packet["counts"]["persisted_claims"]=packet["counts"]["claims"]
         packet["counts"]["legacy_virtual_claims"]=len(items)
         if items:
+            # Top-level claims and evidence.claims intentionally share the same list.
+            # Extend once so a virtual legacy statement cannot be duplicated.
             packet["claims"].extend(items)
-            packet["evidence"]["claims"].extend(items)
             packet["evidence"]["legacy_fragments"]=items
             packet["legacy_fragments"]=items
             packet["counts"]["claims"]=len(packet["claims"])
