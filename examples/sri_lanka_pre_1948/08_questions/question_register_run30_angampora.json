@@ -2,11 +2,12 @@
   {
     "id":"Q-R30-ANGAMPORA-BAN-001",
     "question":"Existe-t-il un fac-similé, une référence archivistique contemporaine ou une Gazette de 1817 démontrant l'interdiction britannique de l'Angampora et ses sanctions exactes ?",
+    "kind":"epistemic",
     "status":"open",
-    "priority":"high",
+    "priority":1,
+    "discriminating_test":"Retrouver un document colonial contemporain daté et identifiable qui nomme l'Angampora/Angam Shilpa ou décrit sans ambiguïté la pratique visée, puis comparer son texte aux formulations modernes sur l'interdiction et les sanctions ; à défaut, dater la première apparition documentable du récit moderne.",
+    "falsifier":"Une recherche archivistique suffisamment large qui ne retrouve aucun texte contemporain correspondant, accompagnée de sources qualifiées montrant que le récit précis de la Gazette de 1817 et des tirs aux genoux apparaît seulement tardivement, contraindrait à traiter ces détails comme mémoire postcoloniale non établie plutôt que comme décret historiquement fermé.",
     "why_it_matters":"Le récit de l'interdiction est central dans la mémoire contemporaine de l'Angampora mais il est souvent répété avec des détails spectaculaires sans citation primaire accessible.",
-    "gate":"primary_source_or_two_independent_qualified_sources",
-    "falsifier":"Une recherche exhaustive des gazettes/archives de 1817-1818 qui ne trouve aucun texte Angampora, combinée à une explication documentée montrant que le récit apparaît seulement dans des sources tardives, contraindrait à traiter l'interdiction comme mémoire postcoloniale plutôt que comme décret établi.",
     "current_evidence":"Les décisions officielles du Cabinet de 2019 et 2022 reprennent l'existence d'une interdiction coloniale ; elles ne citent pas ni ne reproduisent le texte de 1817. Le corpus Run30 ne promeut donc ni la Gazette de 1817 ni la sanction des tirs aux genoux comme faits historiques.",
     "related_claim_ids":["C-R30-ANGAMPORA-HERITAGE-001"],
     "related_source_ids":["CABINET-ANGAM-2019","CABINET-ANGAM-2022"]
