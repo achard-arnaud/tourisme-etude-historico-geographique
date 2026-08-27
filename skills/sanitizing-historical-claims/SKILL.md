@@ -46,4 +46,4 @@ One typed statement per new input fragment, each ready to become a `templates/cl
 
 Legacy fragments are the exception: they remain capture records and are exposed as virtual claim-like statements only at drafting time.
 
-See also: `SKILL.md` orchestration step 2; `composing-side-stories`; `docs/skill_workflow_index.md`; `docs/RUN32_LEGACY_FRAGMENT_BYPASS.md`.
+See also: `SKILL.md` orchestration step 2; `composing-side-stories`; `docs/skill_workflow_index.md`; `docs/LEGACY_FRAGMENT_BYPASS.md`.
