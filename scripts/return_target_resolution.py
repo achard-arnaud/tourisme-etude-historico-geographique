@@ -43,16 +43,25 @@ def marker_for(target_id: str) -> str:
     return f"[arc:{target_id}]"
 
 
+def _lexical_anchor(value: str) -> str:
+    """Normalize presentation markup only; never fuzzy-match or paraphrase an anchor."""
+    value = TARGET_MARKER.sub("", value or "")
+    value = re.sub(r"<!--.*?-->", " ", value, flags=re.S)
+    value = re.sub(r"[*_`]", "", value)
+    value = re.sub(r"\[([^\]]+)\]\([^\)]+\)", r"\1", value)
+    return re.sub(r"\s+", " ", value).strip().casefold()
+
+
 def resolve_return_to(return_to: str | None, canonical_markdown: str) -> ReturnResolution:
     if not return_to:
         return ReturnResolution("none", "")
     if return_to.startswith("anchor:"):
         anchor = return_to.split(":", 1)[1].strip()
-        if anchor and anchor.casefold() in canonical_markdown.casefold():
+        if anchor and _lexical_anchor(anchor) in _lexical_anchor(canonical_markdown):
             return ReturnResolution("resolved_anchor", return_to, paragraph_anchor=anchor)
         return ReturnResolution("needs_research", return_to, reason="literal anchor absent from canonical manuscript")
     if not ID_LIKE.match(return_to):
-        if return_to.casefold() in canonical_markdown.casefold():
+        if _lexical_anchor(return_to) in _lexical_anchor(canonical_markdown):
             return ReturnResolution("resolved_anchor", return_to, paragraph_anchor=return_to)
         return ReturnResolution("needs_research", return_to, reason="unresolved non-ID return target")
     marker = marker_for(return_to)
@@ -73,13 +82,7 @@ def _independent_source_families(record: dict[str, Any]) -> set[str]:
 
 
 def validate_research_resolution(record: dict[str, Any]) -> list[str]:
-    """Validate evidence sufficiency, not historical truth itself.
-
-    Minimum closure is two independent qualified source families. The semantic research
-    pass must still decide whether the proposition is supported, challenged or should be
-    redirected; the deterministic layer only verifies that this decision has enough
-    independent evidence and a concrete follow-up action.
-    """
+    """Validate evidence sufficiency, not historical truth itself."""
     errors: list[str] = []
     verdict = record.get("verdict")
     if verdict not in VALID_VERDICTS:
@@ -93,12 +96,10 @@ def validate_research_resolution(record: dict[str, Any]) -> list[str]:
         errors.append("target_id required")
     if not str(record.get("proposition") or "").strip():
         errors.append("proposition required")
-    if verdict == "supported":
-        if not str(record.get("paragraph_anchor") or "").strip():
-            errors.append("supported resolution requires paragraph_anchor for marker materialisation")
-    if verdict in {"challenged", "redirected"}:
-        if not (record.get("replacement_return_to") or record.get("action") == "retire_side_story"):
-            errors.append("challenged/redirected resolution requires replacement_return_to or retire_side_story")
+    if verdict == "supported" and not str(record.get("paragraph_anchor") or "").strip():
+        errors.append("supported resolution requires paragraph_anchor for marker materialisation")
+    if verdict in {"challenged", "redirected"} and not (record.get("replacement_return_to") or record.get("action") == "retire_side_story"):
+        errors.append("challenged/redirected resolution requires replacement_return_to or retire_side_story")
     return errors
 
 
@@ -113,10 +114,11 @@ def materialize_supported_marker(markdown: str, record: dict[str, Any]) -> str:
     if marker in markdown:
         return markdown
     anchor = str(record["paragraph_anchor"]).strip()
+    normalized_anchor = _lexical_anchor(anchor)
     blocks = re.split(r"(\n\s*\n)", markdown)
     for i in range(0, len(blocks), 2):
         block = blocks[i]
-        if anchor.casefold() in block.casefold():
+        if normalized_anchor and normalized_anchor in _lexical_anchor(block):
             blocks[i] = block.rstrip() + f" {marker}"
             return "".join(blocks)
     raise ValueError(f"paragraph_anchor not found for {target_id}: {anchor}")
@@ -145,12 +147,7 @@ def load_project_research_records(project: Path) -> list[dict[str, Any]]:
 
 
 def apply_project_research_resolutions(project: Path, markdown: str) -> tuple[str, dict[str, Any]]:
-    """Materialise only supported research resolutions as hidden canonical markers.
-
-    Challenged/redirected records are evidence that the original return must change; they
-    never create the original marker. Therefore an unchanged required side story will
-    still fail `validate_required_return_targets` below.
-    """
+    """Materialise only supported research resolutions as hidden canonical markers."""
     applied: list[str] = []
     challenged: list[str] = []
     errors: list[str] = []
