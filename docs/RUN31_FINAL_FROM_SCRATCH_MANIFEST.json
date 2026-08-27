@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "run": "31",
+  "run_id": "RUN31",
+  "mode": "from_scratch_final",
+  "state_before": "main@7dc9d8c4f20d3e08ae395eabf0c4ba826bd73e59 with the structured corpus and regenerated Run26-style drafting packets; no Run31 reader artifact was canonical in the repository",
+  "state_after": "Run31 from-scratch reader outputs generated and QA-reviewed outside the repository; hashes and coverage recorded in this manifest; reader binaries/prose were not promoted as canonical repository outputs",
+  "promotion_decision": "record_outputs_only_not_canonical_reader",
+  "generated_from": {
+    "branch_base": "main",
+    "base_commit": "7dc9d8c4f20d3e08ae395eabf0c4ba826bd73e59",
+    "reader_prose_reused": false,
+    "structured_inputs": "Run26-style from-scratch packets regenerated from current structured corpus"
+  },
+  "coverage": {
+    "claims_total": 181,
+    "claims_accounted_for": 181,
+    "pre_1948_claims": 83,
+    "post_1948_claims": 98,
+    "side_stories_unique": 64,
+    "illustrations_kandy_bahirawakanda": 10
+  },
+  "reader_outputs": [
+    {
+      "project": "sri_lanka_pre_1948",
+      "markdown": {
+        "name": "Sri_Lanka_pre_1948_FINAL_from_scratch.md",
+        "size_bytes": 153379,
+        "sha256": "a73468d835554dcae77f7b99d680902b67f41fb3fc6da85278b97ab9ba689ae5"
+      },
+      "docx": {
+        "name": "Sri_Lanka_pre_1948_FINAL_from_scratch.docx",
+        "size_bytes": 91796,
+        "sha256": "1a90b22db20c513859a0b738bf2ae17f2922723513393ccff81660244b05a360"
+      },
+      "pdf": {
+        "name": "Sri_Lanka_pre_1948_FINAL_from_scratch.pdf",
+        "size_bytes": 462306,
+        "sha256": "e4f214e9a974a1c25d16774c2a87250559e5ac8e7679e55b4dc0a1be7dce3933"
+      },
+      "reader_pages_pdf": 47
+    },
+    {
+      "project": "sri_lanka_post_1948",
+      "markdown": {
+        "name": "Sri_Lanka_post_1948_FINAL_from_scratch.md",
+        "size_bytes": 139788,
+        "sha256": "2df89c714170c466cf4987b1f4c078a27f3f13088282bd19bc0b0dcb4fb71010"
+      },
+      "docx": {
+        "name": "Sri_Lanka_post_1948_FINAL_from_scratch.docx",
+        "size_bytes": 86894,
+        "sha256": "08858df48fc64d49475b2f406d746ec76d62448d8af8faab7ddfc19a5e168586"
+      },
+      "pdf": {
+        "name": "Sri_Lanka_post_1948_FINAL_from_scratch.pdf",
+        "size_bytes": 433354,
+        "sha256": "99c49e0d90a13a0d208a5560cc2196c3b1368d107a9ee4fb532a2b58de070f1a"
+      },
+      "reader_pages_pdf": 44
+    }
+  ],
+  "qa": {
+    "visual_render_review": "passed",
+    "claim_conservation": "181/181",
+    "uncertainty_preserved": true,
+    "discarded_leads_not_silently_promoted": true,
+    "binary_identity": "sha256 recorded above"
+  }
+}
