@@ -18,6 +18,13 @@ SOURCES=[
     {"url":"https://archive.example/a","role":"official_archive","independence_family":"Archive A"},
     {"url":"https://journal.example/b","role":"peer_reviewed","independence_family":"Journal B"},
 ]
+DIRECT_SOURCE={
+    "url":"https://archive.example/direct",
+    "role":"official_archive",
+    "independence_family":"Archive Direct",
+    "directly_closes_proposition":True,
+    "scope_fit":"direct",
+}
 
 
 class Run27ReturnResolutionUnitTests(unittest.TestCase):
@@ -31,11 +38,15 @@ class Run27ReturnResolutionUnitTests(unittest.TestCase):
         result=resolve_return_to("C-X",md)
         self.assertEqual("needs_research",result.status)
 
-    def test_one_source_is_insufficient_research_closure(self):
+    def test_one_generic_qualified_source_is_insufficient(self):
         record={"target_id":"C-X","proposition":"x","verdict":"supported","paragraph_anchor":"Phrase","sources":SOURCES[:1]}
         self.assertTrue(validate_research_resolution(record))
 
-    def test_two_independent_qualified_sources_close_research(self):
+    def test_one_authoritative_direct_source_can_close_narrow_proposition(self):
+        record={"target_id":"C-X","proposition":"x","verdict":"supported","paragraph_anchor":"Phrase","sources":[DIRECT_SOURCE]}
+        self.assertEqual([],validate_research_resolution(record))
+
+    def test_two_independent_qualified_sources_close_by_consensus(self):
         record={"target_id":"C-X","proposition":"x","verdict":"supported","paragraph_anchor":"Phrase","sources":SOURCES}
         self.assertEqual([],validate_research_resolution(record))
 
