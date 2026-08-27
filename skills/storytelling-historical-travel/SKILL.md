@@ -1,158 +1,160 @@
 ---
 name: storytelling-historical-travel
-description: Use when validated historical evidence must become a reader-facing narrative without changing evidence, composition or uncertainty contracts.
+description: Use when validated historical evidence must become a reader-facing narrative without changing evidence, reader-scaffold or uncertainty contracts.
 ---
 
 # Storytelling historical travel
 
-This file is an **orchestrator**, not a prose prompt. Detailed rules live in versioned references and executable scripts. If prose here conflicts with a script/schema/test, the executable contract wins until the inconsistency is resolved.
+This file is an **orchestrator**, not a prose prompt. Executable contracts win over prose if they conflict.
 
-## Part 0 — Sarah voice constitution is outside runtime
+## Core architecture — one composition engine, two bootstraps
 
-Sarah's voice is a design-time artefact. Runtime source of truth: `references/sarah_voice_markers.md`. Generation and review must not recollect or invent additional voice rules from conversation context.
+Run32 removes the false split between an “iterative writer” and a “from-scratch writer”. At least 80% of the pipeline is shared.
 
-## Inputs
+### Shared composition layers
 
-Required structured inputs:
-- canonical scaffold / chronological manuscript structure;
-- claims and arc contracts under `01_arcs/` as evidence spine, not prose units;
-- capture/input fragments as narrative material when lineage permits;
-- HIL links under claims/composition records;
-- bridges under `06_bridges/` as transition instructions;
-- source registers;
-- reader profile / reader plan;
-- eligible side-story, recap, illustration and map artefacts.
+1. **Reader scaffold — authoritative editorial topology**
+   - ordered parts, chapters, subsections and inline side-story slots;
+   - imported from an approved reader DOCX when a human scaffold exists;
+   - never rebuilt by sorting evidence arcs alphabetically;
+   - `reader_scaffold.json` controls *where* prose belongs.
 
-Reader modes: **advanced**, **intermediate**, **child 10+**. For advanced work there is no maximum length; use a **content-preservation gate** and exhaustive dispositions instead of compression by budget.
+2. **Evidence control plane**
+   - claims, bridges, questions, source registers, uncertainty and HIL;
+   - claims are an **ossature / contract**, not the prose unit;
+   - bridge records are relationship instructions, not paragraphs.
 
-Reader-facing prose must use normal source references only. Claim IDs, bridge IDs, legacy types, HIL IDs and other production metadata remain hidden backstage.
+3. **Narrative material plane**
+   - all relevant capture/field fragments, including candidate-arc fragments not yet referenced by a claim;
+   - preserved archived intakes when relevant to the arc;
+   - side-story body material, recaps and approved illustration interpretation;
+   - source-attested texture is preferred over claim paraphrase.
 
-## State machine
+4. **Draft / review / repair**
+   - draft into the reader scaffold;
+   - source-attested fact or observed texture before mechanism;
+   - preserve scope and uncertainty;
+   - paragraph review and repair remain common to both modes.
 
-### S0 — choose generation mode
+5. **Composition**
+   - side stories are inserted **inside the chronological trunk at their reader anchor**;
+   - no end-of-book side-story gallery unless an apparatus is explicitly defined as such;
+   - new inline stories must be narratively substantial enough to justify leaving the trunk.
 
-The two modes share the same composition engine. The difference is only the bootstrap state.
+6. **Frontstage**
+   - reader prose contains simple source citations;
+   - `[claim:<id>]`, bridge IDs, machine HIL identifiers (for example `HIL-01_institutions-chronology`), run IDs and lineage remain backstage; reader-facing HIL display labels such as `HIL-01` may remain when the approved scaffold uses them;
+   - a separate ledger binds paragraphs to claims/sources.
 
-`iterative` — **default/main writing mode**: start from the current canonical manuscript/scaffold and its append-only construction journal. Preserve chronology, section placement, existing side stories, density and useful narrative texture; apply bounded additions/rewrites.
+### The only mode-specific layer: bootstrap
 
-`from_scratch` — bootstrap an empty manuscript from the structured topology, but then use the same drafting packets, placement rules, side-story composition and QA. Previous reader prose remains forbidden as generation input for this mode.
+`iterative`
+- load the approved canonical manuscript and append-only construction journal;
+- preserve the approved reader scaffold;
+- apply bounded, chronologically placed deltas;
+- retention against the baseline is a hard concern.
 
-Both modes use `scripts/build_drafting_packets.py`. The legacy-fragment overlay is shared by both modes.
+`from_scratch`
+- load **no previous reader prose**;
+- use the same reader scaffold topology where one is approved;
+- use the same evidence/material packets and the same drafting/review/composition engine;
+- the packet manifest must report `reader_prose_loaded=false`.
 
-### S1 — bounded drafting context
+Executable entry point:
 
-Global pass: scaffold headings, chronology, IDs, topology and counts only.
+`python scripts/build_drafting_packets.py --project <project> --mode iterative|from_scratch`
 
-Draft pass: one chronological section/arc packet + adjacent bridge endpoints + relevant input fragments + paragraph-relevant composition records. Claims define what must remain true and sourced; **fragments/inputs provide the richer material from which prose is written**.
+Compatibility:
 
-A claim is an evidence skeleton, not a target paragraph. Do not paraphrase claim records one after another to manufacture a chapter.
+`python scripts/build_from_scratch_packets.py --project <project>`
 
-`legacy_fragment` virtual statements are a finite migration bypass for explicitly allowlisted old, unsourced fragments. They may preserve/reposition old narrative or seed research, but cannot establish a new fact or satisfy a sourcing gate.
+## Input priority for prose generation
 
-HIL is relevance-driven, not quota-driven. Use only dimensions supported by evidence actually used in the paragraph.
+When constructing a paragraph, use this order:
 
-### S2 — draft one paragraph or one side story in place
+1. source-attested fragments / field material;
+2. relevant archived intake as a **research/narrative prompt only**, never as evidence by itself;
+3. source records and quotations/notes within allowed scope;
+4. claim canonical points and uncertainty as a control check;
+5. bridge relation for causal stitching.
 
-Historical nonfiction invariants:
-- source-attested fact/action before mechanism and consequence;
-- preserve scope and uncertainty;
-- no invented dialogue, thoughts, motives, composite characters, sensory facts or false suspense;
-- retain concrete field/input texture when available;
-- keep claim/fragment lineage backstage, never in final prose;
-- cite simple reader-facing sources, not claim IDs;
-- prefer callbacks over repetitive reopening of the same evidence.
+Never turn a short claim into the maximum amount of prose available. A short claim can control a paragraph supported by several richer fragments and sources.
 
-Side stories are not a gallery or appendix by default. They must be drafted at the chronological/causal point where the excursion pays off, then return explicitly to the trunk. Their length is determined by explanatory value, not by a fixed mini-card budget.
+### Legacy-fragment migration bypass
 
-Production language — runs, versions, HIL IDs, baseline/delta, lineage, claim IDs, bridge IDs, `legacy_fragment` or drafting instructions — never appears in reader prose.
+`legacy_fragment` is a **finite migration bypass**, shared by both modes, for explicitly allowlisted old fragments that predate full sourcing/lineage instrumentation. It is virtual drafting context only: it may preserve or reposition already-existing narrative and may seed a research question, but it **cannot establish a new fact, satisfy a sourcing gate, or silently upgrade evidence**. New or sourced fragments must use the normal evidence path. The type never renders in the reader.
 
-### S3 — review **and repair**, never silently delete
+## Reader scaffold contract
 
-Call `scripts/paragraph_review_gate.py`. Each review starts with all review flags false; a rewrite invalidates previous review state.
+`story_scaffold.json` is the evidence/graph topology. `reader_scaffold.json` is the narrative topology.
 
-On failure, use `scripts/paragraph_repair_loop.py`:
-1. draft/rewrite;
-2. run all review gates;
-3. feed only typed violations back to the next rewrite;
-4. reset review state;
-5. stop after three attempts.
+They are not interchangeable.
 
-Final disposition is exactly one of:
+- `reader_scaffold.json` controls order and placement.
+- `story_scaffold.json` helps retrieval and cross-arc coverage.
+- an evidence arc may map into several reader sections;
+- several evidence arcs may be narrated in one chronological reader chapter.
+
+## Side stories
+
+A side story is an excursion with a return, not a label + takeaway.
+
+- place it beside the event/mechanism that makes the excursion useful;
+- keep its own internal mini-arc: question/object → evidence → explanation → limit → payoff/return;
+- use `placement.section_anchor` that resolves to the reader scaffold;
+- insert only at full paragraph/heading boundaries;
+- new non-method side stories should normally exceed ~90 visible words; analytical focuses are longer;
+- `existing_fragment` side stories inherited from an approved reader are exempt from artificial expansion.
+
+Typical kinds: detour, dezoom, also, method, false_lead, portrait, object_focus, comparator, callback, analytical_focus.
+
+## Claims and sources in the final reader
+
+Claims are backstage.
+
+During drafting they:
+- constrain factual scope;
+- identify source lineage;
+- carry confidence/type/causal role;
+- support coverage accounting.
+
+During export:
+- strip all `[claim:*]` markers;
+- render simple source references already used by the book (`[SOURCE-ID]` or compact human-readable source note);
+- keep the full claim→paragraph→source mapping in a separate QA ledger.
+
+A “100% claims present” statement is not a reader-quality objective. The objective is **historical matter preserved and sourced**, with claims accounted for backstage.
+
+## Review and conservation
+
+Every final eligible historical unit gets one disposition:
 - `included`;
-- `included_as_side_story` with a side-story ID;
-- `not_selected_for_reader` with an explicit rationale.
+- `included_as_side_story`;
+- `not_selected_for_reader` with rationale.
 
-A gate failure must never become an invisible omission.
-
-### S4 — compose side stories, callbacks and return targets
-
-Side-story eligibility and evidence lineage come from artefacts. New materializations use explicit BEGIN/END fences backstage, but the visible reader receives a normal in-flow encadré.
-
-#### Return-target contract
-
-A `return_to` ID is resolved deterministically before any semantic fallback:
-1. resolve the side story against the canonical chronological section/scaffold first;
-2. use claim/bridge/arc IDs only as backstage lineage aids;
-3. if no valid narrative return exists, mark `needs_research` — never append the story to a catch-all gallery just to satisfy coverage;
-4. research the historical proposition, not the identifier;
-5. closure normally requires two independent qualified source families, or one directly probative authoritative source for a narrow proposition;
-6. supported research binds a reviewed paragraph/section anchor;
-7. challenged research redirects or retires the side story;
-8. a required validated/promoted side story with unresolved return blocks final export.
-
-Executable contract: `scripts/return_target_resolution.py`. Persist research decisions under `08_questions/return_target_research*.json`.
-
-### S5 — illustration pass
-
-Only `reader_eligible` items render. Preserve observation / canonical text / chronicle tradition / interpretation distinctions. A depiction is not evidence of the event depicted.
-
-### S6 — reciprocal reconciliation and exhaustive dispositions
-
-Run `scripts/reciprocal_coverage_check.py` after scaffold and after drafting.
-
-Then run `scripts/evidence_coverage_contract.py`. Coverage is backstage QA, not visible reader apparatus. Produce claim/fragment depth internally:
-- paragraph IDs and paragraph count;
-- gross word count;
-- apportioned word count;
-- explicit thin-coverage signal;
-- final disposition for every eligible claim, promoted field fragment and allowlisted legacy fragment.
-
-`unaccounted` must be empty before closure. A legacy fragment may close as `preserved_legacy_context` without being upgraded to sourced evidence.
-
-Canonical-point population is audited separately by `scripts/audit_canonical_points.py`; it remains warning-only until genuinely populated, then may be activated with `--strict`.
-
-### S7 — render and final QA
-
-Preserve scaffold chronology, in-flow side-story placement, callbacks, uncertainty semantics, approved illustration/map constraints and simple source references.
-
-The objective is **maximization under quality constraint**, not merely “make gates green”. A shorter manuscript is allowed, but every omitted eligible unit needs an explicit backstage disposition. Quality gates constrain inclusion; they must not reward deletion of difficult material.
-
-Final comparison reports both quality and conservation: eligible units accounted for, thin versus substantial coverage, explicit exclusions, side-story routing and residual loss against the comparison baseline.
-
-## Executable contracts
-
-- `python scripts/build_drafting_packets.py --project <project>`
-- `python scripts/build_from_scratch_packets.py --project <project>` — low-level bootstrap only; do not use directly for final drafting
-- `python scripts/paragraph_review_gate.py ...`
-- `scripts/paragraph_repair_loop.py`
-- `scripts/return_target_resolution.py`
-- `python scripts/materialize_side_stories.py ...`
-- `python scripts/reciprocal_coverage_check.py ...`
-- `python scripts/evidence_coverage_contract.py --project ... --manuscript ... --run-report ... --output ...`
-- `python scripts/audit_canonical_points.py`
-- `python scripts/qa_composition_pipeline.py <project>`
+Coverage must include **promoted fragments and rich intakes/capture units**, not claims alone. A claim referenced once by a thin sentence does not prove narrative conservation.
 
 ## Stop conditions
 
 Do not export final if:
-- paragraph review is incomplete or stale;
-- chronological scaffold ordering has been lost;
-- a required side-story/recap/illustration is missing or displaced into a catch-all gallery without an explicit editorial reason;
-- a required side-story return remains `needs_research`;
-- a challenged return was materialized as supported;
-- production metadata leaks into reader prose;
-- from-scratch inputs include previous reader prose;
-- evidence state is silently upgraded;
-- a new unsourced fragment entered through the legacy bypass;
-- an eligible claim or promoted fragment has no final backstage disposition;
-- exhaustive coverage reports non-empty `unaccounted`.
+- reader scaffold order is violated;
+- an iterative run silently drops baseline material;
+- a required side story is appended outside its intended chronological context;
+- a promoted new side story is only a title/takeaway when richer source material exists;
+- claim/bridge/run metadata or machine HIL identifiers leak into frontstage;
+- a from-scratch run reads previous reader prose;
+- an evidence state is silently upgraded;
+- a new or sourced fragment enters through the legacy bypass;
+- eligible promoted narrative material has no disposition.
+
+## Executable contracts
+
+- `scripts/import_reader_scaffold.py`
+- `scripts/build_drafting_packets.py`
+- `scripts/build_from_scratch_packets.py` (compatibility wrapper)
+- `scripts/materialize_side_stories.py`
+- `scripts/paragraph_review_gate.py`
+- `scripts/paragraph_repair_loop.py`
+- `scripts/reciprocal_coverage_check.py`
+- `scripts/evidence_coverage_contract.py`
+- `scripts/frontstage_reader_contract.py`
