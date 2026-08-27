@@ -4,6 +4,11 @@
 The historical production process remains versioned in Git and metrics. This module
 removes only known production apparatus that was previously inserted into the visible
 reader (V1/V3/baseline/delta wording), then applies the side-story visual legend.
+
+Run27 adds a two-stage return-target contract. The renderer itself never browses: any
+missing canonical marker must have been resolved by a persisted research record first.
+Supported research resolutions are materialised as hidden markers before layout; a
+required return that still cannot resolve blocks final export.
 """
 from __future__ import annotations
 
@@ -12,6 +17,7 @@ from pathlib import Path
 
 from docx import Document
 
+from return_target_resolution import apply_project_research_resolutions, validate_required_return_targets
 from side_story_presentation import LEGEND_HEADING, add_side_story_legend, apply_side_story_palette, markdown_legend
 
 
@@ -112,9 +118,17 @@ def finalize_reader(project: Path, spec: dict) -> dict:
     docx_path = output_dir / spec["output"]
     markdown_path = output_dir / spec["markdown_output"]
 
-    # Read canonical Markdown before frontstage cleanup: its explicit claim/bridge/arc
-    # markers are needed to resolve ID-based `return_to` targets deterministically.
+    # Stage 1: read the canonical Markdown before frontstage cleanup. Existing explicit
+    # claim/bridge/arc markers resolve directly. Stage 2: persisted research resolutions
+    # may add a hidden marker to a paragraph whose historical proposition was independently
+    # supported. The renderer itself remains network-free and deterministic.
     canonical_markdown = markdown_path.read_text(encoding="utf-8")
+    canonical_markdown, research = apply_project_research_resolutions(project, canonical_markdown)
+    if research["errors"]:
+        raise RuntimeError("return-target research resolution failed:\n- " + "\n- ".join(research["errors"]))
+    return_errors, return_report = validate_required_return_targets(project, canonical_markdown)
+    if return_errors:
+        raise RuntimeError("required side-story return resolution failed:\n- " + "\n- ".join(return_errors))
 
     doc = Document(docx_path)
     removed = strip_method_block_from_docx(doc, spec.get("method_block", ""))
@@ -133,6 +147,10 @@ def finalize_reader(project: Path, spec: dict) -> dict:
     return {
         "backstage_paragraphs_removed": removed,
         "frontstage_replacements": replacements,
+        "return_research_markers_materialized": len(research["applied"]),
+        "return_research_challenged_or_redirected": research["challenged_or_redirected"],
+        "required_returns_checked": len(return_report),
+        "required_returns_unresolved": 0,
         "side_story_headers_styled": palette["headers_styled"],
         "side_story_body_paragraphs_styled": palette["body_paragraphs_styled"],
         "side_story_blocks_resolved": palette["resolved_blocks"],
