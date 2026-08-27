@@ -50,5 +50,18 @@
     "claims_supported":[],
     "limitations":"Online reproduction of a published scholarly paper; supports identity/interaction mechanism, not equivalence of every local ritual form or uninterrupted antiquity.",
     "provenance":"direct"
+  },
+  {
+    "id":"UCOLOMBO-UPCOUNTRY-HINDU-RELIGIOSITY-2026",
+    "title":"Competitive sharing: Sri Lankan Hindus and Up-country Tamil religiosity",
+    "url":"https://archive.cmb.ac.lk/bitstreams/dc7b511d-3cd6-4426-a5c4-ec80963ee121/download",
+    "tier":"T1",
+    "anchor_role":"canonical anchor",
+    "date":"2026",
+    "author_or_institution":"University of Colombo repository",
+    "scope":"Academic discussion of Sri Pada, Hindu-Saiva/Buddhist interaction and the historiographical portrayal of Rajasinha I of Sitawaka.",
+    "claims_supported":["C-R29-A05C-RAJASINHA-SRIPADA-001"],
+    "limitations":"Synthesizes chronicle and modern scholarship; useful for bounding the Rajasinha episode but not for asserting island-wide persecution or complete destruction of Buddhist learning.",
+    "provenance":"direct"
   }
 ]
