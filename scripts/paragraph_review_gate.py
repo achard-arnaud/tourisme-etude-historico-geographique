@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Bounded paragraph review state machine for storytelling-historical-travel.
 
-Run 26 makes review state explicit. Every paragraph begins with all review flags false.
-A flag can become true only after its own gate has actually run and passed:
+Every paragraph begins with all review flags false. A flag can become true only
+after its own gate has actually run and passed:
 - deterministic checklist;
-- bounded Sarah-style review record;
-- HIL scope review limited to dimensions supported by the claims used in the paragraph.
+- independent Sarah-style review bound to paragraph + frozen voice contract;
+- HIL scope review limited to dimensions supported by claims used in the paragraph.
 """
 from __future__ import annotations
 
@@ -16,6 +16,8 @@ from pathlib import Path
 import re
 import unicodedata
 from typing import Any
+
+from sarah_voice_contract import validate_style_review
 
 
 @dataclass(frozen=True)
@@ -63,17 +65,6 @@ FOREIGN_TERMS = {
     "clearing house": ("chambre de compensation", "centre de compensation", "plateforme de compensation"),
     "trade-off": ("arbitrage", "compromis"),
     "path dependency": ("dépendance au sentier", "dépendance de trajectoire"),
-}
-
-SARAH_STYLE_MARKERS = {
-    "scope_precision",
-    "concrete_texture",
-    "integrated_nuance",
-    "fact_before_analysis",
-    "observation_analysis_implication",
-    "calm_pedagogical_tone",
-    "callback_continuity",
-    "no_social_format_mimicry",
 }
 
 STOPWORDS = {
@@ -202,22 +193,18 @@ def _deterministic_checklist(text: str, claim: dict[str, Any], arc_context: dict
     return violations, warnings
 
 
-def _review_sarah_style(arc_context: dict[str, Any]) -> tuple[bool, list[Violation]]:
-    record = arc_context.get("sarah_style_review") or {}
-    if record.get("passed") is not True:
-        return False, [Violation("style", "sarah_style_review_required", "Sarah-style review starts false and must be explicitly passed by a bounded reviewer.")]
-    evaluator = str(record.get("evaluator") or "").strip()
-    markers = {str(x) for x in record.get("markers") or []}
-    unknown = markers - SARAH_STYLE_MARKERS
-    if not evaluator:
-        return False, [Violation("style", "sarah_style_evaluator_missing", "Sarah-style review must record its evaluator.")]
-    if unknown:
-        return False, [Violation("style", "sarah_style_marker_unknown", f"Unknown Sarah-style marker(s): {sorted(unknown)}")]
-    if "scope_precision" not in markers:
-        return False, [Violation("style", "sarah_scope_precision_not_reviewed", "Every Sarah-style review must explicitly check scope precision.")]
-    if len(markers) < 2:
-        return False, [Violation("style", "sarah_style_review_too_shallow", "Sarah-style review must record scope precision plus at least one paragraph-relevant marker.")]
-    return True, []
+def _review_sarah_style(text: str, arc_context: dict[str, Any]) -> tuple[bool, list[Violation], list[str]]:
+    record = arc_context.get("sarah_style_review")
+    if not record:
+        return False, [Violation(
+            "style",
+            "sarah_style_review_required",
+            "Sarah-style review starts false and requires an independent review record bound to the paragraph and frozen voice contract.",
+        )], []
+    errors, warnings = validate_style_review(text, record)
+    if errors:
+        return False, [Violation("style", "sarah_style_review_invalid", message) for message in errors], warnings
+    return True, [], warnings
 
 
 def _claim_hils_from_context(claim: dict[str, Any], text: str, arc_context: dict[str, Any]) -> tuple[set[str], set[str]]:
@@ -267,12 +254,12 @@ def review_paragraph(text: str, claim: dict[str, Any], arc_context: dict[str, An
     state = initialize_review_state()
 
     violations, warnings = _deterministic_checklist(text, claim, arc_context)
-    checklist_blockers = list(violations)
-    if not checklist_blockers:
+    if not violations:
         state.checklist_reviewed = True
 
-    sarah_ok, sarah_violations = _review_sarah_style(arc_context)
+    sarah_ok, sarah_violations, sarah_warnings = _review_sarah_style(text, arc_context)
     violations.extend(sarah_violations)
+    warnings.extend(sarah_warnings)
     if sarah_ok:
         state.sarah_style_reviewed = True
 
