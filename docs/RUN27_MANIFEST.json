@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-08-27-run27-convergence-final",
+  "status": "reviewed",
+  "mode": "from-scratch-convergence-with-exhaustive-dispositions-and-research-backed-return-resolution",
+  "project_roots": ["examples/sri_lanka_pre_1948", "examples/sri_lanka_post_1948"],
+  "state_before": {
+    "run26": "From-scratch readers were traceable but materially thinner than the iterative baseline.",
+    "coverage": "Claim presence was aggregated and did not prove claim-by-claim narrative depth or account for promotable field/conversation backlog.",
+    "returns": "Some side-story return IDs existed structurally without canonical paragraph markers.",
+    "quality": "Paragraph gates could detect failure but no explicit repair/disposition objective prevented omission from being the cheapest path to green."
+  },
+  "dispatched_skills": [
+    {"skill":"analyzing-economy-and-infrastructure","reason":"Regression verification under Run27 enriched evidence and HIL relevance contract.","inputs":["Run27 structured corpora"],"outputs":["skills/analyzing-economy-and-infrastructure/SKILL.md"],"status":"verified"},
+    {"skill":"analyzing-geography-and-environment","reason":"Regression verification under Run27 enriched evidence and HIL relevance contract.","inputs":["Run27 structured corpora"],"outputs":["skills/analyzing-geography-and-environment/SKILL.md"],"status":"verified"},
+    {"skill":"analyzing-institutions-and-power","reason":"Regression verification under Run27 enriched evidence and HIL relevance contract.","inputs":["Run27 structured corpora"],"outputs":["skills/analyzing-institutions-and-power/SKILL.md"],"status":"verified"},
+    {"skill":"analyzing-regional-global-systems","reason":"Regression verification under Run27 enriched evidence and HIL relevance contract.","inputs":["Run27 structured corpora"],"outputs":["skills/analyzing-regional-global-systems/SKILL.md"],"status":"verified"},
+    {"skill":"analyzing-religion-culture-legitimacy","reason":"Integrate promoted Mihintale/Abhayagiri and Buddhist iconography material without upgrading tradition into proof.","inputs":["Run27 pre-1948 claims and sources"],"outputs":["skills/analyzing-religion-culture-legitimacy/SKILL.md"],"status":"verified"},
+    {"skill":"analyzing-security-and-geopolitics","reason":"Regression verification under Run27 enriched evidence and HIL relevance contract.","inputs":["Run27 structured corpora"],"outputs":["skills/analyzing-security-and-geopolitics/SKILL.md"],"status":"verified"},
+    {"skill":"analyzing-society-and-demography","reason":"Regression verification under Run27 enriched evidence and HIL relevance contract.","inputs":["Run27 structured corpora"],"outputs":["skills/analyzing-society-and-demography/SKILL.md"],"status":"verified"},
+    {"skill":"auditing-historiography-and-drifts","reason":"Keep attributed, traditional, inferred and challenged propositions distinct during backlog promotion and research fallback.","inputs":["Run27 promotions and return research"],"outputs":["skills/auditing-historiography-and-drifts/SKILL.md"],"status":"verified"},
+    {"skill":"building-causal-bridges","reason":"Verify bridge endpoints and research-backed return targets without semantic guessing.","inputs":["Run27 bridge and return-target state"],"outputs":["skills/building-causal-bridges/SKILL.md"],"status":"verified"},
+    {"skill":"capturing-field-evidence","reason":"Close previously silent Run16 field-fragment disposition backlog.","inputs":["00_method/capture/run16_field_fragments.json"],"outputs":["skills/capturing-field-evidence/SKILL.md"],"status":"verified"},
+    {"skill":"composing-arc-recaps","reason":"Verify recap compatibility with fresh from-scratch narrative construction.","inputs":["Run27 packet topology"],"outputs":["skills/composing-arc-recaps/SKILL.md"],"status":"verified"},
+    {"skill":"composing-side-stories","reason":"Enforce distinct angle, bounded density and marker-first/research-fallback returns.","inputs":["Run27 side-story registry"],"outputs":["skills/composing-side-stories/SKILL.md"],"status":"verified"},
+    {"skill":"curating-historical-illustrations","reason":"Preserve pending human-review status and prevent unapproved Buddha-life images from entering the reader.","inputs":["Run24 illustration registry"],"outputs":["skills/curating-historical-illustrations/SKILL.md"],"status":"verified"},
+    {"skill":"curating-historical-map-assets","reason":"Regression verification; no new map evidence is fabricated by Run27.","inputs":["Run27 structured corpora"],"outputs":["skills/curating-historical-map-assets/SKILL.md"],"status":"verified"},
+    {"skill":"editing-historical-travel-output","reason":"Verify frontstage cleanup, side-story boundaries and final reader rendering.","inputs":["Run27 reader contract"],"outputs":["skills/editing-historical-travel-output/SKILL.md"],"status":"verified"},
+    {"skill":"extracting-youtube-evidence","reason":"Regression verification; degraded video leads remain outside unsupported historical closure.","inputs":["Existing video evidence state"],"outputs":["skills/extracting-youtube-evidence/SKILL.md"],"status":"verified"},
+    {"skill":"maintaining-wiki-and-graph","reason":"Verify enriched claims remain resolvable structured endpoints.","inputs":["Run27 promoted claims"],"outputs":["skills/maintaining-wiki-and-graph/SKILL.md"],"status":"verified"},
+    {"skill":"sanitizing-historical-claims","reason":"Keep promoted backlog statements typed and confidence-bounded; canonical_points remains explicitly warning-only until populated.","inputs":["Run27 promoted claims"],"outputs":["skills/sanitizing-historical-claims/SKILL.md"],"status":"verified"},
+    {"skill":"sourcing-historical-anchors","reason":"Support iconography and return-target research with scoped qualified sources and independence checks.","inputs":["Run27 source registers and return research"],"outputs":["skills/sourcing-historical-anchors/SKILL.md"],"status":"verified"},
+    {"skill":"storytelling-historical-travel","reason":"Implement maximization under quality constraints, repair loop, independent Sarah review and exhaustive dispositions.","inputs":["Run27 packets and voice contract"],"outputs":["skills/storytelling-historical-travel/SKILL.md"],"status":"verified"},
+    {"skill":"structuring-chronological-arcs","reason":"Verify all promoted claims remain attached to chronological arc contracts.","inputs":["Run27 claim universe"],"outputs":["skills/structuring-chronological-arcs/SKILL.md"],"status":"verified"},
+    {"skill":"tailoring-reader-profiles","reason":"Advanced-reader mode remains loss-averse and has no arbitrary maximum length.","inputs":["Run27 reader mode"],"outputs":["skills/tailoring-reader-profiles/SKILL.md"],"status":"verified"},
+    {"skill":"zooming-geographic-scales","reason":"Regression verification of local-national-regional transitions without HIL padding.","inputs":["Run27 packet topology"],"outputs":["skills/zooming-geographic-scales/SKILL.md"],"status":"verified"}
+  ],
+  "skipped_skills": [],
+  "validations": [
+    "python -m unittest discover -s tests -v",
+    "python scripts/audit_skill.py .",
+    "python scripts/audit_workflow.py --latest",
+    "python scripts/audit_context_budget.py --latest",
+    "python scripts/audit_intake_lineage.py",
+    "python scripts/question_contract.py examples/sri_lanka_pre_1948",
+    "python scripts/question_contract.py examples/sri_lanka_post_1948",
+    "python scripts/qa_project.py examples/sri_lanka_pre_1948",
+    "python scripts/qa_project.py examples/sri_lanka_post_1948",
+    "python scripts/qa_composition_pipeline.py examples/sri_lanka_pre_1948",
+    "python scripts/qa_composition_pipeline.py examples/sri_lanka_post_1948",
+    "python scripts/qa_functional_pre1948.py",
+    "python scripts/close_run27_final.py --project all"
+  ],
+  "state_after": {
+    "evidence_universe": "84 eligible pre-1948 claims and 98 post-1948 claims at final preflight, plus explicitly disposed promoted fragments.",
+    "returns": "Return targets are marker-first; missing markers route to proposition research and close only on sufficient evidence, otherwise the side story is challenged/rerouted/retired.",
+    "quality": "Gate failure triggers targeted repair up to three attempts; every eligible unit receives an explicit final disposition and unaccounted must be empty.",
+    "reader": "Final Run27 readers are generated from structured packets only; prior reader prose is comparison-only after drafting."
+  },
+  "promotion_decision": "Keep PR64 draft until both Run27 semantic manuscripts, independent review ledgers, exhaustive coverage reports and fresh DOCX renders close green; then compare Run25 vs Run27 claim depth before any canonical promotion."
+}
