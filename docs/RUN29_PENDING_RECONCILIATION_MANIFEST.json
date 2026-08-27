@@ -1,0 +1,88 @@
+{
+  "run":"RUN29",
+  "date":"2026-08-27",
+  "scope":"questions, pending research gates, non-promoted intake descendants, graph-light reconciliation and release isolation",
+  "status":"ready_for_ci",
+  "decisions":{
+    "promoted":[
+      {
+        "topic":"Kataragama–Nallur shared deity complex",
+        "claims":["C-R29-KDY-KATARAGAMA-DEVALAYA-001","C-R29-NALLUR-MURUGAN-001"],
+        "bridge":"B-R29-KATARAGAMA-NALLUR-001",
+        "graph_action":"project bounded ritual-identity connection; no direct institutional-transmission claim"
+      },
+      {
+        "topic":"Rajasinha I / Sitawaka religious reconfiguration",
+        "claims":["C-R29-A05C-RAJASINHA-SRIPADA-001"],
+        "graph_action":"allow bounded Sitawaka religious-reconfiguration context; do not infer total Buddhist collapse"
+      }
+    ],
+    "bounded_existing":[
+      "Q-KANDY-002 deliberate unroaded defence policy: terrain/pass defence is evidenced; formal infrastructure-denial order still absent",
+      "Q-META-001 source concentration: material but not single-publisher; metadata normalization remains",
+      "IRB-R13-CONSERVATION: Wilpattu date/gazette narrowed; original facsimile and exact Yala proclamation remain",
+      "IRB-R15-PLASTIC: enforcement activity evidenced; environmental effect remains open",
+      "IRB-R16-MIHINTALE: early epigraphy partly anchors chronology but does not independently prove full Mahinda narrative",
+      "IRB-R17-KANDY-METRICS: official municipal metrics refreshed; functional-city denominator remains",
+      "IRB-R18-KANDY-DEFENCE-DOCTRINE: terrain/pass defence anchored; formal doctrine unresolved",
+      "IRB-R24-KANDY-ILLUSTRATIONS: textual layers anchored; provenance, hashes, placement and human approval remain"
+    ],
+    "keep_open":[
+      "Q-TEA-000/Q-TEA-001 and H1-H3: require quantitative estate/smallholder lag tests",
+      "Q-PLAINS-001/Q-PLAINS-002: require colonial agricultural trial chronology",
+      "Q-ANC-001: systematic early epigraphy-versus-chronicle comparison not yet run",
+      "IRB-R13-GLASS: specialist archaeometry required",
+      "IRB-R13-ROME: secure coin-context inventory still needed",
+      "IRB-R13-NAGA: historiographic-category gate remains active",
+      "IRB-R15-GUIDE-HISTORY: independent research possible but missing guide provenance cannot be reconstructed",
+      "IRB-R15-TSUNAMI: official-host/law-report P-TOMS judgment still needed",
+      "IRB-R15-TOURISM: causal weights unresolved",
+      "IRB-R16-MILITARISATION: current denominators and polarized source-family triangulation remain",
+      "IRB-R16-HORTON: conservation genealogy and cliff-drop metric conflict remain",
+      "IRB-R18-CONVERSION / VALUE / WAGE: preregistered quantitative tests not yet executed",
+      "IRB-R22-VIDEO-CASTE / VIDEO-CONFLICT: timestamped video evidence remains missing",
+      "Run28 GF-LIT-08: 'Pali/Sanskrit composition completely lost' remains too absolute",
+      "Run28 GF-SAS-11/12/15: Yapahuwa–Asgiriya/Vipassana genealogy remains lineage tradition",
+      "Run28 GF-SAS-17: Kotte Siam/Cambodia/Burma chronology remains overcompressed",
+      "Run28 meditation/Buddha-avatar comparator: separate doctrinal research needed"
+    ],
+    "external_wait":[
+      "IRB-R16-ABHAYAGIRI: review no earlier than 2026-09-19 for technical/laboratory publication"
+    ],
+    "provenance_blocked":[
+      "I-R13-LEGACY-RESEARCH original intake unidentified",
+      "I-R15-GUIDE source snapshot missing",
+      "I-R16-FIELD original field bundle missing",
+      "I-R17-KANDY original intake missing"
+    ]
+  },
+  "graph_light":{
+    "retain":[
+      "Polonnaruwa reform -> grammatical production",
+      "grammatical production PRECEDES Gadaladeniya",
+      "Gadaladeniya PRECEDES Kotte literary flourishing"
+    ],
+    "add":[
+      "Kandy Kataragama Devalaya CONNECTS_RITUAL_IDENTITY_TO Nallur Murugan/Kandaswamy via B-R29-KATARAGAMA-NALLUR-001"
+    ],
+    "forbid_until_new_evidence":[
+      "Kotte literary flourishing CAUSES Sitawaka literary decline",
+      "Rajasinha I religious reconfiguration CAUSES complete Pali/Sanskrit extinction",
+      "Asgiriya lineage museum genealogy as independently corroborated chain",
+      "Kataragama-Nallur as direct institutional transmission"
+    ]
+  },
+  "release_branch_policy":{
+    "eligible_after_ci":["feat/run29-pending-reconciliation"],
+    "hold":[
+      "feat/run27-convergence: draft, diverged from main and unfinished by its own PR contract",
+      "agent/run16-field-intakes-mihintale-abhayagiri-militarisation-horton: deeply stale/diverged; descendants already integrated in later canonical runs",
+      "agent/run18-tea-plantation-economy-tmp: temporary historical branch",
+      "dev-check-run18-temp: temporary check branch",
+      "run26-from-scratch-final: archived generation branch",
+      "tmp/kandy-defence-rebase: temporary rebase branch",
+      "tmp-noop: temporary branch"
+    ],
+    "sequence":"feature -> dev -> main; no temporary or unfinished branch enters release by branch-name sweep"
+  }
+}
