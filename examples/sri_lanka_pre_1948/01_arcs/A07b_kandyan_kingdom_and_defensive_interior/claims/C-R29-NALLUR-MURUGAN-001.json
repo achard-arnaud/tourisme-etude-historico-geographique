@@ -1,0 +1,13 @@
+{
+  "id":"C-R29-NALLUR-MURUGAN-001",
+  "type":"source_fact",
+  "claim":"Nallur Sri Kandaswamy Devasthanam identifies the Jaffna temple as a Tamil Saiva shrine dedicated to Lord Murugan; its institutional account identifies the Vel in the sanctum as Nallur Kandaswamy.",
+  "confidence":"A",
+  "zoom":"Z3",
+  "causal_role":"context",
+  "arc":"A07b_kandyan_kingdom_and_defensive_interior",
+  "hil":"HIL-05_religion-culture-legitimacy",
+  "source_ids":["NALLUR-OFFICIAL-MURUGAN-2026","NALLUR-OFFICIAL-TEMPLE-HISTORY-2026"],
+  "bounded_by":"Current institutional religious identity and temple self-description only. Medieval foundation dates, successive destructions and political patronage require independent historical anchors.",
+  "notes":"Placed as a dezoom endpoint for the Kandy Kataragama comparison; it is not evidence that Kandy and Nallur ritual practices are identical."
+}
