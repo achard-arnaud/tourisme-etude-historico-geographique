@@ -25,6 +25,20 @@ from side_story_presentation import (
 )
 
 
+def reviewed_context():
+    return {
+        "neighbor_context_loaded":True,
+        "sarah_style_review":{
+            "passed":True,
+            "evaluator":"bounded_llm",
+            "markers":["scope_precision","concrete_texture"],
+        },
+        "hil_scope_declared":True,
+        "selected_hil_ids":[],
+        "claim_hil_map":{"C-LEGACY":[]},
+    }
+
+
 class Run25SideStoryPaletteTests(unittest.TestCase):
     def test_palette_covers_every_contract_kind_exactly(self):
         self.assertEqual(KINDS,set(SIDE_STORY_PRESENTATION))
@@ -75,9 +89,9 @@ Le petit `report.md` est traité comme un delta promu.
 
     def test_reader_method_side_story_is_allowed_but_production_method_is_not(self):
         claim={"id":"C-LEGACY","claim":"x"}
-        good=review_paragraph("Point de méthode — Une inscription se date d'abord par sa paléographie et son contexte.",claim=claim)
+        good=review_paragraph("Point de méthode — Une inscription se date d'abord par sa paléographie et son contexte.",claim=claim,arc_context=reviewed_context())
         self.assertTrue(good.passed,good.violations)
-        bad=review_paragraph("Politique éditoriale de la V3 intégrale : la baseline conserve le delta.",claim=claim)
+        bad=review_paragraph("Politique éditoriale de la V3 intégrale : la baseline conserve le delta.",claim=claim,arc_context=reviewed_context())
         self.assertFalse(bad.passed)
         self.assertEqual("Don't",bad.violations[0].category)
 
