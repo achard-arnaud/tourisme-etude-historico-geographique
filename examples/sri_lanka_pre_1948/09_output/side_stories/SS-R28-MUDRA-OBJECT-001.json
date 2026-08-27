@@ -1,0 +1,16 @@
+{
+  "schema_version":"1.2",
+  "class":"side_story",
+  "id":"SS-R28-MUDRA-OBJECT-001",
+  "kind":"object_focus",
+  "status":"candidate",
+  "arc":"A02c_anuradhapura_and_the_mahavihara",
+  "zoom":"Z3",
+  "map_eligible":false,
+  "title":"Lire les mains du Bouddha",
+  "purpose":"Give the reader a reusable field-reading key for Buddha statues without over-localising a shared South Asian iconographic vocabulary.",
+  "lineage":{"claim_ids":["C-R28-A02C-MUDRA-VOCAB-001"],"source_ids":["MET-MUDRA-VOCAB-2007","MET-SL-BUDDHA-MUDRA-COLLECTION"],"bridge_ids":[],"hil_ids":["HIL-05_religion-culture-legitimacy"],"drift_paths":[],"origin_paths":["00_method/capture/run28_mudra_series_fragments.json"]},
+  "content":{"takeaway":"A Buddha statue can be read as a coded image: hand position helps distinguish protection, meditation and teaching, while regional style and museum labels still need separate verification."},
+  "placement":{"section_anchor":"","return_to":"C-R28-A02C-MUDRA-VOCAB-001"},
+  "render":{"required_in_reader":false,"label":"Objet / terrain","marker":"[SIDE-STORY:SS-R28-MUDRA-OBJECT-001]"}
+}
