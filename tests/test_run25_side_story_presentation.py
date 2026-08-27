@@ -20,8 +20,10 @@ from side_story_presentation import (
     KIND_ORDER,
     LEGEND_HEADING,
     SIDE_STORY_PRESENTATION,
+    _find_return_index,
     add_side_story_legend,
     apply_side_story_palette,
+    build_return_marker_map,
     detect_kind,
 )
 
@@ -72,6 +74,23 @@ class Run25SideStoryPaletteTests(unittest.TestCase):
             shd=paragraph._p.get_or_add_pPr().find(qn("w:shd"))
             self.assertIsNotNone(shd)
             self.assertEqual(SIDE_STORY_PRESENTATION[kind]["fill"],shd.get(qn("w:fill")))
+
+    def test_return_to_claim_id_resolves_via_canonical_marker(self):
+        doc=Document()
+        doc.add_paragraph("Petit détour — Exemple")
+        doc.add_paragraph("Corps du détour.")
+        doc.add_paragraph("Le retour au fil principal se fait ici, avec une phrase suffisamment distinctive.")
+        canonical=(
+            "**Petit détour — Exemple**\n\nCorps du détour.\n\n"
+            "Le retour au fil principal se fait ici, avec une phrase suffisamment distinctive. [claim:C-RET-001]\n"
+        )
+        marker_map=build_return_marker_map(canonical)
+        self.assertIn("C-RET-001",marker_map)
+        self.assertEqual(2,_find_return_index(doc.paragraphs,0,"C-RET-001",marker_map))
+
+    def test_return_to_claim_id_never_guesses_without_marker(self):
+        doc=Document();doc.add_paragraph("Petit détour — Exemple");doc.add_paragraph("C-RET-001")
+        self.assertIsNone(_find_return_index(doc.paragraphs,0,"C-RET-001",{}))
 
     def test_legend_maps_all_ten_symbols_and_method_distinction(self):
         doc=Document();rows=add_side_story_legend(doc)
