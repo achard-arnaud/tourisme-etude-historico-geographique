@@ -34,7 +34,8 @@ Run32 removes the false split between an “iterative writer” and a “from-sc
    - draft into the reader scaffold;
    - source-attested fact or observed texture before mechanism;
    - preserve scope and uncertainty;
-   - paragraph review and repair remain common to both modes.
+   - paragraph review and repair remain common to both modes;
+   - no invented dialogue, invented thoughts, invented motives, composite characters or fabricated sensory facts.
 
 5. **Composition**
    - side stories are inserted **inside the chronological trunk at their reader anchor**;
@@ -67,6 +68,14 @@ Executable entry point:
 Compatibility:
 
 `python scripts/build_from_scratch_packets.py --project <project>`
+
+## Reader profiles and preservation contract
+
+Supported reader profiles remain **advanced**, **intermediate** and **child**. The reader plan selects one profile and controls presentation, never evidence strength.
+
+For advanced work there is **no maximum length**. Use the **content-preservation gate** and explicit dispositions instead of compression by budget. Intermediate and child modes may simplify structure and vocabulary, but they may not silently delete required evidence or uncertainty.
+
+The reader plan, paragraph review state and Sarah-voice review remain deterministic inputs to composition QA. A profile changes exposition; it does not authorize invented dialogue, invented motives, source inflation or claim loss.
 
 ## Input priority for prose generation
 
