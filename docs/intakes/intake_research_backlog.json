@@ -6,9 +6,7 @@
     "priority": 2,
     "status": "open",
     "research_state": "needs_specialist_archaeometry",
-    "blocks": [
-      "A02_ancient_indian_ocean_exchange causal mechanism"
-    ],
+    "blocks": ["A02_ancient_indian_ocean_exchange causal mechanism"],
     "next_action": "Locate compositional archaeometry datasets and secure kiln/furnace contexts; do not infer primary glassmaking from bead-finishing evidence."
   },
   {
@@ -18,9 +16,7 @@
     "priority": 2,
     "status": "open",
     "research_state": "bounded_negative_result_exists",
-    "blocks": [
-      "direct-contact claims"
-    ],
+    "blocks": ["direct-contact claims"],
     "next_action": "Inventory securely excavated/hoard-provenance coin assemblages; preserve mediated Red Sea–Arabian–South Indian exchange as default unless direct-contact evidence discriminates."
   },
   {
@@ -30,9 +26,7 @@
     "priority": 1,
     "status": "open",
     "research_state": "historiography_gate_active",
-    "blocks": [
-      "early peopling / identity claims"
-    ],
+    "blocks": ["early peopling / identity claims"],
     "next_action": "Build dated inscription table for Nāga-related personal names/titles, then compare with Pali, Tamil-literary and modern nationalist usages without transporting identity categories backward."
   },
   {
@@ -42,10 +36,7 @@
     "priority": 1,
     "status": "partially_resolved",
     "research_state": "wilpattu_designation_tightened_yala_facsimile_missing",
-    "blocks": [
-      "A05 conservation chronology",
-      "two-lineages comparator"
-    ],
+    "blocks": ["A05 conservation chronology","two-lineages comparator"],
     "next_action": "Recover original Ceylon Gazette facsimile for 25 February 1938. Wilpattu Gazette 8356 is corroborated by a DWC management plan and parliamentary table; Yala date/legal basis is institutional, exact Gazette number still open."
   },
   {
@@ -55,9 +46,7 @@
     "priority": 1,
     "status": "blocked",
     "research_state": "source_missing",
-    "blocks": [
-      "all guide-derived promotion"
-    ],
+    "blocks": ["all guide-derived promotion"],
     "next_action": "Recover exact cover/title/edition/publisher or original intake; no web reconstruction can replace missing provenance."
   },
   {
@@ -67,13 +56,7 @@
     "priority": 2,
     "status": "open",
     "research_state": "independent_research_allowed_but_not_source_recovery",
-    "blocks": [
-      "reservoir centralization",
-      "forest-clearance timing",
-      "peopling",
-      "labour migration",
-      "colonial infrastructure distribution"
-    ],
+    "blocks": ["reservoir centralization","forest-clearance timing","peopling","labour migration","colonial infrastructure distribution"],
     "next_action": "Research each lead independently with T1/T2 anchors while preserving the missing-guide provenance debt; do not claim the recovered sources identify what the guide meant."
   },
   {
@@ -83,9 +66,7 @@
     "priority": 1,
     "status": "partially_resolved",
     "research_state": "enforcement_activity_closed_environmental_effect_open",
-    "blocks": [
-      "A14 policy effect"
-    ],
+    "blocks": ["A14 policy effect"],
     "next_action": "Enforcement existence is closed by CEA 2023 data. Next discriminate regulation-specific compliance and environmental leakage effects; do not treat raid counts as ecological outcome."
   },
   {
@@ -95,10 +76,7 @@
     "priority": 1,
     "status": "open",
     "research_state": "court_text_mirror_found_official_copy_missing",
-    "blocks": [
-      "exact P-TOMS legal provisions",
-      "political bridge"
-    ],
+    "blocks": ["exact P-TOMS legal provisions","political bridge"],
     "next_action": "Recover official-host or law-report copy of the 15 July 2005 judgment. Archive mirror identifies stayed sections 6(b)(ii), 6(b)(iv), 6(j), 6(i) and 7; keep war/election causality bounded."
   },
   {
@@ -108,10 +86,7 @@
     "priority": 1,
     "status": "open",
     "research_state": "multi_causal_frame_anchored_weights_unresolved",
-    "blocks": [
-      "causal-weight claim",
-      "local-to-national zoom"
-    ],
+    "blocks": ["causal-weight claim","local-to-national zoom"],
     "next_action": "Build comparable 2018–2022 receipts, remittance channel and local occupancy/employment series before attempting causal weights. Arrival counts cannot substitute for receipts."
   },
   {
@@ -121,10 +96,7 @@
     "priority": 1,
     "status": "partially_resolved",
     "research_state": "early_brahmi_cross_dates_located_sequence_not_closed",
-    "blocks": [
-      "Mahinda sequence independent anchor",
-      "A02c chronology"
-    ],
+    "blocks": ["Mahinda sequence independent anchor","A02c chronology"],
     "next_action": "Use published inscription corpora to enumerate cave inscriptions and palaeographic ranges. Coningham et al. provides cross-dating examples; this does not independently prove the full Mahinda narrative."
   },
   {
@@ -134,10 +106,7 @@
     "priority": 2,
     "status": "pending_external",
     "research_state": "review_not_due",
-    "blocks": [
-      "dating",
-      "Mahayana/Vajrayana attribution"
-    ],
+    "blocks": ["dating","Mahayana/Vajrayana attribution"],
     "review_by": "2026-09-19",
     "next_action": "Recheck for laboratory/technical publication on or after review date; until then preserve provisional dating and generic Buddhist-art attribution ceilings."
   },
@@ -148,10 +117,7 @@
     "priority": 1,
     "status": "open",
     "research_state": "polarized_source_family_gate_active",
-    "blocks": [
-      "current land denominator",
-      "checkpoint and commercial-scope claims"
-    ],
+    "blocks": ["current land denominator","checkpoint and commercial-scope claims"],
     "next_action": "Prioritize official land-parcel/release records and parliamentary/audit sources, then triangulate local and rights-monitor reporting with stable denominators."
   },
   {
@@ -161,10 +127,7 @@
     "priority": 2,
     "status": "open",
     "research_state": "institutional_ecology_anchored_genealogy_open",
-    "blocks": [
-      "two conservation lineages hypothesis",
-      "880m vs 1200m contradiction"
-    ],
+    "blocks": ["two conservation lineages hypothesis","880m vs 1200m contradiction"],
     "next_action": "Separate legal/management rationale from later ecological justification; locate survey/topographic datum for cliff-drop endpoints before choosing a figure."
   },
   {
@@ -174,9 +137,7 @@
     "priority": 1,
     "status": "partially_resolved",
     "research_state": "official_2024_metrics_refreshed_functional_denominator_open",
-    "blocks": [
-      "A19 second-city classification"
-    ],
+    "blocks": ["A19 second-city classification"],
     "next_action": "Keep Kandy MC 94,482 separate from UDA planning/floating-population figures. Run20 corrected lifetime migration to in 172,489 / out 287,823 / net -115,334; age-cohort retention remains unresolved."
   },
   {
@@ -186,10 +147,7 @@
     "priority": 2,
     "status": "open",
     "research_state": "bounded_claims_exist",
-    "blocks": [
-      "deliberate non-development",
-      "place-city/rent-city causal closure"
-    ],
+    "blocks": ["deliberate non-development","place-city/rent-city causal closure"],
     "next_action": "Seek explicit Kandyan/colonial documentary statements for deliberate pass/road policy; preserve sacred-city comparator as mechanism-only and control proximity to Colombo."
   },
   {
@@ -199,9 +157,7 @@
     "priority": 1,
     "status": "open",
     "research_state": "preregistered_discriminating_test_ready",
-    "blocks": [
-      "dominant coffee-to-tea explanation"
-    ],
+    "blocks": ["dominant coffee-to-tea explanation"],
     "next_action": "Build estate/district lag table for rust, acreage, ownership transfer and resident labour density; run smallholder gate first."
   },
   {
@@ -211,9 +167,7 @@
     "priority": 1,
     "status": "open",
     "research_state": "preregistered_company_capex_test_ready",
-    "blocks": [
-      "A17b dominant value-capture mechanism"
-    ],
+    "blocks": ["A17b dominant value-capture mechanism"],
     "next_action": "Collect decade-long company capex, segment returns, replanting and lease-horizon data; keep M3 a question until capital-allocation test is run."
   },
   {
@@ -223,9 +177,7 @@
     "priority": 1,
     "status": "open",
     "research_state": "fact_effect_inference_split_done_coverage_open",
-    "blocks": [
-      "household and productivity bridge"
-    ],
+    "blocks": ["household and productivity bridge"],
     "next_action": "Resolve worker coverage, attendance-allowance incidence and actual employer/state payment implementation before any productivity or welfare inference."
   },
   {
@@ -235,10 +187,7 @@
     "priority": 1,
     "status": "open",
     "research_state": "timestamped_video_evidence_missing_independent_research_preregistered",
-    "blocks": [
-      "video proposition extraction",
-      "A12 comparator refinement"
-    ],
+    "blocks": ["video proposition extraction","A12 comparator refinement"],
     "next_action": "Rerun the YouTube evidence cascade; if a timestamped transcript is recovered, atomize propositions, then test Jaffna/Tamil Nadu terminology and mechanisms with T0/T1 anchors without mapping Dalit directly onto Panchamar."
   },
   {
@@ -248,11 +197,7 @@
     "priority": 1,
     "status": "open",
     "research_state": "timestamped_video_evidence_missing_legal_provenance_gate_active",
-    "blocks": [
-      "video proposition extraction",
-      "legal-characterization matrix",
-      "memory layer"
-    ],
+    "blocks": ["video proposition extraction","legal-characterization matrix","memory layer"],
     "next_action": "Recover timestamped video evidence, then separate documented violence, actor-specific alleged violations, legal categories and memory advocacy; preserve NGO submissions in UN repositories as NGO evidence rather than UN findings."
   },
   {
@@ -262,9 +207,7 @@
     "priority": 1,
     "status": "partially_resolved",
     "research_state": "terrain_and_pass_defence_anchored_formal_doctrine_unresolved",
-    "blocks": [
-      "formal deliberate non-development claim"
-    ],
+    "blocks": ["formal deliberate non-development claim"],
     "next_action": "Search Kandyan-era or early colonial documentary anchors explicitly linking road, bridge, forest or pass maintenance policy to defence. Until then retain documented terrain/pass defence but do not promote deliberate infrastructure underdevelopment as a formal state doctrine."
   },
   {
@@ -274,11 +217,7 @@
     "priority": 2,
     "status": "resolved",
     "research_state": "museum_roster_triaged_selected_mechanisms_independently_anchored",
-    "blocks": [
-      "Kandy character-story qualification",
-      "1815 political-conquest bridge",
-      "transregional Buddhist dezoom"
-    ],
+    "blocks": ["Kandy character-story qualification","1815 political-conquest bridge","transregional Buddhist dezoom"],
     "next_action": "Revisit only if stable individual museum pages become directly retrievable or a future Kandy manuscript section needs promotion of one of the three candidate side stories.",
     "resolution": "Selected four high-value threads; created five typed claims, one bounded D'Oyly-to-1815 bridge, three candidate side stories and one Graph Light projection. All remaining roster entries were deferred or rejected as redundant."
   },
@@ -289,11 +228,17 @@
     "priority": 2,
     "status": "partially_resolved",
     "research_state": "textual_layers_anchored_local_provenance_and_placement_open",
-    "blocks": [
-      "modern temple provenance",
-      "human image approval",
-      "canonical section anchor"
-    ],
+    "blocks": ["modern temple provenance","human image approval","canonical section anchor"],
     "next_action": "Recover an institutional temple caption/provenance source, obtain explicit human approval and repository-accessible binaries, then create or select a canonical narrative anchor before changing any asset to reader_eligible."
+  },
+  {
+    "id": "IRB-R30-ANGAMPORA-BAN",
+    "intake_id": "I-R30-ANGAMPORA",
+    "topic": "Angampora colonial-ban provenance and exact 1817 sanctions",
+    "priority": 1,
+    "status": "partially_resolved",
+    "research_state": "modern_state_memory_anchored_primary_colonial_document_missing",
+    "blocks": ["1817 Gazette as historical fact","shooting-in-the-knees sanction"],
+    "next_action": "Search Ceylon Government Gazette and colonial archive catalogues for an identifiable 1817-1818 instrument naming Angampora/Angam Shilpa or clearly describing the practice. Until located, retain the 2019/2022 Cabinet statements as evidence of modern official memory only, not proof of the exact colonial decree or penalty."
   }
 ]
