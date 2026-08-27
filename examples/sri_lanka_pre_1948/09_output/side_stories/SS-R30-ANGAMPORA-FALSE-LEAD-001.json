@@ -1,0 +1,31 @@
+{
+  "schema_version":"1.2",
+  "class":"side_story",
+  "id":"SS-R30-ANGAMPORA-FALSE-LEAD-001",
+  "kind":"false_lead",
+  "status":"candidate",
+  "lineage_quality":"full",
+  "title":"Les Britanniques ont-ils vraiment interdit l’Angampora ?",
+  "arc":"A07b_kandyan_kingdom_and_defensive_interior",
+  "purpose":"Use Angampora to move from Kandy's territorial defence to embodied martial culture, while turning the famous 1817-ban story into a controlled historiographical question rather than repeating it as folklore.",
+  "reason_off_trunk":"The martial art is a vivid cultural lens on warfare and colonial memory, but it is not by itself a chronological rupture or a proven explanation of Kandyan military outcomes.",
+  "payoff":"The reader gets both a concrete picture of Angampora and a reusable lesson: a story can be officially commemorated today without every spectacular detail of its origin being historically closed.",
+  "map_eligible":false,
+  "reader_policy":{"min_age":12},
+  "lineage":{
+    "claim_ids":["C-R30-ANGAMPORA-SYSTEM-001","C-R30-ANGAMPORA-HERITAGE-001","C-R18-KDY-DEF-001"],
+    "source_ids":["MOYS-ANGAMPORA-CURRENT","CABINET-ANGAM-2019","CABINET-ANGAM-2022","DOYLY-KANDYAN-CONSTITUTION-1833","ARCH-SL-KANDYAN-DEFENCE-2022","DE-SILVA-KANDYAN-MILITARY-2004"],
+    "bridge_ids":[],
+    "hil_ids":["HIL-06_security-coercion","HIL-05_religion-culture-legitimacy"],
+    "drift_paths":[],
+    "origin_paths":["docs/intakes/INTAKE_angampora_traditional_martial_art.md","08_questions/question_register_run30_angampora.json"]
+  },
+  "placement":{"section_anchor":"Kandy sans bastions : une capitale défendue par le paysage","return_to":"C-R18-KDY-DEF-001"},
+  "zoom_excursion":null,
+  "content":{
+    "takeaway":"L’Angampora est bien un art martial sri-lankais vivant et aujourd’hui reconnu par l’État ; ce qui reste à prouver, c’est la version précise de la fameuse interdiction britannique de 1817.",
+    "body_markdown":"**La version que l’on raconte d’abord :** après la conquête de Kandy, les Britanniques auraient compris que l’Angampora entretenait une population trop difficile à soumettre. Une Gazette de 1817 aurait donc interdit l’art, et les contrevenants auraient même été condamnés à recevoir des balles dans les genoux. C’est une histoire parfaite : spectaculaire, coloniale, facile à retenir.\n\n**Ce qui est solide :** l’Angampora existe bien comme tradition martiale sri-lankaise. Le ministère des Sports le décrit aujourd’hui comme un système combinant combat à mains nues — *angam* —, armes — *illangam* —, défense personnelle, exercice et méditation. Et l’État sri-lankais prend cette mémoire très au sérieux : en 2019 puis en 2022, le Cabinet a approuvé sa conservation et la levée de ce qu’il appelle explicitement l’interdiction imposée par les Britanniques.\n\n**Mais voici le piège :** ces décisions modernes ne sont pas la Gazette de 1817. Elles prouvent qu’au XXIe siècle l’interdiction coloniale est devenue une composante officielle de la mémoire de l’Angampora ; elles ne suffisent pas à établir le texte exact du décret ni la sanction des « genoux ». Dans notre corpus, aucun fac-similé de cette Gazette n’est encore fermé.\n\nLe détour devient alors plus intéressant qu’une simple histoire de kung-fu local. Après avoir vu comment Kandy transformait ses montagnes, ses passes et ses routes en système défensif, l’Angampora rappelle que la guerre se loge aussi dans les corps : entraînement, armes, lignages de maîtres, discipline. Puis la conquête britannique ouvre une deuxième histoire — celle de la manière dont une société indépendante se souvient de ses pratiques martiales après avoir perdu son royaume. L’art est réel ; le mythe de sa suppression doit encore être démonté pièce par pièce.",
+    "field_question":"Si l’Angampora était assez dangereux pour être interdit, où est le texte colonial qui l’interdit exactement ?"
+  },
+  "render":{"label":"Fausse piste","marker":"[SIDE-STORY:SS-R30-ANGAMPORA-FALSE-LEAD-001]","required_in_reader":false}
+}
