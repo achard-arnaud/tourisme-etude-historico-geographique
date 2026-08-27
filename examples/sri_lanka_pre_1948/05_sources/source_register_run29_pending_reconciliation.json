@@ -37,5 +37,18 @@
     "claims_supported":["C-R29-NALLUR-MURUGAN-001"],
     "limitations":"Institutional heritage account; use as current identity/provenance, not as independent closure of medieval foundation chronology.",
     "provenance":"direct"
+  },
+  {
+    "id":"PATHMANATHAN-SKANDA-KATARAGAMA-1999",
+    "title":"Guardian Deity of Lanka: Skanda-Murukan and Kataragama",
+    "url":"https://www.kataragama.org/research/pathmanathan.htm",
+    "tier":"T1",
+    "anchor_role":"corroborating bridge",
+    "date":"1999",
+    "author_or_institution":"S. Pathmanathan; Journal of the Institute of Asian Studies (reproduced online)",
+    "scope":"Historical-religious analysis of the identification and interaction of Skanda-Murukan/Kataragama traditions in Sri Lanka.",
+    "claims_supported":[],
+    "limitations":"Online reproduction of a published scholarly paper; supports identity/interaction mechanism, not equivalence of every local ritual form or uninterrupted antiquity.",
+    "provenance":"direct"
   }
 ]
