@@ -14,6 +14,7 @@ from frontstage_reader_contract import (
     strip_method_block_from_markdown,
 )
 from paragraph_review_gate import review_paragraph
+from sarah_voice_contract import review_skeleton
 from side_story_contract import KINDS,RENDER_LABELS
 from side_story_presentation import (
     KIND_ORDER,
@@ -25,14 +26,19 @@ from side_story_presentation import (
 )
 
 
-def reviewed_context():
+def reviewed_context(text):
+    style=review_skeleton(text,generation_pass_id="gen-pass-method",generation_context_id="ctx-gen-method")
+    style.update({"passed":True,"evaluator":"bounded_llm","review_pass_id":"style-pass-method","review_context_id":"ctx-style-method"})
+    style["marker_results"]={
+        "scope_precision":{"status":"pass","rationale":"La portée reste limitée à l'explication méthodologique donnée au lecteur."},
+        "continuous_prose_not_social_format":{"status":"pass","rationale":"Le passage reste une phrase de prose continue."},
+        "lived_opening_callback":{"status":"not_applicable","rationale":"Il ne s'agit pas d'une ouverture narrative disposant de matière de terrain vécue."},
+        "rigor_compressed_in_sentence":{"status":"not_applicable","rationale":"Le passage explique une méthode historique plutôt qu'une réserve sur une affirmation."},
+        "concrete_texture_before_abstraction":{"status":"pass","rationale":"L'exemple concret de la paléographie précède toute généralisation."},
+    }
     return {
         "neighbor_context_loaded":True,
-        "sarah_style_review":{
-            "passed":True,
-            "evaluator":"bounded_llm",
-            "markers":["scope_precision","concrete_texture"],
-        },
+        "sarah_style_review":style,
         "hil_scope_declared":True,
         "selected_hil_ids":[],
         "claim_hil_map":{"C-LEGACY":[]},
@@ -89,9 +95,11 @@ Le petit `report.md` est traité comme un delta promu.
 
     def test_reader_method_side_story_is_allowed_but_production_method_is_not(self):
         claim={"id":"C-LEGACY","claim":"x"}
-        good=review_paragraph("Point de méthode — Une inscription se date d'abord par sa paléographie et son contexte.",claim=claim,arc_context=reviewed_context())
+        good_text="Point de méthode — Une inscription se date d'abord par sa paléographie et son contexte."
+        good=review_paragraph(good_text,claim=claim,arc_context=reviewed_context(good_text))
         self.assertTrue(good.passed,good.violations)
-        bad=review_paragraph("Politique éditoriale de la V3 intégrale : la baseline conserve le delta.",claim=claim,arc_context=reviewed_context())
+        bad_text="Politique éditoriale de la V3 intégrale : la baseline conserve le delta."
+        bad=review_paragraph(bad_text,claim=claim,arc_context=reviewed_context(bad_text))
         self.assertFalse(bad.passed)
         self.assertEqual("Don't",bad.violations[0].category)
 
