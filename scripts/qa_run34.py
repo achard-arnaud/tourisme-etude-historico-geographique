@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run34 acceptance gates for mudra, Sasana backlog, side stories and blocked bridges."""
+"""Run34 acceptance gates for mudra, Sasana backlog, side stories and resolved bridge backlog."""
 from __future__ import annotations
 
 import argparse
@@ -20,7 +20,8 @@ PROJECT = ROOT / "examples" / "sri_lanka_pre_1948"
 MUDRA_IDS = {f"GF-MUDRA-{i:02d}" for i in range(1, 9)}
 BACKLOG_IDS = {"GF-MIH-01","GF-MIH-03","GF-MIH-04","GF-MIH-05","GF-MIH-06","GF-MIH-09","GF-ABH-02","GF-ABH-04","GF-ABH-06"}
 STORY_IDS = {"SS-R34-MUDRA-DETOUR-001","SS-R34-BUDDHIST-ICONOGRAPHY-METHOD-001"}
-BRIDGE_IDS = {"B-R34-CREOLISATION-MEDITATION-DRAFT-001","B-R34-RED-GOD-KATARAGAMA-NALLUR-DRAFT-001"}
+DRAFT_IDS = {"B-R34-CREOLISATION-MEDITATION-DRAFT-001","B-R34-RED-GOD-KATARAGAMA-NALLUR-DRAFT-001"}
+PROMOTED_BRIDGE_IDS = {"B-R34-SHAIVA-BUDDHIST-MEDITATION-001","B-R34-RED-GOD-KATARAGAMA-NALLUR-001"}
 INSTRUMENTED = PROJECT / "09_output" / "report_v3_full_run34_instrumented.md"
 READER_MD = PROJECT / "09_output" / "report_v3_full.md"
 READER_DOCX = PROJECT / "09_output" / "Sri_Lanka_Fresque_historico_geographique_vol_retour_v3.docx"
@@ -101,26 +102,41 @@ def backlog_gate() -> dict:
 
 def bridge_gate(reader_text: str | None = None) -> dict:
     rows = load_json(PROJECT / "08_questions" / "run34_blocked_bridge_drafts.json")
-    assert {row["id"] for row in rows} == BRIDGE_IDS
+    assert {row["id"] for row in rows} == DRAFT_IDS
+    resolved = {}
     for row in rows:
-        assert row.get("status") == "draft_blocked_pending_sourcing"
-        assert row.get("source_ids") == []
-        assert "mechanism" not in row
-        assert "reader_policy" in row and "No reader text" in row["reader_policy"]
+        status = str(row.get("status") or "")
+        assert status != "draft_blocked_pending_sourcing", f"Run34 pending not closed: {row['id']}"
+        assert status.startswith("resolved_"), f"Run34 draft must be explicitly resolved: {row['id']}"
+        assert row.get("source_ids"), f"Run34 resolved draft requires sources: {row['id']}"
+        resolution = row.get("resolution") or {}
+        promoted = set(resolution.get("promoted_bridge_ids") or [])
+        assert promoted, f"Run34 resolved draft must name promoted bridge artifact(s): {row['id']}"
+        resolved[row["id"]] = {"status": status, "promoted_bridge_ids": sorted(promoted)}
+    for bridge_id in PROMOTED_BRIDGE_IDS:
+        path = PROJECT / "06_bridges" / f"{bridge_id}.json"
+        assert path.exists(), f"promoted Run34 bridge missing: {bridge_id}"
+        bridge = load_json(path)
+        assert bridge.get("source_ids"), f"promoted Run34 bridge unsourced: {bridge_id}"
+        assert str(bridge.get("mechanism") or "").strip(), f"promoted Run34 bridge mechanism missing: {bridge_id}"
+        assert str(bridge.get("bounded_by") or "").strip(), f"promoted Run34 bridge bounds missing: {bridge_id}"
     if reader_text is not None:
-        for bridge_id in BRIDGE_IDS:
-            assert bridge_id not in reader_text, f"blocked bridge leaked into reader: {bridge_id}"
-    return {"blocked": sorted(BRIDGE_IDS), "reader_leak": False if reader_text is not None else "not_checked"}
+        assert "draft_blocked_pending_sourcing" not in reader_text, "pending sourcing status leaked into reader"
+    return {"resolved": resolved, "promoted_bridges": sorted(PROMOTED_BRIDGE_IDS), "pending_count": 0}
 
 
 def sources_gate() -> dict:
     rows = load_json(PROJECT / "05_sources" / "source_register_run34_iconography.json")
+    forced = load_json(PROJECT / "05_sources" / "source_register_run34_forced_bridge_resolution.json")
+    rows = rows + forced
     tiers = {row["id"]: row.get("tier") for row in rows}
     method = story("SS-R34-BUDDHIST-ICONOGRAPHY-METHOD-001")
     for source_id in method["lineage"]["source_ids"]:
         assert tiers.get(source_id) in {"T1","T2"}, f"method source must be T1/T2: {source_id}"
+    for source_id in ("OXFORD-SHAW-THERAVADA-MEDITATION-2020","OXFORD-FLOOD-HINDU-TANTRA-MEDITATION-2019","OXFORD-CLOUGH-BUDDHA-VISHNU-AVATAR-2021","CAMBRIDGE-BELLE-MURUGAN-RED-ONE-2018"):
+        assert tiers.get(source_id) in {"T1","T2"}, f"forced bridge source must be T1/T2: {source_id}"
     assert "SS-R34-MUDRA-DETOUR-001" in method["content"].get("callback_side_story_ids", [])
-    return {"method_sources": {sid: tiers[sid] for sid in method["lineage"]["source_ids"]}, "callback_reused": True}
+    return {"method_sources": {sid: tiers[sid] for sid in method["lineage"]["source_ids"]}, "forced_sources_t1_t2": True, "callback_reused": True}
 
 
 def return_target_gate(instrumented: str) -> dict:
