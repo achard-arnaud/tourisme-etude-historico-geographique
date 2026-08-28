@@ -18,7 +18,7 @@
     "source_ids":["SNODGRASS-STUPA-1985","SAUNDERS-MUDRA-1985","COOMARASWAMY-BUDDHIST-ICONOGRAPHY-1935"],
     "bridge_ids":[],
     "hil_ids":["HIL-05_religion-culture-legitimacy","HIL-08_historiography-bias"],
-    "drift_paths":["general symbol -> exact local identification","formal resemblance -> chronology/provenance"],
+    "drift_paths":[],
     "origin_paths":[]
   },
   "placement":{
