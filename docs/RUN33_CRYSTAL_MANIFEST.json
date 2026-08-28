@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "run_id": "RUN33",
+  "status": "crystallized_functional_baseline",
+  "source_main_before": "1afd2e48c35b1144aab039cb9667c77768ac6a5d",
+  "files": {
+    "pre_1948": {
+      "output_name": "Sri_Lanka_pre_1948_RUN33_storytelling_final.md",
+      "markdown_sha256": "0d168868600af10aae84f95cdaf639ca608c36b1bfef50f6d9d511eba8a170ed",
+      "markdown_bytes": 163153,
+      "gzip_sha256": "de27dc4297d4ab9f5ed48b533ff5b73c25107330384c326cd587c799ecdf8c59",
+      "gzip_bytes": 56110,
+      "base64_chars": 74816,
+      "parts": [
+        {"path":"docs/run33_crystal/pre_1948/part-01.b64","sha256":"9823731a47c60908117b0c5b2b538d5ff012bfc6832378d5962ecba207fb8851","chars":8000},
+        {"path":"docs/run33_crystal/pre_1948/part-02.b64","sha256":"da37ed3ddec53d22b3a445cc0c600b199374fae0a956f15761d17ec9b8a0f43f","chars":8000},
+        {"path":"docs/run33_crystal/pre_1948/part-03.b64","sha256":"5852c41eb092dcabf05676108c372e553c7ce8348c00fcd809672034d79cf4dd","chars":8000},
+        {"path":"docs/run33_crystal/pre_1948/part-04.b64","sha256":"3b53ad14b57963edd37f46c13af58b0e167042f9db3f3a53c30d80d87216860a","chars":8000},
+        {"path":"docs/run33_crystal/pre_1948/part-05.b64","sha256":"001683e7da62041468fe20224dcab88ee8553f56070e4e006db06280d149c4f9","chars":8000},
+        {"path":"docs/run33_crystal/pre_1948/part-06.b64","sha256":"090b3d24fbaf453c5bff326641888d75c7b29702ed32d43e600c5acdd31aa90e","chars":8000},
+        {"path":"docs/run33_crystal/pre_1948/part-07.b64","sha256":"415881f71a6343ecf69a165e6412cf8ca469224f0b3ab97583a565469e2cbff1","chars":8000},
+        {"path":"docs/run33_crystal/pre_1948/part-08.b64","sha256":"c207e843257845836358bad4e0ee08f32c95c770463aacaf758e0c20678b0cb2","chars":8000},
+        {"path":"docs/run33_crystal/pre_1948/part-09.b64","sha256":"3a7b242ecb2cf774e5d4602ab11a8d5397273d221ea0dbabcb50e065eebc5e52","chars":8000},
+        {"path":"docs/run33_crystal/pre_1948/part-10.b64","sha256":"1f834c7717cc8fff78c512b822e750ff09fa79dabf08ff14720cdd22e3a4092a","chars":2816}
+      ]
+    },
+    "post_1948": {
+      "output_name": "Sri_Lanka_1948_2026_RUN33_storytelling_final.md",
+      "markdown_sha256": "21f83c12aa83d12b4a783ce835de226665e189dd386c8ca540d997fc33c1c0ae",
+      "markdown_bytes": 75958,
+      "gzip_sha256": "7ffa898ee375650d4f76575f421d37bd96ee3e76e0ef6e398e92f2803fed4859",
+      "gzip_bytes": 26766,
+      "base64_chars": 35688,
+      "parts": [
+        {"path":"docs/run33_crystal/post_1948/part-01.b64","sha256":"f811209d2c5c9f63756e5a138e4c2af20f3f377a8fe6cf6c26aaffa9218bc23f","chars":8000},
+        {"path":"docs/run33_crystal/post_1948/part-02.b64","sha256":"7975689bcdd1062e66d317b01264e270ac23d67cb3e6fdac74e8b1f386fcf28a","chars":8000},
+        {"path":"docs/run33_crystal/post_1948/part-03.b64","sha256":"4c8540f9bd97508d7842b2777b0bb4f2fe2c1a78e5aeca1696cfd8ca673b7182","chars":8000},
+        {"path":"docs/run33_crystal/post_1948/part-04.b64","sha256":"3a3476f95b99cbd6c81fd917315d8042f85da2d1f0f1a4b407443d48b5261aba","chars":8000},
+        {"path":"docs/run33_crystal/post_1948/part-05.b64","sha256":"029a6fc42852dc4d3760e737a759b17b799b1c8c1a9b3b3e1fbd48f101647276","chars":3688}
+      ]
+    }
+  },
+  "delivered_artifacts": {
+    "Sri_Lanka_pre_1948_RUN33_storytelling_final.docx":{"sha256":"3913677489247fa4979c9e9815bb63c63a5f069ea69bc3465f46a25bfc08e404","bytes":100741},
+    "Sri_Lanka_pre_1948_RUN33_storytelling_final.pdf":{"sha256":"6bb10829cdb6f72cdc3a50893b51b834fc493cf5d310e64f6fddd3a77419a7d0","bytes":661584},
+    "Sri_Lanka_1948_2026_RUN33_storytelling_final.docx":{"sha256":"fdc9d2db6c5b8d9ab18ee31932b5c618ad616ae96d194f5605b6a3bbb6040a08","bytes":60004},
+    "Sri_Lanka_1948_2026_RUN33_storytelling_final.pdf":{"sha256":"52b6ddb3a911c40d3fd61f2fae8548bcec33e379362eb43aa06f3360c9280e7d","bytes":312606},
+    "RUN33_SOURCE_LEDGER.json":{"sha256":"2caa16c9a2c4b4014f8caeb45a765143b9e2d061237c3534f784aed076858186","bytes":9822}
+  },
+  "mode": "functional_crystal",
+  "state_before": "Run32 iterative-unified baseline on main",
+  "state_after": "Run33 storytelling-clean reader frozen as exact reproducible Markdown plus delivered binary hashes",
+  "promotion_decision": "Promote Run33 as the functional reader baseline through dev to main; no technical pipeline refactor in this run",
+  "branch": "feat/run33-global-storytelling-review",
+  "dispatched_skills": [],
+  "skipped_skills": []
+}
