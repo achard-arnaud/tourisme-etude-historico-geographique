@@ -1,0 +1,26 @@
+[
+  {
+    "class":"bridge_draft",
+    "id":"B-R34-CREOLISATION-MEDITATION-DRAFT-001",
+    "status":"draft_blocked_pending_sourcing",
+    "question":"Can a carefully sourced comparison connect meditation as a central practice across selected Shaiva and Buddhist traditions, and separately explain the Hindu tradition that treats the Buddha as an avatar of Vishnu, without collapsing distinct doctrines into one creolised system?",
+    "source_ids":[],
+    "from_claim_candidate":null,
+    "to_claim_candidate":"C-R34-ICON-MUDRA-001",
+    "blocked_reason":"No T1/T2 comparative religion source has yet been admitted for the specific cross-tradition mechanism. The two propositions also require separate evidentiary treatment before any bridge can be formulated.",
+    "reader_policy":"No reader text, no mechanism field and no graph promotion until explicit T1/T2 sourcing and validation.",
+    "open_tests":["Identify specialist sources on Shaiva meditation practices without universalising Shaivism.","Identify specialist sources on Buddhist meditation without equating iconographic Dhyana with cross-religious doctrine.","Source and delimit the Buddha-as-Vishnu-avatar tradition independently from the meditation comparison."]
+  },
+  {
+    "class":"bridge_draft",
+    "id":"B-R34-RED-GOD-KATARAGAMA-NALLUR-DRAFT-001",
+    "status":"draft_blocked_pending_sourcing",
+    "question":"Is there a historically defensible 'red god' thread through Skanda/Kataragama/Murugan that can connect the Kandy Perahera complex and Nallur Kandaswamy without simply restating that both settings involve cognate deity traditions?",
+    "source_ids":[],
+    "from_claim_candidate":"C-R29-KDY-KATARAGAMA-DEVALAYA-001",
+    "to_claim_candidate":"C-R29-NALLUR-MURUGAN-001",
+    "blocked_reason":"Run29 already establishes a bounded shared-deity bridge. Run34 asks a narrower colour/name/ritual hypothesis that has not been sourced independently at T1/T2 and must not inherit Run29's evidence automatically.",
+    "reader_policy":"No reader text, no mechanism field and no promotion into 06_bridges until the narrower hypothesis receives explicit T1/T2 evidence.",
+    "open_tests":["Source the historical semantics of the 'red god' label in Sri Lankan/Tamil Skanda-Murugan traditions.","Test whether colour/name symbolism is actually relevant to both Nallur and the Kandy Perahera setting.","Keep any valid result distinct from the already sourced Run29 shared-deity bridge."]
+  }
+]
