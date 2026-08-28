@@ -1,146 +1,46 @@
 [
   {
-    "id": "Q-TEA-001",
-    "question": "Did smallholder coffee growers abandon coffee on the same schedule as the estates?",
-    "kind": "causal",
-    "arc": "A07c_coffee_collapse_and_tea_conversion",
-    "hil": [
-      "economy",
-      "society"
-    ],
-    "zoom": "Z1",
-    "status": "open",
-    "discriminating_test": "Compare abandonment dates for smallholder and estate acreage. Smallholders lacked access to corporate capital; if they abandoned on the same schedule, biological constraint dominates. If they persisted, the capital-form hypothesis strengthens.",
-    "expected_evidence": [
-      "colonial agricultural returns",
-      "district administration reports",
-      "planters' association records"
-    ],
-    "falsifier": "No measurable smallholder coffee sector existed (see gate Q-TEA-000), or the schedules are indistinguishable within the resolution of the data.",
-    "gate": "Q-TEA-000",
-    "priority": 1
+    "id":"Q-TEA-001","question":"Did smallholder coffee growers abandon coffee on the same schedule as the estates?","kind":"causal","arc":"A07c_coffee_collapse_and_tea_conversion","hil":["economy","society"],"zoom":"Z1","status":"open","discriminating_test":"Compare abandonment dates for smallholder and estate acreage. Smallholders lacked access to corporate capital; if they abandoned on the same schedule, biological constraint dominates. If they persisted, the capital-form hypothesis strengthens.","expected_evidence":["colonial agricultural returns","district administration reports","planters' association records"],"falsifier":"No measurable smallholder coffee sector existed (see gate Q-TEA-000), or the schedules are indistinguishable within the resolution of the data.","gate":"Q-TEA-000","priority":1
   },
   {
-    "id": "Q-TEA-000",
-    "question": "Did a smallholder coffee sector exist in Ceylon before 1870, and at what share of acreage?",
-    "kind": "metric",
-    "status": "open",
-    "discriminating_test": "Acreage series by holding size.",
-    "falsifier": "Share negligible — in which case Q-TEA-001 closes as abandoned, not answered.",
-    "is_gate_for": [
-      "Q-TEA-001"
-    ],
-    "priority": 1
+    "id":"Q-TEA-000","question":"Did a smallholder coffee sector exist in Ceylon before 1870, and at what share of acreage?","kind":"metric","status":"open","discriminating_test":"Acreage series by holding size.","falsifier":"Share negligible — in which case Q-TEA-001 closes as abandoned, not answered.","is_gate_for":["Q-TEA-001"],"priority":1
   },
   {
-    "id": "Q-TEA-H1",
-    "question": "Does coffee-to-tea conversion timing track the coffee-rust front more closely than ownership transfer or resident labour density?",
-    "kind": "causal",
-    "arc": "A07c_coffee_collapse_and_tea_conversion",
-    "status": "open",
-    "discriminating_test": "Build estate- or district-year lags between rust incidence, coffee acreage collapse and tea acreage expansion, then compare them with ownership-transfer and resident-labour series.",
-    "expected_evidence": [
-      "colonial administration reports",
-      "district crop returns",
-      "planter and estate records"
-    ],
-    "falsifier": "Conversion systematically lags rust while aligning more closely with ownership transfer or labour density, or coffee persists under comparable rust exposure.",
-    "priority": 1
+    "id":"Q-TEA-H1","question":"Does coffee-to-tea conversion timing track the coffee-rust front more closely than ownership transfer or resident labour density?","kind":"causal","arc":"A07c_coffee_collapse_and_tea_conversion","status":"open","discriminating_test":"Build estate- or district-year lags between rust incidence, coffee acreage collapse and tea acreage expansion, then compare them with ownership-transfer and resident-labour series.","expected_evidence":["colonial administration reports","district crop returns","planter and estate records"],"falsifier":"Conversion systematically lags rust while aligning more closely with ownership transfer or labour density, or coffee persists under comparable rust exposure.","priority":1
   },
   {
-    "id": "Q-TEA-H2",
-    "question": "Does coffee-to-tea conversion timing track ownership transfer and agency-house consolidation more closely than the rust front?",
-    "kind": "causal",
-    "arc": "A07c_coffee_collapse_and_tea_conversion",
-    "status": "open",
-    "discriminating_test": "Compare conversion dates with planter bankruptcy, ownership transfer, agency-house consolidation and first factory-capital investment, controlling for local rust timing.",
-    "expected_evidence": [
-      "estate ownership records",
-      "agency-house records",
-      "company histories",
-      "colonial crop returns"
-    ],
-    "falsifier": "Tea conversion generally precedes ownership change, or ownership change has no observable relationship with conversion once rust timing is considered.",
-    "priority": 1
+    "id":"Q-TEA-H2","question":"Does coffee-to-tea conversion timing track ownership transfer and agency-house consolidation more closely than the rust front?","kind":"causal","arc":"A07c_coffee_collapse_and_tea_conversion","status":"open","discriminating_test":"Compare conversion dates with planter bankruptcy, ownership transfer, agency-house consolidation and first factory-capital investment, controlling for local rust timing.","expected_evidence":["estate ownership records","agency-house records","company histories","colonial crop returns"],"falsifier":"Tea conversion generally precedes ownership change, or ownership change has no observable relationship with conversion once rust timing is considered.","priority":1
   },
   {
-    "id": "Q-TEA-H3",
-    "question": "Do estates with larger resident labour forces convert from coffee to tea faster, independently of rust timing and ownership form?",
-    "kind": "causal",
-    "arc": "A07c_coffee_collapse_and_tea_conversion",
-    "status": "open",
-    "discriminating_test": "Compare conversion timing against resident estate population or labour density while controlling for rust arrival and ownership transition.",
-    "expected_evidence": [
-      "estate population returns",
-      "labour recruitment records",
-      "district crop returns"
-    ],
-    "falsifier": "Resident labour density has no relationship with conversion speed after rust and ownership timing are taken into account.",
-    "priority": 1
+    "id":"Q-TEA-H3","question":"Do estates with larger resident labour forces convert from coffee to tea faster, independently of rust timing and ownership form?","kind":"causal","arc":"A07c_coffee_collapse_and_tea_conversion","status":"open","discriminating_test":"Compare conversion timing against resident estate population or labour density while controlling for rust arrival and ownership transition.","expected_evidence":["estate population returns","labour recruitment records","district crop returns"],"falsifier":"Resident labour density has no relationship with conversion speed after rust and ownership timing are taken into account.","priority":1
   },
   {
-    "id": "Q-PLAINS-001",
-    "question": "Were cotton or sugar cultivation actually trialled in the dry-zone plains under British administration?",
-    "kind": "causal",
-    "arc": "A11_dry_zone_frontier_and_malaria",
-    "status": "open",
-    "discriminating_test": "Trialled and failed points to a binding constraint (disease, water). Never trialled points to imperial portfolio choice. The fork is clean.",
-    "expected_evidence": [
-      "agricultural society proceedings",
-      "governors' despatches",
-      "colonial agricultural department reports"
-    ],
-    "falsifier": "Trials found, succeeding at scale — which would refute the whole framing.",
-    "priority": 1
+    "id":"Q-PLAINS-001","question":"Were cotton or sugar cultivation actually trialled in the dry-zone plains under British administration?","kind":"causal","arc":"A11_dry_zone_frontier_and_malaria","status":"open","discriminating_test":"Trialled and failed points to a binding constraint (disease, water). Never trialled points to imperial portfolio choice. The fork is clean.","expected_evidence":["agricultural society proceedings","governors' despatches","colonial agricultural department reports"],"falsifier":"Trials found, succeeding at scale — which would refute the whole framing.","priority":1
   },
   {
-    "id": "Q-PLAINS-002",
-    "question": "Do the establishment dates of large sugar operations in the plains follow the dates of vector control and irrigation restoration?",
-    "kind": "causal",
-    "status": "open",
-    "discriminating_test": "Chronological ordering of three series: malaria control programmes, major irrigation restoration, sugar estate establishment.",
-    "falsifier": "Sugar established before either intervention, or long after both with no other explanation.",
-    "priority": 1
+    "id":"Q-PLAINS-002","question":"Do the establishment dates of large sugar operations in the plains follow the dates of vector control and irrigation restoration?","kind":"causal","status":"open","discriminating_test":"Chronological ordering of three series: malaria control programmes, major irrigation restoration, sugar estate establishment.","falsifier":"Sugar established before either intervention, or long after both with no other explanation.","priority":1
   },
   {
-    "id": "Q-KANDY-002",
-    "question": "Is there documentary evidence that the Kandyan state deliberately kept the mountain passes unroaded as defence policy?",
-    "kind": "epistemic",
-    "status": "bounded",
-    "discriminating_test": "Explicit statement in Kandyan-era records, colonial military intelligence, or contemporary travellers' accounts — as opposed to later inference from the absence of roads.",
-    "falsifier": "Only retrospective inference exists, in which case the claim is capped at C and stated as inference.",
-    "priority": 1,
-    "resolution": {
-      "answer": "Knox 1681 confirms naturally strong terrain and one-abreast routes, but no formal non-road-building order has been located.",
-      "claim_ids": [
-        "C-R24-KDY-KNOX-ROADS-001",
-        "C-R17-KDY-TERRAIN-001",
-        "C-R18-KDY-DEF-001"
-      ],
-      "remaining_gate": "Explicit Kandyan order or contemporary intelligence statement of deliberate infrastructure denial."
-    }
+    "id":"Q-KANDY-002","question":"Is there documentary evidence that the Kandyan state deliberately kept the mountain passes unroaded as defence policy?","kind":"epistemic","status":"bounded","discriminating_test":"Explicit statement in Kandyan-era records, colonial military intelligence, or contemporary travellers' accounts — as opposed to later inference from the absence of roads.","falsifier":"Only retrospective inference exists, in which case the claim is capped at C and stated as inference.","priority":1,"resolution":{"answer":"Knox 1681 confirms naturally strong terrain and one-abreast routes, but no formal non-road-building order has been located.","claim_ids":["C-R24-KDY-KNOX-ROADS-001","C-R17-KDY-TERRAIN-001","C-R18-KDY-DEF-001"],"remaining_gate":"Explicit Kandyan order or contemporary intelligence statement of deliberate infrastructure denial."}
   },
   {
-    "id": "Q-ANC-001",
-    "question": "Does the early epigraphy at Mihintale contradict the chronicle anywhere?",
-    "kind": "epistemic",
-    "status": "open",
-    "discriminating_test": "Systematic comparison of named individuals, institutions and practices. Contradiction is more informative than agreement and is what is not usually sought.",
-    "falsifier": "No overlap of referents at all — in which case the two bodies of evidence are simply disjoint and neither corroborates nor contradicts.",
-    "priority": 1
+    "id":"Q-ANC-001","question":"Does the early epigraphy at Mihintale contradict the chronicle anywhere?","kind":"epistemic","status":"open","discriminating_test":"Systematic comparison of named individuals, institutions and practices. Contradiction is more informative than agreement and is what is not usually sought.","falsifier":"No overlap of referents at all — in which case the two bodies of evidence are simply disjoint and neither corroborates nor contradicts.","priority":1
   },
   {
-    "id": "Q-META-001",
-    "question": "Is the corpus's single-publisher source concentration a property of the subject or an artefact of the retrieval method?",
-    "kind": "method",
-    "status": "bounded",
-    "discriminating_test": "Re-run a sample of source discoveries through deliberately different entry points and record which sources surface that did not before.",
-    "falsifier": "Concentration reproduced across independent entry points, indicating a property of the literature rather than of the tool.",
-    "consequence_if_confirmed": "Every corroboration claim resting on the concentrated base must be re-examined.",
-    "priority": 1,
-    "resolution": {
-      "answer": "After Run24, the pre-1948 register contains 101 sources across 43 domains and 68 institutional labels; 25 entries use cambridge.org. Concentration is material but not single-publisher, and legacy retrieval metadata remains a confounder.",
-      "remaining_gate": "Normalize legacy author/publisher metadata and compare source-domain share by arc."
-    }
+    "id":"Q-META-001","question":"Is the corpus's single-publisher source concentration a property of the subject or an artefact of the retrieval method?","kind":"method","status":"bounded","discriminating_test":"Re-run a sample of source discoveries through deliberately different entry points and record which sources surface that did not before.","falsifier":"Concentration reproduced across independent entry points, indicating a property of the literature rather than of the tool.","consequence_if_confirmed":"Every corroboration claim resting on the concentrated base must be re-examined.","priority":1,"resolution":{"answer":"After Run24, the pre-1948 register contains 101 sources across 43 domains and 68 institutional labels; 25 entries use cambridge.org. Concentration is material but not single-publisher, and legacy retrieval metadata remains a confounder.","remaining_gate":"Normalize legacy author/publisher metadata and compare source-domain share by arc."}
+  },
+  {
+    "id":"Q-R34-SASANA-PANELS-001",
+    "question":"What do the still-untranscribed Sasana panels 7/9/3 depict, and is any proposed identification with the Kusa Jataka supported by a readable plaque or authoritative catalogue?",
+    "kind":"epistemic",
+    "arc":"A02c_anuradhapura_and_the_mahavihara",
+    "hil":["HIL-05_religion-culture-legitimacy","HIL-08_historiography-bias"],
+    "zoom":"Z0",
+    "status":"blocked",
+    "discriminating_test":"Obtain a direct photograph/transcription of the relevant plaques or an authoritative institutional catalogue entry matching the exact panels, then compare the text and iconography before naming a Jataka.",
+    "expected_evidence":["direct plaque photographs","verbatim Sinhala/English transcription","institutional catalogue or scholarly iconographic identification"],
+    "falsifier":"The readable plaque/catalogue identifies another episode, or no object-level evidence links the panels to Kusa Jataka.",
+    "priority":1,
+    "blocked_by":"Terrain file 11 lacks the necessary photo/transcription for these exact panels. Run34 method side story must remain independent of this identification thread."
   }
 ]

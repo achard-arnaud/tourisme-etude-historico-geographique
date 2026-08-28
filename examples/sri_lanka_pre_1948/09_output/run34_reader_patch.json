@@ -1,0 +1,20 @@
+{
+  "run":34,
+  "anchor":"2. Valagamba et Abhayagiri : le Saṅgha n’est pas monolithique",
+  "sequence":[
+    {
+      "type":"paragraph",
+      "text":"En août 2026, l’actualité archéologique a donné à cette histoire institutionnelle une matière très concrète : dix-sept statues du Bouddha en bronze doré ont été mises au jour dans un rempart du complexe d’Abhayagiri. L’annonce est solide pour le fait de découverte ; elle reste une annonce de fouille, pas encore une publication archéologique complète. [claim:C-R16-ABH-FIND-001]"
+    },
+    {"type":"side_story","id":"SS-R34-MUDRA-DETOUR-001"},
+    {
+      "type":"paragraph",
+      "text":"La datation proposée au moment de l’annonce reste stylistique : les bronzes ont été rapprochés d’objets des VIIe–VIIIe siècles et estimés provisoirement à environ 1 200–1 300 ans. Tant que l’analyse technique annoncée n’est pas publiée, cette chronologie reste une inférence bornée. [claim:C-R16-ABH-DATE-001]"
+    },
+    {"type":"side_story","id":"SS-R34-BUDDHIST-ICONOGRAPHY-METHOD-001"},
+    {
+      "type":"paragraph",
+      "text":"Le même garde-fou vaut pour le stūpa : sa forme, son axe et sa fonction reliquaire donnent un vocabulaire comparatif puissant, mais ne remplacent jamais l’archéologie propre au monument que l’on regarde. [claim:C-R34-ICON-STUPA-001]"
+    }
+  ]
+}

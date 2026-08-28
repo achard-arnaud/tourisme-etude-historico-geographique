@@ -1,0 +1,44 @@
+[
+  {
+    "id": "SNODGRASS-STUPA-1985",
+    "title": "The Symbolism of the Stupa",
+    "url": "https://www.jstor.org/stable/10.7591/j.ctv1nhnhr",
+    "tier": "T1",
+    "anchor_role": "canonical anchor",
+    "date": "1985",
+    "author_or_institution": "Adrian Snodgrass; Cornell University Press / Southeast Asia Program Publications",
+    "author_institution": "Cornell University Press / Southeast Asia Program Publications",
+    "scope": "Comparative architectural and symbolic analysis of the stupa, including spatial form, axis, orientation and religious symbolism.",
+    "claims_supported": ["C-R34-ICON-STUPA-001"],
+    "limitations": "Comparative Buddhist architectural study, not a site-specific archaeological dating tool for an individual Sri Lankan stupa.",
+    "provenance": "direct"
+  },
+  {
+    "id": "COOMARASWAMY-BUDDHIST-ICONOGRAPHY-1935",
+    "title": "Elements of Buddhist Iconography",
+    "url": "https://doi.org/10.4159/9780674283824",
+    "tier": "T1",
+    "anchor_role": "canonical anchor",
+    "date": "1935",
+    "author_or_institution": "Ananda K. Coomaraswamy; Harvard University Press / Harvard-Yenching Institute",
+    "author_institution": "Harvard University Press / Harvard-Yenching Institute",
+    "scope": "Textual and iconographic study of Buddhist symbols, including the earth-lotus, word-wheel and lotus-throne.",
+    "claims_supported": ["C-R34-ICON-LOTUS-001"],
+    "limitations": "A broad South Asian iconographic interpretation; individual motifs still require local context, dating and provenance.",
+    "provenance": "direct"
+  },
+  {
+    "id": "SAUNDERS-MUDRA-1985",
+    "title": "Mudra: A Study of Symbolic Gestures in Japanese Buddhist Sculpture",
+    "url": "https://www.jstor.org/stable/j.ctv39x65z",
+    "tier": "T1",
+    "anchor_role": "canonical anchor",
+    "date": "1985 paperback; original study 1960",
+    "author_or_institution": "E. Dale Saunders; Princeton University Press",
+    "author_institution": "Princeton University Press",
+    "scope": "Systematic study of Buddhist mudra as ritual and iconographic signs, including principal and secondary hand gestures and their identifying functions.",
+    "claims_supported": ["C-R34-ICON-MUDRA-001"],
+    "limitations": "The corpus is centered on Japanese Buddhist sculpture; use only for general mudra semantics and iconographic method, not to infer Sri Lankan date, school or provenance.",
+    "provenance": "direct"
+  }
+]

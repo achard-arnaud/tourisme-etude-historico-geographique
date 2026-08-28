@@ -8,10 +8,11 @@ class CompositionPipelineTests(unittest.TestCase):
     def test_legacy_side_story_inventory_has_zero_untracked(self):
         sys.path.insert(0,str(ROOT/'scripts'));from side_story_contract import side_story_coverage,load_side_stories
         pre=side_story_coverage(PRE);post=side_story_coverage(POST);self.assertGreaterEqual(pre['discovered'],21);self.assertEqual(0,pre['untracked']);self.assertGreaterEqual(len(load_side_stories(PRE)),26);self.assertGreaterEqual(post['discovered'],3);self.assertEqual(0,post['untracked'])
-    def test_method_has_no_fake_return_and_validated_narrative_returns_resolve(self):
+    def test_method_return_is_optional_or_marker_backed_and_validated_returns_resolve(self):
         sys.path.insert(0,str(ROOT/'scripts'));from side_story_contract import load_side_stories,validate_side_stories
         for _,item in load_side_stories(PRE):
-            if item['kind']=='method':self.assertFalse((item.get('placement') or {}).get('return_to'))
+            placement=item.get('placement') or {};ret=placement.get('return_to')
+            if item['kind']=='method' and ret:self.assertEqual('reader_patch_marker',placement.get('return_resolution'))
         errors,_,_,_=validate_side_stories(PRE);self.assertEqual([],errors)
     def test_pre_arc_recaps_cover_recap_ready_arcs_and_tease_forward(self):
         sys.path.insert(0,str(ROOT/'scripts'));from arc_recap_contract import validate_arc_recaps,load_arc_recaps,arc_evidence_status,NON_RECAP_READY_EVIDENCE

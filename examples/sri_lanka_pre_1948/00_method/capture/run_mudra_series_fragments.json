@@ -1,0 +1,98 @@
+[
+  {
+    "id": "GF-MUDRA-01",
+    "source_id": "PHOTO-1000033599",
+    "summary": "Plaque-visible field photograph identifies Namaskara Mudrā; retain as an iconographic observation, not as an historical claim.",
+    "type": "iconographic_observation",
+    "zoom": "Z0",
+    "corpus": "sri_lanka_pre_1948",
+    "candidate_arc": "A02c_anuradhapura_and_the_mahavihara",
+    "verification_target": "Confirm exact object identity, museum/complex provenance and plaque transcription before any object-level factual use.",
+    "drift_risk": "Do not infer date, workshop, provenance or specifically Sri Lankan origin from the gesture alone.",
+    "promotes_to": ""
+  },
+  {
+    "id": "GF-MUDRA-02",
+    "source_id": "PHOTO-1000033602",
+    "summary": "Plaque-visible field photograph identifies Dhyāna Mudrā; retain as an iconographic observation.",
+    "type": "iconographic_observation",
+    "zoom": "Z0",
+    "corpus": "sri_lanka_pre_1948",
+    "candidate_arc": "A02c_anuradhapura_and_the_mahavihara",
+    "verification_target": "Confirm exact object identity, museum/complex provenance and plaque transcription.",
+    "drift_risk": "Meditative hand posture does not establish school, date or doctrinal affiliation.",
+    "promotes_to": ""
+  },
+  {
+    "id": "GF-MUDRA-03",
+    "source_id": "PHOTO-1000033601",
+    "summary": "Partially cropped plaque and visible raised palm are consistent with Abhaya Mudrā; whether this is a distinct statue from GF-MUDRA-05/08 or another view remains unresolved.",
+    "type": "iconographic_observation",
+    "zoom": "Z0",
+    "corpus": "sri_lanka_pre_1948",
+    "candidate_arc": "A02c_anuradhapura_and_the_mahavihara",
+    "verification_target": "Obtain uncropped plaque/object view and compare pedestal, body, backdrop and plaque against GF-MUDRA-05 and GF-MUDRA-08.",
+    "drift_risk": "Do not count three distinct Abhaya statues until object distinctness is evidenced.",
+    "promotes_to": ""
+  },
+  {
+    "id": "GF-MUDRA-04",
+    "source_id": "PHOTO-1000033606",
+    "summary": "No readable plaque is visible. The descending hand can suggest Bhūmisparśa, but the identification remains an interpretive visual hypothesis rather than an established label.",
+    "type": "iconographic_observation",
+    "zoom": "Z0",
+    "corpus": "sri_lanka_pre_1948",
+    "candidate_arc": "A02c_anuradhapura_and_the_mahavihara",
+    "verification_target": "Recover an unobstructed plaque or direct institutional catalogue entry for the exact object.",
+    "drift_risk": "Never upgrade Bhūmisparśa from proposed to confirmed from hand position alone.",
+    "promotes_to": ""
+  },
+  {
+    "id": "GF-MUDRA-05",
+    "source_id": "PHOTO-1000033600",
+    "summary": "Visible plaque identifies Abhaya Mudrā; object distinctness versus GF-MUDRA-03/08 is unresolved from the available views.",
+    "type": "iconographic_observation",
+    "zoom": "Z0",
+    "corpus": "sri_lanka_pre_1948",
+    "candidate_arc": "A02c_anuradhapura_and_the_mahavihara",
+    "verification_target": "Compare stable object features and plaque context with GF-MUDRA-03 and GF-MUDRA-08.",
+    "drift_risk": "Do not treat repeated photographs as separate statues without a discriminating visual feature.",
+    "promotes_to": ""
+  },
+  {
+    "id": "GF-MUDRA-06",
+    "source_id": "PHOTO-1000033605",
+    "summary": "Plaque-visible field photograph identifies Vitarka Mudrā; retain as an iconographic observation.",
+    "type": "iconographic_observation",
+    "zoom": "Z0",
+    "corpus": "sri_lanka_pre_1948",
+    "candidate_arc": "A02c_anuradhapura_and_the_mahavihara",
+    "verification_target": "Confirm exact object identity and museum/complex provenance.",
+    "drift_risk": "Do not infer a precise teaching episode, date or school without object-specific evidence.",
+    "promotes_to": ""
+  },
+  {
+    "id": "GF-MUDRA-07",
+    "source_id": "PHOTO-1000033603",
+    "summary": "Plaque-visible field photograph identifies Dharmacakra Mudrā; retain as an iconographic observation.",
+    "type": "iconographic_observation",
+    "zoom": "Z0",
+    "corpus": "sri_lanka_pre_1948",
+    "candidate_arc": "A02c_anuradhapura_and_the_mahavihara",
+    "verification_target": "Confirm exact object identity and plaque transcription before linking it to a specific biographical episode.",
+    "drift_risk": "The gesture convention is illustrative; it does not itself prove chronology or provenance.",
+    "promotes_to": ""
+  },
+  {
+    "id": "GF-MUDRA-08",
+    "source_id": "PHOTO-1000033604",
+    "summary": "Visible plaque identifies Abhaya Mudrā; this is the third photographed Abhaya occurrence, but distinctness from GF-MUDRA-03/05 cannot be resolved from current evidence.",
+    "type": "iconographic_observation",
+    "zoom": "Z0",
+    "corpus": "sri_lanka_pre_1948",
+    "candidate_arc": "A02c_anuradhapura_and_the_mahavihara",
+    "verification_target": "Compare object-level features and plaque context across all three Abhaya photographs.",
+    "drift_risk": "Keep the count of distinct statues explicitly unresolved until the photographs discriminate objects.",
+    "promotes_to": ""
+  }
+]

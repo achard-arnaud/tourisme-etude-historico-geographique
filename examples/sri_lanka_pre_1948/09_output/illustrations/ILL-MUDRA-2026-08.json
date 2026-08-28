@@ -1,0 +1,90 @@
+[
+  {
+    "schema_version":"1.0","class":"illustration","id":"ILL-MUDRA-01","status":"candidate",
+    "source":{"kind":"field_photo","asset_ref":"1000033599.jpg","sha256":null,"captured_at":"2026-08","location":"Sri Lanka; exact museum/complex pending direct confirmation","creator":"user","rights":"user_supplied","binary_status":"external_only","sha256_status":"unavailable_external_only"},
+    "input_refs":[{"type":"field_fragment","id":"GF-MUDRA-01","path":"00_method/capture/run_mudra_series_fragments.json"}],
+    "depiction":{"subject":"Buddha image with Namaskara Mudrā","event_or_theme":"iconographic gesture vocabulary","evidence_status":"observed_caption","period":"undated field object","notes":"Plaque-visible identification retained as field observation only.","textual_layer":"unresolved"},
+    "vision_review":{"status":"pending","confidence":null,"caption_transcription":"","visual_notes":"","uncertainty":"Exact object provenance and date remain unresolved."},
+    "human_review":{"status":"pending","reviewed_at":null,"notes":"Binary remains external to the repository; no hash fabricated."},
+    "fragment":{"caption":"Namaskara Mudrā : une position des mains à lire comme convention iconographique, pas comme datation.","what_it_shows":"A field example of a named hand gesture.","why_here":"Supports the reusable mudrā vocabulary detour.","limits":"Does not identify date, workshop or provenance."},
+    "placement":{"subsection_ref":"mudra-vocabulary","relevance_rank":2,"arc_ref":"A02c_anuradhapura_and_the_mahavihara","target_status":"proposed_missing","section_anchor":""},
+    "render":{"required_in_reader":false,"caption_only_allowed":true,"marker":"[ILLUSTRATION:ILL-MUDRA-01]"}
+  },
+  {
+    "schema_version":"1.0","class":"illustration","id":"ILL-MUDRA-02","status":"candidate",
+    "source":{"kind":"field_photo","asset_ref":"1000033602.jpg","sha256":null,"captured_at":"2026-08","location":"Sri Lanka; exact museum/complex pending direct confirmation","creator":"user","rights":"user_supplied","binary_status":"external_only","sha256_status":"unavailable_external_only"},
+    "input_refs":[{"type":"field_fragment","id":"GF-MUDRA-02","path":"00_method/capture/run_mudra_series_fragments.json"}],
+    "depiction":{"subject":"Buddha image with Dhyāna Mudrā","event_or_theme":"meditation gesture","evidence_status":"observed_caption","period":"undated field object","notes":"Plaque-visible identification; no doctrinal equivalence inferred.","textual_layer":"unresolved"},
+    "vision_review":{"status":"pending","confidence":null,"caption_transcription":"","visual_notes":"","uncertainty":"Exact object provenance and date remain unresolved."},
+    "human_review":{"status":"pending","reviewed_at":null,"notes":"Binary external_only; hash unavailable."},
+    "fragment":{"caption":"Dhyāna Mudrā : les mains reposent dans une convention associée à la méditation.","what_it_shows":"A field example of meditative iconography.","why_here":"Supports the iconographic vocabulary detour without making a cross-religious doctrinal claim.","limits":"Gesture alone does not establish school, period or theology."},
+    "placement":{"subsection_ref":"mudra-vocabulary","relevance_rank":1,"arc_ref":"A02c_anuradhapura_and_the_mahavihara","target_status":"proposed_missing","section_anchor":""},
+    "render":{"required_in_reader":false,"caption_only_allowed":true,"marker":"[ILLUSTRATION:ILL-MUDRA-02]"}
+  },
+  {
+    "schema_version":"1.0","class":"illustration","id":"ILL-MUDRA-03","status":"candidate",
+    "source":{"kind":"field_photo","asset_ref":"1000033601.jpg","sha256":null,"captured_at":"2026-08","location":"Sri Lanka; exact museum/complex pending direct confirmation","creator":"user","rights":"user_supplied","binary_status":"external_only","sha256_status":"unavailable_external_only"},
+    "input_refs":[{"type":"field_fragment","id":"GF-MUDRA-03","path":"00_method/capture/run_mudra_series_fragments.json"}],
+    "depiction":{"subject":"Buddha image consistent with Abhaya Mudrā","event_or_theme":"protection/reassurance gesture","evidence_status":"observed_caption","period":"undated field object","notes":"Partially cropped plaque; object distinctness unresolved.","textual_layer":"unresolved","distinctness_status":"unresolved_against_ILL-MUDRA-05_08"},
+    "vision_review":{"status":"pending","confidence":null,"caption_transcription":"","visual_notes":"Raised open palm consistent with Abhaya convention.","uncertainty":"Cannot determine whether ILL-MUDRA-03, 05 and 08 are three statues or repeated views."},
+    "human_review":{"status":"pending","reviewed_at":null,"notes":"Do not deduplicate without discriminating object features."},
+    "fragment":{"caption":"Abhaya Mudrā, sous réserve d’un contrôle de la plaque et de l’identité de l’objet.","what_it_shows":"A raised-palm gesture consistent with Abhaya.","why_here":"Illustrates why gesture identification and object identification are separate gates.","limits":"Distinctness versus ILL-MUDRA-05/08 unresolved."},
+    "placement":{"subsection_ref":"mudra-vocabulary","relevance_rank":2,"arc_ref":"A02c_anuradhapura_and_the_mahavihara","target_status":"proposed_missing","section_anchor":""},
+    "render":{"required_in_reader":false,"caption_only_allowed":true,"marker":"[ILLUSTRATION:ILL-MUDRA-03]"}
+  },
+  {
+    "schema_version":"1.0","class":"illustration","id":"ILL-MUDRA-04","status":"candidate",
+    "source":{"kind":"field_photo","asset_ref":"1000033606.jpg","sha256":null,"captured_at":"2026-08","location":"Sri Lanka; exact museum/complex pending direct confirmation","creator":"user","rights":"user_supplied","binary_status":"external_only","sha256_status":"unavailable_external_only"},
+    "input_refs":[{"type":"field_fragment","id":"GF-MUDRA-04","path":"00_method/capture/run_mudra_series_fragments.json"}],
+    "depiction":{"subject":"Buddha image; Bhūmisparśa proposed but unconfirmed","event_or_theme":"possible earth-touching gesture","evidence_status":"interpretive","period":"undated field object","notes":"No readable plaque visible. Bhūmisparśa is a proposed visual identification, not established evidence.","textual_layer":"unresolved"},
+    "vision_review":{"status":"pending","confidence":null,"caption_transcription":"","visual_notes":"Descending hand may evoke the Bhūmisparśa convention.","uncertainty":"Direct plaque/catalogue evidence is absent."},
+    "human_review":{"status":"pending","reviewed_at":null,"notes":"Mandatory confirmation gate before naming the mudrā as fact."},
+    "fragment":{"caption":"Geste possiblement Bhūmisparśa : hypothèse visuelle seulement.","what_it_shows":"A hand position that may fit an earth-touching convention.","why_here":"Demonstrates the boundary between iconographic interpretation and labelled identification.","limits":"No visible plaque confirms the mudrā."},
+    "placement":{"subsection_ref":"mudra-vocabulary","relevance_rank":1,"arc_ref":"A02c_anuradhapura_and_the_mahavihara","target_status":"proposed_missing","section_anchor":""},
+    "render":{"required_in_reader":false,"caption_only_allowed":true,"marker":"[ILLUSTRATION:ILL-MUDRA-04]"}
+  },
+  {
+    "schema_version":"1.0","class":"illustration","id":"ILL-MUDRA-05","status":"candidate",
+    "source":{"kind":"field_photo","asset_ref":"1000033600.jpg","sha256":null,"captured_at":"2026-08","location":"Sri Lanka; exact museum/complex pending direct confirmation","creator":"user","rights":"user_supplied","binary_status":"external_only","sha256_status":"unavailable_external_only"},
+    "input_refs":[{"type":"field_fragment","id":"GF-MUDRA-05","path":"00_method/capture/run_mudra_series_fragments.json"}],
+    "depiction":{"subject":"Buddha image with Abhaya Mudrā","event_or_theme":"protection/reassurance gesture","evidence_status":"observed_caption","period":"undated field object","notes":"Visible plaque; object distinctness unresolved.","textual_layer":"unresolved","distinctness_status":"unresolved_against_ILL-MUDRA-03_08"},
+    "vision_review":{"status":"pending","confidence":null,"caption_transcription":"","visual_notes":"","uncertainty":"Cannot determine whether ILL-MUDRA-03, 05 and 08 are three statues or repeated views."},
+    "human_review":{"status":"pending","reviewed_at":null,"notes":"Do not deduplicate without discriminating object features."},
+    "fragment":{"caption":"Abhaya Mudrā : identification de plaque, mais identité physique de la statue encore à distinguer des deux autres vues.","what_it_shows":"A labelled Abhaya example.","why_here":"Supports vocabulary while preserving the duplicate-object gate.","limits":"Object distinctness unresolved."},
+    "placement":{"subsection_ref":"mudra-vocabulary","relevance_rank":2,"arc_ref":"A02c_anuradhapura_and_the_mahavihara","target_status":"proposed_missing","section_anchor":""},
+    "render":{"required_in_reader":false,"caption_only_allowed":true,"marker":"[ILLUSTRATION:ILL-MUDRA-05]"}
+  },
+  {
+    "schema_version":"1.0","class":"illustration","id":"ILL-MUDRA-06","status":"candidate",
+    "source":{"kind":"field_photo","asset_ref":"1000033605.jpg","sha256":null,"captured_at":"2026-08","location":"Sri Lanka; exact museum/complex pending direct confirmation","creator":"user","rights":"user_supplied","binary_status":"external_only","sha256_status":"unavailable_external_only"},
+    "input_refs":[{"type":"field_fragment","id":"GF-MUDRA-06","path":"00_method/capture/run_mudra_series_fragments.json"}],
+    "depiction":{"subject":"Buddha image with Vitarka Mudrā","event_or_theme":"teaching/discussion gesture","evidence_status":"observed_caption","period":"undated field object","notes":"Plaque-visible field identification.","textual_layer":"unresolved"},
+    "vision_review":{"status":"pending","confidence":null,"caption_transcription":"","visual_notes":"","uncertainty":"Exact object provenance and date unresolved."},
+    "human_review":{"status":"pending","reviewed_at":null,"notes":"Binary external_only; hash unavailable."},
+    "fragment":{"caption":"Vitarka Mudrā : un code visuel de l’enseignement ou de la discussion doctrinale.","what_it_shows":"A labelled teaching-gesture convention.","why_here":"Adds a contrasting semantic family to the mudrā detour.","limits":"Does not identify a precise historical teaching scene."},
+    "placement":{"subsection_ref":"mudra-vocabulary","relevance_rank":1,"arc_ref":"A02c_anuradhapura_and_the_mahavihara","target_status":"proposed_missing","section_anchor":""},
+    "render":{"required_in_reader":false,"caption_only_allowed":true,"marker":"[ILLUSTRATION:ILL-MUDRA-06]"}
+  },
+  {
+    "schema_version":"1.0","class":"illustration","id":"ILL-MUDRA-07","status":"candidate",
+    "source":{"kind":"field_photo","asset_ref":"1000033603.jpg","sha256":null,"captured_at":"2026-08","location":"Sri Lanka; exact museum/complex pending direct confirmation","creator":"user","rights":"user_supplied","binary_status":"external_only","sha256_status":"unavailable_external_only"},
+    "input_refs":[{"type":"field_fragment","id":"GF-MUDRA-07","path":"00_method/capture/run_mudra_series_fragments.json"}],
+    "depiction":{"subject":"Buddha image with Dharmacakra Mudrā","event_or_theme":"turning/teaching of the Dharma","evidence_status":"observed_caption","period":"undated field object","notes":"Plaque-visible field identification.","textual_layer":"unresolved"},
+    "vision_review":{"status":"pending","confidence":null,"caption_transcription":"","visual_notes":"","uncertainty":"Exact object provenance and date unresolved."},
+    "human_review":{"status":"pending","reviewed_at":null,"notes":"Binary external_only; hash unavailable."},
+    "fragment":{"caption":"Dharmacakra Mudrā : le geste renvoie au registre de l’enseignement du Dharma.","what_it_shows":"A labelled two-hand teaching convention.","why_here":"Useful to distinguish semantic gesture families.","limits":"Gesture does not independently prove a specific episode or date."},
+    "placement":{"subsection_ref":"mudra-vocabulary","relevance_rank":1,"arc_ref":"A02c_anuradhapura_and_the_mahavihara","target_status":"proposed_missing","section_anchor":""},
+    "render":{"required_in_reader":false,"caption_only_allowed":true,"marker":"[ILLUSTRATION:ILL-MUDRA-07]"}
+  },
+  {
+    "schema_version":"1.0","class":"illustration","id":"ILL-MUDRA-08","status":"candidate",
+    "source":{"kind":"field_photo","asset_ref":"1000033604.jpg","sha256":null,"captured_at":"2026-08","location":"Sri Lanka; exact museum/complex pending direct confirmation","creator":"user","rights":"user_supplied","binary_status":"external_only","sha256_status":"unavailable_external_only"},
+    "input_refs":[{"type":"field_fragment","id":"GF-MUDRA-08","path":"00_method/capture/run_mudra_series_fragments.json"}],
+    "depiction":{"subject":"Buddha image with Abhaya Mudrā","event_or_theme":"protection/reassurance gesture","evidence_status":"observed_caption","period":"undated field object","notes":"Visible plaque; third photographed Abhaya occurrence; object distinctness unresolved.","textual_layer":"unresolved","distinctness_status":"unresolved_against_ILL-MUDRA-03_05"},
+    "vision_review":{"status":"pending","confidence":null,"caption_transcription":"","visual_notes":"","uncertainty":"Cannot determine whether ILL-MUDRA-03, 05 and 08 are three statues or repeated views."},
+    "human_review":{"status":"pending","reviewed_at":null,"notes":"Ambiguity preserved rather than arbitrarily deduplicated."},
+    "fragment":{"caption":"Troisième photographie associée à Abhaya Mudrā ; le nombre de statues distinctes reste ouvert.","what_it_shows":"Another labelled Abhaya occurrence.","why_here":"Makes the object-distinctness issue explicit in the illustration intake.","limits":"Do not count as a third statue without comparative evidence."},
+    "placement":{"subsection_ref":"mudra-vocabulary","relevance_rank":2,"arc_ref":"A02c_anuradhapura_and_the_mahavihara","target_status":"proposed_missing","section_anchor":""},
+    "render":{"required_in_reader":false,"caption_only_allowed":true,"marker":"[ILLUSTRATION:ILL-MUDRA-08]"}
+  }
+]
