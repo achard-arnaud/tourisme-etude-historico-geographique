@@ -12,7 +12,7 @@ INPUT_TYPES = {"intake", "field_fragment", "claim", "bridge", "side_story", "arc
 EVIDENCE_STATUSES = {"observed_caption", "canonical_text", "chronicle_tradition", "interpretive"}
 TEXTUAL_LAYERS = {"early_discourse", "canonical_vinaya", "later_biography", "chronicle", "local_temple", "unresolved"}
 BINARY_STATUSES = {"external_only", "repository"}
-SHA_STATUSES = {"verified_at_intake", "repository_verified", "supplied_unverified"}
+SHA_STATUSES = {"verified_at_intake", "repository_verified", "supplied_unverified", "unavailable_external_only"}
 TAG_REVIEW_STATUSES = {"pending", "approved", "rejected"}
 TAG_REVIEW_TRIGGERS = {"auto_low_confidence", "manual"}
 FORBIDDEN_CAPTION_PATTERNS = [r"\bprouve\b", r"\bconfirme historiquement\b", r"\battest[ée] formellement\b", r"\bdémontre que\b"]
@@ -120,21 +120,35 @@ def validate_illustrations(project: Path) -> tuple[list[str], list[str], int]:
         if status not in STATUSES:
             errors.append(f"illustration {iid}: invalid status")
         src = item.get("source") or {}
-        if not src.get("asset_ref") or not src.get("sha256"):
-            errors.append(f"illustration {iid}: source asset_ref and sha256 required")
-        elif not re.fullmatch(r"[0-9a-f]{64}", str(src.get("sha256"))):
-            errors.append(f"illustration {iid}: invalid sha256")
-        asset_key = (str(src.get("asset_ref") or ""), str(src.get("sha256") or ""))
+        binary_status = src.get("binary_status")
+        sha_status = src.get("sha256_status")
+        sha = src.get("sha256")
+        if not src.get("asset_ref"):
+            errors.append(f"illustration {iid}: source.asset_ref required")
+        if sha:
+            if not re.fullmatch(r"[0-9a-f]{64}", str(sha)):
+                errors.append(f"illustration {iid}: invalid sha256")
+        elif not (binary_status == "external_only" and sha_status == "unavailable_external_only" and status == "candidate"):
+            errors.append(f"illustration {iid}: source.sha256 required unless an external-only candidate explicitly records unavailable_external_only")
+        asset_key = (str(src.get("asset_ref") or ""), str(sha or ""))
         if all(asset_key) and asset_key in seen_assets:
             errors.append(f"illustration {iid}: duplicate source asset/hash")
         elif all(asset_key):
             seen_assets.add(asset_key)
-        if src.get("binary_status") not in BINARY_STATUSES:
+        if binary_status not in BINARY_STATUSES:
             errors.append(f"illustration {iid}: invalid binary_status")
-        if src.get("sha256_status") not in SHA_STATUSES:
+        if sha_status not in SHA_STATUSES:
             errors.append(f"illustration {iid}: source.sha256_status required")
-        if src.get("binary_status") == "repository" and src.get("sha256_status") != "repository_verified":
+        if binary_status == "repository" and sha_status != "repository_verified":
             errors.append(f"illustration {iid}: repository binary requires repository_verified hash")
+        if sha_status == "unavailable_external_only":
+            if binary_status != "external_only" or status != "candidate" or sha not in (None, ""):
+                errors.append(f"illustration {iid}: unavailable_external_only is restricted to unhashed external-only candidate records")
+            human = item.get("human_review") or {}
+            if human.get("status") != "pending":
+                errors.append(f"illustration {iid}: unavailable external binary requires pending human review")
+            if (item.get("render") or {}).get("required_in_reader"):
+                errors.append(f"illustration {iid}: unhashed external-only candidate cannot be required_in_reader")
         refs = item.get("input_refs") or []
         if not refs:
             errors.append(f"illustration {iid}: at least one input_ref required")
@@ -189,7 +203,7 @@ def validate_illustrations(project: Path) -> tuple[list[str], list[str], int]:
             errors.append(f"illustration {iid}: resolved placement requires section_anchor")
         if status == "reader_eligible" and placement.get("target_status") != "resolved":
             errors.append(f"illustration {iid}: reader_eligible requires resolved placement")
-        if src.get("binary_status") == "external_only":
+        if binary_status == "external_only":
             warnings.append(f"illustration {iid}: binary external to repository; placement may render as caption-only")
     return errors, warnings, len(assets)
 
