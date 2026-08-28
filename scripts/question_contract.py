@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 VALID_KINDS = {'causal','metric','epistemic','comparative','counterfactual','method'}
-VALID_STATUSES = {'open','answered','refuted','bounded','abandoned','pending_external'}
+VALID_STATUSES = {'open','answered','refuted','bounded','abandoned','pending_external','blocked'}
 REQUIRED = {'id','question','kind','status','discriminating_test','falsifier','priority'}
 
 
@@ -46,6 +46,8 @@ def validate_question_registers(root):
                 errors.append(f'invalid question kind: {qid or where}')
             if q.get('status') not in VALID_STATUSES:
                 errors.append(f'invalid question status: {qid or where}')
+            if q.get('status') == 'blocked' and not str(q.get('blocked_by') or '').strip():
+                errors.append(f'blocked question requires blocked_by: {qid or where}')
             if not isinstance(q.get('priority'), int) or q.get('priority', 0) < 1:
                 errors.append(f'invalid question priority: {qid or where}')
             if isinstance(q.get('question'), str) and not q['question'].strip().endswith('?'):

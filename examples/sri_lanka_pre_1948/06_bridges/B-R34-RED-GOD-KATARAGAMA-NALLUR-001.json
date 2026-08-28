@@ -1,0 +1,16 @@
+{
+  "id":"B-R34-RED-GOD-KATARAGAMA-NALLUR-001",
+  "from_claim":"C-R29-KDY-KATARAGAMA-DEVALAYA-001",
+  "to_claim":"C-R29-NALLUR-MURUGAN-001",
+  "question":"Can the historical Tamil epithet Ceyon/Seyon, 'the Red One', add a defensible cultural-historical thread to the already sourced Kataragama-Nallur shared-deity bridge?",
+  "mechanism":"Tamil tradition repeatedly marks Murugan with red symbolism and the name Ceyon/Seyon, while Sri Lankan scholarship relates Skanda-Murukan and Kataragama as a historically layered deity complex. The red-god thread therefore works as a historical-name callback within the wider Skanda-Murugan/Kataragama genealogy already connecting Kandy's Kataragama Devalaya and Nallur Kandaswamy.",
+  "result":"C",
+  "source_ids":["CAMBRIDGE-BELLE-MURUGAN-RED-ONE-2018","PATHMANATHAN-SKANDA-KATARAGAMA-1999","DALADA-FOUR-DEVALAYA-KAP-2026","NALLUR-OFFICIAL-MURUGAN-2026"],
+  "transmission_channel":"shared deity genealogy and historical naming tradition; not a colour-based ritual transmission",
+  "time_lag":"ancient Tamil epithet compared with historically layered and current Sri Lankan institutional identities",
+  "scale":"Z1 Kandy/Nallur sites to Z3 Tamil-Sri Lankan religious history",
+  "confounders":["red symbolism need not organize current ritual","Kandy and Nallur have distinct institutional frameworks","shared deity identity does not imply identical liturgy","modern temple self-description differs from ancient Tamil literary naming"],
+  "transportability":"mechanism",
+  "integration_action":"callback",
+  "bounded_by":"The bridge supports a naming/genealogy callback only. It does not claim that red colour is a central ritual mechanism at the Kandy Perahera or Nallur festival, and it does not replace the broader Run29 bridge with a stronger direct-transmission claim."
+}

@@ -11,12 +11,21 @@ from resolve_reader_plan import build_plan,computed_rank
 from graph_link_audit import validate_graph_links
 
 
+def illustration_records():
+    out=[]
+    for path in sorted((PRE/"09_output/illustrations").glob("*.json")):
+        data=json.loads(path.read_text(encoding="utf-8"));out.extend(data if isinstance(data,list) else [data])
+    return [x for x in out if isinstance(x,dict) and x.get("id")]
+
+
 class Run24IllustrationStoryScaffoldTests(unittest.TestCase):
     def test_all_illustrations_are_valid_and_non_renderable_until_approved(self):
+        records_all=illustration_records();expected=len(records_all)
         errors,warnings,count=validate_illustrations(PRE)
         self.assertEqual([],errors)
-        self.assertEqual(10,count)
-        self.assertEqual(10,sum('binary external' in w for w in warnings))
+        self.assertEqual(expected,count)
+        expected_external=sum((x.get("source") or {}).get("binary_status")=="external_only" for x in records_all)
+        self.assertEqual(expected_external,sum('binary external' in w for w in warnings))
         records=json.loads((PRE/"09_output/illustrations/ILL-KANDY-BUDDHA-LIFE-2026-08.json").read_text(encoding="utf-8"))
         self.assertTrue(all(x["status"]=="vision_validated" for x in records))
         self.assertTrue(all(x["placement"]["target_status"]=="proposed_missing" for x in records))
@@ -24,11 +33,12 @@ class Run24IllustrationStoryScaffoldTests(unittest.TestCase):
         self.assertTrue(all(x["render"]["marker"]==f"[ILLUSTRATION:{x['id']}]" for x in records))
 
     def test_reader_plan_has_complete_review_queue_and_no_false_embedding(self):
+        records=illustration_records();expected_ids={x["id"] for x in records}
         plan=build_plan(PRE)
         self.assertEqual([],plan["selected_illustration_ids"])
-        self.assertEqual(10,len(plan["illustration_review_queue_ids"]))
+        self.assertEqual(expected_ids,set(plan["illustration_review_queue_ids"]))
+        self.assertEqual(len(expected_ids),len(plan["illustration_review_queue_ids"]))
         self.assertEqual("09_output/story_scaffold.json",plan["story_scaffold"])
-        self.assertEqual(set(f"ILL-KANDY-{i:02d}" for i in range(1,11)),set(plan["illustration_review_queue_ids"]))
         self.assertEqual(0,assert_rendered_illustrations("reader without selected images",plan["selected_illustration_ids"]))
 
     def test_computed_rank_prefers_evidence_then_confidence_then_human_rank(self):
@@ -48,11 +58,12 @@ class Run24IllustrationStoryScaffoldTests(unittest.TestCase):
         self.assertEqual([],lint_caption_language({"id":"Y","fragment":{"caption":"La tradition chronique situe cet épisode à Lanka."}}))
 
     def test_story_scaffold_captures_global_topology_before_arc_hydration(self):
+        expected_ids={x["id"] for x in illustration_records()}
         scaffold=build_scaffold(PRE)
         self.assertEqual("global topology -> arc-local retrieval packs -> cross-arc stitch -> illustration pass -> coverage reconciliation",scaffold["strategy"])
-        self.assertEqual(10,scaffold["coverage"]["illustrations"])
+        self.assertEqual(len(expected_ids),scaffold["coverage"]["illustrations"])
         arc=next(x for x in scaffold["arcs"] if x["arc"]=="A02c_anuradhapura_and_the_mahavihara")
-        self.assertEqual(10,len(arc["illustration_review_queue_ids"]))
+        self.assertEqual(expected_ids,set(arc["illustration_review_queue_ids"]))
         self.assertIn("Anuradhapura",arc["title"])
         self.assertTrue(any(x["title"]=="Causal question" for x in arc["subsections"]))
         toc=build_toc_from_scaffold(scaffold)

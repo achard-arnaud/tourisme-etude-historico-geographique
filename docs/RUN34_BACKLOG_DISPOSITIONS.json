@@ -1,0 +1,15 @@
+{
+  "run": 34,
+  "scope": "GF-MIH/GF-ABH backlog promotion",
+  "dispositions": [
+    {"fragment_id":"GF-MIH-01","decision":"promote_to_claim","qualification":"chronicle_tradition","claim_id":"C-R34-MIH-COUNCIL-TRAD-001","reason":"The modern stele directly transmits the chronicle sequence; promotion is limited to the fact of transmission, not ancient-event verification."},
+    {"fragment_id":"GF-MIH-03","decision":"promote_to_claim","qualification":"chronicle_tradition","claim_id":"C-R34-MIH-AMBAS-TRAD-001","reason":"The field inscription is sufficient evidence for a transmitted Poson/Ambasthala narrative when bounded as tradition."},
+    {"fragment_id":"GF-MIH-04","decision":"promote_to_claim","qualification":"chronicle_tradition","claim_id":"C-R34-MIH-MAHAVIHARA-TRAD-001","reason":"The stele supports a foundation/ordination tradition; later epigraphy is kept separate from the ancient narrative."},
+    {"fragment_id":"GF-MIH-05","decision":"promote_to_claim","qualification":"chronicle_tradition","claim_id":"C-R34-MIH-BODHI-BHIKKHUNI-TRAD-001","reason":"The bundled Thuparama/Sanghamitta/Bodhi/bhikkhuni sequence is retained explicitly as transmitted tradition."},
+    {"fragment_id":"GF-MIH-06","decision":"promote_to_claim","qualification":"chronicle_tradition","claim_id":"C-R34-MIH-RELIC-STUPA-TRAD-001","reason":"The inscription supports the commemorative tradition and its chronology convention, not an independent archaeological date."},
+    {"fragment_id":"GF-MIH-09","decision":"promote_to_claim","qualification":"source_fact","claim_id":"C-R34-MIH-CROWD-METRIC-001","reason":"The 2024 completion date is direct inscriptional evidence; the ~100,000 figure remains attributed to the commissioning text rather than treated as measured attendance."},
+    {"fragment_id":"GF-ABH-02","decision":"promote_to_claim","qualification":"source_fact","claim_id":"C-R34-ABH-SIGNIFICANCE-QUOTE-001","reason":"The superlative is retained only as an attributed statement by the excavation project lead."},
+    {"fragment_id":"GF-ABH-04","decision":"promote_to_claim","qualification":"source_fact","claim_id":"C-R34-ABH-ANALYSIS-INTENT-001","reason":"The announcement directly supports an analysis/publication intention, not completion of either action."},
+    {"fragment_id":"GF-ABH-06","decision":"promote_to_claim","qualification":"source_fact","claim_id":"C-R34-ABH-TRANSBUDDHIST-FRAME-001","reason":"The press announcement's framing is recordable as source fact while specialist doctrinal closure remains explicitly excluded."}
+  ]
+}

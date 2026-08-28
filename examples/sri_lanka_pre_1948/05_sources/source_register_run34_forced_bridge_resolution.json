@@ -1,0 +1,54 @@
+[
+  {
+    "id":"OXFORD-FLOOD-HINDU-TANTRA-MEDITATION-2019",
+    "title":"Hinduism and Meditation: Tantra",
+    "url":"https://academic.oup.com/edited-volume/40700/chapter-abstract/348428022",
+    "tier":"T1",
+    "anchor_role":"canonical anchor",
+    "date":"2019-04-04",
+    "author_or_institution":"Gavin Flood; Oxford University Press",
+    "scope":"Oxford Handbook chapter describing meditation and visualization in major Hindu tantric traditions focused especially on Shiva, with explicit attention to liberation, ritual and pure-awareness practices.",
+    "claims_supported":["C-R34-FORCE-SHAIVA-TANTRA-MEDITATION-001"],
+    "limitations":"Supports selected Shaiva/tantric traditions, not a universal claim that one meditation model is central to every form of Shaivism or Hinduism.",
+    "provenance":"direct"
+  },
+  {
+    "id":"OXFORD-SHAW-THERAVADA-MEDITATION-2020",
+    "title":"Theravada Buddhism and Meditation",
+    "url":"https://academic.oup.com/edited-volume/40700/chapter-abstract/348429391",
+    "tier":"T1",
+    "anchor_role":"canonical anchor",
+    "date":"2020-11-10",
+    "author_or_institution":"Sarah Shaw; Oxford University Press",
+    "scope":"Oxford Handbook chapter on Theravada meditation, including Sri Lanka, bhavana, samatha, vipassana and the broader devotional/practical supports around meditation.",
+    "claims_supported":["C-R34-FORCE-THERAVADA-MEDITATION-001"],
+    "limitations":"Describes Theravada traditions broadly; it does not identify a photographed mudra, date an object, or establish a historical borrowing from Shaiva practice.",
+    "provenance":"direct"
+  },
+  {
+    "id":"OXFORD-CLOUGH-BUDDHA-VISHNU-AVATAR-2021",
+    "title":"The Ambivalence of the Hindus: The Buddha as Avatara of Visnu in the Mahapuranas and Beyond",
+    "url":"https://academic.oup.com/jhs/article-abstract/15/3/268/6219682",
+    "tier":"T1",
+    "anchor_role":"canonical anchor",
+    "date":"2021-04-10",
+    "author_or_institution":"Bradley S. Clough; Journal of Hindu Studies / Oxford University Press",
+    "scope":"Peer-reviewed historical analysis of the development, variety and ambivalence of the Vaishnava Buddha-as-Vishnu-avatar idea in the Mahapuranas and later tradition.",
+    "claims_supported":["C-R34-FORCE-BUDDHA-VISHNU-AVATAR-001"],
+    "limitations":"This is a Vaishnava theological reception of the Buddha, not Buddhist self-description and not evidence that Sri Lankan Buddhists generally understand the Buddha as Vishnu's avatar.",
+    "provenance":"direct"
+  },
+  {
+    "id":"CAMBRIDGE-BELLE-MURUGAN-RED-ONE-2018",
+    "title":"Murugan: A Tamil Deity",
+    "url":"https://www.cambridge.org/core/books/abs/thaipusam-in-malaysia/murugan-a-tamil-deity/3ABFC5A852A68CADBEBCD55A71A63900",
+    "tier":"T1",
+    "anchor_role":"corroborating bridge",
+    "date":"2018-01-12",
+    "author_or_institution":"Carl Vadivella Belle; ISEAS-Yusof Ishak Institute / Cambridge Core",
+    "scope":"Academic chapter on Murugan in Tamil tradition, including repeated red symbolism and the name Ceyon/Seyon, 'The Red One'.",
+    "claims_supported":["C-R34-FORCE-MURUGAN-RED-ONE-001"],
+    "limitations":"The chapter establishes the Tamil Murugan epithet and symbolism; it does not by itself show that red colour is a structuring ritual principle at either Nallur or the Kandy Perahera.",
+    "provenance":"direct"
+  }
+]

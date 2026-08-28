@@ -1,0 +1,38 @@
+{
+  "schema_version":"1.2",
+  "class":"side_story",
+  "id":"SS-R34-BUDDHIST-ICONOGRAPHY-METHOD-001",
+  "kind":"method",
+  "status":"promoted",
+  "lineage_quality":"full",
+  "materialization_mode":"existing_fragment",
+  "title":"Lire un stūpa, une mudrā et un lotus sans leur faire dire trop",
+  "arc":"A02c_anuradhapura_and_the_mahavihara",
+  "purpose":"Give the reader a reusable source-critical method for Buddhist iconography before object-specific interpretation.",
+  "reason_off_trunk":"Methodological guardrail shared by monuments, statues and motifs.",
+  "payoff":"The reader separates general symbolic vocabulary from object-specific dating, provenance and historical attribution.",
+  "map_eligible":false,
+  "reader_policy":{"min_age":12},
+  "lineage":{
+    "claim_ids":["C-R34-ICON-STUPA-001","C-R34-ICON-MUDRA-001","C-R34-ICON-LOTUS-001"],
+    "source_ids":["SNODGRASS-STUPA-1985","SAUNDERS-MUDRA-1985","COOMARASWAMY-BUDDHIST-ICONOGRAPHY-1935"],
+    "bridge_ids":[],
+    "hil_ids":["HIL-05_religion-culture-legitimacy","HIL-08_historiography-bias"],
+    "drift_paths":[],
+    "origin_paths":[]
+  },
+  "placement":{
+    "section_anchor":"2. Valagamba et Abhayagiri : le Saṅgha n’est pas monolithique",
+    "return_to":"C-R34-ICON-STUPA-001",
+    "return_resolution":"reader_patch_marker",
+    "position":"after"
+  },
+  "zoom_excursion":null,
+  "content":{
+    "takeaway":"L’iconographie fournit un vocabulaire comparatif ; l’histoire d’un objet commence seulement quand ce vocabulaire rencontre contexte archéologique, inscription, datation et provenance.",
+    "legacy_titles":[],
+    "callback_side_story_ids":["SS-R34-MUDRA-DETOUR-001"],
+    "body_markdown":"Un stūpa, une main et un lotus ne se lisent pas au même niveau. Le stūpa relève d’une architecture reliquaire et symbolique organisée autour d’un centre, d’un axe et d’une orientation ; une mudrā fonctionne comme un signe conventionnel qui aide à reconnaître un registre iconographique ; le lotus et le lotus-trône appartiennent à un vocabulaire symbolique plus large de présence sacrée et d’éveil. Ces trois clés sont utiles parce qu’elles permettent de décrire ce que l’on voit avant de raconter son histoire. Elles deviennent trompeuses dès qu’une ressemblance générale sert à fabriquer une date, une provenance ou une identification locale précise. Le détour sur les mudrā fournit déjà ce premier réflexe : nommer le code, puis revenir aux preuves propres à l’objet."
+  },
+  "render":{"label":"Point de méthode","marker":"[SIDE-STORY:SS-R34-BUDDHIST-ICONOGRAPHY-METHOD-001]","required_in_reader":false}
+}

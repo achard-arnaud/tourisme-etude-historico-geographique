@@ -9,11 +9,13 @@ class SideStoryContractTests(unittest.TestCase):
         items=load_side_stories(PROJECT);self.assertGreaterEqual(len(items),26);errors,warnings,count,coverage=validate_side_stories(PROJECT);self.assertEqual([],errors);self.assertTrue(any('evidence debt' in w for w in warnings));self.assertEqual(count,len(items));self.assertEqual(0,coverage['untracked']);self.assertGreaterEqual(coverage['discovered'],21)
         for _,item in items:self.assertIn(item['schema_version'],SUPPORTED_SCHEMA_VERSIONS);self.assertIn(item['class'],VALID_CLASSES);self.assertIsInstance(item['map_eligible'],bool)
         self.assertTrue(any(item['schema_version']=='1.2' and item['kind']=='analytical_focus' for _,item in items))
-    def test_method_return_is_optional_but_validated_narrative_return_is_resolved(self):
-        sys.path.insert(0,str(ROOT/'scripts'));from side_story_contract import load_side_stories
+    def test_method_return_is_optional_or_marker_backed_and_validated_narrative_return_is_resolved(self):
+        sys.path.insert(0,str(ROOT/'scripts'));from side_story_contract import load_side_stories,validate_side_stories
         for _,item in load_side_stories(PROJECT):
-            if item['kind']=='method':self.assertFalse((item.get('placement') or {}).get('return_to'))
-            if item['status'] in {'validated','promoted'} and item['kind']!='method':self.assertTrue((item.get('placement') or {}).get('return_to'))
+            placement=item.get('placement') or {};ret=placement.get('return_to')
+            if item['kind']=='method' and ret:self.assertEqual('reader_patch_marker',placement.get('return_resolution'))
+            if item['status'] in {'validated','promoted'} and item['kind']!='method':self.assertTrue(ret)
+        errors,_,_,_=validate_side_stories(PROJECT);self.assertEqual([],errors)
     def test_canonical_state_is_full_reader_not_delta(self):
         state=json.loads((PROJECT/'00_method/output_state.json').read_text(encoding='utf-8'));self.assertEqual('09_output/report_v3_full.md',state['canonical_markdown']);self.assertNotEqual(state['canonical_markdown'],state['delta_markdown'])
     def test_generic_project_qa_publishes_coverage(self):
