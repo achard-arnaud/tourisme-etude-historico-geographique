@@ -2,11 +2,9 @@
 
 ## 1. Scope et règle de promotion
 
-Branche de travail : `run34-mudra-sasana-backlog`, issue de `dev`.
+Run34 a été intégré dans `dev` via PR #80. La fermeture forcée des pendings de sourcing est traitée sur `run34-force-blocked-sourcing`, issue de `dev`, avant promotion finale `dev → main`.
 
-Chaîne imposée : `run34-mudra-sasana-backlog → dev → main`. Aucun saut direct feature → main.
-
-Le run ne décide pas de la création d’un arc Gampola/Kotte/Sitawaka. Les deux bridges exploratoires restent bloqués sans sourcing T1/T2 explicite. L’ambiguïté de doublon Abhaya 03/05/08 n’est pas tranchée sans preuve suffisante.
+Le run ne décide pas de la création d’un arc Gampola/Kotte/Sitawaka. L’ambiguïté de doublon Abhaya 03/05/08 n’est pas tranchée sans preuve suffisante.
 
 ## 2. Fragments mudrā et illustrations
 
@@ -31,54 +29,71 @@ Le run ne décide pas de la création d’un arc Gampola/Kotte/Sitawaka. Les deu
 
 Aucun des neuf fragments n’a de troisième statut implicite.
 
-## 4. Side stories
+## 4. Side stories et reader
 
 ### SS-R34-MUDRA-DETOUR-001 — detour
 
-- Ancrage : sous-section `2. Valagamba et Abhayagiri : le Saṅgha n’est pas monolithique`, précédée dans le patch lecteur d’un paragraphe sur les dix-sept statues du Bouddha découvertes à Abhayagiri.
-- Retour : `C-R16-ABH-DATE-001`, résolution exigée par marqueur réel `[claim:C-R16-ABH-DATE-001]` dans l’artefact instrumenté.
-- Gate : état initial mécanique/Sarah/HIL = `false`; `paragraph_review_gate.py` est exécuté par `scripts/qa_run34.py` avant que les trois états finaux soient acceptés à `true`.
+- Ancrage : sous-section `2. Valagamba et Abhayagiri : le Saṅgha n’est pas monolithique`.
+- Retour : `C-R16-ABH-DATE-001`, résolution par marqueur réel `[claim:C-R16-ABH-DATE-001]` dans l’artefact instrumenté.
+- Gate : état initial mécanique/Sarah/HIL = `false`; `paragraph_review_gate.py` est exécuté par `scripts/qa_run34.py` avant acceptation des états finaux.
 
 ### SS-R34-BUDDHIST-ICONOGRAPHY-METHOD-001 — method
 
-- Sources : Snodgrass, Saunders, Coomaraswamy, toutes enregistrées T1 comme monographies académiques.
-- Ne dépend pas de l’identification des panneaux 7/9/3 ni du *Kusa Jātaka*.
+- Sources : Snodgrass, Saunders, Coomaraswamy, T1.
+- Indépendant des panneaux 7/9/3 et du *Kusa Jātaka*.
 - Callback : réutilise `SS-R34-MUDRA-DETOUR-001`.
-- Retour : `C-R34-ICON-STUPA-001`, résolution exigée par marqueur réel `[claim:C-R34-ICON-STUPA-001]` dans l’artefact instrumenté.
+- Retour : `C-R34-ICON-STUPA-001`, résolu par marqueur réel dans l’artefact instrumenté.
 
-### Séparation reader / QA instrumentée
+Le reader frontstage reste sans IDs `[claim:*]`; `report_v3_full_run34_instrumented.md` conserve les marqueurs nécessaires à la QA.
 
-La finalisation reader supprime volontairement les identifiants techniques `[claim:*]`. Run34 matérialise donc :
+## 5. Fermeture forcée de tous les `draft_blocked_pending_sourcing`
 
-1. `report_v3_full.md` : reader frontstage propre, sans IDs de claims ;
-2. `report_v3_full_run34_instrumented.md` : copie de QA avec les marqueurs réels nécessaires aux contrôles de retour et de couverture.
+Décision utilisateur du 28 août 2026 : fermer tous les pendings de ce statut et finaliser la publication.
 
-Cela évite le faux-vert « l’ID du claim existe donc le retour est résolu » sans exposer les identifiants techniques au lecteur.
+### 5.1 Méditation śaiva / bouddhique + Buddha avatāra de Viṣṇu
 
-## 5. Bridges explicitement bloqués
+Le draft `B-R34-CREOLISATION-MEDITATION-DRAFT-001` passe à `resolved_promoted_split`.
 
-- `B-R34-CREOLISATION-MEDITATION-DRAFT-001` : `draft_blocked_pending_sourcing`, `source_ids: []`, aucun `mechanism`, aucun texte lecteur.
-- `B-R34-RED-GOD-KATARAGAMA-NALLUR-DRAFT-001` : `draft_blocked_pending_sourcing`, `source_ids: []`, aucun `mechanism`, aucun texte lecteur.
+Sources T1 admises :
+- Gavin Flood, Oxford Handbook — méditation dans les grandes traditions tantriques centrées sur Śiva ;
+- Sarah Shaw, Oxford Handbook — méditation Theravāda, incluant Sri Lanka ;
+- Bradley S. Clough, *Journal of Hindu Studies* — histoire variable du Buddha comme avatāra de Viṣṇu dans la réception vaiṣṇava.
 
-Le second n’hérite pas automatiquement du sourcing du bridge Run29 déjà borné sur la divinité partagée.
+Artefacts promus :
+- `C-R34-FORCE-THERAVADA-MEDITATION-001` ;
+- `C-R34-FORCE-SHAIVA-TANTRA-MEDITATION-001` ;
+- `C-R34-FORCE-BUDDHA-VISHNU-AVATAR-001` ;
+- `B-R34-SHAIVA-BUDDHIST-MEDITATION-001`.
+
+Le terme de « créolisation » n’est **pas** promu comme mécanisme historique : les sources permettent un comparatif de répertoires contemplatifs, pas une preuve de borrowing ou de système doctrinal fusionné. La tradition Buddha-avatāra est conservée comme proposition vaiṣṇava séparée.
+
+### 5.2 « Dieu rouge » Kataragama / Nallur
+
+Le draft `B-R34-RED-GOD-KATARAGAMA-NALLUR-DRAFT-001` passe à `resolved_promoted`.
+
+Sources admises :
+- Carl Vadivella Belle, chapitre académique sur Murugan : red symbolism et Ceyon/Seyon, « The Red One » ;
+- S. Pathmanathan : complexe sri-lankais Skanda-Murukan/Kataragama ;
+- ancres institutionnelles Run29 Kandy/Nallur déjà qualifiées.
+
+Artefacts promus :
+- `C-R34-FORCE-MURUGAN-RED-ONE-001` ;
+- `B-R34-RED-GOD-KATARAGAMA-NALLUR-001`.
+
+La couleur rouge est un callback historique de nom/généalogie, **pas** un mécanisme rituel démontré commun à la Perahera de Kandy et au festival de Nallur.
+
+### 5.3 Gate ajouté
+
+`scripts/qa_run34.py` exige désormais :
+- `pending_count == 0` ;
+- aucun statut `draft_blocked_pending_sourcing` ;
+- sources non vides sur chaque résolution ;
+- bridge promu effectivement présent dans `06_bridges` avec `mechanism` et `bounded_by` ;
+- sources forcées T1/T2 ;
+- aucune fuite de statut pending dans le reader.
 
 ## 6. QA et promotion
 
-### Gate feature → dev
+Run34 initial : workflow `skill-ci` #608 sur `f162ec7fc81dce9bf7beee1ff5a79d9cf082e974` — SUCCESS. PR #80 a ensuite intégré Run34 dans `dev` au SHA `727a69d698cef1cd40fd0fa67fa0cca52e9b4318`.
 
-Commandes intégrées au CI :
-
-- `python scripts/qa_run34.py`
-- suite CI complète du repo
-- `python scripts/render_composed_reader.py --project all`
-- `python scripts/qa_run34.py --post-render`
-
-Le post-render exige : retours marker-first résolus, aucun bridge bloqué dans le reader, aucun `[claim:*]` visible dans le reader frontstage, fill continu et bordure finale sur les deux encadrés DOCX.
-
-**Résultat de référence avant journal final :** workflow GitHub Actions `skill-ci` Run `#608`, run id `33155080886`, sur SHA `f162ec7fc81dce9bf7beee1ff5a79d9cf082e974` : **SUCCESS**. La suite unitaire complète, `qa_run34.py`, la couverture réciproque Run34, le build composé `--project all` et `qa_run34.py --post-render` ont tous passé. Les artefacts complets ont été publiés par le workflow.
-
-Le présent commit de journal est postérieur à ce SHA et doit donc repasser la même CI avant ouverture de la PR feature → dev.
-
-### Gate dev → main
-
-Après merge feature → dev seulement : build complet pré-1948, couverture complète du corpus selon le contrat Run27, puis seconde PR distincte `dev → main`. Le présent journal sera mis à jour avec les PRs, SHAs et résultats effectifs avant publication finale.
+La fermeture forcée est soumise à un nouveau CI sur `run34-force-blocked-sourcing`, puis à une PR vers `dev`. Après vert sur `dev`, une PR distincte `dev → main` publiera l’état final. Les SHAs et PRs de publication seront consignés après exécution effective.
