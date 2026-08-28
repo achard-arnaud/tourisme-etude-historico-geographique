@@ -18,7 +18,7 @@
     "source_ids":["SAUNDERS-MUDRA-1985","MET-MUDRA-VOCAB-2007"],
     "bridge_ids":[],
     "hil_ids":["HIL-05_religion-culture-legitimacy","HIL-08_historiography-bias"],
-    "drift_paths":["gesture -> exact episode -> object date/provenance"],
+    "drift_paths":[],
     "origin_paths":["00_method/capture/run_mudra_series_fragments.json"],
     "origin_fragment_ids":["GF-MUDRA-01","GF-MUDRA-02","GF-MUDRA-03","GF-MUDRA-04","GF-MUDRA-05","GF-MUDRA-06","GF-MUDRA-07","GF-MUDRA-08"]
   },
