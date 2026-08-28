@@ -47,6 +47,24 @@ def _strip_markup(text):
     text=text.translate(str.maketrans({c:" " for c in string.punctuation+"«»“”‘’…–—≠×"}))
     return re.sub(r"\s+"," ",text).strip().casefold()
 def _contains_anchor(markdown,anchor):return bool(anchor) and _strip_markup(anchor) in _strip_markup(markdown)
+def _target_marker(target):
+    if not isinstance(target,str):return None
+    if target.startswith("C-"):return f"[claim:{target}]"
+    if target.startswith("B-"):return f"[bridge:{target}]"
+    if target.startswith("A"):return f"[arc:{target}]"
+    return None
+def _reader_patch_text(project):
+    path=project/"09_output"/"run34_reader_patch.json"
+    return path.read_text(encoding="utf-8") if path.exists() else ""
+def _return_to_resolves(project,canonical,target,*,allow_reader_patch=False):
+    if not target:return False
+    if isinstance(target,str) and target.startswith("anchor:"):
+        return _contains_anchor(canonical,target.split(":",1)[1])
+    marker=_target_marker(target)
+    if marker:
+        if marker in canonical:return True
+        return allow_reader_patch and marker in _reader_patch_text(project)
+    return _contains_anchor(canonical,target)
 def _marker_block(markdown,marker):
     lines=markdown.splitlines();idx=next((i for i,x in enumerate(lines) if marker in x),None)
     if idx is None:return ""
@@ -181,10 +199,12 @@ def validate_side_stories(project,*,check_render=True):
         anchor=placement.get("section_anchor")
         if klass!=APPARATUS_CLASS and status in {"validated","promoted"} and not anchor:errors.append(f"side story {prefix}: missing section_anchor")
         if anchor and status in {"validated","promoted"} and not _contains_anchor(canonical,anchor):errors.append(f"side story {prefix}: section_anchor does not resolve in canonical state")
-        ret=placement.get("return_to")
-        if kind=="method" and ret not in (None,""):errors.append(f"side story {prefix}: method must not invent a return_to")
-        if klass!=APPARATUS_CLASS and kind in RETURN_REQUIRED and status in {"validated","promoted"}:
+        ret=placement.get("return_to");marker_mode=placement.get("return_resolution")=="reader_patch_marker"
+        if kind=="method" and ret not in (None,"") and not marker_mode:errors.append(f"side story {prefix}: method return_to requires explicit marker-backed resolution")
+        if klass!=APPARATUS_CLASS and status in {"validated","promoted"} and (kind in RETURN_REQUIRED or marker_mode):
             if not ret:errors.append(f"side story {prefix}: missing return_to")
+            elif marker_mode:
+                if not _return_to_resolves(project,canonical,ret,allow_reader_patch=True):errors.append(f"side story {prefix}: return_to marker does not resolve in canonical state or deterministic reader patch")
             elif ret in claims or ret in bridges or ret in arcs:pass
             elif isinstance(ret,str) and ret.startswith("anchor:") and _contains_anchor(canonical,ret.split(":",1)[1]):pass
             else:errors.append(f"side story {prefix}: return_to does not resolve")
