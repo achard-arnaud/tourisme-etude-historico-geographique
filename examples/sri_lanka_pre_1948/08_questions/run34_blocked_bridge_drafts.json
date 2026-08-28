@@ -2,25 +2,31 @@
   {
     "class":"bridge_draft",
     "id":"B-R34-CREOLISATION-MEDITATION-DRAFT-001",
-    "status":"draft_blocked_pending_sourcing",
+    "status":"resolved_promoted_split",
     "question":"Can a carefully sourced comparison connect meditation as a central practice across selected Shaiva and Buddhist traditions, and separately explain the Hindu tradition that treats the Buddha as an avatar of Vishnu, without collapsing distinct doctrines into one creolised system?",
-    "source_ids":[],
-    "from_claim_candidate":null,
-    "to_claim_candidate":"C-R34-ICON-MUDRA-001",
-    "blocked_reason":"No T1/T2 comparative religion source has yet been admitted for the specific cross-tradition mechanism. The two propositions also require separate evidentiary treatment before any bridge can be formulated.",
-    "reader_policy":"No reader text, no mechanism field and no graph promotion until explicit T1/T2 sourcing and validation.",
-    "open_tests":["Identify specialist sources on Shaiva meditation practices without universalising Shaivism.","Identify specialist sources on Buddhist meditation without equating iconographic Dhyana with cross-religious doctrine.","Source and delimit the Buddha-as-Vishnu-avatar tradition independently from the meditation comparison."]
+    "source_ids":["OXFORD-SHAW-THERAVADA-MEDITATION-2020","OXFORD-FLOOD-HINDU-TANTRA-MEDITATION-2019","OXFORD-CLOUGH-BUDDHA-VISHNU-AVATAR-2021"],
+    "resolution":{
+      "decision":"reframed_not_creolisation",
+      "promoted_bridge_ids":["B-R34-SHAIVA-BUDDHIST-MEDITATION-001"],
+      "promoted_claim_ids":["C-R34-FORCE-THERAVADA-MEDITATION-001","C-R34-FORCE-SHAIVA-TANTRA-MEDITATION-001","C-R34-FORCE-BUDDHA-VISHNU-AVATAR-001"],
+      "summary":"The pending is closed by splitting the bundled hypothesis. A sourced Theravada/Shaiva meditation comparator is promoted, while the Buddha-as-Vishnu-avatar proposition is promoted as a separate Vaishnava reception fact. No evidence supports upgrading the bundle into a direct creolisation or borrowing mechanism."
+    },
+    "reader_policy":"Resolved backstage as bounded claims/comparator. No new claim of Shiva-Buddha creolisation may be inferred from this closure.",
+    "open_tests":[]
   },
   {
     "class":"bridge_draft",
     "id":"B-R34-RED-GOD-KATARAGAMA-NALLUR-DRAFT-001",
-    "status":"draft_blocked_pending_sourcing",
+    "status":"resolved_promoted",
     "question":"Is there a historically defensible 'red god' thread through Skanda/Kataragama/Murugan that can connect the Kandy Perahera complex and Nallur Kandaswamy without simply restating that both settings involve cognate deity traditions?",
-    "source_ids":[],
-    "from_claim_candidate":"C-R29-KDY-KATARAGAMA-DEVALAYA-001",
-    "to_claim_candidate":"C-R29-NALLUR-MURUGAN-001",
-    "blocked_reason":"Run29 already establishes a bounded shared-deity bridge. Run34 asks a narrower colour/name/ritual hypothesis that has not been sourced independently at T1/T2 and must not inherit Run29's evidence automatically.",
-    "reader_policy":"No reader text, no mechanism field and no promotion into 06_bridges until the narrower hypothesis receives explicit T1/T2 evidence.",
-    "open_tests":["Source the historical semantics of the 'red god' label in Sri Lankan/Tamil Skanda-Murugan traditions.","Test whether colour/name symbolism is actually relevant to both Nallur and the Kandy Perahera setting.","Keep any valid result distinct from the already sourced Run29 shared-deity bridge."]
+    "source_ids":["CAMBRIDGE-BELLE-MURUGAN-RED-ONE-2018","PATHMANATHAN-SKANDA-KATARAGAMA-1999","DALADA-FOUR-DEVALAYA-KAP-2026","NALLUR-OFFICIAL-MURUGAN-2026"],
+    "resolution":{
+      "decision":"promote_bounded_callback",
+      "promoted_bridge_ids":["B-R34-RED-GOD-KATARAGAMA-NALLUR-001"],
+      "promoted_claim_ids":["C-R34-FORCE-MURUGAN-RED-ONE-001"],
+      "summary":"The Ceyon/Seyon 'Red One' epithet is independently sourced for Tamil Murugan and combined with Sri Lankan Skanda-Murukan/Kataragama scholarship. The promoted bridge is limited to historical naming/genealogy and does not claim a red-colour ritual mechanism at either festival."
+    },
+    "reader_policy":"Resolved as a bounded callback layered on the existing Run29 shared-deity bridge; no stronger ritual-equivalence or direct-transmission claim is allowed.",
+    "open_tests":[]
   }
 ]
