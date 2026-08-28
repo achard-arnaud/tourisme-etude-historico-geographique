@@ -1,0 +1,16 @@
+{
+  "id":"B-R34-SHAIVA-BUDDHIST-MEDITATION-001",
+  "from_claim":"C-R34-FORCE-THERAVADA-MEDITATION-001",
+  "to_claim":"C-R34-FORCE-SHAIVA-TANTRA-MEDITATION-001",
+  "question":"Can Theravada and selected Shaiva tantric meditation practices be compared as South Asian contemplative repertoires without treating that comparison as proof of syncretism or direct borrowing?",
+  "mechanism":"Both traditions contain developed contemplative techniques, including concentration/mental cultivation on the Theravada side and visualization or pure-awareness practices in major Shaiva-oriented tantric traditions. The bridge transports only the comparative category of disciplined contemplative practice; it does not transport doctrine, ritual identity or a historical transmission claim.",
+  "result":"B",
+  "source_ids":["OXFORD-SHAW-THERAVADA-MEDITATION-2020","OXFORD-FLOOD-HINDU-TANTRA-MEDITATION-2019"],
+  "transmission_channel":"comparative South Asian contemplative repertoire; no direct transmission channel asserted",
+  "time_lag":"traditions are historically layered and not synchronized into one origin event",
+  "scale":"Z3 South Asian comparative religious history",
+  "confounders":["different doctrinal goals","different ritual settings","different textual histories","modern umbrella use of the English word meditation","no demonstrated direct borrowing"],
+  "transportability":"mechanism",
+  "integration_action":"comparator",
+  "bounded_by":"This is a controlled comparison, not evidence of a Shiva-Buddha creolised system. It cannot be used to infer that Dhyana mudra proves practice, that all Shaivism shares one meditation system, or that Sri Lankan Theravada borrowed its meditation from Shaiva tantra."
+}
