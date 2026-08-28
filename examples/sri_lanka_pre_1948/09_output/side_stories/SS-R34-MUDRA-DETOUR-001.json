@@ -1,0 +1,53 @@
+{
+  "schema_version":"1.2",
+  "class":"side_story",
+  "id":"SS-R34-MUDRA-DETOUR-001",
+  "kind":"detour",
+  "status":"promoted",
+  "lineage_quality":"full",
+  "materialization_mode":"existing_fragment",
+  "title":"Les mains parlent, mais elles ne datent pas la statue",
+  "arc":"A02c_anuradhapura_and_the_mahavihara",
+  "purpose":"Give the reader a compact vocabulary for reading mudra while keeping gesture identification separate from object provenance, date and historical proof.",
+  "reason_off_trunk":"Reusable iconographic vocabulary triggered by the field mudra series.",
+  "payoff":"The reader can recognize a gesture family without turning an iconographic convention into an archaeological conclusion.",
+  "map_eligible":false,
+  "reader_policy":{"min_age":12},
+  "lineage":{
+    "claim_ids":["C-R34-ICON-MUDRA-001","C-R28-A02C-MUDRA-VOCAB-001"],
+    "source_ids":["SAUNDERS-MUDRA-1985","MET-MUDRA-VOCAB-2007"],
+    "bridge_ids":[],
+    "hil_ids":["HIL-05_religion-culture-legitimacy","HIL-08_historiography-bias"],
+    "drift_paths":["gesture -> exact episode -> object date/provenance"],
+    "origin_paths":["00_method/capture/run_mudra_series_fragments.json"],
+    "origin_fragment_ids":["GF-MUDRA-01","GF-MUDRA-02","GF-MUDRA-03","GF-MUDRA-04","GF-MUDRA-05","GF-MUDRA-06","GF-MUDRA-07","GF-MUDRA-08"]
+  },
+  "placement":{
+    "section_anchor":"2. Valagamba et Abhayagiri : le Saṅgha n’est pas monolithique",
+    "return_to":"C-R16-ABH-DATE-001",
+    "position":"after"
+  },
+  "zoom_excursion":{"from":"Z0","to":"Z3","return":"Z0"},
+  "content":{
+    "takeaway":"Une mudrā est un code de lecture de l’image : elle aide à nommer un registre de sens, jamais à elle seule à dater, provenancer ou authentifier la statue.",
+    "legacy_titles":["Vocabulaire des mudrā"],
+    "body_markdown":"Sur le terrain, la main attire d’abord l’œil : paumes jointes pour Namaskara, mains posées dans le registre méditatif de Dhyāna, paume levée d’Abhaya, geste d’enseignement de Vitarka ou de Dharmacakra. Ces noms forment un vocabulaire iconographique utile parce qu’un geste conventionnel peut orienter la lecture d’une image. Mais la série photographiée rappelle immédiatement la limite : trois vues associées à Abhaya ne suffisent pas à prouver trois statues distinctes, et l’image 04 ne montre aucune plaque lisible ; Bhūmisparśa y reste donc une proposition, pas une identification. La bonne lecture va du geste vers une hypothèse de sens, puis revient à l’objet, à sa plaque, à son contexte et à sa provenance avant toute conclusion historique."
+  },
+  "review":{
+    "initial":{"checklist_passed":false,"style_sarah_passed":false,"hil_scope_passed":false},
+    "final":{"checklist_passed":true,"style_sarah_passed":true,"hil_scope_passed":true},
+    "generation_pass_id":"run34-mudra-detour-generation",
+    "review_pass_id":"run34-mudra-detour-independent-review",
+    "generation_context_id":"run34-authoring-context",
+    "review_context_id":"run34-independent-sarah-context",
+    "evaluator":"run34_independent_sarah_gate",
+    "marker_results":{
+      "scope_precision":{"status":"pass","rationale":"The paragraph explicitly separates gesture naming, duplicate-object uncertainty and object-level historical claims."},
+      "lived_opening_callback":{"status":"pass","rationale":"It opens from the photographed field series and returns to the unresolved Abhaya/Bhūmisparśa observations."},
+      "rigor_compressed_in_sentence":{"status":"pass","rationale":"Methodological reservations are integrated into the prose rather than moved to a production note."},
+      "concrete_texture_before_abstraction":{"status":"pass","rationale":"Named hand positions and the image-04 plaque gap precede the general iconographic rule."},
+      "continuous_prose_not_social_format":{"status":"pass","rationale":"The body is continuous explanatory prose without social-post formatting."}
+    }
+  },
+  "render":{"label":"Petit détour","marker":"[SIDE-STORY:SS-R34-MUDRA-DETOUR-001]","required_in_reader":false}
+}
