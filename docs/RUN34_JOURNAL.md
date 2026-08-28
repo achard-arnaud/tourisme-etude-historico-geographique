@@ -37,7 +37,7 @@ Aucun des neuf fragments n’a de troisième statut implicite.
 
 - Ancrage : sous-section `2. Valagamba et Abhayagiri : le Saṅgha n’est pas monolithique`, précédée dans le patch lecteur d’un paragraphe sur les dix-sept statues du Bouddha découvertes à Abhayagiri.
 - Retour : `C-R16-ABH-DATE-001`, résolution exigée par marqueur réel `[claim:C-R16-ABH-DATE-001]` dans l’artefact instrumenté.
-- Gate : état initial mécanique/Sarah/HIL = `false`; validation finale ne peut être acceptée qu’après exécution de `paragraph_review_gate.py` dans `scripts/qa_run34.py`.
+- Gate : état initial mécanique/Sarah/HIL = `false`; `paragraph_review_gate.py` est exécuté par `scripts/qa_run34.py` avant que les trois états finaux soient acceptés à `true`.
 
 ### SS-R34-BUDDHIST-ICONOGRAPHY-METHOD-001 — method
 
@@ -66,7 +66,7 @@ Le second n’hérite pas automatiquement du sourcing du bridge Run29 déjà bor
 
 ### Gate feature → dev
 
-À exécuter avant ouverture de PR :
+Commandes intégrées au CI :
 
 - `python scripts/qa_run34.py`
 - suite CI complète du repo
@@ -75,8 +75,10 @@ Le second n’hérite pas automatiquement du sourcing du bridge Run29 déjà bor
 
 Le post-render exige : retours marker-first résolus, aucun bridge bloqué dans le reader, aucun `[claim:*]` visible dans le reader frontstage, fill continu et bordure finale sur les deux encadrés DOCX.
 
-**État courant du journal :** implémentation en cours sur feature ; aucun statut vert n’est déclaré avant résultat CI effectif.
+**Résultat de référence avant journal final :** workflow GitHub Actions `skill-ci` Run `#608`, run id `33155080886`, sur SHA `f162ec7fc81dce9bf7beee1ff5a79d9cf082e974` : **SUCCESS**. La suite unitaire complète, `qa_run34.py`, la couverture réciproque Run34, le build composé `--project all` et `qa_run34.py --post-render` ont tous passé. Les artefacts complets ont été publiés par le workflow.
+
+Le présent commit de journal est postérieur à ce SHA et doit donc repasser la même CI avant ouverture de la PR feature → dev.
 
 ### Gate dev → main
 
-Après merge feature → dev seulement : build complet pré-1948, couverture complète du corpus selon le contrat Run27, puis seconde PR distincte `dev → main`. Le présent journal sera mis à jour avec les SHAs, PRs et résultats effectifs avant publication finale.
+Après merge feature → dev seulement : build complet pré-1948, couverture complète du corpus selon le contrat Run27, puis seconde PR distincte `dev → main`. Le présent journal sera mis à jour avec les PRs, SHAs et résultats effectifs avant publication finale.
