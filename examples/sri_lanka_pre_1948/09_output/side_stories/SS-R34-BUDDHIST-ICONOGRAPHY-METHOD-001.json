@@ -23,8 +23,8 @@
   },
   "placement":{
     "section_anchor":"2. Valagamba et Abhayagiri : le Saṅgha n’est pas monolithique",
-    "return_to":null,
-    "reader_return_to":"C-R34-ICON-STUPA-001",
+    "return_to":"C-R34-ICON-STUPA-001",
+    "return_resolution":"reader_patch_marker",
     "position":"after"
   },
   "zoom_excursion":null,
