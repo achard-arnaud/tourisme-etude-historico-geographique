@@ -1,0 +1,32 @@
+[
+  {
+    "schema_version":"1.0",
+    "class":"illustration",
+    "id":"ILL-R36-ANURADHAPURA-MAP-01",
+    "status":"candidate",
+    "source":{"kind":"field_photo","asset_ref":"image-1788242536144.jpg","sha256":"14c47890e7cbc3994156728db633393841ee198a36e054e0269a5462f5c57ce8","captured_at":"2026-09-01","location":"Sri Lanka; museum location not confirmed in intake","creator":"user","rights":"user_supplied","binary_status":"external_only","sha256_status":"verified_at_intake"},
+    "input_refs":[{"type":"field_fragment","id":"GF-R36-MAP-ANURADHAPURA-001","path":"00_method/capture/run36_museum_maps_fragments.json"},{"type":"claim","id":"C-R36-ANU-HYDRAULIC-001","path":"01_arcs/A02b_anuradhapura_hydraulic_order/claims/C-R36-ANU-HYDRAULIC-001.json"},{"type":"bridge","id":"B-R36-HYDRAULIC-PORTS-001","path":"06_bridges/B-R36-HYDRAULIC-PORTS-001.json"}],
+    "depiction":{"subject":"Museum map of Sri Lanka during the Anuradhapura period","event_or_theme":"hydraulic, monastic, political and port geography","evidence_status":"observed_caption","textual_layer":"unresolved","period":"modern museum representation of c. first millennium BCE–early second millennium CE","notes":"The image documents modern synthesis, not contemporaneous cartography."},
+    "vision_review":{"status":"reviewed","confidence":"high","caption_transcription":"Sri Lanka — Anuradhapura Period","visual_notes":"Island map with hydrography/topography and categorical site symbols; visible legend includes canal, sub-capital, monastery site and ancient port.","uncertainty":"Fine place labels and the full legend are not all readable at current resolution."},
+    "tag_review":{"status":"approved","trigger":"manual","notes":"Routed to Anuradhapura hydraulic order plus Indian Ocean bridge."},
+    "human_review":{"status":"pending","reviewed_at":null,"notes":"Historical use requires captions to state that this is a museum synthesis."},
+    "fragment":{"caption":"Une carte muséale de la période d’Anuradhapura : l’île apparaît comme un système où cœur hydraulique intérieur, monastères, centres secondaires et ports sont spatialement articulés.","what_it_shows":"A modern spatial synthesis combining water, institutions, settlements and ports.","why_here":"Makes visible the project's core thesis that Anuradhapura was inland without being isolated from maritime systems.","limits":"Chronologically compresses a millennium-plus; mapped dots and lines are not simultaneous observations."},
+    "placement":{"arc_ref":"A02b_anuradhapura_hydraulic_order","subsection_ref":"anuradhapura-system-map","section_anchor":"","target_status":"proposed_missing","relevance_rank":1},
+    "render":{"marker":"[ILLUSTRATION:ILL-R36-ANURADHAPURA-MAP-01]","required_in_reader":false,"caption_only_allowed":true}
+  },
+  {
+    "schema_version":"1.0",
+    "class":"illustration",
+    "id":"ILL-R36-ANCIENT-SEA-ROUTES-02",
+    "status":"candidate",
+    "source":{"kind":"field_photo","asset_ref":"image-1788242788019.jpg","sha256":"b50791e3aa48be5d8ac6197c46d2cda310933f8fb7d8867816e1cb47bbb566e4","captured_at":"2026-09-01","location":"Sri Lanka; museum location not confirmed in intake","creator":"user","rights":"user_supplied","binary_status":"external_only","sha256_status":"verified_at_intake"},
+    "input_refs":[{"type":"field_fragment","id":"GF-R36-MAP-TRADE-001","path":"00_method/capture/run36_museum_maps_fragments.json"},{"type":"claim","id":"C-R36-MANTAI-GATEWAY-001","path":"01_arcs/A02_ancient_indian_ocean_exchange/claims/C-R36-MANTAI-GATEWAY-001.json"},{"type":"claim","id":"C-R36-MANTAI-IMPORTS-001","path":"01_arcs/A02_ancient_indian_ocean_exchange/claims/C-R36-MANTAI-IMPORTS-001.json"}],
+    "depiction":{"subject":"Museum schematic of ancient Indian Ocean sea routes","event_or_theme":"Indian Ocean connectivity and maritime technology zones","evidence_status":"observed_caption","textual_layer":"unresolved","period":"modern museum synthesis of ancient/early historic maritime exchange","notes":"Solid lines show major sea routes; dashed and x-marked zones are labelled dhow and outrigger technology zones."},
+    "vision_review":{"status":"reviewed","confidence":"high","caption_transcription":"TRADE — Ancient Sea Routes; Major Sea Routes; Dhow Technology Zone; Outrigger Technology Zone","visual_notes":"Sri Lanka lies near intersecting route arcs between western Indian Ocean, India, Bay of Bengal and Southeast Asia.","uncertainty":"The panel gives no visible chronology for the technology-zone boundaries; treat them as schematic."},
+    "tag_review":{"status":"approved","trigger":"manual","notes":"Routed primarily as a dezoom illustration of maritime connectivity."},
+    "human_review":{"status":"pending","reviewed_at":null,"notes":"Do not caption dhow/outrigger boundaries as precise historical facts without specialist sourcing."},
+    "fragment":{"caption":"Cette carte ne montre pas une “autoroute maritime” unique mais un faisceau de circuits : le Sri Lanka se trouve au point de couture entre mer d’Arabie, Inde, baie du Bengale et Asie du Sud-Est.","what_it_shows":"A schematic network of major maritime routes and broad technology zones.","why_here":"Provides a geographic dezoom explaining why an inland Sri Lankan kingdom could sit inside long-distance commercial systems.","limits":"Route curves are schematic; technology zones are chronologically underspecified and should not be read as exclusive borders."},
+    "placement":{"arc_ref":"A02_ancient_indian_ocean_exchange","subsection_ref":"indian-ocean-route-system","section_anchor":"","target_status":"proposed_missing","relevance_rank":1},
+    "render":{"marker":"[ILLUSTRATION:ILL-R36-ANCIENT-SEA-ROUTES-02]","required_in_reader":false,"caption_only_allowed":true}
+  }
+]
