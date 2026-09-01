@@ -39,3 +39,16 @@ Start from a small surgical instrument in the museum. Dezoom to the hospital, th
 - Absence of proof for a catastrophic epidemic is not proof that epidemics did not occur.
 - *Cūḷavaṃsa* praise of royal medical expertise is a court/chronicle representation and must be distinguished from archaeological material.
 - Oxford is an analytical comparison only; do not call medieval *pirivena* “universities” without qualification.
+
+## Run42 — validation et promotion
+
+Le gate de recherche de cet intake est **résolu en forme bornée** après corroboration indépendante.
+
+- **Hôpital d’Alahana Parivena** → promu comme `C-R42-A04-ALAHANA-HOSPITAL-001`, sur la base de l’étude archéologique/medicale récente de Nanayakkara et al., de l’analyse des instruments par Aluwihare, de la synthèse UNESCO et du panneau du Musée national.
+- **Monastère comme infrastructure de savoir et de soin** → promu comme `C-R42-A04-MONASTIC-KNOWLEDGE-001`. L’inférence porte sur la multifonctionnalité institutionnelle, pas sur une équivalence avec une université moderne.
+- **Hypothèse épidémique** → fermée négativement sous `C-R42-A04-EPIDEMIC-WEIGHT-001`: la maladie reste un **amplificateur possible**, mais le dossier actuel ne soutient pas son statut de cause principale de la chute politique de Polonnaruwa.
+- **Réseaux monastiques transrégionaux** → promus comme `C-R42-A04-MONASTIC-NETWORKS-001`, avec Blackburn et Manatunga comme ancrages T1; le flux est traité comme multidirectionnel.
+- **Comparateur Oxford / pirivena** → validé comme `C-R42-A04-OXFORD-PIRIVENA-COMP-001`: comparaison fonctionnelle et chronologique uniquement, sans filiation ni équivalence juridique.
+- **Bridge** → `B-R42-ALAHANA-KNOWLEDGE-NETWORK-001` relie la multifonctionnalité locale d’Alahana aux réseaux transrégionaux du Saṅgha sans transporter artificiellement les pratiques médicales d’Alahana hors de l’île.
+
+Réouverture seulement si de nouvelles données démographiques, paléopathologiques ou épidémiologiques datées modifient réellement le poids causal de la maladie, ou si une attribution instrument/procédure plus précise est proposée.
