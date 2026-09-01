@@ -5,8 +5,8 @@
   "arc":"A05b_dry_zone_collapse_and_mobile_capitals",
   "confidence":"A",
   "zoom":"Z2",
-  "causal_role":"rupture",
+  "causal_role":"context",
   "source_ids":["PATHMANATHAN-JAFFNA-1978","PERADENIYA-MEDIEVAL-KINGDOMS-THESIS","CCF-YAPAHUWA","CNM-TRANSITION-PANELS-2026"],
   "bounded_by":"The exact dating is usually placed around 1284 and source traditions differ on details surrounding Bhuvanekabahu I’s death/interregnum. Keep the documented Pandyan/Arya Cakravarti intervention distinct from later fully developed Jaffna state structures.",
-  "notes":"Bridge candidate: Pandyan intervention → Aryacakravarti consolidation in the north/Jaffna."
+  "notes":"Bridge candidate: Pandyan intervention → Aryacakravarti consolidation in the north/Jaffna. 'context' is used as the closed-vocabulary causal role; the event remains a narrative rupture, not a causal-role enum value."
 }

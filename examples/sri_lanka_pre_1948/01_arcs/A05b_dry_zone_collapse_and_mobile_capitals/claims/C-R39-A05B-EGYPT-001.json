@@ -1,0 +1,12 @@
+{
+  "id":"C-R39-A05B-EGYPT-001",
+  "type":"source_fact",
+  "claim":"In 1283 Bhuvanekabahu I's court sent an embassy to the Mamluk sultan Qalawun through the Muslim envoy al-Hajj Abu Uthman, showing that a Sri Lankan inland court could use Muslim commercial-diplomatic networks to reach the western Indian Ocean directly.",
+  "arc":"A05b_dry_zone_collapse_and_mobile_capitals",
+  "confidence":"B",
+  "zoom":"Z3",
+  "causal_role":"context",
+  "source_ids":["ALMAQRIZI-BHUVANEKABAHU-1283-SECONDARY","CNM-TRANSITION-PANELS-2026"],
+  "bounded_by":"The episode is supported through a modern scholarly treatment citing the medieval Arabic record tradition and by the museum synthesis; a critical edition of the Arabic text should be recovered before exact quotation or stronger claims about the embassy's commercial results.",
+  "notes":"Run39 proposition materialized during Run40 contract repair. Supports the merchant-as-diplomatic-infrastructure narrative thread without implying a Muslim monopoly over trade."
+}

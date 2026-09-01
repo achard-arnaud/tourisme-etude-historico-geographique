@@ -1,0 +1,12 @@
+{
+  "id":"C-R39-A05C-ZHENGHE-001",
+  "type":"source_fact",
+  "claim":"During the 1410–1411 Ming–Kotte conflict, Zheng He's expedition defeated the local ruler usually identified as Alakeshvara and carried him to China, demonstrating that early-fifteenth-century Sri Lankan politics could be directly affected by Ming maritime power.",
+  "arc":"A05c_gampola_kotte_sitawaka_transition",
+  "confidence":"A",
+  "zoom":"Z3",
+  "causal_role":"context",
+  "source_ids":["CAMBRIDGE-MING-KOTTE-1411","CNM-TRANSITION-PANELS-2026"],
+  "bounded_by":"Chronology is commonly rendered 1410–1411 and identification/titling of the captured ruler varies across traditions. The claim establishes intervention and capture, not a Ming territorial occupation or colonial regime in Sri Lanka.",
+  "notes":"Run39 proposition materialized during Run40 contract repair. Narrative bridge: Bay of Bengal maritime connectivity could become coercive political intervention."
+}
