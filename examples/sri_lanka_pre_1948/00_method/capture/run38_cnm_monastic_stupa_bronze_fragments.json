@@ -1,0 +1,4 @@
+[
+  {"id":"GF-R38-STUPA-FORMS-01","class":"field_fragment","kind":"museum_visual_observation","statement":"Colombo National Museum board titled STUPA FORMS displays six named stupa morphologies and diagrams of early/developed stupa plans plus a circular caitya shrine.","source_ref":"docs/intakes/INTAKE_cnm_monastery_plans_stupa_forms_and_bronze_2026-09-01.md","promotes_to":"","notes":"Museum synthesis; do not infer strict chronology from form sequence."},
+  {"id":"GF-R38-CNM-BRONZE-01","class":"field_fragment","kind":"object_observation","statement":"A standing bronze religious figure with elaborate headdress, jewellery and differentiated hand positions is displayed at Colombo National Museum; object identity/date/provenance are not visible in the photograph.","source_ref":"docs/intakes/INTAKE_cnm_monastery_plans_stupa_forms_and_bronze_2026-09-01.md","promotes_to":"","notes":"Observation only; no deity/Bodhisattva identification without catalogue label."}
+]
