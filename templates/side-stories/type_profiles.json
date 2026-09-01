@@ -1,102 +1,155 @@
 {
-  "schema_version":"1.0",
-  "derived_from":"repository examples through Run40",
-  "principle":"Type describes narrative job, not evidence strength. Reader-facing prose must preserve the richest safe fragment; metadata alone is not content conservation.",
-  "profiles":{
-    "detour":{
-      "narrative_job":"Temporarily leave the trunk for an autonomous microhistory whose mechanism clarifies the current paragraph, then return.",
-      "required_beats":["trigger in current paragraph","concrete secondary scene/event/object","mechanism or explanation","bounded limit","explicit or natural return/payoff"],
-      "preferred_attachment":"after the paragraph that triggers the detour; between two paragraphs only when it explains the transition",
-      "content_loss_risk":"high when reduced to title + takeaway; the secondary scene and mechanism disappear",
-      "good_examples":["SS-R34-MUDRA-DETOUR-001"],
-      "degraded_examples":["SS-R40-ARAB-ENVOY-001 before Run41 repair"],
-      "normal_min_visible_words":100
+  "schema_version": "1.1",
+  "derived_from": "repository examples through Run40 plus Run41 repaired stories",
+  "principle": "Type describes narrative job, not evidence strength. Reader-facing prose must preserve the richest safe fragment; metadata alone is not content conservation.",
+  "length_policy": {
+    "hard_min_meaning": "Below this visible-word count a new sourced story fails unless reader_policy.compact_allowed is explicitly justified.",
+    "target_range_meaning": "Normal editorial range: long enough to complete the type-specific mini-arc, short enough to remain subordinate to the trunk.",
+    "soft_upper_meaning": "Crossing this number triggers editorial review for splitting, promotion into the core story, or an analytical-focus conversion. It never authorizes truncation or loss of sourced matter.",
+    "advanced_reader_rule": "There is no global maximum manuscript length; these limits control the internal shape of an excursion, not total corpus conservation."
+  },
+  "profiles": {
+    "detour": {
+      "narrative_job": "Temporarily leave the trunk for an autonomous microhistory whose mechanism clarifies the host paragraph, then return.",
+      "required_beats": ["host-paragraph trigger", "concrete secondary scene/event/object", "mechanism or explanation", "bounded limit", "explicit or natural return/payoff"],
+      "storytelling_rules": ["Open from the concrete trigger, not a general definition.", "Tell one autonomous microhistory; do not accumulate a second chapter.", "The final sentence must repay the excursion by changing how the host paragraph is read."],
+      "default_placement": "embedded_in_host_paragraph_after_trigger_sentence",
+      "interstitial_affinity": 4,
+      "content_loss_risk": "high when reduced to title + takeaway; the secondary scene and mechanism disappear",
+      "good_examples": ["SS-R34-MUDRA-DETOUR-001"],
+      "degraded_examples": ["SS-R40-ARAB-ENVOY-001 before Run41 repair"],
+      "hard_min_visible_words": 100,
+      "target_visible_words": [120, 200],
+      "soft_upper_visible_words": 260
     },
-    "dezoom":{
-      "narrative_job":"Change scale from the observed/local event to a regional or global system and return with a changed interpretation of the local case.",
-      "required_beats":["local anchor","scale jump","transmission mechanism","larger-system explanation","local payoff/return"],
-      "preferred_attachment":"after the paragraph whose local mechanism is incomplete without the higher scale",
-      "content_loss_risk":"very high when zoom_excursion metadata replaces prose; from/to/mechanism fields do not themselves tell the story",
-      "good_examples":["SS-R23-KDY-SIAM-DEZOOM-001 after body repair","SS-R40-SOUTHINDIA-TRADE-001"],
-      "degraded_examples":["SS-R17-KDY-DEZOOM-PASS-001"],
-      "normal_min_visible_words":110
+    "dezoom": {
+      "narrative_job": "Change scale from the observed/local event to a regional or global system and return with a changed interpretation of the local case.",
+      "required_beats": ["local anchor", "scale jump", "transmission channel or mechanism", "larger-system explanation", "local payoff/return"],
+      "storytelling_rules": ["Begin and end at the local problem.", "Name the channel that connects scales: route, monsoon, institution, war, merchant network, ordination lineage, fiscal flow, etc.", "A list of distant facts is not a dezoom; the higher scale must explain something that was incomplete locally."],
+      "default_placement": "embedded_in_host_paragraph_at_scale_change",
+      "interstitial_affinity": 5,
+      "content_loss_risk": "very high when zoom_excursion metadata replaces prose; from/to/mechanism fields do not themselves tell the story",
+      "good_examples": ["SS-R23-KDY-SIAM-DEZOOM-001 after body repair", "SS-R40-SOUTHINDIA-TRADE-001"],
+      "degraded_examples": ["SS-R17-KDY-DEZOOM-PASS-001"],
+      "hard_min_visible_words": 110,
+      "target_visible_words": [140, 230],
+      "soft_upper_visible_words": 300
     },
-    "also":{
-      "narrative_job":"Add one adjacent dimension that materially corrects an oversimplified reading without opening a full second chapter.",
-      "required_beats":["what the trunk currently foregrounds","adjacent fact/dimension","why it changes interpretation","bounded return"],
-      "preferred_attachment":"between the foreground paragraph and its consequence, or after the paragraph being qualified",
-      "content_loss_risk":"medium; one-sentence takeaways often state the correction but lose the evidence and causal contrast",
-      "good_examples":["SS-R17-KDY-ALSO-DISPOSSESSIONS-001 after body repair","SS-R40-MING-KOTTE-001 after Run41 repair"],
-      "degraded_examples":["SS-R17-KDY-ALSO-DISPOSSESSIONS-001 before body repair"],
-      "normal_min_visible_words":85
+    "also": {
+      "narrative_job": "Add one adjacent dimension that materially corrects an oversimplified reading without opening a full second chapter.",
+      "required_beats": ["what the trunk foregrounds", "one adjacent fact/dimension", "supporting evidence", "why it changes interpretation", "bounded return"],
+      "storytelling_rules": ["Add one omitted dimension only.", "The correction must alter the meaning of the host paragraph, not merely add trivia.", "If the extra dimension develops its own chronology or system, retype as detour or dezoom."],
+      "default_placement": "embedded_in_host_paragraph_after_foreground_claim",
+      "interstitial_affinity": 2,
+      "content_loss_risk": "medium; one-sentence takeaways often state the correction but lose the evidence and causal contrast",
+      "good_examples": ["SS-R17-KDY-ALSO-DISPOSSESSIONS-001 after body repair", "SS-R40-MING-KOTTE-001 after Run41 repair"],
+      "degraded_examples": ["SS-R17-KDY-ALSO-DISPOSSESSIONS-001 before body repair"],
+      "hard_min_visible_words": 85,
+      "target_visible_words": [100, 150],
+      "soft_upper_visible_words": 190
     },
-    "method":{
-      "narrative_job":"Teach a reusable source-critical reading rule exactly where the reader risks overinterpreting an object, label, statistic or category.",
-      "required_beats":["concrete reading problem","rule","limit/failure mode","application to current object or passage"],
-      "preferred_attachment":"immediately after the first paragraph that creates the interpretive risk",
-      "content_loss_risk":"medium; abstract methodological prose detached from a concrete object becomes production commentary",
-      "good_examples":["SS-R34-BUDDHIST-ICONOGRAPHY-METHOD-001","SS-R13-NAGA-METHOD-001"],
-      "degraded_examples":[],
-      "normal_min_visible_words":80
+    "method": {
+      "narrative_job": "Teach a reusable source-critical reading rule exactly where the reader risks overinterpreting an object, label, statistic or category.",
+      "required_beats": ["concrete reading problem", "rule", "limit/failure mode", "application to current object or passage"],
+      "storytelling_rules": ["Object/problem before abstraction.", "The method must be useful to the reader in the field, never production commentary about the pipeline.", "End by applying the rule to the current evidence rather than merely stating epistemic caution."],
+      "default_placement": "embedded_in_host_paragraph_immediately_after_interpretive_risk",
+      "interstitial_affinity": 1,
+      "content_loss_risk": "medium; abstract methodological prose detached from a concrete object becomes production commentary",
+      "good_examples": ["SS-R34-BUDDHIST-ICONOGRAPHY-METHOD-001", "SS-R13-NAGA-METHOD-001"],
+      "degraded_examples": [],
+      "hard_min_visible_words": 80,
+      "target_visible_words": [95, 160],
+      "soft_upper_visible_words": 200
     },
-    "false_lead":{
-      "narrative_job":"Start from a plausible or memorable explanation, test it, show where it fails, and replace it with the strongest bounded mechanism available.",
-      "required_beats":["tempting thesis","what supports it","discriminating counter-evidence or missing link","replacement explanation","return to trunk"],
-      "preferred_attachment":"after the paragraph likely to trigger the mistaken inference, before the trunk relies on the corrected mechanism",
-      "content_loss_risk":"very high if only the verdict survives; reader loses why the false lead was plausible and how it was tested",
-      "good_examples":["SS-R30-ANGAMPORA-FALSE-LEAD-001"],
-      "degraded_examples":["SS-PRE-001"],
-      "normal_min_visible_words":120
+    "false_lead": {
+      "narrative_job": "Start from a plausible or memorable explanation, test it, show where it fails, and replace it with the strongest bounded mechanism available.",
+      "required_beats": ["tempting thesis", "why it is plausible", "discriminating counter-evidence or missing link", "replacement explanation", "return to trunk"],
+      "storytelling_rules": ["Do not caricature the false thesis: show why an intelligent observer might believe it.", "Verdict comes after the test, not before it.", "Replace the failed explanation with a bounded alternative; do not end in generic uncertainty when stronger mechanisms are known."],
+      "default_placement": "embedded_in_host_paragraph_after_tempting_inference_before_corrected_mechanism",
+      "interstitial_affinity": 4,
+      "content_loss_risk": "very high if only the verdict survives; reader loses why the false lead was plausible and how it was tested",
+      "good_examples": ["SS-R30-ANGAMPORA-FALSE-LEAD-001"],
+      "degraded_examples": ["SS-PRE-001"],
+      "hard_min_visible_words": 120,
+      "target_visible_words": [150, 260],
+      "soft_upper_visible_words": 330
     },
-    "portrait":{
-      "narrative_job":"Use a person's constrained trajectory to expose a larger mechanism; never substitute biography for system explanation.",
-      "required_beats":["situated person","choice/constraint or trajectory","documented action/network","system mechanism","callback to trunk"],
-      "preferred_attachment":"beside the event where the person changes the mechanism, not at first name mention by default",
-      "content_loss_risk":"high when a person record contains only a thesis-like takeaway; agency, constraints and chronology disappear",
-      "good_examples":["SS-R23-KDY-DOYLY-PORTRAIT-001 after Run41 repair","SS-R16-MIH-PORTRAIT-MAHINDA-001"],
-      "degraded_examples":["SS-R23-KDY-DONA-CATHERINA-PORTRAIT-001 before Run41 repair"],
-      "normal_min_visible_words":110
+    "portrait": {
+      "narrative_job": "Use a person's constrained trajectory to expose a larger mechanism; never substitute biography for system explanation.",
+      "required_beats": ["situated person", "choice/constraint or trajectory", "documented action/network", "system mechanism", "callback to trunk"],
+      "storytelling_rules": ["Select one trajectory, not a cradle-to-grave biography.", "Agency must remain constrained by institutions, geography and competing actors.", "The person earns space only by making a system legible."],
+      "default_placement": "embedded_in_host_paragraph_at_the_action_that_changes_the_mechanism",
+      "interstitial_affinity": 3,
+      "content_loss_risk": "high when a person record contains only a thesis-like takeaway; agency, constraints and chronology disappear",
+      "good_examples": ["SS-R23-KDY-DOYLY-PORTRAIT-001 after Run41 repair", "SS-R16-MIH-PORTRAIT-MAHINDA-001"],
+      "degraded_examples": ["SS-R23-KDY-DONA-CATHERINA-PORTRAIT-001 before Run41 repair"],
+      "hard_min_visible_words": 110,
+      "target_visible_words": [130, 220],
+      "soft_upper_visible_words": 280
     },
-    "object_focus":{
-      "narrative_job":"Begin with a visible/handled object or terrain feature, identify it cautiously, then use its function to reveal a larger institution or system and return to what is visible.",
-      "required_beats":["field/object observation","identification/function","system revealed","uncertainty/provenance limit","return to terrain"],
-      "preferred_attachment":"after the paragraph where the object/site first becomes historically useful",
-      "content_loss_risk":"high when object description is replaced by iconographic metadata or a general takeaway",
-      "good_examples":["SS-R40-SCALPEL-OBJECT-001 after Run41 repair","SS-R13-GLASS-OBJECT-001"],
-      "degraded_examples":["SS-R28-MUDRA-OBJECT-001"],
-      "normal_min_visible_words":100
+    "object_focus": {
+      "narrative_job": "Begin with a visible/handled object or terrain feature, identify it cautiously, then use its function to reveal a larger institution or system and return to what is visible.",
+      "required_beats": ["field/object observation", "identification/function", "system revealed", "uncertainty/provenance limit", "return to terrain"],
+      "storytelling_rules": ["Separate what is visibly observed from what is inferred.", "Never force provenance, dating or identification beyond the evidence.", "Return to the physical object so the larger system remains anchored in the field encounter."],
+      "default_placement": "embedded_in_host_paragraph_immediately_after_object_trigger",
+      "interstitial_affinity": 1,
+      "content_loss_risk": "high when object description is replaced by iconographic metadata or a general takeaway",
+      "good_examples": ["SS-R40-SCALPEL-OBJECT-001 after Run41 repair", "SS-R13-GLASS-OBJECT-001"],
+      "degraded_examples": ["SS-R28-MUDRA-OBJECT-001"],
+      "hard_min_visible_words": 100,
+      "target_visible_words": [120, 200],
+      "soft_upper_visible_words": 260
     },
-    "comparator":{
-      "narrative_job":"Compare two cases only on a specified axis to sharpen a mechanism without transporting outcomes or identities wholesale.",
-      "required_beats":["comparison axis","case A mechanism","case B mechanism","similarity","difference/confounder","bounded payoff"],
-      "preferred_attachment":"after the paragraph that states the mechanism being compared",
-      "content_loss_risk":"high when the comparison axis/confounder is kept in metadata but prose collapses to analogy",
-      "good_examples":["SS-R40-VIJAYANAGARA-COMP-001 after Run41 repair"],
-      "degraded_examples":[],
-      "normal_min_visible_words":120
+    "comparator": {
+      "narrative_job": "Compare two cases only on a specified axis to sharpen a mechanism without transporting outcomes or identities wholesale.",
+      "required_beats": ["explicit comparison axis", "case A mechanism", "case B mechanism", "similarity", "difference/confounder", "bounded payoff"],
+      "storytelling_rules": ["State the comparison axis before the analogy.", "Compare mechanisms, not civilizations as wholes.", "At least one material difference/confounder is mandatory before the payoff."],
+      "default_placement": "embedded_in_host_paragraph_after_mechanism_to_be_compared",
+      "interstitial_affinity": 4,
+      "content_loss_risk": "high when the comparison axis/confounder is kept in metadata but prose collapses to analogy",
+      "good_examples": ["SS-R40-VIJAYANAGARA-COMP-001 after Run41 repair"],
+      "degraded_examples": [],
+      "hard_min_visible_words": 120,
+      "target_visible_words": [150, 260],
+      "soft_upper_visible_words": 330
     },
-    "callback":{
-      "narrative_job":"Reactivate an earlier side story because a later event changes, confirms or limits its meaning.",
-      "required_beats":["recognizable earlier referent","new evidence/event","what changes in the earlier interpretation"],
-      "preferred_attachment":"after the later paragraph that updates the earlier story",
-      "content_loss_risk":"low if concise; main risk is repetition rather than loss",
-      "good_examples":[],
-      "degraded_examples":[],
-      "normal_min_visible_words":55
+    "callback": {
+      "narrative_job": "Reactivate an earlier side story because a later event changes, confirms or limits its meaning.",
+      "required_beats": ["recognizable earlier referent", "new evidence/event", "what changes in the earlier interpretation"],
+      "storytelling_rules": ["Do not resummarize the earlier side story.", "Render only the delta in meaning created by the new event.", "If the callback needs a full new causal arc, retype it."],
+      "default_placement": "embedded_in_host_paragraph_after_new_evidence",
+      "interstitial_affinity": 0,
+      "content_loss_risk": "low if concise; main risk is repetition rather than loss",
+      "good_examples": [],
+      "degraded_examples": [],
+      "hard_min_visible_words": 55,
+      "target_visible_words": [60, 100],
+      "soft_upper_visible_words": 130
     },
-    "analytical_focus":{
-      "narrative_job":"Pause the chronology for a structured contested question requiring explicit rival readings, mechanisms and evidence states.",
-      "required_beats":["hero question","at least two competing readings or dimensions","mechanisms","evidence status/limits","callback(s) to chronology"],
-      "preferred_attachment":"after the paragraph where the unresolved analytical problem becomes unavoidable; never as a remote appendix",
-      "content_loss_risk":"very high when structured analysis exists backstage but no reader body/visual is materialized",
-      "good_examples":["SS-PRE-JETAVANA-001","SS-R37-ANURADHAPURA-PLURAL-001"],
-      "degraded_examples":["SS-R28-MOBILE-CENTRES-ANALYTICAL-001 when not materialized"],
-      "normal_min_visible_words":180
+    "analytical_focus": {
+      "narrative_job": "Pause the chronology for a structured contested question requiring explicit rival readings, mechanisms and evidence states.",
+      "required_beats": ["hero question", "at least two competing readings or dimensions", "mechanisms", "evidence status/limits", "callback(s) to chronology"],
+      "storytelling_rules": ["The hero question must be produced by the host paragraph, not imported as an essay topic.", "Competing readings must be genuinely discriminable and bounded by evidence states.", "Close by returning to the chronology with a changed working interpretation."],
+      "default_placement": "embedded_in_host_paragraph_at_unavoidable_analytical_pause",
+      "interstitial_affinity": 5,
+      "content_loss_risk": "very high when structured analysis exists backstage but no reader body/visual is materialized",
+      "good_examples": ["SS-PRE-JETAVANA-001", "SS-R37-ANURADHAPURA-PLURAL-001"],
+      "degraded_examples": ["SS-R28-MOBILE-CENTRES-ANALYTICAL-001 when not materialized"],
+      "hard_min_visible_words": 180,
+      "target_visible_words": [230, 450],
+      "soft_upper_visible_words": 600
     }
   },
-  "placement_fallback":{
-    "rule":"After semantic and chronological compatibility are satisfied, choose the lowest-density boundary; when several remain equivalent, prefer the longest relevant paragraph/fragment.",
-    "forbidden":"append_at_book_end",
-    "adjacency_window_paragraphs":1
+  "placement_contract": {
+    "default_mode": "embedded_in_host_paragraph",
+    "max_embedded_side_stories_per_paragraph": 1,
+    "density_window_paragraphs": 3,
+    "max_embedded_side_stories_in_density_window": 2,
+    "density_overflow_rule": "If previous/current/next host paragraphs would each contain an embedded side story, keep two embedded and move the story most suitable for an inter-paragraph excursion to one local interstitial boundary. Choose by interstitial_affinity, then transition fit and chronology; never drop a story because of density.",
+    "max_interstitial_side_stories_per_boundary": 1,
+    "same_host_collision_rule": "When several stories target the same paragraph, embed the story most dependent on that paragraph. Reroute the others to a semantically equivalent host or to one valid local interstitial boundary; otherwise fail QA.",
+    "unsplittable_host_rule": "If no safe sentence boundary leaves meaningful prose on both sides of the host paragraph, use a local interstitial placement rather than splitting a sentence.",
+    "fallback_rule": "Only after semantic and chronological compatibility are tied, prefer the richer/longer relevant paragraph or fragment.",
+    "forbidden": ["append_at_book_end", "split_sentence", "silently_drop_for_density", "cross_chronological_rupture_for_layout"]
   }
 }
