@@ -1,0 +1,13 @@
+{
+  "id":"C-R36-MANTAI-IMPORTS-001",
+  "type":"source_fact",
+  "claim":"Excavations at Mantai document long-distance exchange through imported ceramics, beads and plant products; the 2009–2010 sequence includes wares from India, China, Southeast Asia and the Middle East, while archaeobotanical finds include imported or exchanged products such as wheat, grape, black pepper and a clove.",
+  "confidence":"A",
+  "zoom":"Z1",
+  "causal_role":"evidence",
+  "arc":"A02_ancient_indian_ocean_exchange",
+  "hil":"HIL-03_economy-infrastructure",
+  "source_ids":["ANTIQUITY-MANTAI-SPICE-RICE-2018"],
+  "bounded_by":"Object provenance demonstrates exchange networks but does not by itself prove direct voyages from every origin region to Mantai; goods could move through multiple entrepôts.",
+  "notes":"Use to prevent the sea-routes museum map from being read as evidence for direct point-to-point sailing."
+}
