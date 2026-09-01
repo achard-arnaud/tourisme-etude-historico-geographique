@@ -1,0 +1,12 @@
+{
+  "id":"C-R42-A04-MONASTIC-KNOWLEDGE-001",
+  "type":"inference",
+  "claim":"Alahana Parivena shows that a major Polonnaruwa monastic institution combined residence and organised learning with medical care and sanitary infrastructure, so the Sangha occupied an institutional space extending beyond ritual into the production, transmission and practical application of specialist knowledge.",
+  "arc":"A04_chola_interlude_and_polonnaruwa",
+  "confidence":"B",
+  "zoom":"Z2",
+  "causal_role":"context",
+  "source_ids":["SAARC-NANAYAKKARA-ALAHANA-2026","CCF-POLONNARUWA-ALAHANA","UNESCO-MONASTIC-HOSPITALS-SL"],
+  "bounded_by":"This is a functional institutional inference. It does not imply that every pirivena performed the same functions, that all services were open to the general population, or that medieval Sri Lankan monasteries were universities in the later European legal sense.",
+  "notes":"Promoted from the Run39 bridge candidate after independent archaeological and institutional corroboration."
+}
