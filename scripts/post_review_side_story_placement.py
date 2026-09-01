@@ -61,7 +61,7 @@ def _norm(value: str) -> str:
 
 def _visible_words(value: str) -> int:
     value = re.sub(r"<[^>]+>", " ", value)
-    value = re.sub(r"\[[^\]]+\]\([^\)]+\)", r"\1", value)
+    value = re.sub(r"\[([^\]]+)\]\([^\)]+\)", r"\1", value)
     return len(
         re.findall(r"\b[\wÀ-ÖØ-öø-ÿĀ-ž'’.-]+\b", value, re.UNICODE)
     )
@@ -69,7 +69,7 @@ def _visible_words(value: str) -> int:
 
 def _plain(value: str) -> str:
     value = re.sub(r"<!--.*?-->", " ", value, flags=re.S)
-    value = re.sub(r"\[[^\]]+\]\([^\)]+\)", r"\1", value)
+    value = re.sub(r"\[([^\]]+)\]\([^\)]+\)", r"\1", value)
     value = re.sub(r"^#{1,6}\s+", "", value.strip())
     value = re.sub(r"[*_`]", "", value)
     return re.sub(r"\s+", " ", value).strip()
