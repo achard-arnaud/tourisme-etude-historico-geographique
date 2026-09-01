@@ -98,7 +98,7 @@ Compatibility:
 
 Supported reader profiles remain **advanced**, **intermediate** and **child**. The reader plan selects one profile and controls presentation, never evidence strength.
 
-For advanced work there is **no maximum manuscript length**. Side-story type profiles use a hard minimum, a normal target range and a **soft upper review threshold**. Crossing the soft upper threshold triggers splitting, promotion into the trunk or retyping; it never authorizes truncation of sourced matter.
+For advanced work there is **no maximum length** for the manuscript. Side-story type profiles use a hard minimum, a normal target range and a **soft upper review threshold**. Crossing the soft upper threshold triggers splitting, promotion into the trunk or retyping; it never authorizes truncation of sourced matter.
 
 The reader plan, paragraph review state and Sarah-voice review remain deterministic inputs to composition QA. A profile changes exposition; it does not authorize invented dialogue, motives, source inflation or claim loss.
 
