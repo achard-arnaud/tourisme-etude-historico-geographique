@@ -1,0 +1,13 @@
+{
+  "id":"C-R37-ABH-VAITULYA-001",
+  "type":"source_fact",
+  "claim":"Abhayagiri was not simply a second Theravada monastery parallel to the Mahavihara: Sri Lankan sectarian sources and modern critical scholarship associate its Dhammaruci community with Vaitulya/Vetulla currents, while Chinese and other evidence show a broader doctrinal range than the later Mahavihara-centred historical narrative alone suggests.",
+  "confidence":"A",
+  "zoom":"Z1",
+  "causal_role":"context",
+  "arc":"A02c_anuradhapura_and_the_mahavihara",
+  "hil":"HIL-05_religion-culture-legitimacy",
+  "source_ids":["DEEG-ABHAYAGIRI-2024","CNM-MAHAYANA-PANEL-2026"],
+  "bounded_by":"The label Vaitulya in polemical chronicles cannot be equated mechanically with a single, stable Mahayana sect; the claim is about documented doctrinal plurality and contestation at Abhayagiri.",
+  "notes":"Directly extends C-R16-ABH-DATE-001: the new bronze dating question does not establish the older Mahayana/Vajrayana history, but the history itself has independent textual/scholarly support."
+}
