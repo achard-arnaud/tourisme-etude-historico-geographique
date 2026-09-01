@@ -1,0 +1,12 @@
+{
+  "id":"C-R42-A04-MONASTIC-NETWORKS-001",
+  "type":"claim",
+  "claim":"During the second millennium, Sri Lankan Buddhist institutions formed part of transregional networks linking Lanka with mainland Southeast Asia through the movement of monks, ordination lineages, educational practices, texts and linguistic preferences; these exchanges were multi-directional rather than a simple one-way export from the island.",
+  "arc":"A04_chola_interlude_and_polonnaruwa",
+  "confidence":"B",
+  "zoom":"Z4",
+  "causal_role":"context",
+  "source_ids":["CAMBRIDGE-BLACKBURN-SIHALA-SANGHA-2017","CAMBRIDGE-MANATUNGA-POLONNARUWA"],
+  "bounded_by":"The sources establish sustained transregional Buddhist mobility and influence but do not support a single continuous institutional network, a uniform chronology across Southeast Asia, or one-way Sri Lankan dominance.",
+  "notes":"Run42 turns the Run39 international dezoom into a sourced claim while preserving Blackburn's historiographic caution."
+}
