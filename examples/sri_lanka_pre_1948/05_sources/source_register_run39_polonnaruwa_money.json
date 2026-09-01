@@ -1,0 +1,58 @@
+[
+  {
+    "id":"CNM-POLONNARUWA-COINAGE-PANEL-2026",
+    "title":"Colombo National Museum panel on Polonnaruwa coinage and Dharmasokadeva copper issue",
+    "url":"field://colombo-national-museum/2026-09-01/polonnaruwa-coinage-dharmasokadeva",
+    "tier":"T2",
+    "anchor_role":"specialist institutional anchor",
+    "date":"2026-09-01",
+    "author_or_institution":"Colombo National Museum / Department of National Museums, Sri Lanka",
+    "author_institution":"Department of National Museums, Sri Lanka",
+    "scope":"Museum synthesis of Polonnaruwa royal coinage, metal composition, denominations, named rulers and foreign coin circulation",
+    "claims_supported":["C-R39-POL-MONETARY-DEBASE-001"],
+    "limitations":"Modern museum synthesis; useful for field identification and historiographic framing but not sufficient alone for causal claims about economic collapse.",
+    "provenance":"direct"
+  },
+  {
+    "id":"CBSL-HISTORY-CURRENCY-POLONNARUWA",
+    "title":"History of Currency in Sri Lanka",
+    "url":"https://www.cbsl.gov.lk/en/notes-coins/notes-and-coins/history-of-currency-in-sri-lanka",
+    "tier":"T0",
+    "anchor_role":"primary institutional anchor",
+    "date":"current institutional page accessed 2026-09-01",
+    "author_or_institution":"Central Bank of Sri Lanka",
+    "author_institution":"Central Bank of Sri Lanka",
+    "scope":"Institutional history of Sinhala Massa/Kahawanu coinage, ruler names, copper transition and foreign coin circulation during Polonnaruwa",
+    "claims_supported":["C-R39-POL-MONETARY-DEBASE-001"],
+    "limitations":"Institutional public-history synthesis rather than a specialist causal economic study; it documents coinage but does not establish monetary debasement as a cause of political collapse.",
+    "provenance":"direct"
+  },
+  {
+    "id":"LIYANAGAMAGE-SOAS-POLONNARUWA-1963",
+    "title":"The Decline of Polonnaruva and the Rise of Dambadeniya, circa 1180-1270 A.D.",
+    "url":"https://doi.org/10.25501/SOAS.00026225",
+    "tier":"T1",
+    "anchor_role":"canonical anchor",
+    "date":"1963",
+    "author_or_institution":"Amaradasa Liyanagamage / SOAS University of London",
+    "author_institution":"SOAS University of London",
+    "scope":"Specialist study of the political and economic disintegration after Parakramabahu I, including discussion of coinage debasement and rival interpretations of its meaning",
+    "claims_supported":["C-R39-POL-MONETARY-STRESS-001"],
+    "limitations":"Older doctoral synthesis; valuable because it directly tests the causal proposition, but its monetary discussion relies partly on earlier numismatic scholarship and should not be read as econometric proof.",
+    "provenance":"direct"
+  },
+  {
+    "id":"CODRINGTON-COINS-CURRENCY-1924",
+    "title":"Ceylon Coins and Currency",
+    "url":"https://books.google.com/books/about/Ceylon_Coins_and_Currency.html?id=CJrKcKqJGuEC",
+    "tier":"T1",
+    "anchor_role":"specialist anchor",
+    "date":"1924",
+    "author_or_institution":"H. W. Codrington / Colombo Museum",
+    "author_institution":"Colombo Museum",
+    "scope":"Foundational numismatic catalogue and analysis of medieval Lankan coinage, including precious-metal and base-metal issues",
+    "claims_supported":["C-R39-POL-MONETARY-DEBASE-001","C-R39-POL-MONETARY-STRESS-001"],
+    "limitations":"Foundational but century-old numismatic synthesis; compositional and chronological claims should be checked against later specialist work where available.",
+    "provenance":"direct"
+  }
+]
