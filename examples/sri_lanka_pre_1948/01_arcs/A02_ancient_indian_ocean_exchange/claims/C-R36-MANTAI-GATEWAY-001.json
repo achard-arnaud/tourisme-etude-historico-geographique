@@ -1,0 +1,13 @@
+{
+  "id":"C-R36-MANTAI-GATEWAY-001",
+  "type":"source_fact",
+  "claim":"Mantai on Sri Lanka's north-west coast functioned as a major gateway linking the Anuradhapura kingdom to Indian Ocean exchange: its position near the Palk Strait connected Arabian Sea, Bay of Bengal and Indian coastal routes, while archaeological and geomorphological evidence supports an inland connection toward Anuradhapura through the Malvatu Oya corridor.",
+  "confidence":"A",
+  "zoom":"Z3",
+  "causal_role":"mechanism",
+  "arc":"A02_ancient_indian_ocean_exchange",
+  "hil":"HIL-07_regional-global-system",
+  "source_ids":["ANTIQUITY-MANTAI-SPICE-RICE-2018","UCL-CROSSROADS-2017-R36"],
+  "bounded_by":"The port's gateway role is well supported; a continuously navigable river route from Mantai to Anuradhapura at every date is a reconstruction and should not be overstated.",
+  "notes":"This is the central bridge created by the two museum maps: inland dry-zone capital plus coastal Indian Ocean node."
+}
