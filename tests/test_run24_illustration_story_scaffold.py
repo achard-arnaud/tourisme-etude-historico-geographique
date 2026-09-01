@@ -32,14 +32,15 @@ class Run24IllustrationStoryScaffoldTests(unittest.TestCase):
         self.assertTrue(all(x["source"]["sha256_status"]=="verified_at_intake" for x in records))
         self.assertTrue(all(x["render"]["marker"]==f"[ILLUSTRATION:{x['id']}]" for x in records))
 
-    def test_reader_plan_has_complete_review_queue_and_no_false_embedding(self):
+    def test_reader_plan_routes_every_illustration_to_selection_review_or_retirement(self):
         records=illustration_records();expected_ids={x["id"] for x in records}
         plan=build_plan(PRE)
-        self.assertEqual([],plan["selected_illustration_ids"])
-        self.assertEqual(expected_ids,set(plan["illustration_review_queue_ids"]))
-        self.assertEqual(len(expected_ids),len(plan["illustration_review_queue_ids"]))
+        routed=set(plan["selected_illustration_ids"])|set(plan["illustration_review_queue_ids"])|set(plan["retired_illustration_ids"])
+        self.assertEqual(expected_ids,routed)
+        self.assertFalse(set(plan["selected_illustration_ids"]) & set(plan["illustration_review_queue_ids"]))
         self.assertEqual("09_output/story_scaffold.json",plan["story_scaffold"])
-        self.assertEqual(0,assert_rendered_illustrations("reader without selected images",plan["selected_illustration_ids"]))
+        rendered=" ".join(f"[ILLUSTRATION:{iid}]" for iid in plan["selected_illustration_ids"])
+        self.assertEqual(len(plan["selected_illustration_ids"]),assert_rendered_illustrations(rendered,plan["selected_illustration_ids"]))
 
     def test_computed_rank_prefers_evidence_then_confidence_then_human_rank(self):
         canonical={"id":"a","depiction":{"evidence_status":"canonical_text"},"vision_review":{"confidence":"medium"},"placement":{"relevance_rank":9}}
@@ -58,10 +59,11 @@ class Run24IllustrationStoryScaffoldTests(unittest.TestCase):
         self.assertEqual([],lint_caption_language({"id":"Y","fragment":{"caption":"La tradition chronique situe cet épisode à Lanka."}}))
 
     def test_story_scaffold_captures_global_topology_before_arc_hydration(self):
-        expected_ids={x["id"] for x in illustration_records()}
+        all_ids={x["id"] for x in illustration_records()}
+        expected_ids={x["id"] for x in illustration_records() if x.get("status") in {"candidate","vision_validated"}}
         scaffold=build_scaffold(PRE)
         self.assertEqual("global topology -> arc-local retrieval packs -> cross-arc stitch -> illustration pass -> coverage reconciliation",scaffold["strategy"])
-        self.assertEqual(len(expected_ids),scaffold["coverage"]["illustrations"])
+        self.assertEqual(len(all_ids),scaffold["coverage"]["illustrations"])
         arc=next(x for x in scaffold["arcs"] if x["arc"]=="A02c_anuradhapura_and_the_mahavihara")
         self.assertEqual(expected_ids,set(arc["illustration_review_queue_ids"]))
         self.assertIn("Anuradhapura",arc["title"])

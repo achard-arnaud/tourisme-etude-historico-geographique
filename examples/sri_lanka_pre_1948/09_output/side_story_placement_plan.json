@@ -1,0 +1,346 @@
+{
+  "schema_version": "1.1",
+  "stage": "post_core_review",
+  "placement_contract": {
+    "default_mode": "embedded_in_host_paragraph",
+    "max_embedded_side_stories_per_paragraph": 1,
+    "density_window_paragraphs": 3,
+    "max_embedded_side_stories_in_density_window": 2,
+    "density_overflow_rule": "If previous/current/next host paragraphs would each contain an embedded side story, keep two embedded and move the story most suitable for an inter-paragraph excursion to one local interstitial boundary. Choose by interstitial_affinity, then transition fit and chronology; never drop a story because of density.",
+    "max_interstitial_side_stories_per_boundary": 1,
+    "same_host_collision_rule": "When several stories target the same paragraph, embed the story most dependent on that paragraph. Reroute the others to a semantically equivalent host or to one valid local interstitial boundary; otherwise fail QA.",
+    "unsplittable_host_rule": "If no safe sentence boundary leaves meaningful prose on both sides of the host paragraph, use a local interstitial placement rather than splitting a sentence.",
+    "fallback_rule": "Only after semantic and chronological compatibility are tied, prefer the richer/longer relevant paragraph or fragment.",
+    "forbidden": [
+      "append_at_book_end",
+      "split_sentence",
+      "silently_drop_for_density",
+      "cross_chronological_rupture_for_layout"
+    ]
+  },
+  "placements": [
+    {
+      "id": "SS-R37-ANURADHAPURA-PLURAL-001",
+      "kind": "analytical_focus",
+      "status": "candidate",
+      "section_anchor": "2. Valagamba et Abhayagiri : le Saṅgha n’est pas monolithique",
+      "placement_mode": "embedded",
+      "host_paragraph_ordinal": 37,
+      "host_paragraph_excerpt": "La fondation d’Abhayagiri crée un deuxième grand pôle monastique à côté du Mahāvihāra. Le pluralisme devient institutionnel, intellectuel et international. Plus tard, Jetavana formera un troisième grand ensemble. UNESCO classe ces grands monastères parmi les c",
+      "semantic_score": 240,
+      "score": 243.39,
+      "existing_density_penalty": 0,
+      "paragraph_words": 61,
+      "term_hits": [
+        "abhayagiri",
+        "mahāvihāra"
+      ],
+      "chronology_hits": [],
+      "mechanism_hits": [],
+      "fallback_longest_fragment": false,
+      "split_after_visible_words": 13,
+      "density_reason": null,
+      "interstitial_affinity": 5
+    },
+    {
+      "id": "SS-R43-GALVIHARA-OBJECT-001",
+      "kind": "object_focus",
+      "status": "candidate",
+      "section_anchor": "Chapitre 4 — Polonnaruwa à l’apogée : eau, Saṅgha, souveraineté et projection régionale",
+      "placement_mode": "embedded",
+      "host_paragraph_ordinal": 107,
+      "host_paragraph_excerpt": "Parākramabāhu intervient dans les conflits du monde pandya et cherche à peser sur l’équilibre sud-indien. Il faut dire intervention dans une guerre de succession / projection de puissance, pas « conquête de l’Inde ».",
+      "semantic_score": 120,
+      "score": 121.72,
+      "existing_density_penalty": 0,
+      "paragraph_words": 31,
+      "term_hits": [
+        "parākramabāhu"
+      ],
+      "chronology_hits": [],
+      "mechanism_hits": [],
+      "fallback_longest_fragment": false,
+      "split_after_visible_words": 15,
+      "density_reason": null,
+      "interstitial_affinity": 1
+    },
+    {
+      "id": "SS-R40-SCALPEL-OBJECT-001",
+      "kind": "object_focus",
+      "status": "candidate",
+      "section_anchor": "Chapitre 5 — La chute de Polonnaruwa : violence, fragmentation et changement d’optimum",
+      "placement_mode": "embedded",
+      "host_paragraph_ordinal": 134,
+      "host_paragraph_excerpt": "Le paludisme et l’écologie de la Dry Zone ont probablement amplifié à certaines périodes les difficultés de repeuplement et de mise en valeur. \\[D comme cause première\\] Aucun dossier solide ne permet de dire « malaria → chute de Polonnaruwa en 1215 ».",
+      "semantic_score": 120,
+      "score": 122.22,
+      "existing_density_penalty": 0,
+      "paragraph_words": 40,
+      "term_hits": [
+        "polonnaruwa"
+      ],
+      "chronology_hits": [],
+      "mechanism_hits": [],
+      "fallback_longest_fragment": false,
+      "split_after_visible_words": 23,
+      "density_reason": null,
+      "interstitial_affinity": 1
+    },
+    {
+      "id": "SS-R40-EPIDEMIC-FALSE-LEAD-001",
+      "kind": "false_lead",
+      "status": "candidate",
+      "section_anchor": "Chapitre 5 — La chute de Polonnaruwa : violence, fragmentation et changement d’optimum",
+      "placement_mode": "interstitial",
+      "host_paragraph_ordinal": 146,
+      "host_paragraph_excerpt": "Manatunga (Cambridge/ISEAS) fournit la correction décisive au récit du musée : Magha usurpe Polonnaruwa en 1215 et règne environ vingt-et-un ans, mais la ville est encore restaurée et réoccupée aux XIIIe–XIVe siècles avant un abandon graduel.",
+      "semantic_score": 240,
+      "score": 242.06,
+      "existing_density_penalty": 0,
+      "paragraph_words": 37,
+      "term_hits": [
+        "abandon",
+        "polonnaruwa"
+      ],
+      "chronology_hits": [],
+      "mechanism_hits": [],
+      "fallback_longest_fragment": false,
+      "split_after_visible_words": null,
+      "density_reason": null,
+      "interstitial_affinity": 4,
+      "interstitial_boundary": {
+        "host_ordinal": 146,
+        "position": "after"
+      },
+      "boundary_host_excerpt": "Manatunga (Cambridge/ISEAS) fournit la correction décisive au récit du musée : Magha usurpe Polonnaruwa en 1215 et règne environ vingt-et-un ans, mais la ville est encore restaurée et réoccupée aux XIIIe–XIVe siècles avant un abandon graduel."
+    },
+    {
+      "id": "SS-R43-POLONNARUWA-MONEY-FOCUS-001",
+      "kind": "false_lead",
+      "status": "candidate",
+      "section_anchor": "Chapitre 5 — La chute de Polonnaruwa : violence, fragmentation et changement d’optimum",
+      "placement_mode": "interstitial",
+      "host_paragraph_ordinal": 127,
+      "host_paragraph_excerpt": "succession contestée → armée/fiscalité politisées → perte de coordination → coûts d’entretien et de défense plus difficiles → attractivité accrue pour un conquérant extérieur.",
+      "semantic_score": 260,
+      "score": 261.17,
+      "existing_density_penalty": 0,
+      "paragraph_words": 21,
+      "term_hits": [
+        "succession"
+      ],
+      "chronology_hits": [],
+      "mechanism_hits": [
+        "fiscal",
+        "succession"
+      ],
+      "fallback_longest_fragment": false,
+      "split_after_visible_words": null,
+      "density_reason": null,
+      "interstitial_affinity": 4,
+      "interstitial_boundary": {
+        "host_ordinal": 127,
+        "position": "after"
+      },
+      "boundary_host_excerpt": "succession contestée → armée/fiscalité politisées → perte de coordination → coûts d’entretien et de défense plus difficiles → attractivité accrue pour un conquérant extérieur."
+    },
+    {
+      "id": "SS-R40-ARAB-ENVOY-001",
+      "kind": "detour",
+      "status": "candidate",
+      "section_anchor": "Chapitre 6 — Dambadeniya, Yapahuwa, Kurunegala, Gampola et Kotte : déplacer la souveraineté",
+      "placement_mode": "embedded",
+      "host_paragraph_ordinal": 199,
+      "host_paragraph_excerpt": "La New Cambridge History of Islam traite le commerce islamique de l'océan Indien comme une oecumène de longue durée. L'Islam arrive dans notre récit comme réseau de marchands, ports, crédit, familles et navigation, bien avant Safavides, Ottomans ou Moghols.",
+      "semantic_score": 190,
+      "score": 192.17,
+      "existing_density_penalty": 0,
+      "paragraph_words": 39,
+      "term_hits": [
+        "commerce"
+      ],
+      "chronology_hits": [],
+      "mechanism_hits": [
+        "ports"
+      ],
+      "fallback_longest_fragment": false,
+      "split_after_visible_words": 19,
+      "density_reason": null,
+      "interstitial_affinity": 4
+    },
+    {
+      "id": "SS-R40-MING-KOTTE-001",
+      "kind": "also",
+      "status": "candidate",
+      "section_anchor": "Chapitre 6 — Dambadeniya, Yapahuwa, Kurunegala, Gampola et Kotte : déplacer la souveraineté",
+      "placement_mode": "embedded",
+      "host_paragraph_ordinal": 197,
+      "host_paragraph_excerpt": "L'étude de Lara Wijesuriya dans Itinerario montre que l'essor du commerce maritime produit des villes portuaires et de nouveaux centres de pouvoir. Les Alakeshvara utilisent le right of the port, taxes et péages pour construire un territoire terrestre et marit",
+      "semantic_score": 380,
+      "score": 382.44,
+      "existing_density_penalty": 0,
+      "paragraph_words": 44,
+      "term_hits": [
+        "kotte",
+        "alakeshvara"
+      ],
+      "chronology_hits": [],
+      "mechanism_hits": [
+        "port",
+        "maritime"
+      ],
+      "fallback_longest_fragment": false,
+      "split_after_visible_words": 22,
+      "density_reason": null,
+      "interstitial_affinity": 2
+    },
+    {
+      "id": "SS-R40-VIJAYANAGARA-COMP-001",
+      "kind": "comparator",
+      "status": "candidate",
+      "section_anchor": "Chapitre 6 — Dambadeniya, Yapahuwa, Kurunegala, Gampola et Kotte : déplacer la souveraineté",
+      "placement_mode": "embedded",
+      "host_paragraph_ordinal": 201,
+      "host_paragraph_excerpt": "Les grandes expéditions de Zheng He projettent puissance militaire, politique et économique. Elles coûtent toutefois lourdement à l'État Ming et cessent après 1433. Le commerce chinois, lui, continue.",
+      "semantic_score": 70,
+      "score": 71.56,
+      "existing_density_penalty": 0,
+      "paragraph_words": 28,
+      "term_hits": [],
+      "chronology_hits": [],
+      "mechanism_hits": [
+        "commerce"
+      ],
+      "fallback_longest_fragment": false,
+      "split_after_visible_words": 12,
+      "density_reason": null,
+      "interstitial_affinity": 4
+    },
+    {
+      "id": "SS-R40-PANDYA-JAFFNA-001",
+      "kind": "dezoom",
+      "status": "candidate",
+      "section_anchor": "Chapitre 6 — Dambadeniya, Yapahuwa, Kurunegala, Gampola et Kotte : déplacer la souveraineté",
+      "placement_mode": "embedded",
+      "host_paragraph_ordinal": 196,
+      "host_paragraph_excerpt": "Yapahuwa fournit le cas le plus net : le CCF documente le transfert de la Dent depuis Dambadeniya, puis sa capture par les Pandyas en 1284. La relique devient ainsi un objet de géopolitique régionale autant qu'un objet religieux.",
+      "semantic_score": 240,
+      "score": 242.11,
+      "existing_density_penalty": 0,
+      "paragraph_words": 38,
+      "term_hits": [
+        "yapahuwa",
+        "pandya"
+      ],
+      "chronology_hits": [],
+      "mechanism_hits": [],
+      "fallback_longest_fragment": false,
+      "split_after_visible_words": 25,
+      "density_reason": null,
+      "interstitial_affinity": 5
+    },
+    {
+      "id": "SS-R40-SOUTHINDIA-TRADE-001",
+      "kind": "dezoom",
+      "status": "candidate",
+      "section_anchor": "Chapitre 6 — Dambadeniya, Yapahuwa, Kurunegala, Gampola et Kotte : déplacer la souveraineté",
+      "placement_mode": "embedded",
+      "host_paragraph_ordinal": 202,
+      "host_paragraph_excerpt": "Les Portugais rencontreront toujours Gujarat, Malabar, Coromandel, Malacca, communautés musulmanes et flottes locales. Leur nouveauté réside dans la militarisation durable d'un réseau de ports et de passages.",
+      "semantic_score": 120,
+      "score": 121.5,
+      "existing_density_penalty": 0,
+      "paragraph_words": 27,
+      "term_hits": [
+        "ports"
+      ],
+      "chronology_hits": [],
+      "mechanism_hits": [],
+      "fallback_longest_fragment": false,
+      "split_after_visible_words": 13,
+      "density_reason": null,
+      "interstitial_affinity": 5
+    },
+    {
+      "id": "SS-R23-KDY-DONA-CATHERINA-PORTRAIT-001",
+      "kind": "portrait",
+      "status": "candidate",
+      "section_anchor": "5. Danture, 1594 — pourquoi l’armée portugaise est vulnérable à l’intérieur",
+      "placement_mode": "interstitial",
+      "host_paragraph_ordinal": 244,
+      "host_paragraph_excerpt": "La campagne de Danture est le moment canonique. Une grande force portugaise et surtout ses auxiliaires locaux entre en territoire kandyan. Elle est progressivement affaiblie par :",
+      "semantic_score": 120,
+      "score": 121.44,
+      "existing_density_penalty": 0,
+      "paragraph_words": 26,
+      "term_hits": [
+        "danture"
+      ],
+      "chronology_hits": [],
+      "mechanism_hits": [],
+      "fallback_longest_fragment": false,
+      "split_after_visible_words": null,
+      "density_reason": null,
+      "interstitial_affinity": 3,
+      "interstitial_boundary": {
+        "host_ordinal": 244,
+        "position": "after"
+      },
+      "boundary_host_excerpt": "La campagne de Danture est le moment canonique. Une grande force portugaise et surtout ses auxiliaires locaux entre en territoire kandyan. Elle est progressivement affaiblie par :"
+    },
+    {
+      "id": "SS-R23-KDY-SIAM-DEZOOM-001",
+      "kind": "dezoom",
+      "status": "candidate",
+      "section_anchor": "8. Kandy joue encore l’international",
+      "placement_mode": "interstitial",
+      "host_paragraph_ordinal": 293,
+      "host_paragraph_excerpt": "Pour Ceylan, l’effet est indirect mais structurant : Kandy et la VOC restent les acteurs locaux immédiats, mais le marché des contrepoids européens se rétrécit.",
+      "semantic_score": 120,
+      "score": 121.33,
+      "existing_density_penalty": 0,
+      "paragraph_words": 24,
+      "term_hits": [
+        "kandy"
+      ],
+      "chronology_hits": [],
+      "mechanism_hits": [],
+      "fallback_longest_fragment": false,
+      "split_after_visible_words": null,
+      "density_reason": null,
+      "interstitial_affinity": 5,
+      "interstitial_boundary": {
+        "host_ordinal": 293,
+        "position": "after"
+      },
+      "boundary_host_excerpt": "Pour Ceylan, l’effet est indirect mais structurant : Kandy et la VOC restent les acteurs locaux immédiats, mais le marché des contrepoids européens se rétrécit."
+    },
+    {
+      "id": "SS-R23-KDY-DOYLY-PORTRAIT-001",
+      "kind": "portrait",
+      "status": "candidate",
+      "section_anchor": "3. 1815 — Kandy tombe d’abord par politique de cour",
+      "placement_mode": "embedded",
+      "host_paragraph_ordinal": 315,
+      "host_paragraph_excerpt": "La fin de la monarchie tient autant à la fracture interne qu’à la supériorité britannique. Sri Vikrama Rajasinha est en conflit avec des chefs kandyan ; les Britanniques exploitent cette opposition et entrent avec leur coopération. \\[A/B\\]",
+      "semantic_score": 550,
+      "score": 552.06,
+      "existing_density_penalty": 0,
+      "paragraph_words": 37,
+      "term_hits": [
+        "sri vikrama rajasinha",
+        "chefs kandyan",
+        "britanniques",
+        "coopération"
+      ],
+      "chronology_hits": [],
+      "mechanism_hits": [
+        "fracture interne"
+      ],
+      "fallback_longest_fragment": false,
+      "split_after_visible_words": 15,
+      "density_reason": null,
+      "interstitial_affinity": 3
+    }
+  ]
+}

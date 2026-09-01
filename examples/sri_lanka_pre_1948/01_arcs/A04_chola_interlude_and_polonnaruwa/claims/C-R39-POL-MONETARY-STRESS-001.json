@@ -1,0 +1,13 @@
+{
+  "id":"C-R39-POL-MONETARY-STRESS-001",
+  "type":"inference",
+  "claim":"The deterioration of precious-metal coinage is best treated as a monetary-stress signal and plausible amplifier of late-Polonnaruwa political weakness rather than as a standalone cause of collapse: fiscal drain from warfare, garrisons and large royal programmes is a plausible mechanism, but debasement was already visible before Parakramabahu I and could also coexist with expanding trade and transaction demand.",
+  "confidence":"C",
+  "zoom":"Z2",
+  "causal_role":"amplifier",
+  "arc":"A04_chola_interlude_and_polonnaruwa",
+  "hil":"HIL-03_economy-infrastructure",
+  "source_ids":["LIYANAGAMAGE-SOAS-POLONNARUWA-1963","CODRINGTON-COINS-CURRENCY-1924"],
+  "bounded_by":"Do not translate coin debasement mechanically into modern inflation, sovereign default or economic collapse. The causal weight relative to succession instability, military expenditure, regional fragmentation, trade conditions and Magha's invasion remains unresolved.",
+  "notes":"Run39 explicitly preserves the rival explanation identified by Liyanagamage: monetary change may reflect resource strain, but greater monetisation/trade can also increase demand for lower-value coin."
+}

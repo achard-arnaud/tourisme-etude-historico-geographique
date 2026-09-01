@@ -1,0 +1,38 @@
+[
+  {
+    "project": "pre",
+    "baseline_docx_words": 19274,
+    "delta_words": 1939,
+    "v3_docx_words": 21776,
+    "retention_vs_baseline_percent": 113.0,
+    "side_stories": 62,
+    "toc_arcs": 17,
+    "docx": "examples/sri_lanka_pre_1948/09_output/Sri_Lanka_Fresque_historico_geographique_vol_retour_v3.docx",
+    "markdown": "examples/sri_lanka_pre_1948/09_output/report_v3_full.md",
+    "run34_reader_patch": "materialized",
+    "run34_side_stories_patched": 2,
+    "run34_instrumented_markdown": "/workspace/scratch/5c6826c57da7/repo/examples/sri_lanka_pre_1948/09_output/report_v3_full_run34_instrumented.md",
+    "post_review_side_stories": 13,
+    "post_review_side_stories_docx": 13,
+    "side_story_embedded": 9,
+    "side_story_interstitial": 4,
+    "side_story_placement_plan": "/workspace/scratch/5c6826c57da7/repo/examples/sri_lanka_pre_1948/09_output/side_story_placement_plan.json",
+    "backstage_paragraphs_removed": 3,
+    "frontstage_replacements": 117,
+    "side_story_headers_styled": 9,
+    "side_story_body_paragraphs_styled": 2,
+    "side_story_blocks_resolved": 2,
+    "side_story_kinds_seen": [
+      "also",
+      "detour",
+      "dezoom",
+      "false_lead",
+      "method"
+    ],
+    "side_story_legend_rows": 10,
+    "arc_recaps": 3,
+    "side_stories_materialized_pre_core": 0,
+    "book_end_storytelling_appendix": 0,
+    "illustrations_verified": 2
+  }
+]
