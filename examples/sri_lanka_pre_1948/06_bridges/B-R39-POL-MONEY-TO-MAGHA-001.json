@@ -1,0 +1,16 @@
+{
+  "id":"B-R39-POL-MONEY-TO-MAGHA-001",
+  "from_claim":"C-R39-POL-MONETARY-STRESS-001",
+  "to_claim":"C-R14-A04-MAGHA-001",
+  "question":"Does the deterioration of precious-metal coinage help explain why the Polonnaruwa state was less resilient when succession conflict and Magha's invasion struck?",
+  "mechanism":"If precious-metal scarcity and fiscal pressure constrained the court's ability to pay troops, maintain garrisons, sustain monumental-irrigation obligations and buy political loyalty, monetary stress could amplify the effects of succession instability and external attack without itself causing the collapse.",
+  "result":"C",
+  "source_ids":["LIYANAGAMAGE-SOAS-POLONNARUWA-1963","CODRINGTON-COINS-CURRENCY-1924"],
+  "transmission_channel":"royal fiscal capacity -> military and patronage capacity -> resilience under succession conflict and invasion",
+  "time_lag":"late 11th to early 13th century; cumulative monetary change preceding the 1215 rupture",
+  "scale":"Z1 coinage/fiscal instrument to Z2 kingdom-level resilience",
+  "confounders":["debasement predates Parakramabahu I","lower-value coin could reflect expanding trade rather than contraction","unknown monetary velocity and tax collection","succession instability","regional power fragmentation","military expenditure","Magha's invasion","dry-zone agrarian and hydraulic conditions"],
+  "transportability":"mechanism",
+  "integration_action":"bridge",
+  "bounded_by":"The bridge is a medium-confidence mechanism hypothesis. It does not establish that debasement caused the fall of Polonnaruwa, that a modern-style inflation crisis occurred, or that Magha merely delivered a final blow to an already economically collapsed state."
+}
