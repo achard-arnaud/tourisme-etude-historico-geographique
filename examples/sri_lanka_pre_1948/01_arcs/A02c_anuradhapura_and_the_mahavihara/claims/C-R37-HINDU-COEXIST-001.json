@@ -1,0 +1,13 @@
+{
+  "id":"C-R37-HINDU-COEXIST-001",
+  "type":"source_fact",
+  "claim":"Brahmanical and Saiva religious presence in ancient and early-medieval Sri Lanka coexisted with Buddhist political and monastic institutions rather than being reducible to the later Kandyan pattern in which Hindu deities were ritually subordinated within a Buddhist ceremonial hierarchy.",
+  "confidence":"B",
+  "zoom":"Z2",
+  "causal_role":"context",
+  "arc":"A02c_anuradhapura_and_the_mahavihara",
+  "hil":"HIL-05_religion-culture-legitimacy",
+  "source_ids":["CNM-HINDUISM-PANEL-2026","INDRAPALA-ETHNIC-IDENTITY-2005"],
+  "bounded_by":"The claim establishes analytically distinct coexistence mechanisms; it does not quantify Hindu adherence in the Anuradhapura population or assert continuous royal patronage of every shrine mentioned by the museum.",
+  "notes":"Explicit anti-collapse rule: do not label both Anuradhapura coexistence and Kandy Perahera incorporation simply as 'syncretism'."
+}
