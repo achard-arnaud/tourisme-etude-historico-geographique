@@ -1,0 +1,16 @@
+{
+  "id":"B-R42-ALAHANA-KNOWLEDGE-NETWORK-001",
+  "from_claim":"C-R42-A04-MONASTIC-KNOWLEDGE-001",
+  "to_claim":"C-R42-A04-MONASTIC-NETWORKS-001",
+  "question":"How far can the multifunctional knowledge role visible at Alahana Parivena be connected to Sri Lanka's wider Buddhist networks without claiming that its medical practices themselves were exported?",
+  "mechanism":"Large monastic institutions concentrated literate, disciplinary and educational expertise, while second-millennium Buddhist networks moved monks, ordination lineages, texts and educational practices between Lanka and mainland Southeast Asia. The bridge treats the monastery as a potential institutional node in a wider knowledge network, not as proof that a specific Alahana curriculum or medical technique travelled abroad.",
+  "result":"B",
+  "source_ids":["SAARC-NANAYAKKARA-ALAHANA-2026","CAMBRIDGE-BLACKBURN-SIHALA-SANGHA-2017","CAMBRIDGE-MANATUNGA-POLONNARUWA"],
+  "transmission_channel":"mobility of monks, ordination lineages, texts, linguistic preferences and educational practices through Bay of Bengal and mainland Southeast Asian Buddhist networks",
+  "time_lag":"the local Alahana evidence is twelfth-century; documented transregional lineage and educational movements intensify across the second millennium and vary by polity",
+  "scale":"Z2 Polonnaruwa institution -> Z4 southern Asian Buddhist network",
+  "confounders":["Alahana-specific medical knowledge is not independently traced abroad","network chronology differs by polity","later lineage narratives may project continuity backward","religious authority and practical knowledge need not travel together"],
+  "transportability":"institutional-network mechanism only",
+  "integration_action":"dezoom",
+  "bounded_by":"The bridge supports the image of Sri Lankan monasteries as nodes in transregional Buddhist knowledge and ordination networks. It does not assert export of Alahana's surgical practice, a single continuous network, or Sri Lankan dominance over Southeast Asian Buddhism."
+}
