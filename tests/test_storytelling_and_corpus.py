@@ -22,10 +22,19 @@ class StorytellingAndCorpusTests(unittest.TestCase):
         def inspect(path):
             with zipfile.ZipFile(path) as z:root=ET.fromstring(z.read('word/document.xml'))
             tables=len(root.findall('.//w:tbl',ns));text=' '.join((node.text or '') for node in root.findall('.//w:t',ns));return tables,text
+        sys.path.insert(0,str(ROOT/'scripts'))
+        from post_review_side_story_placement import is_post_review_materializable
+        from side_story_contract import load_side_stories
         for name,prefix in [('sri_lanka_pre_1948','Sri_Lanka_Fresque_historico_geographique_vol_retour'),('sri_lanka_post_1948','Sri_Lanka_1948_2026_etude_historico_geographique')]:
-            o=ROOT/'examples'/name/'09_output';baseline,_=inspect(o/'archive'/f'{prefix}_v1.docx');rendered,text=inspect(o/f'{prefix}_v3.docx')
-            self.assertGreaterEqual(rendered,baseline);self.assertLessEqual(rendered,baseline+1)
-            if rendered==baseline+1:self.assertIn('Légende des encadrés',text)
+            project=ROOT/'examples'/name;o=project/'09_output';baseline,_=inspect(o/'archive'/f'{prefix}_v1.docx');rendered,text=inspect(o/f'{prefix}_v3.docx')
+            self.assertGreaterEqual(rendered,baseline)
+            # Run41 intentionally materializes one closed DOCX table per reader-eligible
+            # side story. Preserve every baseline table, then bound additions by the
+            # eligible-story inventory plus at most one presentation legend. This keeps
+            # the old anti-proliferation gate without forbidding the new inline stories.
+            eligible=sum(1 for _,item in load_side_stories(project) if is_post_review_materializable(item) and item.get('materialization_mode')!='existing_fragment')
+            self.assertLessEqual(rendered,baseline+eligible+1)
+            if rendered>baseline:self.assertIn('Légende des encadrés',text)
     def test_legacy_renderer_refuses_silent_advanced_compression(self):
         import importlib.util
         spec=importlib.util.spec_from_file_location('ret',ROOT/'scripts/reader_retention.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);p=ROOT/'examples/sri_lanka_pre_1948'

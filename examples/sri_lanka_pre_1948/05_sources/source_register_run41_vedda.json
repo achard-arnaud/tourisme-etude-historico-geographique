@@ -1,0 +1,80 @@
+[
+  {
+    "id":"CNM-VEDDA-PANELS-2026",
+    "title":"Colombo National Museum panels: Vedda religion, livelihood and social change",
+    "url":"field://colombo-national-museum/2026-09-01/vedda-panels",
+    "tier":"T2",
+    "anchor_role":"specialist institutional anchor",
+    "date":"2026-09-01",
+    "author_or_institution":"Colombo National Museum / Department of National Museums, Sri Lanka",
+    "scope":"Museum synthesis of Vedda religion, ancestor/yakka ritual, hunting-gathering and chena livelihood, social organization and contemporary cultural change",
+    "claims_supported":[],
+    "limitations":"Public museum synthesis. Its language about 'animism', origins, disappearance and assimilation is interpretive and partly typological; use it as field evidence and corroborate historical/causal claims independently.",
+    "provenance":"direct"
+  },
+  {
+    "id":"CAMBRIDGE-VEDDA-LAND-LAW-2025",
+    "title":"Legal Personhood and Rights of Nature: Bridging Relational Vedda Worldviews and Sri Lankan Law",
+    "url":"https://www.cambridge.org/core/journals/transnational-environmental-law/article/legal-personhood-and-rights-of-nature-bridging-relational-vedda-worldviews-and-sri-lankan-law/1655E7726DF02060FCE49A0C94A26B27",
+    "tier":"T1",
+    "anchor_role":"canonical anchor",
+    "date":"2025",
+    "author_or_institution":"Asanka Edirisinghe and Sandie Suchet-Pearson / Cambridge University Press, Transnational Environmental Law",
+    "scope":"Vedda indigeneity, relational worldviews, language observations, Maduru Oya National Park, Mahaweli resettlement and restrictions on ancestral-land use",
+    "claims_supported":[],
+    "limitations":"Legal/environmental article with Dambana-focused fieldwork; do not homogenize all Vedda sub-communities or treat its normative Rights-of-Nature argument as historical fact.",
+    "provenance":"direct"
+  },
+  {
+    "id":"CURRENTBIOLOGY-ADIVASI-GENOMES-2025",
+    "title":"Population histories of the Indigenous Adivasi and Sinhalese from Sri Lanka using whole genomes",
+    "url":"https://pubmed.ncbi.nlm.nih.gov/40494279/",
+    "tier":"T1",
+    "anchor_role":"canonical anchor",
+    "date":"2025",
+    "author_or_institution":"Urban Aragon et al. / Current Biology",
+    "scope":"Whole-genome population history of two Adivasi clans and Sinhalese; ancient hunter-gatherer ancestry, effective population size, founder events, relocation and habitat-fragmentation consistency",
+    "claims_supported":[],
+    "limitations":"Nineteen Adivasi individuals from two clans cannot represent every Vedda community. Genetic affinity does not prove a simple unbroken cultural identity with a named prehistoric skeletal population.",
+    "provenance":"direct"
+  },
+  {
+    "id":"QEH-VADDA-CONTINUITY-2024",
+    "title":"Reconsidering the Vaddas of Sri Lanka: Biological and cultural continuity, and misconceptions",
+    "url":"https://www.sciencedirect.com/science/article/pii/S2950236524000410",
+    "tier":"T1",
+    "anchor_role":"canonical anchor",
+    "date":"2024",
+    "author_or_institution":"Wijerathne Bohingamuwa, Kalangi Rodrigo and Harendralal Namalgamuwa / Quaternary Environments and Humans",
+    "scope":"Review of Vedda biological/cultural continuity, origins, terminology, clan diversity, archaeological sampling and common misconceptions",
+    "claims_supported":[],
+    "limitations":"Review/reassessment rather than one new population-wide dataset; strongest use is to bound claims of direct prehistoric continuity and homogeneous identity.",
+    "provenance":"direct"
+  },
+  {
+    "id":"SCIENCEDIRECT-VEDDA-SOCIOCULTURAL-2022",
+    "title":"Present sociocultural status of the Sri Lankan indigenous people (the Veddas) and future challenges",
+    "url":"https://www.sciencedirect.com/science/chapter/edited-volume/pii/B9780323916035000245",
+    "tier":"T1",
+    "anchor_role":"corroborating bridge",
+    "date":"2022",
+    "author_or_institution":"Academic chapter in Indigenous People and Nature / Elsevier",
+    "scope":"Development projects, resettlement, cultural change, assimilation, marginalization and present sociocultural challenges in Vedda communities",
+    "claims_supported":[],
+    "limitations":"Broad synthesis with strong continuity language; do not use its prehistoric-affinity wording alone to close direct-descent claims.",
+    "provenance":"direct"
+  },
+  {
+    "id":"VIDYODAYA-VEDDA-SYNCRETISM-2025",
+    "title":"Cultural Borrowing and Religious Transformation: Yakkure and Henanigala Vedda Syncretism with Buddhism",
+    "url":"https://journals.sjp.ac.lk/index.php/vjhss/article/view/8436",
+    "tier":"T1",
+    "anchor_role":"corroborating bridge",
+    "date":"2025",
+    "author_or_institution":"D. T. H. Ananda and C. A. D. Nahallage / University of Sri Jayewardenepura, Vidyodaya Journal of Humanities and Social Sciences",
+    "scope":"Yakkure and Henanigala field research on resettlement, Na Yakku traditions, Buddhist/Hindu borrowing, identity and cultural change",
+    "claims_supported":[],
+    "limitations":"Two-community case study; its findings cannot be generalized mechanically to all Vedda groups. Distinguish cultural erosion under pressure from claims of total cultural disappearance.",
+    "provenance":"direct"
+  }
+]

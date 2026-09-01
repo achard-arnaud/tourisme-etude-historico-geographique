@@ -1,0 +1,12 @@
+{
+  "id":"C-R41-A07-PORTUGUESE-NORETURN-001",
+  "type":"inference",
+  "claim":"Portugal's failure to reconquer Ceylon after the VOC completed the seizure of its remaining island fortifications in 1658 is best explained as a constrained imperial reallocation after military defeat: the Estado da Índia faced a damaged Cape-route logistics system, simultaneous pressure across Asia and the post-1640 Braganza Restoration crisis, while the VOC consolidated the captured ports and peace with Portugal was ratified in 1663. This was not an immediate voluntary abandonment: Van Goens still feared a Portuguese counter-offensive in 1661.",
+  "confidence":"B",
+  "zoom":"Z4",
+  "causal_role":"mechanism",
+  "arc":"A07_european_wars_reordering",
+  "source_ids":["CAMBRIDGE-VAN-GOENS-1650-1675","CAMBRIDGE-WARS-OVERSEAS-1635-1685","CAMBRIDGE-SUBRAHMANYAM-GOA-1648","JSTOR-AMES-RENASCENT-2000"],
+  "bounded_by":"Do not reduce non-return to one Atlantic-profit decision. Atlantic/Brazilian pressures belong to the wider allocation environment, but the directly anchored mechanism here is military loss plus degraded Asian logistics, multi-front constraints, Braganza-state reorganization, Dutch fortification/consolidation and the 1661–1663 peace sequence. Ames also shows that the Estado stabilized later, so this is contraction and reprioritization, not total Portuguese Asian collapse.",
+  "notes":"Narrative bridge: 1658 Ceylon loss → 1661 still-feared counteroffensive → 1663 peace/reconfiguration → surviving reduced Estado elsewhere in Asia. Refines C-PRE-GEO-002."
+}

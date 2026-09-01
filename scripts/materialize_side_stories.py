@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
-"""Deterministically insert promoted side stories at reader-scaffold boundaries."""
+"""Legacy/direct side-story materialization helpers.
+
+The canonical reader pipeline no longer uses this module for placement: Run41 places
+stories inside reviewed host paragraphs through post_review_side_story_placement.py.
+This module remains the shared marker/depth renderer and a compatibility entry point.
+"""
 from __future__ import annotations
-import argparse,re,string
+import argparse,json,re,string
 from pathlib import Path
 from side_story_contract import ANALYTICAL_FOCUS_KIND,load_side_stories,canonical_marker
 
 STATUS_ICON={"verified":"✓","inference":"△","unknown":"?"}
+PROFILE_PATH=Path(__file__).resolve().parents[1]/"templates"/"side-stories"/"type_profiles.json"
 
 def side_story_begin_marker(item:dict)->str:
     return f"<!-- {canonical_marker(item['id'])} BEGIN kind={item.get('kind','')} -->"
@@ -24,24 +30,23 @@ def _validate_takeaway(item:dict)->str:
     if not takeaway:raise RuntimeError(f"cannot materialize {item.get('id')}: takeaway required")
     if _norm(title) and _norm(title)==_norm(takeaway):raise RuntimeError(f"cannot materialize {item.get('id')}: takeaway merely repeats title")
     return takeaway
+def _type_profile(kind:str)->dict:
+    try:data=json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
+    except Exception as exc:raise RuntimeError(f"cannot load side-story type profiles: {exc}") from exc
+    profile=(data.get("profiles") or {}).get(kind)
+    if not isinstance(profile,dict):raise RuntimeError(f"missing side-story type profile for {kind!r}")
+    return profile
 def validate_narrative_depth(item:dict,body:str)->None:
-    """Enforce substantial new production stories without breaking legacy/synthetic fixtures.
-
-    `lineage_quality` is the production boundary: current materialized stories carry it,
-    whereas pre-Run32 compatibility fixtures and legacy records may not. Existing reader
-    fragments are also exempt because expanding them mechanically would damage the
-    approved scaffold. This keeps the density gate strict for new sourced work while
-    preserving historical contract tests.
-    """
-    if item.get("materialization_mode")=="existing_fragment": return
+    """Enforce type-specific minimums while preserving explicit legacy exemptions."""
+    if item.get("materialization_mode")=="existing_fragment":return
     lineage_quality=item.get("lineage_quality")
-    if not lineage_quality or lineage_quality=="legacy_fragment": return
-    if item.get("kind")=="method": minimum=55
-    elif item.get("kind")==ANALYTICAL_FOCUS_KIND: minimum=140
-    else: minimum=90
-    words=_visible_words(body)
+    if not lineage_quality or lineage_quality=="legacy_fragment":return
+    profile=_type_profile(str(item.get("kind") or ""));minimum=int(profile["hard_min_visible_words"]);words=_visible_words(body)
     if words<minimum and not (item.get("reader_policy") or {}).get("compact_allowed"):
-        raise RuntimeError(f"cannot materialize {item.get('id')}: side story too thin ({words} < {minimum} words)")
+        raise RuntimeError(f"cannot materialize {item.get('id')}: {item.get('kind')} side story too thin ({words} < {minimum} words)")
+    soft=int(profile.get("soft_upper_visible_words") or 0)
+    if soft and words>soft and not (item.get("reader_policy") or {}).get("long_form_reviewed"):
+        raise RuntimeError(f"cannot materialize {item.get('id')}: {item.get('kind')} side story exceeds soft review threshold ({words} > {soft}); split/promote/retype or set reader_policy.long_form_reviewed after review")
 def render_analytical_focus(item:dict)->str:
     a=item["analysis"];takeaway=_validate_takeaway(item)
     lines=[f"**Focus analytique — {item['title']}**","",f"> **Question** — {a['core_question']}","",f"**À retenir** — {a['thesis']}","","### Contraste institutionnel"]
@@ -58,17 +63,10 @@ def render_analytical_focus(item:dict)->str:
     lines += ["",f"> **Payoff** — {takeaway}"]
     return "\n".join(lines)
 def _find_anchor_span(text:str,anchor:str)->tuple[int,int]|None:
-    """Resolve an anchor to a full Markdown line/paragraph boundary.
-
-    Never insert in the middle of a matching sentence. Exact normalized line
-    matches win; then a paragraph containing the anchor is used.
-    """
     if not anchor:return None
-    lines=text.splitlines(keepends=True);offset=0;needle=_norm(anchor)
-    candidates=[]
+    lines=text.splitlines(keepends=True);offset=0;needle=_norm(anchor);candidates=[]
     for line in lines:
-        raw=line.rstrip("\r\n");norm=_norm(raw)
-        start=offset;end=offset+len(line);offset=end
+        raw=line.rstrip("\r\n");norm=_norm(raw);start=offset;end=offset+len(line);offset=end
         if norm==needle:return start,end
         if needle and needle in norm:candidates.append((start,end))
     if candidates:return candidates[0]
@@ -76,17 +74,17 @@ def _find_anchor_span(text:str,anchor:str)->tuple[int,int]|None:
         if needle in _norm(m.group(1)):return m.start(1),m.end(1)
     return None
 def _insert_boundary(text:str,anchor:str,block:str,position:str="after")->str:
+    """Compatibility-only boundary insertion; canonical reader placement is post-review/inline."""
     span=_find_anchor_span(text,anchor)
     if span is None:raise RuntimeError(f"section_anchor not found at reader boundary: {anchor}")
-    start,end=span
-    pos=start if position=="before" else end
+    start,end=span;pos=start if position=="before" else end
     return text[:pos]+("\n\n"+block.strip()+"\n\n")+text[pos:]
 def materialize_text(project:Path,text:str)->tuple[str,int]:
+    """Compatibility path for callers that explicitly request direct materialization."""
     inserted=0
     for _,item in load_side_stories(project):
         if item.get("status")!="promoted":continue
-        _validate_takeaway(item)
-        marker=canonical_marker(item["id"])
+        _validate_takeaway(item);marker=canonical_marker(item["id"])
         if marker in text or item.get("materialization_mode")=="existing_fragment":continue
         placement=item.get("placement") or {};anchor=placement.get("section_anchor") or item.get("title")
         body=(item.get("content") or {}).get("body_markdown")
@@ -98,9 +96,8 @@ def materialize_text(project:Path,text:str)->tuple[str,int]:
         text=_insert_boundary(text,anchor,block,placement.get("position","after"));inserted+=1
     return text,inserted
 def materialize(project:Path,source:Path,output:Path)->int:
-    text,count=materialize_text(project,source.read_text(encoding="utf-8"))
-    output.parent.mkdir(parents=True,exist_ok=True);output.write_text(text,encoding="utf-8");return count
+    text,count=materialize_text(project,source.read_text(encoding="utf-8"));output.parent.mkdir(parents=True,exist_ok=True);output.write_text(text,encoding="utf-8");return count
 def main():
     p=argparse.ArgumentParser();p.add_argument("--project",required=True);p.add_argument("--source",required=True);p.add_argument("--output",required=True);a=p.parse_args()
-    count=materialize(Path(a.project),Path(a.source),Path(a.output));print(f"SIDE STORY MATERIALIZATION OK: {count} inserted")
+    count=materialize(Path(a.project),Path(a.source),Path(a.output));print(f"SIDE STORY DIRECT MATERIALIZATION OK (compatibility): {count} inserted")
 if __name__=="__main__":main()

@@ -28,8 +28,11 @@ def main():
             if 'LEGACY:' in text:errors.append(f'LEGACY token remains in pre corpus: {p.relative_to(PRE)}')
     items={item['id']:item for _,item in load_side_stories(PRE)}
     coverage=side_story_coverage(PRE)
-    if coverage['traced']!=8 or coverage['declared']!=17 or coverage['untracked']!=0:
-        errors.append(f"unexpected coverage: traced={coverage['traced']} declared={coverage['declared']} untracked={coverage['untracked']} (expected 8/17/0)")
+    # Run14 established a minimum of 8 traced stories and exactly 17 bounded legacy
+    # exemptions. Later runs are expected to increase traced coverage; that is progress,
+    # not a regression. Declared legacy debt and untracked reader fragments remain hard gates.
+    if coverage['traced']<8 or coverage['declared']!=17 or coverage['untracked']!=0:
+        errors.append(f"unexpected coverage: traced={coverage['traced']} declared={coverage['declared']} untracked={coverage['untracked']} (expected traced>=8 / declared 17 / untracked 0)")
     if coverage['legacy_required_exemptions']!=17:
         errors.append(f"legacy required exemptions={coverage['legacy_required_exemptions']} (expected 17)")
     for sid in APPARATUS_IDS:

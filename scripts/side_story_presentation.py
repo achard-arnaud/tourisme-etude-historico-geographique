@@ -100,6 +100,34 @@ def _decorate_paragraph(paragraph,kind:str,*,header:bool,position:str="single")-
             else:run=paragraph.add_run(f"{symbol} ");run.bold=True
 
 
+def _paragraph_fill(paragraph)->str|None:
+    ppr=paragraph._p.pPr
+    if ppr is None:return None
+    shd=ppr.find(qn("w:shd"))
+    return shd.get(qn("w:fill")) if shd is not None else None
+
+
+def _paragraph_border(paragraph,name:str)->bool:
+    ppr=paragraph._p.pPr
+    if ppr is None:return False
+    borders=ppr.find(qn("w:pBdr"))
+    return borders is not None and borders.find(qn(f"w:{name}")) is not None
+
+
+def _has_explicit_two_paragraph_box(paragraphs,start:int)->bool:
+    """Preserve boxes explicitly materialized as header(start)+body(end).
+
+    Run34 predates generic post-review placement and deliberately creates a two-paragraph
+    DOCX excursion. The later palette pass must not collapse its header back to a
+    single-paragraph box merely because candidate evidence status prevents return-anchor
+    reconstruction. Structure already present in the document is authoritative here.
+    """
+    if start+1>=len(paragraphs):return False
+    header,body=paragraphs[start],paragraphs[start+1]
+    hfill,bfill=_paragraph_fill(header),_paragraph_fill(body)
+    return bool(hfill and bfill and hfill==bfill and _paragraph_border(header,"top") and not _paragraph_border(header,"bottom") and _paragraph_border(body,"bottom"))
+
+
 def _find_return_index(paragraphs,start:int,return_to:str|None)->int|None:
     if not return_to:return None
     target=return_to.split(":",1)[1] if return_to.startswith("anchor:") else return_to;normalized_target=_norm(target)
@@ -121,9 +149,10 @@ def _story_header_index(paragraphs,item:dict,used:set[int])->int|None:
 def apply_side_story_palette(doc:Document,project:Path|None=None)->dict:
     """Apply full pastel blocks when a deterministic return anchor exists.
 
-    Unresolved/single-paragraph side stories still receive a visibly closed box on the
-    header itself. Resolved multi-paragraph stories get top on the header, continuous
-    left/fill, and bottom on their final paragraph.
+    Unresolved/single-paragraph side stories receive a visibly closed box on the
+    header itself, except when a prior deterministic renderer has already emitted an
+    explicit start+end pair. Resolved multi-paragraph stories get top on the header,
+    continuous left/fill, and bottom on their final paragraph.
     """
     ensure_side_story_styles(doc);paragraphs=doc.paragraphs;header_kinds={}
     for index,paragraph in enumerate(paragraphs):
@@ -145,6 +174,15 @@ def apply_side_story_palette(doc:Document,project:Path|None=None)->dict:
     body_count=0;resolved_blocks=0
     for start,kind in header_kinds.items():
         if start not in resolved_ranges:
+            if _has_explicit_two_paragraph_box(paragraphs,start):
+                # Preserve already-correct start/end geometry while still ensuring the
+                # reader-facing symbol/style is present on the header.
+                paragraph=paragraphs[start];paragraph.style=style_name(kind);symbol=SIDE_STORY_PRESENTATION[kind]["symbol"]
+                if not paragraph.text.lstrip().startswith(symbol):
+                    target=next((run for run in paragraph.runs if run.text),None)
+                    if target is not None:target.text=f"{symbol} {target.text}";target.bold=True
+                resolved_blocks+=1;body_count+=1
+                continue
             _decorate_paragraph(paragraphs[start],kind,header=True,position="single");continue
         end,_=resolved_ranges[start];stop=end
         for idx in range(start+1,end):
