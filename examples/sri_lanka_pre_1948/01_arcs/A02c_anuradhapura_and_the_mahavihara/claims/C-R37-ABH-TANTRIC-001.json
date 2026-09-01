@@ -1,0 +1,13 @@
+{
+  "id":"C-R37-ABH-TANTRIC-001",
+  "type":"source_fact",
+  "claim":"Modern scholarship identifies evidence for later Tantric/Vajrayana currents connected with Abhayagiri, reinforcing the view that the monastery participated in wider transregional Buddhist networks beyond a narrowly defined Mahavihara orthodoxy.",
+  "confidence":"B",
+  "zoom":"Z2",
+  "causal_role":"context",
+  "arc":"A02c_anuradhapura_and_the_mahavihara",
+  "hil":"HIL-05_religion-culture-legitimacy",
+  "source_ids":["DEEG-ABHAYAGIRI-2024","CNM-MAHAYANA-PANEL-2026"],
+  "bounded_by":"This does not validate every named transmitter or chronology printed on the museum panel; Gunavarman, Vajrabodhi and Amoghavajra remain source-specific research leads until independently tied to Sri Lanka.",
+  "notes":"Keep separate from the provisional dating of newly reported 2026 bronzes."
+}
