@@ -24,7 +24,7 @@ class Run41InlineSideStoryContractTest(unittest.TestCase):
             self.assertLessEqual(hi,p['soft_upper_visible_words'],kind)
             self.assertTrue(p['required_beats'],kind)
             self.assertTrue(p['storytelling_rules'],kind)
-            self.assertEqual('embedded_in_host_paragraph',p['default_placement'].split('_after_')[0].split('_at_')[0].split('_immediately_')[0] if p['default_placement']!='embedded_in_host_paragraph' else p['default_placement'])
+            self.assertTrue(p['default_placement'].startswith('embedded_in_host_paragraph'),kind)
 
     def test_global_density_contract_is_explicit(self):
         c=self.profiles['placement_contract']
