@@ -12,25 +12,18 @@ Usage personnel — Sri Lanka, août 2026
 
 # **Comment lire cette fresque**
 
-## Politique éditoriale de la V3 intégrale
-
-Cette édition prend la V1 de soixante et une pages comme baseline non destructible. Les fiches de conversation, détours de terrain et ajouts stabilisés de Run 5 sont insérés dans leur séquence historique ; aucun budget de longueur ne peut justifier leur suppression. Les répétitions utiles, controverses, limites de source et bifurcations sont conservées pour un lectorat avancé.
-
-Le petit `report.md` de Run 5 est traité comme un delta et non comme un nouveau manuscrit complet. Les fichiers `05_sources/conversation_corpus/` constituent le registre de reprise exhaustif disponible au 18 août 2026.
-
-
 Le fil chronologique reste premier, mais chaque période est relue à travers huit ancres causales. La question n’est pas seulement « qui règne ? », mais : qu’est-ce qui permet à un centre de mobiliser des ressources, de légitimer le pouvoir, de défendre son territoire et d’accéder aux flux régionaux — puis qu’est-ce qui change pour rendre cet optimum obsolète ?
 
-| **\#** | **Ancre**                               | **Question de lecture**                                                                       |
+| **\#** | **Ancre** | **Question de lecture** |
 |--------|-----------------------------------------|-----------------------------------------------------------------------------------------------|
-| 1      | **Écologie, mousson et eau**            | Transformer une contrainte climatique en capacité productive.                                 |
-| 2      | **Capacité hydro-fiscale**              | Convertir surplus et prélèvement en administration, armée et entretien.                       |
-| 3      | **Corridors et nœuds**                  | Contrôler Mahaweli, Palk, Mannar, Trincomalee, Colombo ou les hautes terres selon l’époque.   |
-| 4      | **Succession, coalition et coercition** | Un État puissant peut être institutionnellement fragile si la coalition dynastique se défait. |
-| 5      | **Dent et Saṅgha**                      | Faire de la légitimité bouddhique un capital politique, parfois mobile.                       |
-| 6      | **Monastères et connaissance**          | Conserver, copier, interpréter, ordonner et transmettre un lineage.                           |
-| 7      | **Ports, rentes et réseaux marchands**  | Perles, gemmes, chevaux, épices, cannelle, taxes et diasporas.                                |
-| 8      | **Configuration régionale**             | Chola, Pāṇḍya, Malabar, Birmanie, Asie du Sud-Est, Chine, mondes musulmans puis Européens.    |
+| 1 | **Écologie, mousson et eau** | Transformer une contrainte climatique en capacité productive. |
+| 2 | **Capacité hydro-fiscale** | Convertir surplus et prélèvement en administration, armée et entretien. |
+| 3 | **Corridors et nœuds** | Contrôler Mahaweli, Palk, Mannar, Trincomalee, Colombo ou les hautes terres selon l’époque. |
+| 4 | **Succession, coalition et coercition** | Un État puissant peut être institutionnellement fragile si la coalition dynastique se défait. |
+| 5 | **Dent et Saṅgha** | Faire de la légitimité bouddhique un capital politique, parfois mobile. |
+| 6 | **Monastères et connaissance** | Conserver, copier, interpréter, ordonner et transmettre un lineage. |
+| 7 | **Ports, rentes et réseaux marchands** | Perles, gemmes, chevaux, épices, cannelle, taxes et diasporas. |
+| 8 | **Configuration régionale** | Chola, Pāṇḍya, Malabar, Birmanie, Asie du Sud-Est, Chine, mondes musulmans puis Européens. |
 
 <table>
 <colgroup>
@@ -112,11 +105,11 @@ Le Rāmāyaṇa raconte l’enlèvement de Sītā par Rāvaṇa, souverain de **
 
 Mais trois niveaux doivent rester séparés :
 
-1.  **Temps narratif** — Rāma, Sītā, Rāvaṇa et la guerre de Laṅkā appartiennent au temps épique. Il n’existe pas de chronologie archéologique permettant de dater un « règne de Rāvaṇa » au Sri Lanka.
+1. **Temps narratif** — Rāma, Sītā, Rāvaṇa et la guerre de Laṅkā appartiennent au temps épique. Il n’existe pas de chronologie archéologique permettant de dater un « règne de Rāvaṇa » au Sri Lanka.
 
-2.  **Temps de composition/transmission** — le Rāmāyaṇa sanskrit s’est constitué par couches au cours du Ier millénaire av. J.-C. et des premiers siècles de notre ère ; la fixation du texte est donc bien postérieure au temps légendaire qu’il met en scène.
+2. **Temps de composition/transmission** — le Rāmāyaṇa sanskrit s’est constitué par couches au cours du Ier millénaire av. J.-C. et des premiers siècles de notre ère ; la fixation du texte est donc bien postérieure au temps légendaire qu’il met en scène.
 
-3.  **Temps de réception sri-lankaise** — l’association Rāvaṇa–Lanka est continuellement retravaillée par les traditions religieuses, littéraires, locales et, à l’époque moderne, patrimoniales et identitaires. Les toponymes ou sites aujourd’hui reliés à Rāvaṇa sont des **objets d’histoire culturelle** ; ils ne constituent pas en eux-mêmes une preuve archéologique du récit.
+3. **Temps de réception sri-lankaise** — l’association Rāvaṇa–Lanka est continuellement retravaillée par les traditions religieuses, littéraires, locales et, à l’époque moderne, patrimoniales et identitaires. Les toponymes ou sites aujourd’hui reliés à Rāvaṇa sont des **objets d’histoire culturelle** ; ils ne constituent pas en eux-mêmes une preuve archéologique du récit.
 
 #### **Pourquoi l’insérer directement dans notre arc ?**
 
@@ -206,11 +199,11 @@ Le *Mahāvaṃsa*, composé des siècles après les événements qu’il raconte
 
 Ces récits sont pourtant utiles pour trois raisons :
 
-4.  **ils fabriquent une généalogie royale** reliant Lanka au sous-continent ;
+4. **ils fabriquent une généalogie royale** reliant Lanka au sous-continent ;
 
-5.  **ils donnent une structure morale** à l’appropriation du territoire ;
+5. **ils donnent une structure morale** à l’appropriation du territoire ;
 
-6.  **ils préparent la téléologie bouddhique** : Lanka devient l’île destinée à conserver le sāsana.
+6. **ils préparent la téléologie bouddhique** : Lanka devient l’île destinée à conserver le sāsana.
 
 #### **Fausse piste**
 
@@ -262,16 +255,16 @@ La vraie césure est donc moins « 543 » que :
 
 ## **Les 8 ancres appliquées à l’Âge 0**
 
-| **Ancre canonique**     | **Forme pré-Anuradhapura**                                                        |
+| **Ancre canonique** | **Forme pré-Anuradhapura** |
 |-------------------------|-----------------------------------------------------------------------------------|
-| Écologie / mousson      | occupation de niches écologiques variées ; contraintes Dry/Wet déjà structurantes |
-| Capacité hydro-fiscale  | encore locale ; premiers aménagements, pas hydrocratie intégrée                   |
-| Corridors               | Palk, Mannar, routes intérieures ; continuum sud-indien                           |
-| Coalition / coercition  | chefferies et hiérarchies émergentes, difficilement reconstructibles              |
-| Dent / Saṅgha           | non applicable avant bouddhisation ; surtout récits rétrospectifs                 |
-| Connaissance / lineage  | apparition de l’écriture ; mémoire orale et rituelle                              |
-| Ports / réseaux         | premiers échanges régionaux ; importance croissante des littoraux                 |
-| Configuration régionale | Tamilakam, mondes nord-indiens, premiers flux océaniques                          |
+| Écologie / mousson | occupation de niches écologiques variées ; contraintes Dry/Wet déjà structurantes |
+| Capacité hydro-fiscale | encore locale ; premiers aménagements, pas hydrocratie intégrée |
+| Corridors | Palk, Mannar, routes intérieures ; continuum sud-indien |
+| Coalition / coercition | chefferies et hiérarchies émergentes, difficilement reconstructibles |
+| Dent / Saṅgha | non applicable avant bouddhisation ; surtout récits rétrospectifs |
+| Connaissance / lineage | apparition de l’écriture ; mémoire orale et rituelle |
+| Ports / réseaux | premiers échanges régionaux ; importance croissante des littoraux |
+| Configuration régionale | Tamilakam, mondes nord-indiens, premiers flux océaniques |
 
 ## **Fausses pistes à tenir en marge**
 
@@ -287,12 +280,12 @@ La vraie césure est donc moins « 543 » que :
 
 ## **Sources-ancres**
 
-| **Famille**                             | **Usage**                                                                                                           | **Référence**                                                                                   |
+| **Famille** | **Usage** | **Référence** |
 |-----------------------------------------|---------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| **Department of Archaeology Sri Lanka** | préhistoire, protohistoire 1300–250 BCE, citadelle d’Anuradhapura, sites de l’âge du Fer                            | [<u>archaeology.gov.lk</u>](https://archaeology.gov.lk/index.php/about/sections/excavations)    |
-| **Cambridge**                           | urbanisation de l’âge du Fer, Anuradhapura avant la capitale dynastique, échanges sud-asiatiques                    | *The Archaeology of South Asia* ; Cambridge Archaeological Journal, travaux de Coningham et al. |
-| **UNESCO**                              | surtout point de comparaison sur l’urbanisme historique d’Anuradhapura ; peu de valeur pour la préhistoire profonde | [<u>whc.unesco.org</u>](https://whc.unesco.org/en/list/200/)                                    |
-| **Wikipedia**                           | index chronologique et cartographie des débats ; jamais arbitre final                                               | *Prehistory of Sri Lanka*, *Pre-Anuradhapura period*, *History of Sri Lanka*                    |
+| **Department of Archaeology Sri Lanka** | préhistoire, protohistoire 1300–250 BCE, citadelle d’Anuradhapura, sites de l’âge du Fer | [<u>archaeology.gov.lk</u>](https://archaeology.gov.lk/index.php/about/sections/excavations) |
+| **Cambridge** | urbanisation de l’âge du Fer, Anuradhapura avant la capitale dynastique, échanges sud-asiatiques | *The Archaeology of South Asia* ; Cambridge Archaeological Journal, travaux de Coningham et al. |
+| **UNESCO** | surtout point de comparaison sur l’urbanisme historique d’Anuradhapura ; peu de valeur pour la préhistoire profonde | [<u>whc.unesco.org</u>](https://whc.unesco.org/en/list/200/) |
+| **Wikipedia** | index chronologique et cartographie des débats ; jamais arbitre final | *Prehistory of Sri Lanka*, *Pre-Anuradhapura period*, *History of Sri Lanka* |
 
 ### **Bridges de recherche**
 
@@ -344,7 +337,33 @@ C’est une matrice idéologique que l’on retrouvera à Polonnaruwa puis Kandy
 
 ### **2. Valagamba et Abhayagiri : le Saṅgha n’est pas monolithique**
 
-La fondation d’Abhayagiri crée un deuxième grand pôle monastique à côté du Mahāvihāra. Le pluralisme devient institutionnel, intellectuel et international. Plus tard, Jetavana formera un troisième grand ensemble. UNESCO classe ces grands monastères parmi les composantes majeures d’Anuradhapura ; Cambridge insiste sur le fait que les frontières entre orthodoxie, Mahāyāna et traditions ésotériques sont plus complexes que les catégories modernes. \[A/B\]
+En août 2026, l’actualité archéologique a donné à cette histoire institutionnelle une matière très concrète : dix-sept statues du Bouddha en bronze doré ont été mises au jour dans un rempart du complexe d’Abhayagiri. L’annonce est solide pour le fait de découverte ; elle reste une annonce de fouille, pas encore une publication archéologique complète.
+
+**Petit détour — Les mains parlent, mais elles ne datent pas la statue**
+
+Sur le terrain, la main attire d’abord l’œil : paumes jointes pour Namaskara, mains posées dans le registre méditatif de Dhyāna, paume levée d’Abhaya, geste d’enseignement de Vitarka ou de Dharmacakra. Ces noms forment un vocabulaire iconographique utile parce qu’un geste conventionnel peut orienter la lecture d’une image. Mais la série photographiée rappelle immédiatement la limite : trois vues associées à Abhaya ne suffisent pas à prouver trois statues distinctes, et l’image 04 ne montre aucune plaque lisible ; Bhūmisparśa y reste donc une proposition, pas une identification. La bonne lecture va du geste vers une hypothèse de sens, puis revient à l’objet, à sa plaque, à son contexte et à sa provenance avant toute conclusion historique.
+
+La datation proposée au moment de l’annonce reste stylistique : les bronzes ont été rapprochés d’objets des VIIe–VIIIe siècles et estimés provisoirement à environ 1 200–1 300 ans. Tant que l’analyse technique annoncée n’est pas publiée, cette chronologie reste une inférence bornée.
+
+**Point de méthode — Lire un stūpa, une mudrā et un lotus sans leur faire dire trop**
+
+Un stūpa, une main et un lotus ne se lisent pas au même niveau. Le stūpa relève d’une architecture reliquaire et symbolique organisée autour d’un centre, d’un axe et d’une orientation ; une mudrā fonctionne comme un signe conventionnel qui aide à reconnaître un registre iconographique ; le lotus et le lotus-trône appartiennent à un vocabulaire symbolique plus large de présence sacrée et d’éveil. Ces trois clés sont utiles parce qu’elles permettent de décrire ce que l’on voit avant de raconter son histoire. Elles deviennent trompeuses dès qu’une ressemblance générale sert à fabriquer une date, une provenance ou une identification locale précise. Le détour sur les mudrā fournit déjà ce premier réflexe : nommer le code, puis revenir aux preuves propres à l’objet.
+
+Le même garde-fou vaut pour le stūpa : sa forme, son axe et sa fonction reliquaire donnent un vocabulaire comparatif puissant, mais ne remplacent jamais l’archéologie propre au monument que l’on regarde.
+
+La fondation d’Abhayagiri crée un deuxième grand pôle monastique à côté du Mahāvihāra.
+
+<!-- [SIDE-STORY:SS-R37-ANURADHAPURA-PLURAL-001] BEGIN kind=analytical_focus -->
+**Focus analytique — Anuradhapura, capitale plurielle : deux coexistences religieuses à ne pas confondre**
+
+Le Musée national de Colombo juxtapose deux histoires que l'on fusionne facilement sous le mot « syncrétisme ». La première est interne au bouddhisme : Abhayagiri participe à un champ monastique concurrentiel, ouvert à des textes, pratiques et réseaux que les sources associent, selon les périodes, au Mahāyāna puis à des formes tantriques. Cela ne signifie pas qu'Abhayagiri forme une « secte mahāyāna » stable : les étiquettes, les controverses et les équilibres institutionnels changent dans le temps.
+
+La seconde histoire relève de la coexistence avec des institutions saiva et brahmaniques connectées à l'Inde du Sud. Sanctuaires, personnels religieux et objets attestent cette présence, mais ils ne donnent ni une part démographique des hindous ni la preuve d'une fusion doctrinale générale. Deux mécanismes peuvent donc coexister : d'un côté, circulation de textes, moines et pratiques à l'intérieur de réseaux bouddhiques transasiatiques ; de l'autre, circulation de cultes, spécialistes et institutions entre Lanka et l'Inde du Sud. Les pouvoirs peuvent patronner, tolérer ou combattre ces groupes sans les fondre dans une religion unique.
+
+La période chola renforce ensuite la visibilité institutionnelle du saivisme, sans permettre de dire qu'elle l'aurait créé ex nihilo. Et cette configuration ne doit pas davantage être projetée sur le modèle plus tardif de Kandy, où des devas sont incorporés dans une hiérarchie rituelle bouddhique spécifique. Le point important est donc moins « Anuradhapura était syncrétique » que : une capitale bouddhique pouvait superposer concurrence interne du Saṅgha, institutions religieuses autonomes et réseaux extérieurs différents. Les biographies précises de certains transmetteurs, les provenances de plusieurs bronzes et tout poids démographique restent, eux, à documenter.
+<!-- [SIDE-STORY:SS-R37-ANURADHAPURA-PLURAL-001] END -->
+
+Le pluralisme devient institutionnel, intellectuel et international. Plus tard, Jetavana formera un troisième grand ensemble. UNESCO classe ces grands monastères parmi les composantes majeures d’Anuradhapura ; Cambridge insiste sur le fait que les frontières entre orthodoxie, Mahāyāna et traditions ésotériques sont plus complexes que les catégories modernes. \[A/B\]
 
 Cela introduit une tension structurelle :
 
@@ -554,16 +573,16 @@ Le résultat durable n’est pas seulement un changement de dynastie : le centre
 
 ## **Les 8 ancres appliquées à Anuradhapura**
 
-| **Ancre**             | **Ce qu’Anuradhapura invente ou consolide**                              |
+| **Ancre** | **Ce qu’Anuradhapura invente ou consolide** |
 |-----------------------|--------------------------------------------------------------------------|
-| Écologie/mousson      | stockage massif de l’eau dans la Dry Zone                                |
-| Hydro-fiscal          | boucle riz–taxe–travaux–armée–Saṅgha                                     |
-| Corridors             | articulation intérieur ↔ Mannar/Mantai ↔ est/nord-est                    |
+| Écologie/mousson | stockage massif de l’eau dans la Dry Zone |
+| Hydro-fiscal | boucle riz–taxe–travaux–armée–Saṅgha |
+| Corridors | articulation intérieur ↔ Mannar/Mantai ↔ est/nord-est |
 | Succession/coercition | alternance de centralisation, usurpations et interventions sud-indiennes |
-| Dent/Saṅgha           | légitimité bouddhique royale + pluralité des grands nikāyas              |
-| Connaissance          | pāli, chroniques, commentaires, inscriptions, monastères-écoles          |
-| Ports/rentes          | perles, gemmes, éléphants, transit océanique, chevaux importés           |
-| Régional              | Maurya → Tamilakam → réseaux romains/persans/arabes → Chola/Pandya       |
+| Dent/Saṅgha | légitimité bouddhique royale + pluralité des grands nikāyas |
+| Connaissance | pāli, chroniques, commentaires, inscriptions, monastères-écoles |
+| Ports/rentes | perles, gemmes, éléphants, transit océanique, chevaux importés |
+| Régional | Maurya → Tamilakam → réseaux romains/persans/arabes → Chola/Pandya |
 
 ## **Fausses pistes**
 
@@ -579,12 +598,12 @@ Le résultat durable n’est pas seulement un changement de dynastie : le centre
 
 ## **Sources-ancres**
 
-| **Famille**                   | **Usage**                                                                                         | **Référence**                                                                                                   |
+| **Famille** | **Usage** | **Référence** |
 |-------------------------------|---------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| **Department of Archaeology** | citadelle, protohistoire, fouilles, rôle des moines dans irrigation                               | [<u>archaeology.gov.lk</u>](https://archaeology.gov.lk/index.php/about/sections/excavations) ; *Ancient Ceylon* |
-| **Cambridge**                 | urbanisme diffus, monastères, réseaux de l’océan Indien, Mahāvihāra/Abhayagiri, transition finale | Coningham et al.; Beaujard, *The Worlds of the Indian Ocean*; Strathern                                         |
-| **UNESCO**                    | structure citadelle–monastères–réservoirs ; longue durée du centre sacré                          | [<u>whc.unesco.org</u>](https://whc.unesco.org/en/list/200/) ; periodic report 163318                           |
-| **Wikipedia**                 | chronologie des règnes, guide vers les événements et bibliographies                               | *Anuradhapura kingdom*, *Anuradhapura period*, *History of Sri Lanka*                                           |
+| **Department of Archaeology** | citadelle, protohistoire, fouilles, rôle des moines dans irrigation | [<u>archaeology.gov.lk</u>](https://archaeology.gov.lk/index.php/about/sections/excavations) ; *Ancient Ceylon* |
+| **Cambridge** | urbanisme diffus, monastères, réseaux de l’océan Indien, Mahāvihāra/Abhayagiri, transition finale | Coningham et al.; Beaujard, *The Worlds of the Indian Ocean*; Strathern |
+| **UNESCO** | structure citadelle–monastères–réservoirs ; longue durée du centre sacré | [<u>whc.unesco.org</u>](https://whc.unesco.org/en/list/200/) ; periodic report 163318 |
+| **Wikipedia** | chronologie des règnes, guide vers les événements et bibliographies | *Anuradhapura kingdom*, *Anuradhapura period*, *History of Sri Lanka* |
 
 **Chapitre 3 — De la chute d’Anuradhapura au choix de Polonnaruwa**
 
@@ -693,11 +712,11 @@ Il peut être **rituellement associé à Anuradhapura**, ancien centre de souver
 
 #### **Raisons probables \[B\]**
 
-7.  **Sunk costs administratifs** : les Chola ont déjà fortifié/administré Polonnaruwa.
+7. **Sunk costs administratifs** : les Chola ont déjà fortifié/administré Polonnaruwa.
 
-8.  **Position de contrôle de Rohana** : la nouvelle monarchie sait d’où est venue sa propre reconquête ; elle doit surveiller les mêmes corridors.
+8. **Position de contrôle de Rohana** : la nouvelle monarchie sait d’où est venue sa propre reconquête ; elle doit surveiller les mêmes corridors.
 
-9.  **Hydraulique et agriculture** : Polonnaruwa se trouve au milieu d’un réseau productif déjà dense.
+9. **Hydraulique et agriculture** : Polonnaruwa se trouve au milieu d’un réseau productif déjà dense.
 
 10. **Mahaweli + façade est** : accès plus direct aux routes de l’est et à Trincomalee.
 
@@ -1153,7 +1172,23 @@ Le gisement cuivre–magnétite de **Seruwila** et les traces archéométallurgi
 
 #### **Inde**
 
-Parākramabāhu intervient dans les conflits du **monde pandya** et cherche à peser sur l’équilibre sud-indien. Il faut dire **intervention dans une guerre de succession / projection de puissance**, pas « conquête de l’Inde ».
+Parākramabāhu intervient dans les conflits du **monde pandya** et cherche à peser sur l’équilibre sud-indien.
+
+<!-- [SIDE-STORY:SS-R43-GALVIHARA-OBJECT-001] BEGIN kind=object_focus -->
+**Objet / terrain — Gal Vihara, l'État gravé dans la pierre**
+
+Au crépuscule, le rocher de Gal Vihara rassemble sous un même regard le Bouddha assis, le sanctuaire excavé, la figure debout aux bras croisés et l'immense Bouddha couché. Ce que l'on voit d'abord est un ensemble de sculptures. Ce qu'il révèle ensuite est un système politique. L'ancien Uttarārāma appartient au grand programme de la Polonnaruwa de Parākramabāhu I : il faut mobiliser des artisans, du travail, des ressources et un patronage durable pour transformer ainsi la roche en paysage sacré.
+
+[ILLUSTRATION:ILL-R43-POL-GALVIHARA-01]
+
+*Gal Vihara au crépuscule : le rocher réunit les grandes figures de l'ancien Uttarārāma; l'identité précise de la figure debout reste débattue.*
+
+L'inscription rupestre dite Katikāvata ajoute une seconde couche. Elle conserve un programme de réglementation du Saṅgha : le roi ne se présente pas seulement comme donateur, mais comme protecteur et ordonnateur de l'institution monastique. C'est la réponse de Polonnaruwa à un héritage plus ancien, celui des grandes fraternités de Mahāvihāra, Abhayagiri et Jetavana. La réforme attestée est cependant normative : la pierre dit ce que le pouvoir veut imposer, pas tout ce que chaque monastère pratique réellement.
+
+Le monument devient ainsi la forme visible de la recentralisation post-Chola. Religion, administration et prestige royal convergent, sans permettre de calculer le coût exact du programme. La photographie impose aussi une dernière prudence : elle identifie bien l'ensemble, mais ne tranche pas l'identité de la figure debout, parfois lue comme le Bouddha et parfois comme Ānanda. En revenant au rocher, on voit donc simultanément une apogée artistique, une déclaration de souveraineté et les limites de ce que l'image peut prouver.
+<!-- [SIDE-STORY:SS-R43-GALVIHARA-OBJECT-001] END -->
+
+Il faut dire **intervention dans une guerre de succession / projection de puissance**, pas « conquête de l’Inde ».
 
 #### **Ce que cela prouve**
 
@@ -1321,6 +1356,20 @@ Le passage sur Rameswaram mérite un statut intermédiaire : l’existence d’u
 
 **succession contestée → armée/fiscalité politisées → perte de coordination → coûts d’entretien et de défense plus difficiles → attractivité accrue pour un conquérant extérieur.**
 
+<!-- [SIDE-STORY:SS-R43-POLONNARUWA-MONEY-FOCUS-001] BEGIN kind=false_lead -->
+**Fausse piste — La monnaie a-t-elle fait tomber Polonnaruwa ?**
+
+Le panneau du musée donne envie de raconter une histoire très simple : l'or disparaît, le cuivre le remplace, puis Polonnaruwa s'effondre. Le massa de Dharmasokadeva daté de 1208 rend cette séquence presque visible dans un seul objet. Les sources numismatiques confirment bien le changement matériel : émissions de métal vil, cuivre plus fréquent et, dans certains cas, argent utilisé comme simple lavage de surface.
+
+[ILLUSTRATION:ILL-R39-POLONNARUWA-COINAGE-01]
+
+*Le panneau du Musée national de Colombo montre le massa de cuivre de Dharmasokadeva et documente la mutation matérielle de la monnaie royale.*
+
+Mais le test causal résiste à la formule « mauvaise monnaie, royaume ruiné ». La dégradation commence avant l'apogée de Parākramabāhu I; elle peut signaler une raréfaction du métal précieux et une pression sur les ressources, mais aussi accompagner davantage de transactions et une circulation accrue de petite monnaie. Sans série de prix ni mesure du pouvoir d'achat, on ne peut pas convertir automatiquement le cuivre en inflation ou en faillite de l'État.
+
+Le mécanisme le plus robuste est cumulatif. Guerres, garnisons, grands travaux hydrauliques, patronage monumental et réforme religieuse mobilisent fortement le royaume. Si les marges monétaires et fiscales se resserrent, l'État devient moins capable d'absorber les crises de succession, de maintenir ses réseaux militaires et de résister à une attaque. L'invasion de Magha reste une rupture politique mieux attestée; la monnaie aide à comprendre pourquoi un système brillant pouvait devenir moins résilient, non pourquoi il devait fatalement tomber.
+<!-- [SIDE-STORY:SS-R43-POLONNARUWA-MONEY-FOCUS-001] END -->
+
 Kalinga Magha n’arrive donc pas sur un État au sommet de Parākramabāhu : il frappe **un système déjà désarticulé**.
 
 ### **2. Kalinga Magha : conquérant, régime, puis problème historiographique**
@@ -1440,7 +1489,15 @@ Polonnaruwa est un réseau à forts coûts fixes. Après la crise, les nouvelles
 
 #### **Santé \[C\]**
 
-Le paludisme et l’écologie de la Dry Zone ont probablement amplifié à certaines périodes les difficultés de repeuplement et de mise en valeur. **\[D comme cause première\]** Aucun dossier solide ne permet de dire « malaria → chute de Polonnaruwa en 1215 ».
+Le paludisme et l’écologie de la Dry Zone ont probablement amplifié à certaines périodes les difficultés de repeuplement et de mise en valeur.
+
+<!-- [SIDE-STORY:SS-R40-SCALPEL-OBJECT-001] BEGIN kind=object_focus -->
+**Objet / terrain — Le scalpel du moine**
+
+Dans une vitrine, un instrument chirurgical paraît presque anecdotique à côté des stupas et des statues royales. À Alahana Parivena, il ouvre pourtant une autre histoire de Polonnaruwa. L'archéologie des hôpitaux monastiques et la synthèse du Musée national associent ces complexes à des instruments, des récipients, des espaces de soin, des bains et des dispositifs sanitaires. Le monastère apparaît alors comme davantage qu'un lieu où l'on prie : il héberge, forme, soigne et conserve des savoirs. Cela ne permet pas de transformer chaque détail des chroniques sur Parākramabāhu en dossier médical, mais le mécanisme institutionnel est solide. Le Saṅgha appartient aussi à l'infrastructure sociale du royaume : un réseau où patronage royal, discipline monastique, enseignement et soin peuvent se rencontrer.
+<!-- [SIDE-STORY:SS-R40-SCALPEL-OBJECT-001] END -->
+
+**\[D comme cause première\]** Aucun dossier solide ne permet de dire « malaria → chute de Polonnaruwa en 1215 ».
 
 ### **6. PULL : ce qui attire vers le sud/sud-ouest**
 
@@ -1573,6 +1630,12 @@ La transition post-Polonnaruwa est donc aussi : **fin de la capitale-infrastruct
 ## **Mise au point — La chute comme changement d'optimum, confirmé par les sources**
 
 Manatunga (Cambridge/ISEAS) fournit la correction décisive au récit du musée : Magha usurpe Polonnaruwa en 1215 et règne environ vingt-et-un ans, mais **la ville est encore restaurée et réoccupée aux XIIIe–XIVe siècles avant un abandon graduel**.
+
+<!-- [SIDE-STORY:SS-R40-EPIDEMIC-FALSE-LEAD-001] BEGIN kind=false_lead -->
+**Fausse piste — La maladie a-t-elle fait tomber Polonnaruwa ?**
+
+L'hypothèse est séduisante : grands réservoirs, zones humides, maladies, puis dépopulation et abandon du Rajarata. Elle donne au paysage une causalité simple, d'autant que l'immense réseau hydraulique rend biologiquement plausible l'existence de milieux favorables à certains vecteurs. Mais plausibilité écologique et causalité historique ne sont pas la même chose. Le problème est documentaire. Les traces actuellement mobilisées ne ferment pas la chaîne forte « épidémie → effondrement démographique → chute du royaume ». À Alahana Parivena, l'hôpital, les instruments et les installations sanitaires montrent au contraire l'existence d'une capacité institutionnelle de soin ; ils ne prouvent évidemment ni l'absence de malaria ni l'absence de crises sanitaires. En revanche, les crises dynastiques, les interventions militaires, la fragmentation politique et le déplacement des centres de pouvoir disposent d'un dossier beaucoup plus solide. La maladie reste donc une hypothèse d'amplification à tester, pas une clé unique du crépuscule de Polonnaruwa.
+<!-- [SIDE-STORY:SS-R40-EPIDEMIC-FALSE-LEAD-001] END -->
 
 Cela impose une périodisation à trois temps :
 
@@ -2184,23 +2247,55 @@ L'ICOMOS/UNESCO sur Kandy fournit une clé canonique : lorsque la capitale chang
 
 La chaîne post-Polonnaruwa doit donc être lue comme une technologie politique : **perdre une capitale n'implique pas perdre le royaume si cour + relique + Saṅgha peuvent être réinstallés ailleurs.**
 
-Yapahuwa fournit le cas le plus net : le CCF documente le transfert de la Dent depuis Dambadeniya, puis sa capture par les Pandyas en 1284. La relique devient ainsi un objet de géopolitique régionale autant qu'un objet religieux.
+Yapahuwa fournit le cas le plus net : le CCF documente le transfert de la Dent depuis Dambadeniya, puis sa capture par les Pandyas en 1284.
+
+<!-- [SIDE-STORY:SS-R40-PANDYA-JAFFNA-001] BEGIN kind=dezoom -->
+**Dézoom — Du général pandya au royaume de Jaffna**
+
+À Yapahuwa, un Arya Cakravarti intervient dans le sillage de la puissance pandya et les reliques royales sont emportées vers le royaume pandya. Plus tard, le même nom dynastique se trouve au cœur du royaume de Jaffna. Il serait tentant de transformer cette proximité en généalogie automatique. Le mécanisme que l'on peut raconter avec davantage de sûreté est régional : le détroit de Palk fait circuler soldats, prétendants, marchands, institutions religieuses et rentes entre le Tamilakam et le nord de Lanka. Lorsque l'autorité pandya se fragilise au XIVe siècle, des pouvoirs inscrits dans ce système peuvent gagner en autonomie. Jaffna exploite alors un optimum différent de celui de Polonnaruwa : péninsule, passages du détroit, proximité de Mannar et relations sud-indiennes comptent davantage qu'une vaste hydrocratie intérieure. La continuité exacte entre l'Arya Cakravarti de Yapahuwa et la dynastie jaffnaise reste à établir épisode par épisode.
+<!-- [SIDE-STORY:SS-R40-PANDYA-JAFFNA-001] END -->
+
+La relique devient ainsi un objet de géopolitique régionale autant qu'un objet religieux.
 
 ### **B. XIVe siècle : passer d'un basculement “agraire → maritime” trop simple à un basculement de rendement politique**
 
-L'étude de Lara Wijesuriya dans *Itinerario* montre que l'essor du commerce maritime produit des villes portuaires et de nouveaux centres de pouvoir. Les Alakeshvara utilisent le **right of the port**, taxes et péages pour construire un territoire terrestre et maritime autour de Raigama/Kotte.
+L'étude de Lara Wijesuriya dans *Itinerario* montre que l'essor du commerce maritime produit des villes portuaires et de nouveaux centres de pouvoir.
+
+<!-- [SIDE-STORY:SS-R40-MING-KOTTE-001] BEGIN kind=also -->
+**Mais aussi — Quand la Chine fait irruption dans la politique de Lanka**
+
+Le passage de Gampola à Kotte peut sembler une affaire intérieure de cours, de fortifications et de rivalités locales. L'intervention de Zheng He oblige à élargir la carte. En 1410–1411, l'affrontement avec Alakeshvara se termine par la capture de ce dernier et son transfert vers la Chine. L'épisode ne transforme pas Lanka en colonie Ming et les titres exacts donnés au captif varient selon les traditions, mais le mécanisme est net : une grande flotte asiatique peut convertir circulation maritime, diplomatie et coercition en intervention politique locale. Le royaume qui se recompose autour de Kotte appartient donc à un système du golfe du Bengale autant qu'à l'histoire des rapports avec l'Inde du Sud.
+<!-- [SIDE-STORY:SS-R40-MING-KOTTE-001] END -->
+
+Les Alakeshvara utilisent le **right of the port**, taxes et péages pour construire un territoire terrestre et maritime autour de Raigama/Kotte.
 
 Nous ne pouvons pas affirmer que « les recettes portuaires dépassent les impôts agraires » à une date précise. Nous pouvons affirmer que **la maîtrise d'un nœud maritime devient une source de souveraineté suffisante pour changer la géographie du pouvoir**.
 
 ### **C. Réseaux musulmans : enlever l'anachronisme impérial**
 
-La *New Cambridge History of Islam* traite le commerce islamique de l'océan Indien comme une oecumène de longue durée. L'Islam arrive dans notre récit comme **réseau de marchands, ports, crédit, familles et navigation**, bien avant Safavides, Ottomans ou Moghols.
+La *New Cambridge History of Islam* traite le commerce islamique de l'océan Indien comme une oecumène de longue durée.
+
+<!-- [SIDE-STORY:SS-R40-ARAB-ENVOY-001] BEGIN kind=detour -->
+**Petit détour — Quand un marchand devient ambassadeur**
+
+À Yapahuwa, un épisode de 1283 change le statut narratif des marchands musulmans. Une ambassade est envoyée vers la cour mamlouke d'Égypte afin de développer des relations commerciales ; le dossier est corroboré par une étude qui conserve la tradition d'al-Maqrizi, même si l'édition arabe critique reste à récupérer pour toute citation précise. L'intérêt dépasse l'anecdote diplomatique. Dans l'océan Indien, des communautés marchandes transportent aussi des langues, des informations sur les routes et les prix, des relations de confiance et des accès aux cours étrangères. Pour une royauté installée dans une capitale fortifiée à l'intérieur des terres, cette compétence devient une infrastructure invisible. Les marchands musulmans de la côte ne sont donc pas simplement des étrangers stationnés dans les ports : leurs réseaux peuvent servir la politique commerciale et diplomatique du royaume.
+<!-- [SIDE-STORY:SS-R40-ARAB-ENVOY-001] END -->
+
+L'Islam arrive dans notre récit comme **réseau de marchands, ports, crédit, familles et navigation**, bien avant Safavides, Ottomans ou Moghols.
 
 Le persan de la stèle de Galle est donc d'abord la langue d'un univers persanophone/musulman maritime. Les empires Safavide (1501), ottoman dans l'océan Indien au XVIe siècle et moghol (1526) appartiennent au chapitre suivant.
 
 ### **D. Ming → Portugais : conserver l'effet, abandonner le “vide”**
 
-Les grandes expéditions de Zheng He projettent puissance militaire, politique et économique. Elles coûtent toutefois lourdement à l'État Ming et cessent après 1433. Le commerce chinois, lui, continue.
+Les grandes expéditions de Zheng He projettent puissance militaire, politique et économique.
+
+<!-- [SIDE-STORY:SS-R40-VIJAYANAGARA-COMP-001] BEGIN kind=comparator -->
+**Comparaison — Vijayanagara : annexion, suzeraineté ou réseau ?**
+
+Dire que Vijayanagara « domine » Jaffna n'a de sens qu'en précisant le mécanisme. Dans l'Inde du Sud médiévale, une puissance supérieure peut exiger tribut ou reconnaissance, agir par chefs militaires et alliances, tout en laissant une forte continuité dynastique et administrative locale. Jaffna doit donc être comparé sur cet axe précis : annexion directe, suzeraineté, protection, tribut ou autonomie ne sont pas des synonymes. Sa valeur stratégique vient en partie du corridor du détroit de Palk et de Mannar, où circulent perles, éléphants, marchandises, soldats et information. Ces flux rendent le nord de Lanka politiquement intéressant sans prouver qu'une frontière impériale continue traversait la mer. La bonne question reste épisode par épisode : quel degré de contrainte et de dépendance peut-on effectivement documenter ?
+<!-- [SIDE-STORY:SS-R40-VIJAYANAGARA-COMP-001] END -->
+
+Elles coûtent toutefois lourdement à l'État Ming et cessent après 1433. Le commerce chinois, lui, continue.
 
 La bonne chaîne causale est :
 
@@ -2212,7 +2307,15 @@ et non :
 | *« la Chine saborde sa flotte → l'océan Indien est vacant ».* |
 |---------------------------------------------------------------|
 
-Les Portugais rencontreront toujours Gujarat, Malabar, Coromandel, Malacca, communautés musulmanes et flottes locales. Leur nouveauté réside dans la militarisation durable d'un réseau de ports et de passages.
+Les Portugais rencontreront toujours Gujarat, Malabar, Coromandel, Malacca, communautés musulmanes et flottes locales.
+
+<!-- [SIDE-STORY:SS-R40-SOUTHINDIA-TRADE-001] BEGIN kind=dezoom -->
+**Dézoom — Les empires tombent, la mer ne se ferme pas**
+
+Entre le XIIIe et le XVe siècle, l'Inde du Sud connaît des ruptures spectaculaires : recul puis disparition de la puissance chola, apogée pandya, campagnes venues du nord, sultanat de Madurai, puis montée de Vijayanagara. Une chronologie strictement dynastique donne l'impression d'une succession de destructions. L'histoire économique oblige à nuancer : les réseaux maritimes se recomposent plutôt qu'ils ne disparaissent. Chevaux, armes, métaux, spécialistes, produits de prestige et revenus portuaires conservent une valeur militaire autant que commerciale. Pour Lanka, cela change la lecture de Mannar et de Jaffna. Leur importance ne dépend pas seulement du voisin qui domine momentanément le Tamilakam : elle vient aussi de leur place durable dans un corridor où circulent perles, éléphants, marchands, soldats et information. La fragmentation politique post-Polonnaruwa n'est donc pas synonyme de fermeture maritime ; elle déplace les acteurs et les lieux capables de capter ces flux.
+<!-- [SIDE-STORY:SS-R40-SOUTHINDIA-TRADE-001] END -->
+
+Leur nouveauté réside dans la militarisation durable d'un réseau de ports et de passages.
 
 **Sources :** ICOMOS/UNESCO Kandy ; CCF Yapahuwa ; Wijesuriya, Cambridge 2025 ; Pearson, *New Cambridge History of Islam* ; Cambridge on Ming maritime strategies/economic history.
 
@@ -2376,13 +2479,13 @@ Le **Jaffna urbain colonial autour du fort** n’est pas identique à la capital
 
 Jaffna est le contre-modèle parfait de Rajarata :
 
-| **Polonnaruwa / Rajarata**        | **Jaffna / Palk–Mannar**                              |
+| **Polonnaruwa / Rajarata** | **Jaffna / Palk–Mannar** |
 |-----------------------------------|-------------------------------------------------------|
-| grands réseaux hydrauliques       | nappes/puits + agriculture adaptée + rentes maritimes |
-| fiscalité du riz et de l’eau      | perles, transit, ports, éléphants, droits             |
-| capitale intérieure               | péninsule ouverte vers Tamil Nadu                     |
-| légitimité bouddhique / Dent      | royauté shivaïte / Setu / Rameswaram                  |
-| intégration d’un vaste hinterland | contrôle de nœuds et corridors                        |
+| grands réseaux hydrauliques | nappes/puits + agriculture adaptée + rentes maritimes |
+| fiscalité du riz et de l’eau | perles, transit, ports, éléphants, droits |
+| capitale intérieure | péninsule ouverte vers Tamil Nadu |
+| légitimité bouddhique / Dent | royauté shivaïte / Setu / Rameswaram |
+| intégration d’un vaste hinterland | contrôle de nœuds et corridors |
 
 Le nord n’est donc pas « séparé parce qu’il est pauvre et sec » : il devient autonome lorsqu’un **autre modèle de ressources et de connexions** est politiquement viable.
 
@@ -2400,12 +2503,12 @@ Le nord n’est donc pas « séparé parce qu’il est pauvre et sec » : il dev
 
 ## **Sources-ancres**
 
-| **Famille**                   | **Usage**                                                                                                                         | **Référence**                                                                                                                                                                                               |
+| **Famille** | **Usage** | **Référence** |
 |-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Department of Archaeology** | Kandarodai, conservation du fort, archéologie du nord                                                                             | [<u>archaeology.gov.lk</u>](https://archaeology.gov.lk/index.php/about/sections/excavations) ; [<u>archaeology.gov.lk</u>](https://archaeology.gov.lk/index.php/about/sections/architectural-conservations) |
-| **Cambridge**                 | précolonial Jaffna Fort; “right of the port”; Rameswaram/Āryacakravarti                                                           | *Antiquity* 93 (2019); *Itinerario* (Wijesuriya, 2025); Bes, JRAS (2024)                                                                                                                                    |
-| **UNESCO**                    | pas de fiche WH dédiée à Jaffna : utiliser UNESCO uniquement comme cadre comparatif régional, pas comme preuve directe du royaume | —                                                                                                                                                                                                           |
-| **Wikipedia**                 | chronologie et guide bibliographique, avec prudence sur la date 1215 et Magha                                                     | *Jaffna kingdom*, *History of the Jaffna kingdom*, *Portuguese conquest of the Jaffna kingdom*                                                                                                              |
+| **Department of Archaeology** | Kandarodai, conservation du fort, archéologie du nord | [<u>archaeology.gov.lk</u>](https://archaeology.gov.lk/index.php/about/sections/excavations) ; [<u>archaeology.gov.lk</u>](https://archaeology.gov.lk/index.php/about/sections/architectural-conservations) |
+| **Cambridge** | précolonial Jaffna Fort; “right of the port”; Rameswaram/Āryacakravarti | *Antiquity* 93 (2019); *Itinerario* (Wijesuriya, 2025); Bes, JRAS (2024) |
+| **UNESCO** | pas de fiche WH dédiée à Jaffna : utiliser UNESCO uniquement comme cadre comparatif régional, pas comme preuve directe du royaume | — |
+| **Wikipedia** | chronologie et guide bibliographique, avec prudence sur la date 1215 et Magha | *Jaffna kingdom*, *History of the Jaffna kingdom*, *Portuguese conquest of the Jaffna kingdom* |
 
 **PARTIE IV — KANDY ET LES ÂGES COLONIAUX**
 
@@ -2488,6 +2591,12 @@ Puis le roi associe Kandy à la **Dent du Bouddha**, réinstallée dans la nouve
 
 La campagne de Danture est le moment canonique. Une grande force portugaise et surtout ses auxiliaires locaux entre en territoire kandyan. Elle est progressivement affaiblie par :
 
+<!-- [SIDE-STORY:SS-R23-KDY-DONA-CATHERINA-PORTRAIT-001] BEGIN kind=portrait -->
+**Personnage — Dona Catherina : une héritière entre deux mondes**
+
+Dona Catherina, née Kusumasana Devi, condense la difficulté à raconter Kandy comme un monde resté étanche aux Portugais. Héritière d'une lignée dynastique kandyenne, elle grandit sous protection portugaise et dans un cadre chrétien avant d'être ramenée au centre du projet portugais sur Kandy. Après l'échec militaire de Danture, son mariage avec Vimaladharmasuriya participe au réassemblage d'une légitimité royale locale. Le portrait n'a donc d'intérêt que replacé dans ce mécanisme : dynastie, conversion, guerre et patronage bouddhique ne forment pas deux univers séparés, mais des ressources politiques qui circulent et sont recombinées. Les détails biographiques non indépendamment attestés par le musée restent hors récit ; ce qui importe ici est la trajectoire documentée d'une héritière devenue enjeu de souveraineté.
+<!-- [SIDE-STORY:SS-R23-KDY-DONA-CATHERINA-PORTRAIT-001] END -->
+
 - logistique difficile ;
 
 - terrain accidenté ;
@@ -2516,7 +2625,7 @@ Des convertis changent de camp ; des nobles bouddhistes coopèrent ponctuellemen
 
 ## **7. Jaffna, Mannar et le verrou du nord**
 
-### Complément V3 — Jaffna oblige à retourner la carte
+### Approfondissement — Jaffna oblige à retourner la carte
 
 Vu depuis Colombo, Jaffna peut sembler une extrémité septentrionale. Vu depuis le détroit de Palk, la péninsule est une interface avec le Tamilakam. Cette inversion de perspective reste valable sous les royaumes tamouls, les Portugais, la VOC et les Britanniques : le nord-ouest est relié à Mannar, Rāmeśvaram et aux circuits de l’Inde du Sud autant qu’au reste de l’île.
 
@@ -2526,8 +2635,8 @@ Le fort de Jaffna matérialise alors moins un monument isolé qu’un changement
 
 La carte de 1751 montrant vingt-deux forts dit davantage que chaque bastion pris séparément. Le réseau diminue le coût de surveillance des ports, protège les circuits de collecte, déplace rapidement soldats et agents, dissuade les rivaux européens et offre des bases pour intervenir contre les résistances locales. Il ne rend pas la VOC omnipotente : Kandy reste capable de soutenir des révoltes et de mener la guerre. Mais il crée une asymétrie logistique durable.
 
-**Petit détour — Mannar.** Les panneaux du terrain relient pêcheries de perles, route des éléphants, racines de choya destinées à la teinture de textiles indiens et travail servile. Cette juxtaposition n’est pas anecdotique : elle montre un nord-ouest inséré dans une économie transdétroit, là où une histoire écrite depuis Colombo tend à voir une périphérie.
-
+<!-- [SIDE-STORY:SS-PRE-004] -->
+**Mais aussi — Mannar.** Les panneaux du terrain relient pêcheries de perles, route des éléphants, racines de choya destinées à la teinture de textiles indiens et travail servile. Cette juxtaposition n’est pas anecdotique : elle montre un nord-ouest inséré dans une économie transdétroit, là où une histoire écrite depuis Colombo tend à voir une périphérie.
 
 La conquête progressive du royaume de Jaffna, finalisée en 1619, modifie le rapport de forces : le Portugal ferme davantage le détroit vers l’Inde et capte les rentes de Mannar. Cela limite les possibilités de Kandy de se connecter à des alliés et fournisseurs extérieurs par le nord. \[B\]
 
@@ -2565,16 +2674,16 @@ Cette partition, latente depuis le déplacement post-Polonnaruwa, atteint une fo
 
 ## **Les 8 ancres**
 
-| **Ancre**             | **Portugal vs Kandy**                                                                    |
+| **Ancre** | **Portugal vs Kandy** |
 |-----------------------|------------------------------------------------------------------------------------------|
-| Écologie              | montagnes/forêts/pluies = avantage défensif kandyan                                      |
-| Capacité fiscale      | cannelle et ports financent le littoral portugais ; agriculture intérieure finance Kandy |
-| Corridors             | Colombo/Goa/Mannar vs passes montagneuses                                                |
-| Succession/coercition | 1521, Sitawaka, Dona Catherina, Vimaladharmasūriya                                       |
-| Dent/Saṅgha           | transfert à Kandy consolide la monarchie                                                 |
-| Connaissance          | missionnaires/écoles/archives portugaises vs institutions bouddhiques                    |
-| Ports/rentes          | cannelle, perles, éléphants, douanes                                                     |
-| Régional              | Goa, Malabar, réseaux musulmans, Jaffna, puis VOC                                        |
+| Écologie | montagnes/forêts/pluies = avantage défensif kandyan |
+| Capacité fiscale | cannelle et ports financent le littoral portugais ; agriculture intérieure finance Kandy |
+| Corridors | Colombo/Goa/Mannar vs passes montagneuses |
+| Succession/coercition | 1521, Sitawaka, Dona Catherina, Vimaladharmasūriya |
+| Dent/Saṅgha | transfert à Kandy consolide la monarchie |
+| Connaissance | missionnaires/écoles/archives portugaises vs institutions bouddhiques |
+| Ports/rentes | cannelle, perles, éléphants, douanes |
+| Régional | Goa, Malabar, réseaux musulmans, Jaffna, puis VOC |
 
 ## **Fausses pistes**
 
@@ -2590,12 +2699,12 @@ Cette partition, latente depuis le déplacement post-Polonnaruwa, atteint une fo
 
 ## **Sources-ancres**
 
-| **Famille**                   | **Usage**                                                                                                                                                          |
+| **Famille** | **Usage** |
 |-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Department of Archaeology** | Kandy era material culture; forts/coins; *Ancient Ceylon* bibliography on wars                                                                                     |
-| **Cambridge**                 | Alan Strathern, *Kingship and Conversion in Sixteenth-Century Sri Lanka*; “Sri Lanka in the Long Early Modern Period”; studies on Portuguese-South India and trade |
-| **UNESCO**                    | Kandy as last royal/sacred capital; Tooth Temple; Galle as European-South Asian fortified city                                                                     |
-| **Wikipedia**                 | detailed event chronology (Kotte, Sitawaka, Danture, Jaffna conquest), to be corroborated                                                                          |
+| **Department of Archaeology** | Kandy era material culture; forts/coins; *Ancient Ceylon* bibliography on wars |
+| **Cambridge** | Alan Strathern, *Kingship and Conversion in Sixteenth-Century Sri Lanka*; “Sri Lanka in the Long Early Modern Period”; studies on Portuguese-South India and trade |
+| **UNESCO** | Kandy as last royal/sacred capital; Tooth Temple; Galle as European-South Asian fortified city |
+| **Wikipedia** | detailed event chronology (Kotte, Sitawaka, Danture, Jaffna conquest), to be corroborated |
 
 **Chapitre 9 — Kandy face à la VOC : de l’alliance à l’encerclement**
 
@@ -2632,13 +2741,14 @@ Le contrepoids choisi devient donc un verrou.
 
 ## **3. La côte hollandaise : de la forteresse à la bureaucratie**
 
-### Complément V3 — De la cannelle au *paper state*
+### Approfondissement — De la cannelle au *paper state*
 
 La cannelle est une motivation structurante de la VOC, mais elle ne suffit pas à expliquer l’évolution de l’État côtier. À mesure que l’administration doit fiscaliser terres, personnes, services et échanges, elle hérite de hiérarchies locales, utilise des obligations de travail, tient des tribunaux et développe des registres de personnes et de propriétés. Les *thombos* rendent des relations auparavant négociées et dispersées plus **lisibles** pour l’État [CAMBRIDGE-CLASSIFICATION ; CAMBRIDGE-LAWMAKING].
 
 Cette lisibilité est le bridge majeur vers la période britannique. Les Britanniques ne prennent pas en 1796 une côte administrativement vierge : ils récupèrent des forts, des agents, des catégories, des registres et des pratiques fiscales qui pourront être simplifiés, étendus ou réorganisés au XIXe siècle.
 
-### Petit détour structurant — quand le papier rencontre la caste
+<!-- [SIDE-STORY:SS-PRE-003] -->
+### Petit détour — quand le papier rencontre la caste
 
 La VOC ne crée pas une société de caste à Jaffna. Les hiérarchies, les statuts de service et les dépendances précèdent la conquête européenne. En revanche, gouverner par registre oblige l’administration à décider **qui est qui**, qui doit quoi, qui possède quoi et quels intermédiaires peuvent parler au nom d’un groupe.
 
@@ -2654,7 +2764,7 @@ Les archives font apparaître des personnes juridiquement possédées, des manum
 
 Sous les Britanniques, les mesures d’émancipation du XIXe siècle modifient le statut juridique des personnes asservies sans faire disparaître immédiatement caste, inégalités de travail ni autorité sociale [CAMBRIDGE-JAFFNA-SLAVERY]. Le XIXe siècle peut donc produire simultanément **émancipation formelle, continuité hiérarchique et explosion de l’éducation missionnaire**.
 
-### Complément V3 — Les intermédiaires : l’empire ne gouverne jamais seul
+### Approfondissement — Les intermédiaires : l’empire ne gouverne jamais seul
 
 La microhistoire de Willem de Melho et d’autres courtiers tamoulophones empêche une représentation binaire « Européens actifs / colonisés passifs ». Traduction, religion, commerce, justice et fiscalité dépendent d’intermédiaires dont les intérêts ne coïncident jamais parfaitement ni avec ceux de la Compagnie ni avec ceux d’une communauté locale supposée homogène.
 
@@ -2662,6 +2772,25 @@ Quand les missions protestantes investissent ensuite l’éducation à Jaffna, e
 
 ---
 
+<!-- [ARC-RECAP:RECAP-A06] -->
+### Récap causal
+
+**Schéma causal**
+- **Moteurs** : Le contrôle VOC des ports et forts devient une souveraineté côtière concurrente. ; L’administration fiscale territoriale accroît la lisibilité de la société et des ressources.
+- **Conséquences** : Registres, contentieux et catégories approfondissent la portée administrative.
+
+**Du point de vue des protagonistes**
+- **Monarchie kandyanne (souverain de l’intérieur)** — objectif : Utiliser la VOC contre le Portugal sans perdre la côte. ; contraintes : projection maritime limitée ; options perçues : alliance, résistance
+- **VOC à Ceylan (compagnie-État)** — objectif : Transformer les nœuds côtiers conquis en revenus et administration défendables. ; contraintes : coût de coercition, obligations territoriales ; options perçues : réseau de forts, fiscalité, enregistrement
+
+**Ce qui change à la fin de l’arc**
+- L’allié devient un souverain côtier concurrent.
+- Les nœuds militaires deviennent un système administratif et fiscal.
+
+**Ce que cela prépare pour la suite**
+- Un État côtier plus dense en forts et en papier entre dans un système de l’océan Indien qui devient progressivement plus asymétrique au profit de la Grande-Bretagne.
+
+<!-- [/ARC-RECAP:RECAP-A06] -->
 
 <table>
 <colgroup>
@@ -2734,18 +2863,26 @@ Dès lors, l’inversion par rapport à Polonnaruwa est presque complète :
 
 ## **8. Kandy joue encore l’international**
 
-### Complément V3 — 1744–1763 : les guerres européennes changent le système régional
+### Approfondissement — 1744–1763 : les guerres européennes changent le système régional
 
 La guerre de Succession d’Autriche ouvre en Inde à partir de 1744 une confrontation anglo-française qui se prolonge dans la guerre de Sept Ans. Cambridge traite donc plutôt une séquence **1744–1761/1763** [CAMBRIDGE-AUSTRIAN-WAR-INDIA ; CAMBRIDGE-SEVEN-YEARS-CARNATIC].
 
 Vers 1740, l’environnement reste multipolaire : VOC à Ceylan et dans l’archipel, France à Pondichéry et Maurice, Britanniques à Madras, Bombay et Calcutta, puissances indiennes capables d’arbitrer les alliances. Le Portugal est déjà très affaibli ; sa contraction ne doit pas être attribuée à la guerre de Sept Ans [CAMBRIDGE-PORTUGUESE-LATE ; CAMBRIDGE-PORTUGUESE-DECLINE].
 
+<!-- [SIDE-STORY:SS-PRE-001] -->
+**Fausse piste — « le Portugal est chassé par la guerre de Sept Ans ».** Non : sa contraction asiatique est bien antérieure. Le XVIIIe siècle prolonge une survie/reconfiguration d’un Estado da Índia déjà réduit ; 1763 change surtout la symétrie stratégique entre la France et l’East India Company.
+
 Le tournant anglo-français tient autant au financement qu’aux batailles. Les gains territoriaux de l’East India Company donnent accès à des recettes indiennes capables de financer des armées locales toujours plus importantes. Après la chute de Pondichéry en 1761 et le traité de Paris, les comptoirs français subsistent mais la **parité politico-militaire** disparaît [CAMBRIDGE-FRENCH-1754-1815].
 
 Pour Ceylan, l’effet est indirect mais structurant : Kandy et la VOC restent les acteurs locaux immédiats, mais le marché des contrepoids européens se rétrécit.
 
----
+<!-- [SIDE-STORY:SS-R23-KDY-SIAM-DEZOOM-001] BEGIN kind=dezoom -->
+**Dézoom — 1753 : Kandy se tourne vers Ayutthaya**
 
+En 1753, une mission de moines venue d'Ayutthaya sous la conduite d'Upali Thera contribue à restaurer à Kandy l'ordination supérieure. L'épisode inverse l'image d'une capitale montagneuse autonome parce qu'elle serait isolée. Le roi Kirti Sri Rajasinghe et Weliwita Saranankara ont besoin d'une autorité monastique reconnue qui n'est plus disponible localement sous la forme recherchée ; ils la font venir par des réseaux diplomatiques et maritimes theravāda. Le changement d'échelle est essentiel : des institutions que l'on voit aujourd'hui à Kandy s'inscrivent aussi dans une reconstruction transrégionale reliant l'île au Siam. La fermeture politique de la montagne face aux puissances côtières européennes n'empêche donc pas l'ouverture religieuse. Au contraire, la souveraineté kandyenne peut se renforcer en choisissant à l'extérieur les ressources institutionnelles dont elle a besoin.
+<!-- [SIDE-STORY:SS-R23-KDY-SIAM-DEZOOM-001] END -->
+
+---
 
 Être enclavé ne signifie pas être isolé. Kandy :
 
@@ -2763,7 +2900,7 @@ La bonne métaphore est donc **“enclavement négocié”**, pas autarcie.
 
 ## **9. 1795–1796 — la VOC tombe à cause de l’Europe, pas de Kandy**
 
-### Complément V3 — 1793–1815 : Révolution, Napoléon et fermeture du marché des alliances
+### Approfondissement — 1793–1815 : Révolution, Napoléon et fermeture du marché des alliances
 
 Le retrait hollandais de Ceylan précède 1815. Quand les Provinces-Unies deviennent la République batave alliée à la France, les Britanniques prennent Cochin en 1795 puis Ceylan en 1796 ; la VOC disparaît en 1799 et Amiens confirme Ceylan britannique en 1802 [CAMBRIDGE-COMPANY-FORTRESS-END].
 
@@ -2771,7 +2908,8 @@ Cette transition transfère plus qu’un territoire : forts, savoirs fiscaux, ca
 
 La menace française reste crédible tant que Maurice sert de base navale et corsaire. Elle se ferme progressivement avec l’occupation de Pondichéry, la prise de Maurice en 1810 puis de Java en 1811 [CAMBRIDGE-BRITISH-NAVY-1794 ; CAMBRIDGE-DESTROYING-RIVALS].
 
-### 1815 : Kandy tombe dans une fenêtre mondiale particulière
+<!-- [SIDE-STORY:SS-PRE-002] -->
+### Dézoom — 1815 : Kandy tombe dans une fenêtre mondiale particulière
 
 Waterloo ne « cause » pas la conquête de Kandy. Les mécanismes immédiats sont kandyan : conflit entre Sri Vikrama Rajasinha et des élites du royaume, capacité britannique à former une coalition locale, expérience tirée de l’échec militaire de 1803 et volonté de supprimer une frontière intérieure coûteuse.
 
@@ -2783,6 +2921,48 @@ Après 1815–1816, les comptoirs français reviennent comme établissements lim
 
 ---
 
+<!-- [ARC-RECAP:RECAP-A07] -->
+### Récap causal
+
+**Schéma causal**
+- **Moteurs** : La compétition anglo-française en Inde devient structurellement asymétrique. ; Les guerres révolutionnaires et napoléoniennes transfèrent Ceylan hollandais à la Grande-Bretagne avant 1815.
+- **Amplificateurs** : La disparition d’alternatives hollandaises et françaises réduit les options de balancier de Kandy.
+- **Conséquences** : La fracture politique interne kandyanne devient exceptionnellement exploitable.
+
+**Du point de vue des protagonistes**
+- **East India Company / Grande-Bretagne (puissance fiscalo-militaire régionale montante)** — objectif : Éliminer les positions stratégiques rivales et sécuriser Ceylan. ; contraintes : guerre navale, bases européennes rivales ; options perçues : prise militaire, règlement par traité
+- **Élites kandyannes (coalition de l’intérieur)** — objectif : Préserver l’autonomie et les marges de négociation. ; contraintes : fracture interne, réduction des contrepoids extérieurs ; options perçues : coalition interne, balancier externe
+
+**Ce qui change à la fin de l’arc**
+- La Grande-Bretagne devient le cadre militaire européen dominant autour de Ceylan.
+- 1815 survient dans un environnement de balancier externe beaucoup plus étroit.
+
+**Ce que cela prépare pour la suite**
+- Le pouvoir britannique hérite puis étend la lisibilité administrative, tandis que les hiérarchies sociales locales continuent de structurer l’accès, le travail et l’intermédiation.
+
+<!-- [/ARC-RECAP:RECAP-A07] -->
+
+<!-- [ARC-RECAP:RECAP-A08] -->
+### Récap causal
+
+**Schéma causal**
+- **Moteurs** : La bureaucratie des thombos relie terre, statut, fiscalité et service dans une gouvernance documentaire.
+- **Amplificateurs** : Enregistrement et codification peuvent renforcer des positions locales dominantes.
+- **Contraintes** : L’émancipation juridique ne dissout pas instantanément les dépendances sociales.
+- **Conséquences** : La lisibilité coloniale retravaille les hiérarchies plutôt qu’elle ne les invente ex nihilo.
+
+**Du point de vue des protagonistes**
+- **Administration coloniale (État documentaire)** — objectif : Rendre gouvernables terres, personnes, services et revenus. ; contraintes : besoin d’intermédiaires locaux ; options perçues : enregistrement, tribunaux, codification
+- **Ménages et groupes de statut de Jaffna (sujets et négociateurs)** — objectif : Protéger terres, statut et obligations dans des régimes juridiques changeants. ; contraintes : hiérarchie de caste, dépendance du travail ; options perçues : documents, contentieux, intermédiation
+
+**Ce qui change à la fin de l’arc**
+- La hiérarchie devient plus lisible et documentable pour l’État.
+- Émancipation juridique et transformation sociale divergent dans leur tempo.
+
+**Ce que cela prépare pour la suite**
+- L’État indépendant de 1948 hérite d’une machine administrative unifiée et de canaux d’accès inégaux dont la redistribution deviendra politiquement explosive.
+
+<!-- [/ARC-RECAP:RECAP-A08] -->
 
 La Révolution française transforme les Pays-Bas en République batave alliée de la France. Les Britanniques, craignant que les ports de Ceylan passent dans l’orbite française, prennent les possessions hollandaises en 1795–1796. \[A/B\]
 
@@ -2795,16 +2975,16 @@ Kandy survit encore, mais se trouve désormais face à une puissance dont les re
 
 ## **Les 8 ancres**
 
-| **Ancre**        | **Kandy vs VOC**                                                                 |
+| **Ancre** | **Kandy vs VOC** |
 |------------------|----------------------------------------------------------------------------------|
-| Écologie         | hautes terres protègent toujours Kandy                                           |
+| Écologie | hautes terres protègent toujours Kandy |
 | Capacité fiscale | VOC = cannelle + cadastre + services ; Kandy = agriculture + obligations locales |
-| Corridors        | ports hollandais encerclent le royaume                                           |
-| Succession       | dynastie Nayakkar + nobles kandyan = coalition fragile                           |
-| Dent/Saṅgha      | cœur de la légitimité ; Siyam Nikāya restaure l’ordination                       |
-| Connaissance     | thombos, tribunaux, écoles protestantes vs réseaux monastiques                   |
-| Ports/rentes     | monopole de cannelle, Galle/Colombo/Jaffna/Trincomalee                           |
-| Régional         | Batavia, Coromandel, Siam, guerres européennes                                   |
+| Corridors | ports hollandais encerclent le royaume |
+| Succession | dynastie Nayakkar + nobles kandyan = coalition fragile |
+| Dent/Saṅgha | cœur de la légitimité ; Siyam Nikāya restaure l’ordination |
+| Connaissance | thombos, tribunaux, écoles protestantes vs réseaux monastiques |
+| Ports/rentes | monopole de cannelle, Galle/Colombo/Jaffna/Trincomalee |
+| Régional | Batavia, Coromandel, Siam, guerres européennes |
 
 ## **Fausses pistes**
 
@@ -2820,12 +3000,12 @@ Kandy survit encore, mais se trouve désormais face à une puissance dont les re
 
 ## **Sources-ancres**
 
-| **Famille**                   | **Usage**                                                                                                                     |
+| **Famille** | **Usage** |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| **Department of Archaeology** | forts/objets/monnaies de la période ; conservation de bâtiments hollandais                                                    |
-| **Cambridge**                 | VOC comme État-compagnie ; thombos, droit, catégories sociales, Kandy/VOC, économie de cannelle                               |
-| **UNESCO**                    | Galle comme meilleur exemple d’interaction urbanisme européen / traditions sud-asiatiques ; Kandy comme capitale indépendante |
-| **Wikipedia**                 | chronologie du Dutch Ceylon, traité 1638, guerre 1760–66, transition britannique, à corroborer                                |
+| **Department of Archaeology** | forts/objets/monnaies de la période ; conservation de bâtiments hollandais |
+| **Cambridge** | VOC comme État-compagnie ; thombos, droit, catégories sociales, Kandy/VOC, économie de cannelle |
+| **UNESCO** | Galle comme meilleur exemple d’interaction urbanisme européen / traditions sud-asiatiques ; Kandy comme capitale indépendante |
+| **Wikipedia** | chronologie du Dutch Ceylon, traité 1638, guerre 1760–66, transition britannique, à corroborer |
 
 **Chapitre 10 — Ceylan britannique : conquérir l’intérieur et reconnecter l’île au marché mondial**
 
@@ -2858,7 +3038,15 @@ Ils apprennent donc la même leçon que les Portugais :
 
 ## **3. 1815 — Kandy tombe d’abord par politique de cour**
 
-La fin de la monarchie tient autant à la **fracture interne** qu’à la supériorité britannique. Sri Vikrama Rajasinha est en conflit avec des chefs kandyan ; les Britanniques exploitent cette opposition et entrent avec leur coopération. \[A/B\]
+La fin de la monarchie tient autant à la **fracture interne** qu’à la supériorité britannique.
+
+<!-- [SIDE-STORY:SS-R23-KDY-DOYLY-PORTRAIT-001] BEGIN kind=portrait -->
+**Personnage — D'Oyly : conquérir Kandy en apprenant à la lire**
+
+John D'Oyly est utile précisément parce qu'il déplace le regard de la bataille vers l'information. Après les difficultés britanniques à imposer militairement leur contrôle dans les hautes terres, il apprend le cingalais, travaille sur les institutions et les usages kandyan et entretient des contacts avec les élites du royaume. Ce savoir ne « conquiert » pas Kandy à lui seul, mais il réduit l'opacité politique qui avait longtemps protégé la cour autant que le relief. En 1815, les Britanniques peuvent mieux identifier les fractures autour de Sri Vikrama Rajasinha, négocier avec des chefs hostiles au roi et transformer une crise interne en coalition de conquête. Le personnage révèle ainsi un changement de technologie impériale : après l'échec de la pénétration brute, traduire, cartographier les alliances et comprendre les règles de cour deviennent des moyens de puissance.
+<!-- [SIDE-STORY:SS-R23-KDY-DOYLY-PORTRAIT-001] END -->
+
+Sri Vikrama Rajasinha est en conflit avec des chefs kandyan ; les Britanniques exploitent cette opposition et entrent avec leur coopération. \[A/B\]
 
 La **Convention de Kandy** du 2 mars 1815 dépose le roi, transfère la souveraineté à la Couronne britannique et promet notamment la protection du bouddhisme et d’une partie des institutions locales. \[A\]
 
@@ -3001,7 +3189,7 @@ La rupture de 1948 est donc politique, mais l’État territorial, les districts
 
 ## **12. Le grand paradoxe britannique**
 
-### Complément V3 — Bridge vers 1948 : ce que l’État indépendant hérite vraiment
+### Approfondissement — Bridge vers 1948 : ce que l’État indépendant hérite vraiment
 
 La longue durée coloniale lègue au moins quatre couches :
 
@@ -3013,7 +3201,6 @@ La longue durée coloniale lègue au moins quatre couches :
 Cette quatrième couche raccorde directement l’histoire sociale de Jaffna à la fresque post-1948. Le problème futur ne sera pas seulement « Sinhala contre Tamil ». Il sera aussi : **que fait un État postcolonial lorsqu’une minorité régionale a converti avec une grande efficacité certaines institutions coloniales — école, anglais, concours et professions — en capital social ?**
 
 La réponse de 1956 et des années 1970 redistribuera cet accès, tandis que la caste, loin de disparaître, changera de visibilité et de fonction. Ce bridge constitue désormais l’entrée sociale canonique de la seconde fresque.
-
 
 Les Britanniques terminent le cycle commencé après Polonnaruwa :
 
@@ -3029,16 +3216,16 @@ Ainsi, le premier pouvoir qui contrôle durablement toute l’île depuis des si
 
 ## **Les 8 ancres**
 
-| **Ancre**             | **Période britannique**                                                         |
+| **Ancre** | **Période britannique** |
 |-----------------------|---------------------------------------------------------------------------------|
-| Écologie              | hautes terres deviennent ressource de plantation                                |
-| Capacité fiscale      | douanes + plantation + fiscalité bureaucratique                                 |
-| Corridors             | routes/rails détruisent l’avantage défensif de l’intérieur                      |
-| Succession/coercition | chute 1815 via élites ; rébellion 1817–18 ; plus de dynastie                    |
-| Dent/Saṅgha           | perte de fonction de palladium de l’État ; survie comme centre religieux        |
-| Connaissance          | école, census, cartographie, administration, presse                             |
-| Ports/rentes          | Colombo devient cœur exportateur d’un hinterland national                       |
-| Régional/global       | Inde britannique, capitaux londoniens, travailleurs sud-indiens, marché mondial |
+| Écologie | hautes terres deviennent ressource de plantation |
+| Capacité fiscale | douanes + plantation + fiscalité bureaucratique |
+| Corridors | routes/rails détruisent l’avantage défensif de l’intérieur |
+| Succession/coercition | chute 1815 via élites ; rébellion 1817–18 ; plus de dynastie |
+| Dent/Saṅgha | perte de fonction de palladium de l’État ; survie comme centre religieux |
+| Connaissance | école, census, cartographie, administration, presse |
+| Ports/rentes | Colombo devient cœur exportateur d’un hinterland national |
+| Régional/global | Inde britannique, capitaux londoniens, travailleurs sud-indiens, marché mondial |
 
 ## **Fausses pistes**
 
@@ -3054,12 +3241,12 @@ Ainsi, le premier pouvoir qui contrôle durablement toute l’île depuis des si
 
 ## **Sources-ancres**
 
-| **Famille**                   | **Usage**                                                                                               |
+| **Famille** | **Usage** |
 |-------------------------------|---------------------------------------------------------------------------------------------------------|
-| **Department of Archaeology** | patrimoine Kandyan/colonial, monnaies, *Ancient Ceylon*                                                 |
-| **Cambridge**                 | 1817–18, Colebrooke–Cameron, appropriation foncière, plantations, travail indien, census/catégorisation |
-| **UNESCO**                    | Kandy, fin de la monarchie en 1815, patrimoine de la Dent                                               |
-| **Wikipedia**                 | chronologie British Ceylon, Convention, Colebrooke–Cameron, plantations/réformes, à corroborer          |
+| **Department of Archaeology** | patrimoine Kandyan/colonial, monnaies, *Ancient Ceylon* |
+| **Cambridge** | 1817–18, Colebrooke–Cameron, appropriation foncière, plantations, travail indien, census/catégorisation |
+| **UNESCO** | Kandy, fin de la monarchie en 1815, patrimoine de la Dent |
+| **Wikipedia** | chronologie British Ceylon, Convention, Colebrooke–Cameron, plantations/réformes, à corroborer |
 
 # **Épilogue — ce que la longue durée fait apparaître**
 
@@ -3080,39 +3267,38 @@ Sur plus de deux millénaires, la géographie politique de l’île change moins
 </tbody>
 </table>
 
+## Sources des approfondissements
 
-## Appareil de sources des compléments V3
-
-Ces notices donnent la source exacte des développements ajoutés à la V1. Le tier décrit la nature de la source, non une autorisation à généraliser au-delà de son champ.
+Ces notices donnent la source exacte des approfondissements. Le niveau de source décrit la nature du document, sans autoriser une généralisation au-delà de son champ.
 
 ### CAMBRIDGE-ANGLODUTCH-MERIDIAN — The Anglo-Dutch Imperial Meridian in the Indian Ocean World, 1795–1820
 T1 canonical anchor British capture of Dutch Indian Ocean colonies and transfer of administrative knowledge
-Limite : doctoral thesis; broad Indian Ocean comparison
+Limite : Doctoral thesis; broad Indian Ocean comparison
 https://www.repository.cam.ac.uk/items/d9e8ef92-6f8f-434d-80e9-9065fe055699
 
 ### CAMBRIDGE-AUSTRIAN-WAR-INDIA — The Indian Dimension in the War of the Austrian Succession, 1744–48
-T1 canonical anchor opening phase of the long Anglo-French struggle for political influence in India
+T1 canonical anchor Opening phase of the long Anglo-French struggle for political influence in India
 Limite : India-centred; effects on Ceylon are an indirect regional bridge
 https://www.cambridge.org/core/books/abs/emergence-of-british-power-in-india-16001784/indian-dimension-in-the-war-of-the-austrian-succession-174448/5FA0E95C3C050D87A0203C8B429F55F2
 
 ### CAMBRIDGE-BRITISH-NAVY-1794 — British Naval Power in the East, 1794–1805 — Introduction
 T1 canonical anchor British naval supremacy after Seven Years War and strategic build-up in eastern waters
-Limite : naval strategic lens
+Limite : Naval strategic lens
 https://www.cambridge.org/core/books/british-naval-power-in-the-east-17941805/introduction/5BBD279CB83BEEDB7CAB4DFC9D7F0BD8
 
 ### CAMBRIDGE-CLASSIFICATION — Classifications at Work: Social Categories and Dutch Bureaucracy in Colonial Sri Lanka
 T1 canonical anchor VOC bureaucracy, categories, thombos, taxation and local hierarchy
-Limite : focuses especially on the eighteenth-century coastal bureaucracy; do not generalize uniformly across all periods/provinces
+Limite : Focuses especially on the eighteenth-century coastal bureaucracy; do not generalize uniformly across all periods/provinces
 https://www.cambridge.org/core/journals/itinerario/article/classifications-at-work-social-categories-and-dutch-bureaucracy-in-colonial-sri-lanka/D9826706895727C691F368B8EC71DA43
 
 ### CAMBRIDGE-COMPANY-FORTRESS-END — The Company Fortress — Conclusion
 T1 canonical anchor 1795 Cochin, 1796 Ceylon, Amiens and end of Dutch military presence in South Asia
-Limite : fort/company focus; pair with wider Napoleonic Indian Ocean work
+Limite : Fort/company focus; pair with wider Napoleonic Indian Ocean work
 https://www.cambridge.org/core/books/abs/company-fortress/conclusion/B4C78562C5CDDBCD822B70FBF19299DF
 
 ### CAMBRIDGE-DESTROYING-RIVALS — Destroying all Rivals, 1803–1811
-T1 canonical anchor capture of key Indian Ocean positions, French threat and British strategic system before 1815
-Limite : maritime military lens; does not explain Kandyan internal politics
+T1 canonical anchor Capture of key Indian Ocean positions, French threat and British strategic system before 1815
+Limite : Maritime military lens; does not explain Kandyan internal politics
 https://www.cambridge.org/core/books/abs/british-navy-in-eastern-waters/destroying-all-rivals-18031811/C1FDAD5F59E664E87C5983011B98DB8D
 
 ### CAMBRIDGE-FRENCH-1754-1815 — The French Presence in India between 1754 and 1815
@@ -3127,17 +3313,17 @@ https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/amb
 
 ### CAMBRIDGE-LAWMAKING — Lawmaking in Dutch Sri Lanka
 T1 canonical anchor VOC law, territorial government, land rights and Kandy relations
-Limite : legal-administrative lens
+Limite : Legal-administrative lens
 https://www.cambridge.org/core/books/lawmaking-in-dutch-sri-lanka/
 
 ### CAMBRIDGE-PORTUGUESE-DECLINE — Decline and stagnation — The Portuguese in India
-T1 corroborating anchor historiography and chronology of Portuguese decline
-Limite : older synthesis; useful especially to reject teleological British accounts
+T1 corroborating bridge Historiography and chronology of Portuguese decline
+Limite : Older synthesis; useful especially to reject teleological British accounts
 https://www.cambridge.org/core/books/portuguese-in-india/decline-and-stagnation/85B04D74569AB30ABBB0D615D7D020CB
 
 ### CAMBRIDGE-PORTUGUESE-LATE — Holding on in India: The Late Seventeenth and Eighteenth Centuries
-T1 corroborating anchor Portuguese Estado da Índia after seventeenth-century losses
-Limite : supports long decline/reconfiguration, not a single-war collapse thesis
+T1 corroborating bridge Portuguese Estado da Índia after seventeenth-century losses
+Limite : Supports long decline/reconfiguration, not a single-war collapse thesis
 https://www.cambridge.org/core/product/F08BEB42BBD63D262DC51ACF60EC36F8
 
 ### CAMBRIDGE-SEVEN-YEARS-CARNATIC — The Struggle for Supremacy in the Carnatic during the Seven Years War, 1756–61
@@ -3146,3 +3332,20 @@ Limite : Carnatic focus; do not equate French military defeat with disappearance
 https://www.cambridge.org/core/books/abs/emergence-of-british-power-in-india-16001784/struggle-for-supremacy-in-the-carnatic-during-the-seven-years-war-175661/9FD9368AEBAA70EE6E2EF9452662F04B
 
 **FIN DE L’ÉDITION DE LECTURE**
+
+## Légende des encadrés
+
+La couleur facilite le repérage, mais le symbole et le libellé portent le sens en noir et blanc. Les numéros ne sont pas un ordre de priorité.
+
+- ① **Fausse piste** — Question intuitive à tester puis corriger.
+- ② **Petit détour** — Détour bref qui éclaire le fil principal.
+- ③ **Dézoom** — Changement d’échelle géographique ou historique.
+- ④ **Mais aussi** — Dimension complémentaire utile au mécanisme principal.
+- ⑤ **Point de méthode** — Méthode historique lue par le lecteur : dater, attribuer, comparer une source.
+- ⑥ **Personnage** — Personnage replacé dans son rôle historique.
+- ⑦ **Objet / terrain** — Objet, inscription, monument ou indice de terrain.
+- ⑧ **Comparaison** — Comparaison contrôlée avec limites explicites.
+- ⑨ **Fil rouge** — Fil rouge : reprise narrative d’un fait déjà noué.
+- ⑩ **Focus analytique** — Question analytique, contrastes, mécanismes et payoff.
+
+**Point de méthode** désigne ici une méthode historique utile au lecteur ; il ne décrit jamais le processus de production, les runs, les statuts ou les versions du document.

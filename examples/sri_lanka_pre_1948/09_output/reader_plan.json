@@ -1,0 +1,58 @@
+{
+  "profile_id": "historian_enthusiast",
+  "content_temperature": 5,
+  "story_template": "templates/storytelling/historian_enthusiast.md",
+  "story_scaffold": "09_output/story_scaffold.json",
+  "eligible_side_story_ids": [
+    "SS-PRE-002",
+    "SS-PRE-L003",
+    "SS-PRE-L004",
+    "SS-PRE-L005",
+    "SS-R34-BUDDHIST-ICONOGRAPHY-METHOD-001",
+    "SS-PRE-001",
+    "SS-PRE-003",
+    "SS-R34-MUDRA-DETOUR-001",
+    "SS-PRE-004",
+    "SS-PRE-L016"
+  ],
+  "arc_recap_ids": [
+    "RECAP-A02",
+    "RECAP-A05",
+    "RECAP-A06",
+    "RECAP-A07",
+    "RECAP-A07b",
+    "RECAP-A08"
+  ],
+  "selected_map_ids": [],
+  "map_rule": "max one human-approved map per subsection/side-story slot",
+  "selected_illustration_ids": [
+    "ILL-R39-POLONNARUWA-COINAGE-01",
+    "ILL-R43-POL-GALVIHARA-01"
+  ],
+  "illustration_review_queue_ids": [
+    "ILL-KANDY-03",
+    "ILL-KANDY-04",
+    "ILL-KANDY-09",
+    "ILL-KANDY-10",
+    "ILL-R36-ANCIENT-SEA-ROUTES-02",
+    "ILL-R36-ANURADHAPURA-MAP-01",
+    "ILL-R38-STUPA-FORMS-01",
+    "ILL-KANDY-02",
+    "ILL-KANDY-05",
+    "ILL-KANDY-01",
+    "ILL-R38-CNM-BRONZE-01",
+    "ILL-KANDY-08",
+    "ILL-MUDRA-02",
+    "ILL-MUDRA-04",
+    "ILL-MUDRA-06",
+    "ILL-MUDRA-07",
+    "ILL-MUDRA-01",
+    "ILL-MUDRA-03",
+    "ILL-MUDRA-05",
+    "ILL-MUDRA-08",
+    "ILL-KANDY-06",
+    "ILL-KANDY-07"
+  ],
+  "retired_illustration_ids": [],
+  "illustration_rule": "rank by evidence then vision confidence; relevance_rank is a human tie-breaker; embed only reader_eligible assets with a resolved target"
+}

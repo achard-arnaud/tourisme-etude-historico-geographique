@@ -1,0 +1,15 @@
+[
+  {
+    "schema_version":"1.0","class":"illustration","id":"ILL-R43-POL-GALVIHARA-01","status":"reader_eligible",
+    "source":{"kind":"field_photo","asset_ref":"1000031351.jpg","sha256":"ac25afde39cba24577e2373aebf24ecdec07de5de8ee5f50cc876774bd406dc9","captured_at":"2026-09-01","location":"Gal Vihara, Polonnaruwa, Sri Lanka","creator":"user","rights":"user_supplied","binary_status":"external_only","sha256_status":"verified_at_intake"},
+    "input_refs":[{"type":"field_fragment","id":"GF-R43-GALVIHARA-FIELD-001","path":"00_method/capture/run43_gal_vihara_fragments.json"},{"type":"claim","id":"C-R28-A04-SANGHA-REFORM-001","path":"01_arcs/A04_chola_interlude_and_polonnaruwa/claims/C-R28-A04-SANGHA-REFORM-001.json"}],
+    "depiction":{"subject":"Vue d'ensemble du sanctuaire rupestre de Gal Vihara","event_or_theme":"Monumentalité bouddhique, réforme du Saṅgha et légitimation royale à Polonnaruwa","evidence_status":"observed_caption","textual_layer":"unresolved","period":"XIIe siècle; photographie de terrain 2026","notes":"La vue montre les principales figures rupestres; l'identité de la figure debout n'est pas résolue par l'image."},
+    "vision_review":{"status":"reviewed","confidence":"high","caption_transcription":"Photographie de terrain sans cartel visible","visual_notes":"Affleurement sculpté, Bouddha assis, sanctuaire excavé, figure debout aux bras croisés et Bouddha couché.","uncertainty":"La vue d'ensemble identifie le site mais ne tranche pas le débat iconographique sur la figure debout."},
+    "tag_review":{"status":"approved","trigger":"manual","notes":"Placement approuvé par la demande utilisateur dans le nœud narratif Gal Vihara."},
+    "human_review":{"status":"approved","reviewed_at":"2026-09-01","notes":"L'utilisateur a explicitement demandé l'insertion de l'illustration dans le document final."},
+    "fragment":{"caption":"Gal Vihara au crépuscule : le rocher réunit les grandes images assise, debout et couchée de l'ancien Uttarārāma. L'identité précise de la figure debout reste débattue.","what_it_shows":"Une vue générale du complexe rupestre de Gal Vihara à Polonnaruwa.","why_here":"Ancre visuellement le lien entre monumentalité, réforme monastique et capacité de mobilisation du royaume de Parākramabāhu I.","limits":"La photographie n'établit ni l'application effective du Katikāvata ni l'identité de la figure debout."},
+    "placement":{"arc_ref":"A04_chola_interlude_and_polonnaruwa","subsection_ref":"gal-vihara-state-in-stone","section_anchor":"Gal Vihara","target_status":"resolved","relevance_rank":1},
+    "render":{"marker":"[ILLUSTRATION:ILL-R43-POL-GALVIHARA-01]","required_in_reader":true,"caption_only_allowed":true}
+  }
+]
+
