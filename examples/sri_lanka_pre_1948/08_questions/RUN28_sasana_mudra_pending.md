@@ -2,7 +2,7 @@
 
 status: partially_resolved
 promotion_gate: selective
-last_reviewed: 2026-08-27
+last_reviewed: 2026-09-01
 
 ## Closed / promoted
 
@@ -15,6 +15,7 @@ last_reviewed: 2026-08-27
 7. **Arc gap** — structurally resolved by `A05c_gampola_kotte_sitawaka_transition`.
 8. **Kataragama–Nallur bridge** — closed in Run29 with first-party endpoints plus scholarly bridge evidence: `C-R29-KDY-KATARAGAMA-DEVALAYA-001`, `C-R29-NALLUR-MURUGAN-001`, `B-R29-KATARAGAMA-NALLUR-001`.
 9. **Rajasinha I / Sitawaka** — promoted only in a bounded historiographic form (`C-R29-A05C-RAJASINHA-SRIPADA-001`): Saiva conversion / displacement at Sri Pada is supportable, while island-wide persecution remains unclosed.
+10. **Meditation / Buddha-as-avatar comparator** — closed in Run34 by splitting the bundled intuition rather than validating a creolisation thesis. Theravada meditation, selected Shaiva tantric contemplative repertoires and the Vaishnava Buddha-as-avatar tradition are separately sourced in `C-R34-FORCE-THERAVADA-MEDITATION-001`, `C-R34-FORCE-SHAIVA-TANTRA-MEDITATION-001` and `C-R34-FORCE-BUDDHA-VISHNU-AVATAR-001`; the controlled comparison is materialised as `B-R34-SHAIVA-BUDDHIST-MEDITATION-001`. No direct borrowing or doctrinal fusion is inferred.
 
 ## Still open — field/provenance gates
 
@@ -29,12 +30,11 @@ last_reviewed: 2026-08-27
 1. **Sitawaka literary decline** — the absolute museum wording that Pali/Sanskrit composition was 'completely lost' remains unpromoted. Research may support decline/reorientation, but not the current absolute statement.
 2. **Kotte transregional ordinations** — the panel compresses Siam/Cambodia/Burma connections; chronology requires separate independent closure.
 3. **Post-Kalinga-Magha monastic dispersal** — general political rupture is established elsewhere, but the specific Vipassana/Asgiriya lineage route via Yapahuwa remains a lineage tradition until independently sourced.
-4. **Meditation / Buddha-as-avatar comparator** — remains a separate comparative research candidate. It must distinguish Buddhist meditation, Shaiva yogic traditions and variable Puranic lists rather than imply doctrinal equivalence.
-5. **Anuradhapura long weakening versus Chola conquest milestones** — retain as a multi-causal chronology question; do not reduce the long transition to a single 'South Indian invasions' cause.
+4. **Anuradhapura long weakening versus Chola conquest milestones** — retain as a multi-causal chronology question; do not reduce the long transition to a single 'South Indian invasions' cause.
 
 ## Graph consequence
 
-The graph now supports: Polonnaruwa reform -> grammatical production -> later mobile/recomposed centres (Gadaladeniya -> Kotte), then a bounded Sitawaka religious reconfiguration. No causal edge is asserted from Kotte literary flourishing to Sitawaka literary decline. The Kataragama–Nallur connection is a dezoom/ritual-identity bridge, not a direct institutional transmission claim.
+The graph now supports: Polonnaruwa reform -> grammatical production -> later mobile/recomposed centres (Gadaladeniya -> Kotte), then a bounded Sitawaka religious reconfiguration. No causal edge is asserted from Kotte literary flourishing to Sitawaka literary decline. The Kataragama–Nallur connection is a dezoom/ritual-identity bridge, not a direct institutional transmission claim. Run34 additionally supports a controlled Buddhist/Shaiva contemplative comparator while explicitly rejecting its use as evidence for a fused historical system.
 
 ## Promotion rule
 
