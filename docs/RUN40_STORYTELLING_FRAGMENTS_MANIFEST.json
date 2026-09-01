@@ -1,23 +1,18 @@
 {
-  "run":"RUN40",
+  "schema_version":"1.0",
+  "run_id":"RUN40",
   "mode":"iterative_storytelling",
+  "date":"2026-09-01",
+  "branch":"run40-storytelling-fragments-side-stories",
+  "state_before":"Run39 had admitted new Colombo museum material and transition claims, but the recent medicine, mobile-capital, Arab-merchant, Pandyan/Aryacakravarti, Ming and Vijayanagara fragments were not yet organized into a typed narrative apparatus; Run39 also left source/intake contract debt detected by Run40 CI.",
+  "state_after":"Seven evidence-lineaged narrative brins are typed as object_focus, false_lead, dezoom, detour, dezoom, also and comparator; each retains a narrative-arc target. A deterministic end-of-reader appendix is appended during pre-1948 rendering without promoting the candidate records into stronger evidence. Run39 source, causal-role and intake-lineage debts discovered by CI are normalized in the same branch.",
+  "promotion_decision":"stage the seven side stories as candidate apparatus records while rendering their bounded prose in the explicit book-end storytelling appendix; do not promote candidate status or any underlying unresolved historical proposition solely through composition",
   "project":"examples/sri_lanka_pre_1948",
   "baseline":"main@3d62726528115f7fa6ae0b55bcf8c79d98161e1a",
-  "objective":"Transform recent field/intake fragments into typed, evidence-lineaged side stories connected to the existing narrative arcs, and place them in an explicit end-of-book apparatus as requested without silently changing evidence state.",
-  "inputs":[
-    "docs/intakes/INTAKE_polonnaruwa_monastic_medicine_epidemic_hypothesis_2026-09-01.md",
-    "docs/intakes/INTAKE_cnm_transitional_period_mobile_capitals_2026-09-01.md",
-    "examples/sri_lanka_pre_1948/01_arcs/A04_chola_interlude_and_polonnaruwa",
-    "examples/sri_lanka_pre_1948/01_arcs/A05b_dry_zone_collapse_and_mobile_capitals",
-    "examples/sri_lanka_pre_1948/01_arcs/A05c_gampola_kotte_sitawaka_transition",
-    "examples/sri_lanka_pre_1948/09_output/reader_scaffold.json"
-  ],
-  "outputs":[
-    "examples/sri_lanka_pre_1948/05_sources/source_register_run40_storytelling.json",
-    "examples/sri_lanka_pre_1948/09_output/side_stories/SS-R40-END-APPARATUS.json",
-    "examples/sri_lanka_pre_1948/09_output/reader_scaffold_parts/part-05.json",
-    "examples/sri_lanka_pre_1948/09_output/reader_scaffold.json"
-  ],
+  "objective":"Transform recent field/intake fragments into typed, evidence-lineaged side stories connected to existing narrative arcs and append a bounded storytelling section at the end of the rendered reader.",
+  "inputs":["docs/intakes/INTAKE_polonnaruwa_monastic_medicine_epidemic_hypothesis_2026-09-01.md","docs/intakes/INTAKE_cnm_transitional_period_mobile_capitals_2026-09-01.md","examples/sri_lanka_pre_1948/01_arcs/A04_chola_interlude_and_polonnaruwa","examples/sri_lanka_pre_1948/01_arcs/A05b_dry_zone_collapse_and_mobile_capitals","examples/sri_lanka_pre_1948/01_arcs/A05c_gampola_kotte_sitawaka_transition"],
+  "outputs":["examples/sri_lanka_pre_1948/05_sources/source_register_run40_storytelling.json","examples/sri_lanka_pre_1948/09_output/side_stories/SS-R40-END-APPARATUS.json","examples/sri_lanka_pre_1948/09_output/run40_storytelling_appendix.md","scripts/render_composed_reader.py","docs/intakes/intake_registry.json","docs/intakes/intake_research_backlog.json"],
+  "dispatched_skills":[{"skill":"storytelling-historical-travel","status":"executed","reason":"User requested a storytelling run that follows claim/arc links, assigns side-story types and places the resulting brins at the end of the reader.","outputs":["examples/sri_lanka_pre_1948/09_output/side_stories/SS-R40-END-APPARATUS.json","examples/sri_lanka_pre_1948/09_output/run40_storytelling_appendix.md"]}],
   "side_story_assignments":[
     {"id":"SS-R40-SCALPEL-OBJECT-001","kind":"object_focus","target_arc":"A04_chola_interlude_and_polonnaruwa"},
     {"id":"SS-R40-EPIDEMIC-FALSE-LEAD-001","kind":"false_lead","target_arc":"A04_chola_interlude_and_polonnaruwa"},
@@ -27,23 +22,7 @@
     {"id":"SS-R40-MING-KOTTE-001","kind":"also","target_arc":"A05c_gampola_kotte_sitawaka_transition"},
     {"id":"SS-R40-VIJAYANAGARA-COMP-001","kind":"comparator","target_arc":"A05b_dry_zone_collapse_and_mobile_capitals"}
   ],
-  "composition_policy":{
-    "placement":"explicit book-end apparatus after 'Légende des encadrés'",
-    "reason":"direct user request to insert at the end",
-    "contract_reconciliation":"The storytelling skill forbids an end gallery unless an apparatus is explicitly defined; Run40 therefore uses class=apparatus and records the exception in reader_scaffold policy.",
-    "frontstage_metadata":"machine claim/run/HIL identifiers remain inside JSON lineage and must not render into prose"
-  },
-  "evidence_policy":{
-    "no_claim_promotion":"Run40 is a storytelling/composition run, not a claim-promotion run.",
-    "museum_ceiling":"Colombo National Museum panels remain T2 institutional synthesis.",
-    "weak_links":"Mamluk embassy details, exact Vijayanagara-Jaffna vassalage chronology and Ming intervention chronology remain bounded by the source limitations in the side-story records.",
-    "epidemic":"Retained as false lead / possible amplifier, not promoted as primary cause of Polonnaruwa decline."
-  },
-  "qa_expected":[
-    "side_story_contract validates schema 1.2 kinds/status/lineage",
-    "reader scaffold resolves the explicit end apparatus anchor",
-    "frontstage does not leak claim/run/HIL identifiers",
-    "no evidence state is upgraded by composition"
-  ],
-  "status":"branch_ready_for_ci_and_materialization"
+  "composition_policy":{"placement":"deterministic end-of-reader appendix injected by render_composed_reader.py","contract_reconciliation":"Typed side-story records remain candidate/non-required; frontstage prose is appended separately so composition does not imply evidentiary promotion.","frontstage_metadata":"claim/run/HIL identifiers remain backstage and do not render in prose"},
+  "evidence_policy":{"no_claim_promotion":"Run40 is a storytelling/composition run, not a claim-promotion run.","museum_ceiling":"Colombo National Museum panels remain T2 specialist institutional anchors.","weak_links":"Exact Vijayanagara-Jaffna suzerainty chronology, the primary Mamluk text and the Aryacakravarti institutional transition remain open research workstreams.","epidemic":"Retained as false lead / possible amplifier, not primary cause of Polonnaruwa decline."},
+  "status":"qa_pending"
 }
