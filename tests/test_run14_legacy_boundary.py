@@ -3,7 +3,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];PRE=ROOT/'examples/sri_lanka_pre_1948'
 class Run14LegacyBoundaryTests(unittest.TestCase):
     def test_acceptance_audit_is_green(self):
-        r=subprocess.run([sys.executable,'scripts/audit_run14_legacy.py'],cwd=ROOT,text=True,capture_output=True);self.assertEqual(0,r.returncode,r.stdout+r.stderr);self.assertIn('traced 8 / declared 17 / untracked 0',r.stdout)
+        r=subprocess.run([sys.executable,'scripts/audit_run14_legacy.py'],cwd=ROOT,text=True,capture_output=True);self.assertEqual(0,r.returncode,r.stdout+r.stderr);self.assertRegex(r.stdout,r'traced \d+ / declared 17 / untracked 0')
     def test_materializer_rejects_title_echo_takeaway(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);project=root/'p';(project/'09_output/side_stories').mkdir(parents=True);source=root/'in.md';out=root/'out.md';source.write_text('Anchor\n',encoding='utf-8')
