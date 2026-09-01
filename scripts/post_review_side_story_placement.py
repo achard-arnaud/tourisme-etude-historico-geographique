@@ -178,6 +178,15 @@ def _looks_like_reader_heading(block: str, anchor: str) -> bool:
     )
 
 
+def _is_major_standalone_heading(block: str) -> bool:
+    """Recognize imported DOCX chapter/part headings that have no Markdown # level."""
+    s = block.strip()
+    if not s or len(s.splitlines()) > 2:
+        return False
+    plain = _plain(s)
+    return bool(re.match(r"^(?:chapitre\s+\d+\b|partie\s+[ivxlcdm]+\b)", plain, re.I)) and _visible_words(plain) <= 28
+
+
 def _find_section_range(blocks: list[str], anchor: str) -> tuple[int, int]:
     needle = _norm(anchor)
     hits = [i for i, b in enumerate(blocks) if needle and needle in _norm(b)]
@@ -187,6 +196,15 @@ def _find_section_range(blocks: list[str], anchor: str) -> tuple[int, int]:
     hit = explicit[-1] if explicit else hits[-1]
     start = hit
     level = _heading_level(blocks[start])
+    # Imported full readers retain chapter/part headings as bold standalone blocks while
+    # their internal subheads use Markdown ##/###. Do not backtrack such an anchor to
+    # the previous Markdown subhead: its host paragraphs live *after* the standalone block.
+    if level is None and _is_major_standalone_heading(blocks[start]):
+        end = next(
+            (i for i in range(start + 1, len(blocks)) if _is_major_standalone_heading(blocks[i])),
+            len(blocks),
+        )
+        return start, end
     if level is None:
         heading = next(
             (i for i in range(start, -1, -1) if _heading_level(blocks[i]) is not None),
