@@ -1,0 +1,41 @@
+# Intake — Polonnaruwa, médecine monastique et hypothèse épidémique
+
+- intake_id: `I-R39-CNM-MEDICINE`
+- supplied_on: `2026-09-01`
+- intake_kind: `field_intake_bundle`
+- source_context: Colombo National Museum, gallery panel on medicine and hospital organisation during the Polonnaruwa period
+- preservation: user field observation + bounded transcription/synthesis
+- evidentiary_ceiling: museum panel is T2 institutional synthesis; chronicle statements and causal claims require independent corroboration
+
+## User observation / research direction
+Relier le panneau médical de Polonnaruwa à l’hypothèse antérieure d’un crépuscule lié aux épidémies, en testant explicitement si cette piste tient. Relier aussi l’hôpital monastique au rôle plus large des moines comme institutions de savoir et au rayonnement international de l’île, avec le parallèle déjà esquissé avec Oxford.
+
+## Field panel content preserved
+The panel identifies a monastic hospital at Alahana Parivena and describes residential hospitals for clergy and laity, maternity/outdoor dispensary and veterinary care, medical and surgical instruments, convalescence/rehabilitation, attached toilets, urinals, bathing rooms and water-management/sanitary features. It quotes the *Cūḷavaṃsa* portraying Parākramabāhu as supervising physicians, testing treatment and demonstrating the use of instruments.
+
+## Hypothesis to discriminate
+Earlier lead: epidemic disease, especially malaria, might have materially contributed to the decline/abandonment of Polonnaruwa.
+
+### Current bounded result
+- The hospital and sanitation evidence shows institutional medical capacity; it does **not** prove that epidemics were absent.
+- A malaria/vector ecology mechanism is biologically plausible in irrigated landscapes, but direct evidence that epidemic disease was a primary driver of Polonnaruwa’s political collapse remains weak/speculative.
+- Therefore the strong chain `epidemic → depopulation → fall of Polonnaruwa` must not be promoted as a principal causal explanation without discriminating evidence.
+- Better-documented political, dynastic, military and territorial mechanisms remain primary in the current causal model.
+
+## Bridge candidate — monastery as knowledge infrastructure
+Alahana Parivena makes the multi-functionality of the Saṅgha visible: religious residence, discipline, teaching, knowledge transmission, medical care and royal patronage overlap institutionally.
+
+## Analogy candidate — Oxford
+The comparison is functional and chronological, not institutional equivalence. Oxford had teaching by the late eleventh/twelfth century and gradually became a corporate university; Sri Lankan *pirivena* remained institutions of the Saṅgha. The useful comparison is that both settings concentrated advanced learning and specialist knowledge within religiously structured institutions in the same broad period.
+
+## International dezoom
+Sri Lankan monastic institutions participated in networks extending across the Bay of Bengal and Southeast Asia. Monks, texts, ordination lineages and practices circulated between Lanka and polities in Myanmar and mainland Southeast Asia; this should be narrated as a network/hub, not as one-way civilizational export.
+
+## Candidate side story
+### The monk’s scalpel
+Start from a small surgical instrument in the museum. Dezoom to the hospital, then the *pirivena* as an institution of knowledge, then to Lanka’s transregional monastic networks. Return to the object: the scalpel is material evidence that the Saṅgha occupied parts of the social space later separated into religion, university, hospital and learned profession.
+
+## Guardrails
+- Absence of proof for a catastrophic epidemic is not proof that epidemics did not occur.
+- *Cūḷavaṃsa* praise of royal medical expertise is a court/chronicle representation and must be distinguished from archaeological material.
+- Oxford is an analytical comparison only; do not call medieval *pirivena* “universities” without qualification.
