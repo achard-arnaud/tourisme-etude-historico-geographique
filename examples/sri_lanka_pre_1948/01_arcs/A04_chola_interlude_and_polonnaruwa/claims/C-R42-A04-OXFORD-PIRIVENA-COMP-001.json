@@ -1,0 +1,12 @@
+{
+  "id":"C-R42-A04-OXFORD-PIRIVENA-COMP-001",
+  "type":"comparator",
+  "claim":"A bounded comparison with Oxford is chronologically legitimate at the functional level: teaching existed at Oxford by 1096 and its corporate university form emerged gradually, while twelfth-century Alahana Parivena was a large monastic educational complex that also contained organised medical facilities. The comparison concerns concentration of advanced learning within religiously structured institutions, not institutional descent or legal equivalence.",
+  "arc":"A04_chola_interlude_and_polonnaruwa",
+  "confidence":"B",
+  "zoom":"Z4",
+  "causal_role":"none",
+  "source_ids":["OXFORD-UNIVERSITY-HISTORY-1096","SAARC-NANAYAKKARA-ALAHANA-2026","CCF-POLONNARUWA-ALAHANA"],
+  "bounded_by":"Do not call Alahana Parivena a university in the medieval European corporate/legal sense, and do not imply influence between Sri Lanka and Oxford. The comparator transports only institutional function and broad chronology.",
+  "notes":"Closes the Run39 Oxford analogy candidate as a comparator rather than a historical transmission claim."
+}
