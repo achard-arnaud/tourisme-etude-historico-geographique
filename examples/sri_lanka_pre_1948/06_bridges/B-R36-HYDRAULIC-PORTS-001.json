@@ -1,0 +1,16 @@
+{
+  "id":"B-R36-HYDRAULIC-PORTS-001",
+  "from_claim":"C-R36-ANU-HYDRAULIC-001",
+  "to_claim":"C-R36-MANTAI-GATEWAY-001",
+  "question":"How could a dry-zone inland capital become deeply integrated into Indian Ocean exchange?",
+  "mechanism":"Engineered water storage supported dense settlement and agrarian production around Anuradhapura, while monastic and political institutions structured inland networks; the Malvatu Oya/Mantai corridor connected that inland system to a strategically placed north-western entrepôt serving Arabian Sea, Indian and Bay of Bengal circuits.",
+  "result":"A",
+  "source_ids":["ANTIQUITY-ANU-URBAN-DIASPORA-2015","ANTIQUITY-MANTAI-SPICE-RICE-2018","UCL-CROSSROADS-2017-R36"],
+  "transmission_channel":"water-managed agrarian hinterland → institutional/transport networks → north-west coastal gateway → multi-stage Indian Ocean exchange",
+  "time_lag":"long-duration system across the Early Historic and Middle Historic periods; individual infrastructures and trade intensities changed substantially over time",
+  "scale":"Z0 museum maps / observed landscape logic to Z2 inland polity and Z3 Indian Ocean system",
+  "confounders":["multiple ports besides Mantai","changing monsoon and political conditions","coastal cabotage and transshipment","local/monastic rather than purely royal water management","chronological compression in the museum maps"],
+  "transportability":"mechanism",
+  "integration_action":"bridge",
+  "bounded_by":"This bridge does not claim that irrigated surplus was the sole cause of maritime trade, that Mantai monopolized all exchange, or that the state centrally controlled the complete chain."
+}
