@@ -4,7 +4,7 @@
   "claim":"Anuradhapura developed in Sri Lanka's dry zone through a progressively enlarged water-management landscape that combined reservoirs, feeder canals and local cascade systems; archaeological syntheses place reservoir construction around the city from the fourth century BCE and major canal/reservoir expansion in the first millennium CE.",
   "confidence":"A",
   "zoom":"Z2",
-  "causal_role":"infrastructure",
+  "causal_role":"mechanism",
   "arc":"A02b_anuradhapura_hydraulic_order",
   "hil":"HIL-03_economy-infrastructure",
   "source_ids":["ANTIQUITY-ANU-URBAN-DIASPORA-2015"],
