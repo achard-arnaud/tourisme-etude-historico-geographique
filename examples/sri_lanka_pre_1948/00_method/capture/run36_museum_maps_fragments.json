@@ -1,0 +1,28 @@
+[
+  {
+    "id":"GF-R36-MAP-ANURADHAPURA-001",
+    "class":"field_fragment",
+    "kind":"cartographic_observation",
+    "status":"captured",
+    "captured_at":"2026-09-01",
+    "source_asset":"image-1788242536144.jpg",
+    "sha256":"14c47890e7cbc3994156728db633393841ee198a36e054e0269a5462f5c57ce8",
+    "observation":"Museum map titled Sri Lanka — Anuradhapura Period. Visible legend distinguishes canals, sub-capitals, monastery sites and ancient ports over rivers/topography. The map distributes political/religious sites mainly through the dry-zone lowlands and shows coastal gateways around the island.",
+    "interpretation":"Useful visual model of a coupled inland hydraulic/monastic/political network connected to maritime gateways; not evidence that all mapped sites were simultaneous or equally important.",
+    "promotes_to":["C-R36-ANU-HYDRAULIC-001","C-R36-MANTAI-GATEWAY-001"],
+    "epistemic_limit":"Modern museum cartography; independent archaeological sourcing required for historical claims."
+  },
+  {
+    "id":"GF-R36-MAP-TRADE-001",
+    "class":"field_fragment",
+    "kind":"cartographic_observation",
+    "status":"captured",
+    "captured_at":"2026-09-01",
+    "source_asset":"image-1788242788019.jpg",
+    "sha256":"b50791e3aa48be5d8ac6197c46d2cda310933f8fb7d8867816e1cb47bbb566e4",
+    "observation":"Museum panel titled TRADE / Ancient Sea Routes. Solid curves mark Major Sea Routes; dashed line marks Dhow Technology Zone; x-marked line marks Outrigger Technology Zone. Sri Lanka is placed near the route junction between western Indian Ocean, India, Bay of Bengal and Southeast Asia.",
+    "interpretation":"Strong as a dezoom illustration of Sri Lanka's geographic position within Indian Ocean circuits. Technology-zone lines are schematic and chronologically underspecified.",
+    "promotes_to":["C-R36-MANTAI-GATEWAY-001"],
+    "epistemic_limit":"Do not promote precise dhow/outrigger boundaries, chronology or exclusivity without specialist maritime-archaeology sources."
+  }
+]
