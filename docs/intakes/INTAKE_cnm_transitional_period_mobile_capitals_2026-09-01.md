@@ -88,6 +88,73 @@ The user supplied a web-derived synthesis claiming:
 **Mechanism:** northern sovereignty is embedded in South Indian military, religious and commercial networks while still participating in island-wide rivalry.
 **Bridge:** Jaffna/Mannar/perles/chevaux ↔ Vijayanagara/Pāṇḍya worlds ↔ Kotte.
 
+## Indirect intake — Chola decline, Pandya decline and rise of Vijayanagara
+
+### Question
+How should the long South-Indian sequence `decline of Chola power → Pandyan resurgence → Pandyan fragmentation and Delhi Sultanate invasions → rise of Vijayanagara` be connected to Sri Lanka, especially Jaffna/Mannar? Was Vijayanagara mainly an annexationist threat to the island, or does the period make more sense as a phase of intensified mercantile integration?
+
+### Preliminary synthesis
+The correct name is **Vijayanagara**. It is misleading to describe its rise simply as a “reunification of South India”. Vijayanagara, founded in the fourteenth century, became the largest imperial overlordship of much of southern India, but rule remained layered through local chiefs, nayakas, temple institutions and tributary relationships. Tamil country became increasingly subordinated to rulers and military elites whose political core lay farther north in the Deccan/southern peninsula.
+
+The chronology is not one clean succession:
+- Chola imperial power erodes in the twelfth–thirteenth centuries and disappears as an independent dynasty in the later thirteenth century.
+- The Pandyas become the dominant Tamil power in the thirteenth century and project power into Sri Lanka, including through Arya Cakravarti intervention.
+- Pandyan succession conflict and the Khalji/Tughluq military incursions from Delhi in the early fourteenth century fracture the old political order.
+- Vijayanagara emerges from the mid-fourteenth century as a new military-fiscal imperial formation, in competition with Deccan sultanates and with ambitions to control southern tributaries and strategic corridors.
+
+### Key correction: political turmoil did not imply commercial closure
+This is a strong candidate bridge. Karashima and Subbarayalu explicitly note that the thirteenth–fourteenth centuries were politically turbulent while **foreign trade remained vigorous**. Cambridge economic histories likewise describe long-term growth in commodity production, monetisation, ports and customs revenues. Vijayanagara rulers actively encouraged overseas trade because horses, weapons, specialists and customs income were strategic resources.
+
+So the useful opposition is not `imperial collapse OR mercantile opening`; it is often **imperial restructuring THROUGH a more commercialised political economy**.
+
+### Jaffna / Mannar implications
+1. **Jaffna gains from the breakdown of a single Tamil imperial centre.** The weakening of Pāṇḍya authority opens political space for Aryacakravarti rulers to consolidate a northern Lankan kingdom while maintaining dense links with the Tamil coast.
+2. **Mannar becomes more, not less, strategic.** Pearl fisheries, elephants, horses and the Palk–Mannar crossing connect Jaffna to South-Indian and western Indian Ocean networks. Control of these rents matters to both island polities and external overlords.
+3. **Vijayanagara pressure is best modelled first as suzerainty/tribute and strategic influence, not proven project of full annexation.** Claims of tribute and expeditions toward Lanka/Jaffna exist, but the evidence does not support a simple continuous Vijayanagara plan to incorporate the whole island territorially.
+4. **Jaffna can simultaneously be politically subordinate and commercially autonomous.** Tributary status did not necessarily mean direct provincial administration; the kingdom could remain a local intermediary controlling access to fisheries, elephants and cross-strait routes.
+
+### Hypotheses to discriminate
+#### H1 — Territorial annexation
+Vijayanagara sought direct incorporation of Jaffna/Sri Lanka as imperial territory.
+- Prediction: sustained garrisons, direct administration, systematic appointment of provincial officers, or repeated conquest campaigns aimed at permanent occupation.
+- Current status: weak / not established for the island as a whole.
+
+#### H2 — Tributary strategic perimeter
+Vijayanagara sought acknowledgement of overlordship, tribute and security of the southern maritime flank without bearing the cost of direct administration.
+- Prediction: tribute claims, court titles, military interventions when allegiance breaks, continued local dynastic rule.
+- Current status: substantially more plausible; episode-level proof still needed.
+
+#### H3 — Commercial-military network
+The principal strategic interest was access to Indian Ocean resources and routes: horses, ports, customs, pearls, elephants and merchant networks.
+- Prediction: rulers protect ports/traders, seek customs revenue, value coastal corridors and rely on merchant intermediaries even amid political conflict.
+- Current status: strongly supported as a structural mechanism, but should not be made exclusive of dynastic/territorial ambition.
+
+### Narrative thread T9 — Empires fall; the sea does not close
+**Scene:** the Cholas disappear, the Pandyas implode, armies from Delhi reach the deep south.
+**Expected story:** trade should collapse.
+**Actual mechanism:** merchant networks, ports and commodity production continue; political powers increasingly compete to tax and secure them.
+**Bridge to Lanka:** across a few dozen kilometres of water, Jaffna and Mannar become valuable precisely because they sit inside this commercial-military system.
+**Return:** when Vijayanagara later claims suzerainty over Jaffna, the question is not merely “who owns the peninsula?” but “who controls a gate between the Coromandel/Tamil coast, Mannar fisheries and the wider Indian Ocean?”
+
+### Narrative thread T10 — From Pandyan commander to Jaffna dynasty
+**Scene:** an Arya Cakravarti appears in the Pandyan attack on Yapahuwa.
+**Question:** how does a title/office connected to the Pandyan sphere become associated with a durable northern Lankan dynasty?
+**Mechanism to research:** collapse of Pandyan central authority + control of cross-strait rents + military networks + local institutionalisation.
+**Potential payoff:** this is the missing bridge between “South Indian invasion” and “Jaffna as an indigenous regional state”.
+
+### Research sources already identified
+- N. Karashima & Y. Subbarayalu, *The Emergence of the Periyanadu Assembly in South India during the Chola and Pandyan Periods*, International Journal of Asian Studies, 2004.
+- Burton Stein, chapters on South India and Vijayanagara in *The Cambridge Economic History of India*.
+- Philippe Beaujard, *The Worlds of the Indian Ocean*, chapter on Vijayanagara and regional states.
+- Catherine B. Asher & Cynthia Talbot, *India Before Europe*, chapter on Southern India in the Age of Vijayanagara.
+- S. Pathmanathan, *The Kingdom of Jaffna*, for Aryacakravarti and Vijayanagara/Jaffna relations, to be cross-checked against inscriptional evidence.
+
+### Guardrails
+- Avoid “Hindu reunification against Muslims” as a master explanation: Vijayanagara’s rise belongs to a more complex Deccan military, fiscal and political reordering, and its court culture also incorporated Islamicate forms.
+- Avoid equating suzerainty with annexation.
+- Avoid treating political fragmentation as commercial collapse.
+- Avoid treating Jaffna as merely an offshore extension of Tamil dynasties; test how external titles/networks were localised into a durable Lankan polity.
+
 ## Epistemic guardrails
 - Do not treat “Transitional Period” as a neutral natural periodisation; it is a retrospective historiographic label organised around Polonnaruwa/Kandy.
 - Do not describe every capital change as flight. Different moves combine defence, succession, sacred legitimacy, wet-zone agrarian adaptation and access to trade revenues.
