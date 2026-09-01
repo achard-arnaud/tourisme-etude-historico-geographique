@@ -1,58 +1,14 @@
 [
   {
-    "id":"ANTIQUITY-MANTAI-SPICE-RICE-2018",
-    "title":"Spice and rice: pepper, cloves and everyday cereal foods at the ancient port of Mantai, Sri Lanka",
-    "url":"https://www.cambridge.org/core/journals/antiquity/article/spice-and-rice-pepper-cloves-and-everyday-cereal-foods-at-the-ancient-port-of-mantai-sri-lanka/57A710C9438E73D78C21494A9E99A1E7",
-    "tier":"T1",
-    "anchor_role":"canonical anchor",
-    "date":"2018",
-    "author_or_institution":"E. Kingwell-Banham et al. / Antiquity / Cambridge University Press",
-    "author_institution":"Antiquity / Cambridge University Press",
-    "scope":"Mantai chronology, archaeobotany, imported ceramics and role as a gateway between the Anuradhapura interior and Indian Ocean exchange",
-    "claims_supported":["C-R36-MANTAI-GATEWAY-001","C-R36-MANTAI-IMPORTS-001"],
-    "limitations":"Site- and excavation-specific evidence; the inferred ancient Malvatu Oya channel and river traffic remain reconstruction rather than direct continuous-route proof.",
-    "provenance":"direct"
+    "id":"ANTIQUITY-MANTAI-SPICE-RICE-2018","title":"Spice and rice: pepper, cloves and everyday cereal foods at the ancient port of Mantai, Sri Lanka","url":"https://www.cambridge.org/core/journals/antiquity/article/spice-and-rice-pepper-cloves-and-everyday-cereal-foods-at-the-ancient-port-of-mantai-sri-lanka/57A710C9438E73D78C21494A9E99A1E7","tier":"T1","anchor_role":"canonical anchor","date":"2018","author_or_institution":"E. Kingwell-Banham et al. / Antiquity / Cambridge University Press","author_institution":"Antiquity / Cambridge University Press","scope":"Mantai chronology, archaeobotany, imported ceramics and role as a gateway between the Anuradhapura interior and Indian Ocean exchange","claims_supported":["C-R36-MANTAI-GATEWAY-001","C-R36-MANTAI-IMPORTS-001"],"limitations":"Site- and excavation-specific evidence; the inferred ancient Malvatu Oya channel and river traffic remain reconstruction rather than direct continuous-route proof.","provenance":"direct"
   },
   {
-    "id":"ANTIQUITY-ANU-URBAN-DIASPORA-2015",
-    "title":"From ‘collapse’ to urban diaspora: the transformation of low-density, dispersed agrarian urbanism",
-    "url":"https://www.cambridge.org/core/journals/antiquity/article/from-collapse-to-urban-diaspora-the-transformation-of-lowdensity-dispersed-agrarian-urbanism/C45D2E0100EE96899B50D07850EDD898",
-    "tier":"T1",
-    "anchor_role":"canonical anchor",
-    "date":"2015",
-    "author_or_institution":"L. J. Lucero et al. / Antiquity / Cambridge University Press",
-    "author_institution":"Antiquity / Cambridge University Press",
-    "scope":"Anuradhapura low-density urbanism, dry-zone water storage, reservoirs, feeder canals and transformation after the eleventh century",
-    "claims_supported":["C-R36-ANU-HYDRAULIC-001"],
-    "limitations":"Comparative urbanism paper; hydraulic development is summarized from broader Anuradhapura research and should not be read as a single centralized state-control model.",
-    "provenance":"direct"
+    "id":"ANTIQUITY-ANU-URBAN-DIASPORA-2015","title":"From ‘collapse’ to urban diaspora: the transformation of low-density, dispersed agrarian urbanism","url":"https://www.cambridge.org/core/journals/antiquity/article/from-collapse-to-urban-diaspora-the-transformation-of-lowdensity-dispersed-agrarian-urbanism/C45D2E0100EE96899B50D07850EDD898","tier":"T1","anchor_role":"canonical anchor","date":"2015","author_or_institution":"L. J. Lucero et al. / Antiquity / Cambridge University Press","author_institution":"Antiquity / Cambridge University Press","scope":"Anuradhapura low-density urbanism, dry-zone water storage, reservoirs, feeder canals and transformation after the eleventh century","claims_supported":["C-R36-ANU-HYDRAULIC-001"],"limitations":"Comparative urbanism paper; hydraulic development is summarized from broader Anuradhapura research and should not be read as a single centralized state-control model.","provenance":"direct"
   },
   {
-    "id":"ANTIQUITY-ANU-THEOCRACY-2007",
-    "title":"The state of theocracy: defining an early medieval hinterland in Sri Lanka",
-    "url":"https://www.cambridge.org/core/journals/antiquity/article/abs/state-of-theocracy-defining-an-early-medieval-hinterland-in-sri-lanka/5E754767B312053AE1458D45051682E0",
-    "tier":"T1",
-    "anchor_role":"canonical anchor",
-    "date":"2007",
-    "author_or_institution":"Robin Coningham et al. / Antiquity / Cambridge University Press",
-    "author_institution":"Antiquity / Cambridge University Press",
-    "scope":"Archaeological survey of Anuradhapura hinterland and prominence of monastic sites in the urban-period landscape",
-    "claims_supported":["C-R36-ANU-MONASTIC-HINTERLAND-001"],
-    "limitations":"Interpretive model of hinterland administration has been refined in later work; monasteries should not be treated as the sole political or economic authority.",
-    "provenance":"direct"
+    "id":"ANTIQUITY-ANU-THEOCRACY-2007","title":"The state of theocracy: defining an early medieval hinterland in Sri Lanka","url":"https://www.cambridge.org/core/journals/antiquity/article/abs/state-of-theocracy-defining-an-early-medieval-hinterland-in-sri-lanka/5E754767B312053AE1458D45051682E0","tier":"T1","anchor_role":"canonical anchor","date":"2007","author_or_institution":"Robin Coningham et al. / Antiquity / Cambridge University Press","author_institution":"Antiquity / Cambridge University Press","scope":"Archaeological survey of Anuradhapura hinterland and prominence of monastic sites in the urban-period landscape","claims_supported":["C-R36-ANU-MONASTIC-HINTERLAND-001"],"limitations":"Interpretive model of hinterland administration has been refined in later work; monasteries should not be treated as the sole political or economic authority.","provenance":"direct"
   },
   {
-    "id":"UCL-CROSSROADS-2017-R36",
-    "title":"Sri Lanka at the Crossroads of History",
-    "url":"https://discovery.ucl.ac.uk/id/eprint/1557938/1/Sri-Lanka-at-the-Crossroads-of-History.pdf",
-    "tier":"T1",
-    "anchor_role":"corroborating synthesis",
-    "date":"2017",
-    "author_or_institution":"Zoltán Biedermann and Alan Strathern (eds.) / UCL Press",
-    "author_institution":"UCL Press",
-    "scope":"Archaeology, cosmopolitanism, monastic administration and Indian Ocean connectivity in Sri Lankan history",
-    "claims_supported":["C-R36-ANU-MONASTIC-HINTERLAND-001","C-R36-MANTAI-GATEWAY-001"],
-    "limitations":"Edited scholarly synthesis; individual propositions should be tied to the cited archaeological chapters and datasets where possible.",
-    "provenance":"direct"
+    "id":"UCL-CROSSROADS-2017-R36","title":"Sri Lanka at the Crossroads of History","url":"https://discovery.ucl.ac.uk/id/eprint/1557938/1/Sri-Lanka-at-the-Crossroads-of-History.pdf","tier":"T1","anchor_role":"corroborating bridge","date":"2017","author_or_institution":"Zoltán Biedermann and Alan Strathern (eds.) / UCL Press","author_institution":"UCL Press","scope":"Archaeology, cosmopolitanism, monastic administration and Indian Ocean connectivity in Sri Lankan history","claims_supported":["C-R36-ANU-MONASTIC-HINTERLAND-001","C-R36-MANTAI-GATEWAY-001"],"limitations":"Edited scholarly synthesis; individual propositions should be tied to the cited archaeological chapters and datasets where possible.","provenance":"direct"
   }
 ]
