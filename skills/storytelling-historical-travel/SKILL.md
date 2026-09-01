@@ -9,7 +9,7 @@ This file is an **orchestrator**, not a prose prompt. Executable contracts win o
 
 ## Core architecture — one composition engine, two bootstraps
 
-Run32 removed the false split between an “iterative writer” and a “from-scratch writer”. Run41 fixes the editing order: **the chronological core is drafted and reread before new side stories are placed**. A side story is therefore a post-review editorial stitch, not a section appended after the book and not material that competes with the core during first drafting.
+Run32 removed the false split between an “iterative writer” and a “from-scratch writer”. Run41 fixes the editing order: **the chronological core is drafted and reread before new side stories are placed**. The default placement is now explicit: **a side story lives inside the logical paragraph that needs it**, at a safe sentence boundary after its trigger. Inter-paragraph placement is a density/structure fallback, not the normal case.
 
 ### Shared composition layers — mandatory order
 
@@ -40,32 +40,37 @@ Run32 removed the false split between an “iterative writer” and a “from-sc
    - run paragraph factual, HIL/scope and style review on the core without new side stories;
    - repair weak transitions, chronology and causal overload;
    - freeze this reviewed core as the placement substrate;
-   - a side-story materializer must never be used to hide a weak core transition that should have been repaired here.
+   - a side story must never hide a weak core transition that should have been repaired here.
 
 6. **Qualify and repair side stories**
    - recover the richest relevant source/field fragments before compressing them into a side story;
-   - use the type profile in `templates/side-stories/type_profiles.json`;
+   - use `templates/side-stories/type_profiles.json` for type-specific length, structure and storytelling rules;
    - reject a title + takeaway shell when richer material exists;
    - `candidate` is an evidence status, not a reader ban: a museum-origin candidate independently corroborated by another source may be reader-eligible while remaining `candidate`.
 
-7. **Post-review side-story placement and stitching**
-   - place each eligible story beside the **reviewed paragraph that gives it chronological or causal meaning**, or between the two paragraphs it connects;
-   - placement is a paragraph-boundary operation: never split a sentence or a table cell;
-   - prefer the paragraph containing the strongest direct event/mechanism match; use the surrounding section only as a search envelope;
-   - apply a strong density penalty if the previous, current or following paragraph already contains a side story; do not create a wall of boxes;
-   - if several placements are historically equivalent, prefer the **longer source-attested paragraph/fragment**, because it provides a safer callback and reduces content loss;
-   - a story may be moved one or more paragraph boundaries away to avoid overload, but never across a chronological rupture that changes its meaning;
-   - no automatic book-end side-story gallery and no fallback to “append at end”. Failure to find a valid local stitch is a QA failure, not permission to append.
+7. **Post-review side-story placement — host paragraph first**
+   - resolve the **reviewed host paragraph** whose event, object, inference or mechanism makes the story necessary;
+   - default to `embedded_in_host_paragraph`: choose a safe sentence boundary after the trigger, preserve meaningful prose before and after, then visually insert the side-story block between the two segments of the same logical paragraph;
+   - never split a sentence, quotation, table cell or atomic list item;
+   - maximum **one embedded side story per host paragraph**;
+   - when several stories compete for one host, keep embedded the one most dependent on that paragraph; reroute the others to a semantically equivalent paragraph or to a valid local interstitial boundary;
+   - apply the **three-paragraph density rule**: if previous/current/next paragraphs would each contain an embedded side story, keep two inside their paragraphs and move the story most naturally autonomous/interstitial to one boundary between paragraphs;
+   - choose the interstitial story first by the type's `interstitial_affinity`, then by transition fit and chronological coherence; density never authorizes deletion;
+   - maximum **one interstitial side story per boundary**;
+   - if a host is unsplittable, use a local interstitial fallback rather than breaking sentence integrity;
+   - paragraph/fragment length is only a tie-breaker after semantic and chronological equivalence;
+   - never append an unresolved story at book end and never move one across a chronological rupture merely for layout.
 
-8. **Local continuity reread**
-   - reread the paragraph before the story, the story, and the paragraph after it as one unit;
-   - verify that the departure is motivated, the return is explicit or naturally resumed, chronology remains legible and the story did not duplicate adjacent prose;
-   - if the story overloads the section, relocate it to the next valid low-density boundary rather than deleting source-attested content.
+8. **Local continuity reread after stitching**
+   - reread: preceding paragraph → first segment of host paragraph → side story → resumed host paragraph → following paragraph;
+   - verify that the trigger precedes the excursion, the resumed sentence flow is grammatical, chronology remains legible, and the story does not duplicate adjacent prose;
+   - for an interstitial density fallback, reread both adjacent paragraphs and confirm that the story genuinely bridges or pauses between them rather than merely occupying spare space;
+   - a failed local stitch is repaired or relocated; sourced content is not silently dropped.
 
 9. **Frontstage / export**
    - reader prose contains simple source citations;
    - `[claim:<id>]`, bridge IDs, machine HIL identifiers, run IDs and lineage remain backstage;
-   - a separate ledger binds paragraphs and side stories to claims/sources and records the chosen placement.
+   - a separate placement ledger binds paragraph/side-story/source lineage and records host paragraph, sentence split or interstitial boundary, density decision and fallback reason.
 
 ### The only mode-specific layer: bootstrap
 
@@ -93,7 +98,7 @@ Compatibility:
 
 Supported reader profiles remain **advanced**, **intermediate** and **child**. The reader plan selects one profile and controls presentation, never evidence strength.
 
-For advanced work there is **no maximum length**. Use the content-preservation gate and explicit dispositions instead of compression by budget. Intermediate and child modes may simplify structure and vocabulary, but they may not silently delete required evidence or uncertainty.
+For advanced work there is **no maximum manuscript length**. Side-story type profiles use a hard minimum, a normal target range and a **soft upper review threshold**. Crossing the soft upper threshold triggers splitting, promotion into the trunk or retyping; it never authorizes truncation of sourced matter.
 
 The reader plan, paragraph review state and Sarah-voice review remain deterministic inputs to composition QA. A profile changes exposition; it does not authorize invented dialogue, motives, source inflation or claim loss.
 
@@ -117,11 +122,11 @@ Never turn a short claim into the maximum amount of prose available. A short cla
 
 `story_scaffold.json` is the evidence/graph topology. `reader_scaffold.json` is the narrative topology. They are not interchangeable.
 
-- `reader_scaffold.json` controls reader order and section search envelopes.
-- `story_scaffold.json` helps retrieval and cross-arc coverage.
+- `reader_scaffold.json` controls reader order and the search envelope for the host paragraph;
+- `story_scaffold.json` helps retrieval and cross-arc coverage;
 - an evidence arc may map into several reader sections;
 - several evidence arcs may be narrated in one chronological reader chapter;
-- `placement.section_anchor` narrows the search, but the final insertion point is a **reviewed paragraph boundary selected after the core reread**, not automatically the heading itself.
+- `placement.section_anchor` narrows the search, but final placement resolves to a **reviewed host paragraph plus a sentence boundary**; only the density/unsplittable fallback resolves to an inter-paragraph boundary.
 
 ## Side stories — evidence state versus reader eligibility
 
@@ -142,27 +147,42 @@ A side story may remain `candidate` and still be forced into the reader-placemen
 - a substantial `content.body_markdown` or structured analytical body exists;
 - `reader_eligibility.basis = museum_plus_independent_corroboration` and `forced_pipeline = true` are recorded.
 
-This path **does not promote the underlying claim**. It recognizes that a side story can be a bounded narrative object with a lower evidential threshold than a causal spine claim.
+This path **does not promote the underlying claim**. It recognizes that a side story can be a bounded narrative object with a lower evidential threshold than a causal-spine claim.
 
 ## Type profiles and anti-loss rule
 
-The executable/editorial profile for each kind lives in `templates/side-stories/type_profiles.json`. Profiles were retro-analysed from the repository’s actual stories, including rich and degraded examples.
+The executable/editorial profile for each kind lives in `templates/side-stories/type_profiles.json`. Each profile now defines:
 
-The anti-loss rule is mandatory: if an intake or capture contains a richer fragment than the side-story body, the disposition must say why the omitted material is redundant, out of scope or evidentially unsafe. Metadata fields such as `purpose`, `takeaway`, `zoom_excursion`, `analysis` or `payoff` **do not count as narrative conservation** when reader-facing prose is missing.
+- narrative job;
+- mandatory beats;
+- differentiated storytelling rules;
+- hard minimum visible words;
+- normal target range;
+- soft upper review threshold;
+- default embedded position;
+- interstitial affinity for density arbitration.
+
+The anti-loss rule is mandatory: if an intake or capture contains a richer fragment than the side-story body, the disposition must say why omitted material is redundant, out of scope or evidentially unsafe. Metadata fields such as `purpose`, `takeaway`, `zoom_excursion`, `analysis` or `payoff` **do not count as narrative conservation** when reader-facing prose is missing.
 
 ## Placement algorithm contract
 
-The post-review planner may use explicit `placement.match_terms`, chronology, claim/bridge text and section headings to rank paragraph boundaries. Scoring must preserve this priority:
+The post-review planner may use explicit `placement.match_terms`, chronology, claim/bridge text and section headings to rank host paragraphs. Priority is:
 
-1. exact event/mechanism match;
+1. exact event/object/mechanism match;
 2. chronological compatibility;
 3. causal/bridge match;
-4. absence of a side story in the previous/current/next paragraph;
-5. paragraph/fragment richness as fallback tie-breaker.
+4. type-specific paragraph dependence and availability of a safe sentence split;
+5. density contract;
+6. paragraph/fragment richness as final tie-breaker.
 
-A long paragraph never outranks a clearly better chronological or causal match; length is a **fallback**, not the primary semantic signal.
-
-Every automatic placement produces a ledger entry containing chosen boundary, nearby paragraph excerpt, score/reason, density penalty and whether the longest-fragment fallback was used. Human-specified exact placements may bypass scoring but still require local continuity QA.
+The planner must emit a ledger entry with:
+- host paragraph excerpt/ordinal;
+- placement mode `embedded` or `interstitial`;
+- sentence split position when embedded;
+- semantic/chronological/mechanism matches;
+- same-host and three-paragraph density decisions;
+- interstitial-affinity comparison when a story is displaced;
+- whether the longest-fragment fallback was used.
 
 ## Claims and sources in the final reader
 
@@ -179,9 +199,12 @@ Every final eligible historical unit gets one disposition: `included`, `included
 Do not export final if:
 - reader scaffold order is violated;
 - an iterative run silently drops baseline material;
-- an eligible new side story has no valid chronological/causal paragraph stitch;
+- an eligible new side story has no valid host paragraph or local interstitial fallback;
+- more than one side story is embedded in the same logical paragraph;
+- three consecutive paragraphs all retain embedded side stories instead of applying the density fallback;
+- more than one interstitial story occupies the same paragraph boundary;
 - an automatic placement falls back to the end of the book;
-- adjacent side stories create avoidable paragraph-level overload when another valid boundary exists;
+- a sentence/table/list atom is split to make room for a story;
 - a new side story is only a title/takeaway while richer source material exists;
 - a museum-derived reader-eligible candidate lacks independent corroboration or an explicit uncertainty boundary;
 - claim/bridge/run metadata or machine HIL identifiers leak into frontstage;
@@ -195,7 +218,8 @@ Do not export final if:
 - `scripts/import_reader_scaffold.py`
 - `scripts/build_drafting_packets.py`
 - `scripts/build_from_scratch_packets.py`
-- `scripts/materialize_side_stories.py`
+- `scripts/post_review_side_story_placement.py`
+- `scripts/materialize_side_stories.py` (legacy/direct materialization compatibility)
 - `scripts/side_story_contract.py`
 - `scripts/paragraph_review_gate.py`
 - `scripts/paragraph_repair_loop.py`
