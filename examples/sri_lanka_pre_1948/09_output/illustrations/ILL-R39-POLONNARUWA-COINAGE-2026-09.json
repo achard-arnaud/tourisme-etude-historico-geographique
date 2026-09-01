@@ -1,0 +1,17 @@
+[
+  {
+    "schema_version":"1.0",
+    "class":"illustration",
+    "id":"ILL-R39-POLONNARUWA-COINAGE-01",
+    "status":"candidate",
+    "source":{"kind":"field_photo","asset_ref":"image-1788247526182.jpg","sha256":"63c3e730c7dee64e1911ff239f86d01add1618938bcd8694936ae35d40048924","captured_at":"2026-09-01","location":"Colombo National Museum, Sri Lanka","creator":"user","rights":"user_supplied","binary_status":"external_only","sha256_status":"verified_at_intake"},
+    "input_refs":[{"type":"intake","id":"I-R39-POLONNARUWA-MONEY","path":"docs/intakes/INTAKE_polonnaruwa_monetary_debasement_2026-09-01.md"}],
+    "depiction":{"subject":"Museum panel with Dharmasokadeva copper coin dated 1208 CE and text on Polonnaruwa coinage","event_or_theme":"monetary debasement and royal coinage in late Polonnaruwa","evidence_status":"observed_caption","textual_layer":"local_temple","period":"Polonnaruwa period; museum panel photographed 2026","notes":"The panel explicitly links Kahapana/Masu terminology to depreciation and describes copper/base-metal issues, silver wash and continued circulation of earlier gold and foreign coins."},
+    "vision_review":{"status":"reviewed","confidence":"high","caption_transcription":"Dharmasokadeva (1208 AD) - Copper","visual_notes":"Two sides of the coin are shown above a trilingual museum text; English text is legible enough to preserve as field observation.","uncertainty":"The panel's causal interpretation of depreciation is a museum synthesis and must be independently tested."},
+    "tag_review":{"status":"approved","trigger":"manual","notes":"Tagged to A04 monetary-stress thread; no stronger collapse causality inferred from image alone."},
+    "human_review":{"status":"pending","reviewed_at":null,"notes":"User supplied the image and requested integration; reader-facing placement still follows project human-review gate."},
+    "fragment":{"caption":"À la fin de Polonnaruwa, la monnaie royale raconte elle aussi un changement de régime matériel : le panneau montre un massa de cuivre de Dharmasokadeva (1208) et décrit la progression des émissions de métal vil.","what_it_shows":"A museum synthesis of late-Polonnaruwa coinage with a 1208 copper issue.","why_here":"Provides a concrete field object for the monetary-stress question and links numismatics to the wider collapse debate.","limits":"The photograph documents the museum's synthesis; it does not by itself establish fiscal crisis, inflation or causal responsibility for the end of Polonnaruwa."},
+    "placement":{"arc_ref":"A04_chola_interlude_and_polonnaruwa","subsection_ref":"late-polonnaruwa-monetary-stress","section_anchor":"","target_status":"proposed_missing","relevance_rank":1},
+    "render":{"marker":"[ILLUSTRATION:ILL-R39-POLONNARUWA-COINAGE-01]","required_in_reader":false,"caption_only_allowed":true}
+  }
+]

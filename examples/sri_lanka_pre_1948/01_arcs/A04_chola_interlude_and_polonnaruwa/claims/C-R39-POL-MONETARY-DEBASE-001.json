@@ -1,0 +1,13 @@
+{
+  "id":"C-R39-POL-MONETARY-DEBASE-001",
+  "type":"source_fact",
+  "claim":"Across the Polonnaruwa period the monetary system shifted away from the earlier gold Kahavanu/Massa tradition toward increasingly base-metal and copper issues; by the late twelfth and early thirteenth centuries copper Massa issues were common, silver could be used only as a wash on base metal, and Dharmasokadeva's 1208 issue was copper.",
+  "confidence":"A",
+  "zoom":"Z2",
+  "causal_role":"context",
+  "arc":"A04_chola_interlude_and_polonnaruwa",
+  "hil":"HIL-03_economy-infrastructure",
+  "source_ids":["CODRINGTON-COINS-CURRENCY-1924","CBSL-HISTORY-CURRENCY-POLONNARUWA","CNM-POLONNARUWA-COINAGE-PANEL-2026"],
+  "bounded_by":"This establishes a change in monetary metal and quality, not inflation rates, money supply, purchasing power, fiscal insolvency or a direct causal path to the fall of Polonnaruwa.",
+  "notes":"The museum photograph is useful as a field anchor; the historical proposition is independently anchored in institutional and specialist numismatic sources."
+}
