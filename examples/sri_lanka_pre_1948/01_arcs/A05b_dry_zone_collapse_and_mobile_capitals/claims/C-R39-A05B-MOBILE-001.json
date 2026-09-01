@@ -1,0 +1,12 @@
+{
+  "id":"C-R39-A05B-MOBILE-001",
+  "type":"inference",
+  "claim":"After the loss of Polonnaruwa as a durable capital, successive centres such as Dambadeniya and Yapahuwa represent not simple collapse but a political adaptation in which sovereignty was reassembled around more defensible sites, changing settlement patterns and different revenue geographies.",
+  "arc":"A05b_dry_zone_collapse_and_mobile_capitals",
+  "confidence":"B",
+  "zoom":"Z2",
+  "causal_role":"mechanism",
+  "source_ids":["WORLDARCH-URBAN-CYCLES-SL-2026","PERADENIYA-MEDIEVAL-KINGDOMS-THESIS","CCF-YAPAHUWA","CNM-TRANSITION-PANELS-2026"],
+  "bounded_by":"Different capital moves had different immediate causes. This claim does not reduce the whole transition to defence or imply a single centrally planned relocation strategy.",
+  "notes":"Run39 promotes the mobile-capital mechanism from shell to bounded research material."
+}
