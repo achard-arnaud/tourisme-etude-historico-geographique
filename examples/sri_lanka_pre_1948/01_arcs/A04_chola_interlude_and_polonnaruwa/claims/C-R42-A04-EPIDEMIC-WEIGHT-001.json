@@ -1,0 +1,12 @@
+{
+  "id":"C-R42-A04-EPIDEMIC-WEIGHT-001",
+  "type":"inference",
+  "claim":"Disease pressure, including malaria-like disease, can remain a plausible amplifier in the thirteenth-century weakening and abandonment of Polonnaruwa, but the current evidence does not justify treating epidemic disease as a primary driver of the kingdom's political collapse; the epidemiological association is retrospective and speculative, while invasion, regime disruption, political fragmentation and subsequent relocation of political centres are independently documented.",
+  "arc":"A04_chola_interlude_and_polonnaruwa",
+  "confidence":"B",
+  "zoom":"Z3",
+  "causal_role":"amplifier",
+  "source_ids":["FRONTIERS-WIJESUNDERE-RAMASAMY-MALARIA-2017","CAMBRIDGE-MANATUNGA-POLONNARUWA","WORLDARCH-URBAN-CYCLES-SL-2026"],
+  "bounded_by":"No palaeopathological, demographic or securely dated epidemic dataset currently closes the chain epidemic -> depopulation -> political fall. The claim therefore caps disease at a possible amplifier and explicitly rejects monocausal promotion.",
+  "notes":"Negative causal closure: the former strong epidemic-collapse lead is downgraded from candidate explanation to bounded amplifier unless new direct evidence appears."
+}
