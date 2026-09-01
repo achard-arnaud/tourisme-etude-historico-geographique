@@ -1,0 +1,12 @@
+{
+  "id":"C-R42-A04-ALAHANA-HOSPITAL-001",
+  "type":"source_fact",
+  "claim":"The twelfth-century Alahana Parivena complex at Polonnaruwa included a monks' hospital whose excavated assemblage contains a medicinal trough, sanitary architecture and metal instruments including probes, scissors, forceps and a scalpel; the hospital identification rests on converging archaeological, architectural and textual context rather than on the museum panel alone.",
+  "arc":"A04_chola_interlude_and_polonnaruwa",
+  "confidence":"B",
+  "zoom":"Z0",
+  "causal_role":"context",
+  "source_ids":["SAARC-NANAYAKKARA-ALAHANA-2026","JHAA-ALUWIHARE-ALAHANA-2022","UNESCO-MONASTIC-HOSPITALS-SL","CNM-POLONNARUWA-MEDICINE-2026"],
+  "bounded_by":"The medical function of the complex is strongly supported. Specific procedures attributed to individual tools remain functional interpretations, and the chronicle's portrayal of Parakramabahu as a physician is a separate literary claim.",
+  "notes":"Run42 closes the exact archaeology-to-medical-practice gate for the institutional hospital claim while retaining instrument-level and royal-biography caution."
+}
