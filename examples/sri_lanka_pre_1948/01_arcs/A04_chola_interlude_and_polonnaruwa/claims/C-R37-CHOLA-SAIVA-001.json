@@ -1,0 +1,13 @@
+{
+  "id":"C-R37-CHOLA-SAIVA-001",
+  "type":"source_fact",
+  "claim":"The Chola century intensified and institutionalized Saiva influence in Sri Lanka, especially among Tamil-speaking populations, building on earlier religious contacts rather than introducing Hindu worship to an otherwise exclusively Buddhist island.",
+  "confidence":"A",
+  "zoom":"Z2",
+  "causal_role":"amplifier",
+  "arc":"A04_chola_interlude_and_polonnaruwa",
+  "hil":"HIL-05_religion-culture-legitimacy",
+  "source_ids":["INDRAPALA-ETHNIC-IDENTITY-2005","CNM-HINDUISM-PANEL-2026"],
+  "bounded_by":"The claim concerns increased institutional weight and identity formation, not a measurable island-wide conversion or the museum panel's stronger phrase 'permanent stability as a major religion'.",
+  "notes":"Useful correction to a conquest-first narrative: Chola rule amplifies pre-existing South Indian/Saiva connections."
+}

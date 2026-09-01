@@ -1,0 +1,26 @@
+[
+  {
+    "schema_version":"1.0","class":"illustration","id":"ILL-R38-STUPA-FORMS-01","status":"candidate",
+    "source":{"kind":"field_photo","asset_ref":"image-1788246177300.jpg","sha256":"901f7cb0f00d1d3d1ac0c8036bd1cfeee1c9c99f5377898d4978a84e68a24903","captured_at":"2026-09-01","location":"Colombo National Museum, Sri Lanka","creator":"user","rights":"user_supplied","binary_status":"external_only","sha256_status":"verified_at_intake"},
+    "input_refs":[{"type":"field_fragment","id":"GF-R38-STUPA-FORMS-01","path":"00_method/capture/run38_cnm_monastic_stupa_bronze_fragments.json"}],
+    "depiction":{"subject":"Museum board showing stupa forms and architectural diagrams","event_or_theme":"Sri Lankan Buddhist architectural vocabulary","evidence_status":"observed_caption","textual_layer":"unresolved","period":"modern museum synthesis","notes":"Visible named forms include Ghantakara, Ghatakara, Bubbulakara, Dhanyakakara, Padmakara and Amalakaraka; lower diagrams show early/developed stupa plans and a circular caitya shrine."},
+    "vision_review":{"status":"reviewed","confidence":"high","caption_transcription":"STUPA FORMS","visual_notes":"Six named dome/form typologies plus plan-development diagrams and a vatadage/circular caitya shrine section.","uncertainty":"Some Sinhala/Tamil labels and Latinized spellings are not fully legible; the board should not be treated as a strict chronological sequence without independent sourcing."},
+    "tag_review":{"status":"approved","trigger":"manual","notes":"Routed as architectural visual lexicon, not chronology."},
+    "human_review":{"status":"pending","reviewed_at":null,"notes":"Use as visual lexicon, not as standalone chronological proof."},
+    "fragment":{"caption":"Planche muséale des formes de stupa : un vocabulaire de silhouettes — cloche, pot, bulle, tas de riz, lotus, myrobalan — complété par des schémas de plans anciens et développés.","what_it_shows":"A modern museum typology of stupa morphology and related architectural plans.","why_here":"Supports field reading of stupas already encountered in Anuradhapura and Polonnaruwa.","limits":"Modern explanatory synthesis; morphology alone does not date a monument or establish a linear evolution."},
+    "placement":{"arc_ref":"A02c_anuradhapura_and_the_mahavihara","subsection_ref":"stupa-forms-visual-lexicon","section_anchor":"","target_status":"proposed_missing","relevance_rank":1},
+    "render":{"marker":"[ILLUSTRATION:ILL-R38-STUPA-FORMS-01]","required_in_reader":false,"caption_only_allowed":true}
+  },
+  {
+    "schema_version":"1.0","class":"illustration","id":"ILL-R38-CNM-BRONZE-01","status":"candidate",
+    "source":{"kind":"field_photo","asset_ref":"image-1788246532552.jpg","sha256":"83cc0e33f32b365b0b65efc2142fc90ca7fa674bb39abf3637f1e0a087da90bc","captured_at":"2026-09-01","location":"Colombo National Museum, Sri Lanka","creator":"user","rights":"user_supplied","binary_status":"external_only","sha256_status":"verified_at_intake"},
+    "input_refs":[{"type":"field_fragment","id":"GF-R38-CNM-BRONZE-01","path":"00_method/capture/run38_cnm_monastic_stupa_bronze_fragments.json"}],
+    "depiction":{"subject":"Standing bronze figure with elaborate headdress and jewellery","event_or_theme":"Buddhist/Hindu bronze iconography, identity unresolved","evidence_status":"interpretive","textual_layer":"unresolved","period":"undated museum object in current photograph","notes":"Background didactic panel concerns asana/mudra vocabulary; exact object label is not visible."},
+    "vision_review":{"status":"reviewed","confidence":"medium","caption_transcription":"ASANA visible on background panel; object caption not visible","visual_notes":"Standing metal figure, ornate crown/headdress, jewellery, right hand raised with fingers configured, left hand lowered; pedestal visible.","uncertainty":"Identity, date, provenance, school and precise mudra remain unresolved. Do not label as Avalokitesvara or a Hindu deity without catalogue evidence."},
+    "tag_review":{"status":"approved","trigger":"manual","notes":"Object retained as unresolved iconographic field illustration pending catalogue evidence."},
+    "human_review":{"status":"pending","reviewed_at":null,"notes":"Requires museum object label/catalogue before reader-facing identification."},
+    "fragment":{"caption":"Bronze debout du Musée national de Colombo : l’objet montre une iconographie élaborée, mais son identité et sa datation restent volontairement ouvertes faute de cartel lisible.","what_it_shows":"A standing bronze religious figure in the national collection.","why_here":"Potentially useful for the Abhayagiri/Mahayana/Hinduism iconography thread once catalogue provenance is recovered.","limits":"No identity, date or sectarian attribution may be inferred from this photograph alone."},
+    "placement":{"arc_ref":"A02c_anuradhapura_and_the_mahavihara","subsection_ref":"bronze-iconography-unresolved","section_anchor":"","target_status":"proposed_missing","relevance_rank":2},
+    "render":{"marker":"[ILLUSTRATION:ILL-R38-CNM-BRONZE-01]","required_in_reader":false,"caption_only_allowed":true}
+  }
+]
