@@ -4,9 +4,9 @@
   "claim":"Archaeological survey around Anuradhapura identifies Buddhist monasteries as one of the most persistent and prominent site classes in the urban-period hinterland, with later scholarship emphasizing their economic and administrative roles alongside royal and local institutions.",
   "confidence":"A",
   "zoom":"Z2",
-  "causal_role":"institution",
+  "causal_role":"context",
   "arc":"A02c_anuradhapura_and_the_mahavihara",
-  "hil":"HIL-02_religion-society",
+  "hil":"HIL-05_religion-culture-legitimacy",
   "source_ids":["ANTIQUITY-ANU-THEOCRACY-2007","UCL-CROSSROADS-2017-R36"],
   "bounded_by":"Monasteries were major nodes in a heterogeneous landscape; the claim does not assign them exclusive control over the countryside or all irrigation.",
   "notes":"Useful bridge between the museum map's monastery distribution and the project's existing work on Mahavihara/Abhayagiri/Jetavana."
