@@ -4,22 +4,28 @@
   "project": "sri_lanka_pre_1948",
   "strategy": "global topology -> arc-local retrieval packs -> cross-arc stitch -> illustration pass -> coverage reconciliation",
   "token_policy": {
-    "global_pass": "IDs, counts and topology only",
+    "global_pass": "IDs, counts, headings and topology only",
     "draft_pass": "hydrate only one arc plus adjacent bridges",
     "final_pass": "hydrate unresolved coverage items, not the full corpus"
   },
   "coverage": {
-    "claims": 72,
-    "bridges": 10,
-    "graph_edges": 16,
-    "side_stories": 47,
+    "claims": 119,
+    "bridges": 17,
+    "graph_edges": 20,
+    "side_stories": 62,
     "arc_recaps": 6,
     "maps": 0,
-    "illustrations": 10,
+    "illustrations": 24,
     "open_questions": 10
   },
   "diagnostics": {
     "graph_components": [
+      [
+        "C-R28-A04-GRAMMAR-REFORM-001",
+        "C-R28-A04-SANGHA-REFORM-001",
+        "C-R28-A05C-GADALADENIYA-1344-001",
+        "C-R28-A05C-KOTTE-LITERARY-001"
+      ],
       [
         "C-R17-KDY-1815-001",
         "C-R21-KDY-PERAHERA-TRADITION-001",
@@ -55,6 +61,10 @@
       [
         "C-R24-BUD-RENUNCIATION-TEXT-001",
         "ILL-KANDY-04"
+      ],
+      [
+        "C-R29-KDY-KATARAGAMA-DEVALAYA-001",
+        "C-R29-NALLUR-MURUGAN-001"
       ],
       [
         "administrative-legibility",
@@ -130,7 +140,48 @@
       "C-R18-LABOUR-LAW-001",
       "C-R18-LABOUR-POP-1936",
       "C-R18-LABOUR-RECRUIT-001",
-      "C-R23-KDY-MUSEUM-MEMORY-001"
+      "C-R23-KDY-MUSEUM-MEMORY-001",
+      "C-R28-A02B-WEWA-DAGABA-DISCOURSE-001",
+      "C-R28-A02C-MUDRA-VOCAB-001",
+      "C-R29-A05C-RAJASINHA-SRIPADA-001",
+      "C-R30-ANGAMPORA-HERITAGE-001",
+      "C-R30-ANGAMPORA-SYSTEM-001",
+      "C-R34-ABH-ANALYSIS-INTENT-001",
+      "C-R34-ABH-SIGNIFICANCE-QUOTE-001",
+      "C-R34-ABH-TRANSBUDDHIST-FRAME-001",
+      "C-R34-FORCE-BUDDHA-VISHNU-AVATAR-001",
+      "C-R34-FORCE-MURUGAN-RED-ONE-001",
+      "C-R34-FORCE-SHAIVA-TANTRA-MEDITATION-001",
+      "C-R34-FORCE-THERAVADA-MEDITATION-001",
+      "C-R34-ICON-LOTUS-001",
+      "C-R34-ICON-MUDRA-001",
+      "C-R34-ICON-STUPA-001",
+      "C-R34-MIH-AMBAS-TRAD-001",
+      "C-R34-MIH-BODHI-BHIKKHUNI-TRAD-001",
+      "C-R34-MIH-COUNCIL-TRAD-001",
+      "C-R34-MIH-CROWD-METRIC-001",
+      "C-R34-MIH-MAHAVIHARA-TRAD-001",
+      "C-R34-MIH-RELIC-STUPA-TRAD-001",
+      "C-R36-ANU-HYDRAULIC-001",
+      "C-R36-ANU-MONASTIC-HINTERLAND-001",
+      "C-R36-MANTAI-GATEWAY-001",
+      "C-R36-MANTAI-IMPORTS-001",
+      "C-R37-ABH-TANTRIC-001",
+      "C-R37-ABH-VAITULYA-001",
+      "C-R37-CHOLA-SAIVA-001",
+      "C-R37-HINDU-COEXIST-001",
+      "C-R39-A05B-EGYPT-001",
+      "C-R39-A05B-MOBILE-001",
+      "C-R39-A05B-YAPAHUWA-PANDYA-001",
+      "C-R39-A05C-ZHENGHE-001",
+      "C-R39-POL-MONETARY-DEBASE-001",
+      "C-R39-POL-MONETARY-STRESS-001",
+      "C-R41-A07-PORTUGUESE-NORETURN-001",
+      "C-R42-A04-ALAHANA-HOSPITAL-001",
+      "C-R42-A04-EPIDEMIC-WEIGHT-001",
+      "C-R42-A04-MONASTIC-KNOWLEDGE-001",
+      "C-R42-A04-MONASTIC-NETWORKS-001",
+      "C-R42-A04-OXFORD-PIRIVENA-COMP-001"
     ],
     "illustration_missing_target_ids": [
       "ILL-KANDY-01",
@@ -142,12 +193,43 @@
       "ILL-KANDY-07",
       "ILL-KANDY-08",
       "ILL-KANDY-09",
-      "ILL-KANDY-10"
+      "ILL-KANDY-10",
+      "ILL-MUDRA-01",
+      "ILL-MUDRA-02",
+      "ILL-MUDRA-03",
+      "ILL-MUDRA-04",
+      "ILL-MUDRA-05",
+      "ILL-MUDRA-06",
+      "ILL-MUDRA-07",
+      "ILL-MUDRA-08",
+      "ILL-R36-ANCIENT-SEA-ROUTES-02",
+      "ILL-R36-ANURADHAPURA-MAP-01",
+      "ILL-R38-CNM-BRONZE-01",
+      "ILL-R38-STUPA-FORMS-01"
     ]
   },
   "arcs": [
     {
       "arc": "A01_settlement_and_early_polity",
+      "title": "A01 — Settlement and early polity",
+      "subsections": [
+        {
+          "level": 2,
+          "title": "Entry rupture"
+        },
+        {
+          "level": 2,
+          "title": "Causal question"
+        },
+        {
+          "level": 2,
+          "title": "Exit rupture / bridge forward"
+        },
+        {
+          "level": 2,
+          "title": "Shell guardrail"
+        }
+      ],
       "evidence_status": "shell",
       "spine_claim_ids": [],
       "claim_count": 0,
@@ -164,26 +246,32 @@
     },
     {
       "arc": "A02_ancient_indian_ocean_exchange",
+      "title": "A02 — Ancient Indian Ocean exchange",
+      "subsections": [],
       "evidence_status": "researched",
       "spine_claim_ids": [
+        "C-R36-MANTAI-GATEWAY-001",
         "C-R13-GLASS-001",
         "C-R13-ROME-002",
         "C-R13-NAGA-001",
         "C-R13-NAGA-002",
         "C-R13-ROME-003",
+        "C-R36-MANTAI-IMPORTS-001",
         "C-R13-GLASS-002",
         "C-R13-GLASS-003",
         "C-R13-ROME-001",
         "C-R13-ROME-004"
       ],
-      "claim_count": 13,
+      "claim_count": 15,
       "causal_roles": {
         "constraint": 5,
-        "context": 4,
+        "context": 5,
+        "mechanism": 1,
         "none": 4
       },
       "bridge_ids": [
-        "B-R13-ROME-DIRECT-001"
+        "B-R13-ROME-DIRECT-001",
+        "B-R36-HYDRAULIC-PORTS-001"
       ],
       "side_story_ids": [],
       "candidate_side_story_ids": [
@@ -201,11 +289,38 @@
     },
     {
       "arc": "A02b_anuradhapura_hydraulic_order",
+      "title": "A02b — Anuradhapura hydraulic order",
+      "subsections": [
+        {
+          "level": 2,
+          "title": "Entry rupture"
+        },
+        {
+          "level": 2,
+          "title": "Causal question"
+        },
+        {
+          "level": 2,
+          "title": "Exit rupture / bridge forward"
+        },
+        {
+          "level": 2,
+          "title": "Shell guardrail"
+        }
+      ],
       "evidence_status": "shell",
-      "spine_claim_ids": [],
-      "claim_count": 0,
-      "causal_roles": {},
-      "bridge_ids": [],
+      "spine_claim_ids": [
+        "C-R36-ANU-HYDRAULIC-001",
+        "C-R28-A02B-WEWA-DAGABA-DISCOURSE-001"
+      ],
+      "claim_count": 2,
+      "causal_roles": {
+        "context": 1,
+        "mechanism": 1
+      },
+      "bridge_ids": [
+        "B-R36-HYDRAULIC-PORTS-001"
+      ],
       "side_story_ids": [],
       "candidate_side_story_ids": [
         "SS-PRE-JETAVANA-001",
@@ -218,6 +333,25 @@
     },
     {
       "arc": "A02c_anuradhapura_and_the_mahavihara",
+      "title": "A02c — Anuradhapura, Mihintale and the Mahavihara",
+      "subsections": [
+        {
+          "level": 2,
+          "title": "Causal question"
+        },
+        {
+          "level": 2,
+          "title": "Evidence rule"
+        },
+        {
+          "level": 2,
+          "title": "Run16 state"
+        },
+        {
+          "level": 2,
+          "title": "Run24 — reliefs de Bahirawakanda et couches textuelles"
+        }
+      ],
       "evidence_status": "partial",
       "spine_claim_ids": [
         "C-R16-MIH-ADMIN-001",
@@ -227,23 +361,50 @@
         "C-R24-BUD-BIRTH-TEXT-001",
         "C-R24-BUD-LANKA-VISITS-001",
         "C-R24-BUD-RENUNCIATION-TEXT-001",
+        "C-R28-A02C-MUDRA-VOCAB-001",
+        "C-R36-ANU-MONASTIC-HINTERLAND-001",
+        "C-R37-ABH-VAITULYA-001",
         "C-R16-ABH-FIND-001",
         "C-R24-BUD-NALAGIRI-TEXT-001",
+        "C-R34-FORCE-BUDDHA-VISHNU-AVATAR-001",
+        "C-R34-FORCE-SHAIVA-TANTRA-MEDITATION-001",
+        "C-R34-FORCE-THERAVADA-MEDITATION-001",
+        "C-R34-ICON-LOTUS-001",
+        "C-R34-ICON-MUDRA-001",
+        "C-R34-ICON-STUPA-001",
+        "C-R37-ABH-TANTRIC-001",
+        "C-R37-HINDU-COEXIST-001",
         "C-R16-ABH-DATE-001",
-        "C-R16-MIH-TRAD-001"
+        "C-R16-MIH-TRAD-001",
+        "C-R34-ABH-ANALYSIS-INTENT-001",
+        "C-R34-ABH-SIGNIFICANCE-QUOTE-001",
+        "C-R34-ABH-TRANSBUDDHIST-FRAME-001",
+        "C-R34-MIH-AMBAS-TRAD-001",
+        "C-R34-MIH-BODHI-BHIKKHUNI-TRAD-001",
+        "C-R34-MIH-COUNCIL-TRAD-001",
+        "C-R34-MIH-CROWD-METRIC-001",
+        "C-R34-MIH-MAHAVIHARA-TRAD-001",
+        "C-R34-MIH-RELIC-STUPA-TRAD-001"
       ],
-      "claim_count": 11,
+      "claim_count": 31,
       "causal_roles": {
         "constraint": 1,
-        "context": 8,
+        "context": 28,
         "mechanism": 2
       },
-      "bridge_ids": [],
-      "side_story_ids": [],
+      "bridge_ids": [
+        "B-R34-SHAIVA-BUDDHIST-MEDITATION-001"
+      ],
+      "side_story_ids": [
+        "SS-R34-BUDDHIST-ICONOGRAPHY-METHOD-001",
+        "SS-R34-MUDRA-DETOUR-001"
+      ],
       "candidate_side_story_ids": [
         "SS-R16-MIH-METHOD-CHRONOLOGY-001",
         "SS-R16-MIH-OBJECT-MANGO-001",
-        "SS-R16-MIH-PORTRAIT-MAHINDA-001"
+        "SS-R16-MIH-PORTRAIT-MAHINDA-001",
+        "SS-R28-MUDRA-OBJECT-001",
+        "SS-R37-ANURADHAPURA-PLURAL-001"
       ],
       "arc_recap_ids": [],
       "illustration_ids": [],
@@ -257,12 +418,43 @@
         "ILL-KANDY-07",
         "ILL-KANDY-08",
         "ILL-KANDY-09",
-        "ILL-KANDY-10"
+        "ILL-KANDY-10",
+        "ILL-MUDRA-01",
+        "ILL-MUDRA-02",
+        "ILL-MUDRA-03",
+        "ILL-MUDRA-04",
+        "ILL-MUDRA-05",
+        "ILL-MUDRA-06",
+        "ILL-MUDRA-07",
+        "ILL-MUDRA-08",
+        "ILL-R36-ANURADHAPURA-MAP-01",
+        "ILL-R36-ANCIENT-SEA-ROUTES-02",
+        "ILL-R38-STUPA-FORMS-01",
+        "ILL-R38-CNM-BRONZE-01"
       ],
       "open_question_ids": []
     },
     {
       "arc": "A03_indian_ocean_and_regional_systems",
+      "title": "A03 — Indian Ocean and regional systems",
+      "subsections": [
+        {
+          "level": 2,
+          "title": "Entry rupture"
+        },
+        {
+          "level": 2,
+          "title": "Causal question"
+        },
+        {
+          "level": 2,
+          "title": "Exit rupture / bridge forward"
+        },
+        {
+          "level": 2,
+          "title": "Shell guardrail"
+        }
+      ],
       "evidence_status": "shell",
       "spine_claim_ids": [],
       "claim_count": 0,
@@ -284,21 +476,66 @@
     },
     {
       "arc": "A04_chola_interlude_and_polonnaruwa",
+      "title": "A04 — Chola interlude and Polonnaruwa",
+      "subsections": [
+        {
+          "level": 2,
+          "title": "Entry rupture"
+        },
+        {
+          "level": 2,
+          "title": "Causal question"
+        },
+        {
+          "level": 2,
+          "title": "Evidence slice in Run 14"
+        },
+        {
+          "level": 2,
+          "title": "Run39 — monetary stress before the rupture"
+        },
+        {
+          "level": 2,
+          "title": "Run43 — Gal Vihara, the apogee made visible"
+        },
+        {
+          "level": 2,
+          "title": "Exit rupture / bridge forward"
+        },
+        {
+          "level": 2,
+          "title": "Partial guardrail"
+        }
+      ],
       "evidence_status": "partial",
       "spine_claim_ids": [
         "C-R14-A04-GALPOTA-001",
+        "C-R28-A04-GRAMMAR-REFORM-001",
+        "C-R37-CHOLA-SAIVA-001",
         "C-R14-A04-VIJAYABAHU-001",
+        "C-R42-A04-EPIDEMIC-WEIGHT-001",
+        "C-R39-POL-MONETARY-STRESS-001",
+        "C-R28-A04-SANGHA-REFORM-001",
+        "C-R39-POL-MONETARY-DEBASE-001",
         "C-R14-A04-VELAIKKARA-001",
-        "C-R14-A04-MAGHA-001"
+        "C-R42-A04-ALAHANA-HOSPITAL-001",
+        "C-R42-A04-MONASTIC-KNOWLEDGE-001",
+        "C-R42-A04-MONASTIC-NETWORKS-001",
+        "C-R14-A04-MAGHA-001",
+        "C-R42-A04-OXFORD-PIRIVENA-COMP-001"
       ],
-      "claim_count": 4,
+      "claim_count": 14,
       "causal_roles": {
-        "amplifier": 1,
-        "context": 2,
-        "mechanism": 1
+        "amplifier": 4,
+        "context": 7,
+        "mechanism": 2,
+        "none": 1
       },
       "bridge_ids": [
-        "B-R21-TOOTH-RELIC-INSTITUTIONAL-CONTINUITY-001"
+        "B-R21-TOOTH-RELIC-INSTITUTIONAL-CONTINUITY-001",
+        "B-R28-POLONNARUWA-REFORM-GRAMMAR-001",
+        "B-R39-POL-MONEY-TO-MAGHA-001",
+        "B-R42-ALAHANA-KNOWLEDGE-NETWORK-001"
       ],
       "side_story_ids": [
         "SS-PRE-L003",
@@ -306,14 +543,24 @@
         "SS-PRE-L005",
         "SS-PRE-L016"
       ],
-      "candidate_side_story_ids": [],
+      "candidate_side_story_ids": [
+        "SS-R40-SCALPEL-OBJECT-001",
+        "SS-R40-EPIDEMIC-FALSE-LEAD-001",
+        "SS-R43-GALVIHARA-OBJECT-001",
+        "SS-R43-POLONNARUWA-MONEY-FOCUS-001"
+      ],
       "arc_recap_ids": [],
-      "illustration_ids": [],
+      "illustration_ids": [
+        "ILL-R39-POLONNARUWA-COINAGE-01",
+        "ILL-R43-POL-GALVIHARA-01"
+      ],
       "illustration_review_queue_ids": [],
       "open_question_ids": []
     },
     {
       "arc": "A05_colonial_conservation_ordinance",
+      "title": "A05 — Colonial conservation and the 1937 ordinance",
+      "subsections": [],
       "evidence_status": "researched",
       "spine_claim_ids": [
         "C-R13-PARK-002",
@@ -340,13 +587,43 @@
     },
     {
       "arc": "A05b_dry_zone_collapse_and_mobile_capitals",
+      "title": "A05b — Dry-zone collapse and mobile capitals",
+      "subsections": [
+        {
+          "level": 2,
+          "title": "Entry rupture"
+        },
+        {
+          "level": 2,
+          "title": "Causal question"
+        },
+        {
+          "level": 2,
+          "title": "Exit rupture / bridge forward"
+        },
+        {
+          "level": 2,
+          "title": "Shell guardrail"
+        }
+      ],
       "evidence_status": "shell",
-      "spine_claim_ids": [],
-      "claim_count": 0,
-      "causal_roles": {},
+      "spine_claim_ids": [
+        "C-R39-A05B-MOBILE-001",
+        "C-R39-A05B-YAPAHUWA-PANDYA-001",
+        "C-R39-A05B-EGYPT-001"
+      ],
+      "claim_count": 3,
+      "causal_roles": {
+        "context": 2,
+        "mechanism": 1
+      },
       "bridge_ids": [],
       "side_story_ids": [],
       "candidate_side_story_ids": [
+        "SS-R40-ARAB-ENVOY-001",
+        "SS-R40-VIJAYANAGARA-COMP-001",
+        "SS-R40-PANDYA-JAFFNA-001",
+        "SS-R40-SOUTHINDIA-TRADE-001",
         "SS-PRE-L006",
         "SS-PRE-L014",
         "SS-PRE-L018"
@@ -357,7 +634,81 @@
       "open_question_ids": []
     },
     {
+      "arc": "A05c_gampola_kotte_sitawaka_transition",
+      "title": "A05c — Gampola, Kotte and Sitawaka transition",
+      "subsections": [
+        {
+          "level": 2,
+          "title": "Entry rupture"
+        },
+        {
+          "level": 2,
+          "title": "Causal question"
+        },
+        {
+          "level": 2,
+          "title": "Evidence lanes to build"
+        },
+        {
+          "level": 2,
+          "title": "Exit rupture / bridge forward"
+        },
+        {
+          "level": 2,
+          "title": "Shell guardrail"
+        }
+      ],
+      "evidence_status": "shell",
+      "spine_claim_ids": [
+        "C-R28-A05C-GADALADENIYA-1344-001",
+        "C-R39-A05C-ZHENGHE-001",
+        "C-R28-A05C-KOTTE-LITERARY-001",
+        "C-R29-A05C-RAJASINHA-SRIPADA-001"
+      ],
+      "claim_count": 4,
+      "causal_roles": {
+        "context": 4
+      },
+      "bridge_ids": [],
+      "side_story_ids": [],
+      "candidate_side_story_ids": [
+        "SS-R28-MOBILE-CENTRES-ANALYTICAL-001",
+        "SS-R40-MING-KOTTE-001"
+      ],
+      "arc_recap_ids": [],
+      "illustration_ids": [],
+      "illustration_review_queue_ids": [],
+      "open_question_ids": []
+    },
+    {
       "arc": "A06_voc_coastal_state",
+      "title": "A06 — VOC coastal state",
+      "subsections": [
+        {
+          "level": 2,
+          "title": "Entry rupture"
+        },
+        {
+          "level": 2,
+          "title": "Causal question"
+        },
+        {
+          "level": 2,
+          "title": "TL;DR"
+        },
+        {
+          "level": 2,
+          "title": "Drivers / amplifiers / consequences / non-causes"
+        },
+        {
+          "level": 2,
+          "title": "What changes the optimum?"
+        },
+        {
+          "level": 2,
+          "title": "Exit rupture / bridge forward"
+        }
+      ],
       "evidence_status": "researched",
       "spine_claim_ids": [
         "C-PRE-001",
@@ -384,6 +735,25 @@
     },
     {
       "arc": "A06b_portuguese_maritime_violence",
+      "title": "A06b — Portuguese maritime violence",
+      "subsections": [
+        {
+          "level": 2,
+          "title": "Entry rupture"
+        },
+        {
+          "level": 2,
+          "title": "Causal question"
+        },
+        {
+          "level": 2,
+          "title": "Exit rupture / bridge forward"
+        },
+        {
+          "level": 2,
+          "title": "Shell guardrail"
+        }
+      ],
       "evidence_status": "shell",
       "spine_claim_ids": [],
       "claim_count": 0,
@@ -400,18 +770,47 @@
     },
     {
       "arc": "A07_european_wars_reordering",
+      "title": "A07 — European wars and regional reordering",
+      "subsections": [
+        {
+          "level": 2,
+          "title": "Entry rupture"
+        },
+        {
+          "level": 2,
+          "title": "Causal question"
+        },
+        {
+          "level": 2,
+          "title": "TL;DR"
+        },
+        {
+          "level": 2,
+          "title": "Drivers / amplifiers / consequences / non-causes"
+        },
+        {
+          "level": 2,
+          "title": "What changes the optimum?"
+        },
+        {
+          "level": 2,
+          "title": "Exit rupture / bridge forward"
+        }
+      ],
       "evidence_status": "researched",
       "spine_claim_ids": [
         "C-PRE-GEO-001",
         "C-PRE-GEO-003",
+        "C-R41-A07-PORTUGUESE-NORETURN-001",
         "C-PRE-GEO-004",
         "C-PRE-GEO-002"
       ],
-      "claim_count": 4,
+      "claim_count": 5,
       "causal_roles": {
         "amplifier": 1,
         "context": 1,
-        "driver": 2
+        "driver": 2,
+        "mechanism": 1
       },
       "bridge_ids": [
         "B-PRE-002",
@@ -431,6 +830,29 @@
     },
     {
       "arc": "A07b_kandyan_kingdom_and_defensive_interior",
+      "title": "A07b — Kandyan kingdom and the defensive interior",
+      "subsections": [
+        {
+          "level": 2,
+          "title": "Causal spine"
+        },
+        {
+          "level": 2,
+          "title": "Findings closed in Run17"
+        },
+        {
+          "level": 2,
+          "title": "Run18 field detour — invasion and defence"
+        },
+        {
+          "level": 2,
+          "title": "Findings deliberately not closed"
+        },
+        {
+          "level": 2,
+          "title": "Run23 museum-personage qualification"
+        }
+      ],
       "evidence_status": "partial",
       "spine_claim_ids": [
         "C-R17-KDY-RAIL-001",
@@ -449,16 +871,21 @@
         "C-R24-KDY-KNOX-ROADS-001",
         "C-R17-KDY-1815-001",
         "C-R18-KDY-DEF-003",
+        "C-R29-KDY-KATARAGAMA-DEVALAYA-001",
+        "C-R29-NALLUR-MURUGAN-001",
+        "C-R30-ANGAMPORA-HERITAGE-001",
+        "C-R30-ANGAMPORA-SYSTEM-001",
         "C-R17-KDY-REBELLION-001",
         "C-R23-KDY-COSMOPOLITAN-001",
         "C-R23-KDY-DONA-CATHERINA-001",
+        "C-R34-FORCE-MURUGAN-RED-ONE-001",
         "C-R21-KDY-PERAHERA-TRADITION-001",
         "C-R23-KDY-MUSEUM-MEMORY-001"
       ],
-      "claim_count": 21,
+      "claim_count": 26,
       "causal_roles": {
         "constraint": 1,
-        "context": 4,
+        "context": 9,
         "mechanism": 13,
         "none": 1,
         "outcome": 2
@@ -466,7 +893,9 @@
       "bridge_ids": [
         "B-R21-1815-RITUAL-CUSTODY-001",
         "B-R21-TOOTH-RELIC-INSTITUTIONAL-CONTINUITY-001",
-        "B-R23-KDY-DOYLY-1815-001"
+        "B-R23-KDY-DOYLY-1815-001",
+        "B-R29-KATARAGAMA-NALLUR-001",
+        "B-R34-RED-GOD-KATARAGAMA-NALLUR-001"
       ],
       "side_story_ids": [],
       "candidate_side_story_ids": [
@@ -477,7 +906,8 @@
         "SS-R18-KANDY-DEFENCE-001",
         "SS-R23-KDY-DONA-CATHERINA-PORTRAIT-001",
         "SS-R23-KDY-DOYLY-PORTRAIT-001",
-        "SS-R23-KDY-SIAM-DEZOOM-001"
+        "SS-R23-KDY-SIAM-DEZOOM-001",
+        "SS-R30-ANGAMPORA-FALSE-LEAD-001"
       ],
       "arc_recap_ids": [
         "RECAP-A07b"
@@ -488,6 +918,17 @@
     },
     {
       "arc": "A07c_coffee_collapse_and_tea_conversion",
+      "title": "A07c — Coffee collapse and tea conversion",
+      "subsections": [
+        {
+          "level": 2,
+          "title": "Causal question"
+        },
+        {
+          "level": 2,
+          "title": "Gate"
+        }
+      ],
       "evidence_status": "partial",
       "spine_claim_ids": [
         "C-R18-COFFEE-H2-001",
@@ -530,6 +971,33 @@
     },
     {
       "arc": "A08_jaffna_caste_colonial_codification",
+      "title": "A08 — Jaffna caste and colonial codification",
+      "subsections": [
+        {
+          "level": 2,
+          "title": "Entry rupture"
+        },
+        {
+          "level": 2,
+          "title": "Causal question"
+        },
+        {
+          "level": 2,
+          "title": "TL;DR"
+        },
+        {
+          "level": 2,
+          "title": "Drivers / amplifiers / consequences / non-causes"
+        },
+        {
+          "level": 2,
+          "title": "What changes the optimum?"
+        },
+        {
+          "level": 2,
+          "title": "Exit rupture / bridge forward"
+        }
+      ],
       "evidence_status": "researched",
       "spine_claim_ids": [
         "C-PRE-CASTE-003",
@@ -554,6 +1022,25 @@
     },
     {
       "arc": "A09_british_unification_1833",
+      "title": "A09 — British unification and the 1833 administrative order",
+      "subsections": [
+        {
+          "level": 2,
+          "title": "Entry rupture"
+        },
+        {
+          "level": 2,
+          "title": "Causal question"
+        },
+        {
+          "level": 2,
+          "title": "Exit rupture / bridge forward"
+        },
+        {
+          "level": 2,
+          "title": "Shell guardrail"
+        }
+      ],
       "evidence_status": "shell",
       "spine_claim_ids": [],
       "claim_count": 0,
@@ -572,6 +1059,33 @@
     },
     {
       "arc": "A09b_plantation_labour_system",
+      "title": "A09b — Plantation labour system",
+      "subsections": [
+        {
+          "level": 2,
+          "title": "Causal question"
+        },
+        {
+          "level": 2,
+          "title": "TL;DR"
+        },
+        {
+          "level": 2,
+          "title": "Separations"
+        },
+        {
+          "level": 2,
+          "title": "Candidate mechanisms to test"
+        },
+        {
+          "level": 2,
+          "title": "Required evidence before promotion"
+        },
+        {
+          "level": 2,
+          "title": "Exit rupture / bridge forward"
+        }
+      ],
       "evidence_status": "partial",
       "spine_claim_ids": [
         "C-R18-LABOUR-LAW-001",

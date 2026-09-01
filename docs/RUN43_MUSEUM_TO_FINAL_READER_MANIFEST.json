@@ -1,0 +1,18 @@
+{
+  "run_id":"RUN43",
+  "mode":"iterative",
+  "baseline":"main after Run42",
+  "state_before":"Runs36-38 museum evidence was archived, Run39 monetary work remained on an unmerged feature branch, and Gal Vihara field material had no reader-facing intake or iterative placement.",
+  "state_after":"Run39 monetary evidence is reconciled with the current corpus; Gal Vihara is archived and independently anchored; both Gal Vihara and monetary stress are inserted locally into Chapters 4 and 5 by the iterative post-review placement engine; the final Markdown and DOCX are regenerated.",
+  "promotion_decision":"Promote the bounded monetary and Gal Vihara narrative nodes after full QA; preserve unresolved bronze identity, standing-figure identity, exact Mahayana attribution and quantified fiscal weight as open gates.",
+  "scope":"Runs36-39 museum illustrations plus Gal Vihara/Parakramabahu node and monetary-stress reintegration",
+  "decisions":[
+    "Do not duplicate Runs36-38 intakes already archived.",
+    "Recover the unmerged Run39 monetary branch with conflicts reconciled against Runs40-42.",
+    "Add Gal Vihara as a new field intake and object-focus side story using the existing Run28 epigraphic claim.",
+    "Place Gal Vihara and monetary stress locally through the Run41 post-review iterative placement engine.",
+    "Keep the standing bronze unresolved and outside reader-facing identification."
+  ],
+  "reader_outputs":["examples/sri_lanka_pre_1948/09_output/report_v3_full.md","examples/sri_lanka_pre_1948/09_output/Sri_Lanka_Fresque_historico_geographique_vol_retour_v3.docx"],
+  "qa":["python -m unittest discover -s tests -v","python scripts/audit_workflow.py --latest","python scripts/graph_link_audit.py examples/sri_lanka_pre_1948","python scripts/qa_project.py examples/sri_lanka_pre_1948","python scripts/render_composed_reader.py --project pre"]
+}
