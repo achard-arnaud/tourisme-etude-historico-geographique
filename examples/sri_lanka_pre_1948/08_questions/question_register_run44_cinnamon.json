@@ -1,0 +1,82 @@
+[
+  {
+    "id":"Q-R43-CINNAMON-PRICE-SERIES-001",
+    "question":"Can a defensible Ceylon purchase-price -> Amsterdam/Lisbon resale-price series be reconstructed for cinnamon without mixing periods, grades, currencies and tax bases?",
+    "kind":"quantitative",
+    "arc":"A06_voc_coastal_state",
+    "status":"open",
+    "research_state":"partial_negative_cleaning",
+    "discriminating_test":"Cross-match Ceylon VOC purchase/delivery accounts with Amsterdam auction or sales accounts for the same period and grade, then normalize units and identify freight, insurance, tax and spoilage separately.",
+    "expected_evidence":["VOC Ceylon account books","Amsterdam chamber sales records","specialist historical price series"],
+    "falsifier":"Available records cannot be linked at comparable grade/time resolution or show that the illustrative spreads in the intake are materially wrong.",
+    "run44_result":"No comparable grade/time series was reconstructed. Spectacular claims that 2,000 tonnes were burned in Amsterdam in 1760 to raise cinnamon prices 400%, and that one pound equalled a Dutch sailor's monthly wage, remain uncorroborated and are explicitly excluded from promotion.",
+    "priority":1
+  },
+  {
+    "id":"Q-R43-CINNAMON-SEED-EXPORT-BAN-001",
+    "question":"Did the VOC explicitly prohibit export of Ceylon cinnamon seed or planting material, rather than merely controlling production and land?",
+    "kind":"source_validation",
+    "arc":"A06_voc_coastal_state",
+    "status":"resolved_negative_within_scope",
+    "research_state":"falsifier_triggered_non_exhaustive",
+    "discriminating_test":"Locate a Ceylon-specific VOC ordinance, instruction, plakkaat or correspondence explicitly restricting cinnamon seed/plant export.",
+    "expected_evidence":["VOC plakkaatboeken","Ceylon council resolutions","governor correspondence"],
+    "falsifier":"Only Moluccan clove/nutmeg prohibitions can be located and no Ceylon-specific cinnamon instrument emerges.",
+    "run44_result":"No Ceylon-specific cinnamon seed/plant export instrument was located. Hovy was not consulted in extenso, so this is a bounded negative result, not proof of non-existence.",
+    "priority":3
+  },
+  {
+    "id":"Q-R44-CINNAMON-FALCK-PLANT-CONTROL-001",
+    "question":"Did the shift to concentrated cinnamon gardens under Falck after 1769 produce new VOC controls over the circulation of live plants or planting material, distinct from labour and land controls?",
+    "kind":"source_validation",
+    "arc":"A06_voc_coastal_state",
+    "status":"open",
+    "discriminating_test":"Search Falck-era governor correspondence, Council of Ceylon resolutions and Batavia instructions for controls on live cinnamon plants, seed or propagation material after cultivation became systematic.",
+    "expected_evidence":["Falck correspondence","Council of Ceylon resolutions","Batavia instructions","Hovy Plakkaatboek in extenso"],
+    "falsifier":"Controls continue to target labour, private dealing and plantation land without any rule on plant-material movement.",
+    "priority":2
+  },
+  {
+    "id":"Q-R43-CINNAMON-ASIAN-PRICE-KNOWLEDGE-001",
+    "question":"How much did Kandyan rulers, coastal brokers and South Asian merchants know about European resale prices for Ceylon cinnamon?",
+    "kind":"information_asymmetry",
+    "arc":"A06_voc_coastal_state",
+    "status":"open",
+    "research_state":"original_falsifier_triggered_question_split",
+    "run44_result":"Available synthesis evidence shows acute awareness of coercion, treaty failure and exclusion from maritime trade, but no explicit knowledge of Amsterdam resale prices or margins. This does not distinguish real ignorance from qualitative knowledge absent from surviving/consulted sources.",
+    "priority":2
+  },
+  {
+    "id":"Q-R44-KANDY-MONOPOLY-VALUE-THEORY-001",
+    "question":"Did the Kandyan court articulate a qualitative theory that the VOC derived exceptional wealth from the cinnamon monopoly even without knowing precise European resale prices?",
+    "kind":"information_asymmetry",
+    "arc":"A06_voc_coastal_state",
+    "status":"open",
+    "discriminating_test":"Search Kandyan diplomatic correspondence and French/European embassy records for explicit qualitative statements about VOC enrichment, value capture or the commercial value of restoring direct access to trade.",
+    "expected_evidence":["Kandyan correspondence","French embassy correspondence 1670s-1680s","VOC diplomatic reports"],
+    "falsifier":"Documents frame disputes only in sovereignty, territory, tribute and access terms without claims about downstream commercial enrichment.",
+    "priority":2
+  },
+  {
+    "id":"Q-R44-ASIAN-MERCHANT-PRICE-INFO-001",
+    "question":"Did Muslim, Malabar or Coromandel merchant networks preserve channels of information about European spice resale prices after Portuguese/VOC capture of direct routes?",
+    "kind":"information_network",
+    "arc":"A03_indian_ocean_and_regional_systems",
+    "status":"open",
+    "discriminating_test":"Search merchant letters, brokerage records and European reports for explicit transmission of European spice prices or margins into South Asian commercial networks.",
+    "expected_evidence":["merchant correspondence","Coromandel/Malabar brokerage records","VOC reports on Asian merchants"],
+    "falsifier":"Evidence shows active Asian trading networks but no identifiable information channel for European resale prices.",
+    "priority":2
+  },
+  {
+    "id":"Q-R43-CINNAMON-TO-COFFEE-TEA-CONTINUITY-001",
+    "question":"Which specific institutions, lands, transport assets or labour-control practices actually persisted from late VOC cinnamon production into British coffee/tea plantation expansion?",
+    "kind":"causal_continuity",
+    "arc":"A07c_coffee_collapse_and_tea_conversion",
+    "status":"resolved_bounded",
+    "research_state":"falsifier_supported",
+    "run44_result":"Evidence supports a major spatial discontinuity: late-VOC cinnamon cultivation was concentrated in coastal lowlands, while British coffee expanded mainly into Kandyan highlands after 1815 and tea subsequently reused coffee's highland estate/transport infrastructure. Continuity is macroeconomic/export-institutional, not direct cadastral or labour-institution continuity.",
+    "claim_id":"C-R44-CINNAMON-COFFEE-GEOGRAPHIC-DISCONTINUITY-001",
+    "priority":3
+  }
+]
