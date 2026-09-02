@@ -1,0 +1,58 @@
+[
+  {
+    "id":"EKAMA-BOUNDARIES-BONDAGE-2022",
+    "title":"Boundaries of Bondage: Slavery and Enslaveability in VOC Ceylon",
+    "url":"https://doi.org/10.1515/9783110777246-007",
+    "tier":"T1",
+    "anchor_role":"canonical labour-regime anchor",
+    "date":"2022",
+    "author_or_institution":"Kate Ekama / De Gruyter",
+    "author_institution":"De Gruyter",
+    "scope":"VOC Ceylon ordinances, caste labour, mobility/marriage controls and cinnamon-peeler obligations; cites Hovy's Ceylonees Plakkaatboek",
+    "claims_supported":["C-R41-VOC-CINNAMON-CORVEE-001"],
+    "limitations":"Hovy is mediated through a modern scholarly chapter for the cited 1661 cinnamon-peeler marriage restriction; consult the Plakkaatboek directly before primary-source quotation.",
+    "provenance":"direct_web_verification_2026-09-02"
+  },
+  {
+    "id":"ECHELON-PLANTATIONS-2018",
+    "title":"How modern Sri Lankan plantations began",
+    "url":"https://echelon.lk/how-modern-sri-lankan-plantations-began/",
+    "tier":"T2",
+    "anchor_role":"corroborating local synthesis",
+    "date":"2018",
+    "author_or_institution":"Vinod Moonesinghe / Echelon",
+    "author_institution":"Echelon",
+    "scope":"Falck's 1769 cinnamon seed cultivation at Grandpass, compulsory Salagama labour, late-VOC cinnamon plantation expansion, early British coffee experiments and transition toward Kandyan highlands",
+    "claims_supported":["C-R41-VOC-SYSTEMATIC-CULTIVATION-001","C-R44-CINNAMON-COFFEE-GEOGRAPHIC-DISCONTINUITY-001"],
+    "limitations":"High-value local synthesis rather than peer-reviewed scholarship; precise acreage and administrative details require corroboration before confidence A.",
+    "provenance":"direct_web_verification_2026-09-02"
+  },
+  {
+    "id":"EXETER-PLANTATION-SRILANKA",
+    "title":"Plantation Sri Lanka",
+    "url":"https://takingtea.exeter.ac.uk/histories/sri-lanka/",
+    "tier":"T1",
+    "anchor_role":"specialist institutional synthesis",
+    "date":"accessed 2026-09-02",
+    "author_or_institution":"Gill Juleff / University of Exeter Taking Tea project",
+    "author_institution":"University of Exeter",
+    "scope":"British opening of Kandyan highlands after 1815, road building, coffee estate expansion around Kandy, and coffee infrastructure as foundation for tea",
+    "claims_supported":["C-R44-CINNAMON-COFFEE-GEOGRAPHIC-DISCONTINUITY-001"],
+    "limitations":"Institutional research synthesis with cited bibliography; not a direct land-register comparison of individual former cinnamon gardens and coffee deeds.",
+    "provenance":"direct_web_verification_2026-09-02"
+  },
+  {
+    "id":"HOVY-PLAKKAATBOEK-1991",
+    "title":"Ceylonees Plakkaatboek: plakkaten en andere wetten uitgevaardigd door het Nederlandse bestuur op Ceylon, 1638–1796",
+    "url":null,
+    "tier":"T1",
+    "anchor_role":"primary-edition target",
+    "date":"1991",
+    "author_or_institution":"Lodewyk Hovy (ed.)",
+    "author_institution":"Verloren",
+    "scope":"Edited corpus of VOC Ceylon ordinances; target for seed-export-ban and labour-control validation",
+    "claims_supported":[],
+    "limitations":"Not consulted in extenso in RUN44. Specific cinnamon seed/plant export prohibition was not located through the secondary literature searched; absence must not be converted into proof that no such instrument exists.",
+    "provenance":"indirect_via_Ekama_2022"
+  }
+]
