@@ -1,4 +1,4 @@
-# Problem-first causal dezoom contract — Run46
+# Problem-first causal dezoom contract — Run46/47
 
 This companion contract is mandatory for advanced analytical historical-travel narration.
 
@@ -6,7 +6,7 @@ This companion contract is mandatory for advanced analytical historical-travel n
 
 The existing storytelling pipeline is strong on evidence conservation, core-before-side-story ordering, placement and uncertainty. It is weaker on **how the core itself is framed**. A chronologically correct core can still read like a sequence of facts if it does not explicitly organize evidence around a problem, a mechanism and a change of scale.
 
-Run46 adds that missing layer without changing evidence thresholds.
+Run46 adds that missing layer without changing evidence thresholds. Run47 clarifies that this is a **form-global narrative contract**: when activated for an arc, every paragraph in the selected narrative span is eligible for restructuring, even if its factual content predates the change.
 
 ## 1. Problem before chronology
 
@@ -161,13 +161,29 @@ For iterative mode, before adding new prose:
 
 Run numbers are provenance, never reader structure.
 
-## 13. QA additions
+## 13. Form-global change handling
 
-A Run46-style narrative fails review if:
+When a storytelling contract changes **form** rather than evidence, incremental append-only editing is insufficient inside the selected scope.
+
+For each impacted arc/chapter:
+1. load the complete current prose span, not only the latest delta;
+2. freeze factual propositions, uncertainty, citations and required material as the retention baseline;
+3. mark **every paragraph in scope as style/structure-review eligible**;
+4. regroup paragraphs around the bounded problem and causal sequence where needed;
+5. allow paragraph split, merge, reorder within the same chronological rupture, and transition rewrite when this improves problem-first narration;
+6. preserve all retained historical matter unless an explicit disposition records duplication, relocation or evidentiary exclusion;
+7. rerun local continuity review across the entire impacted span, including unchanged paragraphs adjacent to rewritten ones.
+
+A form-global run must not claim completion after merely inserting new paragraphs into an old narrative skeleton.
+
+## 14. QA additions
+
+A Run46/47-style narrative fails review if:
 - a chapter begins with a conclusion that has not yet been narrated;
 - a causal dezoom appears before the event/local mechanism it explains;
 - a core geographic mechanism was demoted to side-story status;
 - successive colonial regimes are rendered as full replacements where inheritance is known;
 - a port is described only as a fort location without its functional geography;
 - 360 viewpoint language invents motives or treats all actors as homogeneous;
-- unintended effects are asserted without a documented instrument and plausible transmission channel.
+- unintended effects are asserted without a documented instrument and plausible transmission channel;
+- a form-global run leaves the pre-existing paragraph structure untouched without reviewing whether it still fits the new contract.
