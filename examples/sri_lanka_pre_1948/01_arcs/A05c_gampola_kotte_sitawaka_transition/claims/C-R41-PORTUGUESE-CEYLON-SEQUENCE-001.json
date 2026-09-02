@@ -1,0 +1,12 @@
+{
+  "id":"C-R41-PORTUGUESE-CEYLON-SEQUENCE-001",
+  "type":"source_fact",
+  "claim":"Portuguese contact with Kotte began with the 1505 voyage associated with Lourenço de Almeida; the first Portuguese fortress at Colombo was established in 1518, so 1505 should not be narrated as a Portuguese conquest of Colombo.",
+  "arc":"A05c_gampola_kotte_sitawaka_transition",
+  "confidence":"A",
+  "zoom":"Z2",
+  "causal_role":"context",
+  "source_ids":["PORTUGUESE-EXPANSION-CEYLON-1518"],
+  "bounded_by":"The exact wording and legal interpretation of the earliest tribute/protection agreement vary across Portuguese and Sinhalese traditions. The claim establishes sequence, not a single uncontested treaty narrative.",
+  "notes":"Run41 correction to supplied cinnamon intakes. Prevents the anachronistic formulation 'Afonso de Albuquerque took Colombo in 1505'."
+}
