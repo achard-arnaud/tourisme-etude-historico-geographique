@@ -1,0 +1,46 @@
+[
+  {
+    "id":"Q-R43-CINNAMON-PRICE-SERIES-001",
+    "question":"Can a defensible Ceylon purchase-price -> Amsterdam/Lisbon resale-price series be reconstructed for cinnamon without mixing periods, grades, currencies and tax bases?",
+    "kind":"quantitative",
+    "arc":"A06_voc_coastal_state",
+    "status":"open",
+    "discriminating_test":"Cross-match Ceylon VOC purchase/delivery accounts with Amsterdam auction or sales accounts for the same period and grade, then normalize units and identify freight, insurance, tax and spoilage separately.",
+    "expected_evidence":["VOC Ceylon account books","Amsterdam chamber sales records","specialist historical price series"],
+    "falsifier":"Available records cannot be linked at comparable grade/time resolution or show that the illustrative spreads in the intake are materially wrong.",
+    "priority":1
+  },
+  {
+    "id":"Q-R43-CINNAMON-SEED-EXPORT-BAN-001",
+    "question":"Did the VOC explicitly prohibit export of Ceylon cinnamon seed or planting material, rather than merely controlling production and land?",
+    "kind":"source_validation",
+    "arc":"A06_voc_coastal_state",
+    "status":"open",
+    "discriminating_test":"Locate a Ceylon-specific VOC ordinance, instruction, plakkaat or correspondence explicitly restricting cinnamon seed/plant export.",
+    "expected_evidence":["VOC plakkaatboeken","Ceylon council resolutions","governor correspondence"],
+    "falsifier":"Only Moluccan clove/nutmeg prohibitions can be located and no Ceylon-specific cinnamon instrument emerges.",
+    "priority":1
+  },
+  {
+    "id":"Q-R43-CINNAMON-ASIAN-PRICE-KNOWLEDGE-001",
+    "question":"How much did Kandyan rulers, coastal brokers and South Asian merchants know about European resale prices for Ceylon cinnamon?",
+    "kind":"information_asymmetry",
+    "arc":"A06_voc_coastal_state",
+    "status":"open",
+    "discriminating_test":"Search Kandyan diplomatic correspondence, Asian merchant letters and VOC reports for explicit references to downstream European prices or margins rather than generic complaints about low local prices.",
+    "expected_evidence":["Kandyan correspondence","VOC diplomatic files","merchant correspondence"],
+    "falsifier":"Evidence only demonstrates awareness of coercion/local prices but not downstream European resale information.",
+    "priority":2
+  },
+  {
+    "id":"Q-R43-CINNAMON-TO-COFFEE-TEA-CONTINUITY-001",
+    "question":"Which specific institutions, lands, transport assets or labour-control practices actually persisted from late VOC cinnamon production into British coffee/tea plantation expansion?",
+    "kind":"causal_continuity",
+    "arc":"A07c_coffee_collapse_and_tea_conversion",
+    "status":"open",
+    "discriminating_test":"Trace named cinnamon gardens/lands and administrative practices across 1796–1830s land records, then compare with later coffee estate geography and infrastructure rather than assuming island-wide continuity.",
+    "expected_evidence":["British early Ceylon land records","former VOC cinnamon garden maps","coffee estate deeds","road/port investment records"],
+    "falsifier":"Most coffee/tea expansion occurs through new highland land conversion with little direct reuse of cinnamon assets beyond general export institutions.",
+    "priority":1
+  }
+]
