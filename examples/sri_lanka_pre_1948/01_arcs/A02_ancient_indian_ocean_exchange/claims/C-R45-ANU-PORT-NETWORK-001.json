@@ -7,7 +7,7 @@
   "causal_role":"mechanism",
   "arc":"A02_ancient_indian_ocean_exchange",
   "hil":"HIL-07_regional-global-system",
-  "source_ids":["ANTIQUITY-MANTAI-SPICE-RICE-2018","KELANIYA-ANCIENT-PORTS-2018"],
-  "bounded_by":"Do not treat all named ports as equally important or simultaneously dominant throughout the full Anuradhapura period. Uraturai becomes especially important later, including under Polonnaruwa.",
-  "notes":"Run45 deepens the Run36 museum-map illustration by naming the port system and explicitly rejecting a one-port model."
+  "source_ids":["ANTIQUITY-MANTAI-SPICE-RICE-2018","KELANIYA-ANCIENT-PORTS-2018","JRAS-MANTAI-BOHINGAMUWA-2018","IGNCA-BOPEARACHCHI-GOKANNA","CCF-POLONNARUWA-GOKANNA","FALK-GODAWAYA-EPIGRAPHS-2001"],
+  "bounded_by":"Do not treat the four named ports as equally important, simultaneously dominant, or as four literal cardinal-point outlets controlled by a single centralized port policy throughout the full Anuradhapura period. Jambukola's Ashokan/Sanghamitta episodes are chronicle traditions and should not be recast as archaeological proof. Gokanna's growing relevance to Polonnaruwa is well supported, but a precise seventh-century trade shift causing the capital transfer is not established here.",
+  "notes":"Run48 qualifies the higher-resolution museum-map reading. The robust proposition is multi-facade maritime connectivity of an inland hydraulic polity, not a static four-port state system. Mantai remains the strongest archaeologically documented long-duration entrepot among these anchors."
 }
