@@ -1,0 +1,44 @@
+{
+  "run":"RUN48",
+  "date":"2026-09-03",
+  "scope":"Qualification of two RUN36 National Museum/PGIAR field maps using higher-resolution label reading plus targeted archaeological, epigraphic and maritime-history sourcing.",
+  "inputs":[
+    "ILL-R36-ANURADHAPURA-MAP-01",
+    "ILL-R36-ANCIENT-SEA-ROUTES-02",
+    "user-supplied completion intake I-R44-MUSEUM-MAPS-PORTS-ROUTES, normalized as I-R48-MUSEUM-MAPS-PORTS-ROUTES for repository lineage"
+  ],
+  "illustration_decisions":[
+    "Both field photographs remain the preferred illustration assets because they are user-supplied, museum-contextualized and directly tied to field observation.",
+    "Both records move candidate -> vision_validated.",
+    "human_review remains pending because the illustration schema supports only pending|approved|rejected; notes mark them ready for explicit human review.",
+    "No copyrighted academic map is copied into the repository. The Antiquity Mantai figure is research-only; a CC0 Austronesian-network derivative is registered as a research comparator only."
+  ],
+  "claims_changed":[
+    "C-R45-ANU-PORT-NETWORK-001 strengthened with Mantai/Gokanna/Godavaya sources while preserving A confidence and adding stronger temporal/centralization bounds.",
+    "C-R45-GODAVAYA-CUSTOMS-001 promoted B -> A after addition of Harry Falk's specialist epigraphic publication.",
+    "C-R48-GODAWAYA-SHIPWRECK-001 added at A as direct early-historic maritime material evidence."
+  ],
+  "bridges_added":[
+    "B-R48-HYDRAULIC-MULTIPORT-001: inland hydraulic/agrarian concentration -> changing multiple coastal gateways -> Indian Ocean exchange.",
+    "B-R48-MULTIPORT-MONSOON-DIASPORA-001: multiple gateways + monsoon waiting -> repeated residence/brokerage -> possibility of durable merchant communities."
+  ],
+  "arc_updates":[
+    "A02 expanded from a thin shell into a problem-first account of inland multi-port connectivity.",
+    "A03 corrected from evidence_status shell to researched_partial because promoted RUN41/RUN45 claims already existed; its core now distinguishes monsoon mechanism, route intersection, technology-zone illustration limits and early-modern coercive change."
+  ],
+  "open_questions":[
+    "Q-R48-GOKANNA-POLONNARUWA-CAUSALITY-001: test whether Gokanna/Bay of Bengal access materially influenced the political optimum shift toward Polonnaruwa.",
+    "Q-R48-DHOW-OUTRIGGER-ZONE-CHRONOLOGY-001: recover the exact evidentiary/chronological basis of the museum's dhow/outrigger zones before any boundary claim is promoted."
+  ],
+  "rejected_or_bounded_formulations":[
+    "four cardinal ports -> corrected to multiple northern/north-western, eastern and southern maritime facades",
+    "Mantai as obligatory gateway for every ship -> rejected as overstatement",
+    "seventh-century trade shift caused Anuradhapura -> Polonnaruwa move -> retained as open causal hypothesis only",
+    "Jambukola Ashoka/Sanghamitta episodes -> chronicle tradition, not archaeological fact",
+    "Godavaya as one of the world's oldest customs offices -> unnecessary global superlative removed",
+    "Sri Lanka as the exact unique meeting point of dhow and Austronesian worlds -> downgraded to contact-zone interpretation",
+    "museum technology-zone boundaries -> illustration-only until chronology/source model is recovered"
+  ],
+  "graph":"04_graph/edges.jsonl updated with the hydraulic->multiport and multiport->monsoon-diaspora relationships.",
+  "qa":"No executable code changed. Full unit suite not run. QA limited to schema-aware illustration state transitions, source/claim/bridge endpoint review, project-local illustration references and branch comparison before fast-forward integration."
+}
