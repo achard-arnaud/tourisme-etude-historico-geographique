@@ -1,0 +1,56 @@
+{
+  "run":"RUN43",
+  "date":"2026-09-02",
+  "scope":"Cinnamon global-system intake qualification: ancient Indian Ocean routes, Portuguese coercive trade, VOC cinnamon labour/cultivation, bullion/intra-Asian finance, and bridge to British plantation economy.",
+  "delivery_branch":"main",
+  "routing":[
+    "archive/normalize supplied analytical intakes",
+    "targeted external verification of fragile propositions",
+    "promote only bounded claims with independent anchors",
+    "create causal bridges",
+    "quarantine illustrative quantitative claims as open questions",
+    "materialize one narrative side story",
+    "copy six qualified Markdown deliverables to 09_output/run41_cinnamon"
+  ],
+  "inputs":[
+    "docs/intakes/INTAKE_cannelle_commerce_ancien.md",
+    "docs/intakes/INTAKE_cannelle_portugais_transplantation.md",
+    "docs/intakes/INTAKE_cannelle_echanges_locaux.md",
+    "docs/intakes/INTAKE_economie_epices_vs_triangulaire.md",
+    "docs/intakes/INTAKE_monopole_reimportation_europe.md",
+    "docs/intakes/bridge_systeme_global_cannelle.md"
+  ],
+  "sources":["examples/sri_lanka_pre_1948/05_sources/source_register_run41_cinnamon_global.json"],
+  "promoted_claims":[
+    "C-R41-PORTUGUESE-CEYLON-SEQUENCE-001",
+    "C-R41-PORTUGUESE-COERCIVE-TRADE-001",
+    "C-R41-VOC-CINNAMON-CORVEE-001",
+    "C-R41-VOC-SYSTEMATIC-CULTIVATION-001",
+    "C-R41-BULLION-INTRAASIA-001"
+  ],
+  "bridges":[
+    "B-R41-ZHENGHE-TO-PORTUGUESE-COERCION-001",
+    "B-R41-CINNAMON-TO-PLANTATION-LABOUR-001"
+  ],
+  "side_stories":["SS-R41-CINNAMON-ROUTE-NOT-SECRET-001"],
+  "questions":["examples/sri_lanka_pre_1948/08_questions/question_register_run43_cinnamon.json"],
+  "outputs":[
+    "examples/sri_lanka_pre_1948/09_output/run41_cinnamon/intake_cannelle_commerce_ancien.md",
+    "examples/sri_lanka_pre_1948/09_output/run41_cinnamon/intake_cannelle_portugais_transplantation.md",
+    "examples/sri_lanka_pre_1948/09_output/run41_cinnamon/intake_cannelle_echanges_locaux.md",
+    "examples/sri_lanka_pre_1948/09_output/run41_cinnamon/intake_economie_epices_vs_triangulaire.md",
+    "examples/sri_lanka_pre_1948/09_output/run41_cinnamon/intake_monopole_reimportation_europe.md",
+    "examples/sri_lanka_pre_1948/09_output/run41_cinnamon/bridge_systeme_global_cannelle.md"
+  ],
+  "corrections_applied":[
+    "1505 is first Portuguese contact associated with Lourenco de Almeida, not an Afonso de Albuquerque conquest of Colombo",
+    "first Portuguese Colombo fortress is 1518",
+    "Portuguese/VOC monopoly language is bounded by Asian circumvention, counter-trade and dependence on local rulers",
+    "VOC systematic cinnamon cultivation begins in the late 1760s before British rule",
+    "American silver is an important bullion enabler but not costless financing; VOC intra-Asian trade also matters",
+    "illustrative price/profit/volume multipliers are not promoted",
+    "Atlantic slavery comparison retained only as historiographic/mechanism comparator, without invented profitability ratios"
+  ],
+  "namespace_note":"Run41 and Run42 already existed in the repository when the chronology check was performed. The newly created cinnamon structured artifact IDs retain the R41-CINNAMON prefix because full IDs are unique and already cross-linked; RUN43 is the canonical integration/run manifest for this delivery. Future edits should cite this manifest rather than infer chronology from the embedded artifact prefix.",
+  "qa_status":"structural review performed through repository contracts and explicit source/claim/bridge lineage; full local Python QA could not be executed because the execution environment had no network access to clone the repository. GitHub CI/status remains the final acceptance gate."
+}
