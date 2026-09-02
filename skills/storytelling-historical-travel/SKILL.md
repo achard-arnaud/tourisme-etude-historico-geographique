@@ -7,6 +7,12 @@ description: Use when historical evidence must become a reader-facing narrative 
 
 This file is an **orchestrator**, not a prose prompt. Executable contracts win over prose if they conflict.
 
+## Mandatory narrative-shape contract
+
+For advanced analytical narration, this skill **must consume** `PROBLEM_FIRST_CAUSAL_DEZOOM_CONTRACT.md` before drafting. That contract is form-global: when a run activates it for an arc/chapter, every paragraph in that selected span becomes eligible for structural reread and rewrite, even if the underlying facts are unchanged. Evidentiary approval is preserved; paragraph-shape approval is not.
+
+A form-global iterative pass must therefore load the complete prose span, freeze the factual/uncertainty/citation baseline, then re-evaluate problem framing, event→mechanism→consequence→dezoom order, geographic causal work, 360 viewpoints, regime inheritance and transitions across **all** paragraphs in scope. It is not satisfied by appending new delta paragraphs to the previous skeleton.
+
 ## Core architecture — one composition engine, two bootstraps
 
 Run32 removed the false split between an “iterative writer” and a “from-scratch writer”. Run41 fixes the editing order: **the chronological core is drafted and reread before new side stories are placed**. The default placement is now explicit: **a side story lives inside the logical paragraph that needs it**, at a safe sentence boundary after its trigger. Inter-paragraph placement is a density/structure fallback, not the normal case.
@@ -34,11 +40,13 @@ Run32 removed the false split between an “iterative writer” and a “from-sc
    - write the chronological/causal trunk first;
    - source-attested fact or observed texture before mechanism;
    - preserve scope and uncertainty;
+   - when the form-global contract is active, derive a bounded reader problem from the relevant graph and review the whole selected prose span rather than only new evidence;
    - no invented dialogue, thoughts, motives, composite characters or fabricated sensory facts.
 
 5. **Independent core reread / repair, then freeze**
    - run paragraph factual, HIL/scope and style review on the core without new side stories;
    - repair weak transitions, chronology and causal overload;
+   - for form-global runs, this review covers all paragraphs in the impacted span and may split, merge or locally reorder prose inside the same chronological rupture while preserving historical matter;
    - freeze this reviewed core as the placement substrate;
    - a side story must never hide a weak core transition that should have been repaired here.
 
@@ -78,6 +86,7 @@ Run32 removed the false split between an “iterative writer” and a “from-sc
 - load the approved canonical manuscript and append-only construction journal;
 - preserve the approved reader scaffold;
 - apply bounded, chronologically placed deltas;
+- when the active style contract is form-global, the delta selects the **scope** but does not limit which pre-existing paragraphs inside that scope may be rewritten;
 - retention against the baseline is a hard concern.
 
 `from_scratch`
@@ -199,6 +208,7 @@ Every final eligible historical unit gets one disposition: `included`, `included
 Do not export final if:
 - reader scaffold order is violated;
 - an iterative run silently drops baseline material;
+- a form-global iterative run treats pre-existing paragraph shape inside the selected scope as immutable;
 - an eligible new side story has no valid host paragraph or local interstitial fallback;
 - more than one side story is embedded in the same logical paragraph;
 - three consecutive paragraphs all retain embedded side stories instead of applying the density fallback;
