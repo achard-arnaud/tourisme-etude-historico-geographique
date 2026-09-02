@@ -1,0 +1,13 @@
+{
+  "id":"C-R45-GODAVAYA-CUSTOMS-001",
+  "type":"source_fact",
+  "claim":"At Godavaya on Sri Lanka's southern coast, an inscription attributed to the early centuries CE records customs revenue collected at the port and assigned to the local monastery, providing direct evidence that maritime trade could be fiscally integrated with religious institutions during the Anuradhapura period.",
+  "confidence":"B",
+  "zoom":"Z2",
+  "causal_role":"mechanism",
+  "arc":"A02_ancient_indian_ocean_exchange",
+  "hil":"HIL-03_economy-infrastructure",
+  "source_ids":["KELANIYA-ANCIENT-PORTS-2018"],
+  "bounded_by":"The present Run45 source is a specialist academic synthesis citing the inscription; confidence remains B until the inscription's primary publication is attached directly.",
+  "notes":"Useful counterweight to a Mantai-only narrative and a bridge to monastery-fiscal integration."
+}
