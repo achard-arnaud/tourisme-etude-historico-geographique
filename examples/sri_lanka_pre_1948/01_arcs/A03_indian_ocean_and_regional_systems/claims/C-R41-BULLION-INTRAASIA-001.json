@@ -1,0 +1,12 @@
+{
+  "id":"C-R41-BULLION-INTRAASIA-001",
+  "type":"source_fact",
+  "claim":"Early-modern European trade with Asia was heavily dependent on imported purchasing power in precious metals, much of it ultimately connected to American silver, but the VOC also built profitable intra-Asian trade circuits that generated bullion and reduced its dependence on remittances from Europe.",
+  "arc":"A03_indian_ocean_and_regional_systems",
+  "confidence":"A",
+  "zoom":"Z4",
+  "causal_role":"mechanism",
+  "source_ids":["PALMA-SILVA-EUROASIA-SILVER-2024","CAMBRIDGE-VOC-INDIAN-MERCHANTS-1680"],
+  "bounded_by":"This is a system-level financing claim. It does not establish that a specific shipment of Ceylon cinnamon was directly purchased with newly mined American silver, nor that American bullion was costless to European empires.",
+  "notes":"Run41 replaces the intake formulation 'financement américain' with a more precise bullion + intra-Asian trade mechanism."
+}
