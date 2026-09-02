@@ -1,0 +1,16 @@
+{
+  "id":"B-R45-PORTUGUESE-DISPLACEMENT-TO-KANDY-001",
+  "from_claim":"C-R45-PORTUGUESE-MUSLIM-DISPLACEMENT-001",
+  "to_claim":"C-R45-KANDY-MUSLIM-INTERMEDIARIES-001",
+  "question":"Did Portuguese pressure on Muslim coastal commerce help reorient some Muslim communities toward the Kandyan interior and eastern routes?",
+  "mechanism":"Loss or restriction of access to selected Portuguese-dominated coastal nodes increased the value of alternative political protection and inland/eastern commercial corridors; Kandyan rulers in turn could benefit from merchants and specialists with transregional contacts.",
+  "result":"B",
+  "source_ids":["DEWARAJA-MUSLIMS-SL-1994","CAMBRIDGE-MUSLIM-STEREOTYPES-SL-2022"],
+  "transmission_channel":"coastal commercial pressure -> spatial relocation/reorientation -> Kandyan protection and intermediary functions",
+  "time_lag":"sixteenth to seventeenth centuries, with longer-term eastern/inland settlement consequences",
+  "scale":"Z1 coastal settlements to Z3 kingdom/regional networks",
+  "confounders":["pre-existing inland Muslim settlement","South Indian migration","Kandyan commercial policy","Dutch-period movements","local marriage networks"],
+  "transportability":"bounded mechanism",
+  "integration_action":"bridge",
+  "bounded_by":"Do not infer that all Muslim settlement in Kandy or the east resulted from Portuguese expulsions; several migration and settlement processes overlapped."
+}
