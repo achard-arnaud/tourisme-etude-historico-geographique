@@ -6,7 +6,7 @@
   "confidence":"A",
   "zoom":"Z2",
   "causal_role":"mechanism",
-  "source_ids":["CAMBRIDGE-VOC-CEYLON-CORVEE-2019"],
-  "bounded_by":"The relationship between caste identity, pre-colonial service obligations and VOC reorganisation is historically layered. This claim establishes VOC use and intensification of corvée, not that the Company invented the social category ex nihilo.",
-  "notes":"Run41 converts the user intake's Salagama/chalia proposition into a bounded labour-regime claim."
+  "source_ids":["CAMBRIDGE-VOC-CEYLON-CORVEE-2019","EKAMA-BOUNDARIES-BONDAGE-2022"],
+  "bounded_by":"The relationship between caste identity, pre-colonial service obligations and VOC reorganisation is historically layered. This claim establishes VOC use and intensification of corvée, not that the Company invented the social category ex nihilo. Ekama's discussion of the 1661 ordinance supports Company regulation of marriage/child placement used to prevent cinnamon peelers escaping caste duties, but the underlying Hovy edition should be consulted directly before primary-source quotation.",
+  "notes":"RUN44 adds a corroborating labour-law anchor to the RUN41 bounded proposition."
 }
