@@ -1,0 +1,13 @@
+{
+  "id":"C-R49-MAHAWELI-GOKANNA-CORRIDOR-001",
+  "type":"source_fact",
+  "claim":"Polonnaruwa's strategic geography included access to the Mahaweli corridor leading toward the Trincomalee/Koddiyar Bay system; official Sri Lankan heritage synthesis treats proximity to the eastern natural harbour and river transport as important to Polonnaruwa's foreign relations and movement of merchandise into the interior.",
+  "confidence":"A",
+  "zoom":"Z2-Z3",
+  "causal_role":"mechanism",
+  "arc":"A03_indian_ocean_and_regional_systems",
+  "hil":"HIL-02_geography-environment",
+  "source_ids":["CCF-POLONNARUWA-HERITAGE","UNESCO-MAHAWELI-PILGRIM-ROUTE"],
+  "bounded_by":"This establishes a geographic and transport corridor, not continuous navigability for all cargoes, a quantified trade volume, or proof that maritime access caused the capital shift.",
+  "notes":"Run49 closure work for Q-R48-GOKANNA-POLONNARUWA-CAUSALITY-001."
+}
