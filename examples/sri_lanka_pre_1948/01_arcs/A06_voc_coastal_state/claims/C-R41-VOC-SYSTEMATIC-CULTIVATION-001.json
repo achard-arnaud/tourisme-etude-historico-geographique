@@ -1,0 +1,12 @@
+{
+  "id":"C-R41-VOC-SYSTEMATIC-CULTIVATION-001",
+  "type":"source_fact",
+  "claim":"Systematic cultivation of Ceylon cinnamon began under the Dutch VOC in the late 1760s, with cinnamon gardens developed under Governor Iman Willem Falck; British rule therefore inherited an already-emerging plantation system rather than inventing cinnamon cultivation from scratch after 1796.",
+  "arc":"A06_voc_coastal_state",
+  "confidence":"A",
+  "zoom":"Z2",
+  "causal_role":"rupture",
+  "source_ids":["SL-CINNAMON-DEPT-HISTORY-2026","SPRINGER-CINNAMON-SL-HISTORY-2020"],
+  "bounded_by":"Dates are commonly given between 1765 and 1769 for the start of experiments and 1767–1770 for plantation establishment. The claim concerns systematic cultivation, not the absence of all earlier deliberate planting.",
+  "notes":"Run41 correction to the initial bridge, which incorrectly assigned the decisive cultivation shift to the British period."
+}
