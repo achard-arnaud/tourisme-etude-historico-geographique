@@ -1,0 +1,16 @@
+{
+  "id":"B-R41-CINNAMON-TO-PLANTATION-LABOUR-001",
+  "from_claim":"C-R41-VOC-CINNAMON-CORVEE-001",
+  "to_claim":"C-R18-LABOUR-RECRUIT-001",
+  "question":"Is there a meaningful continuity from VOC cinnamon labour to nineteenth-century British plantation labour?",
+  "mechanism":"Both regimes orient labour toward export commodities under external commercial power, but the labour institutions differ sharply: VOC cinnamon relies on caste/service corvée among local populations, whereas British coffee/tea estates increasingly mobilise wage and contract migration from South India. The continuity is therefore in export-oriented labour extraction, not in a single unchanged labour institution.",
+  "result":"B",
+  "source_ids":["CAMBRIDGE-VOC-CEYLON-CORVEE-2019"],
+  "transmission_channel":"export commodity demand -> coercive/institutional labour mobilisation -> later reorganisation under plantation capitalism",
+  "time_lag":"18th-century VOC cinnamon regime to late-1830s and later British estate recruitment",
+  "scale":"Z1 labour obligation to Z3 island export economy",
+  "confounders":["abolition and legal change","land policy","estate ownership","migration networks","coffee and tea agronomy","different labour markets"],
+  "transportability":"bounded continuity",
+  "integration_action":"bridge",
+  "bounded_by":"Do not describe Salagama/chalia corvée as the direct institutional ancestor of Indian Tamil estate labour. The bridge is structural and comparative, not genealogical."
+}
