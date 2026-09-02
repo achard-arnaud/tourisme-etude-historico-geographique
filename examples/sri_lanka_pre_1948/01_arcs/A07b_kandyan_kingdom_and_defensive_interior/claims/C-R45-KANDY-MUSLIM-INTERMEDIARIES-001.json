@@ -1,0 +1,13 @@
+{
+  "id":"C-R45-KANDY-MUSLIM-INTERMEDIARIES-001",
+  "type":"source_fact",
+  "claim":"Within the Kandyan kingdom, Muslim communities were not merely refugees from coastal pressure: merchants and intermediaries also performed useful economic and diplomatic functions, including transport, brokerage and connections toward Indian Ocean trading networks; Muslim physicians and other specialists also appear in the kingdom's social landscape.",
+  "confidence":"B",
+  "zoom":"Z2",
+  "causal_role":"mechanism",
+  "arc":"A07b_kandyan_kingdom_and_defensive_interior",
+  "hil":"HIL-04_society-demography",
+  "source_ids":["DEWARAJA-MUSLIMS-SL-1994"],
+  "bounded_by":"Dewaraja is the principal specialist anchor in this run and emphasizes long-term accommodation. Individual offices, routes and episodes require independent corroboration before more granular promotion.",
+  "notes":"Important correction to a pure-refuge narrative: displacement and functional integration can coexist."
+}
