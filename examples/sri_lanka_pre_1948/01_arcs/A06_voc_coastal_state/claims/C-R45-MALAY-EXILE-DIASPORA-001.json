@@ -1,0 +1,13 @@
+{
+  "id":"C-R45-MALAY-EXILE-DIASPORA-001",
+  "type":"source_fact",
+  "claim":"A substantial strand in the formation of the Sri Lankan Malay community came from coercive mobility within the Dutch and later British imperial systems: from the late seventeenth century the VOC used Ceylon as a place of banishment for political opponents and royal lineages from the Indonesian archipelago, while soldiers, convicts, enslaved people and their entourages also moved to the island; British rule added further Malay military migration.",
+  "confidence":"A",
+  "zoom":"Z4",
+  "causal_role":"consequence",
+  "arc":"A06_voc_coastal_state",
+  "hil":"HIL-04_society-demography",
+  "source_ids":["CAMBRIDGE-RICCI-BANISHMENT-2019"],
+  "bounded_by":"The later Sri Lankan Malay community had heterogeneous origins and identity formation was gradual. Not every migrant from the archipelago was Muslim, an exile, or a voluntary migrant.",
+  "notes":"Strong side-story candidate: Ceylon as an imperial exile node linking Java, Sulawesi, the Malay world and South Africa."
+}
