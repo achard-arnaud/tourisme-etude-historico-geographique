@@ -1,0 +1,12 @@
+{
+  "id":"C-R41-PORTUGUESE-COERCIVE-TRADE-001",
+  "type":"source_fact",
+  "claim":"The Portuguese Estado da Índia used forts, armed shipping, royal monopoly privileges and the cartaz pass system to tax and redirect parts of Indian Ocean commerce, but this coercive project never produced complete control: Asian merchants, rival ports and regional rulers continued to trade, collaborate, resist and circumvent Portuguese regulation.",
+  "arc":"A03_indian_ocean_and_regional_systems",
+  "confidence":"A",
+  "zoom":"Z4",
+  "causal_role":"mechanism",
+  "source_ids":["CAMBRIDGE-INDIAN-PORTS-EUROPEAN-2017","CAMBRIDGE-MASULIPATNAM-ANTI-PORTUGUESE"],
+  "bounded_by":"This is an Indian Ocean system-level claim. Effectiveness varied sharply by commodity, coast, decade and local alliance. It does not imply Portuguese naval supremacy everywhere or continuous enforcement of every monopoly claim.",
+  "notes":"Run41 promotes the central correction: European rupture = militarised regulation and exclusivity attempts, not discovery of an unknown route or total closure of Asian trade."
+}
