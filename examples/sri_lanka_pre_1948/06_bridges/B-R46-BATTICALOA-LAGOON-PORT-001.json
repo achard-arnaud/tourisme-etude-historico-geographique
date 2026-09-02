@@ -1,0 +1,16 @@
+{
+  "id":"B-R46-BATTICALOA-LAGOON-PORT-001",
+  "from_claim":"C-R17-KDY-PASSES-001",
+  "to_claim":"C-PRE-001",
+  "question":"Why does Batticaloa matter in a colonial port system even though it is not a deep-water naval harbour like Trincomalee?",
+  "mechanism":"Batticaloa's lagoon, islands and coastal openings concentrate protected local circulation and connect the eastern littoral to an agricultural hinterland. Fortifying an island inside this lagoon therefore converts an existing hydrological and commercial interface into a military-administrative checkpoint. The colonial value of the site derives from the geography it controls, not from fortification alone.",
+  "result":"B",
+  "source_ids":["MCGILVRAY-BATTICALOA-BURGHERS-1982"],
+  "transmission_channel":"lagoon morphology -> concentrated local circulation -> fortified checkpoint -> coast/interior control",
+  "time_lag":"early seventeenth-century Portuguese fortification and VOC capture; longer persistence as eastern administrative node",
+  "scale":"Z1 lagoon/island morphology to Z3 eastern-coast sovereignty",
+  "confounders":["changing lagoon entrances","period-specific trade volumes","Kandyan authority on the eastern littoral","different naval requirements from Trincomalee"],
+  "transportability":"mechanism",
+  "integration_action":"bridge",
+  "bounded_by":"This bridge does not establish Batticaloa as a major oceanic entrepot or a continuous navigable route to Kandy. It classifies Batticaloa primarily as a lagoon-interface port whose political value changes by period."
+}
