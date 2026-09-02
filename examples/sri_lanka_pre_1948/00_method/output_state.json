@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "baseline_markdown": "09_output/report_v1_full.md",
-  "delta_markdown": "09_output/report.md",
+  "delta_markdown": "09_output/run46_storytelling_iterative_delta.md",
   "canonical_markdown": "09_output/report_v3_full.md",
   "reader_markdown": "09_output/report_v3_full.md",
   "reader_docx": "09_output/Sri_Lanka_Fresque_historico_geographique_vol_retour_v3.docx",
