@@ -1,0 +1,22 @@
+{
+  "run":"RUN49",
+  "date":"2026-09-03",
+  "scope":"Close the two RUN48 museum-map questions where possible, promote only bounded claims, and regenerate the A02→A03 narrative delta under the problem-first causal storytelling contract.",
+  "research_results":{
+    "gokanna_polonnaruwa":"resolved_bounded: Mahaweli/east-coast access increased Polonnaruwa's strategic-commercial value, but the capital shift remains multi-causal and cannot be reduced to a seventh-century Bay-of-Bengal trade shift.",
+    "dhow_outrigger":"resolved_negative_within_scope: the museum technology-zone boundaries remain illustration-only because their chronology and exact evidentiary basis are not recoverable from the accessible 1990 context or validated by modern nautical literature."
+  },
+  "claims_added":[
+    "C-R49-MAHAWELI-GOKANNA-CORRIDOR-001",
+    "C-R49-POLONNARUWA-MULTICAUSAL-GEOGRAPHY-001"
+  ],
+  "sources":"examples/sri_lanka_pre_1948/05_sources/source_register_run49_gokanna_polonnaruwa.json",
+  "questions_updated":"examples/sri_lanka_pre_1948/08_questions/question_register_run48_museum_maps.json",
+  "arcs_updated":[
+    "examples/sri_lanka_pre_1948/01_arcs/A02_ancient_indian_ocean_exchange/ARC.md",
+    "examples/sri_lanka_pre_1948/01_arcs/A03_indian_ocean_and_regional_systems/ARC.md"
+  ],
+  "storytelling_delta":"examples/sri_lanka_pre_1948/09_output/run49_storytelling_A02_A03.md",
+  "narrative_problem":"How does an inland hydraulic polity become deeply connected to Indian Ocean systems, and how do changing maritime networks alter the value of inland political centres without mechanically determining capital relocation?",
+  "qa":"No executable code changed. QA limited to source/claim/question consistency, explicit falsification of monocausal and static-zone formulations, output-state routing, and fast-forward branch comparison before delivery."
+}
