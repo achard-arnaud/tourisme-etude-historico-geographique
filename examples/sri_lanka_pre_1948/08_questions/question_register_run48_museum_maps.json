@@ -4,25 +4,28 @@
     "question":"How much did the growing importance of Gokanna/Trincomalee and Bay of Bengal exchange contribute to the strategic value of Polonnaruwa and to the longer shift away from Anuradhapura?",
     "kind":"causal_geography",
     "arc":"A03_indian_ocean_and_regional_systems",
-    "status":"open",
-    "research_state":"bounded_hypothesis",
+    "status":"resolved_bounded",
+    "research_state":"strong_version_falsified_bounded_contribution_supported",
     "discriminating_test":"Compare dated evidence for Gokanna traffic, Mahaweli transport and east-coast exchange with the political/military chronology of late Anuradhapura and early Polonnaruwa; seek sources that explicitly weigh maritime access against Chola occupation, defence, irrigation and dynastic factors.",
     "expected_evidence":["port archaeology at Trincomalee/Gokanna","Mahaweli transport evidence","late-Anuradhapura/Polonnaruwa historical geography","Chola and Sri Lankan inscriptions"],
     "falsifier":"Gokanna becomes materially important only after Polonnaruwa is already established, or specialist studies treat maritime access as secondary with no evidence for influence on centre selection.",
     "run48_result":"Current CCF and specialist material support Gokanna as a long-known eastern port and a strong Polonnaruwa corridor, but do not justify the stronger intake formula 'seventh-century trade shift caused the move from Anuradhapura'.",
-    "priority":2
+    "run49_result":"Official CCF synthesis establishes that Polonnaruwa was already strategically important during the Anuradhapura period and links its later prosperity/foreign relations to the eastern natural harbour and Mahaweli transport. UNESCO material independently corroborates the Mahaweli-Trincomalee corridor. The strong monocausal hypothesis is rejected: east-coast access is promoted only as one contributor alongside pre-existing strategic status, defence, Chola administrative use, agriculture/irrigation and dynastic choice.",
+    "claim_ids":["C-R49-MAHAWELI-GOKANNA-CORRIDOR-001","C-R49-POLONNARUWA-MULTICAUSAL-GEOGRAPHY-001"],
+    "priority":3
   },
   {
     "id":"Q-R48-DHOW-OUTRIGGER-ZONE-CHRONOLOGY-001",
     "question":"What dates and evidentiary basis underlie the dhow and outrigger technology zones drawn on the National Museum/PGIAR Ancient Sea Routes panel?",
     "kind":"source_validation",
     "arc":"A03_indian_ocean_and_regional_systems",
-    "status":"open",
-    "research_state":"source_identified_boundaries_unresolved",
+    "status":"resolved_negative_within_scope",
+    "research_state":"illustration_only_boundaries_unvalidated",
     "discriminating_test":"Inspect the relevant chapter/figure and bibliography in Bandaranayake et al. 1990, then compare its vessel-zone model with Doran, Hornell, Manguin and newer nautical archaeology to identify whether the boundaries are ethnographic survivals, archaeological reconstructions or a multi-period synthesis.",
     "expected_evidence":["Sri Lanka and the Silk Road of the Sea 1990 full figure/context","Doran/Hornell vessel-distribution studies","Manguin 2016","nautical archaeology of Sri Lankan outriggers and western Indian Ocean sewn craft"],
     "falsifier":"The panel is only a schematic educational synthesis with no defensible date-specific boundaries, in which case it remains illustration-only and no boundary claim is promoted.",
     "run48_result":"Book attribution is verified and independent scholarship strongly supports Austronesian long-distance shipping and Sri Lankan/South Indian outrigger traditions, but the panel's exact zones remain chronologically undated and must not be treated as fixed historical frontiers.",
-    "priority":1
+    "run49_result":"The 1990 book identity is confirmed, while accessible nautical literature confirms a living Sri Lankan outrigger tradition but does not provide a defensible date for the museum panel's static technology-zone boundaries. Modern nautical scholarship also warns against retro-reading classical vessel descriptions as outrigger proof. Therefore the zone boundaries remain illustration-only; the supported claim is limited to long-distance east/west connectivity and contact among different maritime traditions.",
+    "priority":4
   }
 ]
