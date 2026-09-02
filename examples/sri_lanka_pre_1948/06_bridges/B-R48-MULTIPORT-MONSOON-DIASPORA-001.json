@@ -1,0 +1,16 @@
+{
+  "id":"B-R48-MULTIPORT-MONSOON-DIASPORA-001",
+  "from_claim":"C-R45-ANU-PORT-NETWORK-001",
+  "to_claim":"C-R45-MONSOON-MERCHANT-DIASPORA-001",
+  "question":"What changes when a multi-port island is inserted into a seasonal monsoon trading system rather than a continuous linear sea route?",
+  "mechanism":"Several coastal gateways exposed Sri Lanka to overlapping circuits, while monsoon reversal made timing and waiting part of maritime economics. Ports could therefore become not only transshipment points but places of repeated residence, brokerage and trust-building. Over time this increased the possibility that mobile merchant groups developed durable local institutions and communities without requiring one founding migration or one permanently dominant port.",
+  "result":"A",
+  "source_ids":["CAMBRIDGE-MONSOON-DIASPORAS-2013","CAMBRIDGE-ISLAMIC-INDIAN-OCEAN-2010","ANTIQUITY-MANTAI-SPICE-RICE-2018","KELANIYA-ANCIENT-PORTS-2018"],
+  "transmission_channel":"multiple coastal gateways + seasonal return winds -> repeated waiting/residence -> brokerage/trust networks -> durable merchant-community formation",
+  "time_lag":"repeated seasonal cycles over generations; timing varies by port and community",
+  "scale":"Z1 ports to Z3 Indian Ocean circulation and Z2 resident communities",
+  "confounders":["political protection or persecution","marriage and local kinship","changes in port hierarchy","religious institutions","overland redistribution","different migration streams"],
+  "transportability":"mechanism",
+  "integration_action":"bridge",
+  "bounded_by":"This bridge does not date the first Muslim settlement, assign a single Arab origin to Sri Lankan Muslims, or imply that monsoon waiting automatically produced permanent settlement in every port."
+}
