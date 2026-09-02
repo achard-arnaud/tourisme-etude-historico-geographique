@@ -1,0 +1,28 @@
+[
+  {
+    "id":"Q-R48-GOKANNA-POLONNARUWA-CAUSALITY-001",
+    "question":"How much did the growing importance of Gokanna/Trincomalee and Bay of Bengal exchange contribute to the strategic value of Polonnaruwa and to the longer shift away from Anuradhapura?",
+    "kind":"causal_geography",
+    "arc":"A03_indian_ocean_and_regional_systems",
+    "status":"open",
+    "research_state":"bounded_hypothesis",
+    "discriminating_test":"Compare dated evidence for Gokanna traffic, Mahaweli transport and east-coast exchange with the political/military chronology of late Anuradhapura and early Polonnaruwa; seek sources that explicitly weigh maritime access against Chola occupation, defence, irrigation and dynastic factors.",
+    "expected_evidence":["port archaeology at Trincomalee/Gokanna","Mahaweli transport evidence","late-Anuradhapura/Polonnaruwa historical geography","Chola and Sri Lankan inscriptions"],
+    "falsifier":"Gokanna becomes materially important only after Polonnaruwa is already established, or specialist studies treat maritime access as secondary with no evidence for influence on centre selection.",
+    "run48_result":"Current CCF and specialist material support Gokanna as a long-known eastern port and a strong Polonnaruwa corridor, but do not justify the stronger intake formula 'seventh-century trade shift caused the move from Anuradhapura'.",
+    "priority":2
+  },
+  {
+    "id":"Q-R48-DHOW-OUTRIGGER-ZONE-CHRONOLOGY-001",
+    "question":"What dates and evidentiary basis underlie the dhow and outrigger technology zones drawn on the National Museum/PGIAR Ancient Sea Routes panel?",
+    "kind":"source_validation",
+    "arc":"A03_indian_ocean_and_regional_systems",
+    "status":"open",
+    "research_state":"source_identified_boundaries_unresolved",
+    "discriminating_test":"Inspect the relevant chapter/figure and bibliography in Bandaranayake et al. 1990, then compare its vessel-zone model with Doran, Hornell, Manguin and newer nautical archaeology to identify whether the boundaries are ethnographic survivals, archaeological reconstructions or a multi-period synthesis.",
+    "expected_evidence":["Sri Lanka and the Silk Road of the Sea 1990 full figure/context","Doran/Hornell vessel-distribution studies","Manguin 2016","nautical archaeology of Sri Lankan outriggers and western Indian Ocean sewn craft"],
+    "falsifier":"The panel is only a schematic educational synthesis with no defensible date-specific boundaries, in which case it remains illustration-only and no boundary claim is promoted.",
+    "run48_result":"Book attribution is verified and independent scholarship strongly supports Austronesian long-distance shipping and Sri Lankan/South Indian outrigger traditions, but the panel's exact zones remain chronologically undated and must not be treated as fixed historical frontiers.",
+    "priority":1
+  }
+]
