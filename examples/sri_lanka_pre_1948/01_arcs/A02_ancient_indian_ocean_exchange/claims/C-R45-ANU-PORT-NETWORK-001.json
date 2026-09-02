@@ -1,0 +1,13 @@
+{
+  "id":"C-R45-ANU-PORT-NETWORK-001",
+  "type":"source_fact",
+  "claim":"The Anuradhapura-period maritime system was multi-port rather than dependent on a single gateway: Mantai/Mahatittha was a major north-western entrepot, Jambukolapattana served northern embarkation and landing, Gokanna connected the east coast to Bay of Bengal traffic, and Godavaya anchored a southern route; the importance and function of each port changed over time.",
+  "confidence":"A",
+  "zoom":"Z3",
+  "causal_role":"mechanism",
+  "arc":"A02_ancient_indian_ocean_exchange",
+  "hil":"HIL-07_regional-global-system",
+  "source_ids":["ANTIQUITY-MANTAI-SPICE-RICE-2018","KELANIYA-ANCIENT-PORTS-2018"],
+  "bounded_by":"Do not treat all named ports as equally important or simultaneously dominant throughout the full Anuradhapura period. Uraturai becomes especially important later, including under Polonnaruwa.",
+  "notes":"Run45 deepens the Run36 museum-map illustration by naming the port system and explicitly rejecting a one-port model."
+}
