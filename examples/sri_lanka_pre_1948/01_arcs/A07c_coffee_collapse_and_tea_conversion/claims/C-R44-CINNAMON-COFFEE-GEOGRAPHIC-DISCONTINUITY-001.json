@@ -1,0 +1,12 @@
+{
+  "id":"C-R44-CINNAMON-COFFEE-GEOGRAPHIC-DISCONTINUITY-001",
+  "type":"source_fact",
+  "claim":"Late-VOC systematic cinnamon cultivation was centred in the low-country coastal belt around Colombo and related maritime districts, whereas the nineteenth-century British coffee boom expanded primarily into the central Kandyan highlands after 1815; tea then reused much of the coffee highland estate and transport system. The long-run continuity from cinnamon to coffee/tea is therefore export-institutional and macroeconomic rather than a direct reuse of the same plantation lands.",
+  "arc":"A07c_coffee_collapse_and_tea_conversion",
+  "confidence":"B",
+  "zoom":"Z3",
+  "causal_role":"mechanism_boundary",
+  "source_ids":["ECHELON-PLANTATIONS-2018","EXETER-PLANTATION-SRILANKA","SL-CINNAMON-DEPT-HISTORY-2026"],
+  "bounded_by":"RUN44 did not trace every named cinnamon parcel through British 1796–1830s land records. The evidence strongly supports a coastal-cinnamon versus Kandyan-highland coffee/tea spatial discontinuity, but confidence A requires direct cadastral/deed comparison. Do not claim that no former cinnamon land ever entered later plantation uses.",
+  "notes":"Closes Q-R43-CINNAMON-TO-COFFEE-TEA-CONTINUITY-001 at bounded confidence. Narrative payoff: 1815 changes not only sovereignty but the economic geography available to colonial plantation capital."
+}
