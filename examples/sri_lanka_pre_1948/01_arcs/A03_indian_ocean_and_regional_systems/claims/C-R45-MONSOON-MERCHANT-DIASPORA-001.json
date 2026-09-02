@@ -1,0 +1,13 @@
+{
+  "id":"C-R45-MONSOON-MERCHANT-DIASPORA-001",
+  "type":"mechanism",
+  "claim":"Indian Ocean monsoon seasonality encouraged merchants and crews to remain for prolonged periods in foreign ports while waiting for return winds; such repeated residence helped create durable merchant diasporas and trust networks, providing a mechanism through which Muslim commercial communities could take root in Sri Lankan ports without implying a single founding migration.",
+  "confidence":"A",
+  "zoom":"Z4",
+  "causal_role":"mechanism",
+  "arc":"A03_indian_ocean_and_regional_systems",
+  "hil":"HIL-07_regional-global-system",
+  "source_ids":["CAMBRIDGE-MONSOON-DIASPORAS-2013","CAMBRIDGE-ISLAMIC-INDIAN-OCEAN-2010","UCL-CROSSROADS-2017-R36"],
+  "bounded_by":"This establishes a regional mechanism, not a precise date for the first permanent Muslim settlement in Sri Lanka or a uniquely Arab origin for later Sri Lankan Muslim communities.",
+  "notes":"Bridge from the Run36/Run45 sea-route map to the Muslim-community research intake."
+}
