@@ -1,0 +1,13 @@
+{
+  "id":"C-R49-POLONNARUWA-MULTICAUSAL-GEOGRAPHY-001",
+  "type":"interpretive_synthesis",
+  "claim":"Polonnaruwa's rise should be treated as multi-causal: it was already a strategically important provincial centre before becoming the capital; its inland position, relation to the Mahaweli, agricultural/hydraulic potential, Chola-era administrative use, and easier connection to the eastern seaboard all increased its value. Current evidence supports Gokanna/Trincomalee access as one contributor to that value, but not as a demonstrated primary cause of the shift from Anuradhapura.",
+  "confidence":"B",
+  "zoom":"Z2-Z3",
+  "causal_role":"synthesis",
+  "arc":"A03_indian_ocean_and_regional_systems",
+  "hil":"HIL-07_regional-global-system",
+  "source_ids":["CCF-POLONNARUWA-HERITAGE","UNESCO-MAHAWELI-PILGRIM-ROUTE"],
+  "bounded_by":"Do not narrate a simple seventh-century Bay-of-Bengal trade shift as the cause of capital relocation. Chola conquest, defence, pre-existing strategic status, irrigation/agriculture and dynastic choices remain independent mechanisms.",
+  "notes":"Run49 resolves the strong version of the Gokanna hypothesis negatively while retaining a bounded positive contribution claim."
+}
