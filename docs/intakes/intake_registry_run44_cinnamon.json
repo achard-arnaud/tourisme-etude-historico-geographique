@@ -1,0 +1,57 @@
+[
+  {
+    "id":"I-R44-CINNAMON-QUESTIONS-SYNTHESIS",
+    "source_name":"INTAKE_R44_synthese_questions_run43.md",
+    "intake_kind":"research_bundle",
+    "first_run":"RUN44",
+    "manifest":"docs/RUN44_CINNAMON_QUESTION_CLOSURE_MANIFEST.json",
+    "preservation_status":"archived",
+    "repo_path":"docs/intakes/INTAKE_R44_synthese_questions_run43.md",
+    "outputs":["examples/sri_lanka_pre_1948/08_questions/question_register_run44_cinnamon.json","examples/sri_lanka_pre_1948/09_output/run41_cinnamon/RUN44_cinnamon_questions_closure.md"],
+    "notes":"Synthesis of four RUN43 research gates; research inputs remain triggers and do not establish claims by themselves."
+  },
+  {
+    "id":"I-R44-CINNAMON-PRICE-SERIES-RESPONSE",
+    "source_name":"INTAKE_R44_cinnamon_price_series_response.md",
+    "intake_kind":"research_response",
+    "first_run":"RUN44",
+    "manifest":"docs/RUN44_CINNAMON_QUESTION_CLOSURE_MANIFEST.json",
+    "preservation_status":"archived",
+    "repo_path":"docs/intakes/INTAKE_R44_cinnamon_price_series_response.md",
+    "outputs":["examples/sri_lanka_pre_1948/08_questions/question_register_run44_cinnamon.json"],
+    "notes":"No price series promoted; two spectacular T3 figures explicitly quarantined."
+  },
+  {
+    "id":"I-R44-CINNAMON-SEED-BAN-RESPONSE",
+    "source_name":"INTAKE_R44_cinnamon_seed_export_ban_response.md",
+    "intake_kind":"research_response",
+    "first_run":"RUN44",
+    "manifest":"docs/RUN44_CINNAMON_QUESTION_CLOSURE_MANIFEST.json",
+    "preservation_status":"archived",
+    "repo_path":"docs/intakes/INTAKE_R44_cinnamon_seed_export_ban_response.md",
+    "outputs":["examples/sri_lanka_pre_1948/08_questions/question_register_run44_cinnamon.json"],
+    "notes":"Bounded negative result only; Hovy not consulted in extenso."
+  },
+  {
+    "id":"I-R44-CINNAMON-PRICE-KNOWLEDGE-RESPONSE",
+    "source_name":"INTAKE_R44_cinnamon_asian_price_knowledge_response.md",
+    "intake_kind":"research_response",
+    "first_run":"RUN44",
+    "manifest":"docs/RUN44_CINNAMON_QUESTION_CLOSURE_MANIFEST.json",
+    "preservation_status":"archived",
+    "repo_path":"docs/intakes/INTAKE_R44_cinnamon_asian_price_knowledge_response.md",
+    "outputs":["examples/sri_lanka_pre_1948/08_questions/question_register_run44_cinnamon.json"],
+    "notes":"Original falsifier triggered; split into qualitative Kandyan value theory and Asian merchant information-network questions."
+  },
+  {
+    "id":"I-R44-CINNAMON-COFFEE-TEA-CONTINUITY-RESPONSE",
+    "source_name":"INTAKE_R44_cinnamon_to_coffee_tea_continuity_response.md",
+    "intake_kind":"research_response",
+    "first_run":"RUN44",
+    "manifest":"docs/RUN44_CINNAMON_QUESTION_CLOSURE_MANIFEST.json",
+    "preservation_status":"archived",
+    "repo_path":"docs/intakes/INTAKE_R44_cinnamon_to_coffee_tea_continuity_response.md",
+    "outputs":["examples/sri_lanka_pre_1948/01_arcs/A07c_coffee_collapse_and_tea_conversion/claims/C-R44-CINNAMON-COFFEE-GEOGRAPHIC-DISCONTINUITY-001.json","examples/sri_lanka_pre_1948/06_bridges/B-R41-CINNAMON-TO-PLANTATION-LABOUR-001.json"],
+    "notes":"Promoted at confidence B because direct cadastral/deed tracing remains absent."
+  }
+]
