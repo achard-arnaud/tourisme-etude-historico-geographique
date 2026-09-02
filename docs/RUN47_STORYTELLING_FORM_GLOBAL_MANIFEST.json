@@ -1,0 +1,20 @@
+{
+  "run":"RUN47",
+  "date":"2026-09-03",
+  "pass":"pass1_skill_form_global",
+  "scope":"Harden the Run46 problem-first causal-dezoom fine-tuning so it propagates through the root skill chapeau, the storytelling orchestrator and the editing skill, and explicitly affects every paragraph in a selected iterative scope.",
+  "files":[
+    "SKILL.md",
+    "skills/storytelling-historical-travel/SKILL.md",
+    "skills/storytelling-historical-travel/PROBLEM_FIRST_CAUSAL_DEZOOM_CONTRACT.md",
+    "skills/editing-historical-travel-output/SKILL.md"
+  ],
+  "contract_effect":"form_global",
+  "semantics":{
+    "preserve":"historical propositions, evidence confidence, uncertainty, citations, required material and reader scaffold chronology",
+    "invalidate_for_selected_scope":"prior paragraph-shape/style approval",
+    "permit":"paragraph split/merge, local reorder within a chronological rupture, transition rewrite, problem reframing and causal-dezoom relocation",
+    "forbid":"dropping sourced matter merely to satisfy the new style, changing evidence strength, or treating an append-only delta as a completed form-global run"
+  },
+  "qa":"No executable code changed in pass1. Verification limited to contract consistency across root chapeau, storyteller and editor; full test suite intentionally deferred."
+}
