@@ -1,0 +1,41 @@
+{
+  "run":"RUN47",
+  "date":"2026-09-03",
+  "pass":"pass2_iterative_two_arcs",
+  "mode":"iterative_form_global",
+  "baseline":"examples/sri_lanka_pre_1948/09_output/report_v3_full.md",
+  "selected_arcs":[
+    "A06_voc_coastal_state",
+    "A07b_kandyan_kingdom_and_defensive_interior"
+  ],
+  "updated_arc_contracts":[
+    "examples/sri_lanka_pre_1948/01_arcs/A06_voc_coastal_state/ARC.md",
+    "examples/sri_lanka_pre_1948/01_arcs/A07b_kandyan_kingdom_and_defensive_interior/ARC.md"
+  ],
+  "reader_delta":"examples/sri_lanka_pre_1948/09_output/run47_storytelling_iterative_two_arcs.md",
+  "form_global_review":{
+    "paragraph_scope":"all existing paragraphs mapped to the two selected arcs",
+    "factual_baseline":"frozen",
+    "style_shape_baseline":"invalidated",
+    "operations_allowed":["problem reframing","paragraph split/merge","local reorder inside chronological rupture","transition rewrite","causal dezoom relocation","core-vs-side-story reclassification"],
+    "operations_forbidden":["silent evidence strengthening","dropping sourced matter for brevity","invented motives","moving material across unsupported chronological ruptures"]
+  },
+  "narrative_changes":[
+    "A06 now opens on the problem of converting alliance-based port conquest into a durable coastal state",
+    "A06 narrates port function before fort consequence and integrates Batticaloa as lagoon-interface geography",
+    "A06 treats thombos/categorisation, cinnamon labour and late-VOC cultivation as successive layers of state deepening",
+    "A06 integrates Burgher/intermediary continuity and Malay coerced mobility as social consequences of imperial layering",
+    "A07b now tests the sign change of highland geography: defensive depth -> political fall without final battlefield conquest -> infrastructure-enabled plantation interior",
+    "A07b narrates 1796/1803/1815/1817-18 before the wider European dezoom",
+    "A07b keeps deliberate underdevelopment of passes as unresolved rather than doctrine",
+    "A07b separates 1815 sovereignty transfer, 1833 administrative unification, land transformation and South-Indian labour migration",
+    "road and rail are presented as dual control/economic infrastructure with the railway's coffee purpose explicitly anchored"
+  ],
+  "side_story_dispositions":[
+    {"id":"SS-R23-KDY-SIAM-DEZOOM-001","disposition":"included_as_side_story","reason":"autonomous transregional religious dezoom with explicit return to Kandyan enclave/connectivity problem"},
+    {"id":"SS-R23-KDY-DOYLY-PORTRAIT-001","disposition":"included_as_side_story","reason":"portrait carries the information-as-conquest mechanism without replacing the core 1815 causal chain"},
+    {"subject":"Batticaloa lagoon-port","disposition":"included_core","reason":"geographic mechanism is necessary to explain differentiated coastal sovereignty"},
+    {"subject":"Burgher colonial layers","disposition":"included_core","reason":"successive-regime inheritance and intermediary capital are core to the social mechanism"}
+  ],
+  "qa":"No executable pipeline code changed in pass2. Full unit suite not run. QA limited to evidence/uncertainty retention review, arc-contract consistency, output-state routing and fast-forward branch comparison before promotion. Canonical report_v3_full.md and DOCX remain stable until the next materialization/export pass; Run47 delta is the current iterative output."
+}
