@@ -1,0 +1,13 @@
+{
+  "id":"C-R45-MUSLIM-LAYERED-FORMATION-001",
+  "type":"inference",
+  "claim":"Sri Lanka's Muslim communities should be understood as the product of layered Indian Ocean mobility rather than a single Arab founding population: early Arab- and Persian-speaking Muslim traders, later South Indian Muslim commercial networks, local marriage and settlement, and subsequent colonial classifications all contributed to communities later grouped under labels such as Ceylon Moor/Sri Lankan Moor.",
+  "confidence":"B",
+  "zoom":"Z3",
+  "causal_role":"context",
+  "arc":"A03_indian_ocean_and_regional_systems",
+  "hil":"HIL-04_society-demography",
+  "source_ids":["CAMBRIDGE-ISLAMIC-INDIAN-OCEAN-2010","DEWARAJA-MUSLIMS-SL-1994"],
+  "bounded_by":"The relative demographic weight of Arab/Persian, South Indian and local ancestry cannot be inferred from merchant narratives alone. Do not turn a cultural-commercial genealogy into a biological ancestry claim.",
+  "notes":"Corrects the seed Wikipedia article's overly linear Arab-descendant framing while preserving the central role of Indian Ocean Muslim trade networks."
+}
