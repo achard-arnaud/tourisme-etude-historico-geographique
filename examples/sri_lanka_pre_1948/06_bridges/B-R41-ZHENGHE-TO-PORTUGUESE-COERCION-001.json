@@ -1,0 +1,16 @@
+{
+  "id":"B-R41-ZHENGHE-TO-PORTUGUESE-COERCION-001",
+  "from_claim":"C-R39-A05C-ZHENGHE-001",
+  "to_claim":"C-R41-PORTUGUESE-COERCIVE-TRADE-001",
+  "question":"If Ming fleets and Asian merchants already knew and used the routes before 1500, what actually changes with Portuguese entry into the Indian Ocean?",
+  "mechanism":"The rupture lies not in geographical discovery but in a durable institutional attempt to combine armed ships, fortified ports, passes and monopoly privileges so that commercial access could be taxed, redirected or denied. Earlier Asian maritime powers could project force, but the Portuguese Estado da Índia made coercive regulation of merchant circulation a core transregional commercial institution.",
+  "result":"A",
+  "source_ids":["CAMBRIDGE-MING-KOTTE-1411","CAMBRIDGE-INDIAN-PORTS-EUROPEAN-2017","CAMBRIDGE-MASULIPATNAM-ANTI-PORTUGUESE"],
+  "transmission_channel":"existing route knowledge -> militarised regulation of circulation -> altered bargaining power at selected ports and commodities",
+  "time_lag":"early 15th-century Ming intervention to early/mid-16th-century Portuguese fort/cartaz network",
+  "scale":"Z3 Asian maritime system to Z4 transregional commercial order",
+  "confounders":["Ming tributary diplomacy differs institutionally from Portuguese commercial empire","regional navies remained active","Portuguese enforcement was geographically uneven","local alliances shaped outcomes"],
+  "transportability":"mechanism",
+  "integration_action":"bridge",
+  "bounded_by":"Do not narrate a simple East/West technological binary. Zheng He demonstrates Asian maritime coercive capacity; the contrast concerns institutional purpose, persistence and commercial exclusivity, not an absence of Asian naval force."
+}
