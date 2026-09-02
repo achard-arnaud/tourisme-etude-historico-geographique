@@ -1,0 +1,32 @@
+{
+  "run":"RUN46",
+  "date":"2026-09-03",
+  "scope":"Problem-first geographico-societal reframing of the colonial narrative, with Batticaloa lagoon-port and Burgher continuity bridges plus iterative storytelling delta and storytelling-contract improvements.",
+  "delivery_flow":["run46-pass1-causal-bridges -> dev","run46-pass2-storytelling-iterative -> dev","run46-pass3-storytelling-skill -> dev -> main"],
+  "pass1":{
+    "intakes":["docs/intakes/INTAKE_R46_colonialism_360_geography_society_comparative.md","docs/intakes/INTAKE_R46_batticaloa_lagoon_port_system.md","docs/intakes/INTAKE_R46_burghers_christian_colonial_layers.md"],
+    "bridges":["examples/sri_lanka_pre_1948/06_bridges/B-R46-BATTICALOA-LAGOON-PORT-001.json","examples/sri_lanka_pre_1948/06_bridges/B-R46-BURGHER-COLONIAL-LAYERS-001.json"]
+  },
+  "pass2":{
+    "iterative_delta":"examples/sri_lanka_pre_1948/09_output/run46_storytelling_iterative_delta.md",
+    "output_state_change":"delta_markdown now points to the Run46 iterative delta while the existing canonical manuscript remains the stable baseline for the next materialization/export pass"
+  },
+  "pass3":{
+    "skill_contract":"skills/storytelling-historical-travel/PROBLEM_FIRST_CAUSAL_DEZOOM_CONTRACT.md",
+    "orchestrator_update":"SKILL.md step 15 now requires the problem-first causal-dezoom contract",
+    "gap_audit":"docs/RUN46_STORYTELLING_GAP_AUDIT.md"
+  },
+  "editorial_rules_added":[
+    "problem before chronology for major sections",
+    "event/object/local mechanism before consequence and causal dezoom",
+    "core causal dezoom must not be demoted to side story",
+    "360 viewpoints only where they change explanation",
+    "geography must change actor options or control cost",
+    "port-function typology before fort narration",
+    "intent -> instrument -> friction -> adaptation -> unintended effect",
+    "successive-regime inheritance test",
+    "qualitative ROI-of-sovereignty heuristic",
+    "run numbers are provenance, never reader topology"
+  ],
+  "qa":"No executable code changed. Full unit suite intentionally not run to limit token/compute consumption. Structural QA performed through branch separation, JSON/manual contract review, fast-forward-only integration and final commit comparison. Canonical DOCX regeneration remains a later export/materialization step; this run updates the iterative narrative delta and its routing rather than fabricating a regenerated binary without executing the repository pipeline."
+}
