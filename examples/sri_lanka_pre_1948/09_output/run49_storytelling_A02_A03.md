@@ -46,7 +46,7 @@ La recherche RUN49 permet maintenant de répondre plus précisément : **l’int
 
 Polonnaruwa n’apparaît pas soudainement parce que le commerce aurait changé de mer. Le site est déjà stratégiquement important pendant la période d’Anuradhapura. Il se trouve dans une position intérieure utile, proche du Mahaweli et d’un espace agricole/hydraulique considérable. Les Cholas l’utilisent comme centre administratif. Après leur éviction, les souverains sri-lankais le conservent.
 
-En même temps, cette géographie ouvre plus facilement vers l’est. Le Mahaweli et ses plaines relient la région de Polonnaruwa au système de Trincomalee/Koddiyar Bay. Les sources patrimoniales sri-lankaises considèrent explicitement la proximité de ce grand port naturel et les possibilités de transport comme importantes dans la croissance des relations extérieures de Polonnaruwa. cite-placeholder-CCF
+En même temps, cette géographie ouvre plus facilement vers l’est. Le Mahaweli et ses plaines relient la région de Polonnaruwa au système de Trincomalee/Koddiyar Bay. Les sources patrimoniales sri-lankaises considèrent explicitement la proximité de ce grand port naturel et les possibilités de transport comme importantes dans la croissance des relations extérieures de Polonnaruwa ; cette proposition est enregistrée dans `C-R49-MAHAWELI-GOKANNA-CORRIDOR-001`.
 
 La conséquence n’est donc pas :
 
