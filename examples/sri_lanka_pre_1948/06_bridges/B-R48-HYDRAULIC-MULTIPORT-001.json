@@ -1,0 +1,16 @@
+{
+  "id":"B-R48-HYDRAULIC-MULTIPORT-001",
+  "from_claim":"C-R36-ANU-HYDRAULIC-001",
+  "to_claim":"C-R45-ANU-PORT-NETWORK-001",
+  "question":"How should an inland hydraulic capital be related to Sri Lanka's maritime geography without reducing exchange to Mantai alone?",
+  "mechanism":"Water-managed agrarian concentration and monastic/political institutions made Anuradhapura an inland node able to sustain dense settlement and redistribution. Over the long Anuradhapura period, different corridors linked this interior to multiple coastal gateways—most strongly Mantai/Mahatittha in the north-west, but also northern Jambukolapattana, eastern Gokanna and southern Godavaya. This multi-facade access diversified routes for diplomacy, pilgrimage, trade and fiscal extraction as political and monsoon conditions changed.",
+  "result":"A",
+  "source_ids":["ANTIQUITY-ANU-URBAN-DIASPORA-2015","ANTIQUITY-MANTAI-SPICE-RICE-2018","KELANIYA-ANCIENT-PORTS-2018","JRAS-MANTAI-BOHINGAMUWA-2018","FALK-GODAWAYA-EPIGRAPHS-2001","IGNCA-BOPEARACHCHI-GOKANNA"],
+  "transmission_channel":"inland water-managed agrarian/monastic concentration -> road/river/redistribution corridors -> changing coastal gateways -> Indian Ocean exchange",
+  "time_lag":"long duration across the Anuradhapura period; port prominence and route intensity vary substantially by century",
+  "scale":"Z1 hydraulic landscape to Z2 polity and Z3 multiple Indian Ocean facades",
+  "confounders":["ports were not equally important or simultaneous","coastal cabotage and private merchant networks","chronicle traditions for some routes","changing river channels and monsoons","local and monastic agency rather than unitary royal control"],
+  "transportability":"mechanism",
+  "integration_action":"bridge",
+  "bounded_by":"The bridge does not claim a centrally planned four-port system, four literal cardinal-point outlets, or that Anuradhapura controlled every stage of overseas commerce. It replaces a one-gateway mental model with a time-varying multi-port system."
+}
