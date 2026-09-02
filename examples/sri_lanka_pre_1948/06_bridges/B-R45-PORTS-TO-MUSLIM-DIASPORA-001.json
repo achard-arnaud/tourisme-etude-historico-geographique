@@ -1,0 +1,16 @@
+{
+  "id":"B-R45-PORTS-TO-MUSLIM-DIASPORA-001",
+  "from_claim":"C-R45-ANU-PORT-NETWORK-001",
+  "to_claim":"C-R45-MONSOON-MERCHANT-DIASPORA-001",
+  "question":"How does Sri Lanka's multi-port geography help explain the later formation of durable Muslim merchant communities?",
+  "mechanism":"Multiple ports on India-facing and trans-oceanic routes created repeated points of contact, while monsoon seasonality forced merchants to wait for return winds. Repeated residence, brokerage and trust networks could therefore turn maritime traffic into durable diasporic communities.",
+  "result":"A",
+  "source_ids":["ANTIQUITY-MANTAI-SPICE-RICE-2018","CAMBRIDGE-MONSOON-DIASPORAS-2013","CAMBRIDGE-ISLAMIC-INDIAN-OCEAN-2010"],
+  "transmission_channel":"port network + monsoon waiting time -> resident merchant networks -> durable religious/commercial communities",
+  "time_lag":"centuries; mechanism precedes Islam and is reused by Muslim networks from the early medieval period onward",
+  "scale":"Z1 port to Z4 Indian Ocean network",
+  "confounders":["local marriage and conversion","South Indian migration","political patronage","changing port hierarchy","later colonial displacement"],
+  "transportability":"mechanism",
+  "integration_action":"bridge",
+  "bounded_by":"The mechanism does not prove a single date or single ethnic origin for Sri Lankan Muslims."
+}
