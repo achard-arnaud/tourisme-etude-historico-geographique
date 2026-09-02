@@ -1,0 +1,16 @@
+{
+  "id":"B-R46-BURGHER-COLONIAL-LAYERS-001",
+  "from_claim":"C-PRE-002",
+  "to_claim":"C-R17-KDY-ADMIN-001",
+  "question":"How do social groups formed under one colonial regime transmit institutional capacity into the next?",
+  "mechanism":"Christianization, mixed families, multilingual practice, schooling and service in Portuguese and Dutch institutions created forms of intermediary capital that did not disappear when sovereignty changed. Under British rule parts of these Eurasian/Burgher populations could be reused in clerical, legal, technical and professional roles, turning regime succession into layered institutional inheritance rather than total replacement.",
+  "result":"B",
+  "source_ids":["MCGILVRAY-BURGHERS-1982","MCGILVRAY-PORTUGUESE-BURGHERS-2007"],
+  "transmission_channel":"conversion/mixed communities/language -> intermediary skills -> reuse by successor regime -> social persistence",
+  "time_lag":"sixteenth-century Portuguese presence through VOC rule and into nineteenth-century British administration",
+  "scale":"Z1 household/community to Z3 colonial administrative system",
+  "confounders":["changing legal definitions of Burgher","regional class differences","British educational policy","migration and emigration","distinct Portuguese and Dutch genealogical claims"],
+  "transportability":"bounded continuity",
+  "integration_action":"bridge",
+  "bounded_by":"Do not project the later British census category Burgher unchanged backward into the Portuguese or early VOC periods. The bridge concerns persistence of communities and intermediary capacities, not a timeless ethnic category."
+}
