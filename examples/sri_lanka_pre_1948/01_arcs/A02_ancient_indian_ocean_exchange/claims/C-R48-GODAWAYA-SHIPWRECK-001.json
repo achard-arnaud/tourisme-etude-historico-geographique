@@ -1,0 +1,13 @@
+{
+  "id":"C-R48-GODAWAYA-SHIPWRECK-001",
+  "type":"source_fact",
+  "claim":"The underwater assemblage off Godawaya is identified by maritime archaeologists as an early historic shipwreck containing quern stones, ceramics and glass ingots; radiocarbon and artefact analysis place it broadly in the last centuries BCE/early centuries CE, providing direct material evidence for seaborne cargo movement on Sri Lanka's southern coast at a very early date.",
+  "confidence":"A",
+  "zoom":"Z2",
+  "causal_role":"evidence_anchor",
+  "arc":"A02_ancient_indian_ocean_exchange",
+  "hil":"HIL-03_economy-infrastructure",
+  "source_ids":["JMARARCH-GODAWAYA-2014","CCF-GODAWAYA-SHIPWRECK-2025"],
+  "bounded_by":"The 2014 Journal of Maritime Archaeology paper used a broad 2nd century BCE–2nd century CE range, while current CCF materials narrow the wreck to the 1st/2nd century BCE. Preserve that dating evolution. CCF currently calls it the oldest known wooden shipwreck in the Asia-Pacific; if used, attribute that superlative to the institution because future discoveries can change it.",
+  "notes":"Run48 promotes the shipwreck as direct maritime evidence. It does not prove the complete route, ethnicity of the crew, exact origin of every cargo item or that Godawaya was the island's dominant southern port at all dates."
+}
