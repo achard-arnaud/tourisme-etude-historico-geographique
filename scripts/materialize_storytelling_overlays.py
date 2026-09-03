@@ -2,7 +2,7 @@
 """Materialize reviewed storytelling overlays onto the current pre-1948 reader Markdown.
 
 Proof and composition stay separate. The script consumes the already-rendered V3
-Markdown plus reviewed RUN47/RUN50/RUN51 narrative material and produces a
+Markdown plus reviewed RUN47/RUN50/RUN51/RUN52 narrative material and produces a
 candidate full Markdown reader. It does not alter claims, confidence, source
 registers, or the archived V1 baseline.
 """
@@ -21,10 +21,14 @@ RUN47 = OUTPUT / "run47_storytelling_iterative_two_arcs.md"
 RUN50_OVERLAY = OUTPUT / "run50_A02_A03_canonical_overlay.md"
 RUN51_CH4 = OUTPUT / "run51_storytelling_ch4_polonnaruwa.md"
 RUN51_CH8 = OUTPUT / "run51_storytelling_ch8_portugal_kandy.md"
+RUN52_CH5 = OUTPUT / "run52_storytelling_ch5_fall_polonnaruwa.md"
+RUN52_CH6 = OUTPUT / "run52_storytelling_ch6_mobile_capitals.md"
 DEFAULT_OUT = OUTPUT / "report_v4_full.md"
 
 CH4 = "**Chapitre 4 — Polonnaruwa à l’apogée : eau, Saṅgha, souveraineté et projection régionale**"
 CH5 = "**Chapitre 5 — La chute de Polonnaruwa : violence, fragmentation et changement d’optimum**"
+CH6 = "**Chapitre 6 — Dambadeniya, Yapahuwa, Kurunegala, Gampola et Kotte : déplacer la souveraineté**"
+CH7 = "**Chapitre 7 — Le royaume de Jaffna : un autre modèle sri-lankais**"
 CH8 = "**Chapitre 8 — Kandy face aux Portugais : la côte ne suffit pas à conquérir l’île**"
 CH9 = "**Chapitre 9 — Kandy face à la VOC : de l’alliance à l’encerclement**"
 CH10 = "**Chapitre 10 — Ceylan britannique : conquérir l’intérieur et reconnecter l’île au marché mondial**"
@@ -104,7 +108,15 @@ def replace_reviewed_chapter(text: str, start: str, end: str, draft: str) -> str
     return replace_range(text, start, end, start + "\n\n" + body)
 
 
-def materialize(baseline: str, run47: str, overlay: str, run51_ch4: str, run51_ch8: str) -> str:
+def materialize(
+    baseline: str,
+    run47: str,
+    overlay: str,
+    run51_ch4: str,
+    run51_ch8: str,
+    run52_ch5: str,
+    run52_ch6: str,
+) -> str:
     # RUN47: reviewed rewrites for the VOC and British chapters.
     a06, a07b = extract_run47(run47)
     old_ch9 = section(baseline, CH9, CH10)
@@ -124,9 +136,15 @@ def materialize(baseline: str, run47: str, overlay: str, run51_ch4: str, run51_c
     out = replace_reviewed_chapter(out, CH4, CH5, run51_ch4)
     out = replace_reviewed_chapter(out, CH8, CH9, run51_ch8)
 
-    # Hard guards against accidental content loss, duplicate chapter materialization,
-    # and fallback to the former thematic-list openings.
-    for anchor in (CH4, CH5, CH8, CH9, CH10, EPILOGUE):
+    # RUN52: only chapters that failed the form-global audit are replaced.
+    # Chapters 1-3 and 7 are deliberately preserved from the baseline because their
+    # chronology already serves a coherent causal question rather than a topic list.
+    out = replace_reviewed_chapter(out, CH5, CH6, run52_ch5)
+    out = replace_reviewed_chapter(out, CH6, CH7, run52_ch6)
+
+    # Hard guards against accidental content loss, duplicate materialization,
+    # silent side-story loss, and fallback to former dossier-style openings.
+    for anchor in (CH4, CH5, CH6, CH7, CH8, CH9, CH10, EPILOGUE):
         if out.count(anchor) != 1:
             raise RuntimeError(f"chapter-boundary integrity check failed: {anchor}")
     if out.count("[RUN50:A02-A03-MARITIME] BEGIN") != 1:
@@ -137,9 +155,17 @@ def materialize(baseline: str, run47: str, overlay: str, run51_ch4: str, run51_c
         raise RuntimeError("RUN51 Polonnaruwa signature missing or duplicated")
     if out.count("Comment le Portugal convertit-il supériorité navale, ports, alliances dynastiques") != 1:
         raise RuntimeError("RUN51 Portugal signature missing or duplicated")
+    if out.count("Pourquoi un système aussi intégré et productif que Polonnaruwa devient-il") != 1:
+        raise RuntimeError("RUN52 chapter 5 signature missing or duplicated")
+    if out.count("Comment la disparition de l’optimum de Rajarata transforme-t-elle la souveraineté sri-lankaise") != 1:
+        raise RuntimeError("RUN52 chapter 6 signature missing or duplicated")
     if "## **Apogée : eau, Saṅgha, légitimité, savoir et projection**" in section(out, CH4, CH5):
         raise RuntimeError("legacy Polonnaruwa thematic opening survived chapter replacement")
-    if len(out) < len(baseline) * 0.80:
+    if "## **Pourquoi le système Polonnaruwa cesse d’être optimal**" in section(out, CH5, CH6):
+        raise RuntimeError("legacy chapter 5 dossier opening survived chapter replacement")
+    if "## **Des capitales fortifiées aux économies portuaires, puis à Kandy**" in section(out, CH6, CH7):
+        raise RuntimeError("legacy chapter 6 dossier opening survived chapter replacement")
+    if len(out) < len(baseline) * 0.78:
         raise RuntimeError("retention guard failed: candidate unexpectedly short")
     return out.rstrip() + "\n"
 
@@ -151,6 +177,8 @@ def main() -> None:
     parser.add_argument("--overlay", type=Path, default=RUN50_OVERLAY)
     parser.add_argument("--run51-ch4", type=Path, default=RUN51_CH4)
     parser.add_argument("--run51-ch8", type=Path, default=RUN51_CH8)
+    parser.add_argument("--run52-ch5", type=Path, default=RUN52_CH5)
+    parser.add_argument("--run52-ch6", type=Path, default=RUN52_CH6)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUT)
     parser.add_argument("--check", action="store_true", help="validate an existing output instead of writing it")
     args = parser.parse_args()
@@ -161,6 +189,8 @@ def main() -> None:
         args.overlay.read_text(encoding="utf-8"),
         args.run51_ch4.read_text(encoding="utf-8"),
         args.run51_ch8.read_text(encoding="utf-8"),
+        args.run52_ch5.read_text(encoding="utf-8"),
+        args.run52_ch6.read_text(encoding="utf-8"),
     )
     if args.check:
         if not args.output.exists():
