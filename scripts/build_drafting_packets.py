@@ -17,6 +17,7 @@ from pathlib import Path
 from typing import Any, Iterable
 
 from legacy_fragment_bypass import virtual_legacy_statements
+from output_state import canonical_markdown_path
 
 REPO = Path(__file__).resolve().parents[1]
 
@@ -239,9 +240,16 @@ def _display_path(path: Path, project: Path) -> str:
     return str(path)
 
 def _iterative_bootstrap(project: Path, ledger: ReadLedger, journal: Path | None) -> dict:
-    output = project / "09_output"
-    candidates = [output/"report_v3_full.md", output/"report.md"]
-    manuscript = next((p for p in candidates if p.exists()), None)
+    """Load the reader selected by output_state; hard-coded names are fixture fallback only."""
+    manuscript = None
+    try:
+        manuscript = canonical_markdown_path(project)
+    except (FileNotFoundError, ValueError):
+        # Narrow backward-compatibility path for lightweight fixtures and legacy projects
+        # that have not adopted output_state yet. Production corpora must resolve state.
+        output = project / "09_output"
+        candidates = [output/"report_v3_full.md", output/"report.md"]
+        manuscript = next((p for p in candidates if p.exists()), None)
     data = {
         "mode":"iterative",
         "reader_prose_loaded": manuscript is not None,
