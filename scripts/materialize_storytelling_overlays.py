@@ -2,9 +2,9 @@
 """Materialize reviewed storytelling overlays onto the current pre-1948 reader Markdown.
 
 Proof and composition stay separate. The script consumes the already-rendered V3
-Markdown plus reviewed RUN47/RUN50/RUN51/RUN52 narrative material and produces a
-candidate full Markdown reader. It does not alter claims, confidence, source
-registers, or the archived V1 baseline.
+Markdown plus reviewed RUN47/RUN50/RUN51/RUN52/RUN53 narrative material and
+produces a candidate full Markdown reader. It does not alter claims, confidence,
+source registers, or the archived V1 baseline.
 """
 from __future__ import annotations
 
@@ -23,6 +23,7 @@ RUN51_CH4 = OUTPUT / "run51_storytelling_ch4_polonnaruwa.md"
 RUN51_CH8 = OUTPUT / "run51_storytelling_ch8_portugal_kandy.md"
 RUN52_CH5 = OUTPUT / "run52_storytelling_ch5_fall_polonnaruwa.md"
 RUN52_CH6 = OUTPUT / "run52_storytelling_ch6_mobile_capitals.md"
+RUN53_OVERLAY = OUTPUT / "run53_transversal_reader_overlay.md"
 DEFAULT_OUT = OUTPUT / "report_v4_full.md"
 
 CH4 = "**Chapitre 4 — Polonnaruwa à l’apogée : eau, Saṅgha, souveraineté et projection régionale**"
@@ -33,12 +34,32 @@ CH8 = "**Chapitre 8 — Kandy face aux Portugais : la côte ne suffit pas à con
 CH9 = "**Chapitre 9 — Kandy face à la VOC : de l’alliance à l’encerclement**"
 CH10 = "**Chapitre 10 — Ceylan britannique : conquérir l’intérieur et reconnecter l’île au marché mondial**"
 EPILOGUE = "# **Épilogue — ce que la longue durée fait apparaître**"
+PARTII = "**PARTIE II — POLONNARUWA**"
+PARTIV = "**PARTIE IV — KANDY ET LES ÂGES COLONIAUX**"
 A02_INSERT_BEFORE = "## **VI. VIIe–Xe siècles — Islam, Tamilakam et militarisation des réseaux**"
 A03_INSERT_BEFORE = "### **3. Rohana/Mahagama : le « hedge » territorial de la monarchie**"
+TRACE_APPENDIX = "# **Annexe technique — récaps causaux de traçabilité**"
 
 SPECIAL_BLOCK = re.compile(
     r"(?ms)<!-- \[(?P<kind>SIDE-STORY|ARC-RECAP):(?P<id>[^\]]+)\].*?(?:<!-- \[/ARC-RECAP:[^\]]+\] -->|<!-- \[SIDE-STORY:[^\]]+\] END -->|(?=\n## |\n\*\*Chapitre |\Z))"
 )
+ARC_RECAP_BLOCK = re.compile(
+    r"(?ms)<!-- \[ARC-RECAP:(?P<id>[^\]]+)\] -->.*?<!-- \[/ARC-RECAP:(?P=id)\] -->"
+)
+
+# These legacy reader blocks are not discarded: RUN53 records an explicit
+# disposition for each one. Their mechanism is now in the causal core, or the
+# same typed story already exists in the reviewed replacement.
+CH8_ABSORBED = {"SIDE-STORY:SS-PRE-004"}
+CH9_ABSORBED = {
+    "SIDE-STORY:SS-PRE-003",
+    "SIDE-STORY:SS-PRE-001",
+    "SIDE-STORY:SS-PRE-002",
+    "SIDE-STORY:SS-R23-KDY-SIAM-DEZOOM-001",
+    "ARC-RECAP:RECAP-A06",
+    "ARC-RECAP:RECAP-A07",
+    "ARC-RECAP:RECAP-A08",
+}
 
 
 def section(text: str, start: str, end: str | None = None) -> str:
@@ -74,11 +95,28 @@ def special_blocks(text: str) -> dict[str, str]:
     return blocks
 
 
-def preserve_missing_specials(old: str, replacement: str) -> str:
+def arc_recap_blocks(text: str) -> dict[str, str]:
+    return {
+        match.group("id"): match.group(0).strip()
+        for match in ARC_RECAP_BLOCK.finditer(text)
+    }
+
+
+def preserve_missing_specials(
+    old: str,
+    replacement: str,
+    *,
+    skip_keys: set[str] | None = None,
+) -> str:
     old_blocks = special_blocks(old)
     if not old_blocks:
         return replacement.rstrip()
-    missing = [block for key, block in old_blocks.items() if key not in replacement]
+    skipped = skip_keys or set()
+    missing = [
+        block
+        for key, block in old_blocks.items()
+        if key not in replacement and key not in skipped
+    ]
     if not missing:
         return replacement.rstrip()
     return replacement.rstrip() + "\n\n" + "\n\n".join(missing)
@@ -102,10 +140,26 @@ def insert_once(text: str, anchor: str, block: str, marker: str) -> str:
     return text[:pos] + wrapped + text[pos:]
 
 
-def replace_reviewed_chapter(text: str, start: str, end: str, draft: str) -> str:
+def replace_reviewed_chapter(
+    text: str,
+    start: str,
+    end: str,
+    draft: str,
+    *,
+    skip_keys: set[str] | None = None,
+) -> str:
     old = section(text, start, end)
-    body = preserve_missing_specials(old, strip_first_heading(draft))
+    body = preserve_missing_specials(old, strip_first_heading(draft), skip_keys=skip_keys)
     return replace_range(text, start, end, start + "\n\n" + body)
+
+
+def append_traceability_recaps(text: str, recaps: dict[str, str]) -> str:
+    wanted = ["RECAP-A06", "RECAP-A07", "RECAP-A08"]
+    missing = [rid for rid in wanted if rid not in recaps]
+    if missing:
+        raise RuntimeError(f"missing legacy recaps for traceability appendix: {missing}")
+    body = "\n\n".join(recaps[rid] for rid in wanted)
+    return text.rstrip() + "\n\n" + TRACE_APPENDIX + "\n\n" + body + "\n"
 
 
 def materialize(
@@ -116,12 +170,18 @@ def materialize(
     run51_ch8: str,
     run52_ch5: str,
     run52_ch6: str,
+    run53_overlay: str,
 ) -> str:
-    # RUN47: reviewed rewrites for the VOC and British chapters.
+    # RUN47: reviewed rewrites for the VOC and British chapters. RUN53 prevents
+    # malformed legacy side-story tails from being blindly appended after the new
+    # VOC conclusion; their disposition is explicit in RUN53_TRANSVERSAL_READER_AUDIT.md.
     a06, a07b = extract_run47(run47)
     old_ch9 = section(baseline, CH9, CH10)
     old_ch10 = section(baseline, CH10, EPILOGUE)
-    chapter9 = CH9 + "\n\n" + preserve_missing_specials(old_ch9, a06)
+    legacy_recaps = arc_recap_blocks(old_ch9)
+    chapter9 = CH9 + "\n\n" + preserve_missing_specials(
+        old_ch9, a06, skip_keys=CH9_ABSORBED
+    )
     chapter10 = CH10 + "\n\n" + preserve_missing_specials(old_ch10, a07b)
     out = replace_range(baseline, CH9, CH10, chapter9)
     out = replace_range(out, CH10, EPILOGUE, chapter10)
@@ -134,13 +194,24 @@ def materialize(
 
     # RUN51: problem-first rewrites for Polonnaruwa's apogee and Portugal/Kandy.
     out = replace_reviewed_chapter(out, CH4, CH5, run51_ch4)
-    out = replace_reviewed_chapter(out, CH8, CH9, run51_ch8)
+    out = replace_reviewed_chapter(out, CH8, CH9, run51_ch8, skip_keys=CH8_ABSORBED)
 
     # RUN52: only chapters that failed the form-global audit are replaced.
     # Chapters 1-3 and 7 are deliberately preserved from the baseline because their
     # chronology already serves a coherent causal question rather than a topic list.
     out = replace_reviewed_chapter(out, CH5, CH6, run52_ch5)
     out = replace_reviewed_chapter(out, CH6, CH7, run52_ch6)
+
+    # RUN53: transversal handoffs. These do not add new historical claims; they make
+    # the causal inheritance between already-validated chapters explicit.
+    trans34 = extract_overlay(run53_overlay, "TRANSITION_CH3_CH4")
+    trans78 = extract_overlay(run53_overlay, "TRANSITION_CH7_CH8")
+    out = insert_once(out, PARTII, trans34, "RUN53:TRANSITION-CH3-CH4")
+    out = insert_once(out, PARTIV, trans78, "RUN53:TRANSITION-CH7-CH8")
+
+    # Arc recaps remain available for audit/traceability, but no longer interrupt
+    # the narrative conclusion of the VOC chapter.
+    out = append_traceability_recaps(out, legacy_recaps)
 
     # Hard guards against accidental content loss, duplicate materialization,
     # silent side-story loss, and fallback to former dossier-style openings.
@@ -151,6 +222,10 @@ def materialize(
         raise RuntimeError("A02 overlay count failed")
     if out.count("[RUN50:GOKANNA-POLONNARUWA] BEGIN") != 1:
         raise RuntimeError("A03 overlay count failed")
+    if out.count("[RUN53:TRANSITION-CH3-CH4] BEGIN") != 1:
+        raise RuntimeError("RUN53 chapter 3->4 transition missing or duplicated")
+    if out.count("[RUN53:TRANSITION-CH7-CH8] BEGIN") != 1:
+        raise RuntimeError("RUN53 chapter 7->8 transition missing or duplicated")
     if out.count("Comment une monarchie restaurée transforme-t-elle eau, fiscalité, Saṅgha") != 1:
         raise RuntimeError("RUN51 Polonnaruwa signature missing or duplicated")
     if out.count("Comment le Portugal convertit-il supériorité navale, ports, alliances dynastiques") != 1:
@@ -165,7 +240,23 @@ def materialize(
         raise RuntimeError("legacy chapter 5 dossier opening survived chapter replacement")
     if "## **Des capitales fortifiées aux économies portuaires, puis à Kandy**" in section(out, CH6, CH7):
         raise RuntimeError("legacy chapter 6 dossier opening survived chapter replacement")
-    if len(out) < len(baseline) * 0.78:
+
+    ch8 = section(out, CH8, CH9)
+    ch9 = section(out, CH9, CH10)
+    if "SIDE-STORY:SS-PRE-004" in ch8:
+        raise RuntimeError("absorbed Mannar legacy side story still rendered after RUN51 core")
+    for legacy_id in ("SS-PRE-003", "SS-PRE-001", "SS-PRE-002"):
+        if legacy_id in ch9:
+            raise RuntimeError(f"absorbed legacy side story still rendered in chapter 9: {legacy_id}")
+    if ch9.count("[SIDE-STORY:SS-R23-KDY-SIAM-DEZOOM-001] BEGIN") != 1:
+        raise RuntimeError("Siam dezoom must render exactly once in chapter 9")
+    if "ARC-RECAP:" in ch9:
+        raise RuntimeError("technical arc recaps must not interrupt chapter 9 narrative")
+    appendix = section(out, TRACE_APPENDIX)
+    for recap_id in ("RECAP-A06", "RECAP-A07", "RECAP-A08"):
+        if appendix.count(f"[ARC-RECAP:{recap_id}]") != 1:
+            raise RuntimeError(f"traceability recap missing or duplicated: {recap_id}")
+    if len(out) < len(baseline) * 0.75:
         raise RuntimeError("retention guard failed: candidate unexpectedly short")
     return out.rstrip() + "\n"
 
@@ -179,6 +270,7 @@ def main() -> None:
     parser.add_argument("--run51-ch8", type=Path, default=RUN51_CH8)
     parser.add_argument("--run52-ch5", type=Path, default=RUN52_CH5)
     parser.add_argument("--run52-ch6", type=Path, default=RUN52_CH6)
+    parser.add_argument("--run53-overlay", type=Path, default=RUN53_OVERLAY)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUT)
     parser.add_argument("--check", action="store_true", help="validate an existing output instead of writing it")
     args = parser.parse_args()
@@ -191,6 +283,7 @@ def main() -> None:
         args.run51_ch8.read_text(encoding="utf-8"),
         args.run52_ch5.read_text(encoding="utf-8"),
         args.run52_ch6.read_text(encoding="utf-8"),
+        args.run53_overlay.read_text(encoding="utf-8"),
     )
     if args.check:
         if not args.output.exists():
