@@ -54,6 +54,7 @@ jobs:
       - run: python scripts/render_composed_reader.py --project all
       - run: python scripts/materialize_storytelling_overlays.py
       - run: python scripts/materialize_storytelling_overlays.py --check
+      - run: python scripts/render_storytelling_v4.py
       - run: python scripts/qa_run34.py --post-render
       - name: Publish complete reader outputs
         uses: actions/upload-artifact@v4

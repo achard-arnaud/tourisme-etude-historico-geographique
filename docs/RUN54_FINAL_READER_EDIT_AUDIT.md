@@ -44,3 +44,7 @@ Review the generated V4 PDF/DOCX for:
 ## Acceptance
 
 RUN54 is accepted when CI passes the full corpus/composition pipeline and the materialized reader contains no narrative handoff inside the sommaire.
+
+The requested visual closure was completed in
+`RUN55_V4_VISUAL_READER_QA.md`: the V4 DOCX/PDF exports are now materialized,
+rendered and visually checked across all 68 pages.
