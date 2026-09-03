@@ -34,8 +34,6 @@ CH8 = "**Chapitre 8 — Kandy face aux Portugais : la côte ne suffit pas à con
 CH9 = "**Chapitre 9 — Kandy face à la VOC : de l’alliance à l’encerclement**"
 CH10 = "**Chapitre 10 — Ceylan britannique : conquérir l’intérieur et reconnecter l’île au marché mondial**"
 EPILOGUE = "# **Épilogue — ce que la longue durée fait apparaître**"
-PARTII = "**PARTIE II — POLONNARUWA**"
-PARTIV = "**PARTIE IV — KANDY ET LES ÂGES COLONIAUX**"
 A02_INSERT_BEFORE = "## **VI. VIIe–Xe siècles — Islam, Tamilakam et militarisation des réseaux**"
 A03_INSERT_BEFORE = "### **3. Rohana/Mahagama : le « hedge » territorial de la monarchie**"
 TRACE_APPENDIX = "# **Annexe technique — récaps causaux de traçabilité**"
@@ -202,12 +200,13 @@ def materialize(
     out = replace_reviewed_chapter(out, CH5, CH6, run52_ch5)
     out = replace_reviewed_chapter(out, CH6, CH7, run52_ch6)
 
-    # RUN53: transversal handoffs. These do not add new historical claims; they make
-    # the causal inheritance between already-validated chapters explicit.
+    # RUN53/RUN54: transversal handoffs. They are anchored to the real chapter
+    # headings, not to PARTIE labels, because the latter also occur in the table of
+    # contents. This keeps narrative prose out of the sommaire.
     trans34 = extract_overlay(run53_overlay, "TRANSITION_CH3_CH4")
     trans78 = extract_overlay(run53_overlay, "TRANSITION_CH7_CH8")
-    out = insert_once(out, PARTII, trans34, "RUN53:TRANSITION-CH3-CH4")
-    out = insert_once(out, PARTIV, trans78, "RUN53:TRANSITION-CH7-CH8")
+    out = insert_once(out, CH4, trans34, "RUN53:TRANSITION-CH3-CH4")
+    out = insert_once(out, CH8, trans78, "RUN53:TRANSITION-CH7-CH8")
 
     # Arc recaps remain available for audit/traceability, but no longer interrupt
     # the narrative conclusion of the VOC chapter.
@@ -226,6 +225,13 @@ def materialize(
         raise RuntimeError("RUN53 chapter 3->4 transition missing or duplicated")
     if out.count("[RUN53:TRANSITION-CH7-CH8] BEGIN") != 1:
         raise RuntimeError("RUN53 chapter 7->8 transition missing or duplicated")
+    toc_start = out.find("# **Sommaire**")
+    body_start = out.find("**Chapitre 1 — Rāmāyaṇa, origines et protohistoire**")
+    if toc_start < 0 or body_start < 0 or body_start <= toc_start:
+        raise RuntimeError("cannot resolve reader table-of-contents boundary")
+    toc = out[toc_start:body_start]
+    if "RUN53:TRANSITION-" in toc:
+        raise RuntimeError("transversal narrative handoff leaked into table of contents")
     if out.count("Comment une monarchie restaurée transforme-t-elle eau, fiscalité, Saṅgha") != 1:
         raise RuntimeError("RUN51 Polonnaruwa signature missing or duplicated")
     if out.count("Comment le Portugal convertit-il supériorité navale, ports, alliances dynastiques") != 1:
