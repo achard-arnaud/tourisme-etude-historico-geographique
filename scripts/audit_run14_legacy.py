@@ -10,14 +10,16 @@ ROOT=Path(__file__).resolve().parents[1]
 PRE=ROOT/'examples/sri_lanka_pre_1948'
 SLICE_IDS={'SS-PRE-L003','SS-PRE-L004','SS-PRE-L005','SS-PRE-L016'}
 APPARATUS_IDS={'SS-PRE-L001','SS-PRE-L009'}
+# These arcs were deliberately left as shells in Run14 and have not since been promoted.
 SHELL_ARCS={
     'A01_settlement_and_early_polity',
     'A02b_anuradhapura_hydraulic_order',
-    'A03_indian_ocean_and_regional_systems',
     'A05b_dry_zone_collapse_and_mobile_capitals',
     'A06b_portuguese_maritime_violence',
     'A09_british_unification_1833',
 }
+# A03 was a Run14 shell but was legitimately promoted by later evidence runs (Run41/45/48).
+LATER_PROMOTABLE={'A03_indian_ocean_and_regional_systems':{'shell','partial','researched_partial','researched'}}
 
 def main():
     errors=[]
@@ -28,9 +30,6 @@ def main():
             if 'LEGACY:' in text:errors.append(f'LEGACY token remains in pre corpus: {p.relative_to(PRE)}')
     items={item['id']:item for _,item in load_side_stories(PRE)}
     coverage=side_story_coverage(PRE)
-    # Run14 established a minimum of 8 traced stories and exactly 17 bounded legacy
-    # exemptions. Later runs are expected to increase traced coverage; that is progress,
-    # not a regression. Declared legacy debt and untracked reader fragments remain hard gates.
     if coverage['traced']<8 or coverage['declared']!=17 or coverage['untracked']!=0:
         errors.append(f"unexpected coverage: traced={coverage['traced']} declared={coverage['declared']} untracked={coverage['untracked']} (expected traced>=8 / declared 17 / untracked 0)")
     if coverage['legacy_required_exemptions']!=17:
@@ -53,6 +52,9 @@ def main():
     for arc in SHELL_ARCS:
         p=PRE/'01_arcs'/arc/'ARC.md'
         if not p.exists() or arc_evidence_status(p)!='shell':errors.append(f'{arc}: missing or not shell')
+    for arc,allowed in LATER_PROMOTABLE.items():
+        p=PRE/'01_arcs'/arc/'ARC.md';status=arc_evidence_status(p) if p.exists() else None
+        if status not in allowed:errors.append(f'{arc}: invalid later evidence status {status!r}')
     a04=PRE/'01_arcs/A04_chola_interlude_and_polonnaruwa/ARC.md'
     if arc_evidence_status(a04)!='partial':errors.append('A04 must remain partial after vertical slice')
     source_path=PRE/'05_sources/source_register_run14_legacy_slice.json'
