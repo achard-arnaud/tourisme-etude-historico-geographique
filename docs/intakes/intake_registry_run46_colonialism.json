@@ -1,0 +1,11 @@
+[
+  {
+    "id":"I-R46-BATTICALOA-LAGOON-PORT","source_name":"INTAKE_R46_batticaloa_lagoon_port_system.md","intake_kind":"analytical_reconstruction_from_project_context_plus_research","first_run":"RUN46","manifest":"docs/RUN46_COLONIALISM_360_MANIFEST.json","preservation_status":"archived","repo_path":"docs/intakes/INTAKE_R46_batticaloa_lagoon_port_system.md","outputs":["examples/sri_lanka_pre_1948/06_bridges/B-R46-BATTICALOA-LAGOON-PORT-001.json","examples/sri_lanka_pre_1948/09_output/run46_storytelling_iterative_delta.md"],"notes":"Formalizes Batticaloa as lagoon-interface port and explicitly distinguishes it from deep-water Trincomalee."
+  },
+  {
+    "id":"I-R46-BURGHERS-COLONIAL-LAYERS","source_name":"INTAKE_R46_burghers_christian_colonial_layers.md","intake_kind":"analytical_intake","first_run":"RUN46","manifest":"docs/RUN46_COLONIALISM_360_MANIFEST.json","preservation_status":"archived","repo_path":"docs/intakes/INTAKE_R46_burghers_christian_colonial_layers.md","outputs":["examples/sri_lanka_pre_1948/06_bridges/B-R46-BURGHER-COLONIAL-LAYERS-001.json","examples/sri_lanka_pre_1948/09_output/run46_storytelling_iterative_delta.md"],"notes":"Connects Christianity, mixed communities and intermediary skills across successive colonial regimes."
+  },
+  {
+    "id":"I-R46-COLONIALISM-360","source_name":"INTAKE_R46_colonialism_360_geography_society_comparative.md","intake_kind":"analytical_intake","first_run":"RUN46","manifest":"docs/RUN46_COLONIALISM_360_MANIFEST.json","preservation_status":"archived","repo_path":"docs/intakes/INTAKE_R46_colonialism_360_geography_society_comparative.md","outputs":["examples/sri_lanka_pre_1948/09_output/run46_storytelling_iterative_delta.md","docs/RUN46_STORYTELLING_GAP_AUDIT.md"],"notes":"Master analytical reframing of Portuguese/VOC/British rule around control technologies, geography, intermediaries and institutional inheritance."
+  }
+]
