@@ -1,32 +1,20 @@
 {
   "run":"RUN50",
+  "run_id":"RUN50",
   "date":"2026-09-03",
+  "mode":"iterative",
+  "status":"in_progress",
+  "state_before":{"canonical_markdown":"examples/sri_lanka_pre_1948/09_output/report_v3_full.md","latest_storytelling_deltas":["examples/sri_lanka_pre_1948/09_output/run47_storytelling_iterative_two_arcs.md","examples/sri_lanka_pre_1948/09_output/run49_storytelling_A02_A03.md"]},
+  "state_after":{"materialized_candidate":"examples/sri_lanka_pre_1948/09_output/report_v4_full.md","canonical_pointer_unchanged":"examples/sri_lanka_pre_1948/09_output/report_v3_full.md","global_form_audit":"docs/RUN50_GLOBAL_STORYTELLING_AUDIT.md"},
+  "promotion_decision":"candidate_pending_green_ci_then_dev_to_main",
   "scope":"Materialize reviewed RUN47 and RUN49 storytelling changes into a deterministic full-reader candidate and audit the remaining V3 manuscript for form-global storytelling gaps.",
   "baseline":"examples/sri_lanka_pre_1948/09_output/report_v3_full.md",
   "materializer":"scripts/materialize_storytelling_overlays.py",
   "candidate_output":"examples/sri_lanka_pre_1948/09_output/report_v4_full.md",
-  "inputs":[
-    "examples/sri_lanka_pre_1948/09_output/run47_storytelling_iterative_two_arcs.md",
-    "examples/sri_lanka_pre_1948/09_output/run50_A02_A03_canonical_overlay.md"
-  ],
-  "operations":[
-    "replace Chapter 9 body with RUN47 A06 form-global narrative while preserving missing structured side-story/arc-recap blocks",
-    "replace Chapter 10 body with RUN47 A07b form-global narrative while preserving missing structured side-story/arc-recap blocks",
-    "insert bounded A02 maritime multi-port/monsoon/museum-map overlay before the existing Islam/Tamilakam section",
-    "insert bounded A03 Gokanna-Mahaweli-Polonnaruwa multicausal correction before the Rohana section",
-    "retain report_v3_full.md as non-destructive baseline"
-  ],
-  "safety_guards":[
-    "exactly one Chapter 9, Chapter 10 and Epilogue boundary after materialization",
-    "idempotent RUN50 overlay markers",
-    "minimum 80 percent character retention versus V3 baseline",
-    "preserve structured side-story and arc-recap blocks missing from replacement narratives",
-    "no claim/source confidence mutation in composition"
-  ],
+  "inputs":["examples/sri_lanka_pre_1948/09_output/run47_storytelling_iterative_two_arcs.md","examples/sri_lanka_pre_1948/09_output/run50_A02_A03_canonical_overlay.md"],
+  "operations":["replace Chapter 9 body with RUN47 A06 form-global narrative while preserving missing structured side-story/arc-recap blocks","replace Chapter 10 body with RUN47 A07b form-global narrative while preserving missing structured side-story/arc-recap blocks","insert bounded A02 maritime multi-port/monsoon/museum-map overlay before the existing Islam/Tamilakam section","insert bounded A03 Gokanna-Mahaweli-Polonnaruwa multicausal correction before the Rohana section","retain report_v3_full.md as non-destructive baseline"],
+  "safety_guards":["exactly one Chapter 9, Chapter 10 and Epilogue boundary after materialization","idempotent RUN50 overlay markers","minimum 80 percent character retention versus V3 baseline","preserve structured side-story and arc-recap blocks missing from replacement narratives","no claim/source confidence mutation in composition"],
   "global_form_audit":"docs/RUN50_GLOBAL_STORYTELLING_AUDIT.md",
-  "next_priority_arcs":[
-    "Chapter 4 / Polonnaruwa at apogee — legacy thematic",
-    "Chapter 8 / Portugal-Kandy — legacy chronological"
-  ],
-  "qa_strategy":"Targeted: exercise deterministic materializer in CI and retain existing full CI suite on dev/main pushes. No new historical research is introduced by this run."
+  "next_priority_arcs":["Chapter 4 / Polonnaruwa at apogee — legacy thematic","Chapter 8 / Portugal-Kandy — legacy chronological"],
+  "qa_strategy":"Exercise deterministic materializer in CI and retain existing full CI suite on dev/main pushes. No new historical research is introduced by this run."
 }
