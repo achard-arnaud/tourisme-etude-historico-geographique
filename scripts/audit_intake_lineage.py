@@ -6,17 +6,40 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-REGISTRY = ROOT / "docs" / "intakes" / "intake_registry.json"
-BACKLOG = ROOT / "docs" / "intakes" / "intake_research_backlog.json"
 INTAKE_DIR = ROOT / "docs" / "intakes"
+REGISTRY_GLOB = "intake_registry*.json"
+BACKLOG_GLOB = "intake_research_backlog*.json"
 MANIFEST_GLOB = "RUN*_MANIFEST.json"
-VALID_STATUSES = {"archived", "missing_source", "unidentified_legacy"}
+VALID_STATUSES = {"archived", "normalized_archival_copy", "missing_source", "unidentified_legacy"}
 VALID_RESEARCH_STATUSES = {"open", "partially_resolved", "blocked", "pending_external", "resolved", "abandoned"}
 EXTERNAL_INTAKE_RE = re.compile(r"(?:[A-Z0-9_]*INTAKES?_[A-Za-z0-9_\-]+|INTAKE_[A-Za-z0-9_\-]+)\.md")
 
 
 def load_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def load_rows(pattern: str, label: str, errors: list[str]) -> list[dict]:
+    rows: list[dict] = []
+    paths = sorted(INTAKE_DIR.glob(pattern))
+    if not paths:
+        errors.append(f"missing {label}: {INTAKE_DIR / pattern}")
+        return rows
+    for path in paths:
+        try:
+            data = load_json(path)
+        except Exception as exc:
+            errors.append(f"invalid {label} JSON {path.name}: {exc}")
+            continue
+        if not isinstance(data, list):
+            errors.append(f"{label} {path.name} must be a JSON array")
+            continue
+        for row in data:
+            if isinstance(row, dict):
+                row = dict(row)
+                row.setdefault("_lineage_file", path.name)
+            rows.append(row)
+    return rows
 
 
 def discover_manifest_intakes() -> dict[str, set[str]]:
@@ -30,18 +53,7 @@ def discover_manifest_intakes() -> dict[str, set[str]]:
 
 
 def validate_backlog(intake_ids: set[str], errors: list[str]) -> tuple[int, int]:
-    if not BACKLOG.exists():
-        errors.append(f"missing research backlog: {BACKLOG}")
-        return 0, 0
-    try:
-        rows = load_json(BACKLOG)
-    except Exception as exc:
-        errors.append(f"invalid research backlog JSON: {exc}")
-        return 0, 0
-    if not isinstance(rows, list):
-        errors.append("intake research backlog must be a JSON array")
-        return 0, 0
-
+    rows = load_rows(BACKLOG_GLOB, "intake research backlog", errors)
     ids: set[str] = set()
     covered: set[str] = set()
     p1 = 0
@@ -60,25 +72,21 @@ def validate_backlog(intake_ids: set[str], errors: list[str]) -> tuple[int, int]
             errors.append(f"duplicate research backlog id: {rid}")
         else:
             ids.add(rid)
-
         intake_id = row.get("intake_id")
         if intake_id not in intake_ids:
             errors.append(f"{rid}: unknown intake_id {intake_id!r}")
         else:
             covered.add(intake_id)
-
         priority = row.get("priority")
         if not isinstance(priority, int) or isinstance(priority, bool) or priority < 1 or priority > 3:
             errors.append(f"{rid}: priority must be integer 1..3")
         elif priority == 1:
             p1 += 1
-
         status = row.get("status")
         if status not in VALID_RESEARCH_STATUSES:
             errors.append(f"{rid}: invalid research status {status!r}")
         if status == "pending_external" and not row.get("review_by"):
             errors.append(f"{rid}: pending_external requires review_by")
-
         blocks = row.get("blocks")
         if not isinstance(blocks, list) or not blocks or any(not isinstance(v, str) or not v.strip() for v in blocks):
             errors.append(f"{rid}: blocks must be a non-empty string list")
@@ -86,7 +94,6 @@ def validate_backlog(intake_ids: set[str], errors: list[str]) -> tuple[int, int]
             errors.append(f"{rid}: next_action must be non-empty")
         if status in {"resolved", "abandoned"} and not row.get("resolution"):
             errors.append(f"{rid}: terminal research status requires resolution")
-
     missing = intake_ids - covered
     for iid in sorted(missing):
         errors.append(f"{iid}: registered intake has no research backlog workstream")
@@ -96,19 +103,10 @@ def validate_backlog(intake_ids: set[str], errors: list[str]) -> tuple[int, int]
 def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
-
-    if not REGISTRY.exists():
-        print(f"ERROR: missing registry: {REGISTRY}")
-        return 1
-
-    try:
-        entries = load_json(REGISTRY)
-    except Exception as exc:
-        print(f"ERROR: invalid registry JSON: {exc}")
-        return 1
-
-    if not isinstance(entries, list):
-        print("ERROR: intake registry must be a JSON array")
+    entries = load_rows(REGISTRY_GLOB, "intake registry", errors)
+    if not entries:
+        for error in errors or ["no intake registry entries found"]:
+            print("ERROR:", error)
         return 1
 
     ids: set[str] = set()
@@ -128,15 +126,12 @@ def main() -> int:
             errors.append(f"duplicate intake id: {iid}")
         else:
             ids.add(iid)
-
         status = entry.get("preservation_status")
         if status not in VALID_STATUSES:
             errors.append(f"{iid}: invalid preservation_status {status!r}")
-
         manifest = entry.get("manifest")
         if isinstance(manifest, str) and manifest and not (ROOT / manifest).exists():
             errors.append(f"{iid}: manifest does not exist: {manifest}")
-
         outputs = entry.get("outputs")
         if not isinstance(outputs, list) or not outputs:
             errors.append(f"{iid}: outputs must be a non-empty list")
@@ -146,7 +141,6 @@ def main() -> int:
                     errors.append(f"{iid}: invalid output path {output!r}")
                 elif not (ROOT / output).exists():
                     errors.append(f"{iid}: declared output missing: {output}")
-
         source_name = entry.get("source_name")
         if source_name is not None:
             if not isinstance(source_name, str) or not source_name.endswith(".md"):
@@ -155,10 +149,9 @@ def main() -> int:
                 errors.append(f"duplicate source_name in registry: {source_name}")
             else:
                 names[source_name] = entry
-
         repo_path = entry.get("repo_path")
         recovery = entry.get("recovery_action")
-        if status == "archived":
+        if status in {"archived", "normalized_archival_copy"}:
             if not isinstance(repo_path, str) or not repo_path.startswith("docs/intakes/"):
                 errors.append(f"{iid}: archived intake requires docs/intakes repo_path")
             elif not (ROOT / repo_path).exists():
@@ -178,21 +171,15 @@ def main() -> int:
             if source_name not in names:
                 errors.append(f"{manifest_name}: referenced intake not registered: {source_name}")
             else:
-                declared_manifest = Path(str(names[source_name].get("manifest", ""))).name
-                if declared_manifest != manifest_name:
-                    errors.append(
-                        f"{source_name}: registry manifest {declared_manifest or '<none>'} does not match {manifest_name}"
-                    )
+                declared = names[source_name].get("manifest")
+                declared_manifest = Path(str(declared or "")).name
+                if declared_manifest and declared_manifest != manifest_name:
+                    errors.append(f"{source_name}: registry manifest {declared_manifest} does not match {manifest_name}")
 
-    archived_files = {
-        p.name
-        for p in INTAKE_DIR.glob("*.md")
-        if p.name != "README.md"
-    }
+    archived_files = {p.name for p in INTAKE_DIR.glob("*.md") if p.name != "README.md"}
     registered_archived = {
-        entry.get("source_name")
-        for entry in entries
-        if entry.get("preservation_status") == "archived"
+        entry.get("source_name") for entry in entries
+        if entry.get("preservation_status") in {"archived", "normalized_archival_copy"}
     }
     for filename in sorted(archived_files - registered_archived):
         errors.append(f"archived intake has no registry entry: {filename}")
@@ -200,14 +187,12 @@ def main() -> int:
         errors.append(f"registry says archived but file is absent: {filename}")
 
     backlog_count, p1_count = validate_backlog(ids, errors)
-
     for warning in warnings:
         print("WARN:", warning)
     if errors:
         for error in errors:
             print("ERROR:", error)
         return 1
-
     print(
         "INTAKE LINEAGE AUDIT OK — "
         f"registered {len(entries)} / archived {len(registered_archived)} / "
