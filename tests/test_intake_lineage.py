@@ -5,7 +5,16 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-REGISTRY = ROOT / 'docs' / 'intakes' / 'intake_registry.json'
+INTAKE_DIR = ROOT / 'docs' / 'intakes'
+REGISTRY = INTAKE_DIR / 'intake_registry.json'
+
+
+def all_registry_rows():
+    rows=[]
+    for path in sorted(INTAKE_DIR.glob('intake_registry*.json')):
+        data=json.loads(path.read_text(encoding='utf-8'))
+        if isinstance(data,list):rows.extend(data)
+    return rows
 
 
 class IntakeLineageTests(unittest.TestCase):
@@ -33,7 +42,7 @@ class IntakeLineageTests(unittest.TestCase):
             self.assertIsNone(by_name[name]['repo_path'])
 
     def test_tea_intake_is_archived_not_reconstructed(self):
-        rows = json.loads(REGISTRY.read_text(encoding='utf-8'))
+        rows = all_registry_rows()
         tea = next(row for row in rows if row.get('source_name') == 'INTAKE_tea_plantation_economy.md')
         self.assertEqual('archived', tea['preservation_status'])
         path = ROOT / tea['repo_path']
@@ -44,13 +53,13 @@ class IntakeLineageTests(unittest.TestCase):
 
     def test_future_archived_intake_cannot_bypass_registry(self):
         archived = {
-            p.name for p in (ROOT / 'docs' / 'intakes').glob('*.md')
+            p.name for p in INTAKE_DIR.glob('*.md')
             if p.name != 'README.md'
         }
-        rows = json.loads(REGISTRY.read_text(encoding='utf-8'))
+        rows = all_registry_rows()
         registered = {
             row.get('source_name') for row in rows
-            if row.get('preservation_status') == 'archived'
+            if row.get('preservation_status') in {'archived','normalized_archival_copy'}
         }
         self.assertEqual(archived, registered)
 
