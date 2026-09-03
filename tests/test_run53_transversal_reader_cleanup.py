@@ -31,7 +31,7 @@ class Run53TransversalReaderCleanupTests(unittest.TestCase):
     def test_transversal_handoffs_render_once(self):
         self.assertEqual(1,self.result.count('[RUN53:TRANSITION-CH3-CH4] BEGIN'))
         self.assertEqual(1,self.result.count('[RUN53:TRANSITION-CH7-CH8] BEGIN'))
-        self.assertIn('comment cet héritage devient-il un apogée',self.result)
+        self.assertIn('comment ce choix hérité devient la base d’un nouvel apogée',self.result)
         self.assertIn('Plusieurs optimums territoriaux coexistent',self.result)
 
     def test_absorbed_legacy_side_stories_no_longer_interrupt_reader(self):
