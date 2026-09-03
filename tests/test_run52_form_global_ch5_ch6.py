@@ -23,12 +23,12 @@ class Run52FormGlobalTests(unittest.TestCase):
             (OUT/'run51_storytelling_ch8_portugal_kandy.md').read_text(encoding='utf-8'),
             (OUT/'run52_storytelling_ch5_fall_polonnaruwa.md').read_text(encoding='utf-8'),
             (OUT/'run52_storytelling_ch6_mobile_capitals.md').read_text(encoding='utf-8'),
+            (OUT/'run53_transversal_reader_overlay.md').read_text(encoding='utf-8'),
         )
 
     def test_only_failed_form_global_chapters_get_new_signatures(self):
         self.assertEqual(1,self.result.count('Pourquoi un système aussi intégré et productif que Polonnaruwa devient-il'))
         self.assertEqual(1,self.result.count('Comment la disparition de l’optimum de Rajarata transforme-t-elle la souveraineté sri-lankaise'))
-        # Chapter 7 keeps its existing causal question rather than receiving a rewrite signature.
         self.assertEqual(1,self.result.count('pourquoi, après la désarticulation de Rajarata, un royaume durable se forme-t-il dans le nord'))
 
     def test_legacy_dossier_openings_are_removed_from_ch5_ch6(self):
