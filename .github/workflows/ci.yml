@@ -51,6 +51,8 @@ jobs:
             examples/sri_lanka_post_1948/09_output/drafting/iterative/packets/**
       - run: python scripts/qa_functional_pre1948.py
       - run: python scripts/render_composed_reader.py --project all
+      - run: python scripts/materialize_storytelling_overlays.py
+      - run: python scripts/materialize_storytelling_overlays.py --check
       - run: python scripts/qa_run34.py --post-render
       - name: Publish complete reader outputs
         uses: actions/upload-artifact@v4
