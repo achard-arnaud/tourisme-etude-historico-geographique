@@ -1,0 +1,5 @@
+[
+  {
+    "id":"I-R48-MUSEUM-MAPS-PORTS-ROUTES","source_name":"INTAKE_R48_museum_maps_ports_routes_qualification.md","intake_kind":"field_capture_completion","first_run":"RUN48","manifest":"docs/RUN48_MUSEUM_MAPS_QUALIFICATION_MANIFEST.json","preservation_status":"archived","repo_path":"docs/intakes/INTAKE_R48_museum_maps_ports_routes_qualification.md","outputs":["examples/sri_lanka_pre_1948/09_output/illustrations/ILL-R36-MUSEUM-MAPS-2026-09.json","examples/sri_lanka_pre_1948/06_bridges/B-R48-HYDRAULIC-MULTIPORT-001.json","examples/sri_lanka_pre_1948/06_bridges/B-R48-MULTIPORT-MONSOON-DIASPORA-001.json","examples/sri_lanka_pre_1948/08_questions/question_register_run48_museum_maps.json"],"notes":"Higher-resolution museum-map qualification with port labels, academic corroboration and explicit limits on dhow/outrigger zone chronology."
+  }
+]
