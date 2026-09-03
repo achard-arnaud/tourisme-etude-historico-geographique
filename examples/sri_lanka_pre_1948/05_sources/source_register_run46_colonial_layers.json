@@ -1,0 +1,41 @@
+[
+  {
+    "id":"MCGILVRAY-BATTICALOA-BURGHERS-1982",
+    "title":"Dutch Burghers and Portuguese Mechanics: Eurasian Ethnicity in Sri Lanka",
+    "url":"https://www.cambridge.org/core/journals/comparative-studies-in-society-and-history/article/abs/dutch-burghers-and-portuguese-mechanics-eurasian-ethnicity-in-sri-lanka/D185D36518A90E891B622DB452E42D10",
+    "tier":"T1",
+    "anchor_role":"canonical anchor",
+    "date":"1982",
+    "author_or_institution":"Dennis B. McGilvray / Comparative Studies in Society and History / Cambridge University Press",
+    "scope":"Burgher ethnicity, Portuguese- and Dutch-derived communities, with particular attention to Batticaloa and eastern Sri Lanka.",
+    "claims_supported":[],
+    "limitations":"Ethnographic-historical analysis of Burgher identity; not a primary source for seventeenth-century fort chronology or a licence to project later Burgher categories unchanged backward.",
+    "provenance":"direct"
+  },
+  {
+    "id":"MCGILVRAY-BURGHERS-1982",
+    "title":"Dutch Burghers and Portuguese Mechanics: Eurasian Ethnicity in Sri Lanka",
+    "url":"https://www.cambridge.org/core/journals/comparative-studies-in-society-and-history/article/abs/dutch-burghers-and-portuguese-mechanics-eurasian-ethnicity-in-sri-lanka/D185D36518A90E891B622DB452E42D10",
+    "tier":"T1",
+    "anchor_role":"canonical anchor",
+    "date":"1982",
+    "author_or_institution":"Dennis B. McGilvray / Comparative Studies in Society and History / Cambridge University Press",
+    "scope":"Social construction and regional differentiation of Portuguese and Dutch Burgher identities in Sri Lanka.",
+    "claims_supported":[],
+    "limitations":"Same publication retained under the identifier referenced by the Run46 colonial-layers bridge; duplicate publication identifiers represent existing lineage aliases, not independent corroboration.",
+    "provenance":"direct"
+  },
+  {
+    "id":"MCGILVRAY-PORTUGUESE-BURGHERS-2007",
+    "title":"The Portuguese Burghers of Eastern Sri Lanka in the Wake of Civil War and Tsunami",
+    "url":"https://escholarship.org/uc/item/9hz5v7rf",
+    "tier":"T1",
+    "anchor_role":"canonical anchor",
+    "date":"2007",
+    "author_or_institution":"Dennis B. McGilvray / in Jorge Flores (ed.), Re-exploring the Links: History and Constructed Histories between Portugal and Sri Lanka",
+    "scope":"Portuguese Burgher communities in eastern Sri Lanka, especially Batticaloa, including language, Christianity, identity and social continuity.",
+    "claims_supported":[],
+    "limitations":"Modern ethnographic/historical study; supports persistence and identity formation, not a timeless ethnic category or direct continuity of every colonial administrative role.",
+    "provenance":"direct"
+  }
+]
