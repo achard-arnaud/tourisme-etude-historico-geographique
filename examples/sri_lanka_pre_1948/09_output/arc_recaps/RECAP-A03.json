@@ -1,0 +1,37 @@
+{
+  "schema_version":"1.0",
+  "class":"arc_recap",
+  "id":"RECAP-A03",
+  "arc":"A03_indian_ocean_and_regional_systems",
+  "status":"validated",
+  "causal_schema":{
+    "drivers":[
+      {"claim_id":"C-R45-MONSOON-MERCHANT-DIASPORA-001","summary":"La saisonnalité des moussons crée des temps d'attente et de résidence qui favorisent courtage, confiance et implantation durable de communautés marchandes."}
+    ],
+    "amplifiers":[
+      {"claim_id":"C-R45-MUSLIM-LAYERED-FORMATION-001","summary":"Les communautés musulmanes de Sri Lanka se forment par couches successives de circulation, résidence, mariage et recomposition plutôt que par une migration fondatrice unique."}
+    ],
+    "constraints":[
+      {"claim_id":"C-R41-PORTUGUESE-COERCIVE-TRADE-001","summary":"La coercition portugaise tente de modifier les conditions d'accès aux réseaux existants sans supprimer les marchands asiatiques ni créer les routes qu'elle cherche à contrôler."}
+    ],
+    "consequences":[
+      {"claim_id":"C-R41-BULLION-INTRAASIA-001","summary":"Les échanges européens et asiatiques restent imbriqués dans des circuits de bullion et de commerce intra-asiatique qui empêchent de réduire l'océan Indien à un axe Europe–Ceylan."}
+    ]
+  },
+  "protagonists":[
+    {"name":"Marchands et équipages de l'océan Indien","role":"acteurs de réseaux saisonniers","objective":"Synchroniser navigation, stockage, crédit et échanges avec les fenêtres de mousson.","constraints":["saisonnalité des vents","information imparfaite","besoin d'intermédiaires et de confiance"],"perceived_options":["attendre et résider dans les ports","utiliser des courtiers locaux","combiner cabotage et routes de longue distance"],"claim_ids":["C-R45-MONSOON-MERCHANT-DIASPORA-001"]},
+    {"name":"Pouvoirs et intermédiaires sri-lankais","role":"acteurs cherchant à capter ou orienter les flux","objective":"Accéder aux biens, revenus, alliés et informations que les façades maritimes rendent disponibles.","constraints":["contrôle incomplet des réseaux lointains","concurrence entre ports et puissances","dépendance aux intermédiaires"],"perceived_options":["taxer les interfaces","protéger ou attirer des marchands","jouer plusieurs circuits régionaux"],"claim_ids":["C-R45-MUSLIM-LAYERED-FORMATION-001"]},
+    {"name":"Puissances maritimes européennes","role":"nouveaux acteurs coercitifs des réseaux","objective":"Transformer une partie des circulations existantes en flux taxables, licenciés ou monopolistiques.","constraints":["réseaux asiatiques antérieurs","contournement et contrebande","coût militaire du contrôle"],"perceived_options":["passes et licences","forts","alliances locales","monopoles"],"claim_ids":["C-R41-PORTUGUESE-COERCIVE-TRADE-001"]}
+  ],
+  "what_changed":[
+    "Sri Lanka est lu comme une zone de commutation entre plusieurs circuits maritimes plutôt que comme une étape unique d'une route linéaire.",
+    "La mousson devient un mécanisme social : le temps d'attente peut produire résidence, intermédiation et communautés.",
+    "L'arrivée européenne est replacée comme tentative de coercition d'un système préexistant, non comme découverte ou création du commerce océanique."
+  ],
+  "prepares_next":[
+    {"bullet":"Les réseaux régionaux deviennent politiquement décisifs lorsque des puissances sud-indiennes puis européennes tentent d'en contrôler les interfaces et d'en modifier les règles.","next_arc":"A04_chola_interlude_and_polonnaruwa","bridge_ids":["B-R48-MULTIPORT-MONSOON-DIASPORA-001"]}
+  ],
+  "lineage":{"claim_ids":["C-R45-MONSOON-MERCHANT-DIASPORA-001","C-R45-MUSLIM-LAYERED-FORMATION-001","C-R41-PORTUGUESE-COERCIVE-TRADE-001","C-R41-BULLION-INTRAASIA-001"],"source_ids":[],"bridge_ids":["B-R48-MULTIPORT-MONSOON-DIASPORA-001"]},
+  "placement":{"before_anchor":""},
+  "render":{"label":"Récap causal","marker":"[ARC-RECAP:RECAP-A03]","required_in_reader":false}
+}
