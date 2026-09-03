@@ -7,7 +7,7 @@ SCRIPTS=ROOT/'scripts'
 if str(SCRIPTS) not in sys.path:sys.path.insert(0,str(SCRIPTS))
 
 from materialize_storytelling_overlays import (
-    CH8,CH9,CH10,EPILOGUE,TRACE_APPENDIX,materialize,section
+    CH4,CH8,CH9,CH10,EPILOGUE,TRACE_APPENDIX,materialize,section
 )
 
 OUT=ROOT/'examples/sri_lanka_pre_1948/09_output'
@@ -33,6 +33,16 @@ class Run53TransversalReaderCleanupTests(unittest.TestCase):
         self.assertEqual(1,self.result.count('[RUN53:TRANSITION-CH7-CH8] BEGIN'))
         self.assertIn('comment ce choix hérité devient la base d’un nouvel apogée',self.result)
         self.assertIn('Plusieurs optimums territoriaux coexistent',self.result)
+
+    def test_transversal_handoffs_are_at_reader_chapter_boundaries_not_in_toc(self):
+        toc_start=self.result.find('# **Sommaire**')
+        body_start=self.result.find('**Chapitre 1 — Rāmāyaṇa, origines et protohistoire**')
+        self.assertGreaterEqual(toc_start,0)
+        self.assertGreater(body_start,toc_start)
+        toc=self.result[toc_start:body_start]
+        self.assertNotIn('RUN53:TRANSITION-',toc)
+        self.assertLess(self.result.find('[RUN53:TRANSITION-CH3-CH4] BEGIN'),self.result.find(CH4))
+        self.assertLess(self.result.find('[RUN53:TRANSITION-CH7-CH8] BEGIN'),self.result.find(CH8))
 
     def test_absorbed_legacy_side_stories_no_longer_interrupt_reader(self):
         ch8=section(self.result,CH8,CH9)
