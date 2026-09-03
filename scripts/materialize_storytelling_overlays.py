@@ -9,6 +9,7 @@ source registers, or the archived V1 baseline.
 from __future__ import annotations
 
 import argparse
+import json
 import re
 from pathlib import Path
 
@@ -37,6 +38,7 @@ EPILOGUE = "# **Épilogue — ce que la longue durée fait apparaître**"
 A02_INSERT_BEFORE = "## **VI. VIIe–Xe siècles — Islam, Tamilakam et militarisation des réseaux**"
 A03_INSERT_BEFORE = "### **3. Rohana/Mahagama : le « hedge » territorial de la monarchie**"
 TRACE_APPENDIX = "# **Annexe technique — récaps causaux de traçabilité**"
+STORY_DISPOSITIONS = OUTPUT / "story_dispositions.json"
 
 SPECIAL_BLOCK = re.compile(
     r"(?ms)<!-- \[(?P<kind>SIDE-STORY|ARC-RECAP):(?P<id>[^\]]+)\].*?(?:<!-- \[/ARC-RECAP:[^\]]+\] -->|<!-- \[SIDE-STORY:[^\]]+\] END -->|(?=\n## |\n\*\*Chapitre |\Z))"
@@ -45,19 +47,46 @@ ARC_RECAP_BLOCK = re.compile(
     r"(?ms)<!-- \[ARC-RECAP:(?P<id>[^\]]+)\] -->.*?<!-- \[/ARC-RECAP:(?P=id)\] -->"
 )
 
-# These legacy reader blocks are not discarded: RUN53 records an explicit
-# disposition for each one. Their mechanism is now in the causal core, or the
-# same typed story already exists in the reviewed replacement.
-CH8_ABSORBED = {"SIDE-STORY:SS-PRE-004"}
-CH9_ABSORBED = {
-    "SIDE-STORY:SS-PRE-003",
-    "SIDE-STORY:SS-PRE-001",
-    "SIDE-STORY:SS-PRE-002",
-    "SIDE-STORY:SS-R23-KDY-SIAM-DEZOOM-001",
-    "ARC-RECAP:RECAP-A06",
-    "ARC-RECAP:RECAP-A07",
-    "ARC-RECAP:RECAP-A08",
+VALID_LEGACY_DISPOSITIONS = {
+    "absorbed_into_core",
+    "retained_in_replacement",
+    "moved_to_traceability_appendix",
 }
+
+
+def load_story_dispositions(path: Path = STORY_DISPOSITIONS) -> list[dict]:
+    data = json.loads(path.read_text(encoding="utf-8"))
+    rows = data.get("decisions") if isinstance(data, dict) else None
+    if not isinstance(rows, list):
+        raise ValueError(f"invalid story disposition ledger: {path}")
+    seen: set[tuple[str, str]] = set()
+    for row in rows:
+        key = (str(row.get("object_type") or ""), str(row.get("id") or ""))
+        if not all(key) or key in seen:
+            raise ValueError(f"invalid or duplicate story disposition: {key}")
+        seen.add(key)
+        if row.get("disposition") not in VALID_LEGACY_DISPOSITIONS:
+            raise ValueError(f"invalid disposition for {key}: {row.get('disposition')}")
+        if not row.get("source_chapter") or not str(row.get("reason") or "").strip():
+            raise ValueError(f"incomplete story disposition: {key}")
+    return rows
+
+
+def legacy_skip_keys(chapter: str, rows: list[dict] | None = None) -> set[str]:
+    records = load_story_dispositions() if rows is None else rows
+    prefixes = {"side_story": "SIDE-STORY", "arc_recap": "ARC-RECAP"}
+    return {
+        f"{prefixes[row['object_type']]}:{row['id']}"
+        for row in records
+        if row.get("source_chapter") == chapter
+    }
+
+
+# RUN53 decisions are now machine-readable rather than duplicated as Python-only
+# knowledge. The materializer still preserves every object according to its
+# explicit destination; these sets only suppress stale copies from old chapters.
+CH8_ABSORBED = legacy_skip_keys("ch8")
+CH9_ABSORBED = legacy_skip_keys("ch9")
 
 
 def section(text: str, start: str, end: str | None = None) -> str:

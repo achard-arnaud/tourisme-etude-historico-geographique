@@ -48,6 +48,14 @@ def validate_question_registers(root):
                 errors.append(f'invalid question status: {qid or where}')
             if q.get('status') == 'blocked' and not str(q.get('blocked_by') or '').strip():
                 errors.append(f'blocked question requires blocked_by: {qid or where}')
+            opened_run = q.get('opened_run')
+            review_after_run = q.get('review_after_run')
+            if opened_run is not None and (not isinstance(opened_run, int) or opened_run < 1):
+                errors.append(f'invalid opened_run: {qid or where}')
+            if review_after_run is not None and (not isinstance(review_after_run, int) or review_after_run < 1):
+                errors.append(f'invalid review_after_run: {qid or where}')
+            if isinstance(opened_run, int) and isinstance(review_after_run, int) and review_after_run <= opened_run:
+                errors.append(f'review_after_run must follow opened_run: {qid or where}')
             if not isinstance(q.get('priority'), int) or q.get('priority', 0) < 1:
                 errors.append(f'invalid question priority: {qid or where}')
             if isinstance(q.get('question'), str) and not q['question'].strip().endswith('?'):

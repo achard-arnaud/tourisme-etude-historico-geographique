@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "run": 53,
+  "decisions": [
+    {
+      "id": "SS-PRE-004",
+      "object_type": "side_story",
+      "source_chapter": "ch8",
+      "disposition": "absorbed_into_core",
+      "destination": "ch8",
+      "reason": "The Mannar/Jaffna mechanism is already necessary and explicit in the rewritten chapter 8 causal core."
+    },
+    {
+      "id": "SS-R23-KDY-SIAM-DEZOOM-001",
+      "object_type": "side_story",
+      "source_chapter": "ch9",
+      "disposition": "retained_in_replacement",
+      "destination": "ch9",
+      "reason": "Keep the reviewed RUN47 occurrence only; suppress the legacy copy appended after the chapter conclusion."
+    },
+    {
+      "id": "SS-PRE-003",
+      "object_type": "side_story",
+      "source_chapter": "ch9",
+      "disposition": "absorbed_into_core",
+      "destination": "ch9",
+      "reason": "The paper-state and caste mechanism is already carried by the chapter 9 core."
+    },
+    {
+      "id": "SS-PRE-001",
+      "object_type": "side_story",
+      "source_chapter": "ch9",
+      "disposition": "absorbed_into_core",
+      "destination": "ch9",
+      "reason": "The contraction of European counterweights is already carried by the chapter 9 core."
+    },
+    {
+      "id": "SS-PRE-002",
+      "object_type": "side_story",
+      "source_chapter": "ch9",
+      "disposition": "absorbed_into_core",
+      "destination": "ch10",
+      "reason": "The 1815 sovereignty mechanism belongs to and is developed in the British chapter."
+    },
+    {
+      "id": "RECAP-A06",
+      "object_type": "arc_recap",
+      "source_chapter": "ch9",
+      "disposition": "moved_to_traceability_appendix",
+      "destination": "traceability_appendix",
+      "reason": "Preserve the complete causal recap without interrupting the VOC narrative conclusion."
+    },
+    {
+      "id": "RECAP-A07",
+      "object_type": "arc_recap",
+      "source_chapter": "ch9",
+      "disposition": "moved_to_traceability_appendix",
+      "destination": "traceability_appendix",
+      "reason": "Preserve the complete causal recap without interrupting the VOC narrative conclusion."
+    },
+    {
+      "id": "RECAP-A08",
+      "object_type": "arc_recap",
+      "source_chapter": "ch9",
+      "disposition": "moved_to_traceability_appendix",
+      "destination": "traceability_appendix",
+      "reason": "Preserve the complete causal recap without interrupting the VOC narrative conclusion."
+    }
+  ]
+}

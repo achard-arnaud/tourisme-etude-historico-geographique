@@ -50,6 +50,10 @@ Corps du détour.
             self.assertEqual(1, metrics["html_callouts"])
             self.assertIn("Chapitre 1 — Test", [p.text for p in doc.paragraphs])
             self.assertGreaterEqual(len(doc.tables), 4)  # cover, Markdown table, two side stories
+            chapters = [p for p in doc.paragraphs if p.text == "Chapitre 1 — Test"]
+            chapter = next(p for p in chapters if p.paragraph_format.page_break_before)
+            self.assertTrue(chapter.paragraph_format.page_break_before)
+            self.assertFalse(chapter._p.xpath(".//w:br[@w:type='page']"))
 
 
 if __name__ == "__main__":

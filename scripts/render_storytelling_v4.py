@@ -44,6 +44,36 @@ PROJECT = REPO / "examples" / "sri_lanka_pre_1948"
 OUTPUT = PROJECT / "09_output"
 DEFAULT_SOURCE = OUTPUT / "report_v4_full.md"
 DEFAULT_OUTPUT = OUTPUT / "Sri_Lanka_Fresque_historico_geographique_vol_retour_v4.docx"
+POST_PROJECT = REPO / "examples" / "sri_lanka_post_1948"
+POST_OUTPUT = POST_PROJECT / "09_output"
+RENDER_SPECS = {
+    "pre": {
+        "output_dir": OUTPUT,
+        "source": DEFAULT_SOURCE,
+        "output": DEFAULT_OUTPUT,
+        "header": "Sri Lanka · des origines à 1948 · V4",
+        "eyebrow": "FRESQUE HISTORICO-GÉOGRAPHIQUE · VOLUME 1",
+        "title": "Sri Lanka — une île construite par ses interfaces",
+        "subtitle": "Des premiers réseaux de l’océan Indien à l’État colonial de 1948",
+        "run_label": "Composition RUN47–RUN54",
+        "date": "3 SEPTEMBRE 2026",
+        "subject": "V4 matérialisée après la passe éditoriale RUN54",
+        "keywords": "Sri Lanka, histoire, géographie, océan Indien, reader V4",
+    },
+    "post": {
+        "output_dir": POST_OUTPUT,
+        "source": POST_OUTPUT / "report_v4_full.md",
+        "output": POST_OUTPUT / "Sri_Lanka_1948_2026_etude_historico_geographique_v4.docx",
+        "header": "Sri Lanka · 1948 à 2026 · V4",
+        "eyebrow": "FRESQUE HISTORICO-GÉOGRAPHIQUE · VOLUME 2",
+        "title": "Sri Lanka — reconstruire l’État après 1948",
+        "subtitle": "Continuités institutionnelles, guerres, développement et recomposition politique",
+        "run_label": "Composition RUN56",
+        "date": "3 SEPTEMBRE 2026",
+        "subject": "V4 post-1948 matérialisée et relue chapitre par chapitre",
+        "keywords": "Sri Lanka, histoire, géographie, indépendance, guerre civile, reader V4",
+    },
+}
 GOLD = RGBColor(150, 111, 32)
 BLUE = RGBColor(46, 116, 181)
 TABLE_TOTAL_DXA = 9120
@@ -99,9 +129,9 @@ def html_paragraphs(raw: str) -> list[str]:
     return parser.paragraphs
 
 
-def illustration_index() -> dict[str, dict]:
+def illustration_index(output_dir: Path = OUTPUT) -> dict[str, dict]:
     records: dict[str, dict] = {}
-    for path in sorted((OUTPUT / "illustrations").glob("*.json")):
+    for path in sorted((output_dir / "illustrations").glob("*.json")):
         data = json.loads(path.read_text(encoding="utf-8"))
         items = data if isinstance(data, list) else [data]
         for item in items:
@@ -111,23 +141,24 @@ def illustration_index() -> dict[str, dict]:
     return records
 
 
-def add_cover(doc: Document) -> None:
+def add_cover(doc: Document, spec: dict | None = None) -> None:
+    spec = spec or RENDER_SPECS["pre"]
     p = doc.add_paragraph()
     p.paragraph_format.space_before = Pt(104)
     p.paragraph_format.space_after = Pt(18)
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    set_run_font(p.add_run("FRESQUE HISTORICO-GÉOGRAPHIQUE · VOLUME 1"), size=10, color=GOLD, bold=True)
+    set_run_font(p.add_run(spec["eyebrow"]), size=10, color=GOLD, bold=True)
 
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.space_after = Pt(10)
-    set_run_font(p.add_run("Sri Lanka — une île construite par ses interfaces"), size=28, color=INK, bold=True)
+    set_run_font(p.add_run(spec["title"]), size=28, color=INK, bold=True)
 
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.space_after = Pt(70)
     set_run_font(
-        p.add_run("Des premiers réseaux de l’océan Indien à l’État colonial de 1948"),
+        p.add_run(spec["subtitle"]),
         size=14,
         color=BLUE,
     )
@@ -143,9 +174,9 @@ def add_cover(doc: Document) -> None:
         )
     left, right = table.rows[0].cells
     set_run_font(left.paragraphs[0].add_run("ÉDITION LECTEUR V4\n"), size=9, color=MUTED, bold=True)
-    set_run_font(left.paragraphs[0].add_run("Composition RUN47–RUN54"), size=9.5, color=INK)
+    set_run_font(left.paragraphs[0].add_run(spec["run_label"]), size=9.5, color=INK)
     right.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.RIGHT
-    set_run_font(right.paragraphs[0].add_run("3 SEPTEMBRE 2026\n"), size=9, color=MUTED, bold=True)
+    set_run_font(right.paragraphs[0].add_run(f"{spec['date']}\n"), size=9, color=MUTED, bold=True)
     set_run_font(right.paragraphs[0].add_run("Version matérialisée et vérifiée"), size=9.5, color=INK)
 
     p = doc.add_paragraph()
@@ -189,9 +220,12 @@ def strip_heading_markup(text: str) -> str:
 
 
 def add_heading(doc: Document, text: str, level: int, *, page_break: bool = False) -> None:
-    if page_break:
-        doc.add_page_break()
     p = doc.add_heading(level=min(level, 4))
+    if page_break:
+        # A standalone break paragraph can itself be pushed to the next page
+        # when the preceding page is full, yielding an unintended blank page.
+        # Binding the break to the heading is stable in Word and LibreOffice.
+        p.paragraph_format.page_break_before = True
     add_rich_text(p, strip_heading_markup(text))
 
 
@@ -346,7 +380,7 @@ def add_body_line(doc: Document, line: str) -> None:
     heading = re.match(r"^(#{1,4})\s+(.+)$", stripped)
     if heading:
         title = strip_heading_markup(heading.group(2))
-        page_break = title.startswith(("Épilogue", "Annexe technique"))
+        page_break = title.startswith(("Chapitre ", "Épilogue", "Annexe technique"))
         add_heading(doc, title, len(heading.group(1)), page_break=page_break)
         return
     if stripped.startswith("> "):
@@ -387,14 +421,14 @@ def add_toc_line(doc: Document, line: str) -> None:
             run.bold = True
 
 
-def render_markdown(doc: Document, markdown: str) -> dict[str, int]:
+def render_markdown(doc: Document, markdown: str, *, output_dir: Path = OUTPUT) -> dict[str, int]:
     lines = markdown.splitlines()
     index = 0
     side_stories = 0
     tables = 0
     html_callouts = 0
     illustration_captions = 0
-    illustrations = illustration_index()
+    illustrations = illustration_index(output_dir)
     toc_active = False
     seen_parts: set[str] = set()
     while index < len(lines):
@@ -472,23 +506,24 @@ def render_markdown(doc: Document, markdown: str) -> dict[str, int]:
     }
 
 
-def build(source: Path, output: Path) -> dict[str, int | str]:
+def build(source: Path, output: Path, spec: dict | None = None) -> dict[str, int | str]:
+    spec = spec or RENDER_SPECS["pre"]
     markdown = source.read_text(encoding="utf-8")
     doc = Document()
     configure_v4_styles(doc)
-    configure_section(doc.sections[0], "Sri Lanka · des origines à 1948 · V4")
-    add_cover(doc)
-    metrics = render_markdown(doc, markdown)
+    configure_section(doc.sections[0], spec["header"])
+    add_cover(doc, spec)
+    metrics = render_markdown(doc, markdown, output_dir=Path(spec["output_dir"]))
     visible = visible_docx_text(doc)
     assert_no_known_backstage_leak(visible)
     for token in ("<table>", "</table>", "<colgroup>", "[ILLUSTRATION:", "<!-- [RUN"):
         if token in visible:
             raise RuntimeError(f"V4 frontstage leak: {token}")
     core = doc.core_properties
-    core.title = "Sri Lanka — une île construite par ses interfaces"
-    core.subject = "V4 matérialisée après la passe éditoriale RUN54"
+    core.title = spec["title"]
+    core.subject = spec["subject"]
     core.author = "Projet tourisme-etude-historico-geographique"
-    core.keywords = "Sri Lanka, histoire, géographie, océan Indien, reader V4"
+    core.keywords = spec["keywords"]
     core.comments = "Rendered from report_v4_full.md; evidence and composition remain separate."
     output.parent.mkdir(parents=True, exist_ok=True)
     doc.save(output)
@@ -501,10 +536,18 @@ def build(source: Path, output: Path) -> dict[str, int | str]:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE)
-    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument("--project", choices=("pre", "post", "all"), default="pre")
+    parser.add_argument("--source", type=Path)
+    parser.add_argument("--output", type=Path)
     args = parser.parse_args()
-    print(build(args.source, args.output))
+    if args.project == "all" and (args.source or args.output):
+        parser.error("--source/--output cannot be combined with --project all")
+    selected = ("pre", "post") if args.project == "all" else (args.project,)
+    for key in selected:
+        spec = RENDER_SPECS[key]
+        source = args.source or Path(spec["source"])
+        output = args.output or Path(spec["output"])
+        print(build(source, output, spec))
     return 0
 
 

@@ -1,0 +1,780 @@
+{
+  "schema_version": 1,
+  "project": "examples/sri_lanka_post_1948",
+  "claims": 98,
+  "bridges": 24,
+  "edges": 11,
+  "arcs": [
+    {
+      "arc": "A08_heritage_memory_governance",
+      "claims": 8,
+      "linked_claims": 0,
+      "unlinked_claims": [
+        "C-R13-PARK-004",
+        "C-R13-PARK-005",
+        "C-R13-PARK-006",
+        "C-R13-PARK-007",
+        "C-R16-MIL-COMMERCIAL-001",
+        "C-R16-MIL-EFFECT-001",
+        "C-R16-MIL-HEARTLAND-COMP-001",
+        "C-R16-MIL-INTENT-001"
+      ],
+      "mean_graph_references": 0.0
+    },
+    {
+      "arc": "A09_electoral_realignment_2024_2026",
+      "claims": 2,
+      "linked_claims": 0,
+      "unlinked_claims": [
+        "C-R16-MIL-CHECKPOINT-001",
+        "C-R16-MIL-RELEASE-001"
+      ],
+      "mean_graph_references": 0.0
+    },
+    {
+      "arc": "A14_coastal_environmental_governance",
+      "claims": 7,
+      "linked_claims": 0,
+      "unlinked_claims": [
+        "C-R15-PLASTIC-001",
+        "C-R15-PLASTIC-002",
+        "C-R15-PLASTIC-003",
+        "C-R15-PLASTIC-004",
+        "C-R15-PLASTIC-005",
+        "C-R15-PLASTIC-006",
+        "C-R20-PLASTIC-ENFORCEMENT-001"
+      ],
+      "mean_graph_references": 0.0
+    },
+    {
+      "arc": "A15_tsunami_2004_and_reconstruction",
+      "claims": 7,
+      "linked_claims": 0,
+      "unlinked_claims": [
+        "C-R15-TSU-001",
+        "C-R15-TSU-002",
+        "C-R15-TSU-003",
+        "C-R15-TSU-004",
+        "C-R15-TSU-005",
+        "C-R15-TSU-006",
+        "C-R15-TSU-007"
+      ],
+      "mean_graph_references": 0.0
+    },
+    {
+      "arc": "A16_tourism_shock_and_fiscal_collapse",
+      "claims": 8,
+      "linked_claims": 0,
+      "unlinked_claims": [
+        "C-R15-TOUR-001",
+        "C-R15-TOUR-002",
+        "C-R15-TOUR-003",
+        "C-R15-TOUR-004",
+        "C-R15-TOUR-005",
+        "C-R15-TOUR-006",
+        "C-R15-TOUR-007",
+        "C-R15-TOUR-008"
+      ],
+      "mean_graph_references": 0.0
+    },
+    {
+      "arc": "A17_highland_conservation",
+      "claims": 3,
+      "linked_claims": 0,
+      "unlinked_claims": [
+        "C-R16-HOR-ECO-001",
+        "C-R16-HOR-UNESCO-001",
+        "C-R16-HOR-WATERSHED-001"
+      ],
+      "mean_graph_references": 0.0
+    },
+    {
+      "arc": "A17b_plantation_economy_and_value_capture",
+      "claims": 12,
+      "linked_claims": 0,
+      "unlinked_claims": [
+        "C-R18-2021-EFFECT-001",
+        "C-R18-2021-INTENT-001",
+        "C-R18-2021-UPMARKET-FALSE-001",
+        "C-R18-EXPORT-EARNINGS-2024",
+        "C-R18-GI-PENDING-001",
+        "C-R18-LION-MARK-001",
+        "C-R18-LIPTON-OWNERSHIP-2022",
+        "C-R18-M1-001",
+        "C-R18-M2-001",
+        "C-R18-M3-001",
+        "C-R18-REPLANT-2022",
+        "C-R18-SMALLHOLDER-SHARE-001"
+      ],
+      "mean_graph_references": 0.0
+    },
+    {
+      "arc": "A18_malaiyaha_tamils_status_and_wage",
+      "claims": 7,
+      "linked_claims": 0,
+      "unlinked_claims": [
+        "C-R18-CITIZENSHIP-001",
+        "C-R18-ESTATE-CATEGORY-001",
+        "C-R18-LINEROOMS-2024",
+        "C-R18-UNION-EXISTS-001",
+        "C-R18-WAGE-2026-EFFECT",
+        "C-R18-WAGE-2026-FACT",
+        "C-R18-WAGE-2026-INFERENCE"
+      ],
+      "mean_graph_references": 0.0
+    },
+    {
+      "arc": "A19_kandy_second_city_paradox",
+      "claims": 14,
+      "linked_claims": 2,
+      "unlinked_claims": [
+        "C-R17-KDY-COMP-PILGRIM-001",
+        "C-R17-KDY-CONSTRAINT-001",
+        "C-R17-KDY-ECON-FALSE-001",
+        "C-R17-KDY-MET-001",
+        "C-R17-KDY-MET-002",
+        "C-R17-KDY-MET-003",
+        "C-R17-KDY-MET-004",
+        "C-R17-KDY-MET-005",
+        "C-R17-KDY-MET-006",
+        "C-R17-KDY-MET-007",
+        "C-R17-KDY-MET-008",
+        "C-R17-KDY-SACRED-001"
+      ],
+      "mean_graph_references": 0.29
+    },
+    {
+      "arc": "unassigned",
+      "claims": 30,
+      "linked_claims": 10,
+      "unlinked_claims": [
+        "C-COMP-TN-001",
+        "C-COMP-TN-002",
+        "C-COMP-TN-DEV-002",
+        "C-POST-001",
+        "C-POST-002",
+        "C-POST-003",
+        "C-POST-CASTE-001",
+        "C-POST-CASTE-004",
+        "C-POST-EDU-001",
+        "C-POST-EDU-002",
+        "C-POST-EDU-003",
+        "C-POST-HER-003",
+        "C-POST-INTEGRATION-001",
+        "C-POST-INTEGRATION-002",
+        "C-POST-LANG-002",
+        "C-POST-LANG-003",
+        "C-POST-MARRIAGE-001",
+        "C-POST-NAM-001",
+        "C-POST-NAM-002",
+        "C-POST-STATE-REP-001"
+      ],
+      "mean_graph_references": 0.33
+    }
+  ],
+  "orphan_claims": [
+    "C-COMP-TN-001",
+    "C-COMP-TN-002",
+    "C-COMP-TN-DEV-002",
+    "C-POST-001",
+    "C-POST-002",
+    "C-POST-003",
+    "C-POST-CASTE-001",
+    "C-POST-CASTE-004",
+    "C-POST-EDU-001",
+    "C-POST-EDU-002",
+    "C-POST-EDU-003",
+    "C-POST-HER-003",
+    "C-POST-INTEGRATION-001",
+    "C-POST-INTEGRATION-002",
+    "C-POST-LANG-002",
+    "C-POST-LANG-003",
+    "C-POST-MARRIAGE-001",
+    "C-POST-NAM-001",
+    "C-POST-NAM-002",
+    "C-POST-STATE-REP-001",
+    "C-R13-PARK-004",
+    "C-R13-PARK-005",
+    "C-R13-PARK-006",
+    "C-R13-PARK-007",
+    "C-R15-PLASTIC-001",
+    "C-R15-PLASTIC-002",
+    "C-R15-PLASTIC-003",
+    "C-R15-PLASTIC-004",
+    "C-R15-PLASTIC-005",
+    "C-R15-PLASTIC-006",
+    "C-R15-TOUR-001",
+    "C-R15-TOUR-002",
+    "C-R15-TOUR-003",
+    "C-R15-TOUR-004",
+    "C-R15-TOUR-005",
+    "C-R15-TOUR-006",
+    "C-R15-TOUR-007",
+    "C-R15-TOUR-008",
+    "C-R15-TSU-001",
+    "C-R15-TSU-002",
+    "C-R15-TSU-003",
+    "C-R15-TSU-004",
+    "C-R15-TSU-005",
+    "C-R15-TSU-006",
+    "C-R15-TSU-007",
+    "C-R16-HOR-ECO-001",
+    "C-R16-HOR-UNESCO-001",
+    "C-R16-HOR-WATERSHED-001",
+    "C-R16-MIL-CHECKPOINT-001",
+    "C-R16-MIL-COMMERCIAL-001",
+    "C-R16-MIL-EFFECT-001",
+    "C-R16-MIL-HEARTLAND-COMP-001",
+    "C-R16-MIL-INTENT-001",
+    "C-R16-MIL-RELEASE-001",
+    "C-R17-KDY-COMP-PILGRIM-001",
+    "C-R17-KDY-CONSTRAINT-001",
+    "C-R17-KDY-ECON-FALSE-001",
+    "C-R17-KDY-MET-001",
+    "C-R17-KDY-MET-002",
+    "C-R17-KDY-MET-003",
+    "C-R17-KDY-MET-004",
+    "C-R17-KDY-MET-005",
+    "C-R17-KDY-MET-006",
+    "C-R17-KDY-MET-007",
+    "C-R17-KDY-MET-008",
+    "C-R17-KDY-SACRED-001",
+    "C-R18-2021-EFFECT-001",
+    "C-R18-2021-INTENT-001",
+    "C-R18-2021-UPMARKET-FALSE-001",
+    "C-R18-CITIZENSHIP-001",
+    "C-R18-ESTATE-CATEGORY-001",
+    "C-R18-EXPORT-EARNINGS-2024",
+    "C-R18-GI-PENDING-001",
+    "C-R18-LINEROOMS-2024",
+    "C-R18-LION-MARK-001",
+    "C-R18-LIPTON-OWNERSHIP-2022",
+    "C-R18-M1-001",
+    "C-R18-M2-001",
+    "C-R18-M3-001",
+    "C-R18-REPLANT-2022",
+    "C-R18-SMALLHOLDER-SHARE-001",
+    "C-R18-UNION-EXISTS-001",
+    "C-R18-WAGE-2026-EFFECT",
+    "C-R18-WAGE-2026-FACT",
+    "C-R18-WAGE-2026-INFERENCE",
+    "C-R20-PLASTIC-ENFORCEMENT-001"
+  ],
+  "unreferenced_bridges": [
+    "B-COMP-ID-LANGUAGE-001",
+    "B-COMP-ID-LANGUAGE-002",
+    "B-COMP-TN-JAFFNA-001",
+    "B-COMP-TN-TERRITORIAL-002",
+    "B-POST-001",
+    "B-POST-CASTE-ETHNIC-001",
+    "B-POST-CASTE-MILITANCY-001",
+    "B-POST-DIASPORA-MARRIAGE-001",
+    "B-POST-EDU-001",
+    "B-POST-LANG-DEV-001",
+    "B-POST-LANG-NAM-001",
+    "B-POST-NAM-ECON-001",
+    "B-POST-WAR-HC-002",
+    "B-R13-THAILAND-COLONIAL-001",
+    "B-R15-PLASTIC-SINGLE-CAUSE-001",
+    "B-R15-TOUR-COVID-DEFAULT-001",
+    "B-R15-TSU-BUFFER-001",
+    "B-R15-TSU-PEACE-001",
+    "B-R16-MIL-INTERNAL-COMPARATOR-001",
+    "B-R17-KDY-SACRED-CITY-COMPARATOR-001",
+    "B-R18-2021-UPMARKET-001",
+    "B-R18-GI-VALUE-CAPTURE-001",
+    "B-R18-WAGE-SUBSIDY-PRODUCTIVITY-001"
+  ],
+  "claim_degrees": {
+    "C-COMP-ID-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 1
+    },
+    "C-COMP-ID-LANG-002": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 1
+    },
+    "C-COMP-SCALE-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 1
+    },
+    "C-COMP-TN-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-COMP-TN-002": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-COMP-TN-DEV-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 1
+    },
+    "C-COMP-TN-DEV-002": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-POST-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-POST-002": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-POST-003": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-POST-CASTE-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-POST-CASTE-002": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 1
+    },
+    "C-POST-CASTE-003": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 1
+    },
+    "C-POST-CASTE-004": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-POST-DEV-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 1
+    },
+    "C-POST-EDU-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-POST-EDU-002": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-POST-EDU-003": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-POST-HC-EXTERNAL-002": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 1
+    },
+    "C-POST-HER-003": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-POST-INTEGRATION-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-POST-INTEGRATION-002": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-POST-LANG-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 1
+    },
+    "C-POST-LANG-002": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-POST-LANG-003": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-POST-MARRIAGE-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-POST-NAM-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-POST-NAM-002": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-POST-STATE-REP-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-POST-WAR-TERRITORY-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 1
+    },
+    "C-R13-PARK-004": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R13-PARK-005": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R13-PARK-006": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R13-PARK-007": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-PLASTIC-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-PLASTIC-002": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-PLASTIC-003": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-PLASTIC-004": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-PLASTIC-005": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-PLASTIC-006": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-TOUR-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-TOUR-002": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-TOUR-003": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-TOUR-004": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-TOUR-005": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-TOUR-006": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-TOUR-007": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-TOUR-008": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-TSU-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-TSU-002": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-TSU-003": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-TSU-004": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-TSU-005": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-TSU-006": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R15-TSU-007": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R16-HOR-ECO-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R16-HOR-UNESCO-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R16-HOR-WATERSHED-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R16-MIL-CHECKPOINT-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R16-MIL-COMMERCIAL-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R16-MIL-EFFECT-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R16-MIL-HEARTLAND-COMP-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R16-MIL-INTENT-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R16-MIL-RELEASE-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R17-KDY-COMP-PILGRIM-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R17-KDY-CONSTRAINT-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R17-KDY-ECON-FALSE-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R17-KDY-FUNC-001": {
+      "incoming": 1,
+      "outgoing": 0,
+      "references": 2
+    },
+    "C-R17-KDY-MET-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R17-KDY-MET-002": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R17-KDY-MET-003": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R17-KDY-MET-004": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R17-KDY-MET-005": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R17-KDY-MET-006": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R17-KDY-MET-007": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R17-KDY-MET-008": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R17-KDY-SACRED-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-2021-EFFECT-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-2021-INTENT-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-2021-UPMARKET-FALSE-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-CITIZENSHIP-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-ESTATE-CATEGORY-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-EXPORT-EARNINGS-2024": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-GI-PENDING-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-LINEROOMS-2024": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-LION-MARK-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-LIPTON-OWNERSHIP-2022": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-M1-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-M2-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-M3-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-REPLANT-2022": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-SMALLHOLDER-SHARE-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-UNION-EXISTS-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-WAGE-2026-EFFECT": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-WAGE-2026-FACT": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R18-WAGE-2026-INFERENCE": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R20-PLASTIC-ENFORCEMENT-001": {
+      "incoming": 0,
+      "outgoing": 0,
+      "references": 0
+    },
+    "C-R21-KDY-PERAHERA-001": {
+      "incoming": 0,
+      "outgoing": 1,
+      "references": 2
+    }
+  }
+}
