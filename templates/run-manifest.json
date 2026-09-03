@@ -4,6 +4,7 @@
   "status": "draft",
   "mode": "research",
   "project_roots": [],
+  "runtime_context_files": [],
   "state_before": {
     "research": "",
     "canonical_markdown": "",
@@ -17,5 +18,6 @@
     "canonical_markdown": "",
     "reader_export": ""
   },
-  "promotion_decision": "pending"
+  "promotion_decision": "pending",
+  "next": []
 }

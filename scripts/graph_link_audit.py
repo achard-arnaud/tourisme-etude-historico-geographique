@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Pre-edit graph-light endpoint and tagged-reference resolution gate."""
 from __future__ import annotations
-import json, re, sys
+import argparse, json, re, sys
+from collections import Counter, defaultdict
 from pathlib import Path
 
 def _frontmatter_slug(path:Path):
@@ -78,11 +79,55 @@ def validate_graph_links(project:Path):
     errors+=validate_illustration_graph_consistency(project,edges,illustrations,claims)
     return errors,warnings,node_count,len(edges)
 
+def graph_diagnostics(project:Path)->dict:
+    """Return report-only claim/bridge density signals grouped by evidence arc."""
+    claims=_json_items(project,"01_arcs/*/claims/*.json")
+    bridges=_json_items(project,"06_bridges/*.json")
+    edges=[]
+    for p in (project/"04_graph").glob("edges*.jsonl"):
+        for line in p.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                edges.append(json.loads(line))
+    refs=Counter(); incoming=Counter(); outgoing=Counter(); bridge_refs=Counter()
+    for edge in edges:
+        source=str(edge.get("from") or ""); target=str(edge.get("to") or "")
+        if source in claims:outgoing[source]+=1;refs[source]+=1
+        if target in claims:incoming[target]+=1;refs[target]+=1
+        for claim_id in edge.get("claim_ids",[]):
+            if claim_id in claims:refs[claim_id]+=1
+        for bridge_id in edge.get("bridge_ids",[]):
+            if bridge_id in bridges:bridge_refs[bridge_id]+=1
+    by_arc=defaultdict(list)
+    for claim_id,claim in claims.items():
+        by_arc[str(claim.get("arc") or "unassigned")].append(claim_id)
+    arcs=[]
+    for arc,ids in sorted(by_arc.items()):
+        linked=[claim_id for claim_id in ids if refs[claim_id]]
+        arcs.append({
+            "arc":arc,"claims":len(ids),"linked_claims":len(linked),
+            "unlinked_claims":sorted(set(ids)-set(linked)),
+            "mean_graph_references":round(sum(refs[x] for x in ids)/max(1,len(ids)),2),
+        })
+    return {
+        "schema_version":1,"project":str(project),"claims":len(claims),"bridges":len(bridges),
+        "edges":len(edges),"arcs":arcs,
+        "orphan_claims":sorted(claim_id for claim_id in claims if not refs[claim_id]),
+        "unreferenced_bridges":sorted(bridge_id for bridge_id in bridges if not bridge_refs[bridge_id]),
+        "claim_degrees":{
+            claim_id:{"incoming":incoming[claim_id],"outgoing":outgoing[claim_id],"references":refs[claim_id]}
+            for claim_id in sorted(claims)
+        },
+    }
+
 def main():
-    project=Path(sys.argv[1] if len(sys.argv)>1 else "."); errors,warnings,nodes,edges=validate_graph_links(project)
+    parser=argparse.ArgumentParser();parser.add_argument("project",nargs="?",type=Path,default=Path("."));parser.add_argument("--diagnostics",type=Path)
+    args=parser.parse_args();project=args.project; errors,warnings,nodes,edges=validate_graph_links(project)
     for x in warnings:print("WARN:",x,file=sys.stderr)
     for x in errors:print("ERROR:",x,file=sys.stderr)
     if errors:return 1
+    if args.diagnostics:
+        args.diagnostics.parent.mkdir(parents=True,exist_ok=True)
+        args.diagnostics.write_text(json.dumps(graph_diagnostics(project),ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(f"GRAPH LINK AUDIT OK: {nodes} explicit nodes, {edges} edges, 0 unresolved endpoints/tags")
     return 0
 if __name__=="__main__":raise SystemExit(main())

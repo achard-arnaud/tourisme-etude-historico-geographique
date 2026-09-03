@@ -17,6 +17,25 @@ A form-global iterative pass must therefore load the complete prose span, freeze
 
 Run32 removed the false split between an “iterative writer” and a “from-scratch writer”. Run41 fixes the editing order: **the chronological core is drafted and reread before new side stories are placed**. The default placement is now explicit: **a side story lives inside the logical paragraph that needs it**, at a safe sentence boundary after its trigger. Inter-paragraph placement is a density/structure fallback, not the normal case.
 
+### Internal execution modes — draft versus proofread
+
+These are two bounded entry modes of this skill, not two skills and not two evidence contracts.
+
+`draft`
+- execute layers 1–9 below on the selected scope;
+- evidence/material packets and the approved reader scaffold are required;
+- emit the frozen core, placement ledger and frontstage reader.
+
+`proofread`
+- require an already frozen manuscript plus a chapter review ledger;
+- load one chapter at a time, with only the preceding and following handoff needed to judge continuity;
+- preserve facts, citations, uncertainty, evidence status and chronological ownership exactly;
+- repair problem placement, repetition, paragraph shape, transitions and frontstage labels inside that bounded scope;
+- mark a chapter complete only after chapter-local conservation checks pass;
+- after every chapter passes, run one cross-chapter signature pass for repeated paragraphs, broken handoffs and duplicated side stories.
+
+The proofread mode may not silently add evidence, promote a claim, change confidence or claim form-global completion from a text linter alone. Any factual gap discovered during proofreading returns to the research/question backlog. This internal separation permits a focused reread without inventing a new inter-skill handoff contract.
+
 ### Shared composition layers — mandatory order
 
 1. **Reader scaffold — authoritative editorial topology**

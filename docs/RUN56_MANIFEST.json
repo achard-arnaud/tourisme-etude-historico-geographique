@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN56",
+  "status": "completed",
+  "mode": "proofread",
+  "project_roots": [
+    "examples/sri_lanka_pre_1948",
+    "examples/sri_lanka_post_1948"
+  ],
+  "runtime_context_files": [
+    "skills/storytelling-historical-travel/PROBLEM_FIRST_CAUSAL_DEZOOM_CONTRACT.md",
+    "skills/storytelling-historical-travel/references/storytelling-patterns-and-review.md",
+    "skills/storytelling-historical-travel/references/paragraph_review_checklist.md",
+    "skills/storytelling-historical-travel/references/sarah_voice_markers.md"
+  ],
+  "state_before": {
+    "pre_1948_reader": "examples/sri_lanka_pre_1948/09_output/report_v4_full.md",
+    "post_1948_canonical": "examples/sri_lanka_post_1948/09_output/report_v3_full.md",
+    "runtime": "late full-reader review with incomplete context accounting"
+  },
+  "dispatched_skills": [
+    {
+      "skill": "storytelling-historical-travel",
+      "status": "executed",
+      "reason": "Apply the form-global contract chapter by chapter and expose separate draft/proofread entry modes without splitting the skill contract.",
+      "outputs": [
+        "examples/sri_lanka_post_1948/09_output/report_v4_full.md",
+        "docs/RUN56_POST1948_CHAPTER_REVIEW.json"
+      ]
+    },
+    {
+      "skill": "editing-historical-travel-output",
+      "status": "executed",
+      "reason": "Render and preflight both reader-facing V4 Word exports while preserving their evidence baselines.",
+      "outputs": [
+        "examples/sri_lanka_pre_1948/09_output/Sri_Lanka_Fresque_historico_geographique_vol_retour_v4.docx",
+        "examples/sri_lanka_post_1948/09_output/Sri_Lanka_1948_2026_etude_historico_geographique_v4.docx"
+      ]
+    },
+    {
+      "skill": "composing-side-stories",
+      "status": "verified",
+      "reason": "Make the existing RUN53 core-absorption and recap-placement decisions machine-readable and renderer-enforced.",
+      "outputs": [
+        "examples/sri_lanka_pre_1948/09_output/story_dispositions.json"
+      ]
+    },
+    {
+      "skill": "auditing-historiography-and-drifts",
+      "status": "verified",
+      "reason": "Expose stale and unscheduled intermediate research questions without automatic promotion or closure.",
+      "outputs": [
+        "docs/RUN56_QUESTION_BACKLOG.json"
+      ]
+    },
+    {
+      "skill": "maintaining-wiki-and-graph",
+      "status": "verified",
+      "reason": "Add report-only graph-density diagnostics while retaining the existing endpoint-resolution gate.",
+      "outputs": [
+        "docs/RUN56_POST1948_GRAPH_DENSITY.json"
+      ]
+    }
+  ],
+  "skipped_skills": [],
+  "validations": [
+    "post-1948 V4 materializer byte-idempotence",
+    "eight chapter-local evidence-conservation checks",
+    "frontstage DOCX lint for both V4 readers",
+    "page-by-page visual review of 68 pre-1948 and 31 post-1948 pages",
+    "full repository CI"
+  ],
+  "state_after": {
+    "pre_1948_reader": "examples/sri_lanka_pre_1948/09_output/Sri_Lanka_Fresque_historico_geographique_vol_retour_v4.docx",
+    "post_1948_reader": "examples/sri_lanka_post_1948/09_output/Sri_Lanka_1948_2026_etude_historico_geographique_v4.docx",
+    "post_1948_markdown": "examples/sri_lanka_post_1948/09_output/report_v4_full.md",
+    "runtime": "bounded chapter-local proofreading with deterministic preflight audits"
+  },
+  "promotion_decision": "promote_after_green_ci",
+  "next": [
+    "Human triage of the stale and unscheduled question backlog before authorizing complementary research.",
+    "Treat graph-density gaps as planning signals, not automatic evidence failures.",
+    "Keep the storytelling/proofreader separation internal until repeated runs justify a new pass contract."
+  ]
+}

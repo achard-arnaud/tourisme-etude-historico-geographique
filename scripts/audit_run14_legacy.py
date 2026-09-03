@@ -24,6 +24,11 @@ LATER_PROMOTABLE={'A03_indian_ocean_and_regional_systems':{'shell','partial','re
 def main():
     errors=[]
     for p in PRE.rglob('*'):
+        # Drafting packets are regenerated caches. They intentionally preserve
+        # evidence-status vocabulary and are not part of the Run14 frontstage
+        # corpus that this historical migration audit is meant to police.
+        if PRE/'09_output'/'drafting' in p.parents:
+            continue
         if p.is_file():
             try:text=p.read_text(encoding='utf-8')
             except Exception:continue

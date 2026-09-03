@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN56",
+  "mode": "proofread",
+  "baseline": "examples/sri_lanka_post_1948/09_output/report_v3_full.md",
+  "candidate": "examples/sri_lanka_post_1948/09_output/report_v4_full.md",
+  "status": "pass",
+  "chapters": [
+    {
+      "chapter": 1,
+      "status": "pass",
+      "sha256": "62fab00b0d6ea998660774f75825133d1db914987fe78768db0d39ff4229c8cb",
+      "character_retention": 0.9932,
+      "source_citations": 3,
+      "html_callouts": 1,
+      "errors": []
+    },
+    {
+      "chapter": 2,
+      "status": "pass",
+      "sha256": "fc58ef916c20f4c4de880bbe2faf76ff30ecd880b80f8bccf6f28d65fad56371",
+      "character_retention": 0.9955,
+      "source_citations": 12,
+      "html_callouts": 1,
+      "errors": []
+    },
+    {
+      "chapter": 3,
+      "status": "pass",
+      "sha256": "7471c5ec9e93c34364c9da8a4fbcb8f60293b7c4828e4763b610afd1ae08864f",
+      "character_retention": 0.9952,
+      "source_citations": 9,
+      "html_callouts": 1,
+      "errors": []
+    },
+    {
+      "chapter": 4,
+      "status": "pass",
+      "sha256": "01a20b0800e3db7a878cdb2c2620cd1969880e12ff83520563386e618adaecab",
+      "character_retention": 0.9912,
+      "source_citations": 3,
+      "html_callouts": 0,
+      "errors": []
+    },
+    {
+      "chapter": 5,
+      "status": "pass",
+      "sha256": "9c01a4acffde89ee6a411d03e34ead9bb3f89d8b9cebbadb67dc1bbab03bd4dc",
+      "character_retention": 0.9928,
+      "source_citations": 0,
+      "html_callouts": 1,
+      "errors": []
+    },
+    {
+      "chapter": 6,
+      "status": "pass",
+      "sha256": "9ab901cbf7ec9b3840cf6f2ea1612ef40a5ad31a13c08781da4a977bc42651ef",
+      "character_retention": 0.9952,
+      "source_citations": 8,
+      "html_callouts": 0,
+      "errors": []
+    },
+    {
+      "chapter": 7,
+      "status": "pass",
+      "sha256": "f49e4a42bfd6e20ecc5187a4ae2aefdb2a15e05e5e8411f591b771d1f40d45e6",
+      "character_retention": 0.9921,
+      "source_citations": 0,
+      "html_callouts": 1,
+      "errors": []
+    },
+    {
+      "chapter": 8,
+      "status": "pass",
+      "sha256": "d7de3c516eb6f37f04c3c781cd60bbd8336f6d440a7b96c301f9cd4de29d5426",
+      "character_retention": 0.9906,
+      "source_citations": 0,
+      "html_callouts": 1,
+      "errors": []
+    }
+  ],
+  "exact_long_paragraph_duplicates": [],
+  "errors": [],
+  "next": "Render the two V4 DOCX files, lint their visible frontstage, then complete page-by-page visual QA."
+}
