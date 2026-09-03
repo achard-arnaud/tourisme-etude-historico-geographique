@@ -5,5 +5,8 @@
   "canonical_markdown": "09_output/report_v3_full.md",
   "reader_markdown": "09_output/report_v3_full.md",
   "reader_docx": "09_output/Sri_Lanka_Fresque_historico_geographique_vol_retour_v3.docx",
-  "composition": {"side_story_coverage_required": true, "require_arc_recaps": true, "graph_preflight_required": true, "require_story_scaffold": true, "illustration_coverage_required": true}
+  "materialized_storytelling_candidate": "09_output/report_v4_full.md",
+  "materialized_storytelling_manifest": "../../../docs/RUN50_CANONICAL_MATERIALIZATION_MANIFEST.json",
+  "materialization_command": "python scripts/materialize_storytelling_overlays.py",
+  "composition": {"side_story_coverage_required": true, "require_arc_recaps": true, "graph_preflight_required": true, "require_story_scaffold": true, "illustration_coverage_required": true, "problem_first_form_global_required": true}
 }
