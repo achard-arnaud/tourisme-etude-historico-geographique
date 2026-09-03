@@ -1,0 +1,8 @@
+[
+  {
+    "id":"I-R45-ISLAM-WIKIPEDIA-LINK-HARVEST","source_name":"INTAKE_R45_islam_sri_lanka_wikipedia_link_harvest.md","intake_kind":"research_bundle","first_run":"RUN45","manifest":null,"preservation_status":"archived","repo_path":"docs/intakes/INTAKE_R45_islam_sri_lanka_wikipedia_link_harvest.md","outputs":["examples/sri_lanka_pre_1948/05_sources/source_register_run45_ports_islam.json","examples/sri_lanka_pre_1948/01_arcs/A03_indian_ocean_and_regional_systems/claims/C-R45-MONSOON-MERCHANT-DIASPORA-001.json","examples/sri_lanka_pre_1948/09_output/side_stories/SS-R45-1915-MUSLIM-RIOTS-MULTICAUSAL-001.json"],"notes":"Wikipedia served as link harvest only; promoted claims rely on independent academic/official sources."
+  },
+  {
+    "id":"I-R45-MUSEUM-MAPS-PORTS-ROUTES","source_name":"INTAKE_R45_museum_maps_ports_and_indian_ocean_routes.md","intake_kind":"field_capture_completion","first_run":"RUN45","manifest":null,"preservation_status":"archived","repo_path":"docs/intakes/INTAKE_R45_museum_maps_ports_and_indian_ocean_routes.md","outputs":["examples/sri_lanka_pre_1948/01_arcs/A02_ancient_indian_ocean_exchange/claims/C-R45-ANU-PORT-NETWORK-001.json","examples/sri_lanka_pre_1948/01_arcs/A02_ancient_indian_ocean_exchange/claims/C-R45-GODAVAYA-CUSTOMS-001.json","examples/sri_lanka_pre_1948/09_output/illustrations/ILL-R36-MUSEUM-MAPS-2026-09.json"],"notes":"Initial completion of the Run36 museum-map reading; later bounded and deepened by Run48/49."
+  }
+]
